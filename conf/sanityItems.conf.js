@@ -1,0 +1,188 @@
+config.entities.add([
+
+// --- basic resources
+
+  {
+    id: 'it-chocolate',
+    name: "txt-it-chocolate-name",
+    description: "txt-it-chocolate",
+    debugCategory: 'sanity',
+    sprite: 'it_consumable_chocolate_1.png',
+    maxStack: 20,
+    value: {
+      base: 10,
+      karma: 3,
+    },
+    events: [
+      {
+        sanity:+10,
+        removeItem: true,
+        incAchievement: 'ach-eat-chocolate',
+        playSound: ['sfx_eat_var1', 'sfx_eat_var2'],
+        chat: 'cl-item-chocolate',
+      }
+    ]
+  },
+  {
+    id: 'it-mango',
+    name: "txt-it-mango-name",
+    description: "txt-it-mango",
+    debugCategory: 'sanity',
+    maxStack: 10,
+    reqBiomeFlags: '-arctic',
+    sprite: 'it_consumable_mango_1.png',
+    value: {
+      base: 5,
+      karma: 3,
+    },
+    dayEvents: [
+      {slots: 7},
+      {slots: 1, removeItem: true}
+    ],
+    events: {
+      sanity: +10, 
+      removeItem: true,
+      charEffects: {optional:true, count:'any', setStatus: '-scurvy'},
+      playSound: ['sfx_eat_var1', 'sfx_eat_var2'],
+    }
+  },
+  {
+    id: 'it-redBerries',
+    name: "txt-it-redBerries-name",
+    description: "txt-it-redBerries",
+    debugCategory: 'sanity',
+    reqBiomeFlags: '-arctic',
+    sprite: 'it_consumable_berriesred_1.png',
+    maxStack: 20,
+    value: {
+      base: 5,
+      karma: 3,
+    },
+    autoRemove: true,
+    events: {
+      charEffects: [
+        {count:'any', health:+1},
+        {count:'any', optional:true, setStatus: '-scurvy'},
+      ],
+      sanity: +5,
+      chat: 'cl-item-genericFood',
+      playSound: ['sfx_eat_var1', 'sfx_eat_var2'],
+      removeItem: true
+    }
+  },
+  {
+    id: 'it-cocaLeaves',
+    name: "txt-it-cocaLeaves-name",
+    description: "txt-it-cocaLeaves",
+    debugCategory: 'sanity',
+    reqBiomeFlags: '-arctic',
+    sprite: 'it_consumable_coca_1.png',
+    maxStack: 20,
+    value: {
+      base: 5,
+      karma: karmaSmall,
+    },
+    events: {
+      showImage: {src: 'evt_fxt_empty.png', type: 'day'},
+      sanity: {base:10, bonus:'cocaBonus'},
+      removeItem: true,
+      charEffects: {optional:true, count:'any', setStatus: '-scurvy'},
+      playSound: ['sfx_eat_var1', 'sfx_eat_var2'],
+      events: [
+        { slots:5, chat: 'cl-cocaLeaves' },
+        { slots:1, ref:'evt-trauma' }
+      ]
+    }
+  },
+  {
+    id: 'it-whisky',
+    name: "txt-it-whisky-name",
+    description: "txt-it-whisky",
+    debugCategory: 'sanity',
+    sprite: 'it_consumable_whisky_1.png',
+    flags: '+drug',
+    value: {
+      base: 10,
+      mission: 35,
+      polarStation: 30,
+      village: 20,
+      karma: 5,
+    },
+    maxStack: 20,
+    events: {
+      sanity: {base:20, bonus:'whiskyBonus'},
+      playSound: ['sfx_drink_var1', 'sfx_drink_var2'],
+      removeItem: true,
+      chat: 'cl-alcohol',
+      charEffects: {
+        count: 'any', optional: true,
+        reqStatus: '+alcoholic',
+        loyalty:+1,
+      },
+      events: [
+        { slots:  6 },
+        { 
+          slots:  1, 
+          charEffects: { 
+            optional:true, 
+            reqStatus: {'st-alcoholic':false}, 
+            reqCharFlags: {humanoid:true, special:false}, 
+            setStatus: {'st-alcoholic':true}
+          }
+        }
+      ]
+    },
+  },
+  {
+    id: 'it-tinCans',
+    name: "txt-it-tinCans-name",
+    description: "txt-it-tinCans",
+    debugCategory: 'sanity',
+    sprite: 'it_consumable_tinCan_1.png',
+    value: {
+      base: 5,
+      mission: 10,
+      village: 5,
+      karma: 1,
+    },
+    maxStack: 20,
+    events: [
+      {
+        reqSanity: '..30',
+        sanity: +10,
+        chat: 'cl-item-tinCan-eat',
+        playSound: ['sfx_eat_var1', 'sfx_eat_var2'],
+        removeItem: true
+      },
+      {
+        prio: 1,
+        chat: 'cl-item-tinCan-refuse',
+      },
+    ],
+  },
+  {
+    id: 'it-muktuk',
+    name: "txt-it-muktuk-name",
+    description: "txt-it-muktuk",
+    reqBiomeFlags: '+arctic',
+    sprite: 'it_consumable_muktuk_1.png',
+    maxStack: 20,
+    autoRemove: true,
+    value: {
+      base: 15,
+      village:10,
+      karma: 3,
+    },
+    events: {
+      charEffects: [
+        {count:'any', optional:true, setStatus: '-scurvy'},
+      ],
+      sanity: +15,
+      chat: 'cl-item-genericFood',
+      playSound: ['sfx_eat_var1', 'sfx_eat_var2'],
+      removeItem: true,
+    },
+    debugCategory: 'sanity',
+  },
+
+])
