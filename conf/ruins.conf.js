@@ -467,6 +467,24 @@ config.entities.add([
         reqDifficulty: '1..',
         reqPartyFlags: '-badStanding', 
         unlockCharacter: 'sp-crowley'
+      },
+      {
+        optional: true,
+        reqWorld: '5..',
+        reqPartyFlags: '-hadBadStanding', 
+        incAchievement: 'ach-positive-standing'
+      },
+      {
+        optional: true,
+        reqWorld: '5..',
+        reqPartyFlags: '-soldItem', 
+        incAchievement: 'ach-no-selling'
+      },
+      {
+        optional: true,
+        reqWorld: '5..',
+        reqPartyFlags: '-abortedExpedition', 
+        incAchievement: 'ach-expeditions'
       }
     ],
     charEffects: [

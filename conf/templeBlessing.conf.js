@@ -34,7 +34,7 @@ config.entities.add([
   },
   {
     id: 'fxt-blessingTemple-closed',
-    name: "txt-fxt-blessingtxt-fxt-blessingTemple-name-name",
+    name: "txt-fxt-blessingTemple-name-name",
     debugCategory: 'shrine',
     debugColor: 'red',
     sprite: "res_fxt_templeBlessing_2.png",

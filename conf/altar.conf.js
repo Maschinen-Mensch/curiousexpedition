@@ -77,6 +77,9 @@ config.entities.add([
       baseValue: 'karma',
       close: 'evt-altar-dropDone',
       cancel: 'evt-altar-cancel',
+      itemEvents: [
+        {items:{'it-treasure-eggplant':1}, ref:{incAchievement:'ach-eggplant-altar',text: "txt-evt-altar-eggplant-done",events: 'evt-altar-actions'}}
+      ],
       priceTable: 'karma',
       hideNPCInv: true,
     }, 

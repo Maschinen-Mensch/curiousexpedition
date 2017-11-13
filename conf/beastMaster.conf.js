@@ -142,6 +142,7 @@ config.entities.add([
         items: {'it-animalTooth':-15},
         text: "txt-evt-village-beastMaster-recruit-beast",
         addCharacter: 'anm-tiger-battle',
+        incAchievement: 'ach-battlecat-recruit',
         events: 'evt-village-beastMaster-actions',
       },
     ],

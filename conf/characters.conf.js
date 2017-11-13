@@ -605,7 +605,7 @@ config.entities.add([
     id: 'pl-abomination',
     debugCategory: 'Special',
     title: "txt-pl-abomination-title",
-    name:'Abomination',
+    name:'txt-pl-abomination-title',
     description: "txt-pl-abomination",
     miniSprite: 'res_porter_abomination_mini.png',
     health: 12,

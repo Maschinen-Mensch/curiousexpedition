@@ -230,7 +230,7 @@ config.entities.add([
     debugCategory: 'NPC',
     isNPC: true,
     health: 0,
-    name: "txt-npc-nativetxt-npc-nativeGhost-1-name-1-name",
+    name: "txt-npc-nativeGhost-1-name",
     description: "txt-npc-ghostie",
     variations: [
       {gender:'hyrbid', sprite:'res_npc_ghostie_1.png'},

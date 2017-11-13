@@ -81,14 +81,15 @@ var achievements = [
     name: "txt-ach-explorer-collect",
     desc: "txt-ach-explorer-collect-desc",
     img: null,
-    counterTarget: 15
+    counterTarget: 15,
   },
   //Secret achievements
   {//Missing
     id: "ach-secret-explorer",
     name: "txt-ach-secret-explorer",
     desc: "txt-ach-secret-explorer-desc",
-    img: null
+    img: null,
+    secret: true
   },
   {
     id: "ach-noCanib-husband",
@@ -113,14 +114,12 @@ var achievements = [
     name: "txt-ach-eggplant-altar",
     desc: "txt-ach-eggplant-altar-desc",
     img: null,
-    secret: true
   },
   {//Missing
     id: "ach-battlecat-recruit",
     name: "txt-ach-battlecat-recruit",
     desc: "txt-ach-battlecat-recruit-desc",
-    img: null,
-    secret: true
+    img: null
   },
   {
     id: "ach-mountain-explode-stoneface",
@@ -135,14 +134,13 @@ var achievements = [
     img: null
   },
   //Gameplay achievements
-  {//Missing
+  {
     id: "ach-positive-standing",
     name: "txt-ach-positive-standing",
     desc: "txt-ach-positive-standing-desc",
-    img: null,
-    secret: true
+    img: null
   },
-  {//Missing
+  {
     id: "ach-alcoholics",
     name: "txt-ach-alcoholics",
     desc: "txt-ach-alcoholics-desc",
@@ -161,21 +159,20 @@ var achievements = [
     img: null,
     secret: true
   },
-  {//Missing
+  {
     id: "ach-no-selling",
     name: "txt-ach-no-selling",
     desc: "txt-ach-no-selling-desc",
     img: null,
-    secret: true
   },
-  {//Missing
+  {
     id: "ach-coca-only",
     name: "txt-ach-coca-only",
     desc: "txt-ach-coca-only-desc",
     img: null,
     secret: true
   },
-  {//Missing
+  {
     id: "ach-hot-air-balloon",
     name: "txt-ach-hot-air-balloon",
     desc: "txt-ach-hot-air-balloon-desc",
@@ -225,7 +222,6 @@ var achievements = [
     name: "txt-ach-all-items",
     desc: "txt-ach-all-items-desc",
     img: null,
-    secret: true
   },
   {
     id: "ach-reach-world2",
@@ -281,7 +277,8 @@ var achievements = [
     id: "ach-visit-special",
     name: "txt-ach-visit-special",
     desc: "txt-ach-visit-special-desc",
-    img: null
+    img: null,
+    secret: true
   },
   {
     id: "ach-recr-dinos",
@@ -355,8 +352,7 @@ var achievements = [
     id: "ach-headbutt-raptor",
     name: "txt-ach-headbutt-raptor",
     desc: "txt-ach-headbutt-raptor-desc",
-    img: null,
-    secret: true
+    img: null
   },
   {
     id: "ach-flee",
@@ -370,7 +366,7 @@ var staticConfig =
 {
   versionName: '',
   enableAchievements: true,
-  footerName: "1.2.6.7",
+  footerName: "1.3.0.0m",
   showMods: true,
 
   // is converted to config.diaryText at run-time
@@ -451,7 +447,7 @@ var config = {
   karmaBarSize: 75,
   maxRestTime: 5, // max amount of days, the party is allowed to rest in one go
 
-  trailerScrollSpeed: [-20, 0], // scroll speed while in trailer mode
+  trailerScrollSpeed: [0, 0], // scroll speed while in trailer mode
   scrollSpeed: 2000,
   funds: [60, 30, 0], // start money
 

@@ -233,7 +233,7 @@ config.entities.add([
   {
     id: 'np-sister',
     names: ['txt-names-sister']
-  }
+  },
   {
     id: 'na-animalMale',
     names:[
