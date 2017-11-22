@@ -3,73 +3,82 @@ config.entities.add([
   
   {
     id: 'evt-harbor-recruit',
-    events: [
+    select: [
       { // Normal Recruit
         reqWorld: '1..',
-        reqPartyFlags: '-harborCheck_Recruit',
-        events: 'evt-harbor-recruitUnit'
+        reqPartyFlags: '-harborCheck_Recruit1',
+        setPartyFlags: '+harborCheck_Recruit1',
+        select: 'evt-harbor-recruitUnit'
       },
       { // Charismatic Perk additional Recruit
+        prio: 0,
+        reqWorld: '1..',
+        reqPartyFlags: '+harborCheck_Recruit1 -harborCheck_Recruit2',
+        charEvents: {reqStatus: {'pk-charismatic':true}},
+        select: {
+          setPartyFlags: '+harborCheck_Recruit2',
+          select:'evt-harbor-recruitUnit',
+        },
+      },
+      {
         prio: 1,
         reqWorld: '1..',
-        reqPartyFlags: '+harborCheck_Recruit -harborCheck_Recruit2',
-        charEffects: {reqStatus: {'pk-charismatic':true}},
-        events: {
-          setPartyFlags: '+harborCheck_Recruit2',
-          events:'evt-harbor-recruitUnit',
-        },
+        reqPartyFlags: '+harborCheck_Recruit1 -harborCheck_Recruit2',
+        charEvents: {reqStatus: {'pk-charismatic':false}},
+        setPartyFlags: '+harborCheck_Recruit',
+        select:'evt-harbor-eventSelection',
       },
       { // Recruitement done
         prio: 2,
-        reqPartyFlags: '+harborCheck_Recruit',
-        events: 'evt-harbor-eventSelection',
+        reqPartyFlags: '+harborCheck_Recruit2',
+        setPartyFlags: '+harborCheck_Recruit',
+        select: 'evt-harbor-eventSelection',
       },
     ],
   },
   {
     id: 'evt-harbor-recruitUnit',
-    setPartyFlags: '+harborCheck_Recruit',
     chat: 'cl-harbor-recruit',
     showPartyCount: true,
     actions: {
-      actionText: "txt-evt-harbor-recruit-action", clearPushedEvents:true, events: 'evt-harbor-recruit',
+      actionText: "txt-evt-harbor-recruit-action", select: 'evt-harbor-recruit',
     },
-    partyEffects: [
+    partyEvents: [
       {
         reqRanking: '3..', optional: true,
         text: "txt-evt-harbor-recruit",
-        events: 'evt-harbor-recruit-select',
+        select: 'evt-harbor-recruit-select',
       },
       {
         reqRanking: '0', optional: true,
         text: "txt-evt-harbor-recruit-1",
-        partyEffects: [
-          { events: 'evt-harbor-recruit-select' },
-          { events: 'evt-harbor-recruit-select' },
-          { events: 'evt-harbor-recruit-select' },
+        partyEvents: [
+          { select: 'evt-harbor-recruit-select' },
+          { select: 'evt-harbor-recruit-select' },
+          { select: 'evt-harbor-recruit-select' },
         ]
       },
       {
         reqRanking: '1', optional: true,
         text: "txt-evt-harbor-recruit-2",
-        partyEffects: [
-          { events: 'evt-harbor-recruit-select' },
-          { events: 'evt-harbor-recruit-select' },
+        partyEvents: [
+          { select: 'evt-harbor-recruit-select' },
+          { select: 'evt-harbor-recruit-select' },
         ]
       },
       {
         reqRanking: '2', optional: true,
         text: "txt-evt-harbor-recruit-3",
-        partyEffects: [
-          { events: 'evt-harbor-recruit-select' },
-          { events: 'evt-harbor-recruit-select' },
+        partyEvents: [
+          { select: 'evt-harbor-recruit-select' },
+          { select: 'evt-harbor-recruit-select' },
         ]
       },
     ],
   },
   {
     id: 'evt-harbor-recruit-select',
-    events: [
+    select: [
       {slots:1, ref:'evt-harbor-recruit-persianTranslator'},
       {slots:1, ref:'evt-harbor-recruit-bedouin'},
       {slots:1, ref:'evt-harbor-recruit-parsiTrader'},
@@ -93,122 +102,130 @@ config.entities.add([
   {
     id: 'evt-harbor-recruit-persianTranslator',
     npc: 'pl-translator',
-    npcEffects: {
+    npcEvents: {
       actions: {
         alwaysShown: true,
         actionText: "txt-evt-harbor-recruit-persianTranslator-action",
+        setPartyFlags: '+recruitedSomebody',
         addNPC: true,
         chat: 'cl-join',
         text: "txt-evt-harbor-recruit-persianTranslator",
-        events: 'evt-harbor-recruit'
+        select: 'evt-harbor-recruit'
       },
     },
-    charEffects: { count: "all", reqCharFlags: {persianTranslator:false} 
+    charEvents: { count: "all", reqCharFlags: {persianTranslator:false} 
     },
   },
   {
     id: 'evt-harbor-recruit-mountainTrooper',
     npc: 'pl-mountainTrooper',
-    npcEffects: {
+    npcEvents: {
       actions: {
         alwaysShown: true,
         actionText: "txt-evt-harbor-recruit-mountainTrooper-action",
+        setPartyFlags: '+recruitedSomebody',
         addNPC: true,
         chat: 'cl-join',
         text: "txt-evt-harbor-recruit-mountainTrooper",
-        events: 'evt-harbor-recruit'
+        select: 'evt-harbor-recruit'
       },
     },
-    charEffects: { count: "all", reqCharFlags: {mountainTrooper:false} 
+    charEvents: { count: "all", reqCharFlags: {mountainTrooper:false} 
     },
   },
   {
     id: 'evt-harbor-recruit-bedouin',
     npc: 'pl-bedouin',
-    npcEffects: {
+    npcEvents: {
       actions: {
         alwaysShown: true,
         actionText: "txt-evt-harbor-recruit-bedouin-action",
+        setPartyFlags: '+recruitedSomebody',
         addNPC: true,
         chat: 'cl-join',
         text: "txt-evt-harbor-recruit-bedouin",
-        events: 'evt-harbor-recruit'
+        select: 'evt-harbor-recruit'
       },
     },
-    charEffects: { count: "all", reqCharFlags: {bedouin:false} 
+    charEvents: { count: "all", reqCharFlags: {bedouin:false} 
     },
   },
   {
     id: 'evt-harbor-recruit-parsiTrader',
     npc: 'pl-trader',
-    npcEffects: {
+    npcEvents: {
       actions: {
         alwaysShown: true,
         actionText: "txt-evt-harbor-recruit-parsiTrader-action",
+        setPartyFlags: '+recruitedSomebody',
         addNPC: true,
         chat: 'cl-join',
         text: "txt-evt-harbor-recruit-parsiTrader",
-        events: 'evt-harbor-recruit'
+        select: 'evt-harbor-recruit'
       },
     },
-    charEffects: { count: "all", reqCharFlags: {parsiTrader:false} },
+    charEvents: { count: "all", reqCharFlags: {parsiTrader:false} },
   },
   {
     id: 'evt-harbor-recruit-soldierBritish',
     npc: 'pl-soldier-british',
-    npcEffects: {
+    npcEvents: {
       actions: {
         actionText: "txt-evt-harbor-recruit-soldierBritish-action",
         alwaysShown: true,
         text: "txt-evt-harbor-recruit-soldierBritish",
+        setPartyFlags: '+recruitedSomebody',
         addNPC: true,
         chat: 'cl-join',
-        events: 'evt-harbor-recruit'
+        select: 'evt-harbor-recruit'
       },
     },
-    charEffects: { count: "all", reqCharFlags: {soldierBritish:false} },
+    charEvents: { count: "all", reqCharFlags: {soldierBritish:false} },
   },
   {
     id: 'evt-harbor-recruit-soldierScottish',
     npc: 'pl-soldier-scottish',
-    npcEffects: {
+    npcEvents: {
       actions: {
         actionText: "txt-evt-harbor-recruit-soldierBritish-action",
         alwaysShown: true,
         text: "txt-evt-harbor-recruit-soldierScottish",
+        setPartyFlags: '+recruitedSomebody',
         addNPC: true,
         chat: 'cl-join',
-        events: 'evt-harbor-recruit'
+        select: 'evt-harbor-recruit'
       },
     },
-    charEffects: { count: "all", reqCharFlags: {soldierScottish:false} },
+    charEvents: { count: "all", reqCharFlags: {soldierScottish:false} },
   },
   {
     id: 'evt-harbor-recruit-sailor',    
     npc: 'pl-sailor',
-    npcEffects: {
+    npcEvents: {
       actions: {
         alwaysShown: true,
         actionText: "txt-evt-harbor-recruit-sailor-action",
+        setPartyFlags: '+recruitedSomebody',
         addNPC: true,
         chat: 'cl-join',
         text: "txt-evt-harbor-recruit-sailor",
-        events: 'evt-harbor-recruit'
+        select: 'evt-harbor-recruit'
       },
     },
-    charEffects: { count: 'all', reqCharFlags: '-sailor' },
+    charEvents: { count: 'all', reqCharFlags: '-sailor' },
   },
   {
     id: 'evt-harbor-recruit-cultist',
     npc: 'pl-cultist',
-    npcEffects: {
+    npcEvents: {
       actions: {
         alwaysShown: true,
         actionText: "txt-evt-harbor-recruit-cultist-action",
+        setPartyFlags: '+recruitedSomebody',
         addNPC: true,
         chat: 'cl-join',
         text: "txt-evt-harbor-recruit-cultist",
-        events: 'evt-harbor-recruit'
+        select: 'evt-harbor-recruit'
       },
     },
   },
@@ -220,63 +237,66 @@ config.entities.add([
     reqTempFlags: '-recruitSterling',
 
     npc: 'pl-sterling',
-    npcEffects: {
+    npcEvents: {
       actions: {
         alwaysShown: true,
         actionText: "txt-evt-harbor-recruit-sterling-action",
+        setPartyFlags: '+recruitedSomebody +sterling',
         addNPC: true,
-        setPartyFlags: '+sterling',
         chat: 'cl-join',
         text: "txt-evt-harbor-recruit-sterling",
-        events: 'evt-harbor-recruit'
+        select: 'evt-harbor-recruit'
       },
     },
   },
   {
     id: 'evt-harbor-recruit-missionary',
     npc: 'pl-missionary',
-    npcEffects: {
+    npcEvents: {
       actions: {
         alwaysShown: true,
         actionText: "txt-evt-harbor-recruit-missionary-action",
+        setPartyFlags: '+recruitedSomebody',
         addNPC: true,
         chat: 'cl-join',
         text: "txt-evt-harbor-recruit-missionary",
-        events: 'evt-harbor-recruit'
+        select: 'evt-harbor-recruit'
       },
     },
-    charEffects: { count: "all", reqCharFlags: {missionary:false} },
+    charEvents: { count: "all", reqCharFlags: {missionary:false} },
   },
   {
     id: 'evt-harbor-recruit-cook',
     npc: 'pl-cook',
-    npcEffects: {
+    npcEvents: {
       actions: {
         alwaysShown: true,
         actionText: "txt-evt-harbor-recruit-cook-action",
+        setPartyFlags: '+recruitedSomebody',
         addNPC: true,
         chat: 'cl-join',
         text: "txt-evt-harbor-recruit-cook",
-        events: 'evt-harbor-recruit'
+        select: 'evt-harbor-recruit'
       },
     },
-    charEffects: { count: "all", reqCharFlags: {cook:false} },
+    charEvents: { count: "all", reqCharFlags: {cook:false} },
   },
   {
     id: 'evt-harbor-recruit-artist',
     npc: 'pl-artist',
-    npcEffects: {
+    npcEvents: {
       actions: {
         alwaysShown: true,
         actionText: "txt-evt-harbor-recruit-artist-action",
+        setPartyFlags: '+recruitedSomebody',
         addNPC: true,
         items: {'it-canvas':3},
         chat: 'cl-join',
         text: "txt-evt-harbor-recruit-artist",
-        events: 'evt-harbor-recruit'
+        select: 'evt-harbor-recruit'
       },
     },
-    charEffects: { count: "all", reqCharFlags: {artist:false} },
+    charEvents: { count: "all", reqCharFlags: {artist:false} },
   },
   {
     id: 'evt-harbor-recruit-timLuis',
@@ -286,17 +306,17 @@ config.entities.add([
     setTempFlags: '+recruitTimLuis',
     reqTempFlags: '-recruitTimLuis',
 
-    npcEffects: {
+    npcEvents: {
       reqCharFlags: '+tim',
       actions: {
-        actionText: "txt-evt-harbor-recruit-timLuis-action",
         alwaysShown: true,
+        actionText: "txt-evt-harbor-recruit-timLuis-action",
+        setPartyFlags: '+timLuis +recruitedSomebody',
         addNPC: true,
-        setPartyFlags: '+timLuis',
         addCharacter: 'anm-dog-luis',
         chat: 'cl-join',
         text: "txt-evt-harbor-recruit-timLuis-1",
-        events: 'evt-harbor-recruit',
+        select: 'evt-harbor-recruit',
       },
     },
   },

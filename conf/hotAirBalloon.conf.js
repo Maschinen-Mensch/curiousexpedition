@@ -6,7 +6,7 @@ config.entities.add([
     id: 'evt-hotAirBalloon-explore',
     showImage: {src: 'evt_fxt_balloon_1.png', type: 'day'},
     actionText: "txt-evt-hotAirBalloon-explore-action",
-    events: [
+    select: [
       {prio:0, ref:'evt-hotAirBalloon-warped'},
       {prio:1, ref:'evt-hotAirBalloon-access'},
       {prio:2, ref:'evt-hotAirBalloon-fail'}
@@ -25,7 +25,7 @@ config.entities.add([
     id: 'evt-hotAirBalloon-access',
     text: "txt-evt-hotAirBalloon-access",
     report: "txt-evt-hotAirBalloon-access-report",
-    charEffects: {
+    charEvents: {
       count:2, reqCharFlags:'+humanoid'
     },
     actions: [
@@ -40,29 +40,30 @@ config.entities.add([
     reqPartyCount:'2..',
     text: "txt-evt-hotAirBalloon-makeRoom",
     chat: 'cl-hotAirBalloon-makeRoom',
-    charEffects: {
+    charEvents: {
       optional:true,
       reqCharFlags: '-special -abomination',
+      reqStatus: '-zeroSlot',
       count:'any',
       actions: {
         actionText: "txt-evt-harbor-countTrek-action",
         text: "txt-evt-hotAirBalloon-makeRoom-1",
         report: "txt-evt-hotAirBalloon-makeRoom-report", 
         removeCharacter: true,
-        events: 'evt-hotAirBalloon-access',
+        select: 'evt-hotAirBalloon-access',
       },
     },
     actions: {
       actionText: "txt-evt-hotAirBalloon-makeRoom-action-1",
-      events: 'evt-hotAirBalloon-access',
+      select: 'evt-hotAirBalloon-access',
     }
   },
   {
     id: 'evt-hotAirBalloon-stash',
     actionText: "txt-evt-hotAirBalloon-stash-action",
-    events: [
+    select: [
       {
-        reqPartyCount:'4..',
+        reqFreePartyCount:'-10..0',
         escape: {
           title: "txt-evt-hotAirBalloon-stash-title",
           slots: 2,
@@ -71,7 +72,7 @@ config.entities.add([
         },
       },
       {
-        reqPartyCount:'3',
+        reqFreePartyCount:'1',
         escape: {
           title: "txt-evt-hotAirBalloon-stash-title",
           slots: 3,
@@ -80,7 +81,7 @@ config.entities.add([
         },
       },
       {
-        reqPartyCount:'2',
+        reqFreePartyCount:'2',
         escape: {
           title: "txt-evt-hotAirBalloon-stash-title",
           slots: 4,
@@ -89,7 +90,7 @@ config.entities.add([
         },
       },
       {
-        reqPartyCount:'1',
+        reqFreePartyCount:'3',
         escape: {
           title: "txt-evt-hotAirBalloon-stash-title",
           slots: 5,
@@ -98,7 +99,7 @@ config.entities.add([
         },
       },
       {
-        reqPartyCount:'0',
+        reqFreePartyCount:'4..',
         escape: {
           title: "txt-evt-hotAirBalloon-stash-title",
           slots: 6,
@@ -112,7 +113,7 @@ config.entities.add([
     id: 'evt-hotAirBalloon-abort',
     actionText: "txt-evt-hotAirBalloon-abort-action",
     text: "txt-evt-hotAirBalloon-abort",
-    events: 'evt-hotAirBalloon-access',
+    select: 'evt-hotAirBalloon-access',
   },
   {
     id: 'evt-hotAirBalloon-abort-leave',
@@ -126,7 +127,7 @@ config.entities.add([
     text: "txt-evt-hotAirBalloon-takeOff",
     report: "txt-evt-hotAirBalloon-takeOff-report",
     incAchievement: "ach-hot-air-balloon",
-    charEffects: [
+    charEvents: [
       {
         optional: true,
         reqCharFlags: '+homeWorld',

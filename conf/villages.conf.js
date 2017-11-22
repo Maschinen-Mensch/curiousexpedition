@@ -39,7 +39,7 @@ config.entities.add([
         reqStanding: '-10',
         reqFixtureFlags: '-angry +inhabited',
         setFixtureFlags: '+angry',
-        events: [
+        select: [
           {
             reqFixtureFlags: '+villageType_1',
             setFixtureParticle: 'pt-village-2-angry',
@@ -52,11 +52,11 @@ config.entities.add([
       },
       {
         reqFixtureFlags: '+angry',
-        partyEffects: [
+        partyEvents: [
           {reqZone: {flags:'+native', range:'..6', count:'0'}},
           {reqZone: {flags:'+native', range:'world', count:'..2'}},
         ],
-        events: [
+        select: [
           {
             reqTileFlags: '-counting0',
             setTileFlags: '+counting0'
@@ -72,7 +72,7 @@ config.entities.add([
           {
             reqTileFlags: '+counting2 +counting1 +counting0',
             setTileFlags: '-counting2 -counting1 -counting0',
-            events: [
+            select: [
               {
                 reqFixtureFlags: '-villageType_lizard', 
                 addZone: {ref:'zn-angryNatives', range:1, seeking:true}
@@ -212,18 +212,17 @@ config.entities.add([
     id: 'evt-village-init',
     actionText: "txt-evt-village-init-action",
     reqFixtureFlags: '-angry',
-    partyEffects: [
+    partyEvents: [
       {
         optional: true,
         reqFixtureFlags: '-idolSet -tribeLizards',
-        events: [
+        select: [
           {slots: 5, setFixtureFlags: '+idolSet'},
           {slots: 1, setFixtureFlags: '+idolSet +idolVillage', reqTutorial:false},
         ]
       },
     ],
-    pushEvent: 'evt-village-enter',
-    events: 'evt-village-setImageDay',
+    select: 'evt-village-setImageDay-enter',
   },
 
   // +enterEvent is set after the first time entering the village
@@ -231,7 +230,7 @@ config.entities.add([
   {
     id: 'evt-village-enter',
     chat: 'cl-village-enter',
-    events: [
+    select: [
       {
         reqFixtureFlags: '-inhabited',
         text: "txt-evt-village-enter-forsaken"
@@ -240,31 +239,31 @@ config.entities.add([
         prio: 1, // tutorial
         reqTutorial: true,
         text: "txt-evt-village-enter",
-        events: 'evt-village-enterCheck'
+        select: 'evt-village-enterCheck'
       },
       {
         prio: 1, // slave return
-        charEffects: {
+        charEvents: {
           reqCharFlags: '+homeWorld +slave',
-          events: 'evt-village-enter-slave',
+          select: 'evt-village-enter-slave',
         }
       },
       {
-        prio: 2, // not first enter
+        prio: 3, // not first enter
         reqFixtureFlags: '+enterEvent', 
         text: "txt-evt-village-enter-1",
-        events: 'evt-village-enterCheck',
+        select: 'evt-village-enterCheck',
       },
       {
         prio: 2, // first enter - trigger enter event
-        reqFixtureFlags: '-enterEvent',
+        reqFixtureFlags: '-enterEvent|+harborQuestKonrad',
         setFixtureFlags: '+enterEvent',
         text: "txt-evt-village-enter-2",
         report: "txt-evt-village-enter-report",
 
       // --- Village type
 
-        partyEffects: [
+        partyEvents: [
           { 
             optional: true, reqFixtureFlags: '+tribeWarriors',
             text: "txt-evt-village-enter-3",
@@ -294,57 +293,57 @@ config.entities.add([
 
         // --- Enter events
 
-        events: [
+        select: [
           {
             reqWorld: '1..', 
             reqFixtureFlags: '+idolVillage',
-            events: 'evt-village-enter-idol'
+            select: 'evt-village-enter-idol'
           },
           {
             reqFixtureFlags: '+harborQuestKonrad', 
-            events: 'evt-village-enter-konrad',
+            select: 'evt-village-enter-konrad',
           },
           {
             reqPartyStatus: '+escortVillager',
             reqPartyFlags: '-escortVillagerRecruited',
-            events: 'evt-village-enter-escortVillager',
+            select: 'evt-village-enter-escortVillager',
           },
           {
             reqStanding: '-2..',
-            charEffects: { reqStatus: '+blessingHoly' },
-            events:'evt-village-enter-blessingHoly'
+            charEvents: { reqStatus: '+blessingHoly' },
+            select:'evt-village-enter-blessingHoly'
           },
           {
             prio:1,
             reqWorld: '1..',
             reqStanding: '..-1',
-            events:'evt-village-enter-requestPresents'
+            select:'evt-village-enter-requestPresents'
           },
           {
             prio:1,
             reqWorld: '1..',
             reqStanding: '..-1',
-            events:'evt-village-enter-whatDoWeWant'
+            select:'evt-village-enter-whatDoWeWant'
           },
           {
             prio:1,
             reqWorld: '1..',
             reqStanding: '-3..',
-            events: 'evt-village-enter-beastMaster'
+            select: 'evt-village-enter-beastMaster'
           },
           {
             prio:1,
-            events:'evt-village-enter-neutral'
+            select:'evt-village-enter-neutral'
           },
           {
             prio:1,
             reqStanding: '2..',
-            events:'evt-village-enter-presents'
+            select:'evt-village-enter-presents'
           },
           {
             prio:1,
             reqStanding: '-2..',
-            events:'evt-village-enter-food'
+            select:'evt-village-enter-food'
           },
         ],
       },
@@ -352,27 +351,27 @@ config.entities.add([
   },
   {
     id: 'evt-village-enter-whatDoWeWant',
-    npcEffects: {
+    npcEvents: {
       text: "txt-evt-village-enter-whatDoWeWant",
       actions: [
         {
           actionText: "txt-evt-mission-cultist-rest-action",
           setFixtureFlags: '+recruitFail +tradeFail',
           text: "txt-evt-village-enter-whatDoWeWant-1",
-          events: 'evt-village-enterCheck'
+          select: 'evt-village-enterCheck'
         },
         {
           actionText: "txt-evt-village-enter-whatDoWeWant-action",
           setTileFlags: '+restFail',
           text: "txt-evt-village-enter-whatDoWeWant-2",
-          events: 'evt-village-enterCheck'
+          select: 'evt-village-enterCheck'
         },
         {
           actionText: "txt-evt-village-enter-whatDoWeWant-action-1",
-          events: [
+          select: [
             {
               text: "txt-evt-village-enter-whatDoWeWant-3",
-              events: 'evt-village-replaceAngry',
+              select: 'evt-village-replaceAngry',
               actions: 'evt-leave'
             },
             {
@@ -387,16 +386,16 @@ config.entities.add([
   },
   {
     id: 'evt-village-enter-slave',
-    charEffects: {
+    charEvents: {
       reqCharFlags: '+homeWorld +slave',
       text: "txt-evt-village-enter-slave",
       actions: [
         {
         actionText: "txt-evt-village-enter-slave-action",
         standing: +4,
-        events: {
+        select: {
             text: "txt-evt-village-enter-slave-1",
-            events: [
+            select: [
               {
                 slots: 5,
                 text: "txt-evt-village-enter-slave-2",
@@ -438,7 +437,7 @@ config.entities.add([
   {
     id: 'evt-village-enter-blessingHoly',
     standing: +4,
-    charEffects: {
+    charEvents: {
       reqStatus: '+blessingHoly',
       text: "txt-evt-village-enter-blessingHoly",
     },
@@ -476,13 +475,13 @@ config.entities.add([
       baseValue: {base:15},
       close: {
         text: "txt-evt-village-enter-requestPresents-1",
-        events: 'evt-village-enterCheck',
+        select: 'evt-village-enterCheck',
       },
       cancel: {
-        events: [
+        select: [
           {
             slots:1,
-            events: 'evt-village-replaceAngry',
+            select: 'evt-village-replaceAngry',
             text: "txt-evt-village-enter-requestPresents-2",
           },
           {
@@ -498,7 +497,7 @@ config.entities.add([
     id: 'evt-village-enter-escortVillager',
     npc: 'pl-village-escort',
     setPartyFlags: '+escortVillagerRecruited',
-    npcEffects: {
+    npcEvents: {
       text: "txt-evt-village-enter-escortVillager",
       report: '§I found the wife I was asked to escort to London by the wealthy foreigner.',
       setPartyFlags: '+escortVillagerShrineInfo',
@@ -506,20 +505,20 @@ config.entities.add([
         actionText: "txt-evt-sanity-angry-action",
         addNPC: true,
         standing: +2,
-        events: 'evt-village-enterCheck',
+        select: 'evt-village-enterCheck',
       },
     },
   },
   {
     id: 'evt-village-enterCheck',
-    events: [ 
+    select: [ 
        {ref: 'evt-village-notWelcome'},
        {prio: 1, ref: 'evt-village-main'},
     ],
   },
   {
     id: 'evt-village-actions',
-    events: [
+    select: [
       {
         actions: [
           'evt-village-familyAmulet',
@@ -551,7 +550,7 @@ config.entities.add([
   },
   {
     id: 'evt-village-main',
-    partyEffects: [
+    partyEvents: [
       // --- Player standing
       {
         prio: -1, 
@@ -588,7 +587,7 @@ config.entities.add([
         report: "txt-evt-village-main-report-4",
       },
       {
-        charEffects: [ 
+        charEvents: [ 
           { 
             optional: true,  // Translator
             reqStanding: '-2..',
@@ -606,12 +605,12 @@ config.entities.add([
         ], 
       },
     ],     
-    events: 'evt-village-actions'
+    select: 'evt-village-actions'
   },
   {
     id: 'evt-village-main-update',
     actionText: "txt-evt-village-main-update-action",
-    partyEffects: [
+    partyEvents: [
       {
         optional: true, 
         prio: -1, 
@@ -665,26 +664,26 @@ config.entities.add([
         text: "txt-evt-village-main-update-wedding"
       },
     ],
-    events: 'evt-village-actions'
+    select: 'evt-village-actions'
   },
   {
     id: 'evt-village-rest',
     alwaysShown: true,
     actionText: "txt-evt-village-rest-action",
     reqTileFlags: '-restFail',
-    partyEffects: 'evt-village-setImageNight',
-    events: [
+    partyEvents: 'evt-village-setImageNight',
+    select: [
       {
         prio: -1,
         reqTutorial: true,
         text: "txt-evt-village-rest",
-        events: 'evt-village-nightSelect',
+        select: 'evt-village-nightSelect',
       },
       {
         reqStanding: '-2..10',
         text: "txt-evt-village-rest-1", 
         report: "txt-evt-village-rest-report",
-        events: 'evt-village-nightSelect',
+        select: 'evt-village-nightSelect',
       },
       {
         reqStanding: '-8..-3',
@@ -693,11 +692,11 @@ config.entities.add([
           baseValue: {base:15},
           close: {
             text: "txt-evt-village-rest-3", 
-            events: 'evt-village-nightSelect',
+            select: 'evt-village-nightSelect',
           },
           cancel: {
             text: "txt-evt-village-rest-no",
-            events: 'evt-village-actions',
+            select: 'evt-village-actions',
           },
         },
       },
@@ -710,45 +709,44 @@ config.entities.add([
     turns: 1,
     standing: standingCostVillageUse,
 
-    charEffects: { 
+    charEvents: { 
       optional: true,
       reqPerk: '+polyglot',
       standing: -standingCostVillageUse, 
     },
-    events: 'evt-village-morning'
+    select: 'evt-village-morning'
   },
   {
     id: 'evt-village-morning',
     text: "txt-evt-village-morning",
     chat: 'cl-newMorning',
-    pushEvent: 'evt-village-main-update',
-    events: 'evt-village-setImageDay',   
+    select: 'evt-village-setImageDay-update',   
   },
   {
     id: 'evt-village-trade',
     actionText: "txt-evt-mission-trade-action",
     alwaysShown: true,
     reqFixtureFlags: '-tradeFail',
-    events: [
+    select: [
       {
         barter: {
           close: {
             text: "txt-evt-village-trade",
-            events: [
+            select: [
               {
                 reqTileFlags: '-traded',
                 setTileFlags: '+traded',
-                events: 'evt-village-actions'
+                select: 'evt-village-actions'
               },
               {
                 prio: 1,
-                events: 'evt-village-actions'
+                select: 'evt-village-actions'
               },
             ],
           },
           cancel: {
             text: "txt-evt-village-trade-1",
-            events: 'evt-village-actions',
+            select: 'evt-village-actions',
           },
         },
       },
@@ -756,7 +754,7 @@ config.entities.add([
         reqStanding: '..-7',
         setFixtureFlags: '+tradeFail',
         text: "txt-evt-village-trade-refuse",
-        events: 'evt-village-main-update'
+        select: 'evt-village-main-update'
       },
     ],
   },
@@ -768,7 +766,7 @@ config.entities.add([
     showPartyCount: true,
     alwaysShown: true,
     chat: 'cl-village-recruit',
-    partyEffects: [
+    partyEvents: [
       {
         // Warrior Village
         reqFixtureFlags: '+villageType_1', optional: true,
@@ -792,21 +790,11 @@ config.entities.add([
       {
         // Inuit Village
         reqFixtureFlags: '+villageType_inuit', optional: true,
-        events: [
-          {
-            slots:1,
-            showImage: {
-              src: 'evt_fxt_village_inuit_1.png', type: 'day', showMounted: true,
-              particles: ['pt-snow-1', 'pt-snow-2', 'pt-snow-3'],
-            },
-          },
-          {
-            slots:1,
-            showImage: {
-              src: 'evt_fxt_village_inuit_1.png', type: 'day', showMounted: true,
-            },
-          }
-        ],
+        showImage: {
+          src: 'evt_fxt_village_inuit_1.png', type: 'day', showMounted: true,
+          particles: ['pt-snow-1', 'pt-snow-2', 'pt-snow-3'],
+          particlesChance: 0.5
+        },
       },
       {
         // Lizard Village
@@ -816,10 +804,9 @@ config.entities.add([
     ],
     actions: {
       actionText: "txt-evt-dismiss-default-action-1",
-      pushEvent: 'evt-village-main-update',
-      events: 'evt-village-setImageDay',
+      select: 'evt-village-setImageDay-update',
     },
-    events: [
+    select: [
       {
         reqStanding: '..1',
         text: "txt-evt-village-recruit-refuse",
@@ -828,14 +815,14 @@ config.entities.add([
         prio:1,
         text: "txt-evt-village-recruit-1",
         setFixtureFlags: '+recruitFail',
-        partyEffects: [
-          {events: 'evt-village-recruit-select', reqTutorial:false, optional: true},
-          {events: 'evt-village-recruit-select', reqTutorial:false, optional: true},
-          {events: 'evt-village-recruit-select', reqTutorial:false, optional: true},
+        partyEvents: [
+          {select: 'evt-village-recruit-select', reqTutorial:false, optional: true},
+          {select: 'evt-village-recruit-select', reqTutorial:false, optional: true},
+          {select: 'evt-village-recruit-select', reqTutorial:false, optional: true},
 
-          {events: 'evt-village-recruit-warrior', reqTutorial:true, optional: true},
-          {events: 'evt-village-recruit-warrior', reqTutorial:true, optional: true},
-          {events: 'evt-village-recruit-warrior', reqTutorial:true, optional: true},
+          {select: 'evt-village-recruit-warrior', reqTutorial:true, optional: true},
+          {select: 'evt-village-recruit-warrior', reqTutorial:true, optional: true},
+          {select: 'evt-village-recruit-warrior', reqTutorial:true, optional: true},
         ],
       },
     ],
@@ -843,10 +830,10 @@ config.entities.add([
 
   {
     id: 'evt-village-recruit-select',
-    events: [
+    select: [
       {
         slots:3, 
-        events: [
+        select: [
           {ref: 'evt-village-recruit-warrior'},
           {ref: 'evt-village-recruit-scout'},
           {ref: 'evt-village-recruit-shaman'},
@@ -868,18 +855,18 @@ config.entities.add([
     id: 'evt-village-recruit-warrior',
     reqFixtureFlags: '+tribeWarriors | +tribeInuit',
     npc: 'pl-native-warrior',
-    npcEffects: {
+    npcEvents: {
       actions: {
         actionText: "txt-evt-village-recruit-warrior-action",
         text: "txt-evt-village-recruit-warrior",
         report: "txt-evt-village-recruit-warrior-report",
+        setPartyFlags: '+recruitedSomebody',
         addNPC: true,
         setCharFlags: '+homeWorld',
         setStatus: '+homesick',
         chat: 'cl-join-nativeWarrior',
-        pushEvent: 'evt-village-main-update',
         incAchievement: 'ach-recr-natives',
-        events: 'evt-village-setImageDay',
+        select: 'evt-village-setImageDay-update',
       }
     }
   },
@@ -887,18 +874,18 @@ config.entities.add([
     id: 'evt-village-recruit-scout',
     reqFixtureFlags: '+tribeScouts',
     npc: 'pl-native-scout',
-    npcEffects: {
+    npcEvents: {
       actions: {
         actionText: "txt-evt-village-recruit-scout-action",
         text: "txt-evt-village-recruit-scout",
         report: "txt-evt-village-recruit-scout-report",
+        setPartyFlags: '+recruitedSomebody',
         addNPC: true,
         setCharFlags: '+homeWorld',
         setStatus: '+homesick',
         chat: 'cl-join-nativeScout',
-        pushEvent: 'evt-village-main-update',
         incAchievement: 'ach-recr-natives',
-        events: 'evt-village-setImageDay',
+        select: 'evt-village-setImageDay-update',
       }
     }
   },
@@ -906,18 +893,18 @@ config.entities.add([
     id: 'evt-village-recruit-shaman',
     reqFixtureFlags: '+tribeShamans',
     npc: 'pl-native-shaman',
-    npcEffects: {
+    npcEvents: {
       actions: {
         actionText: "txt-evt-village-recruit-shaman-action",
         text: "txt-evt-village-recruit-shaman",
         report: "txt-evt-village-recruit-shaman-report",
+        setPartyFlags: '+recruitedSomebody',
         addNPC: true,
         setCharFlags: '+homeWorld',
         setStatus: '+homesick',
         chat: 'cl-join-nativeShaman',
-        pushEvent: 'evt-village-main-update',
         incAchievement: 'ach-recr-natives',
-        events: 'evt-village-setImageDay',
+        select: 'evt-village-setImageDay-update',
       }
     }
   },
@@ -925,17 +912,18 @@ config.entities.add([
     id: 'evt-village-recruit-bedouin',
     reqFixtureFlags: '+tribeNomads',
     npc: 'pl-bedouin',
-    npcEffects: {
+    npcEvents: {
       actions: {
         actionText: "txt-evt-harbor-recruit-bedouin-action",
         text: "txt-evt-village-recruit-bedouin",
         report: "txt-evt-village-recruit-bedouin-report",
+        setPartyFlags: '+recruitedSomebody',
         addNPC: true,
         setCharFlags: '+homeWorld',
         setStatus: '+homesick',
         chat: 'cl-join-bedouin',
         incAchievement: 'ach-recr-natives',
-        events: 'evt-village-main-update'
+        select: 'evt-village-main-update'
       }
     }
   },
@@ -943,16 +931,17 @@ config.entities.add([
     id: 'evt-village-recruit-lizard-warrior',
     reqFixtureFlags: '+tribeLizards',
     npc: 'pl-lizard-warrior',
-    npcEffects: {
+    npcEvents: {
       actions: {
         actionText: "txt-evt-village-recruit-warrior-action",
         text: "txt-evt-village-recruit-lizard-warrior",
         report: "txt-evt-village-recruit-lizard-warrior-report",
+        setPartyFlags: '+recruitedSomebody',
         addNPC: true,
         setCharFlags: '+homeWorld',
         setStatus: '+homesick',
         incAchievement: 'ach-recr-natives',
-        events: 'evt-village-main-update'
+        select: 'evt-village-main-update'
       }
     }
   },
@@ -960,36 +949,38 @@ config.entities.add([
     id: 'evt-village-recruit-lizard-shaman',
     reqFixtureFlags: '+tribeLizards',
     npc: 'pl-lizard-shaman',
-    npcEffects: {
+    npcEvents: {
       actions: {
         actionText: "txt-evt-village-recruit-shaman-action",
         text: "txt-evt-village-recruit-lizard-shaman",
         report: "txt-evt-village-recruit-lizard-shaman-report",
+        setPartyFlags: '+recruitedSomebody',
         addNPC: true,
         setCharFlags: '+homeWorld',
         setStatus: '+homesick',
         incAchievement: 'ach-recr-natives',
-        events: 'evt-village-main-update'
+        select: 'evt-village-main-update'
       }
     }
   },
   {
     id: 'evt-village-recruit-animalHandler',
     reqFixtureFlags: '+tribeWarriors | +tribeScouts | +tribeShamans',
-    charEffects: {count: 'all', reqCharFlags: '-nativeAnimalHandler'},
+    charEvents: {count: 'all', reqCharFlags: '-nativeAnimalHandler'},
 
     npc: 'pl-native-animalHandler',
-    npcEffects: {
+    npcEvents: {
       actions: { 
         actionText: "txt-evt-village-recruit-animalHandler-action", // Enter proper unit type here!
         text: "txt-evt-village-recruit-animalHandler",
         report: "txt-evt-village-recruit-animalHandler-report",
+        setPartyFlags: '+recruitedSomebody',
         addNPC: true,
         setCharFlags: '+homeWorld',
         setStatus: '+homesick',
         chat: 'cl-join-nativeAnimalHandler',
         incAchievement: 'ach-recr-natives',
-        events: 'evt-village-main-update'
+        select: 'evt-village-main-update'
       }
     }
   },
@@ -999,13 +990,14 @@ config.entities.add([
     // text: "txt-evt-village-recruit-donkey-offer",
 
     npc: 'anm-donkey',
-    npcEffects: {
+    npcEvents: {
       actions: {
         actionText: "txt-evt-village-recruit-donkey-action",
         text: "txt-evt-village-recruit-donkey",
         report: "txt-evt-village-recruit-donkey-report",
+        setPartyFlags: '+recruitedSomebody',
         addNPC: true,
-        events: 'evt-village-main-update'
+        select: 'evt-village-main-update'
       }
     }
   },
@@ -1015,13 +1007,14 @@ config.entities.add([
     // text: "txt-evt-village-recruit-buffalo-offer",
 
     npc: 'anm-waterBuffalo',
-    npcEffects: {
+    npcEvents: {
       actions: {
         actionText: "txt-evt-village-recruit-buffalo-action",
         text: "txt-evt-village-recruit-buffalo",
         report: "txt-evt-village-recruit-buffalo-report",
+        setPartyFlags: '+recruitedSomebody',
         addNPC: true,
-        events: 'evt-village-main-update'
+        select: 'evt-village-main-update'
       }
     }
   },
@@ -1031,13 +1024,14 @@ config.entities.add([
     // text: "txt-evt-village-recruit-camel-offer",
 
     npc: 'anm-camel',
-    npcEffects: {
+    npcEvents: {
       actions: {
         actionText: "txt-evt-village-recruit-camel-action",
         text: "txt-evt-village-recruit-camel-offer",
         report: "txt-evt-village-recruit-camel-report",
+        setPartyFlags: '+recruitedSomebody',
         addCharacter: 'anm-camel',
-        events: 'evt-village-main-update'
+        select: 'evt-village-main-update'
       }
     }
   },
@@ -1047,14 +1041,15 @@ config.entities.add([
     // text: "txt-evt-village-recruit-parasaurolophus-offer",
 
     npc: 'anm-parasaurolophus',
-    npcEffects: {
+    npcEvents: {
       actions: {
         actionText: "txt-evt-village-recruit-parasaurolophus-action",
         text: "txt-evt-village-recruit-parasaurolophus-yes",
         report: "txt-evt-village-recruit-parasaurolophus-yes-report",
+        setPartyFlags: '+recruitedSomebody',
         addCharacter: 'anm-parasaurolophus',
         incAchievement: 'ach-recr-dino',
-        events: 'evt-village-main-update'
+        select: 'evt-village-main-update'
       }
     }
   },
@@ -1064,14 +1059,15 @@ config.entities.add([
     // text: "txt-evt-village-recruit-chasmosaurus-offer",
 
     npc: 'anm-chasmosaurus',
-    npcEffects: {
+    npcEvents: {
       actions: {
         actionText: "txt-evt-village-recruit-chasmosaurus-action",
         text: "txt-evt-village-recruit-chasmosaurus",
         report: "txt-evt-village-recruit-chasmosaurus-report",
+        setPartyFlags: '+recruitedSomebody',
         addCharacter: 'anm-chasmosaurus',
         incAchievement: 'ach-recr-dino',
-        events: 'evt-village-main-update'
+        select: 'evt-village-main-update'
       }
     }
   },
@@ -1080,12 +1076,12 @@ config.entities.add([
     id: 'evt-village-leave',
     actionText: "txt-evt-leave-action",
     alwaysShown: true,
-    events: [
+    select: [
       {
         // Escort Villager Quest Shrine reveal
         reqPartyFlags: '+escortVillagerShrineInfo',
         setPartyFlags: '-escortVillagerShrineInfo',
-        charEffects: {
+        charEvents: {
           reqCharFlags: '+escortVillager',
           text: "txt-evt-village-leave-escort",
         },
@@ -1094,7 +1090,7 @@ config.entities.add([
       },
       {
         prio: 1, // Optional things
-        charEffects: [
+        charEvents: [
           {
             optional: true,
             reqCharFlags: '-special +humanoid',
@@ -1123,7 +1119,7 @@ config.entities.add([
             text: "txt-evt-village-leave-3"
           }
         ],
-        partyEffects: [
+        partyEvents: [
           {
             optional: true, 
             reqFixtureFlags: '+wedding',
@@ -1155,7 +1151,7 @@ config.entities.add([
 
   {
     id: 'evt-village-nightSelect',  
-    events: [
+    select: [
       {prio: -1,  ref: 'evt-village-rest-tutorial'},
       {slots: 1, ref: 'evt-village-rest-alcohol'},
       {slots: 3, ref: 'evt-village-rest-racist'},
@@ -1200,10 +1196,11 @@ config.entities.add([
     id: 'evt-village-rest-flavor-generic',
     text: "txt-evt-village-rest-generic",
     report: "txt-evt-village-rest-generic-report",
-    events: 'evt-village-actions-night'
+    select: 'evt-village-actions-night'
   },
   {
     id: 'evt-village-rest-unlockSpecialWorld',
+    reqTutorial: false,
     text: "txt-evt-village-rest-unlockSpecialWorld",
     report: "txt-evt-village-rest-unlockSpecialWorld-report",
     actions: [
@@ -1212,19 +1209,19 @@ config.entities.add([
         barter: {
           baseValue: {base:15},
           close: {
-            partyEffects: 'evt-village-actions-night',
-            events: 'evt-unlock-specialWorld-withText',
+            partyEvents: 'evt-village-actions-night',
+            select: 'evt-unlock-specialWorld-withText',
           },
           cancel: {
             text: "txt-evt-village-rest-unlockSpecialWorld-1",
-            events: 'evt-village-actions-night',
+            select: 'evt-village-actions-night',
           },
         },
       },
       {
         actionText: "txt-evt-village-rest-unlockSpecialWorld-action-1",
         text: "txt-evt-village-rest-unlockSpecialWorld-no",
-        events: 'evt-village-actions-night',     
+        select: 'evt-village-actions-night',     
       },
     ],
   },
@@ -1240,13 +1237,13 @@ config.entities.add([
         text: "txt-evt-village-rest-alcohol-1",
         report: "txt-evt-village-rest-alcohol-report-1",
         sanity: +10, compassScore: malusAlcohol, standing: +1,
-        charEffects: [
+        charEvents: [
           {
             chance: 0.4, 
             optional: true, 
             reqCharFlags: '+humanoid -special',
-            reqStatus: {'st-alcoholic': false}, 
-            setStatus: {'st-alcoholic': true},
+            reqStatus: '-alcoholic', 
+            setStatus: '+alcoholic',
             text: "txt-evt-village-rest-alcohol-2",
             report: "txt-evt-village-rest-alcohol-report-2",
           },
@@ -1257,49 +1254,49 @@ config.entities.add([
             sanity: +10
           },
         ],
-        events: 'evt-village-actions-night'
+        select: 'evt-village-actions-night'
       },
       {
         actionText: "txt-evt-angry-demandPayment-action-1",
         standing: -1,
         text: "txt-evt-village-rest-alcohol-3",
         report: "txt-evt-village-rest-alcohol-report-3",
-        events: 'evt-village-actions-night'
+        select: 'evt-village-actions-night'
       },
     ],
   },
   {
     id: 'evt-village-rest-racist',
-      charEffects: {
+      charEvents: {
         reqStatus: '+racist', 
         text: "txt-evt-village-rest-racist",
         report: "txt-evt-village-rest-racist-report",
       },
       standing: -1,
-      events: 'evt-village-actions-night'
+      select: 'evt-village-actions-night'
   },
   {
     id: 'evt-village-rest-paranoid',
-    charEffects: {
-      reqStatus: {'st-paranoid':true}, 
+    charEvents: {
+      reqStatus: '+paranoid', 
       text: "txt-evt-village-rest-paranoid",
       report: "txt-evt-village-rest-paranoid-report",
     },
     standing: -1,
-    events: [{ref:'evt-village-actions-night'}],   
+    select: 'evt-village-actions-night'   
   },
   {
     id: 'evt-village-rest-compassScore',
     text: "txt-evt-village-rest-compassScore",
     report: "txt-evt-village-rest-compassScore-report",
     compassScore: +5,
-    events: [{ref:'evt-village-actions-night'}],       
+    select: 'evt-village-actions-night'       
   },
   {
     id: 'evt-village-rest-offerEat',
     text: "txt-evt-village-rest-offerEat",
     report: "txt-evt-village-rest-offerEat-report",
-    charEffects: {
+    charEvents: {
       optional: true,
       reqCharFlags: '+native', 
       text: "txt-evt-village-rest-offerEat-1",
@@ -1310,20 +1307,20 @@ config.entities.add([
         actionText: "txt-evt-village-rest-offerEat-action",
         text: "txt-evt-village-rest-offerEat-2",
         report: "txt-evt-village-rest-offerEat-report-2",
-        charEffects: {
+        charEvents: {
           optional: true,
           reqCharFlags: '+native', 
           text: "txt-evt-village-rest-offerEat",
         },
         sanity: -20, standing: +1,
-        events: [{ref:'evt-village-actions-night'}],
+        select: 'evt-village-actions-night'
       },
       {
         actionText: "txt-evt-angry-demandPayment-action-1",
         standing: -1,
         text: "txt-evt-village-rest-offerEat-3",
         report: "txt-evt-village-rest-offerEat-report-3",
-        events: [{ref:'evt-village-actions-night'}],
+        select: 'evt-village-actions-night'
       },
     ],
   },
@@ -1339,20 +1336,20 @@ config.entities.add([
         text: "txt-evt-village-rest-mummy-1",
         report: "txt-evt-village-rest-mummy-report-1",
         items: {'it-mummy':-1},
-        events: [{ref:'evt-village-actions-night'}],
+        select: 'evt-village-actions-night'
       },
       {
         actionText: "txt-evt-angry-demandPayment-action-1",
         standing: -3,
         text: "txt-evt-village-rest-mummy-2",
         report: "txt-evt-village-rest-mummy-report-2",
-        events: [{ref:'evt-village-actions-night'}],
+        select: 'evt-village-actions-night'
       },
     ],
   },
   {
     id: 'evt-village-rest-killOffer',
-    charEffects: [
+    charEvents: [
       {
         optional:false, reqStatus: [{'st-paranoid':true}, {'st-racist':true}], 
         text: "txt-evt-village-rest-killOffer",
@@ -1364,13 +1361,13 @@ config.entities.add([
             report: "txt-evt-village-rest-killOffer-report-1",
             removeCharacter: true,
             standing: +2,
-            events: 'evt-village-actions-night'
+            select: 'evt-village-actions-night'
           },
           {
             actionText: "txt-evt-village-rest-unlockSpecialWorld-action-1",
             text: "txt-evt-village-rest-killOffer-2",
             report: "txt-evt-village-rest-killOffer-report-2",
-            events: 'evt-village-actions-night'
+            select: 'evt-village-actions-night'
           },
         ], 
       },    
@@ -1386,21 +1383,21 @@ config.entities.add([
         actionText: "txt-evt-village-rest-questionMankind-action",
         text: "txt-evt-village-rest-questionMankind-1",
         report: "txt-evt-village-rest-questionMankind-report-1",
-        events: 'evt-village-actions-night',
+        select: 'evt-village-actions-night',
       },
       {
         actionText: "txt-evt-village-rest-questionMankind-action-1",
-        charEffects: {optional:true, count:'any', loyalty:-1, reqCharFlags:'+missionary'},
+        charEvents: {optional:true, count:'any', loyalty:-1, reqCharFlags:'+missionary'},
         text: "txt-evt-village-rest-questionMankind-2",
         report: "txt-evt-village-rest-questionMankind-report-2",
-        events: 'evt-village-actions-night'
+        select: 'evt-village-actions-night'
       },
       {
         actionText: "txt-evt-village-rest-questionMankind-action-2",
-        charEffects: {optional:true, chance:0.5, count:'any', loyalty:-1, reqCharFlags:'+missionary'},
+        charEvents: {optional:true, chance:0.5, count:'any', loyalty:-1, reqCharFlags:'+missionary'},
         text: "txt-evt-village-rest-questionMankind-3",
         report: "txt-evt-village-rest-questionMankind-report-3",
-        events: 'evt-village-actions-night'
+        select: 'evt-village-actions-night'
       }
     ]   
   },
@@ -1416,19 +1413,19 @@ config.entities.add([
         report: "txt-evt-village-rest-whisky-report-1",
         items: {'it-whisky':-1},
         standing: +1,
-        events: [{ref:'evt-village-actions-night'}],
+        select: 'evt-village-actions-night'
       },
       {
         actionText: "txt-evt-angry-demandPayment-action-1",
         text: "txt-evt-village-rest-whisky-2",
         report: "txt-evt-village-rest-whisky-report-2",
-        events: [{ref:'evt-village-actions-night'}],
+        select: 'evt-village-actions-night'
       },
     ],    
   },
   {
     id: 'evt-village-rest-loveStay',
-    charEffects: {
+    charEvents: {
       reqCharFlags: '-special +humanoid',
       reqStatus: '-racist',
       text: "txt-evt-village-rest-loveStay",
@@ -1442,24 +1439,24 @@ config.entities.add([
     report: "txt-evt-village-rest-loveStay-report",
     removeCharacter: true,
     standing: +4,
-    charEffects: {
+    charEvents: {
       reqStatus: '+racist',
       optional: true,
       text: "txt-evt-village-rest-loveStay-yes-racist"
     },
-    events: 'evt-village-actions-night'
+    select: 'evt-village-actions-night'
   },
   {
     id: 'evt-village-rest-loveStay-no',
     actionText: "txt-evt-village-enter-slave-action-1",
     loyalty: -2,
     text: "txt-evt-village-rest-loveStay-no",
-    events: 'evt-village-actions-night'
+    select: 'evt-village-actions-night'
   },
   {
     id: 'evt-village-rest-animalFeast',
     text: "txt-evt-village-rest-animalFeast",
-    charEffects: {
+    charEvents: {
       reqCharFlags: '-humanoid -imaginary', 
       count:'any',
       actions: {
@@ -1468,13 +1465,13 @@ config.entities.add([
         report: "txt-evt-village-rest-animalFeast-report",
         storeCharacter: true,
         standing: +5,
-        events: 'evt-village-actions-night'
+        select: 'evt-village-actions-night'
       },
     },
     actions: {
       actionText: "txt-pl-cultist-action",
       text: "txt-evt-village-rest-animalFeast-no",
-      events: 'evt-village-actions-night'
+      select: 'evt-village-actions-night'
     }
   },
   {
@@ -1486,30 +1483,30 @@ config.entities.add([
         actionText: "txt-evt-village-rest-questionSuperiorLife-action",
         text: "txt-evt-village-rest-questionSuperiorLife-1",
         standing: -2,
-        charEffects: {
+        charEvents: {
           count: 1,
           optional: true,
           reqStatus: {'st-homesick':true},
           loyalty: +1,
         },
-        events: 'evt-village-actions-night',
+        select: 'evt-village-actions-night',
       },
       {
         actionText: "txt-evt-village-rest-questionSuperiorLife-action-1",
         text: "txt-evt-village-rest-questionSuperiorLife-2",
         standing: +2,
-        events: 'evt-village-actions-night',
+        select: 'evt-village-actions-night',
       },
       {
         actionText: "txt-evt-village-rest-questionMankind-action-2",
         text: "txt-evt-village-rest-questionSuperiorLife-3",
-        events: 'evt-village-actions-night',
+        select: 'evt-village-actions-night',
       }
     ]   
   },
   {
     id: 'evt-village-rest-tiedUnit',
-    storeEffects: {
+    storeEvents: {
       reqCharFlags: '-native +humanoid -dead',
       reqAge: '20..',
       text: "txt-evt-village-rest-tiedUnit",
@@ -1524,14 +1521,14 @@ config.entities.add([
               text: "txt-evt-village-rest-tiedUnit-1",
               report: "txt-evt-village-rest-tiedUnit-report-1",
               restoreCharacter: true,
-              events: 'evt-village-actions-night'
+              select: 'evt-village-actions-night'
             },
             cancel: {
               actionText: "txt-st-kleptomania-idol-action-1",
               text: "txt-evt-village-rest-tiedUnit-2",
               report: "txt-evt-village-rest-tiedUnit-report-2",
               unstoreCharacter: true,
-              events: 'evt-village-actions-night'
+              select: 'evt-village-actions-night'
             },
           },
         },
@@ -1540,25 +1537,25 @@ config.entities.add([
           text: "txt-evt-village-rest-tiedUnit-3",
           report: "txt-evt-village-rest-tiedUnit-report-3",
           unstoreCharacter: true,
-          events: 'evt-village-actions-night'
+          select: 'evt-village-actions-night'
         }
       ]
     }
   },
   {
     id: 'evt-village-rest-imaginaryArgument',
-    charEffects: {
+    charEvents: {
       reqCharFlags: '+imaginary',
       text: "txt-evt-village-rest-imaginaryArgument",
       standing: -3,
-      events: 'evt-village-actions-night',
+      select: 'evt-village-actions-night',
     }
   },
   {
     id: 'evt-village-rest-questionPolygamy',
-    events: [
+    select: [
       {
-        charEffects: {
+        charEvents: {
           reqCharFlags: '+special', reqGender: 'male'
         },
         text: "txt-evt-village-rest-questionPolygamy",
@@ -1566,17 +1563,17 @@ config.entities.add([
           {
             actionText: "txt-evt-village-rest-questionPolygamy-action",
             text: "txt-evt-village-rest-questionPolygamy-1",
-            events: 'evt-village-actions-night',
+            select: 'evt-village-actions-night',
           },
           {
             actionText: "txt-evt-village-rest-questionPolygamy-action-1",
             text: "txt-evt-village-rest-questionPolygamy-2",
-            events: 'evt-village-actions-night',
+            select: 'evt-village-actions-night',
           },
         ]  
       },
       {
-        charEffects: {
+        charEvents: {
           reqCharFlags: '+special', reqGender: 'female'
         },
         text: "txt-evt-village-rest-questionPolygamy-3",
@@ -1584,12 +1581,12 @@ config.entities.add([
           {
             actionText: "txt-evt-village-rest-questionPolygamy-action-2",
             text: "txt-evt-village-rest-questionPolygamy-4",
-            events: 'evt-village-actions-night'
+            select: 'evt-village-actions-night'
           },
           {
             actionText: "txt-evt-village-rest-questionPolygamy-action-3",
             text: "txt-evt-village-rest-questionPolygamy-5",
-            events: 'evt-village-actions-night'
+            select: 'evt-village-actions-night'
           },
         ],  
       },
@@ -1598,10 +1595,10 @@ config.entities.add([
   {
     id: 'evt-village-rest-child',
     reqFreePartyCount:'1..',
-    charEffects: {
+    charEvents: {
       reqCharFlags: '+humanoid -special', reqStatus: '-racist',
       setCharFlags: '+lover',
-      events: [
+      select: [
         {
           setPartyFlags: '+loverM',
           text:"txt-evt-village-rest-childM",
@@ -1621,7 +1618,7 @@ config.entities.add([
     id: 'evt-village-rest-child-yes',
     actionText: "txt-evt-village-rest-child-yes-action",
     text: "txt-evt-village-rest-child-yes",
-    events: [
+    select: [
       'evt-village-rest-child-success',
       'evt-village-rest-child-failure'
     ]
@@ -1629,23 +1626,23 @@ config.entities.add([
   {
     id: 'evt-village-rest-child-no',
     actionText: "txt-evt-angry-demandPayment-action-1",
-    charEffects: {
+    charEvents: {
       reqCharFlags: '+lover',
       setCharFlags: '-lover',
       loyalty: -2,
       text: "txt-evt-village-rest-child-no",
     },
-    events: 'evt-village-actions-night'
+    select: 'evt-village-actions-night'
   },
   {
     id: 'evt-village-rest-child-success',
     text: "txt-evt-village-rest-child-success",
-    partyEffects: [
+    partyEvents: [
       {
-        events: [
+        select: [
           {
-            charEffects: {reqCharFlags: '-nativeScout', count: 'all'},
-            events: [
+            charEvents: {reqCharFlags: '-nativeScout', count: 'all'},
+            select: [
               {
                 reqPartyFlags:'+loverM', 
                 addCharacter: {id:'pl-native-scout', gender:'male'},
@@ -1657,8 +1654,8 @@ config.entities.add([
             ],
           },
           {
-            charEffects: {reqCharFlags: '-nativeShaman', count: 'all'},
-            events: [
+            charEvents: {reqCharFlags: '-nativeShaman', count: 'all'},
+            select: [
               {
                 reqPartyFlags:'+loverM', 
                 addCharacter: {id:'pl-native-shaman', gender:'male'},
@@ -1670,8 +1667,8 @@ config.entities.add([
             ],
           },
           {
-            charEffects: {reqCharFlags: '-nativeWarrior', count: 'all'},
-            events: [
+            charEvents: {reqCharFlags: '-nativeWarrior', count: 'all'},
+            select: [
               {
                 reqPartyFlags:'+loverM', 
                 addCharacter: {id:'pl-native-warrior', gender:'male'},
@@ -1683,8 +1680,8 @@ config.entities.add([
             ],
           },
           {
-            charEffects: {reqCharFlags: '-nativeAnimalHandler', count: 'all'},
-            events: [
+            charEvents: {reqCharFlags: '-nativeAnimalHandler', count: 'all'},
+            select: [
               {
                 reqPartyFlags:'+loverM', 
                 addCharacter: {id:'pl-native-animalHandler', gender:'male'},
@@ -1705,7 +1702,7 @@ config.entities.add([
   },
   {
     id: 'evt-village-rest-child-failure',
-    charEffects: {
+    charEvents: {
       reqCharFlags: '+lover',
       text: "txt-evt-village-rest-child-failure",
       standing: standingCostSacrilegLarge,
@@ -1718,14 +1715,14 @@ config.entities.add([
             close: {
               text: "txt-evt-village-rest-child-failure-1",
               report: "txt-evt-village-rest-child-failure-report",
-              events: 'evt-village-actions-night',
+              select: 'evt-village-actions-night',
             },
             cancel: {
               actionText: "txt-st-kleptomania-idol-action-1",
               text: "txt-evt-village-rest-child-failure-2",
               report: "txt-evt-village-rest-child-failure-report-1",
               removeCharacter: true,
-              events: 'evt-village-actions-night',
+              select: 'evt-village-actions-night',
             },
           },
         },
@@ -1734,52 +1731,52 @@ config.entities.add([
           text: "txt-evt-village-rest-child-failure-3",
           report: "txt-evt-village-rest-child-failure-report-2",
           removeCharacter: true,
-          events: 'evt-village-actions-night',
+          select: 'evt-village-actions-night',
         },
       ]
     },
   },
   {
     id: 'evt-village-rest-angryUnit',
-    charEffects:{
+    charEvents:{
       reqStatus: {'st-angry':true},
       text: "txt-evt-village-rest-angryUnit",
       actions: [
         {
           actionText: "txt-evt-village-rest-angryUnit-action",
           text: "txt-evt-village-rest-angryUnit-1",
-          events: [
+          select: [
             {
               text: "txt-evt-village-rest-angryUnit-2",
               removeCharacter: true,
-              events: 'evt-village-actions-night',
+              select: 'evt-village-actions-night',
             },
             {
               text: "txt-evt-village-rest-angryUnit-3",
               loyalty: +1,
-              events: 'evt-village-actions-night',
+              select: 'evt-village-actions-night',
             },
           ],
         },
         {
           actionText: "txt-evt-village-rest-angryUnit-action-1",
           text: "txt-evt-village-rest-angryUnit-4",
-          events: 'evt-village-actions-night'
+          select: 'evt-village-actions-night'
         },
       ],
     },
   }, 
   {
     id: 'evt-village-rest-badRumors',
-    charEffects: {
+    charEvents: {
       reqCharFlags: '+special',
       text: "txt-evt-village-rest-badRumors"
     },
-    storeEffects: {
+    storeEvents: {
       reqLoyalty: '0',
       text: "txt-evt-village-rest-badRumors-1"
     },
-    events: 'evt-village-actions-night'
+    select: 'evt-village-actions-night'
   }, 
   {
     id: 'evt-village-rest-rash',
@@ -1789,17 +1786,17 @@ config.entities.add([
         actionText: "txt-evt-village-rest-rash-action",
         text: "txt-evt-village-rest-rash-1",
         standing: +1,
-        charEffects: {
+        charEvents: {
           chance: 0.5,
           setPartyStatus: '+jungleFever'
         },
-        events: 'evt-village-actions-night',
+        select: 'evt-village-actions-night',
       },
       {
         actionText: "txt-evt-village-rest-rash-action-1",
         text: "txt-evt-village-rest-rash-2",
         standing: -1,
-        events: 'evt-village-actions-night',
+        select: 'evt-village-actions-night',
       },
     ],
   },
@@ -1809,7 +1806,7 @@ config.entities.add([
     report: "txt-evt-village-rest-questionGender-report",
     actions: [
       {
-        charEffects: {
+        charEvents: {
           optional:true, count:'any',  
           reqCharFlags:'+humanoid -special', reqGender:'male', 
           loyalty: -1
@@ -1817,10 +1814,10 @@ config.entities.add([
         actionText: "txt-evt-village-rest-questionGender-action",
         text: "txt-evt-village-rest-questionGender-1",
         report: "txt-evt-village-rest-questionGender-report-1",
-        events: 'evt-village-actions-night'
+        select: 'evt-village-actions-night'
       },
       {
-        charEffects: {
+        charEvents: {
           optional:true, count:'any',
           reqCharFlags:'+humanoid -special', reqGender:'female', 
           loyalty:-1
@@ -1828,17 +1825,17 @@ config.entities.add([
         actionText: "txt-evt-village-rest-questionGender-action-1",
         text: "txt-evt-village-rest-questionGender-2",
         report: "txt-evt-village-rest-questionGender-report-2",
-        events: 'evt-village-actions-night'
+        select: 'evt-village-actions-night'
       },
       {
-        charEffects: {
+        charEvents: {
           optional:true, count:'any', 
           reqStatus:'+sexist', loyalty:-1
         },
         actionText: "txt-evt-village-rest-questionGender-action-2",
         text: "txt-evt-village-rest-questionGender-3",
         report: "txt-evt-village-rest-questionGender-report-3",
-        events: 'evt-village-actions-night'
+        select: 'evt-village-actions-night'
       }
     ]   
   },
@@ -1850,17 +1847,17 @@ config.entities.add([
       {
         actionText: "txt-evt-village-rest-bongoPlayer-action",
         text: "txt-evt-village-rest-bongoPlayer-1",
-        events:  [
+        select:  [
           {
             text: "txt-evt-village-rest-bongoPlayer-2",
             items: {'it-bongos':-1},
-            events: 'evt-village-actions-night'
+            select: 'evt-village-actions-night'
           },
           {
             slots: 2,
             text: "txt-evt-village-rest-bongoPlayer-3",
             items: {'it-bongos':-1, 'it-bongosTuned':1},
-            events: 'evt-village-actions-night'
+            select: 'evt-village-actions-night'
           },
         ],
       },
@@ -1868,7 +1865,7 @@ config.entities.add([
         actionText: "txt-evt-angry-demandPayment-action-1",
         standing: standingCostSacrilegSmall,
         text: "txt-evt-village-rest-bongoPlayer-4",
-        events: 'evt-village-actions-night'
+        select: 'evt-village-actions-night'
       },
     ],
   },
@@ -1885,7 +1882,7 @@ config.entities.add([
           {
             actionText: "txt-evt-village-rest-positive-gameover-action",
             text: "txt-evt-village-rest-positive-gameover-2",
-            charEffects: {
+            charEvents: {
               reqCharFlags: '+special',
               text: "txt-evt-village-rest-positive-gameover-3",  
             },            
@@ -1902,7 +1899,7 @@ config.entities.add([
     id: 'evt-village-rest-positive-gameover-cancel',
     actionText: "txt-evt-village-rest-positive-gameover-cancel-action",
     text: "txt-evt-village-rest-positive-gameover-cancel",
-    events: 'evt-village-actions-night'
+    select: 'evt-village-actions-night'
   },
 
   {
@@ -1910,29 +1907,30 @@ config.entities.add([
     reqMaxPerWorld: 1,
     text: "txt-evt-village-rest-wedding",
     setFixtureFlags: '+wedding',
-    partyEffects: {
-      events: [
+    partyEvents: {
+      select: [
         { text: "txt-evt-village-rest-wedding-var1" },
         { text: "txt-evt-village-rest-wedding-var2" },
         { text: "txt-evt-village-rest-wedding-var3" },
       ]
     },
-    events: 'evt-village-actions-night'
+    select: 'evt-village-actions-night'
   },
 
   {
     id: 'evt-village-rest-funeral-bless',
     actionText: "txt-evt-village-rest-funeral-bless-action",
+    reqTutorial: false,
     reqDice: 'mind',
     winEvents: {
       text: "txt-evt-village-rest-funeral-missionary-bless-success",
       standing: +2,
-      events: 'evt-village-actions-night'
+      select: 'evt-village-actions-night'
     },
     failEvents: {
       text: "txt-evt-village-rest-funeral-missionary-bless-fail",
       standing: -2,
-      events: 'evt-village-actions-night'
+      select: 'evt-village-actions-night'
     }
   },
   {
@@ -1940,13 +1938,13 @@ config.entities.add([
     actionText: "txt-evt-village-rest-funeral-noBless-action",
     text: "txt-evt-village-rest-funeral-missionary-noBless",
     loyalty: -1,
-    events: 'evt-village-actions-night'
+    select: 'evt-village-actions-night'
   },
 
   {
     id: 'evt-village-rest-funeral',
     text: "txt-evt-village-rest-funeral",
-    events: [
+    select: [
       {
         reqCharFlags: '+missionary',
         text: "txt-evt-village-rest-funeral-missionary",
@@ -1960,9 +1958,10 @@ config.entities.add([
   {
     id: 'evt-village-rest-maturation',
     reqMaxPerWorld: 1,
+    reqTutorial: false,
     reqFixtureFlags: '-wedding',
     text: "txt-evt-village-rest-maturation",
-    partyEffects: [
+    partyEvents: [
       { 
         optional: true, 
         text: "txt-evt-village-rest-maturation-var1",
@@ -1983,7 +1982,7 @@ config.entities.add([
         text: "txt-evt-village-rest-maturation-2" 
       }
     ],
-    charEffects: {
+    charEvents: {
       reqCharFlags: '+special',
       actions: {
         actionText: "txt-evt-village-rest-maturation-yes-action",
@@ -1992,13 +1991,13 @@ config.entities.add([
           id: 'evt-village-rest-maturation-win',
           text: "txt-evt-village-rest-maturation-win",
           standing: +2,
-          events: 'evt-village-actions-night'
+          select: 'evt-village-actions-night'
         },
         failEvents: {
           id: 'evt-village-rest-maturation-fail',
           text: "txt-evt-village-rest-maturation-fail",
           standing: -2,
-          events: 'evt-village-actions-night'
+          select: 'evt-village-actions-night'
         }  
       }
     },
@@ -2007,7 +2006,7 @@ config.entities.add([
       actionText: "txt-evt-village-rest-maturation-no-action",
       text: "txt-evt-village-rest-maturation-no",
       standing: -1,
-      events: 'evt-village-actions-night'
+      select: 'evt-village-actions-night'
     }
   },
   {
@@ -2015,12 +2014,13 @@ config.entities.add([
     reqFixtureFlags: '+idolVillage',
     reqMaxPerWorld: 1,
     text: "txt-evt-village-rest-flavor-idol",
-    events: 'evt-village-actions-night'
+    select: 'evt-village-actions-night'
   },
 
   {
     id: 'evt-village-stealIdol',
-    reqFixtureFlags: '+idolVillage', 
+    reqFixtureFlags: '+idolVillage',
+    reqTutorial: false,
     reqDice: 'stability',
     actionText: "txt-evt-village-stealIdol-action",
     items: {'it-idol':1},
@@ -2035,7 +2035,7 @@ config.entities.add([
       id: 'evt-village-stealIdol-fail',
       standing: standingCostSacrilegLarge,
       text: "txt-evt-village-stealIdol-fail",
-      events: 'evt-village-replaceAngry'
+      select: 'evt-village-replaceAngry'
     }
   },  
 
@@ -2045,22 +2045,22 @@ config.entities.add([
     id: 'evt-village-actions-night-anthropology',
     actionText: "txt-evt-village-actions-night-anthropology-action",
     text: "txt-evt-village-actions-night-anthropology",
-    charEffects: {reqStatus: {'pk-anthropology':true}},
+    charEvents: {reqPerk: '+anthropology'},
     reqTileFlags: '-anthropology',
     setTileFlags: '+anthropology',
     report: "txt-evt-village-actions-night-anthropology-report",
     items: {'it-anthropologicalStudies':+1},
     incAchievement: "ach-studies-collect",
-    events: [
+    select: [
       {
         slots: 3,
         text: "txt-evt-village-actions-night-anthropology-1",
-        events: 'evt-village-actions-night'
+        select: 'evt-village-actions-night'
       },
       {
         slots: 1,
         text: "txt-evt-village-actions-night-anthropology-2",
-        events: 'evt-village-actions-night'
+        select: 'evt-village-actions-night'
       },
     ], 
   },
@@ -2068,26 +2068,25 @@ config.entities.add([
     id: 'evt-village-actions-night-painting',
     actionText: "txt-evt-village-actions-night-painting-action",
     reqFixtureFlags: '-painting',
-    setFixtureFlags: '+painting',
-    pushEvent: 'evt-village-actions-night',
-    charEffects: [
+    setFixtureFlags: '+painting +villageNight',
+    charEvents: [
       {
-        reqCharFlags: {artist:true}, count:1,
+        reqCharFlags: '+artist',
         reqItems: {'it-canvas':1},
       },
       {
         optional: true,
-        reqCharFlags: {artist:true}, count:1,
-        reqStatus: {'st-angry':false},
+        reqCharFlags: '+artist',
+        reqStatus: '-angry',
         text: "txt-evt-village-actions-night-painting",
-        events: [
+        select: [
           {
             slots: 1,
             reqStanding: [-5, 10], 
             text: "txt-evt-village-actions-night-painting-1",
             report: "txt-evt-village-actions-night-painting-report",
-            setTempFlags: {paintingNative:true},
-            events: 'evt-painting-create',
+            setTempFlags: '+paintingNative',
+            select: 'evt-painting-create',
           },
           {
             slots: 3,
@@ -2095,22 +2094,43 @@ config.entities.add([
             text: "txt-evt-village-actions-night-painting-2",
             report: "txt-evt-village-actions-night-painting-report-1",
             items: {'it-canvas':-1},
-            setTempFlags: {paintingNative:true},
+            setTempFlags: '+paintingNative',
           },
         ],
       },
       {
-        optional:true,
-        reqCharFlags: {artist:true}, count:1,
-        reqStatus: {'st-angry':true},
-        events: 'evt-painting-angry',
+        optional: true,
+        reqCharFlags: '+artist',
+        reqStatus: '+angry',
+        select: 'evt-painting-angry',
       },
     ],
   },
   {
+    id: 'evt-village-setImageDay-update',
+    partyEvents:[
+      'evt-village-setImageDay',
+      'evt-village-main-update'
+    ]
+  },
+  {
+    id: 'evt-village-setImageDay-enter',
+    partyEvents:[
+      'evt-village-setImageDay',
+      'evt-village-enter'
+    ]
+  },
+  {
+    id: 'evt-village-setImageDay-actions',
+    partyEvents:[
+      'evt-village-setImageDay',
+      'evt-village-actions'
+    ]
+  },
+  {
     id: 'evt-village-setImageDay',
     
-    partyEffects: [
+    partyEvents: [
       {
         // Warrior Village
         reqFixtureFlags: '+villageType_1', optional: true,
@@ -2187,21 +2207,11 @@ config.entities.add([
         // Inuit Village
         reqFixtureFlags: '+villageType_inuit', optional: true,
         playMusic: 'thm_arctic_village_1',
-        events: [
-          {
-            slots:1,
-            showImage: {
-              src: 'evt_fxt_village_inuit_1.png', type: 'day', showMounted: true,
-              particles: ['pt-snow-1', 'pt-snow-2', 'pt-snow-3'],
-            },
-          },
-          {
-            slots:1,
-            showImage: {
-              src: 'evt_fxt_village_inuit_1.png', type: 'day', showMounted: true,
-            },
-          }
-        ],
+        showImage: {
+          src: 'evt_fxt_village_inuit_1.png', type: 'day', showMounted: true,
+          particles: ['pt-snow-1', 'pt-snow-2', 'pt-snow-3'],
+          particlesChance: 0.5
+        },
       },
       {
         reqFixtureFlags: '+villageType_inuit +inhabited', optional: true,
@@ -2233,11 +2243,10 @@ config.entities.add([
         ],
       },
     ],
-    popEvent: true,
   },
   {
     id: 'evt-village-setImageNight',
-    partyEffects: [
+    partyEvents: [
       {
         // Warrior Village
         optional: true,
@@ -2315,21 +2324,11 @@ config.entities.add([
         optional: true,
         reqFixtureFlags: '+villageType_inuit',
         playMusic: 'thm_arctic_night_1', 
-        events: [
-          {
-            slots:1,
-            showImage: {
-              src: 'evt_fxt_village_inuit_1_night.png', type: 'night', showMounted: false,
-              particles: ['pt-snow-1', 'pt-snow-2'],
-            },
-          },
-          {
-            slots:1,
-            showImage: {
-              src: 'evt_fxt_village_inuit_1_night.png', type: 'night', showMounted: false,
-            },
-          }
-        ],
+        showImage: {
+          src: 'evt_fxt_village_inuit_1_night.png', type: 'night', showMounted: false,
+          particles: ['pt-snow-1', 'pt-snow-2'],
+          particlesChance: 0.5
+        },
         npc: [
           'npc-native-generic-chief',
           'npc-native-generic',
@@ -2367,7 +2366,7 @@ config.entities.add([
     actionText: "txt-evt-village-abandoned-action",
     reqTileFlags: '-explored',
     text: "txt-evt-village-abandoned",
-    partyEffects: [
+    partyEvents: [
       {
         reqFixtureFlags: '+villageType_1', optional: true,
         showImage: { 
@@ -2409,7 +2408,7 @@ config.entities.add([
       },
       {
         actionText: "txt-evt-leave-action",
-        events: 'evt-village-abandoned-leave',
+        select: 'evt-village-abandoned-leave',
       },
     ],
   },
@@ -2429,7 +2428,7 @@ config.entities.add([
     setPartyStatus: '-missionary',
     reqFixtureFlags: '+questMissionary',
     setFixtureFlags: '-questMissionary',
-    charEffects: {
+    charEvents: {
       reqCharFlags: '+missionary',
       text: "txt-evt-village-quest-missionary",
       posTile: {fixtureFlags: '+shrine'},
@@ -2438,7 +2437,7 @@ config.entities.add([
     },
     report: "txt-evt-village-quest-missionary-report",
     standing: +2,
-    events: 'evt-village-main-update',
+    select: 'evt-village-main-update',
   },
   {
     id: 'evt-village-enter-konrad',
@@ -2457,7 +2456,7 @@ config.entities.add([
     actions: [
       {
         actionText: "txt-evt-cave-ghostsQuest-action",
-        partyEffects: [
+        partyEvents: [
           {
             reqFixtureFlags: '+villageType_1', optional: true,
             showImage: {src: 'evt_fxt_village_1.png', type: 'day'},
@@ -2501,8 +2500,7 @@ config.entities.add([
     text: "txt-evt-village-quest-konrad-success",
     report: "txt-evt-village-quest-konrad-success-report",
     standing: +2,
-    pushEvent: 'evt-village-actions',
-    events: 'evt-village-setImageDay',
+    select: 'evt-village-setImageDay-actions',
   },
 
   {
@@ -2514,7 +2512,7 @@ config.entities.add([
     text: "txt-evt-village-familyAmulet",
     items: {'it-familyAmulet':-1},
     standing: +2,
-    events: 'evt-village-main-update'
+    select: 'evt-village-main-update'
   },
 
   // for legacy save game purposes

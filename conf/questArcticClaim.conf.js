@@ -17,14 +17,14 @@ config.entities.add([
       {
         actionText: "txt-generic-refuse",
         text: "txt-evt-harbor-quest-arcticClaim-2",
-        events: 'evt-harbor-eventSelection'
+        select: 'evt-harbor-eventSelection'
       },
     ]
   },
   {
     id: 'evt-harbor-quest-arcticClaim-complete',
     npc: 'npc-trader',
-    events: [
+    select: [
       {
         reqPartyStatus: '+arcticClaim-complete',
         setPartyStatus: '-arcticClaim-complete',
@@ -46,7 +46,7 @@ config.entities.add([
   {
     id: 'evt-quest-arcticClaim-worldInit',
     text: "txt-evt-quest-arcticClaim-worldInit",
-    partyEffects:[
+    partyEvents:[
       {
         addFixture: {ref:'fxt-claimPosition', range:'world'},
         revealTiles: {radius:0, fixture:true, centerCam:false},
@@ -67,7 +67,7 @@ config.entities.add([
   },
   {
     id: 'evt-claimPosition',
-    events: [
+    select: [
       {
         reqTileFlags: '+claimPosition',
         setTileFlags: '-claimPosition',
@@ -76,7 +76,7 @@ config.entities.add([
         replaceFixtures: [
           {range: 1, old:'fxt-claimPosition', new:'fxt-claimFlag'},
         ],
-        events: [
+        select: [
           {
             reqPartyStatus: '+arcticClaim-4',
             setPartyStatus: '-arcticClaim-4 +arcticClaim-3',

@@ -2,9 +2,9 @@ config.entities.add([
 
   {
     id: 'evt-dismiss',
-    partyEffects: { ref: 'evt-setImage-nightCamp' },
+    partyEvents: { ref: 'evt-setImage-nightCamp' },
     text: "txt-evt-dismiss",
-    events: [
+    select: [
       {prio:0, ref:'evt-dismiss-imaginaryFriend'},
       {prio:0, ref:'evt-dismiss-abomination'},
       {prio:0, ref:'evt-dismiss-tim'},
@@ -20,7 +20,7 @@ config.entities.add([
         actionText: "txt-evt-dismiss-default-action", 
         text: "txt-evt-dismiss-default",
         report: "txt-evt-dismiss-default-report",
-        events: [
+        select: [
           { 
             reqCharFlags: '+dinosaur', 
             addZone: {ref:'zn-raptor', range:2, reachable:true},
@@ -40,7 +40,7 @@ config.entities.add([
   {
     id: 'evt-dismiss-western',
     reqCharFlags: '-native +humanoid',
-    charEffects: {
+    charEvents: {
       count: 'any',
       reqCharFlags: '-native +humanoid -special',
       reqLoyalty: '1..',
@@ -54,7 +54,7 @@ config.entities.add([
         text: "txt-evt-dismiss-western-1",
         report: "txt-evt-dismiss-western-report",
         storeCharacter: true,
-        charEffects: {
+        charEvents: {
           count: 'any',
           reqCharFlags: '-native +humanoid -special',
           reqLoyalty: '1..',
@@ -74,7 +74,7 @@ config.entities.add([
     report: "txt-evt-dismiss-abomination-report", 
     actions: [
       {
-        actionText: "txt-act-attackZone-action",
+        actionText: "txt-evt-cave-ghostsQuest-action",
         removeCharacter: true,
         setPartyFlags: '+abominationCombat',
         combat: [{'emy-abomination':1}]
@@ -87,7 +87,7 @@ config.entities.add([
   {
     id: 'evt-dismiss-tim',
     reqCharFlags: '+tim',
-    charEffects: [
+    charEvents: [
       {
         count: 'any',
         reqCharFlags: '-native -special +humanoid',
@@ -107,7 +107,7 @@ config.entities.add([
         text: "txt-evt-dismiss-tim-2",
         report: "txt-evt-dismiss-tim-report",
         storeCharacter: true,
-        charEffects: [
+        charEvents: [
           {
             count: 'any',
             reqCharFlags: '-native +humanoid -special',
@@ -129,7 +129,7 @@ config.entities.add([
   {
     id: 'evt-dismiss-luis',
     reqCharFlags: '+luis',
-    charEffects: {
+    charEvents: {
       reqCharFlags: '+tim',
       text: "txt-evt-dismiss-luis"
     },
@@ -139,7 +139,7 @@ config.entities.add([
         text: "txt-evt-dismiss-luis-1",
         report: "txt-evt-dismiss-luis-report",
         storeCharacter: true,
-        charEffects: {
+        charEvents: {
           reqCharFlags: '+tim',
           loyalty: -3
         }

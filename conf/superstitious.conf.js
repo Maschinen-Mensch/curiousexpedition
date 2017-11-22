@@ -16,7 +16,7 @@ config.entities.add([
 
   {
     id: 'evt-superstitious-complain',
-    charEffects: {
+    charEvents: {
       optional: true,
       count: 'any',
       reqStatus: '+superstitious',
@@ -25,7 +25,7 @@ config.entities.add([
   },
   {
     id: 'evt-superstitious-angry',
-    charEffects: {
+    charEvents: {
       optional: true,
       reqStatus: '+superstitious',
       text: "txt-evt-superstitious-angry",

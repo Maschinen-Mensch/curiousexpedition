@@ -20,7 +20,7 @@ config.entities.add([
       {
         slots: 1,
         reqSanity: '..9', sanity: -10, 
-        partyEffects: { ref: 'evt-setImage-nightCamp' },
+        partyEvents: { ref: 'evt-setImage-nightCamp' },
         text: "txt-it-necronomicon-0",
         removeItem: true,
         startSprawl: {ref:'spr-fire', radius:3, power:15}
@@ -37,21 +37,21 @@ config.entities.add([
       {
         prio: 1,
         slots: 2, 
-        events:'evt-necronomicon-page',
+        select:'evt-necronomicon-page',
       },
       {
         prio: 1,
         slots: 10,
         chat: 'cl-necronomicon-page',
-        charEffects: {reqStatus: {'pk-necronomicon':true}},
-        events:'evt-necronomicon-page',
+        charEvents: {reqStatus: {'pk-necronomicon':true}},
+        select:'evt-necronomicon-page',
       },
       {
         prio: 1,
         slots: 1,
         reqMaxPerWorld: 1,
         chat: 'cl-necronomicon-portal',
-        charEffects: {reqStatus: {'pk-necronomicon':true}},
+        charEvents: {reqStatus: {'pk-necronomicon':true}},
         sanity: -35,
         addFixture: {ref:'fxt-portal', range:2},
       },
@@ -60,7 +60,7 @@ config.entities.add([
         slots: 8,
         reqSanity:'10..34',
         chat: 'cl-necronomicon-fail',
-        events: 'evt-necronomicon-page-fail',
+        select: 'evt-necronomicon-page-fail',
         sanity: -35
       },
       {
@@ -68,7 +68,7 @@ config.entities.add([
         slots: 3,
         reqSanity:'35..',
         chat: 'cl-necronomicon-fail',
-        events: 'evt-necronomicon-page-fail',
+        select: 'evt-necronomicon-page-fail',
         sanity: -35
       },
     ]    
@@ -77,7 +77,7 @@ config.entities.add([
     id: 'evt-necronomicon-page',
     reqSanity:'10..',
     sanity: -35,
-    partyEffects: { ref: 'evt-setImage-nightCamp' },
+    partyEvents: { ref: 'evt-setImage-nightCamp' },
     text: "txt-evt-necronomicon-page",
     loot: {
       items: [
@@ -88,7 +88,7 @@ config.entities.add([
       close: [
         {
           slots:1,
-          charEffects: {
+          charEvents: {
             reqStatus: {'pk-necronomicon':false},
           },
           text: "txt-evt-necronomicon-page-1",
@@ -103,7 +103,7 @@ config.entities.add([
   },
   {
     id: 'evt-necronomicon-page-fail',
-    partyEffects: { ref: 'evt-setImage-nightCamp' },
+    partyEvents: { ref: 'evt-setImage-nightCamp' },
     text: "txt-evt-necronomicon-page-fail",
   },
 ])

@@ -12,7 +12,7 @@ config.entities.add([
       karma: 1,
     },
     maxStack: 10,
-    events: {
+    useEvents: {
       removeItem:true,
       particle: 'pt-fireworks',
       setPartyStatus: {'os-stealth':true},
@@ -31,7 +31,7 @@ config.entities.add([
       karma: 1,
     },
     maxStack: 10,
-    events: {
+    useEvents: {
       posPunch: {radius:1, range:5}, 
       startSprawl: {ref:'spr-totem', radius:1, count:7},
       playSound: ['sfx_totem'],
@@ -49,7 +49,7 @@ config.entities.add([
       karma: karmaSmall,
     },
     maxStack: 20,
-    events: {
+    useEvents: {
       posPunch: {radius:1, range:6}, 
       deactivateZones: {radius: 1, turns: 10},
       playSound: ['sfx_flute'],

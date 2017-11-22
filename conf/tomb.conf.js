@@ -38,7 +38,7 @@ config.entities.add([
     actionText: "txt-evt-tomb-enter-action",
     text: "txt-evt-tomb-enter",
     report: "txt-evt-tomb-enter-report",
-    partyEffects: 'evt-superstitious-complain',
+    partyEvents: 'evt-superstitious-complain',
     showImage: {src: 'evt_fxt_tomb_int_1.png', type:'day'},
     playMusic: ['thm_shrine_2'],
     actions: ['evt-tomb-loot', 'evt-leave']
@@ -47,11 +47,11 @@ config.entities.add([
     id: 'evt-tomb-loot',
     actionText: "txt-evt-tomb-loot-action",
     text: "txt-evt-tomb-loot",
-    events: [
+    select: [
       {
         slots: 2,
-        partyEffects: 'evt-superstitious-angry',
-        charEffects: {
+        partyEvents: 'evt-superstitious-angry',
+        charEvents: {
           chance: 0.25,
           reqStatus: '-deathCurse',
           reqCharFlags: '-special +humanoid',
@@ -73,7 +73,7 @@ config.entities.add([
         text: "txt-evt-tomb-loot-1",
         showImage: {src: 'evt_fxt_tomb_int_1_combat.png', type:'day'},
         setTileFlags: '+explored',
-        charEffects: {
+        charEvents: {
           optional: true,
           reqCharFlags: '+coward',
           text: "txt-evt-tomb-loot-2",

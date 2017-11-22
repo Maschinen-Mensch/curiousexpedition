@@ -1198,16 +1198,19 @@ config.entities.add([
   },
 ]);
 
-config.particle = {
+config.entities.add([
   // the settings for the particle that corresponds to gathered tile resources
-  campResource: {
+  {
+    id: 'pt-campResource',
     count: 1, 
     velX: 90, 
     velY: 160, 
     weight: 400, 
-    maxTime: 1.2
+    maxTime: 1.2,
+    mainParticle: true
   },
-  tileMouse: {
+  {
+    id: 'pt-tileMouse',
     count: 1, 
     color: '#2d7003',
     velX: [-20, 20], 
@@ -1215,18 +1218,22 @@ config.particle = {
     weight: 1,
     maxTime: 1.5,
     fadeStart: 0.5,
-    isAbsolute: false
+    isAbsolute: false,
+    mainParticle: true
   },
-  arenaField: {
+  {
+    id: 'pt-arenaField',
     count: 3, 
     color: 'red',
     timeSteps: 0.4,
     velX: [-30, 30], 
     velY: 10,  
     weight: 1,   
-    maxTime: 0.5
+    maxTime: 0.5,
+    mainParticle: true
   },
-  eventTitle: {
+  {
+    id: 'pt-eventTitle',
     text: '50 HP',
     color: 'white',
     bgColor: 'black',
@@ -1235,9 +1242,11 @@ config.particle = {
     maxTime: 10,
     fadeStart: 0.3,
     center: false,
-    isAbsolute: true
+    isAbsolute: true,
+    mainParticle: true
   },
-  fixtureFound: {
+  {
+    id: 'pt-fixtureFound',
     sfx: 'sfx_eventClose',
     count: 1,
     scale: 1.6, 
@@ -1253,9 +1262,11 @@ config.particle = {
         time: 3,
         velX: 0,
       }
-    ]
+    ],
+    mainParticle: true
   },
-  discoveredTiles: {
+  {
+    id: 'pt-discoveredTiles',
     sfx: 'confirm_style_1_005',
     scale: 1.6, 
     color: 'white',
@@ -1270,9 +1281,11 @@ config.particle = {
         time: 0.5,
         velY: 0,
       }
-    ]
+    ],
+    mainParticle: true
   },
-  XP: {
+  {
+    id: 'pt-XP',
     color: '#1FFF00',
     sfx: 'confirm_style_1_005',
     scale: 1.6, 
@@ -1287,9 +1300,11 @@ config.particle = {
         time: 0.5,
         velY: 0,
       }
-    ]
+    ],
+    mainParticle: true
   },
-  campFire: {
+  {
+    id: 'pt-campFire',
     timer: [0.5, 1.5],
     count: 2, 
     color: 'orange',
@@ -1300,8 +1315,10 @@ config.particle = {
     weight: 0,
     maxTime: 10.6,
     fadeStart: 5.0,
+    mainParticle: true
   },
-  statChange: {
+  {
+    id: 'pt-statChange',
     count: 1,
     scale: 1.6, 
     color: 'white',
@@ -1310,8 +1327,10 @@ config.particle = {
     maxTime: 2.0,
     fadeStart: 0.5,
     center: true,
+    mainParticle: true
   },
-  statChangeHighlight: {
+  {
+    id: 'pt-statChangeHighlight',
     count: 1,
     scale: 2.4, 
     color: 'white',
@@ -1324,19 +1343,22 @@ config.particle = {
     center: true,
     queue: 'statHighlight',
     queueDelay: 0.6,
+    mainParticle: true
   },
-  travelScore: {
+  {
+    id: 'pt-travelScore',
     imgSrc: 'pt_star_1.png',
     isAbsolute: true,
     count: 3,
     maxTime: 3.0,
     fadeStart: 2.5,
-
     velRadius: 60,
     interpSpeed: [0.7, 1.3],
     interpStart: [0.4, 0.9],
+    mainParticle: true
   },
-  travelScoreFull: {
+  {
+    id: 'pt-travelScoreFull',
     imgSrc: 'pt_star_1.png',
     velRadius: 60,
     weight: 0,
@@ -1344,10 +1366,11 @@ config.particle = {
     fadeStart: 0.5,
     isAbsolute: true,
     timeSteps: 0.05,
-
-    bgColor: 'black'
+    bgColor: 'black',
+    mainParticle: true
   },
-  travelText: {
+  {
+    id: 'pt-travelText',
     count: 1,
     color: 'white',
     velY: -30,
@@ -1355,15 +1378,19 @@ config.particle = {
     fadeStart: 1,
     isAbsolute: false,
     timeSteps: 0.5,
-    scale: 1.5
+    scale: 1.5,
+    mainParticle: true
   },
-  biomeReveal: {
+  {
+    id: 'pt-biomeReveal',
     imgSrc: 'pt_regionAnalyzed_1.png',
     maxTime: 1.0,
     fadeStart: 0.1,
-    isAbsolute: false
+    isAbsolute: false,
+    mainParticle: true
   }, 
-  rankingMoney: {
+  {
+    id: 'pt-rankingMoney',
     count: 6,
     imgSrc: 'pt_money_1.png',
     velX: [-100, 100],
@@ -1375,9 +1402,11 @@ config.particle = {
     maxTime: 1,
     fadeStart: 0.5,
     isAbsolute: true,
-    weight: 700
+    weight: 700,
+    mainParticle: true
   },
-  rankingFame: {
+  {
+    id: 'pt-rankingFame',
     count: 6,
     imgSrc: 'hud_fame.png',
     velX: [-100, 100],
@@ -1389,9 +1418,11 @@ config.particle = {
     maxTime: 1,
     fadeStart: 0.5,
     isAbsolute: true,
-    weight: 700
+    weight: 700,
+    mainParticle: true
   }, 
-  damageNumber: {
+  {
+    id: 'pt-damageNumber',
     color: '#ff0d0d',
     font: "Averia",
     scale: 3,
@@ -1402,8 +1433,10 @@ config.particle = {
     isAbsolute: false,
     queue: 'damageNumber',
     queueDelay: 0.1,
+    mainParticle: true
   },
-  attackNames: {
+  {
+    id: 'pt-attackNames',
     color: 'white',
     font: "Aldrich",
     scale: 2,
@@ -1415,9 +1448,11 @@ config.particle = {
     maxTime: 3.0,
     fadeStart: 2.5,
     //weight: [360, 400],
-    isAbsolute: false
+    isAbsolute: false,
+    mainParticle: true
   },
-  blood: {
+  {
+    id: 'pt-blood',
     imgSrc: ['pt_blood_1.png','pt_blood_2.png','pt_blood_3.png','pt_blood_4.png','pt_blood_5.png','pt_blood_6.png',],
     count: 3,
     velY: [-280, -140],
@@ -1428,9 +1463,11 @@ config.particle = {
     maxTime: 1,
     rot: [-1, 1],
     fadeStart: 0.5,
-    isAbsolute: false
+    isAbsolute: false,
+    mainParticle: true
   },
-  shieldDamage: {
+  {
+    id: 'pt-shieldDamage',
     imgSrc: ['pt_shieldDamage_1.png','pt_shieldDamage_2.png','pt_shieldDamage_3.png','pt_shieldDamage_4.png','pt_shieldDamage_5.png','pt_shieldDamage_6.png','pt_shieldDamage_7.png','pt_shieldDamage_8.png'],
     count: 1,
     velY: [-320, -180],
@@ -1441,9 +1478,11 @@ config.particle = {
     maxTime: 1.7,
     rot: [-1, 1],
     fadeStart: 0.8,
-    isAbsolute: false
+    isAbsolute: false,
+    mainParticle: true
   },
-  heal: {
+  {
+    id: 'pt-heal',
     imgSrc: ['pt_heal_1.png','pt_heal_2.png','pt_heal_3.png','pt_heal_4.png'],
     timer: [0.2, 0.3],
     count: 5,
@@ -1454,7 +1493,8 @@ config.particle = {
     offsetY: [-20, -10],
     maxTime: 1,
     fadeStart: 0.3,
-    isAbsolute: false
+    isAbsolute: false,
+    mainParticle: true
   },
   
-};
+]);

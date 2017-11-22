@@ -63,12 +63,12 @@ config.entities.add([
     showImage: {src: 'evt_fxt_oldCamp_1.png', type:'day'},
     chat: 'cl-quest-missingHusband',
     npc: 'pl-husband',
-    npcEffects: {
+    npcEvents: {
       text: "txt-evt-quest-husband-approach",
       actions: {
         actionText: "txt-evt-quest-husband-approach-action-1",
         addNPC:true,
-        events: 'evt-quest-husband-escort',
+        select: 'evt-quest-husband-escort',
       },
     },
     actions: 'evt-leave',
@@ -95,13 +95,13 @@ config.entities.add([
         text: "txt-evt-harbor-quest-husband-1",
         report: "txt-evt-harbor-quest-husband-report-1",
         setPartyStatus: {'st-husband':true},
-        events: 'evt-harbor-eventSelection',
+        select: 'evt-harbor-eventSelection',
       },
       {
         actionText: "txt-evt-angry-demandPayment-action-1",
         text: "txt-evt-harbor-quest-husband-2",
         report: "txt-evt-harbor-quest-husband-report-2",
-        events: 'evt-harbor-eventSelection',
+        select: 'evt-harbor-eventSelection',
       },
     ],
   },
@@ -112,9 +112,9 @@ config.entities.add([
     showImage: {src: 'evt_spec_ship_1.png'},
     npc: 'npc-wife',
     text: "txt-evt-harbor-quest-husband-complete",
-    events: [
+    select: [
       {
-        charEffects: [
+        charEvents: [
           {
             reqCharFlags: '+missingHusband',
           },
@@ -138,12 +138,12 @@ config.entities.add([
         actions: 'evt-harbor-quest-reward',
       },
       {
-        charEffects: {reqCharFlags: '-missingHusband', count: "all"},
+        charEvents: {reqCharFlags: '-missingHusband', count: "all"},
         text: "txt-evt-harbor-quest-husband-complete-3",
         fame: -fameLarge,
         actions: {
           actionText: "txt-evt-sanity-angry-action",
-          events: 'evt-harbor-eventSelection',
+          select: 'evt-harbor-eventSelection',
         }
       }
     ]

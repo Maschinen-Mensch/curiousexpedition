@@ -36,19 +36,20 @@ config.entities.add([
     id: 'evt-altar-approach',
     actionText: "txt-evt-altar-approach-action",
     text: "txt-evt-altar-approach",
-    partyEffects: 'evt-superstitious-complain',
-    events: 'evt-altar-actions',
+    partyEvents: 'evt-superstitious-complain',
+    select: 'evt-altar-actions',
   },
   {
     id: 'evt-altar-actions',
-    partyEffects: {
-      events: [
+    partyEvents: {
+      select: [
         {
           slots:1,
           reqBiomeFlags: '+arctic',
           showImage: {
             src: 'evt_fxt_altar_1.png', type: 'day', showMounted: false,
             particles: ['pt-snow-1', 'pt-snow-2', 'pt-snow-3'],
+            particlesChance: 0.5
           },
         },
         {
@@ -78,7 +79,7 @@ config.entities.add([
       close: 'evt-altar-dropDone',
       cancel: 'evt-altar-cancel',
       itemEvents: [
-        {items:{'it-treasure-eggplant':1}, ref:{incAchievement:'ach-eggplant-altar',text: "txt-evt-altar-eggplant-done",events: 'evt-altar-actions'}}
+        {items:{'it-treasure-eggplant':1}, ref:{incAchievement:'ach-eggplant-altar',text: "txt-evt-altar-eggplant-done",select: 'evt-altar-actions'}}
       ],
       priceTable: 'karma',
       hideNPCInv: true,
@@ -87,7 +88,7 @@ config.entities.add([
   {
     id: 'evt-altar-dropDone',
     text: "txt-evt-altar-done",
-    events: 'evt-altar-actions'
+    select: 'evt-altar-actions'
   },
   {
     id: 'evt-altar-revive',
@@ -95,7 +96,7 @@ config.entities.add([
     actionText: "txt-evt-altar-revive-action",
     text: "txt-evt-altar-revive",
     reqKarma: '75..',
-    storeEffects: {
+    storeEvents: {
       count: '..4',
       reqCharFlags: '+dead',
       actions: {
@@ -104,19 +105,19 @@ config.entities.add([
         restoreCharacter: true,
         incAchievement: 'ach-revive',
         karma: -75,
-        events: 'evt-altar-actions'
+        select: 'evt-altar-actions'
       }
     },
-    partyEffects: 'evt-superstitious-angry',
+    partyEvents: 'evt-superstitious-angry',
     actions: {
       actionText: 'txt-evt-action-nothing',
-      events: 'evt-altar-actions'
+      select: 'evt-altar-actions'
     }
   },
   {
     id: 'evt-altar-cancel',
     text: "txt-evt-altar-cancel",
-    events: 'evt-altar-actions'
+    select: 'evt-altar-actions'
   },
 
   // {
@@ -128,25 +129,25 @@ config.entities.add([
   //   },
   //   npc: 'npc-ghostie',
   //   text: "txt-evt-altar-ghostie-appear",
-  //   events: 'evt-altar-actions',
+  //   select: 'evt-altar-actions',
   // },
 
   //   itemEvents: [
-  //   {items: {'it-torch':3}, ref: {items:{'it-dynamite':1}, events:'evt-altar-ghostie-appear'}},
-  //   {items: {'it-meat-raw':3}, ref: {items:{'it-meat-animal-cooked-overcooked':1}, events:'evt-altar-ghostie-appear'}},
-  //   {items: {'it-giantBirdFeather':1}, ref: {items:{'it-egg-tortoise':1}, events:'evt-altar-ghostie-appear'}},
-  //   {items: {'it-giantCrabPincer':1,}, ref: {items:{'it-egg-raptor':1}, events:'evt-altar-ghostie-appear'}},
-  //   {items: {'it-pelt-hyena-black':1,}, ref: {items:{'it-pumpkinLantern':1}, events:'evt-altar-ghostie-appear'}},
-  //   {items: {'it-rope':1, 'it-pelt-tiger':1}, ref: {items:{'it-pendulum-treasure':1}, events:'evt-altar-ghostie-appear'}},
-  //   {items: {'it-rope':1, 'it-pelt-panther':1}, ref: {items:{'it-pendulum-shrine':1}, events:'evt-altar-ghostie-appear'}},
-  //   {items: {'it-rope':1, 'it-pelt-crocodile':1}, ref: {items:{'it-pendulum-blessing':1}, events:'evt-altar-ghostie-appear'}},
-  //   {items: {'it-spear':1, 'it-dinoSkull':1}, ref: {items:{'it-totemStick':1}, events:'evt-altar-ghostie-appear'}},
-  //   {items: {'it-whisky':3,}, ref: {items:{'it-tomePage-targetTeleport':1}, events:'evt-altar-ghostie-appear'}},
-  //   {items: {'it-chocolate':3,}, ref: {items:{'it-tomePage-superMove':1}, events:'evt-altar-ghostie-appear'}},
-  //   {items: {'it-mango':3,}, ref: {items:{'it-tomePage-waterfall':1}, events:'evt-altar-ghostie-appear'}},
-  //   {items: {'it-mushroom-healing':1,}, ref: {items:{'it-mushroom-status':1}, events:'evt-altar-ghostie-appear'}},
-  //   {items: {'it-mushroom-status':1,}, ref: {items:{'it-mushroom-view':1}, events:'evt-altar-ghostie-appear'}},
-  //   {items: {'it-mushroom-view':1,}, ref: {items:{'it-mushroom-healing':1}, events:'evt-altar-ghostie-appear'}},
+  //   {items: {'it-torch':3}, ref: {items:{'it-dynamite':1}, select:'evt-altar-ghostie-appear'}},
+  //   {items: {'it-meat-raw':3}, ref: {items:{'it-meat-animal-cooked-overcooked':1}, select:'evt-altar-ghostie-appear'}},
+  //   {items: {'it-giantBirdFeather':1}, ref: {items:{'it-egg-tortoise':1}, select:'evt-altar-ghostie-appear'}},
+  //   {items: {'it-giantCrabPincer':1,}, ref: {items:{'it-egg-raptor':1}, select:'evt-altar-ghostie-appear'}},
+  //   {items: {'it-pelt-hyena-black':1,}, ref: {items:{'it-pumpkinLantern':1}, select:'evt-altar-ghostie-appear'}},
+  //   {items: {'it-rope':1, 'it-pelt-tiger':1}, ref: {items:{'it-pendulum-treasure':1}, select:'evt-altar-ghostie-appear'}},
+  //   {items: {'it-rope':1, 'it-pelt-panther':1}, ref: {items:{'it-pendulum-shrine':1}, select:'evt-altar-ghostie-appear'}},
+  //   {items: {'it-rope':1, 'it-pelt-crocodile':1}, ref: {items:{'it-pendulum-blessing':1}, select:'evt-altar-ghostie-appear'}},
+  //   {items: {'it-spear':1, 'it-dinoSkull':1}, ref: {items:{'it-totemStick':1}, select:'evt-altar-ghostie-appear'}},
+  //   {items: {'it-whisky':3,}, ref: {items:{'it-tomePage-targetTeleport':1}, select:'evt-altar-ghostie-appear'}},
+  //   {items: {'it-chocolate':3,}, ref: {items:{'it-tomePage-superMove':1}, select:'evt-altar-ghostie-appear'}},
+  //   {items: {'it-mango':3,}, ref: {items:{'it-tomePage-waterfall':1}, select:'evt-altar-ghostie-appear'}},
+  //   {items: {'it-mushroom-healing':1,}, ref: {items:{'it-mushroom-status':1}, select:'evt-altar-ghostie-appear'}},
+  //   {items: {'it-mushroom-status':1,}, ref: {items:{'it-mushroom-view':1}, select:'evt-altar-ghostie-appear'}},
+  //   {items: {'it-mushroom-view':1,}, ref: {items:{'it-mushroom-healing':1}, select:'evt-altar-ghostie-appear'}},
   // ]
 
 ])

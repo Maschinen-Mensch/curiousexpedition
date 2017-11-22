@@ -41,13 +41,13 @@ config.entities.add([
         report: "txt-evt-harbor-quest-letter-report-1",
         items: {'it-quest-1-letter':1},
         setPartyStatus: {'st-letter':true},
-        events: 'evt-harbor-eventSelection',
+        select: 'evt-harbor-eventSelection',
       },
       {
         actionText: "txt-evt-angry-demandPayment-action-1",
         text: "txt-evt-harbor-quest-letter-2",
         report: "txt-evt-harbor-quest-letter-report-2",
-        events: 'evt-harbor-eventSelection',
+        select: 'evt-harbor-eventSelection',
       }
     ]
   },
@@ -62,10 +62,10 @@ config.entities.add([
     reqPartyStatus: '+letter', setPartyStatus: '-letter',
     
     standing: +2,
-    charEffects: {
+    charEvents: {
       posTile: {fixtureFlags: '+shrine'},
       revealTiles: {radius:1, fixture:true, centerCam:true},  
     },    
-    events: 'evt-village-main-update',
+    select: 'evt-village-main-update',
   },
 ])

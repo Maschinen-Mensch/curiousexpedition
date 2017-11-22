@@ -10,7 +10,7 @@ config.entities.add([
     sprite: "res_status_angry.png",
     important: true,
     tripEvents: [
-      {slots: 1, events: 'evt-angry-select', reqAge:'6..'},
+      {slots: 1, select: 'evt-angry-select', reqAge:'6..'},
       {slots: 5},
     ],
   },
@@ -27,8 +27,8 @@ config.entities.add([
 
   {
     id: 'evt-angry-select',
-    partyEffects: { ref: 'evt-setImage-nightCamp' },
-    events: [
+    partyEvents: { ref: 'evt-setImage-nightCamp' },
+    select: [
       {slots: 1,  ref: 'evt-angry-runAway'},    
       {slots: 1,  ref: 'evt-angry-nativeLeave'},
       {slots: 1,  ref: 'evt-angry-stealLeave'},
@@ -45,7 +45,7 @@ config.entities.add([
   },
   {
     id: 'evt-angry-runAway',
-    charEffects: {
+    charEvents: {
       reqCharFlags: '+humanoid -special -abomination',
       reqStatus: '-cannibal -renounced',
       reqLoyalty: '0',
@@ -58,7 +58,7 @@ config.entities.add([
   {
     id: 'evt-angry-nativeLeave',
     //chat: 'cl-replace',
-    charEffects: {
+    charEvents: {
       reqCharFlags: '+humanoid +native -special',
       reqLoyalty: '0',
       text: "txt-evt-angry-nativeLeave",
@@ -70,7 +70,7 @@ config.entities.add([
   {
     id: 'evt-angry-stealLeave',
     //chat: 'cl-replace',
-    charEffects: {
+    charEvents: {
       reqCharFlags: '+humanoid -special -native -abomination',
       reqStatus: '-cannibal',
       reqLoyalty: '0',
@@ -82,7 +82,7 @@ config.entities.add([
   },
   {
     id: 'evt-angry-angryLeave',
-    charEffects: [
+    charEvents: [
       {
         reqCharFlags: '+humanoid -special -native -abomination',
         reqStatus: '-cannibal',
@@ -99,7 +99,7 @@ config.entities.add([
   {
     id: 'evt-angry-demandPayment',
     //chat: 'cl-replace',
-    charEffects: {
+    charEvents: {
       reqCharFlags: '+humanoid -special -trader -abomination',
       reqStatus: '-cannibal',
       reqLoyalty: '0',
@@ -134,7 +134,7 @@ config.entities.add([
   },
   {
     id: 'evt-angry-compensation',
-    charEffects: {
+    charEvents: {
       reqStatus: '+angry',
       chat: 'cl-angry-compensation',
       text: "txt-evt-sanity-angry",
@@ -162,7 +162,7 @@ config.entities.add([
   {
     id: 'evt-angry-shamanCurse',
     //chat: 'cl-replace',
-    charEffects: [
+    charEvents: [
       {
         reqCharFlags: '+nativeShaman',
         reqLoyalty: '0',
@@ -179,7 +179,7 @@ config.entities.add([
   },
   {
     id: 'evt-angry-renounced',
-    charEffects: {
+    charEvents: {
       reqCharFlags: '-homeWorld +humanoid -special -abomination',
       reqStatus: '-renounced',
       reqLoyalty: '0',
@@ -191,13 +191,13 @@ config.entities.add([
   },
   {
     id: 'evt-angry-traitor',
-    charEffects: {
+    charEvents: {
       reqCharFlags: '-homeWorld +humanoid -special -abomination -traitor',
       reqLoyalty: '0',
       text: "txt-evt-angry-traitor",
       report: "txt-evt-angry-traitor-report",
       loyalty: +2,
-      events: [
+      select: [
         { slots: 2, setCharFlags:'+traitor' },
         { slots: 1, /* nothing */ }
       ]
@@ -207,21 +207,22 @@ config.entities.add([
     id: 'evt-sanity-angry-native',
     chat: 'cl-generic',
     reqMaxPerWorld: 1,
-    storeEffects: {
+    storeEvents: {
       reqLoyalty: '0',
       reqCharFlags: '+native -dead',
       text: "txt-evt-sanity-angry-native",
     },
-    charEffects: {
+    charEvents: {
       reqCharFlags: '-special +humanoid',
       text: "txt-evt-sanity-angry-native-1",
       setStatus: '+deathCurse'
-    }
+    },
+    select: 'evt-sanity-return'
   },
   {
     id: 'evt-angry-mutiny',
     chat: 'cl-generic',
-    charEffects: {
+    charEvents: {
       reqCharFlags: '-special +humanoid',
       reqLoyalty: '0',
       count: '3..',

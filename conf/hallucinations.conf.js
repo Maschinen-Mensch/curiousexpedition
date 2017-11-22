@@ -27,11 +27,12 @@ config.entities.add([
 
   {
     id: 'evt-sanity-apply-hallucinations',
-    charEffects: {
+    charEvents: {
       text: "txt-evt-sanity-apply-hallucinations",
       reqCharFlags: '+special',
       setStatus: '+hallucinations'
     },
+    select: 'evt-sanity-return'
   },
 
 // fixtures

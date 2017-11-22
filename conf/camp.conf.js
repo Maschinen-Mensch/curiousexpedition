@@ -12,8 +12,8 @@ config.entities.add([
       karma: 1,
     },
     maxStack: 1,
-    events: {
-      partyEffects: [
+    select: {
+      partyEvents: [
         {
           reqFixture: {flags:"", range:'0'}, optional: true,
           setTempFlags: {campFail: true},
@@ -57,7 +57,7 @@ config.entities.add([
     text: "txt-evt-camp-explore",
     chat: 'cl-nature',
     playMusic: ['thm_nature_1'],
-    partyEffects: [
+    partyEvents: [
       {
         optional: true,
         reqBiomeFlags: '-arctic',
@@ -66,24 +66,14 @@ config.entities.add([
       {
         optional: true,
         reqBiomeFlags: '+arctic',
-        events: [
-          {
-            slots:1,
-            showImage: {
-              src: 'evt_fxt_campItem_1.png', type: 'day', showMounted: false,
-              particles: ['pt-snow-1', 'pt-snow-2', 'pt-snow-3'],
-            },
-          },
-          {
-            slots:1,
-            showImage: {
-              src: 'evt_fxt_campItem_1.png', type: 'day', showMounted: false,
-            },
-          }
-        ],
+        showImage: {
+          src: 'evt_fxt_campItem_1.png', type: 'day', showMounted: false,
+          particles: ['pt-snow-1', 'pt-snow-2', 'pt-snow-3'],
+          particlesChance: 0.5
+        }
       },
     ],
-    events: 'evt-camp-actions'
+    select: 'evt-camp-actions'
   },
   {
     id: 'evt-camp-packUp',
@@ -92,7 +82,8 @@ config.entities.add([
     turns: 3,
     replaceFixtures: {},
     items: [{'it-camp':1}],
-    events: 'evt-leave'
+    setPartyFlags: '-startFire',
+    select: 'evt-leave'
   },
   {
     id: 'evt-camp-morning',
@@ -100,7 +91,7 @@ config.entities.add([
     showImage: {src: 'evt_fxt_campItem_1.png', type: 'day'},
     playMusic: ['thm_nature_1'],
     chat: 'cl-newMorning',       
-    events: 'evt-camp-actions'
+    select: 'evt-camp-actions'
   },
   { 
     id: 'evt-camp-actions',

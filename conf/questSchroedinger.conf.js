@@ -58,7 +58,7 @@ config.entities.add([
     maxStack: 1,
     events: {
       text: "txt-it-box-schroedinger-use",
-      partyEffects: { ref: 'evt-setImage-nightCamp' },
+      partyEvents: { ref: 'evt-setImage-nightCamp' },
       playMusic: ['thm_nature_night_campfire'],
       actions: [
         {
@@ -88,13 +88,13 @@ config.entities.add([
         report: "txt-evt-harbor-quest-schroedinger-report-1",
         setPartyStatus: {'st-schroedinger':true},
         items: {'it-map-schroedinger':1},
-        events: 'evt-harbor-eventSelection',
+        select: 'evt-harbor-eventSelection',
       },
       {
         actionText: "txt-evt-angry-demandPayment-action-1",
         text: "txt-evt-harbor-quest-schroedinger-2",
         report: "txt-evt-harbor-quest-schroedinger-report-2",
-        events: 'evt-harbor-eventSelection',
+        select: 'evt-harbor-eventSelection',
       },
     ],
   },
@@ -118,14 +118,14 @@ config.entities.add([
         text: "txt-evt-harbor-quest-schroedinger-complete-2",
         reqItems: {'it-box-schroedinger':1},
         fame: -fameLarge,
-        events: 'evt-harbor-eventSelection',
+        select: 'evt-harbor-eventSelection',
       },
       {
         actionText: "txt-evt-harbor-quest-schroedinger-complete-action-1",
         text: "txt-evt-harbor-quest-schroedinger-complete-3",
         reqItems: {'it-box-schroedinger':'0'},
         fame: -fameLarge,
-        events: 'evt-harbor-eventSelection',
+        select: 'evt-harbor-eventSelection',
       },
     ],
   },

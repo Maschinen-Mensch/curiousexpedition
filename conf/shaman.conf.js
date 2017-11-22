@@ -49,7 +49,7 @@ config.entities.add([
     report: "txt-evt-shamanHut-enter-report",
     showImage: {src: 'evt_fxt_shamanHut_1.png', type: 'day'},
     npc: ['pl-native-shaman'],
-    events: 'evt-shamanHut-actions'
+    select: 'evt-shamanHut-actions'
   },
   { 
     id: 'evt-shamanHut-trade',
@@ -63,18 +63,18 @@ config.entities.add([
   {
     id: 'evt-shamanHut-trade-deal',
     text: "txt-evt-shamanHut-trade-deal",
-    events: 'evt-shamanHut-actions'
+    select: 'evt-shamanHut-actions'
   },
   {
     id: 'evt-shamanHut-trade-cancel',
     text: "txt-evt-shamanHut-trade-cancel",
-    events: 'evt-shamanHut-actions'
+    select: 'evt-shamanHut-actions'
   },
   { 
     id: 'evt-shamanHut-heal-trade',
     actionText: "txt-evt-shamanHut-heal-trade-action",
     text: "txt-evt-shamanHut-heal-trade",
-    charEffects: {
+    charEvents: {
       count: "any",
       reqStatus: '+injured | +infected'
     },
@@ -87,7 +87,7 @@ config.entities.add([
   {
     id: 'evt-shamanHut-heal-trade-deal',
     text: "txt-evt-shamanHut-heal-trade-deal",
-    charEffects: {
+    charEvents: {
       count: "any",
       reqStatus: '+injured | +infected',
       actions: 'evt-shamanHut-heal-injured'
@@ -100,14 +100,14 @@ config.entities.add([
     report: "txt-evt-shamanHut-heal-injured-report",
     setStatus: '-infected',
     health: 20,
-    events: 'evt-shamanHut-actions'
+    select: 'evt-shamanHut-actions'
   },
   { 
     id: 'evt-shamanHut-cleanse-trade',
     actionText: "txt-evt-shamanHut-cleanse-trade-action",
     chat: 'cl-shamanGarvey',
     text: "txt-evt-shamanHut-cleanse-trade",
-    charEffects: {
+    charEvents: {
       reqStatusFlags: '+ailment | +rabies'
     },
     barter: {
@@ -119,7 +119,7 @@ config.entities.add([
   {
     id: 'evt-shamanHut-cleanse-trade-deal',
     text: "txt-evt-shamanHut-cleanse-trade-deal",
-    charEffects: {
+    charEvents: {
       count: 'any',
       reqStatusFlags: '+ailment | +rabies',
       reqCharFlags: '-abomination',
@@ -132,7 +132,7 @@ config.entities.add([
     text: "txt-evt-shamanHut-cleanse",
     report: "txt-evt-shamanHut-cleanse-report",
     removeStatusWithFlags: '+ailment | +rabies',
-    events: 'evt-shamanHut-actions'
+    select: 'evt-shamanHut-actions'
   },
   { 
     id: 'evt-shamanHut-actions',

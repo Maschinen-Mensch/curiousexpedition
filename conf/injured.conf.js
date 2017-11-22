@@ -37,7 +37,7 @@ config.entities.add([
     dayEvents: {
       delayedEvent: [
         {
-          charEffects: {
+          charEvents: {
             reqStatus: '-curse-abomination',
             text: "txt-st-dying-0",
             storeCharacter: true,
@@ -45,7 +45,7 @@ config.entities.add([
           }
         },
         {
-          charEffects: {
+          charEvents: {
             reqStatus: '+curse-abomination',
             text: "txt-st-dying-1",
             removeCharacter: true,
@@ -69,7 +69,7 @@ config.entities.add([
 
   {
     id: 'evt-infected',
-    events: [
+    select: [
       {
         delayedEvent: 'evt-infected-companion'
       },
@@ -88,11 +88,11 @@ config.entities.add([
   {
     id: 'evt-infected-companion',
     reqTutorial: false,
-    charEffects: {
+    charEvents: {
       reqStatus: '+injured -infected -blessingRegeneration',
       reqCharFlags: '-special', 
       delayedEvent: {
-        partyEffects: { ref: 'evt-setImage-nightCamp' },
+        partyEvents: { ref: 'evt-setImage-nightCamp' },
         text: "txt-evt-infected-companion",
         report: "txt-evt-infected-companion-report",
         setStatus: '+infected'
@@ -101,8 +101,8 @@ config.entities.add([
   },
   {
     id: 'evt-infectedDeath',
-    partyEffects: { ref: 'evt-setImage-nightCamp' },
-    events: [
+    partyEvents: { ref: 'evt-setImage-nightCamp' },
+    select: [
       {slots:6, ref:'evt-infectedDeath-companion'},
       {slots:4, ref:'evt-infectedDeath-amulet'},
       {slots:3, ref:'evt-infectedDeath-promise',}, 
@@ -111,7 +111,7 @@ config.entities.add([
   },
   {
     id: 'evt-infectedDeath-companion',
-    charEffects: {
+    charEvents: {
       reqStatus: '+infected',
       reqCharFlags: '-special',
       text: "txt-evt-infectedDeath-companion",
@@ -122,7 +122,7 @@ config.entities.add([
   },
   {
     id: 'evt-infectedDeath-amulet',
-    charEffects: {
+    charEvents: {
       reqStatus: '+infected +homesick',
       text: "txt-evt-infectedDeath-amulet",
       report: "txt-evt-infectedDeath-amulet-report",
@@ -136,7 +136,7 @@ config.entities.add([
   },
   {
     id: 'evt-infectedDeath-explorer',
-    charEffects: { 
+    charEvents: { 
       reqStatus: '+infected',
       reqCharFlags: '+special',
       text: "txt-evt-infectedDeath-explorer",
@@ -147,7 +147,7 @@ config.entities.add([
     id: 'evt-infectedDeath-promise',
     reqPartyFlags: '-promiseSpouse',
     setPartyFlags: '+promiseSpouse',
-    charEffects: {
+    charEvents: {
       reqStatus: '+infected',
       reqCharFlags: '-native +humanoid -animal -special',
       reqGender: 'male',
@@ -166,22 +166,24 @@ config.entities.add([
   },
   {
     id: 'evt-infectedHeal',
-    partyEffects: { ref: 'evt-setImage-nightCamp' },
+    partyEvents: { ref: 'evt-setImage-nightCamp' },
     playMusic: ['thm_nature_night_campfire'],
-    charEffects: [
+    charEvents: [
       {
-        reqStatus: {'st-infected':true},
-        reqCharFlags: {special:false}, optional:true,
+        optional:true,
+        reqStatus: '+infected',
+        reqCharFlags: '-special', 
         text: "txt-evt-infectedHeal",
         report: "txt-evt-infectedHeal-report",
-        setStatus: {'st-infected':false},
+        setStatus: '-infected',
       },
       {
-        reqStatus: {'st-infected':true},
-        reqCharFlags: {special:true}, optional:true,
+        optional:true,
+        reqStatus: '+infected',
+        reqCharFlags: '+special', 
         text: "txt-evt-infectedHeal-1",
         report: "txt-evt-infectedHeal-report-1",
-        setStatus: {'st-infected':false},
+        setStatus: '-infected',
       }
     ],
   }

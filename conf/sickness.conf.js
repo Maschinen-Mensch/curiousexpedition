@@ -13,7 +13,7 @@ config.entities.add([
     autoRemove: true,
     bonus: {tripCost: +0.25, healthRegen: -0.5},
     dayEvents: [
-      {reqAge: '51..', setCharFlags:'+sickDeath', events:'evt-sickDeath'}
+      {reqAge: '51..', setCharFlags:'+sickDeath', select:'evt-sickDeath'}
     ]
   },
   {
@@ -30,7 +30,7 @@ config.entities.add([
       {reqAge: '40..', 
         reqCharFlags: '-feverSpread', 
         setCharFlags: '+feverSpread',
-        charEffects: {
+        charEvents: {
           reqStatus: '-jungleFever',
           reqCharFlags: '+humanoid', 
           setStatus: '+jungleFever', 
@@ -140,14 +140,14 @@ config.entities.add([
     autoRemove: true,
     important: true,
     dayEvents: [
-      {prio:0, reqAge:'50..', setCharFlags:'+sickDeath', events:'evt-sickDeath'},
-      {prio:1, reqAge:'20..', events:'evt-rabies-attack', resetAge:true},
+      {prio:0, reqAge:'50..', setCharFlags:'+sickDeath', select:'evt-sickDeath'},
+      {prio:1, reqAge:'20..', select:'evt-rabies-attack', resetAge:true},
       {prio:1, reqAge:'20..', slots:10},
     ],
   },
   {
     id: 'evt-rabies-attack',
-    charEffects: [
+    charEvents: [
       {
         reqStatus: '+rabies',
         text: "txt-evt-rabies-attack"
@@ -165,8 +165,8 @@ config.entities.add([
 
   {
     id: 'evt-sickDeath',
-    partyEffects: { ref: 'evt-setImage-nightCamp' },
-    charEffects: {
+    partyEvents: { ref: 'evt-setImage-nightCamp' },
+    charEvents: {
       reqCharFlags: '+sickDeath',
       text: "txt-evt-sickDeath",
       removeCharacter: true,
@@ -176,10 +176,10 @@ config.entities.add([
   },
   {
     id: 'evt-applySickness',
-    events: [
+    select: [
       {
         slots: 4,
-        charEffects: {
+        charEvents: {
           reqCharFlags: '+humanoid -special',
           reqStatus: '-malaria', 
           setStatus: '+malaria', 
@@ -189,7 +189,7 @@ config.entities.add([
       },
       {
         slots: 1,
-        charEffects: {
+        charEvents: {
           reqCharFlags: '+humanoid -special',
           reqStatus: '-jungleFever', 
           setStatus: '+jungleFever', 

@@ -1,9 +1,9 @@
 config.staticKeywords = [
   'id', 'cid', 'actionText', 'text', 'optional', 'slots',
-  'actions', 'events', 'charEffects', 'storeEffects', 'partyEffects',
+  'actions', 'events', 'select', 'charEvents', 'storeEvents', 'partyEvents',
   'count', 'sanityEvent', 'chance', 'posPunch', 'breakPage',
   'popEvent', 'prio', 'alwaysShown', 'delayedEvent',
-  'report', 'npcEffects', 'winEvents', 'failEvents', 'reqDice',
+  'report', 'npcEvents', 'winEvents', 'failEvents', 'reqDice',
   'clearPushedEvents', 'consume', 'restoreCharacter', 'karma', 
   'funds', 'reqAge', 'fame', 'unwarpWorld', 'gameOver', 'reqFreePartyCount',
   'isAbstract', 'reqNoCombat', 'showNPC', 'reqTargetChar', 'reqDiceCharFlags',
@@ -19,6 +19,10 @@ config.man = [
     _reachable: "true if must be reachable (default:false)",
     $description: "Adds a new zone to the world",
     $pos: true
+  },
+  {
+    keyword: 'incAchievement',
+    $inline: "Increases achievement counter"
   },
   {
     keyword: 'barter',
@@ -144,6 +148,7 @@ config.man = [
     _fixtureKnown: "if fixture should be far known (default: ignore)",
     _range: "max distance to fixture (default: 0)",
     _flags: "flags that fixture needs to match",
+    _reachable: "checks if target is reachable (default: ignore)",
     $pos: true,
     $description: "Returns true if a matching fixture is found"
   },
@@ -206,10 +211,10 @@ config.man = [
   },
   {
     keyword: 'removeStatusWithFlags',
-    $inline: 'all statuses matching given flag set will be removed',
+    $flags: true,
     $character: true,
     $example: "removeStatusWithFlags: '+sickness|+curse'",
-    $description: "Removes any status on a character that matches the flags"
+    $description: 'all statuses matching given flag set will be removed'
   },
   {
     keyword: 'reqMaxPerWorld',
@@ -245,13 +250,13 @@ config.man = [
   {
     keyword: 'removeItem',
     $example: "removeItem: true",
-    $description: "Removes current context item from inventory",
+    $inline: "Removes current context item from inventory",
   },
   {
     keyword: 'removeZone',
     $example: "removeZone: true",
     $zone: true,
-    $description: "Removes current context zone from map",
+    $inline: "Removes current context zone from map",
   },
   {
     keyword: 'removeZones',
@@ -268,11 +273,11 @@ config.man = [
   {
     keyword: 'storeCharacter',
     $character: true,
-    $description: "Stores character in the character storage. removes character from party if character was in party."
+    $inline: "Stores character in the character storage. removes character from party if character was in party."
   },
   {
     keyword: 'unstoreCharacter',
-    $description: "Removes character from character storage.",
+    $inline: "Removes character from character storage.",
     $character: true,
   },
   {
@@ -295,7 +300,7 @@ config.man = [
   },
   {
     keyword: 'reqTutorial',
-    $description: "Returns true if the game is in tutorial mode"
+    $inline: "Checks if value matches being in tutorial",
   },
   {
     keyword: 'reqFame',
@@ -309,15 +314,15 @@ config.man = [
   },
   {
     keyword: 'reqWarpWorld',
-    $description: "Checks if expedition is currently in a warp world",
+    $inline: "Checks if expedition is currently in a warp world",
   },
   {
     keyword: 'showPartyCount',
-    $description: "Enables a party counter to be shown at bottom of diary",
+    $inline: "Enables a party counter to be shown at bottom of diary",
   },
   {
     keyword: 'removeCharacter',
-    $description: "Removes the current person",
+    $inline: "Removes the current person",
     $character: true
   },
   {
@@ -332,7 +337,7 @@ config.man = [
   },
   {
     keyword: 'teleport',
-    $description: "teleports party to given position",
+    $inline: "teleports party to given position",
     $pos: true,
   },
   {
@@ -354,7 +359,7 @@ config.man = [
   },
   {
     keyword: 'forceTravel',
-    $description: "Travel to context position",
+    $inline: "Travel to context position",
     $pos: true
   },
   {
@@ -366,7 +371,7 @@ config.man = [
     keyword: 'setCharFlags',
     $flags: true,
     $character: true,
-    $description: "Sets the current characters flags"
+    $description: "Sets the current characters flags",
   },
   {
     keyword: 'setFixtureFlags',
@@ -416,15 +421,15 @@ config.man = [
     $description: "Makes specified changes to partys inventory"
   },
   {
-    keyword: 'setPartyFlags',
-    $flags: true,
-    $description: "Sets the partys flags"
-  },
-  {
     keyword: 'playMusic',
     $custom: "list of random music tracks of which one played randomly",
     $example: "playMusic: ['thm_nature_mystic_1', 'thm_nature_mystic_2']",
     $description: "Starts playing specified music"
+  },
+  {
+    keyword: 'setPartyFlags',
+    $flags: true,
+    $description: "Sets the partys flags"
   },
   {
     keyword: 'setStatus',
@@ -447,7 +452,7 @@ config.man = [
     keyword: 'reqFixtureFlags',
     $flags: true,
     $fixture: true,
-    $description: "Returns true if th current fixture matches the given flags"
+    $description: "Returns true if th current fixture matches the given flags",
   },
   {
     keyword: 'addNPC',
@@ -481,11 +486,6 @@ config.man = [
     $description: "Specifies the background image and options for the background"
   },
   {
-    keyword: 'reqPartyFlags',
-    $flags: true,
-    $description: "Returns true if the party matches the given flags"
-  },
-  {
     keyword: 'addCharacter',
     $custom: true,
     $description: "Adds the specified character to the party"
@@ -508,7 +508,7 @@ config.man = [
   {
     keyword: 'reqTileFlags',
     $flags: true,
-    $description: "Returns true if the "
+    $description: "Returns true if the tile flags match"
   },
   {
     keyword: 'unlockCharacter',
@@ -517,7 +517,7 @@ config.man = [
   },
   {
     keyword: 'warpWorld',
-    $description: "warp to a random warp world"
+    $inline: "warp to a random warp world"
   },
   {
     keyword: 'reqItemsValue',
@@ -550,6 +550,10 @@ config.man = [
     keyword: 'reqStanding',
     $inline: "range for current party standing to match",
     $description: "Returns true if the current partys standing matches the range"
+  },
+  {
+    keyword: 'reqPartyFlags',
+    $flags: "Returns true if the party matches the given flags"
   },
   {
     keyword: 'setPartyStatus',

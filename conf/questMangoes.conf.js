@@ -12,13 +12,13 @@ config.entities.add([
         text: "txt-evt-harbor-quest-mangoes-1",
         report: "txt-evt-harbor-quest-mangoes-report-1",
         setPartyStatus: {'st-mangoes':true},
-        events: 'evt-harbor-eventSelection',
+        select: 'evt-harbor-eventSelection',
       },
       {
         actionText: "txt-evt-harbor-quest-mangoes-action-1",
         text: "txt-evt-harbor-quest-mangoes-2",
         report: "txt-evt-harbor-quest-mangoes-report-2",
-        events: 'evt-harbor-eventSelection',
+        select: 'evt-harbor-eventSelection',
       },
     ],
   },
@@ -26,7 +26,7 @@ config.entities.add([
     id: 'evt-harbor-quest-mangoes-complete',
     text: "txt-evt-harbor-quest-mangoes-complete",
     npc: 'npc-mangoWoman',
-    events: [
+    select: [
       {
         reqPartyStatus: {'st-mangoes':true}, 
         actions: [
@@ -38,13 +38,13 @@ config.entities.add([
             items: {'it-mango':-1},
             report: "txt-evt-harbor-quest-mangoes-complete-report",
             funds: +20,
-            events: 'evt-harbor-quest-mangoes-complete',
+            select: 'evt-harbor-quest-mangoes-complete',
           },
           {
             actionText: "txt-evt-harbor-quest-mangoes-action-1",
             text: "txt-evt-harbor-quest-mangoes-complete-2",
             setPartyStatus: {'st-mangoes':false},
-            events: 'evt-harbor-eventSelection',
+            select: 'evt-harbor-eventSelection',
           },
         ],
       },

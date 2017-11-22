@@ -89,36 +89,25 @@ config.entities.add([
     id: 'evt-goldenTemple-buried-approach',
     actionText: "txt-evt-altar-approach-action",
     text: "txt-evt-goldenTemple-buried-approach",
-    partyEffects: [
+    partyEvents: [
       {
         optional: true, reqBiomeFlags: '-arctic',
         showImage: {src: 'evt_fxt_goldenTemple_buried.png', type: 'day'},
       },
       {
         optional: true, reqBiomeFlags: '+arctic',
-        events: [
-          {
-            slots:1,
-            showImage: {
-              src: 'evt_fxt_goldenTemple_buried_arctic.png', type: 'day', showMounted: true,
-              particles: ['pt-snow-1', 'pt-snow-2', 'pt-snow-3'],
-            },
-          },
-          {
-            slots:1,
-            showImage: {
-              src: 'evt_fxt_goldenTemple_buried_arctic.png', type: 'day', showMounted: true,
-            },
-          }
-        ],
-        
+        showImage: {
+          src: 'evt_fxt_goldenTemple_buried_arctic.png', type: 'day', showMounted: true,
+          particles: ['pt-snow-1', 'pt-snow-2', 'pt-snow-3'],
+          particlesChance: 0.5
+        }
       },
     ],
     actions: [
       {
         actionText: "txt-evt-goldenTemple-buried-approach-action",
         text: "txt-evt-goldenTemple-buried-approach-1",
-        partyEffects: [
+        partyEvents: [
           {
             optional: true,
             posTile: {range:'..100', fixtureKnown:false, fixtureFlags:'+goldenSeal', tileFlags:'-mapped'},
@@ -240,7 +229,7 @@ config.entities.add([
         {radius:2, chance: 1.0, old: 'any', new: 'tl-dry-stoneForest'},
         {radius:0, chance: 1.0, old: 'any', new: 'tl-dry'},
       ],
-      events: [
+      select: [
         {reqBiomeFlags: '-arctic', addZone: {ref:'zn-giantBird', range:1}},
         {reqBiomeFlags: '-arctic', addZone: {ref:'zn-giantCrab', range:1}},
         {reqBiomeFlags: '-arctic', addZone: {ref:'zn-giantScorpion',  range:1}},
@@ -255,7 +244,7 @@ config.entities.add([
   {
     id: 'evt-goldenSeal',
     actionText: "txt-evt-altar-approach-action",
-    partyEffects: [
+    partyEvents: [
       {
         optional: true,
         reqBiomeFlags: '-arctic',
@@ -276,7 +265,7 @@ config.entities.add([
         actionText: "txt-evt-goldenSeal-action",
         chat: 'cl-seal-activate',
         text: "txt-evt-goldenSeal-1",
-        partyEffects: [
+        partyEvents: [
           {
             optional: true,
             reqBiomeFlags: '-arctic',
@@ -290,7 +279,7 @@ config.entities.add([
         ],
         actions: {
           replaceFixtures: {new:'fxt-goldenSeal-active'},
-          partyEffects: [
+          partyEvents: [
             { 
               optional: true,
               posTile: {fixtures:'fxt-goldenTemple-buried'},

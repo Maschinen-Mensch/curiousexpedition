@@ -73,7 +73,7 @@ config.entities.add([
         {radius:2, old: 'any', new: 'tl-pit-grass'},
         {radius:1, old: 'any', new: 'tl-grass'},
       ],
-      // events: [
+      // select: [
       //   {
       //     replaceFixtures: {new:'fxt-special-chasmCircle-bridge'},
       //   },
@@ -91,9 +91,9 @@ config.entities.add([
         {radius:1, old: 'any', new: 'tl-dry'},
         {radius:1, old: 'any', new: 'tl-dry-stoneForest', chance: 0.2},
       ],
-      events: [
+      select: [
         {
-          partyEffects: [
+          partyEvents: [
             {
               addFixture: {ref:'fxt-blessingTemple-noNeighbors', range:0},
             },

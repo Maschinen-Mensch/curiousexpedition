@@ -19,7 +19,7 @@ config.entities.add([
       jingleFirstTimePlayed: false,
       playJingle: false,
     },
-    charEffects: [
+    charEvents: [
       { // reset character flags
         count: 'any',
         setCharFlags: '-homeWorld'
@@ -29,7 +29,7 @@ config.entities.add([
         setPartyFlags: '+loneSurvivor',
       },
     ],
-    partyEffects: [ 
+    partyEvents: [ 
       { // Generic Gameplay Jingle is played from time to time
         reqTutorial: false,
         setPartyStatus: '+playJingle'
@@ -69,7 +69,7 @@ config.entities.add([
       
       { optional: true, ref: 'evt-polarStation-reveal' },
       { optional: true, ref: 'evt-polarStation-reveal' },
-      { optional: true, ref: 'evt-polarStation-reveal' }
+      { optional: true, ref: 'evt-polarStation-reveal' },
     ],
   },
 
@@ -85,14 +85,14 @@ config.entities.add([
   
   {
     id: 'evt-world-start',
-    events: [
+    select: [
       {prio: 0, ref:'evt-tutorial-start-1'},
       {prio: 1, ref:'evt-ship-arrival'},
     ]
   },
   {
     id: 'evt-world-initQuests',
-    partyEffects: [
+    partyEvents: [
       {
         optional: true,
         reqItems: {'it-quest-1-letter':1},
@@ -105,7 +105,7 @@ config.entities.add([
         optional: true,
         reqWorld: '0',
         reqPartyStatus: '+missionary',
-        charEffects: {
+        charEvents: {
           reqCharFlags: '+missionary',
           text: "txt-evt-world-initQuests-1"
         },
@@ -124,7 +124,7 @@ config.entities.add([
       {
         optional: true,
         reqPartyStatus: '+arcticClaim-4',
-        events: 'evt-quest-arcticClaim-worldInit',
+        select: 'evt-quest-arcticClaim-worldInit',
       },
       {
         optional: true,
@@ -159,7 +159,7 @@ config.entities.add([
   },
   {
     id: 'evt-occultVision-reveal',
-    charEffects: { reqPerk: '+occultVision' },
+    charEvents: { reqPerk: '+occultVision' },
     posTile: {range:'..100', fixtureKnown:false, fixtureFlags:'+occultVision'},
     revealTiles: {radius:1, fixture:true, particle: 'pt-magic-reveal'}
   },
@@ -167,7 +167,7 @@ config.entities.add([
 // ------ Special world unlocks
   {
     id: 'evt-unlock-specialWorld-withText',
-    events: [
+    select: [
       {
         slots: 1,
         reqWorld: '1..',
@@ -200,34 +200,29 @@ config.entities.add([
   },
   {
     id: 'evt-unlock-specialWorld-noText',
-    events: [
+    select: [
       {
         slots: 1,
         reqWorld: '1..',
         unlockPocket: 'pck-whiteTiger',
-        popEvent: true,
       },
       {
         slots: 1,
         reqWorld: '1..',
         unlockPocket: 'pck-waterTemple',
-        popEvent: true,
       },
       {
         slots: 1,
         reqWorld: '1..',
         unlockPocket: 'pck-volcano-dry',
-        popEvent: true,
       },
       {
         slots: 1,
         unlockPocket: 'pck-prehistoric',
-        popEvent: true,
       },
       {
         slots: 1,
         unlockPocket: 'pck-elephantGraveyard',
-        popEvent: true,
       },
     ],
   },
@@ -239,28 +234,52 @@ config.entities.add([
     actionText: "txt-evt-searchArea-action",
     text: "txt-evt-searchArea",
     turns: 1,
-    setTileFlags: {explored:true},
-    partyEffects: [
+    setTileFlags: '+explored',
+    partyEvents: [
       {
-        charEffects: {
+        charEvents: {
           optional: true,
-          reqStatus: {'st-cannibal':true}, 
-          setPartyFlags: {cannibalSearch:true},
+          reqStatus: '+cannibal', 
+          setPartyFlags: '+cannibalSearch',
         },
+      },
+      {
+        optional: true,
+        reqFixtureFlags: '+elephantGraveyard',
+        select: 'evt-elephantGraveyard-searchOutcome'
+      },
+      {
+        optional: true,
+        reqFixtureFlags: '+mammothGraveyard',
+        select: 'evt-mammothGraveyard-searchOutcome'
+      },
+      {
+        optional: true,
+        reqFixtureFlags: '+oldCamp',
+        select: 'evt-oldCamp-searchOutcome'
+      },
+      {
+        optional: true,
+        reqFixtureFlags: '+raptorNest',
+        select: 'evt-raptorNest-searchOutcome'
+      },
+      {
+        optional: true,
+        reqFixtureFlags: '+shipwreck',
+        select: 'evt-shipwreck-searchOutcome'
       },
     ],
     chat: 'cl-generic',
-    popEvent: true,
   },
 
 // Combat
 
   { 
     id: 'evt-combat-loot',
-    events: [
+    select: [
       { // Village Chief daughter event
         prio: 0,
-        reqTileFlags: [{chiefDaughterVillage:true}],
+        reqTileFlags: '+chiefDaughterVillage',
         sanity: {base:0, bonus:'combatSanity'},
         standing: standingCostSacrilegLarge,
         replaceFixtures: [
@@ -269,7 +288,7 @@ config.entities.add([
           {range: 1, old:'fxt-village-3', new:'fxt-village-abandoned'},
           {range: 1, old:'fxt-village-4', new:'fxt-village-4-abandoned'},
         ],
-        events: 'evt-village-abandoned',
+        select: 'evt-village-abandoned',
       },
       { // Steal Idol village event
         prio: 0,
@@ -283,13 +302,13 @@ config.entities.add([
           {range: 1, old:'fxt-village-3', new:'fxt-village-abandoned'},
           {range: 1, old:'fxt-village-4', new:'fxt-village-4-abandoned'},
         ],
-        events: 'evt-village-abandoned',
+        select: 'evt-village-abandoned',
       },
       { // Konrad quest
         prio: 0,
-        reqFixtureFlags: {harborQuestKonrad:true},
+        reqFixtureFlags: '+harborQuestKonrad',
         sanity: {base:0, bonus:'combatSanity'},
-        events: 'evt-village-quest-konrad-loot',
+        select: 'evt-village-quest-konrad-loot',
       },
       { // Slaver combat
         prio: 0,
@@ -304,23 +323,23 @@ config.entities.add([
       },
       { // Mission abomination event
         prio: 0,
-        reqPartyFlags: {missionFight:true},
-        setPartyFlags: {missionFight:false}, 
+        reqPartyFlags: '+missionFight',
+        setPartyFlags: '-missionFight', 
         items: {'it-meat-raw':2},
         sanity: {base:0, bonus:'combatSanity'},
-        events: 'evt-mission-sleep-event-5-win',
+        select: 'evt-mission-sleep-event-5-win',
       },
       { 
         prio: 1,
         text: "txt-evt-combat-loot-1",
         loot: {
           items: {},
-          close: {popEvent:true},
-          cancel: {popEvent:true},
+          close: {},
+          cancel: {},
         },
         sanity: {base:0, bonus:'combatSanity'},
         report: "txt-evt-combat-loot-report",
-        events: {
+        select: {
           reqDifficulty: '1..',
           standing: -1,
         }
@@ -329,19 +348,18 @@ config.entities.add([
   },
   { 
     id: 'evt-combat-run',
-    clearPushedEvents:true,
     actionText: "txt-evt-combat-run-action",
     text: "txt-evt-combat-run",
     report: "txt-evt-combat-run-report",
     incAchievement: "ach-flee",
-    partyEffects: [
+    partyEvents: [
       { // Abomination dismiss combat
         reqPartyFlags: '+abominationCombat',
         setPartyFlags: '-abominationCombat',
         addZone: {ref:'zn-abomination', range:2},
       },
     ],
-    events: [
+    select: [
       {
         prio: 0,
         reqTutorial: true,
@@ -351,7 +369,7 @@ config.entities.add([
       {
         prio: 1,
         reqDifficulty: '1..',
-        charEffects: {
+        charEvents: {
           count: 'any',
           reqCharFlags: '-special', reqHealth: '0',
           text: "txt-zn-abomination",
@@ -380,7 +398,7 @@ config.entities.add([
       {
         prio: 2, slots: 1, sanity: -20, 
         reqDifficulty: '1..',
-        charEffects: {
+        charEvents: {
           count:1, reqCharFlags: '-special',
           text: "txt-zn-abomination-4",
           storeCharacter: true,
@@ -396,10 +414,10 @@ config.entities.add([
 
   {
     id: 'evt-trauma',
-    events: [
+    select: [
       {
         slots: 1,
-        charEffects: {
+        charEvents: {
           reqStatus: '-paranoid -blessingPureMind',
           reqCharFlags: {humanoid:true, special:false, abomination:false},
           setStatus: {'st-paranoid':true},
@@ -410,7 +428,7 @@ config.entities.add([
       },
       {
         slots: 1,
-        charEffects: {
+        charEvents: {
           reqStatus: '-claustrophobic -blessingPureMind',
           reqCharFlags: {humanoid:true, special:false, abomination:false},
           setStatus: {'st-claustrophobic':true},
@@ -421,7 +439,7 @@ config.entities.add([
       },
       {
         slots:1, 
-        charEffects: {
+        charEvents: {
           reqStatus: '-lepidopterophobia -blessingPureMind',
           reqCharFlags: {humanoid:true, special:false, abomination:false},
           setStatus: {'st-lepidopterophobia':true},
@@ -432,7 +450,7 @@ config.entities.add([
       },
       {
         slots:1,
-        charEffects: {
+        charEvents: {
           reqStatus: '-kleptomania -blessingPureMind',
           reqCharFlags: {humanoid:true, special:false, abomination:false},
           setStatus: {'st-kleptomania':true},
@@ -443,7 +461,7 @@ config.entities.add([
       },
       {
         slots:1,
-        charEffects: {
+        charEvents: {
           reqStatus: '-superstitious -blessingPureMind',
           reqCharFlags: {humanoid:true, special:false, abomination:false},
           setStatus: {'st-superstitious':true},
@@ -454,7 +472,7 @@ config.entities.add([
       },
       {
         slots:1,
-        charEffects: {
+        charEvents: {
           reqStatus: '-pyromaniac -blessingPureMind',
           reqCharFlags: {humanoid:true, special:false, abomination:false},
           setStatus: '+pyromaniac',
@@ -470,7 +488,7 @@ config.entities.add([
 
 // { 
 //   id: 'evt-abomination-turnInto',
-//   charEffects: [
+//   charEvents: [
 //     {
 //       reqCharFlags: '+cultist',
 //       reqStatus: {'st-injured':true},
@@ -487,95 +505,95 @@ config.entities.add([
   {
     id: 'evt-painting-create',
     items: {'it-canvas':-1},
-    events: [
+    select: [
       {
-        charEffects: [
+        charEvents: [
           {
             optional: true,
-            reqStatus: {'pk-artist-1':true},
-            partyEffects: [
+            reqPerk: '+artist-1',
+            partyEvents: [
               {
                 optional: true,
-                reqTempFlags: {paintingNative:true},
+                reqTempFlags: '+paintingNative',
                 items: {'it-painting-native-1':+1},
               },
               {
                 optional: true,
-                reqTempFlags: {paintingLocation:true},
+                reqTempFlags: '+paintingLocation',
                 items: {'it-painting-location-1':+1},
               },
               {
                 optional: true,
-                reqTempFlags: {paintingShrine:true},
+                reqTempFlags: '+paintingShrine',
                 items: {'it-painting-shrine-1':+1},
               },
             ], 
           },
           {
             optional: true,
-            reqStatus: {'pk-artist-2':true},
-            partyEffects: [
+            reqPerk: '+artist-2',
+            partyEvents: [
               {
                 optional: true,
-                reqTempFlags: {paintingNative:true},
+                reqTempFlags: '+paintingNative',
                 items: {'it-painting-native-2':+1},
               },
               {
                 optional: true,
-                reqTempFlags: {paintingLocation:true},
+                reqTempFlags: '+paintingLocation',
                 items: {'it-painting-location-2':+1},
               },
               {
                 optional: true,
-                reqTempFlags: {paintingShrine:true},
+                reqTempFlags: '+paintingShrine',
                 items: {'it-painting-shrine-2':+1},
               },
             ], 
           },
           {
             optional: true,
-            reqStatus: {'pk-artist-3':true},
-            partyEffects: [
+            reqPerk: '+artist-3',
+            partyEvents: [
               {
                 optional: true,
-                reqTempFlags: {paintingNative:true},
+                reqTempFlags: '+paintingNative',
                 items: {'it-painting-native-3':+1},
               },
               {
                 optional: true,
-                reqTempFlags: {paintingLocation:true},
+                reqTempFlags: '+paintingLocation',
                 items: {'it-painting-location-3':+1},
               },
               {
                 optional: true,
-                reqTempFlags: {paintingShrine:true},
+                reqTempFlags: '+paintingShrine',
                 items: {'it-painting-shrine-3':+1},
               },
             ], 
           },
           {
             optional: true,
-            reqStatus: {'pk-artist-4':true},
-            partyEffects: [
+            reqPerk: '+artist-4',
+            partyEvents: [
               {
                 optional: true,
-                reqTempFlags: {paintingNative:true},
+                reqTempFlags: '+paintingNative',
                 items: {'it-painting-native-4':+1},
               },
               {
                 optional: true,
-                reqTempFlags: {paintingLocation:true},
+                reqTempFlags: '+paintingLocation',
                 items: {'it-painting-location-4':+1},
               },
               {
                 optional: true,
-                reqTempFlags: {paintingShrine:true},
+                reqTempFlags: '+paintingShrine',
                 items: {'it-painting-shrine-4':+1},
               },
             ], 
           },
-        ], 
-        popEvent: true,
+          'evt-painting-done'
+        ],
       },
     ],
     incAchievement: "ach-painting-collect"
@@ -584,44 +602,63 @@ config.entities.add([
     id: 'evt-painting-angry',
     items: {'it-canvas':-1},
     chat: 'cl-angry',
-    charEffects: {
+    charEvents: {
       reqCharFlags: '+artist',
       text: "txt-evt-painting-angry",
       report: "txt-evt-painting-angry-report"
     },
-    popEvent: true,
+    partyEvents: [
+      {
+        select: 'evt-painting-done'
+      }
+    ]
   },
-  
+  {
+    id: 'evt-painting-done',
+    select: [
+      {
+        optional: true,
+        reqFixtureFlags: '+shrine',
+        select: 'evt-shrine-actions'
+      },
+      {
+        optional: true,
+        reqFixtureFlags: '+villageNight',
+        setFixtureFlags: '-villageNight',
+        select: 'evt-village-actions-night',
+      }
+    ]
+  },
   {
     id: 'evt-shrine-paint',
     actionText: "txt-evt-shrine-paint-action",
     reqFixtureFlags: '-painting',
-    setFixtureFlags: '+painting',
-    charEffects: [
+    setFixtureFlags: '+painting +shrine',
+    charEvents: [
       {
         reqCharFlags: '+artist', 
         reqItems: {'it-canvas':1},
       },
       {
         optional: true,
-        reqStatus: {'st-angry':false},
+        reqStatus: '-angry',
         reqCharFlags: '+artist', 
         text: "txt-evt-shrine-paint",
-        events: [
+        select: [
           {
             slots: 1,
             text: "txt-evt-shrine-paint-1",
             report: "txt-evt-shrine-paint-report",
-            setTempFlags: {paintingShrine:true},
-            events: 'evt-painting-create',
+            setTempFlags: '+paintingShrine',
+            select: 'evt-painting-create',
           },
         ],
       },
       {
         optional:true,
         reqCharFlags: '+artist', 
-        reqStatus: {'st-angry':true},
-        events: 'evt-painting-angry',
+        reqStatus: '+angry',
+        select: 'evt-painting-angry',
       },
     ],
   },
@@ -633,7 +670,7 @@ config.entities.add([
     showImage: {src: 'evt_spec_fire.png', type: 'day'},
     chat: 'cl-sprawlFire',
     sanity: -10,
-    events: [
+    select: [
       {
         prio: 0,
         reqTutorial: true,
@@ -644,7 +681,7 @@ config.entities.add([
       {
         reqPartyStatus: '-fireSafe',
         setPartyStatus: '+fireSafe',
-        charEffects: [
+        charEvents: [
           {
             reqCharFlags: '-special',
             text: "txt-evt-sprawl-fire",
@@ -676,7 +713,7 @@ config.entities.add([
     text: "txt-evt-tile-river",
     posTile: {traversable:true, closest:true, range:'..10'},
     teleport: true,
-    partyEffects: [
+    partyEvents: [
       {
         optional:true,
         chance:0.5,
@@ -703,7 +740,7 @@ config.entities.add([
 
   {
     id: 'evt-setImage-nightCamp',
-    events: [
+    select: [
       {
         reqBiomeFlags: '-arctic',
         showImage: {src: 'evt_spec_nightCamp_1.png', showCampfire:true, showMounted:false},

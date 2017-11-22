@@ -43,7 +43,7 @@ config.entities.add([
     reqFixtureFlags: '-explored',
     actionText: "txt-evt-cave-approach-action",
     playMusic: ['thm_nature_mystic_1', 'thm_nature_mystic_2'],
-    partyEffects: [
+    partyEvents: [
       {
         optional: true, reqBiomeFlags: '-arctic',
         showImage: {src: 'evt_fxt_cave_1.png', type:'day'},
@@ -57,10 +57,10 @@ config.entities.add([
       },
       {
         optional: true, reqFixtureFlags: '+caveTypeYeti',
-        events: [
+        select: [
           {
             reqPartyFlags: '-yetiEncountered', setPartyFlags: '+yetiEncountered',
-            events: 'evt-cave-yeti',
+            select: 'evt-cave-yeti',
           },
           {
             reqPartyFlags: '+yetiEncountered',
@@ -91,7 +91,7 @@ config.entities.add([
     items: {'it-torch':-1},
     playMusic: ['thm_cave_1', 'thm_cave_2'],
     text: "txt-evt-cave-explore-torch",
-    events: 'evt-cave-explore-all',
+    select: 'evt-cave-explore-all',
   },
   {
     id: 'evt-cave-explore-pumpkinLantern',
@@ -99,7 +99,7 @@ config.entities.add([
     actionText: "txt-evt-cave-explore-pumpkinLantern-action",
     playMusic: ['thm_cave_1', 'thm_cave_2'],
     text: "txt-evt-cave-explore-pumpkinLantern",
-    events: 'evt-cave-explore-all',
+    select: 'evt-cave-explore-all',
   },
   {
     id: 'evt-cave-explore-noTorch',
@@ -118,7 +118,7 @@ config.entities.add([
       { // Injury
         slots: 5,
         setFixtureFlags: '+noTorchInjury',
-        charEffects: { 
+        charEvents: { 
           reqCharFlags: '+humanoid -special -abomination',
           reqStatus: '-injured' 
         },
@@ -132,12 +132,12 @@ config.entities.add([
       },
       { // Claustrophobic
         slots: 6,
-        charEffects: { 
+        charEvents: { 
           reqCharFlags: '+humanoid -special -abomination',
           reqStatus: '+claustrophobic' 
         },
         text: "txt-evt-cave-explore-noTorch-4",
-        events: [
+        select: [
           {slots:3, setFixtureFlags: '+noTorchClaustrophobic'},
           {slots:1, setFixtureFlags: '+noTorchClaustrophobicDeath'},
         ]
@@ -145,7 +145,7 @@ config.entities.add([
       { // Death
         slots: 2,
         reqDifficulty: '1..',
-        charEffects: { 
+        charEvents: { 
           reqCharFlags: '+humanoid -special -abomination' 
         },
         setFixtureFlags: '+noTorchDeath',
@@ -153,7 +153,7 @@ config.entities.add([
       },
       { // Abomination
         slots: 2,
-        charEffects: { 
+        charEvents: { 
           reqCharFlags: '+humanoid -special -abomination' 
         },
         setFixtureFlags: '+noTorchAbomination',
@@ -165,7 +165,7 @@ config.entities.add([
         actionText: "txt-evt-sanity-angry-action",
         showImage: {src: 'evt_fxt_cave_darkness_2.png'},
         text: "txt-evt-cave-explore-noTorch-7",
-        charEffects: [
+        charEvents: [
           {
             optional: true,
             reqFixtureFlags: '+noTorchInjury',
@@ -178,18 +178,18 @@ config.entities.add([
             optional: true,
             reqFixtureFlags: '+spiders',
             text: "txt-evt-cave-explore-noTorch-9",
-            pushEvent: 'evt-cave-explore-all',
-            events: [
-              {reqWorld: '..2',slots: 2, combat: [{'emy-giantSpider':1}]},
-              {reqWorld: '2..', slots: 1, combat: [{'emy-giantSpider':2}]},
-              {reqWorld: '4..', slots: 2, combat: [{'emy-giantSpider':3}]},
+            select: [
+              {reqWorld: '..2',slots: 2, combat: {refs:{'emy-giantSpider':1, win: 'evt-cave-win-explore', flee: 'evt-cave-flee-explore'}}},
+              {reqWorld: '2..', slots: 1, combat: {refs:{'emy-giantSpider':2, win: 'evt-cave-win-explore', flee: 'evt-cave-flee-explore'}}},
+              {reqWorld: '4..', slots: 2, combat: {refs:{'emy-giantSpider':3, win: 'evt-cave-win-explore', flee: 'evt-cave-flee-explore'}}},
             ],
           },
           {
             optional: true,
             reqFixtureFlags: '+noTorchClaustrophobic',
-            charEffects: { 
-              reqCharFlags: {special:false, humanoid:true, abomination:false}, reqStatus: {'st-claustrophobic':true},
+            charEvents: { 
+              reqCharFlags: '-special +humanoid -abomination',
+              reqStatus: '+claustrophobic',
               text: "txt-evt-cave-explore-noTorch-10",
             },
             sanity: -20,
@@ -197,8 +197,9 @@ config.entities.add([
           {
             optional: true,
             reqFixtureFlags: '+noTorchClaustrophobicDeath',
-            charEffects: {
-              reqCharFlags: {special:false, humanoid:true, abomination:false}, reqStatus: {'st-claustrophobic':true},
+            charEvents: {
+              reqCharFlags: '-special +humanoid -abomination',
+              reqStatus: '+claustrophobic',
               text: "txt-evt-cave-explore-noTorch-11",
               storeCharacter: true,
               setCharFlags: '+dead',
@@ -208,8 +209,8 @@ config.entities.add([
           {
             optional: true,
             reqFixtureFlags: '+noTorchDeath',
-            charEffects: {
-              reqCharFlags: { special:false, humanoid:true, abomination:false },
+            charEvents: {
+              reqCharFlags: '-special +humanoid -abomination',
               text: "txt-evt-cave-explore-noTorch-12",
               storeCharacter: true,
             },
@@ -217,8 +218,8 @@ config.entities.add([
           {
             optional: true,
             reqFixtureFlags: '+noTorchAbomination',
-            charEffects: {
-              reqCharFlags: {special:false, humanoid:true, abomination:false },
+            charEvents: {
+              reqCharFlags: '-special +humanoid -abomination',
               text: "txt-evt-cave-explore-noTorch-13",
               removeCharacter: true,
             },
@@ -230,9 +231,22 @@ config.entities.add([
     ]
   },
   {
+    id: 'evt-cave-win-explore',
+    loot: {
+      items: {},
+      cancel: 'evt-cave-explore-all',
+      close: 'evt-cave-explore-all'
+    }
+  },
+  {
+    id: 'evt-cave-flee-explore',
+    sanity: -20,
+    select: 'evt-cave-explore-all'
+  },
+  {
     id: 'evt-cave-explored-leave',
     actionText: "txt-evt-cave-explored-leave-action",
-    partyEffects:[
+    partyEvents:[
       {
         optional: true,
         reqBiomeFlags: '-arctic',
@@ -257,21 +271,21 @@ config.entities.add([
         teleport: true // AFTER fixture replacement
       }
     ],
-    events: 'evt-leave'
+    select: 'evt-leave'
   },
   {
     id: 'evt-cave-explore-all',
     actionText: "txt-evt-sanity-angry-action",
-    events: [
-      {reqFixtureFlags: '+caveTypeOpening',                 events: 'evt-cave-opening'},
-      {reqFixtureFlags: '+caveTypePaintings',               events: 'evt-cave-paintings'},
-      {reqFixtureFlags: '+caveTypeMushrooms',               events: 'evt-cave-mushrooms'},
-      {reqFixtureFlags: '+caveTypeCorpses',                 events: 'evt-cave-corpses'},
-      {reqFixtureFlags: '+caveTypeMummy',                   events: 'evt-cave-mummy'},
-      {reqFixtureFlags: '+caveTypeTeleport',                events: 'evt-cave-teleport-arrive'},
-      {reqFixtureFlags: '+caveTypeGhostsQuest',             events: 'evt-cave-ghostsQuest'},
-      {reqFixtureFlags: '+caveTypeYeti',                    events: 'evt-cave-yeti'},
-      {reqFixtureFlags: '+caveTypeMonsterDenGiantSpiders',  events: 'evt-cave-monsterDen-giantSpiders'},
+    select: [
+      {reqFixtureFlags: '+caveTypeOpening',                 select: 'evt-cave-opening'},
+      {reqFixtureFlags: '+caveTypePaintings',               select: 'evt-cave-paintings'},
+      {reqFixtureFlags: '+caveTypeMushrooms',               select: 'evt-cave-mushrooms'},
+      {reqFixtureFlags: '+caveTypeCorpses',                 select: 'evt-cave-corpses'},
+      {reqFixtureFlags: '+caveTypeMummy',                   select: 'evt-cave-mummy'},
+      {reqFixtureFlags: '+caveTypeTeleport',                select: 'evt-cave-teleport-arrive'},
+      {reqFixtureFlags: '+caveTypeGhostsQuest',             select: 'evt-cave-ghostsQuest'},
+      {reqFixtureFlags: '+caveTypeYeti',                    select: 'evt-cave-yeti'},
+      {reqFixtureFlags: '+caveTypeMonsterDenGiantSpiders',  select: 'evt-cave-monsterDen-giantSpiders'},
     ],
   },
   {
@@ -304,7 +318,7 @@ config.entities.add([
     showImage: {src: 'evt_fxt_cave_hole.png'},
     text: "txt-evt-cave-opening",
     report: "txt-evt-cave-opening-report",
-    charEffects: [
+    charEvents: [
       {
         optional: true,
         count: "any",
@@ -314,7 +328,7 @@ config.entities.add([
         optional: true,
         count: "all",
         reqCharFlags: '+humanoid -special',
-        reqStatus: {'st-injured':true},
+        reqStatus: '+injured',
         text: "txt-evt-cave-opening-1",
         report: "txt-evt-cave-opening-report-1"
       },
@@ -327,7 +341,7 @@ config.entities.add([
     setFixtureFlags: '+explored',
     text: "txt-evt-cave-paintings",
     report: "txt-evt-cave-paintings-report",
-    events: 'evt-unlock-specialWorld-noText',
+    select: 'evt-unlock-specialWorld-noText',
     actions: 'evt-cave-explored-leave',
   },
   {
@@ -359,7 +373,7 @@ config.entities.add([
     actionText: "txt-evt-cave-mushrooms-refillWater-action",
     chat: 'cl-water-pack',
     items: {'it-water':10},
-    events: 'evt-cave-mushrooms'
+    select: 'evt-cave-mushrooms'
   },
   {
     id: 'evt-cave-corpses', 
@@ -424,7 +438,7 @@ config.entities.add([
     chat: 'cl-cave-sendIn',
     report: "txt-evt-cave-sendIn-report",
     reqDice: 'awarenes',
-    charEffects: [
+    charEvents: [
       {
         optional: true,
         reqStatus: '+claustrophobic',
@@ -444,10 +458,10 @@ config.entities.add([
   {
     id: 'evt-cave-outcome-rewards',
     setFixtureFlags: '+explored',
-    events: [
+    select: [
       {
         slots: 5,
-        charEffects: {
+        charEvents: {
           reqCharFlags: '+exploring',
           setCharFlags: '-exploring',
           text: "txt-evt-cave-outcome-rewards",
@@ -464,7 +478,7 @@ config.entities.add([
       },
       {
         slots: 1,
-        charEffects: {
+        charEvents: {
           reqCharFlags: '+exploring',
           setCharFlags: '-exploring',
           text: "txt-evt-cave-outcome-rewards-1",
@@ -475,7 +489,7 @@ config.entities.add([
   },
   {
     id: 'evt-cave-outcome-bad-1',
-    charEffects: [
+    charEvents: [
       {
         reqCharFlags: '+exploring',
         reqStatus: '-claustrophobic',

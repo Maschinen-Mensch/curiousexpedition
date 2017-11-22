@@ -6,6 +6,8 @@ config.entities.add([
     id: 'fxt-raptorNest',
     name: "txt-fxt-raptorNest-name",
     reqBiomeFlags: '+prehistoric',
+    debugCategory: 'loot',
+    imgIdx: 86,
     sprite: "res_fxt_raptorNest.png",
     setTile: [
       {ref:'tl-grass-bushes', reqBiomeFlags: '-dry'},
@@ -28,20 +30,20 @@ config.entities.add([
     reqTileFlags: '-explored',
     actionText: "txt-evt-altar-approach-action",
     showImage: {src: 'evt_fxt_raptorNest_1.png', type:'day'},
-    events: 'evt-raptorNest-main',
+    select: 'evt-raptorNest-main',
   },
   {
     id: 'evt-raptorNest-main',
     text: "txt-evt-raptorNest-main",
+    setFixtureFlags: '+raptorNest',
     report: "txt-evt-raptorNest-main-report",
     chat: 'cl-deadlyPlace',
-    pushEvent: 'evt-raptorNest-searchOutcome',
-    actions: ['evt-searchArea', 'evt-leave']
+    actions: [{ref: 'evt-searchArea'}, 'evt-leave']
   },
   { 
     id: 'evt-raptorNest-searchOutcome',
     setPartyFlags: {raptors:true},
-    events: [
+    select: [
       {
         slots: 1,
         text: "txt-evt-raptorNest-searchOutcome",
@@ -71,6 +73,7 @@ config.entities.add([
   {
     id: 'evt-raptor-hatch',
     showImage: {src: 'evt_fxt_empty.png', type:'day'},
+    incAchievement: 'ach-hatchEggs',
     text: "txt-evt-raptor-hatch",
     removeItem: true,
     loot: {
@@ -84,7 +87,7 @@ config.entities.add([
     text: "txt-evt-raptor-adult",
     npc: 'anm-raptor',
     removeItem: true,
-    npcEffects: {
+    npcEvents: {
       actions: {
         actionText: "txt-evt-raptor-adult-action",
         text: "txt-evt-raptor-adult-1",

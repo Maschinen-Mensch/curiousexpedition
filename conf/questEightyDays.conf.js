@@ -26,13 +26,13 @@ config.entities.add([
         setPartyStatus: {'st-80days':true},
         text: "txt-evt-harbor-quest-81",
         report: "txt-evt-harbor-quest-80Days-report-1",
-        events: 'evt-harbor-eventSelection',
+        select: 'evt-harbor-eventSelection',
       },
       {
         actionText: "txt-evt-angry-demandPayment-action-1",
         text: "txt-evt-harbor-quest-82",
         report: "txt-evt-harbor-quest-80Days-report-2",
-        events: 'evt-harbor-eventSelection',
+        select: 'evt-harbor-eventSelection',
       },
     ],
   },
@@ -41,7 +41,7 @@ config.entities.add([
     showImage: {src: 'evt_spec_ship_1.png'},
     setPartyFlags: '-harborEventsQuest80Days',
     npc: 'npc-gentleman',
-    events: [
+    select: [
       {
         reqPartyFlags: '+harborEventsQuest80DaysComplete',
         text: "txt-evt-harbor-quest-80Days-complete",

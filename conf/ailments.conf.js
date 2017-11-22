@@ -20,7 +20,7 @@ config.entities.add([
     dayEvents: [
       {reqAge: 35, loyalty:-1 ,resetStatusAge:true},
       {
-        charEffects: {
+        charEvents: {
           count:4,
           reqStatus: '+alcoholic',
           incAchievement: 'ach-alcoholics'

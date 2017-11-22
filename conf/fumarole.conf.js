@@ -77,7 +77,7 @@ config.entities.add([
     lifeTurns: '17..20', 
     size: [2,2],
     events: {
-     charEffects: { count: "all", health: -2 },
+     charEvents: { count: "all", health: -2 },
      chat: 'cl-poisonGas',
     },
   },

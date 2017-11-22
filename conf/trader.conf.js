@@ -95,7 +95,7 @@ config.entities.add([
   {
     id: 'evt-trader-barter',
     actionText: "txt-evt-mission-trade-action",
-    events: [
+    select: [
       {
         slots: 4,
         text: "txt-evt-trader-barter",

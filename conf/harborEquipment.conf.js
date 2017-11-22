@@ -6,7 +6,7 @@ config.entities.add([
     showImage: {src: 'evt_spec_ship_1.png'},
     reqTutorial: false,
     reqWorld: '0..',
-    charEffects: [
+    charEvents: [
       {
         optional: true, 
         reqPartyStatus: {'pk-blackMarket':false},

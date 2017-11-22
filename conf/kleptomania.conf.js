@@ -17,7 +17,7 @@ config.entities.add([
     tripEvents: [
       {slots: 2},
       {
-        partyEffects: { ref: 'evt-setImage-nightCamp' },
+        partyEvents: { ref: 'evt-setImage-nightCamp' },
         text: "txt-st-kleptomania-idol",
         removeStatus: true,
         actions: [
@@ -40,12 +40,12 @@ config.entities.add([
 
   {
     id: 'evt-village-rest-kleptomania',
-    charEffects: {
+    charEvents: {
       reqStatus: '+kleptomania', 
       text: "txt-evt-village-rest-kleptomania",
       report: "txt-evt-village-rest-kleptomania-report",
     },
     standing: -1,
-    events: 'evt-village-actions-night'
+    select: 'evt-village-actions-night'
   },
 ])

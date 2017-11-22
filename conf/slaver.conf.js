@@ -27,14 +27,14 @@ config.entities.add([
     id: 'evt-slaver-init', 
     reqFixtureFlags: '-slaverKilled',
     actionText: "txt-evt-slaver-init-action",
-    events: [
+    select: [
       {
         reqPartyFlags: '-slaverAggro',
-        events: 'evt-slaver-enter',
+        select: 'evt-slaver-enter',
       },
       {
         reqPartyFlags: '+slaverAggro',
-        events: 'evt-slaver-aggro',
+        select: 'evt-slaver-aggro',
       },
     ],
   },
@@ -43,17 +43,17 @@ config.entities.add([
     text: "txt-evt-slaver-enter",
     report: "txt-evt-slaver-enter-report",
     showImage: {src: 'evt_fxt_slaver_1.png', type: 'day'}, npc: [ 'npc-slaver' ],
-    events: [
-    	{ reqFixtureFlags: '-slotsSet',	events: 'evt-slaver-randomSlaves' },
-    	{	reqFixtureFlags: '+slotsSet', events: 'evt-slaver-actions' }
+    select: [
+    	{ reqFixtureFlags: '-slotsSet',	select: 'evt-slaver-randomSlaves' },
+    	{	reqFixtureFlags: '+slotsSet', select: 'evt-slaver-actions' }
     ],
   },
   {
     id: 'evt-slaver-randomSlaves',
 		setFixtureFlags: '+slotsSet',
-		partyEffects: [
+		partyEvents: [
 	   	{
-	   		events: [
+	   		select: [
 	   			{setFixtureFlags:'+slot1_warrior'},
 	   			{setFixtureFlags:'+slot1_scout'},
 	   			{setFixtureFlags:'+slot1_shaman'},
@@ -61,7 +61,7 @@ config.entities.add([
 	   		],
 	   	},
 	   	{
-	   		events: [
+	   		select: [
 	   			{setFixtureFlags:'+slot2_warrior'},
 	   			{setFixtureFlags:'+slot2_scout'},
 	   			{setFixtureFlags:'+slot2_shaman'},
@@ -69,7 +69,7 @@ config.entities.add([
 	   		],
 	   	},
 	   	{
-	   		events: [
+	   		select: [
 					{setFixtureFlags:'+slot3_warrior'},
 	   			{setFixtureFlags:'+slot3_scout'},
 	   			{setFixtureFlags:'+slot3_shaman'},
@@ -77,7 +77,7 @@ config.entities.add([
 	   		],
 	   	},
 	   	{
-	   		events: [
+	   		select: [
 	   			{setFixtureFlags:'+slot4_warrior'},
 	   			{setFixtureFlags:'+slot4_scout'},
 	   			{setFixtureFlags:'+slot4_shaman'},
@@ -85,7 +85,7 @@ config.entities.add([
 	   		],
 	   	},
 		],
-    events: 'evt-slaver-actions',
+    select: 'evt-slaver-actions',
   },
 
 // Actions
@@ -109,32 +109,32 @@ config.entities.add([
   	showImage: {src: 'evt_fxt_slaver_1.png', type: 'day'},
   	npc: [ 'npc-slaver' ],
   	text: "txt-evt-slaver-inspectSlaves",
-  	partyEffects: [
-  		{reqFixtureFlags:'+slot1_warrior', npc: 'pl-native-warrior', optional:true, npcEffects: { actions: { actionText: "txt-evt-slaver-inspectSlaves-action-1", addNPC: true, setCharFlags: '+homeWorld +slave', events:'evt-slaver-slaves-payment' } },},
-  		{reqFixtureFlags:'+slot1_scout', npc: 'pl-native-scout', optional:true, npcEffects: { actions: { actionText: "txt-evt-slaver-inspectSlaves-action-2", addNPC: true, setCharFlags: '+homeWorld +slave', events:'evt-slaver-slaves-payment' } },},
-  		{reqFixtureFlags:'+slot1_shaman', npc: 'pl-native-shaman', optional:true, npcEffects: { actions: { actionText: "txt-evt-slaver-inspectSlaves-action-3", addNPC: true, setCharFlags: '+homeWorld +slave', events:'evt-slaver-slaves-payment' } },},
-  		{reqFixtureFlags:'+slot1_animalHandler', npc: 'pl-native-animalHandler', optional:true, npcEffects: { actions: { actionText: "txt-evt-slaver-inspectSlaves-action-4", addNPC: true, setCharFlags: '+homeWorld +slave', events:'evt-slaver-slaves-payment' } },},
+  	partyEvents: [
+  		{reqFixtureFlags:'+slot1_warrior', npc: 'pl-native-warrior', optional:true, npcEvents: { actions: { actionText: "txt-evt-slaver-inspectSlaves-action-1", addNPC: true, setCharFlags: '+homeWorld +slave', select:'evt-slaver-slaves-payment' } },},
+  		{reqFixtureFlags:'+slot1_scout', npc: 'pl-native-scout', optional:true, npcEvents: { actions: { actionText: "txt-evt-slaver-inspectSlaves-action-2", addNPC: true, setCharFlags: '+homeWorld +slave', select:'evt-slaver-slaves-payment' } },},
+  		{reqFixtureFlags:'+slot1_shaman', npc: 'pl-native-shaman', optional:true, npcEvents: { actions: { actionText: "txt-evt-slaver-inspectSlaves-action-3", addNPC: true, setCharFlags: '+homeWorld +slave', select:'evt-slaver-slaves-payment' } },},
+  		{reqFixtureFlags:'+slot1_animalHandler', npc: 'pl-native-animalHandler', optional:true, npcEvents: { actions: { actionText: "txt-evt-slaver-inspectSlaves-action-4", addNPC: true, setCharFlags: '+homeWorld +slave', select:'evt-slaver-slaves-payment' } },},
 
-  		{reqFixtureFlags:'+slot2_warrior', npc: 'pl-native-warrior', optional:true, npcEffects: { actions: { actionText: "txt-evt-slaver-inspectSlaves-action-1", addNPC: true, setCharFlags: '+homeWorld +slave', events:'evt-slaver-slaves-payment' } },},
-  		{reqFixtureFlags:'+slot2_scout', npc: 'pl-native-scout', optional:true, npcEffects: { actions: { actionText: "txt-evt-slaver-inspectSlaves-action-2", addNPC: true, setCharFlags: '+homeWorld +slave', events:'evt-slaver-slaves-payment' } },},
-  		{reqFixtureFlags:'+slot2_shaman', npc: 'pl-native-shaman', optional:true, npcEffects: { actions: { actionText: "txt-evt-slaver-inspectSlaves-action-3", addNPC: true, setCharFlags: '+homeWorld +slave', events:'evt-slaver-slaves-payment' } },},
-  		{reqFixtureFlags:'+slot2_animalHandler', npc: 'pl-native-animalHandler', optional:true, npcEffects: { actions: { actionText: "txt-evt-slaver-inspectSlaves-action-4", addNPC: true, setCharFlags: '+homeWorld +slave', events:'evt-slaver-slaves-payment' } },},
+  		{reqFixtureFlags:'+slot2_warrior', npc: 'pl-native-warrior', optional:true, npcEvents: { actions: { actionText: "txt-evt-slaver-inspectSlaves-action-1", addNPC: true, setCharFlags: '+homeWorld +slave', select:'evt-slaver-slaves-payment' } },},
+  		{reqFixtureFlags:'+slot2_scout', npc: 'pl-native-scout', optional:true, npcEvents: { actions: { actionText: "txt-evt-slaver-inspectSlaves-action-2", addNPC: true, setCharFlags: '+homeWorld +slave', select:'evt-slaver-slaves-payment' } },},
+  		{reqFixtureFlags:'+slot2_shaman', npc: 'pl-native-shaman', optional:true, npcEvents: { actions: { actionText: "txt-evt-slaver-inspectSlaves-action-3", addNPC: true, setCharFlags: '+homeWorld +slave', select:'evt-slaver-slaves-payment' } },},
+  		{reqFixtureFlags:'+slot2_animalHandler', npc: 'pl-native-animalHandler', optional:true, npcEvents: { actions: { actionText: "txt-evt-slaver-inspectSlaves-action-4", addNPC: true, setCharFlags: '+homeWorld +slave', select:'evt-slaver-slaves-payment' } },},
 
-  		{reqFixtureFlags:'+slot3_warrior', npc: 'pl-native-warrior', optional:true, npcEffects: { actions: { actionText: "txt-evt-slaver-inspectSlaves-action-1", addNPC: true, setCharFlags: '+homeWorld +slave', events:'evt-slaver-slaves-payment' } },},
-  		{reqFixtureFlags:'+slot3_scout', npc: 'pl-native-scout', optional:true, npcEffects: { actions: { actionText: "txt-evt-slaver-inspectSlaves-action-2", addNPC: true, setCharFlags: '+homeWorld +slave', events:'evt-slaver-slaves-payment' } },},
-  		{reqFixtureFlags:'+slot3_shaman', npc: 'pl-native-shaman', optional:true, npcEffects: { actions: { actionText: "txt-evt-slaver-inspectSlaves-action-3", addNPC: true, setCharFlags: '+homeWorld +slave', events:'evt-slaver-slaves-payment' } },},
-  		{reqFixtureFlags:'+slot3_animalHandler', npc: 'pl-native-animalHandler', optional:true, npcEffects: { actions: { actionText: "txt-evt-slaver-inspectSlaves-action-4", addNPC: true, setCharFlags: '+homeWorld +slave', events:'evt-slaver-slaves-payment' } },},
+  		{reqFixtureFlags:'+slot3_warrior', npc: 'pl-native-warrior', optional:true, npcEvents: { actions: { actionText: "txt-evt-slaver-inspectSlaves-action-1", addNPC: true, setCharFlags: '+homeWorld +slave', select:'evt-slaver-slaves-payment' } },},
+  		{reqFixtureFlags:'+slot3_scout', npc: 'pl-native-scout', optional:true, npcEvents: { actions: { actionText: "txt-evt-slaver-inspectSlaves-action-2", addNPC: true, setCharFlags: '+homeWorld +slave', select:'evt-slaver-slaves-payment' } },},
+  		{reqFixtureFlags:'+slot3_shaman', npc: 'pl-native-shaman', optional:true, npcEvents: { actions: { actionText: "txt-evt-slaver-inspectSlaves-action-3", addNPC: true, setCharFlags: '+homeWorld +slave', select:'evt-slaver-slaves-payment' } },},
+  		{reqFixtureFlags:'+slot3_animalHandler', npc: 'pl-native-animalHandler', optional:true, npcEvents: { actions: { actionText: "txt-evt-slaver-inspectSlaves-action-4", addNPC: true, setCharFlags: '+homeWorld +slave', select:'evt-slaver-slaves-payment' } },},
 
-  		{reqFixtureFlags:'+slot4_warrior', npc: 'pl-native-warrior', optional:true, npcEffects: { actions: { actionText: "txt-evt-slaver-inspectSlaves-action-1", addNPC: true, setCharFlags: '+homeWorld +slave', events:'evt-slaver-slaves-payment' } },},
-  		{reqFixtureFlags:'+slot4_scout', npc: 'pl-native-scout', optional:true, npcEffects: { actions: { actionText: "txt-evt-slaver-inspectSlaves-action-2", addNPC: true, setCharFlags: '+homeWorld +slave', events:'evt-slaver-slaves-payment' } },},
-  		{reqFixtureFlags:'+slot4_shaman', npc: 'pl-native-shaman', optional:true, npcEffects: { actions: { actionText: "txt-evt-slaver-inspectSlaves-action-3", addNPC: true, setCharFlags: '+homeWorld +slave', events:'evt-slaver-slaves-payment' } },},
-  		{reqFixtureFlags:'+slot4_animalHandler', npc: 'pl-native-animalHandler', optional:true, npcEffects: { actions: { actionText: "txt-evt-slaver-inspectSlaves-action-4", addNPC: true, setCharFlags: '+homeWorld +slave', events:'evt-slaver-slaves-payment' } },},
+  		{reqFixtureFlags:'+slot4_warrior', npc: 'pl-native-warrior', optional:true, npcEvents: { actions: { actionText: "txt-evt-slaver-inspectSlaves-action-1", addNPC: true, setCharFlags: '+homeWorld +slave', select:'evt-slaver-slaves-payment' } },},
+  		{reqFixtureFlags:'+slot4_scout', npc: 'pl-native-scout', optional:true, npcEvents: { actions: { actionText: "txt-evt-slaver-inspectSlaves-action-2", addNPC: true, setCharFlags: '+homeWorld +slave', select:'evt-slaver-slaves-payment' } },},
+  		{reqFixtureFlags:'+slot4_shaman', npc: 'pl-native-shaman', optional:true, npcEvents: { actions: { actionText: "txt-evt-slaver-inspectSlaves-action-3", addNPC: true, setCharFlags: '+homeWorld +slave', select:'evt-slaver-slaves-payment' } },},
+  		{reqFixtureFlags:'+slot4_animalHandler', npc: 'pl-native-animalHandler', optional:true, npcEvents: { actions: { actionText: "txt-evt-slaver-inspectSlaves-action-4", addNPC: true, setCharFlags: '+homeWorld +slave', select:'evt-slaver-slaves-payment' } },},
   	],
   	actions: {
   		actionText: "txt-evt-dismiss-default-action-1",
   		showImage: {src: 'evt_fxt_slaver_1.png', type: 'day'}, npc: [ 'npc-slaver' ],
   		text: "txt-evt-slaver-inspectSlaves-1",
-  		events: 'evt-slaver-actions',
+  		select: 'evt-slaver-actions',
   	},
   },
   {
@@ -148,13 +148,13 @@ config.entities.add([
   	    text: "txt-evt-slaver-slaves-payment-1",
   	    showImage: {src: 'evt_fxt_slaver_1.png', type: 'day'}, npc: [ 'npc-slaver' ],
   	    report: "txt-evt-slaver-slaves-payment-report",
-  	    events: 'evt-slaver-actions',
+  	    select: 'evt-slaver-actions',
   	  },
   	  cancel: {
   	  	text: "txt-evt-slaver-slaves-payment-2",
-  	  	charEffects: { reqCharFlags:'+slave', removeCharacter:true},
+  	  	charEvents: { reqCharFlags:'+slave', removeCharacter:true},
   	  	showImage: {src: 'evt_fxt_slaver_1.png', type: 'day'}, npc: [ 'npc-slaver' ],
-  	  	events: 'evt-slaver-actions',
+  	  	select: 'evt-slaver-actions',
   	  },
   	}, 
   },
@@ -164,16 +164,16 @@ config.entities.add([
   {
     id: 'evt-slaver-trade',
     actionText: "txt-evt-mission-trade-action",
-    events: {
+    select: {
       barter: {
         close: {
           text: "txt-evt-slaver-trade-yes",
           standing: standingCostSlaverTrade,
-          events: 'evt-slaver-actions',
+          select: 'evt-slaver-actions',
         },
         cancel: {
           text: "txt-evt-slaver-trade",
-          events:'evt-slaver-actions'
+          select:'evt-slaver-actions'
         },
       }
     },
@@ -185,7 +185,7 @@ config.entities.add([
     actionText:"txt-evt-slaver-sell-unit-action",
     text:"txt-evt-slaver-sell-unit",
     chat: 'cl-slaverySell',
-    charEffects: {
+    charEvents: {
       count: 'any', 
       optional: false,
       reqCharFlags: '+humanoid -special', 
@@ -194,7 +194,7 @@ config.entities.add([
     actions: {
     	actionText: "txt-evt-dismiss-default-action-1",
     	text: "txt-evt-slaver-sell-unit-1",
-    	events: 'evt-slaver-actions',
+    	select: 'evt-slaver-actions',
     },
   },
   {
@@ -202,7 +202,7 @@ config.entities.add([
     actionText: "txt-evt-slaver-sell-unit-loot-action",
     text:"txt-evt-slaver-sell-unit-loot",
     removeCharacter: true,
-    charEffects: { 
+    charEvents: { 
       reqCharFlags: '-special +humanoid', 
       chat: 'cl-slaverySell-comment' 
     },
@@ -216,8 +216,8 @@ config.entities.add([
 
     barter: {
       baseValue: {base:-30},
-      close:  {text: "txt-evt-slaver-sell-unit-loot-1", events: 'evt-slaver-actions'},
-      cancel: {text: "txt-evt-slaver-sell-unit-loot-2", events: 'evt-slaver-actions'},
+      close:  {text: "txt-evt-slaver-sell-unit-loot-1", select: 'evt-slaver-actions'},
+      cancel: {text: "txt-evt-slaver-sell-unit-loot-2", select: 'evt-slaver-actions'},
     }, 
   },
 
@@ -236,7 +236,7 @@ config.entities.add([
   },
   {
     id: 'evt-slaver-aggro',
-    partyEffects: [
+    partyEvents: [
       {
         optional: true, reqFixtureFlags: '+slaverCombat',
         text: "txt-evt-slaver-aggro",
@@ -249,7 +249,7 @@ config.entities.add([
     showImage: {type: 'day', src: 'evt_fxt_slaver_1.png'}, npc: ['npc-slaver'],
     actions: {
       actionText: "txt-evt-cave-ghostsQuest-action",
-      events: 'evt-slaver-attack',
+      select: 'evt-slaver-attack',
     },
   },
   {
@@ -257,10 +257,11 @@ config.entities.add([
     showImage: {type: 'day', src: 'evt_fxt_slaver_fire.png'},
     setFixtureFlags: '+slaverKilled',
     text: "txt-evt-slaver-combatOutcome",
-    events: {
+    incAchievement: "ach-slave-free",
+    select: {
       reqFreePartyCount: 1,
       text: "txt-evt-slaver-combatOutcome-1",
-      events: [
+      select: [
         {addCharacter: {id:'pl-native-warrior', setCharFlags: '+homeWorld'}},
         {addCharacter: {id:'pl-native-shaman', setCharFlags: '+homeWorld'}},
         {addCharacter: {id:'pl-native-animalHandler', setCharFlags: '+homeWorld'}},

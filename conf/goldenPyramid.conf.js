@@ -266,36 +266,36 @@ config.entities.add([
     id: 'evt-goal-explore',
     reqPartyFlags: '-expeditionDone',
     actionText: "txt-evt-altar-approach-action",
-    events: [
+    select: [
       {
         optional: true,
         reqBiomeFlags: '+grass | +prehistoric -desert -dry',
         showImage: {src: 'evt_fxt_goldenPyramid_grass.png', type:'none'},
-        events: 'evt-goal-explore-finish',
+        select: 'evt-goal-explore-finish',
       },
       {
         optional: true,
         reqBiomeFlags: '+dry -desert',
         showImage: {src: 'evt_fxt_goldenPyramid_dry.png', type:'none'},
-        events: 'evt-goal-explore-finish',
+        select: 'evt-goal-explore-finish',
       },
       {
         optional: true,
         reqBiomeFlags: '+desert',
         showImage: {src: 'evt_fxt_goldenPyramid_desert.png', type:'none'},
-        events: 'evt-goal-explore-finish',
+        select: 'evt-goal-explore-finish',
       },
       {
         optional: true,
         reqBiomeFlags: '+arctic',
         showImage: {src: 'evt_fxt_goldenPyramid_arctic.png', type:'none'},
-        events: 'evt-goal-explore-finish',
+        select: 'evt-goal-explore-finish',
       },
       {
         prio: 1,
         optional: true,
         text: "!You have probably modded the game and added a new pyramid for a new biome. If you want your expedition end to play properly you should add a new event to the evt-goal-explore event",
-        events: 'evt-goal-explore-finish',
+        select: 'evt-goal-explore-finish',
       }
     ],
   },
@@ -304,7 +304,7 @@ config.entities.add([
     actionText: "txt-evt-altar-approach-action",
     playMusic: 'thm_pyramid',
     text: "txt-evt-goal-explore-finish",
-    charEffects: [
+    charEvents: [
       {
         optional: true, reqTutorial: false,
         reqCharFlags: '+humanoid -special',
@@ -322,7 +322,7 @@ config.entities.add([
       }
     ],
     chat: 'cl-endWorld',
-    events: [
+    select: [
       {
         reqWorld: '3',
         reqDifficulty: '1..',
@@ -333,7 +333,7 @@ config.entities.add([
           alwaysShown:true,
           reqItems: {'it-moonStone':1},
           items: {'it-moonStone':-1},
-          events: 'evt-ruins-success'
+          select: 'evt-ruins-success'
         }
       },
       {
@@ -346,7 +346,7 @@ config.entities.add([
           alwaysShown:true,
           reqItems: {'it-moonStone':2},
           items: {'it-moonStone':-2},
-          events: 'evt-ruins-success'
+          select: 'evt-ruins-success'
         }
       },
       {
@@ -359,9 +359,9 @@ config.entities.add([
           alwaysShown:true,
           reqItems: {'it-moonStone':2},
           items: {'it-moonStone':-2},
-          events: [
-           {events: 'evt-ruins-success', reqTutorial: false},
-           {events: 'evt-ruins-success-tutorial', reqTutorial: true},
+          select: [
+           {select: 'evt-ruins-success', reqTutorial: false},
+           {select: 'evt-ruins-success-tutorial', reqTutorial: true},
           ],
         }
       },
@@ -387,10 +387,10 @@ config.entities.add([
     id: 'evt-ruins-success',
     actionText: "txt-evt-goal-explore-finish-action",
     report: "txt-evt-ruins-success-report",
-    events: [
+    select: [
       {
         reqDifficulty: '..1',
-        events: 'evt-expedition-done',
+        select: 'evt-expedition-done',
       },
       {
         reqDifficulty: '2..',
@@ -402,7 +402,7 @@ config.entities.add([
   },
   {
     id: 'evt-expedition-unlocks',
-    partyEffects: [
+    partyEvents: [
       { 
         optional: true,
         reqStanding: '..-1',
@@ -416,7 +416,7 @@ config.entities.add([
       },
       {
         optional: true,
-        charEffects: {count:3, reqCharFlags:'+native'},
+        charEvents: {count:3, reqCharFlags:'+native'},
         reqDifficulty: '1..',
         unlockCharacter: 'sp-tubman',
       },
@@ -442,7 +442,7 @@ config.entities.add([
         optional: true, 
         reqWorld: '5..', 
         reqRanking: '..2',
-        charEffects: {count: 2, reqCharFlags:'-special', reqLevel:'3..'},
+        charEvents: {count: 2, reqCharFlags:'-special', reqLevel:'3..'},
         unlockCharacter: 'sp-garvey'
       },
       {
@@ -457,7 +457,7 @@ config.entities.add([
         optional: true, 
         reqWorld: '5..', 
         reqRanking: '..2',
-        charEffects: {reqCharFlags:'+dinosaur'},
+        charEvents: {reqCharFlags:'+dinosaur'},
         unlockCharacter: 'sp-neel'
       },
       {
@@ -485,16 +485,26 @@ config.entities.add([
         reqWorld: '5..',
         reqPartyFlags: '-abortedExpedition', 
         incAchievement: 'ach-expeditions'
+      },
+      {
+        reqWorld: '5..',
+        reqPartyFlags: '-NonCocaUsers',
+        incAchievement: 'ach-coca-only'
+      },
+      {
+        reqWorld: '5..',
+        reqPartyFlags: "-recruitedSomebody",
+        incAchievement: "ach-no-recruit"
       }
     ],
-    charEffects: [
+    charEvents: [
       {
         optional: true,
         count: 'any',
         setCharFlags: '+veteran'
       }
     ],
-    storeEffects: [
+    storeEvents: [
       {
         optional: true,
         count: 'any', // mark all dead
@@ -504,7 +514,7 @@ config.entities.add([
   },
   {
     id: 'evt-expedition-done',
-    partyEffects: [
+    partyEvents: [
       {
         optional: true,
         reqPartyFlags: '+harborEventsQuest80Days',
@@ -512,7 +522,7 @@ config.entities.add([
         setPartyFlags: '+harborEventsQuest80DaysComplete',
       }
     ],
-    charEffects: [
+    charEvents: [
       {
         reqCharFlags: '+special',
         text: "txt-evt-expedition-done-1",
@@ -526,11 +536,11 @@ config.entities.add([
         removeCharacter:true,
       }
     ],
-    events: ['evt-expedition-done-aftermath'],
+    select: ['evt-expedition-done-aftermath'],
   },
   {
     id: 'evt-expedition-done-aftermath',
-    events: [
+    select: [
       {
         reqTutorial: true, 
         actions: { 
@@ -540,7 +550,7 @@ config.entities.add([
       },
       {
         prio: 1,
-        charEffects: {
+        charEvents: {
           reqLoyalty: '..3',
           text: "txt-evt-expedition-done-native",
           reqStatus: '+homesick',
@@ -557,7 +567,7 @@ config.entities.add([
                 text: "txt-evt-expedition-done-native-join",
                 report: "txt-evt-expedition-done-native-join-report",
                 setCharFlags: '-homeCheck',
-                events: 'evt-expedition-done-aftermath'
+                select: 'evt-expedition-done-aftermath'
               },
               failEvents: {
                 id: 'evt-expedition-done-native-stay',
@@ -565,7 +575,7 @@ config.entities.add([
                 report: "txt-evt-expedition-done-native-stay-report",
                 storeCharacter: true,
                 setCharFlags: '+stayHome -homeCheck',
-                events: 'evt-expedition-done-aftermath',
+                select: 'evt-expedition-done-aftermath',
               }
             },
             {
@@ -573,37 +583,37 @@ config.entities.add([
               text: "txt-evt-expedition-done-native-stay",
               storeCharacter: true,
               setCharFlags: '+stayHome -homeCheck',
-              events: 'evt-expedition-done-aftermath'
+              select: 'evt-expedition-done-aftermath'
             }
           ]
         },
       },
       {
         prio: 1,
-        charEffects: {
+        charEvents: {
           reqLoyalty: '4..',
           reqStatus: '+homesick', 
           reqCharFlags: '+homeWorld',
           text: "txt-evt-expedition-done-native-join",
           setCharFlags: '-homeWorld',  
-          events: 'evt-expedition-done-aftermath'
+          select: 'evt-expedition-done-aftermath'
         }
       },
       {
         prio: 1,
-        charEffects: {
+        charEvents: {
           reqCharFlags: '+imaginary',
           text: "txt-evt-expedition-done-3",
           report: "txt-evt-expedition-done-report-2",
           removeCharacter: true,
-          events: 'evt-expedition-done-aftermath'
+          select: 'evt-expedition-done-aftermath'
         }
       },
       { 
         prio: 2, 
         actions: { 
           actionText: "txt-evt-expedition-done-native-stay-action-1",
-          charEffects: {
+          charEvents: {
             optional: true, // must be optional because it can be none
             count:'any', 
             reqCharFlags:'-special',  

@@ -459,12 +459,12 @@ config.entities.add([
     //eventChance: 0.8,
     showOutline: false,
     stopTravel: true,
-    events: {
+    select: {
       showImage: {src: 'evt_fxt_empty.png', type: 'day'},
       text: "txt-zn-desertStorm",
       removeZone: true,
       turns: +3,
-      partyEffects: {
+      partyEvents: {
         posTile: {traversable:true, range:'5..7', reachable:true},
         teleport: true,  
       }        

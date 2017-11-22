@@ -45,7 +45,7 @@ config.entities.add([
     actionText: "txt-evt-stoneCircle-init-action",
     reqFixtureFlags: '-explored',
     showImage: {type:'day'},
-    partyEffects: [
+    partyEvents: [
       {
         optional: true, reqBiomeFlags: '-arctic',
         showImage: {src: 'evt_fxt_stoneCircle_1.png', type: 'day'}
@@ -58,12 +58,12 @@ config.entities.add([
         }
       }
     ],
-    events: 'evt-stoneCircle-enter'
+    select: 'evt-stoneCircle-enter'
   },  
   {
     id: 'evt-stoneCircle-enter',
     text: "txt-evt-stoneCircle-enter",
-    partyEffects: 'evt-superstitious-complain',
+    partyEvents: 'evt-superstitious-complain',
     chat:'cl-sacrileg-warning',
     actions: [
       'evt-stoneCircle-revealRuins',
@@ -86,7 +86,7 @@ config.entities.add([
     extends: 'evt-stoneCircle-reveal',
     actionText: "txt-evt-stoneCircle-revealRuins-action",
     reqFixture: {flags:'+ruins', fixtureKnown:false, range:'..100'},
-    partyEffects: [
+    partyEvents: [
       {optional:true, ref:'evt-stoneCircle-revealNextRuin'},
       {optional:true, ref:'evt-stoneCircle-revealNextRuin'},
       {optional:true, ref:'evt-stoneCircle-revealNextRuin'},
@@ -94,7 +94,7 @@ config.entities.add([
       {optional:true, ref:'evt-stoneCircle-revealNextRuin'},
       {optional:true, ref:'evt-stoneCircle-revealNextRuin'},
     ],
-    events: 'evt-stoneCircle-aftermath'
+    select: 'evt-stoneCircle-aftermath'
   },
   {
     id: 'evt-stoneCircle-revealNextRuin',
@@ -108,7 +108,7 @@ config.entities.add([
     extends: 'evt-stoneCircle-reveal',
     actionText: "txt-evt-stoneCircle-revealSettlements-action",
     reqFixture: {flags:'+settlement', fixtureKnown:false, range: '..100'},
-    partyEffects: [
+    partyEvents: [
       {optional:true, ref:'evt-stoneCircle-revealNextSettlement'},
       {optional:true, ref:'evt-stoneCircle-revealNextSettlement'},
       {optional:true, ref:'evt-stoneCircle-revealNextSettlement'},
@@ -116,7 +116,7 @@ config.entities.add([
       {optional:true, ref:'evt-stoneCircle-revealNextSettlement'},
       {optional:true, ref:'evt-stoneCircle-revealNextSettlement'},
     ],
-    events: 'evt-stoneCircle-aftermath'
+    select: 'evt-stoneCircle-aftermath'
   },
   {
     id: 'evt-stoneCircle-revealNextSettlement',
@@ -130,7 +130,7 @@ config.entities.add([
     extends: 'evt-stoneCircle-reveal',
     actionText: "txt-evt-stoneCircle-revealNatureRests-action",
     reqFixture: {flags:'+natureRest', fixtureKnown:false, range: '..100'},
-    partyEffects: [
+    partyEvents: [
       {optional:true, ref:'evt-stoneCircle-revealNextNatureRest'},
       {optional:true, ref:'evt-stoneCircle-revealNextNatureRest'},
       {optional:true, ref:'evt-stoneCircle-revealNextNatureRest'},
@@ -138,7 +138,7 @@ config.entities.add([
       {optional:true, ref:'evt-stoneCircle-revealNextNatureRest'},
       {optional:true, ref:'evt-stoneCircle-revealNextNatureRest'},
     ],
-    events: 'evt-stoneCircle-aftermath'
+    select: 'evt-stoneCircle-aftermath'
   },
   {
     id: 'evt-stoneCircle-revealNextNatureRest',
@@ -152,7 +152,7 @@ config.entities.add([
     extends: 'evt-stoneCircle-reveal',
     actionText: "txt-evt-stoneCircle-revealCaves-action",
     reqFixture: {flags:'+cave', fixtureKnown:false, range: '..100'},
-    partyEffects: [
+    partyEvents: [
       {optional:true, ref:'evt-stoneCircle-revealNextCave'},
       {optional:true, ref:'evt-stoneCircle-revealNextCave'},
       {optional:true, ref:'evt-stoneCircle-revealNextCave'},
@@ -160,7 +160,7 @@ config.entities.add([
       {optional:true, ref:'evt-stoneCircle-revealNextCave'},
       {optional:true, ref:'evt-stoneCircle-revealNextCave'},
     ],
-    events: 'evt-stoneCircle-aftermath'
+    select: 'evt-stoneCircle-aftermath'
   },
   {
     id: 'evt-stoneCircle-revealNextCave',
@@ -175,8 +175,8 @@ config.entities.add([
 
   {
     id: 'evt-stoneCircle-aftermath',
-    partyEffects: 'evt-superstitious-angry',
+    partyEvents: 'evt-superstitious-angry',
     chat:'cl-sacrileg',
-    events: 'evt-leave'
+    select: 'evt-leave'
   }
 ])

@@ -27,7 +27,7 @@ config.entities.add([
     playMusic: ['thm_nature_1'],
     showImage: {src: 'evt_fxt_oasis_1.png', type: 'day',},
     chat: 'cl-nature',
-    events: {ref:'evt-oasis-actions'}
+    select: {ref:'evt-oasis-actions'}
   },
   {
     id: 'evt-oasis-morning',
@@ -35,13 +35,13 @@ config.entities.add([
     showImage: {src: 'evt_fxt_oasis_1.png', type: 'day',},
     text: "txt-evt-oasis-morning",
     chat: 'cl-newMorning',       
-    events: {ref:'evt-oasis-actions'}
+    select: {ref:'evt-oasis-actions'}
   },
   { 
     id: 'evt-oasis-actions',
     actions: [
       {ref:'evt-nature-rest'},
-      {ref:'evt-refill-water', pushEvent: 'evt-oasis-actions'},
+      {ref:'evt-refill-water'},
       {ref:'evt-leave'}
     ],
   },
@@ -50,7 +50,7 @@ config.entities.add([
     actionText: "txt-evt-cave-mushrooms-refillWater-action",
     text: "txt-evt-refill-water",
     items: {'it-water':10},
-    popEvent: true
+    select: 'evt-oasis-actions'
   },
 
 ])

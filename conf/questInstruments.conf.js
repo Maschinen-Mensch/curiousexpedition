@@ -24,13 +24,13 @@ config.entities.add([
         text: "txt-evt-harbor-quest-musician-1",
         report: "txt-evt-harbor-quest-musician-report-1",
         setPartyStatus: {'st-instrument':true},
-        events: 'evt-harbor-eventSelection',
+        select: 'evt-harbor-eventSelection',
       },
       {
         actionText: "txt-evt-angry-demandPayment-action-1",
         text: "txt-evt-harbor-quest-musician-2",
         report: "txt-evt-harbor-quest-musician-report-2",
-        events: 'evt-harbor-eventSelection',
+        select: 'evt-harbor-eventSelection',
       },
     ],
   },
@@ -39,7 +39,7 @@ config.entities.add([
     npc: 'npc-trader',
     text: "txt-evt-harbor-quest-musician-complete",
     report: "txt-evt-harbor-quest-musician-complete-report",
-    events: [
+    select: [
       {
         reqPartyStatus: {'st-instrument':true}, 
         actions: [
@@ -52,7 +52,7 @@ config.entities.add([
             report: "txt-evt-harbor-quest-musician-complete-report",
             funds: +40,
             setPartyFlags: '+soldInstrument',
-            events: 'evt-harbor-quest-musician-complete',
+            select: 'evt-harbor-quest-musician-complete',
           },
           {
             actionText: "txt-evt-harbor-quest-musician-complete-action-1",
@@ -62,7 +62,7 @@ config.entities.add([
             report: "txt-evt-harbor-quest-musician-complete-report-1",
             funds: +80,
             setPartyFlags: '+soldInstrument',
-            events: 'evt-harbor-quest-musician-complete',
+            select: 'evt-harbor-quest-musician-complete',
           },
           {
             alwaysShown: true,
@@ -73,21 +73,21 @@ config.entities.add([
             report: "txt-evt-harbor-quest-musician-complete-report-2",
             funds: +25,
             setPartyFlags: '+soldInstrument',
-            events: 'evt-harbor-quest-musician-complete',
+            select: 'evt-harbor-quest-musician-complete',
           },
           {
             reqPartyFlags: '-soldInstrument',
             actionText: "txt-evt-harbor-quest-musician-complete-action-3",
             text: "txt-evt-harbor-quest-musician-complete-4",
             fame: -fameLarge,
-            events: 'evt-harbor-eventSelection',
+            select: 'evt-harbor-eventSelection',
             setPartyStatus: {'st-instrument':false},
           },
           {
             reqPartyFlags: '+soldInstrument',
             actionText: "txt-evt-harbor-quest-musician-complete-action-4",
             text: "txt-evt-harbor-quest-musician-complete-5",
-            events: 'evt-harbor-eventSelection',
+            select: 'evt-harbor-eventSelection',
             setPartyStatus: {'st-instrument':false},
           },
         ],

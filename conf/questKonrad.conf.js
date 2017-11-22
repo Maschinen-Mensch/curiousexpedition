@@ -24,20 +24,20 @@ config.entities.add([
         setPartyStatus: {'st-konrad':true},
         text: "txt-evt-quest-konrad-1",
         report: "txt-evt-quest-konrad-report-1",
-        events: 'evt-harbor-eventSelection',
+        select: 'evt-harbor-eventSelection',
       },
       {
         actionText: "txt-evt-angry-demandPayment-action-1",
         text: "txt-evt-quest-konrad-2",
         report: "txt-evt-quest-konrad-report-2",
-        events: 'evt-harbor-eventSelection',
+        select: 'evt-harbor-eventSelection',
       },
     ],
   },
   {
     id: 'evt-quest-konrad-complete',
     setPartyStatus: {'st-konrad':false},
-    events: [
+    select: [
       {
         reqItems: {'it-quest-5-decoration':1},
         npc: 'pl-soldier-british',
@@ -52,7 +52,7 @@ config.entities.add([
         fame: -fameLarge,
         actions: {
           actionText: "txt-evt-sanity-angry-action",
-          events: 'evt-harbor-eventSelection',
+          select: 'evt-harbor-eventSelection',
         },
       },
     ]

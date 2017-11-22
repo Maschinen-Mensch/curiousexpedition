@@ -22,7 +22,7 @@ config.entities.add([
     actionText: "txt-base-explore",
     reqFixtureFlags: '-explored',
     showImage: {src: 'evt_fxt_arcticStockpile_1.png', type: 'day'},
-    events: 'evt-arcticStockpile-examine'
+    select: 'evt-arcticStockpile-examine'
   },
   {
     id: 'evt-arcticStockpile-examine',
@@ -37,7 +37,7 @@ config.entities.add([
     id: 'evt-arcticStockpile-loot',
     actionText: "txt-evt-stoneStatue-loot-action",
     chat: 'cl-warning-superstitious',
-    events: [
+    select: [
       {
         reqDifficulty: '1..',
         loot: {

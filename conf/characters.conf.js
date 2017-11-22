@@ -26,9 +26,9 @@ config.entities.add([
     capacity: 1,
     flags: '+porter +translator +humanoid +persianTranslator +darkSkinned',
     spawnEvents: {
-      partyEffects: [
+      partyEvents: [
         {
-          events: [
+          select: [
             {slots:2, setStatus: '+claustrophobic'},
             {slots:3, setStatus: '+superstitious'},
             {slots:1, setStatus: '+kleptomania'},
@@ -37,7 +37,7 @@ config.entities.add([
           ],
         }, 
         {
-          events: [
+          select: [
             {slots:1, setCharFlags: '+moody'},
             {slots:1, setCharFlags: '+greedy'},
             {slots:1, setCharFlags: '+witty'},
@@ -79,9 +79,9 @@ config.entities.add([
       darkSkinned: true,
     },
     spawnEvents: {
-      partyEffects: [
+      partyEvents: [
         {
-          events: [
+          select: [
             {slots:2, setStatus: '+claustrophobic'},
             {slots:3, setStatus: '+superstitious'},
             {slots:4, setStatus: '+kleptomania'},
@@ -90,7 +90,7 @@ config.entities.add([
           ],
         }, 
         {
-          events: [
+          select: [
             {slots:1, setCharFlags: '+moody'},
             {slots:1, setCharFlags: '+greedy'},
             {slots:1, setCharFlags: '+witty'},
@@ -132,9 +132,9 @@ config.entities.add([
     capacity: 2,
     health: 6,
     spawnEvents: {
-      partyEffects: [
+      partyEvents: [
         {
-          events: [
+          select: [
             {slots:2, setStatus: '+claustrophobic'},
             {slots:3, setStatus: '+superstitious'},
             {slots:1, setStatus: '+kleptomania'},
@@ -143,7 +143,7 @@ config.entities.add([
           ],
         }, 
         {
-          events: [
+          select: [
             {slots:1, setCharFlags: '+moody'},
             {slots:1, setCharFlags: '+witty'},
             {slots:1, setCharFlags: '+brave'},
@@ -200,9 +200,9 @@ config.entities.add([
     health: 8,
     flags: '+porter +humanoid +soldier +soldierBritish +british',
     spawnEvents: {
-      partyEffects: [
+      partyEvents: [
         {
-          events: [
+          select: [
             {slots:1, setStatus: '+claustrophobic'},
             {slots:1, setStatus: '+superstitious'},
             {slots:1, setStatus: '+kleptomania'},
@@ -213,7 +213,7 @@ config.entities.add([
           ],
         }, 
         {
-          events: [
+          select: [
             {slots:2, setCharFlags: '+moody'},
             {slots:1, setCharFlags: '+greedy'},
             {slots:1, setCharFlags: '+witty'},
@@ -253,9 +253,9 @@ config.entities.add([
       soldier:true,
     },
     spawnEvents: {
-      partyEffects: [
+      partyEvents: [
         {
-          events: [
+          select: [
             {slots:1, setStatus: '+claustrophobic'},
             {slots:3, setStatus: '+superstitious'},
             {slots:1, setStatus: '+kleptomania'},
@@ -266,7 +266,7 @@ config.entities.add([
           ],
         }, 
         {
-          events: [
+          select: [
             {slots:1, setCharFlags: '+moody'},
             {slots:1, setCharFlags: '+greedy'},
             {slots:1, setCharFlags: '+witty'},
@@ -313,9 +313,9 @@ config.entities.add([
     health: 8,
     flags: '+porter +humanoid +soldier',
     spawnEvents: {
-      partyEffects: [
+      partyEvents: [
         {
-          events: [
+          select: [
             {slots:1, setStatus: '+claustrophobic'},
             {slots:1, setStatus: '+superstitious'},
             {slots:1, setStatus: '+kleptomania'},
@@ -326,7 +326,7 @@ config.entities.add([
           ],
         }, 
         {
-          events: [
+          select: [
             {slots:2, setCharFlags: '+moody'},
             {slots:1, setCharFlags: '+greedy'},
             {slots:1, setCharFlags: '+witty'},
@@ -365,9 +365,9 @@ config.entities.add([
       humanoid:true,
     },
     spawnEvents: {
-      partyEffects: [
+      partyEvents: [
         {
-          events: [
+          select: [
             {slots:1, setStatus: '+claustrophobic'},
             {slots:2, setStatus: '+superstitious'},
             {slots:2, setStatus: '+kleptomania'},
@@ -378,7 +378,7 @@ config.entities.add([
           ],
         }, 
         {
-          events: [
+          select: [
             {slots:1, setCharFlags: '+moody'},
             {slots:1, setCharFlags: '+greedy'},
             {slots:3, setCharFlags: '+witty'},
@@ -432,9 +432,9 @@ config.entities.add([
       },
     ],
     spawnEvents: {
-      partyEffects: [
+      partyEvents: [
         {
-          events: [
+          select: [
             {slots:1, setStatus: '+claustrophobic'},
             {slots:1, setStatus: '+superstitious'},
             {slots:1, setStatus: '+kleptomania'},
@@ -445,7 +445,7 @@ config.entities.add([
           ],
         },
         {
-          events: [
+          select: [
             {slots:3, setCharFlags: '+moody'},
             {slots:3, setCharFlags: '+greedy'},
             {slots:1, setCharFlags: '+witty'},
@@ -487,9 +487,9 @@ config.entities.add([
       },
     ],
     spawnEvents: {
-      partyEffects: [
+      partyEvents: [
         {
-          events: [
+          select: [
             {slots:1, setStatus: '+claustrophobic'},
             {slots:1, setStatus: '+superstitious'},
             {slots:1, setStatus: '+kleptomania'},
@@ -500,7 +500,7 @@ config.entities.add([
           ],
         },
         {
-          events: [
+          select: [
             {slots:3, setCharFlags: '+moody'},
             {slots:3, setCharFlags: '+greedy'},
             {slots:1, setCharFlags: '+witty'},
@@ -571,9 +571,9 @@ config.entities.add([
     capacity: 2,
     flags: '+porter +humanoid +cultist',
     spawnEvents: {
-      partyEffects: [
+      partyEvents: [
         {
-          events: [
+          select: [
             {slots:1, setStatus: '+claustrophobic'},
             {slots:1, setStatus: '+paranoid'},
             {slots:1, setStatus: '+kleptomania'},
@@ -584,7 +584,7 @@ config.entities.add([
           ],
         },
         {
-          events: [
+          select: [
             {slots:3, setCharFlags: '+moody'},
             {slots:3, setCharFlags: '+greedy'},
             {slots:1, setCharFlags: '+witty'},
@@ -650,9 +650,9 @@ config.entities.add([
       humanoid:true,
     },
     spawnEvents: {
-      partyEffects: [
+      partyEvents: [
         {
-          events: [
+          select: [
             {slots:2, setStatus: '+claustrophobic'},
             {slots:3, setStatus: '+superstitious'},
             {slots:1, setStatus: '+kleptomania'},
@@ -661,7 +661,7 @@ config.entities.add([
           ],
         }, 
         {
-          events: [
+          select: [
             {slots:1, setCharFlags: '+moody'},
             {slots:1, setCharFlags: '+greedy'},
             {slots:1, setCharFlags: '+witty'},
@@ -730,14 +730,14 @@ config.entities.add([
       british:  true,
     },
     spawnEvents: {
-      partyEffects: [
+      partyEvents: [
         {
-          events: [
+          select: [
             {slots:10, }
           ],
         }, 
         {
-          events: [
+          select: [
             {slots:1, setCharFlags: '+witty'}
           ],
         },
@@ -774,9 +774,9 @@ config.entities.add([
     capacity: 1,
     flags: '+porter +bedouin +humanoid +darkSkinned',
     spawnEvents: {
-      partyEffects: [
+      partyEvents: [
         {
-          events: [
+          select: [
             {slots:2, setStatus: '+claustrophobic'},
             {slots:3, setStatus: '+superstitious'},
             {slots:1, setStatus: '+kleptomania'},
@@ -785,7 +785,7 @@ config.entities.add([
           ],
         }, 
         {
-          events: [
+          select: [
             {slots:1, setCharFlags: '+moody'},
             {slots:1, setCharFlags: '+greedy'},
             {slots:1, setCharFlags: '+witty'},
@@ -821,9 +821,9 @@ config.entities.add([
     capacity: 2,
     flags: '+porter +native +nativeShaman +humanoid +darkSkinned',
     spawnEvents: {
-      partyEffects: [
+      partyEvents: [
         {
-          events: [
+          select: [
             {slots:2, setStatus: '+claustrophobic'},
             {slots:3, setStatus: '+superstitious'},
             {slots:1, setStatus: '+kleptomania'},
@@ -832,7 +832,7 @@ config.entities.add([
           ],
         }, 
         {
-          events: [
+          select: [
             {slots:1, setCharFlags: '+moody'},
             {slots:1, setCharFlags: '+greedy'},
             {slots:1, setCharFlags: '+witty'},
@@ -890,9 +890,9 @@ config.entities.add([
     capacity: 2,
     flags: '+porter +nativeWarrior +native +warrior +humanoid +darkSkinned',
     spawnEvents: {
-      partyEffects: [
+      partyEvents: [
         {
-          events: [
+          select: [
             {slots:2, setStatus: '+claustrophobic'},
             {slots:3, setStatus: '+superstitious'},
             {slots:1, setStatus: '+kleptomania'},
@@ -901,7 +901,7 @@ config.entities.add([
           ],
         }, 
         {
-          events: [
+          select: [
             {slots:1, setCharFlags: '+moody'},
             {slots:1, setCharFlags: '+greedy'},
             {slots:1, setCharFlags: '+witty'},
@@ -959,9 +959,9 @@ config.entities.add([
     capacity: 1,
     flags: '+porter +nativeAnimalHandler +native +humanoid +darkSkinned',
     spawnEvents: {
-      partyEffects: [
+      partyEvents: [
         {
-          events: [
+          select: [
             {slots:2, setStatus: '+claustrophobic'},
             {slots:3, setStatus: '+superstitious'},
             {slots:1, setStatus: '+kleptomania'},
@@ -970,7 +970,7 @@ config.entities.add([
           ],
         }, 
         {
-          events: [
+          select: [
             {slots:1, setCharFlags: '+moody'},
             {slots:1, setCharFlags: '+greedy'},
             {slots:1, setCharFlags: '+witty'},
@@ -1048,10 +1048,10 @@ config.entities.add([
     capacity: 2,
     flags: '+porter +lizard +native +humanoid +warrior',
     spawnEvents: {
-      partyEffects: [
+      partyEvents: [
         { setStatus: {'pk-waterproof':true} },
         {
-          events: [
+          select: [
             {slots:2, setStatus: '+claustrophobic'},
             {slots:3, setStatus: '+superstitious'},
             {slots:1, setStatus: '+kleptomania'},
@@ -1059,7 +1059,7 @@ config.entities.add([
           ],
         }, 
         {
-          events: [
+          select: [
             {slots:1, setCharFlags: '+moody'},
             {slots:1, setCharFlags: '+greedy'},
             {slots:1, setCharFlags: '+witty'},
@@ -1107,10 +1107,10 @@ config.entities.add([
     capacity: 2,
     flags: '+porter +lizard +native +humanoid +shaman',
     spawnEvents: {
-      partyEffects: [
+      partyEvents: [
         { setStatus: {'pk-waterproof':true} },
         {
-          events: [
+          select: [
             {slots:2, setStatus: '+claustrophobic'},
             {slots:3, setStatus: '+superstitious'},
             {slots:1, setStatus: '+kleptomania'},
@@ -1118,7 +1118,7 @@ config.entities.add([
           ],
         }, 
         {
-          events: [
+          select: [
             {slots:6, setCharFlags: '+spiritual'},
           ],
         },

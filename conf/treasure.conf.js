@@ -31,9 +31,9 @@ config.entities.add([
       karma: 1,
     },
     maxStack: 5,
-    events: {
+    useEvents: {
       items: {'it-shovel':-1},
-      events: 'evt-treasure-dig',
+      select: 'evt-treasure-dig',
     },
   },
 
@@ -259,15 +259,26 @@ config.entities.add([
 
   {
     id: 'evt-treasure-dig',
-    events: [
+    select: [
       {
         reqFixture: {flags: '+burriedTreasure'},
         showImage: {src: 'evt_fxt_empty.png', type: 'day'},
         text: "txt-evt-treasure-dig",
         chat: 'cl-generic',
-        incAchievement: "ach-secret-treasure",
+        incAchievement: "ach-treasure-dig",
         replaceFixtures: {},
-        events: [
+        select: [
+          {
+            reqFixtureFlags: '+secretTreasure',
+            incAchievement: "ach-secret-treasure",
+            loot: {
+              items: [
+                {slots: 4, 'il-magic':1},
+                {slots: 1, 'il-magic':1, 'il-treasure-highValue':1},
+                {slots: 1, 'il-magic':1, 'it-dinoSkull':1},
+              ]
+            },
+          },
           {
             reqDifficulty: '1..',
             loot: {

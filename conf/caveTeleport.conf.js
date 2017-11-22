@@ -27,10 +27,10 @@ config.entities.add([
     actionText: "txt-evt-cave-teleport-action",
     playMusic: ['thm_cave_1', 'thm_cave_2'],
     showImage: {src: 'evt_fxt_cave_teleport.png'},
-    events: [
+    select: [
       {
         reqFixture: {range: '2..', flags: '+caveTypeTeleport'},
-        charEffects: {reqCharFlags:'+special', removeStatusWithFlags: '+localCurse'},
+        charEvents: {reqCharFlags:'+special', removeStatusWithFlags: '+localCurse'},
         text: "txt-evt-cave-teleport",
         report: "txt-evt-cave-teleport-report",
         posTile: {range: '2..', fixtureFlags: '+caveTypeTeleport'},

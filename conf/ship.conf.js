@@ -20,7 +20,7 @@ config.entities.add([
     id: 'evt-ship-return',
     actionText: "txt-evt-ship-return-action",
     reqPartyFlags: '-shipDeny',
-    partyEffects: [
+    partyEvents: [
       {
         optional: true,
         reqBiomeFlags: '+arctic',
@@ -33,16 +33,16 @@ config.entities.add([
       },
     ],
     playMusic: 'thm_harbor_1',
-    events: [
+    select: [
       {
         reqTutorial: false,
         text: "txt-evt-ship-return",
-        events: 'evt-ship-actions',
+        select: 'evt-ship-actions',
       },
       {
         reqTutorial: true,
         setPartyFlags: '+shipDeny',
-        events: 'evt-tutorial-shipReturn',
+        select: 'evt-tutorial-shipReturn',
       },
     ],
   },
@@ -69,7 +69,7 @@ config.entities.add([
     id: 'evt-ship-arrival',
     text: "txt-evt-ship-arrival",
     chat: 'cl-expedition-start',
-    partyEffects: [
+    partyEvents: [
       {
         optional: true,
         reqBiomeFlags: '+arctic',
@@ -81,17 +81,17 @@ config.entities.add([
         showImage: {src: 'evt_spec_ship_2.png', type: 'day'},
       },
     ],
-    events: 'evt-ship-actions-first',
+    select: 'evt-ship-actions-first',
   },
   {
     id: 'evt-ship-headOutFirst',
     text: "txt-evt-ship-headOutFirst",
-    events: 'evt-ship-actions-first',
+    select: 'evt-ship-actions-first',
   },
   {
     id: 'evt-ship-beginExpedition',
     actionText: "txt-evt-ship-beginExpedition-action",
-    partyEffects: [
+    partyEvents: [
       {
         optional: true,
         reqWorld: 2,
@@ -133,8 +133,8 @@ config.entities.add([
       items: {},
       title: "txt-evt-ship-stash-first-title",
       slots: 10,
-      close: {text: "txt-evt-ship-stash-first", events: 'evt-ship-headOutFirst'},
-      cancel:{text: "txt-evt-ship-stash-first-1", events: 'evt-ship-headOutFirst'},
+      close: {text: "txt-evt-ship-stash-first", select: 'evt-ship-headOutFirst'},
+      cancel:{text: "txt-evt-ship-stash-first-1", select: 'evt-ship-headOutFirst'},
     },
   },
   {
@@ -151,36 +151,36 @@ config.entities.add([
   {
     id: 'evt-ship-refillWater',
     actionText: "txt-evt-cave-mushrooms-refillWater-action",
-    events: [
+    select: [
       {
         reqItems: {'it-water':100},
         text: "txt-evt-ship-refillWater",
-        events: 'evt-ship-actions',
+        select: 'evt-ship-actions',
       },
       {
         prio:1,
         text: "txt-evt-ship-refillWater-1",
         chat: 'cl-water-pack',
         items: {'it-water':10},
-        events: 'evt-ship-actions',
+        select: 'evt-ship-actions',
       }
     ],
   },
   {
     id: 'evt-ship-refillWater-first',
     actionText: "txt-evt-cave-mushrooms-refillWater-action",
-    events: [
+    select: [
       {
         reqItems: {'it-water':100},
         text: "txt-evt-ship-refillWater-first",
-        events: 'evt-ship-headOutFirst',
+        select: 'evt-ship-headOutFirst',
       },
       {
         prio:1,
         text: "txt-evt-ship-refillWater-first-1",
         chat: 'cl-water-pack',
         items: {'it-water':10},
-        events: 'evt-ship-headOutFirst',
+        select: 'evt-ship-headOutFirst',
       }
     ],
   },
@@ -209,17 +209,17 @@ config.entities.add([
     actionText: "txt-evt-ship-goHome-success-action",
     reqPartyFlags: '+expeditionDone',
     text: "txt-evt-ship-goHome-success",
-    events: 'evt-expedition-done'
+    select: 'evt-expedition-done'
   },
   {
     id: 'evt-ship-leave',
     actionText: "txt-evt-ship-leave-action",
-    events: 'evt-leave',
+    select: 'evt-leave',
   },
   {
     id: 'evt-ship-morning',
     playMusic: 'thm_harbor_1',
-    partyEffects: [
+    partyEvents: [
       {
         optional: true,
         reqBiomeFlags: '+arctic',
@@ -233,6 +233,6 @@ config.entities.add([
     ],
     text: "txt-evt-ship-morning",
     chat: 'cl-newMorning',       
-    events: 'evt-ship-actions',
+    select: 'evt-ship-actions',
   },
 ])

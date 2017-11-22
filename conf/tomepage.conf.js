@@ -20,7 +20,7 @@ config.entities.add([
     extends: 'it-tomePage',
     name: "txt-it-tomePage-waterfall-name",
     sprite: 'it_tomepage_1.png',
-    events: {
+    useEvents: {
       addFixture: {ref:'fxt-waterfall', range:'biome'},
       revealTiles: {radius:1, fixture:true, centerCam:true},
       chat: 'cl-tomePage-waterfall',
@@ -33,7 +33,7 @@ config.entities.add([
     extends: 'it-tomePage',
     name: "txt-it-tomePage-shipReturn-name",
     sprite: 'it_tomepage_13.png',
-    events: {
+    useEvents: {
       posTile: {range:'..100', fixtureFlags:'+ship'},
       teleport: true,
       playSound: 'sfx_teleport_1',
@@ -45,7 +45,7 @@ config.entities.add([
     extends: 'it-tomePage',
     name: "txt-it-tomePage-vision-name",
     sprite: 'it_tomepage_13.png',
-    events: {
+    useEvents: {
       setPartyStatus: {'os-viewDistance-large':true},
       playSound: ['sfx_tomePage_var1', 'sfx_tomePage_var2', 'sfx_tomePage_var3'],
       removeItem: true,
@@ -56,8 +56,8 @@ config.entities.add([
     extends: 'it-tomePage',
     name: "txt-it-tomePage-wisdom-name",
     sprite: 'it_tomepage_7.png',
-    events: {
-      partyEffects:[
+    useEvents: {
+      partyEvents:[
         {mapScore: +3},
       ],
       playSound: ['sfx_tomePage_var1', 'sfx_tomePage_var2', 'sfx_tomePage_var3'],
@@ -69,7 +69,7 @@ config.entities.add([
     extends: 'it-tomePage',
     name: "txt-it-tomePage-eagle-name",
     sprite: 'it_tomepage_9.png',
-    events: {
+    useEvents: {
       posPunch: {range:100, radius:3},
       revealTiles: {radius:3, fixture:true, centerCam:false},
       particle: 'pt-ambient-eagle',
@@ -82,7 +82,7 @@ config.entities.add([
     extends: 'it-tomePage',
     name: "txt-it-tomePage-portal-name",
     sprite: 'it_tomepage_13.png',
-    events: {
+    useEvents: {
       addFixture: {ref:'fxt-portal', range:1},
       removeItem: true,
       playSound: ['sfx_tomePage_var1', 'sfx_tomePage_var2', 'sfx_tomePage_var3'],
@@ -93,7 +93,7 @@ config.entities.add([
     extends: 'it-tomePage',
     name: "txt-it-tomePage-monsterDen-name",
     sprite: 'it_tomepage_1.png',
-    events: {
+    useEvents: {
       addFixture: {ref:'fxt-monsterDen-giantSpiders', range:'biome'},
       revealTiles: {radius:1, fixture:true, centerCam:true},
       removeItem: true,
@@ -104,7 +104,7 @@ config.entities.add([
     extends: 'it-tomePage',
     name: "txt-it-tomePage-corrupted-name",
     sprite: 'it_tomepage_1.png',
-    events: {
+    useEvents: {
       warpWorld: 'wd-warped-corrupted', 
       removeItem: true,
     },
@@ -114,7 +114,7 @@ config.entities.add([
     extends: 'it-tomePage',
     name: "txt-it-tomePage-healingSprings-name",
     sprite: 'it_tomepage_5.png',
-    events: {
+    useEvents: {
       addFixture: {ref:'fxt-healingSprings', range:'biome'},
       revealTiles: {radius:1, fixture:true, centerCam:true},
       playSound: ['sfx_tomePage_var1', 'sfx_tomePage_var2', 'sfx_tomePage_var3'],
@@ -127,7 +127,7 @@ config.entities.add([
     extends: 'it-tomePage',
     name: "txt-it-tomePage-hill-name",
     sprite: 'it_tomepage_1.png',
-    events: {
+    useEvents: {
       replaceTiles: {old: 'any', new: 'tl-hill', particle: ['pt-erupt-hill']},
       playSound: ['sfx_tomePage_var1', 'sfx_tomePage_var2', 'sfx_tomePage_var3'],
       camShake: {power:4,length:1.0},
@@ -140,7 +140,7 @@ config.entities.add([
     extends: 'it-tomePage',
     name: "txt-it-tomePage-mountain-name",
     sprite: 'it_tomepage_2.png',
-    events: {
+    useEvents: {
       posPunch: {range:100},
       replaceTiles: {
         old:'any',
@@ -161,7 +161,7 @@ config.entities.add([
     name: "txt-it-tomePage-waterDrain-name",
     sprite: 'it_tomepage_3.png',
     maxStack: 20,
-    events: {
+    useEvents: {
       posPunch: {range: 100, radius:1},
       playSound: ['sfx_tomePage_var1', 'sfx_tomePage_var2', 'sfx_tomePage_var3'],
       replaceTiles: [
@@ -178,7 +178,7 @@ config.entities.add([
     extends: 'it-tomePage',
     name: "txt-it-tomePage-lake-name",
     sprite: 'it_tomepage_4.png',
-    events: {
+    useEvents: {
       posPunch: {range: 100, radius:1},
       startSprawl: {ref:'spr-flood', radius:0, power:4},
       playSound: ['sfx_tomePage_var1', 'sfx_tomePage_var2', 'sfx_tomePage_var3'],
@@ -190,7 +190,7 @@ config.entities.add([
     extends: 'it-tomePage',
     name: "txt-it-tomePage-targetTeleport-name",
     sprite: 'it_tomepage_5.png',
-    events: {
+    useEvents: {
       posPunch: {range: 100, radius:0}, 
       teleport: true,
       removeItem: true,
@@ -202,7 +202,7 @@ config.entities.add([
     extends: 'it-tomePage',
     name: "txt-it-tomePage-randomTeleport-name",
     sprite: 'it_tomepage_6.png',
-    events: {
+    useEvents: {
       posTile: {range: '10..20', traversable:true, reachable:true},
       teleport: true,
       removeItem: true,
@@ -214,10 +214,10 @@ config.entities.add([
     extends: 'it-tomePage',
     name: "txt-it-tomePage-abomination-name",
     sprite: 'it_tomepage_7.png',
-    events: [
+    useEvents: [
       {
         showImage: {type: 'day', src: 'evt_fxt_empty.png'},
-        charEffects: {
+        charEvents: {
           reqCharFlags: '-special -animal -abomination',
           removeCharacter: true,
           text: "txt-it-tomePage-abomination",
@@ -241,7 +241,7 @@ config.entities.add([
     extends: 'it-tomePage',
     name: "txt-it-tomePage-chasm-name",
     sprite: 'it_tomepage_8.png',
-    events: {
+    useEvents: {
       posPunch: {range: 100, radius:1},
       startSprawl: {ref:'spr-chasm', radius:0, power:3},
       playSound: ['sfx_tomePage_var1', 'sfx_tomePage_var2', 'sfx_tomePage_var3'],
@@ -253,7 +253,7 @@ config.entities.add([
     extends: 'it-tomePage',
     name: "txt-it-tomePage-fire-name",
     sprite: 'it_tomepage_9.png',
-    events: {
+    useEvents: {
       posPunch: {range: 100, radius:1},
       startSprawl: {ref:'spr-fire', radius:1, power:5},
       playSound: ['sfx_tomePage_var1', 'sfx_tomePage_var2', 'sfx_tomePage_var3'],
@@ -265,7 +265,7 @@ config.entities.add([
     extends: 'it-tomePage',
     name: "txt-it-tomePage-dry-name",
     sprite: 'it_tomepage_10.png',
-    events: {
+    useEvents: {
       startSprawl: {ref:'spr-dry', radius:0, power:8},
       playSound: ['sfx_tomePage_var1', 'sfx_tomePage_var2', 'sfx_tomePage_var3'],
       removeItem: true,
@@ -276,7 +276,7 @@ config.entities.add([
     extends: 'it-tomePage',
     name: "txt-it-tomePage-fertile-name",
     sprite: 'it_tomepage_11.png',
-    events: {
+    useEvents: {
       startSprawl: {ref:'spr-fertile', radius:0, power:8},
       playSound: ['sfx_tomePage_var1', 'sfx_tomePage_var2', 'sfx_tomePage_var3'],
       removeItem: true,
@@ -287,7 +287,7 @@ config.entities.add([
     extends: 'it-tomePage',
     name: "txt-it-tomePage-regen-name",
     sprite: 'it_tomepage_12.png',
-    events: {
+    useEvents: {
       startSprawl: {ref:'spr-regen', radius:0, power:8},
       playSound: ['sfx_tomePage_var1', 'sfx_tomePage_var2', 'sfx_tomePage_var3'],
       removeItem: true,
@@ -299,7 +299,7 @@ config.entities.add([
     extends: 'it-tomePage',
     name: "txt-it-tomePage-superMove-name",
     sprite: 'it_tomepage_13.png',
-    events: {
+    useEvents: {
       superMove: true, removeItem: true,
       playSound: ['sfx_tomePage_var1', 'sfx_tomePage_var2', 'sfx_tomePage_var3'],
     },

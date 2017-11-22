@@ -2,37 +2,47 @@ config.entities.add([
 
   {
     id: 'evt-sanity-select', // triggered when resting
-    partyEffects: { ref: 'evt-setImage-nightCamp' },
-    events: [
+    partyEvents: { ref: 'evt-setImage-nightCamp'},
+    select: [
       {
         reqSanity: '0',
         playMusic: 'thm_nature_night_campfire_dark_2',
-        events: 'evt-sanity-selectLow'
+        select: 'evt-sanity-selectLow'
       },
       {
         reqSanity: '1..29',
         playMusic: 'thm_nature_night_campfire',
-        events: 'evt-sanity-selectLow'
+        select: 'evt-sanity-selectLow'
       },
       {
         reqSanity: '30..69',
         playMusic: 'thm_nature_night_campfire',
-        events: 'evt-sanity-selectMedium'
+        select: 'evt-sanity-selectMedium'
       },
       {
         reqSanity: '70..',
         playMusic: 'thm_nature_night_campfire',
-        events: 'evt-sanity-selectHigh'
+        select: 'evt-sanity-selectHigh'
       },
     ]
   },
   {
     id: 'evt-noSanity-select', // triggered when traveling
-    partyEffects: { ref: 'evt-setImage-nightCamp' },
+    partyEvents: { ref: 'evt-setImage-nightCamp' },
     playMusic: 'thm_nature_night_campfire_dark_2',
-    events: [
+    select: [
       {slots: 4, ref:'evt-sanity-selectZero'},
       {slots: 1, ref:'evt-sanity-selectLow'}
+    ]
+  },
+  {
+    id: 'evt-sanity-return',
+    partyEvents:[
+      {
+        optional: true,
+        reqPartyFlags: '+natureSleep',
+        select: 'evt-nature-sleep'
+      }
     ]
   },
 
@@ -40,7 +50,7 @@ config.entities.add([
     // drastic negative outcomes (don't have to offer choice)
     id: 'evt-sanity-selectZero',
     chat: 'cl-noSanity',
-    events: [
+    select: [
       {prio: 1, slots: 5, ref: 'evt-noSanity-injuredDeath'},
       {prio: 1, slots: 5, ref: 'evt-noSanity-paranoidKill'},
       {prio: 1, slots: 5, ref: 'evt-noSanity-gunKill'},
@@ -76,7 +86,7 @@ config.entities.add([
     // small negative outcome (should offer choice what kind)
     // conflicts lower the loyalty of a trek member
     id: 'evt-sanity-selectLow',       
-    events: [
+    select: [
       {slots: 8, ref: 'evt-sanity-conflict-racist'},
       {slots: 8, ref: 'evt-sanity-conflict-sexistMale'},
       {slots: 8, ref: 'evt-sanity-conflict-sexistFemale'},
@@ -144,7 +154,7 @@ config.entities.add([
     // optional challenges for the player that can be ignored without harm
     // or neutral flavor event
     id: 'evt-sanity-selectMedium',
-    events: [
+    select: [
       {slots: 3, ref: 'evt-sanity-return-imaginary'},
       {slots: 3, ref: 'evt-sanity-return-angryLeave'},
       {slots: 2, ref: 'evt-sanity-return-friend'},
@@ -198,7 +208,7 @@ config.entities.add([
     // should leave player in a better state
     // should not just give out sanity, as player might have full sanity
     id: 'evt-sanity-selectHigh',
-    events: [
+    select: [
       {slots: 1, ref: 'evt-sanity-positive-flavor-camp'},
       {slots: 3, ref: 'evt-sanity-positive-flavor-diary'},
       

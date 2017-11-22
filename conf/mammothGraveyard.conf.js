@@ -30,36 +30,27 @@ config.entities.add([
     actionText: "txt-evt-altar-approach-action",
     text: "txt-evt-mammothGraveyard-explore",
     chat: 'cl-scaryPlace',
-    partyEffects: {
+    setFixtureFlags: '+mammothGraveyard',
+    partyEvents: {
       optional: true,
       reqFixtureFlags: '+wildlife',
       text: 'txt-evt-leave-wildlife-hint'
       },
-      events: [
-        {
-          slots:1,
-          showImage: {
-            src: 'evt_fxt_mammothGraveyard_1.png', type: 'day', showMounted: true,
-            particles: ['pt-snow-1', 'pt-snow-2', 'pt-snow-3'],
-          },
-        },
-        {
-          slots:1,
-          showImage: {
-            src: 'evt_fxt_mammothGraveyard_1.png', type: 'day', showMounted: true,
-          },
-        }
-      ],
+    showImage: {
+      src: 'evt_fxt_mammothGraveyard_1.png', type: 'day', showMounted: true,
+      particles: ['pt-snow-1', 'pt-snow-2', 'pt-snow-3'],
+      particlesChance: 0.5
+    },
     playMusic: ['thm_nature_mystic_1', 'thm_nature_mystic_2'],
     actions: [
-      { ref:'evt-searchArea', pushEvent: 'evt-mammothGraveyard-searchOutcome' },
+      { ref:'evt-searchArea'},
       'evt-leave'
     ]
   },
   { 
     id: 'evt-mammothGraveyard-searchOutcome',
     setFixtureFlags: '+explored',
-    events: [
+    select: [
       {slots: 8, ref: 'evt-mammothGraveyard-searchOutcome-1'},
       {slots: 1, ref: 'evt-mammothGraveyard-searchOutcome-2'},
     ],

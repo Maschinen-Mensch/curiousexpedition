@@ -36,9 +36,10 @@ config.entities.add([
     id: 'evt-shipwreck-init',
     actionText: "txt-evt-altar-approach-action",
     reqFixtureFlags: '-explored',
+    setFixtureFlags: '+shipwreck',
     text: "txt-evt-shipwreck-enter",
     chat: 'cl-scaryPlace',
-    partyEffects: [
+    partyEvents: [
       {
         optional: true,
         reqBiomeFlags: '-arctic',
@@ -60,7 +61,7 @@ config.entities.add([
       'thm_nature_mystic_2'
     ],
     actions: [ 
-      {ref:'evt-searchArea', pushEvent: 'evt-shipwreck-searchOutcome'}, 
+      {ref:'evt-searchArea'}, 
       'evt-leave' 
     ],
   },

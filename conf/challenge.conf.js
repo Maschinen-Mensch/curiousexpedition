@@ -941,25 +941,25 @@ config.entities.add([
   {
     id: "dp-attack42",
     name: "txt-attack-name-42",
-    faces: 'teslaGun mind awarenes', damage:7, selfDamage:1,
+    faces: 'teslaGun mind awarenes', damage:{base:7, bonus:'gunDamage'}, selfDamage:1,
     sound: 'sfx_combat_teslagun_1',
   },
   {
     id: "dp-attack43",
     name: "txt-attack-name-43",
-    faces: 'teslaGun stability', damage:3, selfDamage:1, multiAttack:true,
+    faces: 'teslaGun stability', damage:{base:3, bonus:'gunDamage'}, selfDamage:1, multiAttack:true,
     sound: 'sfx_combat_teslagun_1',
   },
   {
     id: "dp-attack44",
     name: "txt-attack-name-44",
-    faces: 'teslaGun shield', damage:4, selfDamage:1, shield:2,
+    faces: 'teslaGun shield', damage:{base:4, bonus:'gunDamage'}, selfDamage:1, shield:2,
     sound: 'sfx_combat_teslagun_1',
   },
   {
     id: "dp-attack45",
     name: "txt-attack-name-45",
-    faces: 'teslaGun', damage: 2, selfDamage:1,
+    faces: 'teslaGun', damage: {base:2, bonus:'gunDamage'}, selfDamage:1,
     sound: 'sfx_combat_teslagun_1'
   },
 

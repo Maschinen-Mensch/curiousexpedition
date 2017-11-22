@@ -49,9 +49,12 @@ config.entities.add([
     description: "txt-st-abomination-eat",
     sprite: "res_status_cannibal.png",
     tripEvents: [
-      {slots:1, reqAge:4, resetStatusAge:true, events: 'evt-sanity-abomination-hungry'},
+      {slots:1, reqAge:4, resetStatusAge:true, select: 'evt-sanity-abomination-hungry'},
       {slots:5},
     ],
+    dayEvents:{
+      charEvents: {count: 3, reqCharFlags: '+abomination', incAchievement: 'ach-triple-abomination'}
+    }
   },
   {
     id: 'st-curse-abomination',
@@ -69,10 +72,10 @@ config.entities.add([
   {
     id: 'evt-become-abomination',
     reqAge: 4,
-    partyEffects: { ref: 'evt-setImage-nightCamp' },
+    partyEvents: { ref: 'evt-setImage-nightCamp' },
     playMusic: ['thm_nature_night_campfire_dark_2'],
-    charEffects: {
-      reqStatus: {'st-curse-abomination':true},
+    charEvents: {
+      reqStatus: '+curse-abomination',
       text: "txt-st-curse-abomination-transform",
       removeCharacter: true,
       addCharacter: 'pl-abomination'
@@ -247,13 +250,13 @@ config.entities.add([
       {
         reqSanity: '0..110',
         setPartyFlags: {sanityReport: false, sanityReportTendency: false },
-        charEffects: { reqCharFlags: '+special', setStatus: {'st-sanityReport-medium':true} },
+        charEvents: { reqCharFlags: '+special', setStatus: {'st-sanityReport-medium':true} },
         removeStatus:true,
       },
       {
         reqPartyFlags: {sanityReport: false}, 
         setPartyFlags: {sanityReport: true },
-        events: [
+        select: [
           {
             slots: 1,
             report: "txt-st-sanityReport-high-report",
@@ -270,19 +273,19 @@ config.entities.add([
       {
         reqSanity: '..70',
         setPartyFlags: {sanityReport: false, sanityReportTendency: false },
-        charEffects: { reqCharFlags: '+special', setStatus: {'st-sanityReport-low':true} },
+        charEvents: { reqCharFlags: '+special', setStatus: {'st-sanityReport-low':true} },
         removeStatus:true,
       },
       {
         reqSanity: '111..',
         setPartyFlags: {sanityReport: false, sanityReportTendency: true },
-        charEffects: { reqCharFlags: '+special', setStatus: {'st-sanityReport-high':true} },
+        charEvents: { reqCharFlags: '+special', setStatus: {'st-sanityReport-high':true} },
         removeStatus:true,
       },
       {
         reqPartyFlags: {sanityReport: false, sanityReportTendency: false}, 
         setPartyFlags: {sanityReport: true },
-        events: [
+        select: [
           {
             slots: 1,
             report: "txt-st-sanityReport-medium-report",
@@ -293,7 +296,7 @@ config.entities.add([
       {
         reqPartyFlags: {sanityReport: false, sanityReportTendency: true}, 
         setPartyFlags: {sanityReport: true },
-        events: [
+        select: [
           {
             slots: 1,
             report: "txt-st-sanityReport-medium-report-1",
@@ -310,19 +313,19 @@ config.entities.add([
       {
         reqSanity: '..20',
         setPartyFlags: '-sanityReport -sanityReportTendency',
-        charEffects: { reqCharFlags: '+special', setStatus: {'st-sanityReport-veryLow':true} },
+        charEvents: { reqCharFlags: '+special', setStatus: {'st-sanityReport-veryLow':true} },
         removeStatus:true,
       },
       {
         reqSanity: '71..',
         setPartyFlags: '-sanityReport +sanityReportTendency',
-        charEffects: { reqCharFlags: '+special', setStatus: {'st-sanityReport-medium':true} },
+        charEvents: { reqCharFlags: '+special', setStatus: {'st-sanityReport-medium':true} },
         removeStatus:true,
       },
       {
         reqPartyFlags: '-sanityReport -sanityReportTendency',
         setPartyFlags: '+sanityReport',
-        events: [
+        select: [
           {
             slots: 1,
             report: "txt-st-sanityReport-low-report",
@@ -333,7 +336,7 @@ config.entities.add([
       {
         reqPartyFlags: '-sanityReport +sanityReportTendency',
         setPartyFlags: '+sanityReport',
-        events: [
+        select: [
           {
             slots:1,
             report: "txt-st-sanityReport-low-report-1",
@@ -350,19 +353,19 @@ config.entities.add([
       {
         reqSanity: '0',
         setPartyFlags: {sanityReport: false, sanityReportTendency: false  },
-        charEffects: { reqCharFlags: '+special', setStatus: {'st-sanityReport-0':true} },
+        charEvents: { reqCharFlags: '+special', setStatus: {'st-sanityReport-0':true} },
         removeStatus:true,
       },
       {
         reqSanity: '21..',
         setPartyFlags: {sanityReport: false, sanityReportTendency: true  },
-        charEffects: { reqCharFlags: '+special', setStatus: {'st-sanityReport-low':true} },
+        charEvents: { reqCharFlags: '+special', setStatus: {'st-sanityReport-low':true} },
         removeStatus:true,
       },
       {
         reqPartyFlags: {sanityReport: false, sanityReportTendency: false}, 
         setPartyFlags: {sanityReport: true },
-        events: [
+        select: [
           {
             slots: 1,
             report: "txt-st-sanityReport-veryLow-report",
@@ -373,7 +376,7 @@ config.entities.add([
       {
         reqPartyFlags: {sanityReport: false, sanityReportTendency: true}, 
         setPartyFlags: {sanityReport: true },
-        events: [
+        select: [
           {
             slots: 1,
             report: "txt-st-sanityReport-veryLow-report-1",
@@ -390,13 +393,13 @@ config.entities.add([
       {
         reqSanity: '1..',
         setPartyFlags: {sanityReport: false, sanityReportTendency: true  },
-        charEffects: { reqCharFlags: '+special', setStatus: {'st-sanityReport-veryLow':true} },
+        charEvents: { reqCharFlags: '+special', setStatus: {'st-sanityReport-veryLow':true} },
         removeStatus:true,
       },
       {
         reqPartyFlags: {sanityReport: false}, 
         setPartyFlags: {sanityReport: true },
-        events: [
+        select: [
           {
             slots: 1,
             report: "txt-st-sanityReport-0-report",

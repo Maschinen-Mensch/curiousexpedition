@@ -39,6 +39,7 @@ config.entities.add([
     id: 'evt-tortoise-hatch',
     showImage: {src: 'evt_fxt_empty.png', type: 'day'},
     text: "txt-evt-tortoise-hatch",
+    incAchievement: 'ach-hatchEggs',
     removeItem: true,
     loot: {
       items: {'it-baby-tortoise':1},
@@ -51,7 +52,7 @@ config.entities.add([
     text: "txt-evt-tortoise-adult",
     removeItem: true,
     npc: 'anm-tortoise',
-    npcEffects: {
+    npcEvents: {
       actions: {
         actionText: "txt-evt-tortoise-adult-action",
         text: "txt-evt-tortoise-adult-1",

@@ -24,7 +24,7 @@ config.testEvents = [
 
   {
     id: 'evt-test-reqFixture',
-    events: [
+    select: [
       {
         reqFixture: {flags:{shrine:true}, range:'..5', fixtureKnown:false},
         text: 'shrine in range'
@@ -38,14 +38,14 @@ config.testEvents = [
 
   {
     id: 'evt-test-reset',
-    charEffects: {
+    charEvents: {
       reqCharFlags: {special:true},
       resetStatus: {'st-injured':true},
     }
   },
   {
     id: 'evt-test-applyStatus',
-    charEffects: {
+    charEvents: {
       reqCharFlags: '-special +humanoid',
       setStatus: '+pneumonia',
     }
@@ -57,7 +57,7 @@ config.testEvents = [
   },
   {
     id: 'evt-test-injured-cultist',
-    charEffects: [
+    charEvents: [
       {
         reqCharFlags: {cultist:true},
         health: -5
@@ -70,7 +70,7 @@ config.testEvents = [
   },
   {
     id: 'evt-test-curse',
-    charEffects: {
+    charEvents: {
       reqCharFlags: '-special',
       setStatus: '+deathCurse'
     }
@@ -81,7 +81,7 @@ config.testEvents = [
   },
   {
     id: 'evt-test-addFixture',
-    partyEffects: [
+    partyEvents: [
       {addFixture: {ref:'fxt-volcano-spawn-large-active', range:4}},
       {addFixture: {ref:'fxt-volcano-spawn-large-active', range:4}},
     ],
@@ -128,7 +128,7 @@ config.testEvents = [
     id: 'evt-test-kill',
     text: 'We felt dizzy',
     showImage: {src: 'evt_spec_nightCamp_1.png'},
-    charEffects: {
+    charEvents: {
       reqCharFlags: '-special',
       actions: {
         actionText: "Kill!",
@@ -144,7 +144,7 @@ config.testEvents = [
   {
     id: 'evt-test-fever',
     text: "Fever was making its evil rounds in our trek.",
-    charEffects: [
+    charEvents: [
       {
         text: '_$He_ was not feeling well.'
       }
@@ -159,8 +159,8 @@ config.testEvents = [
   },
   {
     id: 'evt-test-injured',
-    events: {
-      charEffects: {reqStatus: {'st-injured':false}, setStatus: {'st-injured':true}}
+    select: {
+      charEvents: {reqStatus: {'st-injured':false}, setStatus: {'st-injured':true}}
     }
   },
   {
@@ -198,7 +198,7 @@ config.testEvents = [
   },
   {
     id: 'evt-test-textHighlight',
-    charEffects: {
+    charEvents: {
       text: 'We have _some_ _highlight_ text over $name and _$name_. That is _true_! _Right_?',
     }
   },
@@ -210,7 +210,7 @@ config.testEvents = [
   },
   {
     id: 'evt-test-corrupt',
-    partyEffects: [
+    partyEvents: [
       {addFixture: {ref:'fxt-corrupt-spawn', range:6, setPos:false}},
       {addFixture: {ref:'fxt-corrupt-spawn', range:20, setPos:false}},
       {addFixture: {ref:'fxt-corrupt-spawn', range:20, setPos:false}},
@@ -251,32 +251,32 @@ config.testEvents = [
       {
         actionText: "store",
         alwaysShown: true,
-        charEffects: {
+        charEvents: {
           reqCharFlags: '-special',
           setCharFlags: '+dead',
           text: "$name vanished right in front of our eyes.",
           storeCharacter:true,
         },
-        events: 'evt-test-store'
+        select: 'evt-test-store'
       },
       {
         actionText: "info",
         alwaysShown: true,
-        storeEffects: {
+        storeEvents: {
           count: 'any',
           text: "We felt the presence of $name but couldn't see anybody."
         },
-        events: 'evt-test-store'
+        select: 'evt-test-store'
       },
       {
         actionText: "restore",
         alwaysShown: true,
-        storeEffects: {
+        storeEvents: {
           text: 'We welcomed back $name! Everybody was happy.',
           restoreCharacter: true,
           reqAge: '5..10'
         },
-        events: 'evt-test-store'
+        select: 'evt-test-store'
       },
       {
         actionText: "leave"
@@ -463,7 +463,7 @@ config.testEvents = [
   },
   {
     id: 'evt-test-blessing',
-    charEffects: {
+    charEvents: {
       reqCharFlags: '-special -animal',
       setStatus: '+blessingInhumanStrength'
     }
@@ -492,7 +492,7 @@ config.testEvents = [
   {
     id: 'evt-test-paragraph',
     showImage: {src: 'evt_spec_nightCamp_1.png'},
-    charEffects: {
+    charEvents: {
       reqCharFlags: '+special',
       text: "I decided to part with $name. I could sooo return with so more valuables instead of $him."
     },
@@ -600,7 +600,7 @@ var debug = {
   testCharacter: 'pl-native-scout',
   // testGoal: 'gol-goldenTemple-grass',
   testFixture: 'fxt-polarStation-A',
-  testEvent: 'evt-sanity-nativeGhosts',
+  testEvent: 'evt-sanity-helpNative-2',
 
   testPerk: 'pk-impetus',
 };

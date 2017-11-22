@@ -49,7 +49,7 @@ config.entities.add([
     debugColor: '#64ff58',
   },
 
-// fixture events
+// fixture select
 
   {
     id: 'evt-waterfall-explore',
@@ -58,7 +58,7 @@ config.entities.add([
     showImage: {src: 'evt_fxt_waterfall_1.png', type: 'day'},
     text: "txt-evt-waterfall-explore",
     chat: 'cl-nature',
-    events: 'evt-waterfall-actions'
+    select: 'evt-waterfall-actions'
   },
   {
     id: 'evt-waterfall-morning',
@@ -66,14 +66,14 @@ config.entities.add([
     showImage: {src: 'evt_fxt_waterfall_1.png', type: 'day'},
     text: "txt-evt-waterfall-morning",
     chat: 'cl-newMorning',       
-    events: 'evt-waterfall-actions'
+    select: 'evt-waterfall-actions'
   },
   { 
     id: 'evt-waterfall-actions',
      actions: [
       'evt-nature-rest',
-      { ref:'evt-nature-refillWater', pushEvent: 'evt-waterfall-actions'},
-      { ref:'evt-nature-paint', pushEvent: 'evt-waterfall-actions'},
+      { ref:'evt-nature-refillWater'},
+      { ref:'evt-nature-paint'},
       'evt-leave'
     ],
   },
@@ -82,7 +82,7 @@ config.entities.add([
     id: 'evt-healingSprings-enter',
     actionText: "txt-evt-healingSprings-enter-action",
     playMusic: ['thm_nature_1'],
-    partyEffects: [
+    partyEvents: [
       {
         optional: true,
         reqBiomeFlags: '-arctic',
@@ -91,32 +91,22 @@ config.entities.add([
       {
         optional: true,
         reqBiomeFlags: '+arctic',
-        events: [
-          {
-            slots:1,
-            showImage: {
-              src: 'evt_fxt_healingSprings_arctic.png', type: 'day', showMounted: true,
-              particles: ['pt-snow-1', 'pt-snow-2', 'pt-snow-3'],
-            },
-          },
-          {
-            slots:1,
-            showImage: {
-              src: 'evt_fxt_healingSprings_arctic.png', type: 'day', showMounted: true,
-            },
-          }
-        ],
+        showImage: {
+          src: 'evt_fxt_healingSprings_arctic.png', type: 'day', showMounted: true,
+          particles: ['pt-snow-1', 'pt-snow-2', 'pt-snow-3'],
+          particlesChance: 0.5
+        }
       },
     ],
     text: "txt-evt-healingSprings-enter", 
     chat: 'cl-nature',
-    events: {ref:'evt-healingSprings-actions'},
+    select: {ref:'evt-healingSprings-actions'},
 
   },
   {
     id: 'evt-healingSprings-morning',
     playMusic: ['thm_nature_1'],
-    partyEffects: [
+    partyEvents: [
       {
         optional: true,
         reqBiomeFlags: '-arctic',
@@ -130,20 +120,20 @@ config.entities.add([
     ],
     chat: 'cl-newMorning',
     text: "txt-evt-healingSprings-morning",
-    charEffects: {
+    charEvents: {
       count:"any", optional:true, 
       chat: 'cl-heal',
       setStatus: '-infected -jungleRot -jungleFever -malaria',
       health: 10,
       text: "txt-evt-healingSprings-morning-1"
     },
-    events: {ref:'evt-healingSprings-actions'},
+    select: {ref:'evt-healingSprings-actions'},
   },
   { 
     id: 'evt-healingSprings-actions',
     actions: [
       { ref:'evt-nature-rest' },
-      { ref:'evt-nature-paint', pushEvent: 'evt-healingSprings-actions'},
+      { ref:'evt-nature-paint'},
       { ref:'evt-leave' }
     ],
   },
@@ -155,7 +145,7 @@ config.entities.add([
     playMusic: ['thm_nature_1'],
     showImage: {src: 'evt_fxt_overhang_1.png', type:'day',},
     chat: 'cl-nature',
-    events: {ref:'evt-overhang-actions'}
+    select: {ref:'evt-overhang-actions'}
   },
   {
     id: 'evt-overhang-morning',
@@ -163,13 +153,13 @@ config.entities.add([
     playMusic: ['thm_nature_1'],
     showImage: {src: 'evt_fxt_overhang_1.png', type:'day',},
     chat: 'cl-newMorning',       
-    events: {ref:'evt-overhang-actions'}
+    select: {ref:'evt-overhang-actions'}
   },
   { 
     id: 'evt-overhang-actions',
     actions: [
       { ref:'evt-nature-rest' },
-      { ref:'evt-nature-paint', pushEvent: 'evt-overhang-actions', },
+      { ref:'evt-nature-paint'},
       { ref:'evt-leave' }
     ],
   },
@@ -177,41 +167,59 @@ config.entities.add([
   {
     id: 'evt-nature-paint',
     actionText: "txt-evt-nature-paint-action",
-    reqFixtureFlags: {painting: false},
-    setFixtureFlags: {painting: true},
-    charEffects: [
+    reqFixtureFlags: '-painting',
+    setFixtureFlags: '+painting',
+    charEvents: [
       {
-        reqCharFlags: {artist:true}, count:1,
+        reqCharFlags: '+artist',
         reqItems: {'it-canvas':1},
       },
       {
-        optional:true,
-        reqCharFlags: {artist:true}, count:1,
-        reqStatus: {'st-angry':false},
+        optional: true,
+        reqCharFlags: '+artist',
+        reqStatus: '-angry',
         text: "txt-evt-nature-paint",
-        events: [
+        select: [
           {
             slots: 1,
             text: "txt-evt-nature-paint-1",
             report: "txt-evt-nature-paint-report",
-            setTempFlags: {paintingLocation:true},
-            events: 'evt-painting-create',
+            setTempFlags: '+paintingLocation',
+            select: 'evt-painting-create',
           },
         ],
       },
       {
-        optional:true,
-        reqCharFlags: {artist:true}, count:1,
-        reqStatus: {'st-angry':true},
-        events: 'evt-painting-angry',
+        optional: true,
+        reqCharFlags: '+artist',
+        reqStatus: '+angry',
+        select: 'evt-painting-angry',
       },
     ],
+    partyEvents: [
+    {
+      optional: true,
+      reqFixtureFlags: '+waterfall',
+      select: 'evt-waterfall-actions'
+    },
+    {
+      optional: true,
+      reqFixtureFlags: '+overhang',
+      select: 'evt-overhang-actions'
+    },
+    {
+      optional: true,
+      reqFixtureFlags: '+springs',
+      select: 'evt-healingSprings-actions'
+    }
+    ]
   },
   {
     id: 'evt-nature-refillWater',
     actionText: "txt-evt-cave-mushrooms-refillWater-action",
     chat: 'cl-water-pack',
     items: {'it-water':10},
+    select: 'evt-waterfall-actions'
   },
 
 // ---- Nature Rest
@@ -219,18 +227,18 @@ config.entities.add([
   {
     id: 'evt-nature-rest',
     actionText: "txt-evt-nature-rest-action",
-    partyEffects: [
+    partyEvents: [
       { 
         ref: 'evt-setImage-nightCamp' 
       },
       {
         optional: true,
-        charEffects: {count: 3, reqCharFlags:'+humanoid'},
+        charEvents: {count: 3, reqCharFlags:'+humanoid'},
         text: "txt-evt-nature-rest",
       },
       {
         optional: true,
-        charEffects: {count: 'all', reqCharFlags:'+special|-humanoid'},
+        charEvents: {count: 'all', reqCharFlags:'+special|-humanoid'},
         text: "txt-evt-nature-rest-1",
       },
       {
@@ -249,31 +257,30 @@ config.entities.add([
         text: "txt-evt-nature-rest-4",
       }
     ],
-    setPartyFlags: '+startFire',
-    pushEvent: 'evt-nature-sleep',
-    events: 'evt-sanity-select'
+    setPartyFlags: '+startFire +natureSleep',
+    select: 'evt-sanity-select'
   },
   {
     id: 'evt-nature-sleep',
     actions: {
       actionText: "txt-evt-mission-cultist-rest-action",
+      setPartyFlags: '-natureSleep',
       rest: {
         sanity: {base:sanityNaturalFixtures, bonus:'natureSanityBonus'},
         events: [
-          { reqFixtureFlags: '+waterfall', events: 'evt-waterfall-morning' },
-          { reqFixtureFlags: '+springs', events: 'evt-healingSprings-morning' },
-          { reqFixtureFlags: '+overhang', events: 'evt-overhang-morning' },
-          { reqFixtureFlags: '+oasis', events: 'evt-oasis-morning' },
-          { reqFixtureFlags: '+ship', events: 'evt-ship-morning' },
-          { reqFixtureFlags: '+camp', events: 'evt-camp-morning' },
-
+          { reqFixtureFlags: '+waterfall', select: 'evt-waterfall-morning' },
+          { reqFixtureFlags: '+springs', select: 'evt-healingSprings-morning' },
+          { reqFixtureFlags: '+overhang', select: 'evt-overhang-morning' },
+          { reqFixtureFlags: '+oasis', select: 'evt-oasis-morning' },
+          { reqFixtureFlags: '+ship', select: 'evt-ship-morning' },
+          { reqFixtureFlags: '+camp', select: 'evt-camp-morning' },
         ]
       }  
     }
   },
   { 
     id: 'evt-sanity-cultist-injureSelf',
-    charEffects: [
+    charEvents: [
       {
         text: "txt-evt-sanity-cultist-injureSelf",
         report: "txt-evt-sanity-cultist-injureSelf-report",
@@ -283,11 +290,12 @@ config.entities.add([
         health: -2,
       },
     ],
+    select: 'evt-sanity-return'
   },
   { 
     id: 'evt-sanity-vulture',
-    charEffects: {
-      reqStatus: {'st-superstitious':true},
+    charEvents: {
+      reqStatus: '+superstitious',
       reqLoyalty: '1..',
       chat: 'cl-vulture',
       text: "txt-evt-sanity-vulture",
@@ -301,6 +309,7 @@ config.entities.add([
           text: "txt-evt-sanity-vulture-1",
           report: "txt-evt-sanity-vulture-report-1",
           loot: {items: {'it-meat-raw':1}},
+          select: 'evt-sanity-return'
         },
         {
           actionText: "txt-evt-sanity-vulture-action-1",
@@ -309,6 +318,7 @@ config.entities.add([
           text: "txt-evt-sanity-vulture-2",
           report: "txt-evt-sanity-vulture-report-2",
           loot: {items: {'it-meat-raw':1}},
+          select: 'evt-sanity-return'
         },
         {
           actionText: "txt-st-kleptomania-idol-action-1",
@@ -316,6 +326,7 @@ config.entities.add([
           report: "txt-evt-sanity-vulture-report-3",
           sanity: -10,
           loyalty: -1,
+          select: 'evt-sanity-return'
         },
       ]
     }
@@ -323,17 +334,17 @@ config.entities.add([
   { 
     id: 'evt-sanity-abomination-hungry',
     playMusic: ['thm_nature_night_campfire_dark_2'],
-    partyEffects: { ref: 'evt-setImage-nightCamp' },
-    charEffects: [
+    partyEvents: { ref: 'evt-setImage-nightCamp' },
+    charEvents: [
       {
-        reqCharFlags: {abomination:true},
+        reqCharFlags: '+abomination',
       },
       {
         optional: true,
         reqItems: {'it-meat-raw':1},
         text: "txt-evt-sanity-abomination-hungry",
         report: "txt-evt-sanity-abomination-hungry-report",
-        setTempFlags: {meat:true},
+        setTempFlags: '+meat',
         actions: [
           {
             actionText: "txt-evt-sanity-abomination-hungry-action",
@@ -345,28 +356,30 @@ config.entities.add([
             actionText: "txt-evt-sanity-abomination-hungry-action-1",
             text: "txt-evt-sanity-abomination-hungry-2",
             report: "txt-evt-sanity-abomination-hungry-report-2",
-            charEffects: { reqCharFlags:{abomination:true}, removeCharacter:true},
-            pushEvent: 'evt-sanity-abomination-afterCombat',
-            events: {
-              combat: [ {slots:1, 'emy-abomination':1}, ],
+            charEvents: { 
+              reqCharFlags:'+abomination', 
+              removeCharacter:true
+            },
+            select: {
+              combat: {refs: [{slots:1, 'emy-abomination':1}], win: 'evt-sanity-abomination-combat-win', flee: 'evt-sanity-abomination-combat-flee'}
             }
           },
         ],
       },
       {
-        reqTempFlags: {meat:false},
-        reqCharFlags: {abomination:false},
-        events: 'evt-sanity-abomination-attackUnit',
+        reqTempFlags: '-meat',
+        reqCharFlags: '-abomination',
+        select: 'evt-sanity-abomination-attackUnit',
       }
     ],
   },
   { 
     id: 'evt-sanity-abomination-attackUnit',
-    charEffects: [
+    charEvents: [
       {
         optional: true,
-        reqCharFlags: {cultist:false, abomination:false, special: false},
-        setTempFlags: {abominationVictim:true},
+        reqCharFlags: '-cultist -abomination -special',
+        setTempFlags: '+abominationVictim',
         text: "txt-evt-sanity-abomination-attackUnit",
         report: "txt-evt-sanity-abomination-attackUnit-report",
         actions: [
@@ -374,10 +387,13 @@ config.entities.add([
             actionText: "txt-evt-sanity-abomination-attackUnit-action",
             text: "txt-evt-sanity-abomination-attackUnit-1",
             report: "txt-evt-sanity-abomination-attackUnit-report-1",
-            charEffects: { reqCharFlags:{abomination:true}, removeCharacter:true},
-            pushEvent: 'evt-sanity-abomination-afterCombat',
-            events: {
-              combat: [ {slots:1, 'emy-abomination':1}, ],
+            charEvents: { reqCharFlags:'+abomination', removeCharacter:true},
+            select: {
+              combat: {
+                refs: [{slots:1, 'emy-abomination':1}], 
+                win: 'evt-sanity-abomination-combat-win', 
+                flee: 'evt-sanity-abomination-combat-flee'
+              }
             },
           },
           {
@@ -387,14 +403,15 @@ config.entities.add([
             storeCharacter: true,
             setCharFlags: '+dead',
             sanity: -15,
+            select: 'evt-sanity-return'
           }
         ],
       },
       {
         optional: true,
         reqCharFlags: '+cultist -special -abomination',
-        reqTempFlags: {abominationVictim:false},
-        setTempFlags: {abominationVictim:true},
+        reqTempFlags: '-abominationVictim',
+        setTempFlags: '+abominationVictim',
         text: "txt-evt-sanity-abomination-attackUnit-3",
         report: "txt-evt-sanity-abomination-attackUnit-report-3",
         storeCharacter: true,
@@ -404,26 +421,44 @@ config.entities.add([
         optional: true,
         text: "txt-evt-sanity-abomination-attackUnit-4",
          report: "txt-evt-sanity-abomination-attackUnit-report-4",
-        reqCharFlags: {abomination:true},
+        reqCharFlags: '+abomination',
         removeCharacter: true,
         reqPartyCount:'0..1',
         actions: {
           actionText: "txt-evt-cave-ghostsQuest-action",
-          combat: [ {slots:1, 'emy-abomination':1}, ],
+          combat: {
+            refs: [{slots:1, 'emy-abomination':1}], 
+            win: 'evt-sanity-abomination-combat-win', 
+            flee: 'evt-sanity-abomination-combat-flee'
+          }
         },
       },
     ],
   },
+  {
+    id: 'evt-sanity-abomination-combat-win',
+    loot: {
+      items: {},
+      cancel: 'evt-sanity-abomination-afterCombat',
+      close: 'evt-sanity-abomination-afterCombat'
+    }
+  },
+  {
+    id: 'evt-sanity-abomination-combat-flee',
+    sanity: -20,
+    select: 'evt-sanity-abomination-afterCombat'
+  },
   { 
     id: 'evt-sanity-abomination-afterCombat',
     text: "txt-evt-sanity-abomination-afterCombat",
+    select: 'evt-sanity-return'
   },
   { 
     id: 'evt-sanity-cultist-leaveForMission',
     //chat: 'cl-replace',
     reqFixture: {flags:'+mission', range:'..80'},
     replaceFixtures: {range: '..80', old:'fxt-mission', new:'fxt-mission-cultist'},
-    charEffects: [
+    charEvents: [
       {
         reqCharFlags: '+cultist',
         text: "txt-evt-sanity-cultist-leaveForMission",
@@ -431,13 +466,14 @@ config.entities.add([
         setCharFlags: '+missionTakeover',
         storeCharacter: true,
       }
-    ]
+    ],
+    select: 'evt-sanity-return'
   },
   { 
     id: 'evt-sanity-positive-flavor-camp',
     chat: 'cl-generic',
     text: "txt-evt-sanity-positive-flavor-camp",
-    charEffects: [
+    charEvents: [
       {
         optional: true,
         reqCharFlags: '+angry',
@@ -463,7 +499,8 @@ config.entities.add([
         reqCharFlags: '+brave',
         text: "txt-evt-sanity-positive-flavor-camp-5"
       }
-    ]
+    ],
+    select: 'evt-sanity-return'
   },
   { 
     id: 'evt-sanity-positive-fame-stars',
@@ -471,7 +508,7 @@ config.entities.add([
     reqMaxPerWorld: 1,
     text: "txt-evt-sanity-positive-fame-stars",
     fame: +10,
-    charEffects: [
+    charEvents: [
       {
         optional: true,
         reqCharFlags: '+native',
@@ -483,12 +520,13 @@ config.entities.add([
         reqCharFlags: '+superstitious',
         text: "txt-evt-sanity-positive-fame-stars-2"
       },
-    ]
+    ],
+    select: 'evt-sanity-return'
   },
   { 
     id: 'evt-sanity-positive-native',
     chat: 'cl-generic',
-    charEffects: [
+    charEvents: [
       {
         count: 'any',
         reqCharFlags: '+native',
@@ -500,51 +538,56 @@ config.entities.add([
         reqCharFlags: '+spiritual',
         text: "txt-evt-sanity-positive-native-1"
       }
-    ]
+    ],
+    select: 'evt-sanity-return'
   },
   { 
     id: 'evt-sanity-positive-playing',
     chat: 'cl-generic',
-    charEffects: {
+    charEvents: {
       count: 2,
       reqCharFlags: '-special +humanoid',
       reqStatus: '-racist',
       text: "txt-evt-sanity-positive-playing",
     },
+    select: 'evt-sanity-return'
   },
   { 
     id: 'evt-sanity-positive-flavor-diary',
     chat: 'cl-generic',
     text: "txt-evt-sanity-positive-flavor-diary",
-    charEffects: {
+    charEvents: {
       reqCharFlags: '+humanoid -special',
       reqLoyalty: '2..',
       text: "txt-evt-sanity-positive-flavor-diary-1"
-    }
+    },
+    select: 'evt-sanity-return'
   },
   { 
     id: 'evt-sanity-positive-acknowledge',
     chat: 'cl-generic',
-    charEffects: {
+    charEvents: {
       reqCharFlags: '+humanoid -special',
       reqLoyalty: '3..',
       text: "txt-evt-sanity-positive-acknowledge",
-    }
+    },
+    select: 'evt-sanity-return'
   },
   { 
     id: 'evt-sanity-positive-memory',
-    storeEffects: {
+    storeEvents: {
       reqCharFlags: '+humanoid',
       reqLoyalty: '2..',
       reqAge: '20..',
       reqLevel: '1..',
       text: "txt-evt-sanity-positive-memory"
-    }
+    },
+    select: 'evt-sanity-return'
   },
   {
     id: 'evt-sanity-positive-cook',
     reqMaxPerWorld: 1,
-    charEffects: [
+    charEvents: [
       {
         reqCharFlags: '+cook',
         reqLoyalty: '1..',
@@ -556,12 +599,13 @@ config.entities.add([
         reqStatus: '+injured',
         health: +5
       }
-    ]
+    ],
+    select: 'evt-sanity-return'
   },
   { 
     id: 'evt-sanity-positive-nativeScout',
     chat: 'cl-generic',
-    charEffects: [
+    charEvents: [
       {
         reqCharFlags: '+scout',
         reqLoyalty: '1..',
@@ -575,13 +619,14 @@ config.entities.add([
         reqStatus: '+racist',
         text: "txt-evt-sanity-positive-nativeScout-1"
       }
-    ]
+    ],
+    select: 'evt-sanity-return'
   },
   { 
     id: 'evt-sanity-positive-nativeWarrior',
     chat: 'cl-generic',
     reqMaxPerWorld: 1,
-    charEffects: [
+    charEvents: [
       {
         reqCharFlags: '+nativeWarrior',
         reqLoyalty: '1..',
@@ -596,13 +641,14 @@ config.entities.add([
         reqCharFlags: '+cook',
         text: "txt-evt-sanity-positive-nativeWarrior-1"
       }
-    ]
+    ],
+    select: 'evt-sanity-return'
   },
   { 
     id: 'evt-sanity-positive-nativeShaman',
     chat: 'cl-generic',
     reqMaxPerWorld: 1,
-    charEffects: {
+    charEvents: {
       reqCharFlags: '+nativeShaman',
       reqLoyalty: '1..',
       text: "txt-evt-sanity-positive-nativeShaman",
@@ -611,24 +657,26 @@ config.entities.add([
         {slots:1, 'it-mushroom-status':2},
         {slots:1, 'it-mushroom-view':2}
       ]
-    }
+    },
+    select: 'evt-sanity-return'
   },
   { 
     id: 'evt-sanity-positive-sailor',
     chat: 'cl-generic',
     reqMaxPerWorld: 1,
-    charEffects: {
+    charEvents: {
       reqCharFlags: '+sailor',
       reqLoyalty: '1..',
       text: "txt-evt-sanity-positive-sailor",
       items: [{slots:1, 'it-whisky':2}]
-    }
+    },
+    select: 'evt-sanity-return'
   },
   { 
     id: 'evt-sanity-positive-missionary',
     reqMaxPerWorld: 1,
     chat: 'cl-generic',
-    charEffects: [
+    charEvents: [
       {
         reqCharFlags: '+missionary',
         reqLoyalty: '1..',
@@ -644,25 +692,27 @@ config.entities.add([
         report: "txt-evt-sanity-positive-missionary-report-1",
         loyalty: +1
       }
-    ]
+    ],
+    select: 'evt-sanity-return'
   },
   { 
     id: 'evt-sanity-positive-soldierBritish',
     reqMaxPerWorld: 1,
     chat: 'cl-generic',
-    charEffects: {
+    charEvents: {
       reqCharFlags: '+soldierBritish',
       reqLoyalty: '1..',
       items: {'it-markedAmmo':3},
       text: "txt-evt-sanity-positive-soldierBritish",
       report: "txt-evt-sanity-positive-soldierBritish-report"
-    }
+    },
+    select: 'evt-sanity-return'
   },
   { 
     id: 'evt-sanity-positive-animalHandler',
     reqMaxPerWorld: 1,
     chat: 'cl-generic',
-    charEffects: [
+    charEvents: [
       {
         reqCharFlags: '+nativeAnimalHandler',
         reqLoyalty: '1..',
@@ -675,7 +725,8 @@ config.entities.add([
         text: "txt-evt-sanity-positive-animalHandler-1",
         report: "txt-evt-sanity-positive-animalHandler-report-1",
       }
-    ]
+    ],
+    select: 'evt-sanity-return'
   },
   { 
     id: 'evt-sanity-positive-trader',
@@ -684,18 +735,19 @@ config.entities.add([
     reqFixture: {flags:'+trader', fixtureKnown:false, range:'..100'},
     posTile: {fixtureFlags:'+trader', fixtureKnown:false, closest:true},
     revealTiles: {radius:1, fixture:true},
-    charEffects: {
+    charEvents: {
       reqCharFlags: '+trader',
       reqLoyalty: '1..',
       text: "txt-evt-sanity-positive-trader"
     },
+    select: 'evt-sanity-return'
   },
 
   { 
     id: 'evt-sanity-flavor-lowSanity',
     chat: 'cl-generic',
     text: "txt-evt-sanity-flavor-lowSanity",
-    charEffects: [
+    charEvents: [
       {
         reqCharFlags: '-special +humanoid'
       },
@@ -719,10 +771,11 @@ config.entities.add([
         text: "txt-evt-sanity-flavor-lowSanity-3"
       }
     ],
+    select: 'evt-sanity-return'
   },
   { 
     id: 'evt-sanity-jungleRot',
-    charEffects: [
+    charEvents: [
       {
         reqCharFlags: '-special +humanoid',
         text: "txt-evt-sanity-jungleRot",
@@ -734,6 +787,7 @@ config.entities.add([
         chat: 'cl-disgust'
       }
     ],
+    select: 'evt-sanity-return'
   },
   { 
     id: 'evt-sanity-nativeVisit-init',
@@ -744,22 +798,22 @@ config.entities.add([
       nativeVisitShaman:false, 
       nativeVisitAnimalHandler:false
     },
-    events: [
+    select: [
       {
         setPartyFlags: '+nativeVisitWarrior', 
-        events: 'evt-sanity-nativeVisit'
+        select: 'evt-sanity-nativeVisit'
       },
       {
         setPartyFlags: '+nativeVisitScout', 
-        events: 'evt-sanity-nativeVisit'
+        select: 'evt-sanity-nativeVisit'
       },
       {
         setPartyFlags: '+nativeVisitShaman', 
-        events: 'evt-sanity-nativeVisit'
+        select: 'evt-sanity-nativeVisit'
       },
       {
         setPartyFlags: '+nativeVisitAnimalHandler', 
-        events: 'evt-sanity-nativeVisit'
+        select: 'evt-sanity-nativeVisit'
       }
     ]
   },
@@ -769,7 +823,7 @@ config.entities.add([
     text: "txt-evt-sanity-nativeVisit",
     report: "txt-evt-sanity-nativeVisit-report",
     setWorldFlags: '+nativeVisit',
-    partyEffects: [
+    partyEvents: [
       { ref: 'evt-setImage-nightCamp' },
       {
         optional: true,
@@ -809,7 +863,7 @@ config.entities.add([
       },
     ],
 
-    charEffects: [
+    charEvents: [
       {
         optional: true,
         reqStatus: {'st-racist':true},
@@ -827,7 +881,7 @@ config.entities.add([
     id: 'evt-sanity-nativeVisit-invite',
     actionText: "txt-evt-sanity-nativeVisit-invite-action",
     report: "txt-evt-sanity-nativeVisit-invite-report",
-    charEffects: [
+    charEvents: [
       {
         text: "txt-evt-sanity-nativeVisit-invite",
       },
@@ -857,7 +911,7 @@ config.entities.add([
         report: "txt-evt-sanity-nativeVisit-invite-report-2",
         reqTileFlags: '-recruit',
         setTileFlags: '+recruit',
-        events: [
+        select: [
           {
             reqPartyFlags: {nativeVisitWarrior: true},
             addCharacter: {
@@ -866,7 +920,7 @@ config.entities.add([
               setStatus: {'st-homesick':true}
             },
             chat: 'cl-join-nativeWarrior',
-            events: 'evt-sanity-nativeVisit-invite',
+            select: 'evt-sanity-nativeVisit-invite',
           },
           {
             reqPartyFlags: {nativeVisitScout: true},
@@ -876,7 +930,7 @@ config.entities.add([
               setStatus: {'st-homesick':true}
             },
             chat: 'cl-join-nativeScout',
-            events: 'evt-sanity-nativeVisit-invite',
+            select: 'evt-sanity-nativeVisit-invite',
           },
           {
             reqPartyFlags: {nativeVisitShaman: true},
@@ -886,7 +940,7 @@ config.entities.add([
               setStatus: {'st-homesick':true}
             },
             chat: 'cl-join-nativeShaman',
-            events: 'evt-sanity-nativeVisit-invite',
+            select: 'evt-sanity-nativeVisit-invite',
           },
           {
             reqPartyFlags: {nativeVisitAnimalHandler: true},
@@ -896,32 +950,34 @@ config.entities.add([
               setStatus: {'st-homesick':true}
             },
             chat: 'cl-join-nativeAnimalHandler',
-            events: 'evt-sanity-nativeVisit-invite',
+            select: 'evt-sanity-nativeVisit-invite',
           },
         ],
       },
       {
         actionText: "txt-evt-mission-sleep-action",
         text: "txt-pl-native-animalHandler",
+        select: 'evt-sanity-return'
       }
     ],
   },
   { 
     id: 'evt-sanity-nativeVisit-sendAway',
     actionText: "txt-evt-sanity-nativeVisit-sendAway-action",
-    charEffects: {
+    charEvents: {
       optional: true,
       reqCharFlags: '+translator -special',
       text: "txt-evt-sanity-nativeVisit-sendAway",
     },
-     text: "txt-evt-sanity-nativeVisit-sendAway-1",
-     report: "txt-evt-sanity-nativeVisit-sendAway-report",
+    text: "txt-evt-sanity-nativeVisit-sendAway-1",
+    report: "txt-evt-sanity-nativeVisit-sendAway-report",
+    select: 'evt-sanity-return'
   },
   {
     id: 'evt-sanity-flavor-drums',
     chat: 'cl-generic',
     text: "txt-evt-sanity-flavor-drums",
-    charEffects: [
+    charEvents: [
       {
         optional: true, chance: 0.5,
         text: "txt-evt-sanity-flavor-drums-1"
@@ -932,22 +988,24 @@ config.entities.add([
         text: "txt-evt-sanity-flavor-drums-2"
       }
     ],
+    select: 'evt-sanity-return'
   },
   {
     id: 'evt-sanity-flavor-history',
     reqMaxPerWorld: 1,
     chat: 'cl-generic',
     text: "txt-evt-sanity-flavor-history",
-    storeEffects: {
+    storeEvents: {
       reqCharFlags: '+humanoid +native +stayHome',
       text: "txt-evt-sanity-flavor-history-1"
-    }
+    },
+    select: 'evt-sanity-return'
   },
   {
     id: 'evt-sanity-flavor-cook',
     reqMaxPerWorld: 1,
     chat: 'cl-generic',
-    charEffects: [
+    charEvents: [
       {
         reqCharFlags: '+cook',
         reqLoyalty: '1..',
@@ -961,23 +1019,25 @@ config.entities.add([
         reqCharFlags: '+witty',
         text: "txt-evt-sanity-flavor-cook-1"
       }
-    ]
+    ],
+    select: 'evt-sanity-return'
   },
   {
     id: 'evt-sanity-flavor-memory-nightmare',
-    storeEffects: [
+    storeEvents: [
       {
         reqCharFlags: '+humanoid',
         text: "txt-evt-sanity-flavor-memory-nightmare"
       }
-    ]
+    ],
+    select: 'evt-sanity-return'
   },
   {
     id: 'evt-sanity-flavor-childhood',
     chat: 'cl-generic',
     reqMaxPerWorld: 1,
     text: "txt-evt-sanity-flavor-childhood",
-    charEffects: [
+    charEvents: [
       {
         reqCharFlags: '-special -native +humanoid',
         text: "txt-evt-sanity-flavor-childhood-1",
@@ -1009,39 +1069,43 @@ config.entities.add([
         reqLoyalty: '..1',
         text: "txt-evt-sanity-flavor-childhood-5"
       }
-    ]
+    ],
+    select: 'evt-sanity-return'
   },
   {
     id: 'evt-sanity-flavor-missionary',
     chat: 'cl-generic',
     reqMaxPerWorld: 1,
-    charEffects: {
+    charEvents: {
       reqCharFlags: '+missionary',
       reqLoyalty: '1..',
       text: "txt-evt-sanity-flavor-missionary",
-    }
+    },
+    select: 'evt-sanity-return'
   },
   {
     id: 'evt-sanity-flavor-lastExpedition',
     chat: 'cl-generic',
     reqWorld: '5..',
     reqMaxPerWorld: 1,
-    charEffects: {
+    charEvents: {
       reqCharFlags: '-special +humanoid +veteran',
       reqLoyalty: '1..',
       text: "txt-evt-sanity-flavor-lastExpedition",
-    }
+    },
+    select: 'evt-sanity-return'
   },
   {
     id: 'evt-sanity-flavor-romance',
     chat: 'cl-generic',
     reqMaxPerWorld: 1,
     text: "txt-evt-sanity-flavor-romance",
-    charEffects: {
+    charEvents: {
       count: 2,
       reqCharFlags: '-special +humanoid',
       text: "txt-evt-sanity-flavor-romance-1"
-    }
+    },
+    select: 'evt-sanity-return'
   },
   {
     id: 'evt-sanity-flavor-gorillas',
@@ -1049,6 +1113,7 @@ config.entities.add([
     reqMaxPerWorld: 1,
     reqPartyFlags: '+gorillaCombat',
     text: "txt-evt-sanity-flavor-gorillas",
+    select: 'evt-sanity-return'
   },
   {
     id: 'evt-sanity-flavor-desert',
@@ -1056,11 +1121,12 @@ config.entities.add([
     reqMaxPerWorld: 1,
     reqBiomeFlags: '+desert',
     text: "txt-evt-sanity-flavor-desert",
-    partyEffects: {
+    partyEvents: {
       optional: true,
       reqItems: {'it-water':1},
       text: "txt-evt-sanity-flavor-desert-water"
-    }
+    },
+    select: 'evt-sanity-return'
   },
   {
     id: 'evt-sanity-flavor-temples',
@@ -1068,6 +1134,7 @@ config.entities.add([
     reqMaxPerWorld: 1,
     text: "txt-evt-sanity-flavor-temples",
     report: "txt-evt-sanity-flavor-temples-report",
+    select: 'evt-sanity-return'
   },
   {
     id: 'evt-sanity-flavor-magneticMountains',
@@ -1076,6 +1143,7 @@ config.entities.add([
     reqFixture: {flags:'+magnetic', range:'..10'},
     text: "txt-evt-sanity-flavor-magneticMountains",
     report: "txt-evt-sanity-flavor-magneticMountains-report",
+    select: 'evt-sanity-return'
   },
   {
     id: 'evt-sanity-flavor-patternMatching',
@@ -1084,6 +1152,7 @@ config.entities.add([
     reqWorld: '1..',
     reqBiomeFlags: '-desert',
     text: "txt-evt-sanity-flavor-patternMatching",
+    select: 'evt-sanity-return'
   },
   {
     id: 'evt-sanity-flavor-stoneOverhang',
@@ -1091,7 +1160,8 @@ config.entities.add([
     reqMaxPerWorld: 1,
     reqFixtureFlags: '+overhang',
     text: "txt-evt-sanity-flavor-stoneOverhang",
-    report: "txt-evt-sanity-flavor-stoneOverhang-report"
+    report: "txt-evt-sanity-flavor-stoneOverhang-report",
+    select: 'evt-sanity-return'
   },
   {
     id: 'evt-sanity-flavor-waterfall',
@@ -1099,23 +1169,25 @@ config.entities.add([
     reqMaxPerWorld: 1,
     reqFixtureFlags: '+waterfall',
     text: "txt-evt-sanity-flavor-waterfall",
-    charEffects: {
+    charEvents: {
       optional: true,
       reqCharFlags: '+humanoid -special',
       reqLoyalty: '1..',
       text: "txt-evt-sanity-flavor-waterfall-1"
-    }
+    },
+    select: 'evt-sanity-return'
   },
   {
     id: 'evt-sanity-flavor-tesla',
     reqMaxPerWorld: 1,
     reqExplorer: 'sp-tesla',
-    text: "txt-evt-sanity-flavor-tesla"
+    text: "txt-evt-sanity-flavor-tesla",
+    select: 'evt-sanity-return'
   },
   {
     id: 'evt-sanity-flavor-arctic-snowBlind',
     reqBiomeFlags: '+arctic',
-    charEffects: [
+    charEvents: [
       {
         reqCharFlags: '+special',
         text: "txt-evt-sanity-flavor-arctic-snowBlind"
@@ -1124,33 +1196,36 @@ config.entities.add([
         reqCharFlags: '+humanoid -special -abomination -native',
         text: "txt-evt-sanity-flavor-arctic-snowBlind-1",
       }
-    ]
-
+    ],
+    select: 'evt-sanity-return'
   },
 
   {
     id: 'evt-sanity-flavor-homeworld',
     reqMaxPerWorld: 1,
-    charEffects: {
+    charEvents: {
       reqStatus: '+homesick',
       text: "txt-evt-sanity-flavor-homeworld"
-    }
+    },
+    select: 'evt-sanity-return'
   },
   {
     id: 'evt-sanity-flavor-mountainFace',
     reqMaxPerWorld: 1,
     reqFixture: {flags:'+mountainFace', range:'..15', fixtureKnown:true},
-    text: "txt-evt-sanity-flavor-mountainFace"
+    text: "txt-evt-sanity-flavor-mountainFace",
+    select: 'evt-sanity-return'
   },
   {
     id: 'evt-sanity-flavor-sticks',
     reqMaxPerWorld: 1,
     reqFixture: {flags:'+sticks', range:'..15', fixtureKnown:true, count:'2..'},
-    text: "txt-evt-sanity-flavor-sticks"
+    text: "txt-evt-sanity-flavor-sticks",
+    select: 'evt-sanity-return'
   },
   {
     id: 'evt-sanity-flavor-angry',
-    charEffects: [
+    charEvents: [
       {
         reqLoyalty: '1..',
         reqCharFlags: '+humanoid -abomination -special',
@@ -1160,11 +1235,12 @@ config.entities.add([
         reqLoyalty: '0',
         text: "txt-evt-sanity-flavor-angry-1"
       }
-    ]
+    ],
+    select: 'evt-sanity-return'
   },
   {
     id: 'evt-sanity-alcohol',
-    charEffects: {
+    charEvents: {
       reqStatus: {'st-alcoholic':true}, 
       reqItems: {'it-whisky':1},
       items: {'it-whisky':-1},
@@ -1178,6 +1254,7 @@ config.entities.add([
           report: "txt-evt-sanity-alcohol-report-1",
           sanity: -10,
           loyalty: -1,
+          select: 'evt-sanity-return'
         },
         {
           actionText: "txt-evt-sanity-alcohol-action-1",
@@ -1186,11 +1263,12 @@ config.entities.add([
           sanity: 10,
           loyalty: +1,
           compassScore: malusAlcohol,
-          charEffects: {
+          charEvents: {
             optional:true, count: 'any',
             reqStatus: {'pk-sanityDrinking-1':true},
             sanity: {base:0, bonus:'whiskyBonus'},
           },
+          select: 'evt-sanity-return'
         },
       ]
     },
@@ -1199,7 +1277,7 @@ config.entities.add([
     id: 'evt-sanity-positive-translator',
     chat: 'cl-generic',
     reqMaxPerWorld: 1,
-    charEffects: {
+    charEvents: {
       reqCharFlags: '+translator -special',
       text: "txt-evt-sanity-positive-translator",
     },
@@ -1208,28 +1286,31 @@ config.entities.add([
         actionText: "txt-evt-sanity-positive-translator-action",
         text: "txt-evt-sanity-positive-translator-yes",
         sanity: -10,
-        charEffects: {reqCharFlags: '+translator -special', loyalty: +1}
+        charEvents: {reqCharFlags: '+translator -special', loyalty: +1},
+        select: 'evt-sanity-return'
       },
       {
         actionText: "txt-evt-sanity-positive-translator-action-1",
         text: "txt-evt-sanity-positive-translator-no",
+        select: 'evt-sanity-return'
       }
     ]
   },
   {
      id: 'evt-sanity-nativeBond',
      chat: 'cl-generic',
-     charEffects: {
+     charEvents: {
        reqCharFlags: '+native',
        reqStatusDayAge: {ref:'st-homesick', age:'20..'},
        reqLoyalty: '1..',
        loyalty: +1,
        text: "txt-evt-sanity-nativeBond",
-     }
+     },
+     select: 'evt-sanity-return'
   },
   {
     id: 'evt-sanity-cannibal',
-    charEffects: [
+    charEvents: [
       {
         reqCharFlags: '+humanoid -special -abomination',
         reqStatus: '+cannibal',
@@ -1246,6 +1327,7 @@ config.entities.add([
         setCharFlags: '+dead',
       },
     ],
+    select: 'evt-sanity-return'
   },
   { 
     id: 'evt-sanity-nativeGhosts',
@@ -1267,28 +1349,31 @@ config.entities.add([
         posTile: {range: '5..20', tileKnown: false, tiles: 'tl-mountain'},
         addFixture: {ref:'fxt-cave-ghostsQuest'},
         revealTiles: {radius:1, fixture:true, centerCam:true, particle: 'pt-magic-reveal'},
+        select: 'evt-sanity-return'
       },
       {
         actionText: "txt-pl-cultist-action",
         text: "txt-evt-sanity-nativeGhosts-2",
         karma: -10,
+        select: 'evt-sanity-return'
       }
     ]
   },
   {
     id: 'evt-sanity-kleptomania-stealItem',
     chat: 'cl-generic',
-    charEffects: {
+    charEvents: {
       reqStatus: '+kleptomania',
       text: "txt-evt-sanity-kleptomania-stealItem",
     },
     reqItemsValue: '5..',
     dropItems: 5,
+    select: 'evt-sanity-return'
   },
   {
     id: 'evt-sanity-kleptomania-conflict',
     chat: 'cl-generic',
-    charEffects: [
+    charEvents: [
       {
         // need to make sure that we don't select same guy twice
         reqCharFlags: '-special +humanoid',
@@ -1300,6 +1385,7 @@ config.entities.add([
           text: "txt-evt-sanity-kleptomania-conflict-1",
           report: "txt-evt-sanity-kleptomania-conflict-report-1",
           loyalty: -1,
+          select: 'evt-sanity-return'
         },
       },
       {
@@ -1311,6 +1397,7 @@ config.entities.add([
           text: "txt-evt-sanity-kleptomania-conflict-3",
           report: "txt-evt-sanity-kleptomania-conflict-report-3",
           loyalty: -1,
+          select: 'evt-sanity-return'
         },
       },
     ],
@@ -1318,7 +1405,7 @@ config.entities.add([
   { 
     id: 'evt-sanity-nightmare', 
     chat: 'cl-generic',
-    charEffects: {
+    charEvents: {
       reqStatus: '+paranoid | +superstitious',
       setCharFlags: '+paranoidEvent',
       text: "txt-evt-sanity-nightmare",
@@ -1329,17 +1416,18 @@ config.entities.add([
         actionText: "txt-generic-ignore",
         sanity: -15,
         text: "txt-evt-sanity-nightmare-1",
-        charEffects: {
+        charEvents: {
           optional: true, // so that the preconditions are fullfilled for basic check
           reqCharFlags: '+humanoid -special -paranoidEvent',
           loyalty: -1,
           text: "txt-evt-sanity-nightmare-2",
         },
         report: "txt-evt-sanity-nightmare-report-1",
+        select: 'evt-sanity-return'
       },
       {
         actionText: "txt-evt-sanity-nightmare-action",
-        charEffects: {
+        charEvents: {
           reqCharFlags: '+paranoidEvent',
           text: "txt-evt-sanity-nightmare-3",
           report: "txt-evt-sanity-nightmare-report-2",
@@ -1347,23 +1435,25 @@ config.entities.add([
         reqDice: 'mind',
         winEvents: [
           {
-            charEffects:{
+            charEvents:{
               reqCharFlags: '+paranoidEvent',
               setCharFlags: '-paranoidEvent',
               loyalty: -1,
               text: "txt-evt-sanity-nightmare-4",
             },
+            select: 'evt-sanity-return'
           },
         ],
         failEvents: [
           {
-            charEffects:{
+            charEvents:{
               reqCharFlags: '+paranoidEvent',
               text: "txt-evt-sanity-nightmare-5",
               report: "txt-evt-sanity-nightmare-report-3",
               storeCharacter: true,
               setCharFlags: '-paranoidEvent +dead',
             },
+            select: 'evt-sanity-return'
           },
         ]
       },
@@ -1371,8 +1461,8 @@ config.entities.add([
   },
   {
     id: 'evt-noSanity-racist',
-    partyEffects: { ref: 'evt-setImage-nightCamp' },
-    charEffects: [
+    partyEvents: { ref: 'evt-setImage-nightCamp' },
+    charEvents: [
       {
         reqStatus: '+racist',
         text: "txt-evt-noSanity-racist",
@@ -1394,17 +1484,18 @@ config.entities.add([
     actionText: "txt-evt-harbor-countTrek-action",
     text: "txt-evt-conflict-racist-dismiss",
     report: "txt-evt-conflict-racist-dismiss-report",
-    charEffects: {
+    charEvents: {
       optional: true,
       reqStatus: '+racist',
       chat: 'cl-racist-confirmation',
     },
     storeCharacter: true,
+    select: 'evt-sanity-return'
   },
   {
     id: 'evt-sanity-fight',  
     chat: 'sanityFightBurton',
-    charEffects: [
+    charEvents: [
       {
         count: 2,
         reqCharFlags: '+humanoid -special',
@@ -1435,23 +1526,25 @@ config.entities.add([
       text: "txt-evt-sanity-fight-3",
       items: {'it-chocolate':-2},
       sanity: +10,
+      select: 'evt-sanity-return'
     },
   },
   { 
     id: 'evt-sanity-paranoid',
     chat: 'cl-generic',
-    charEffects: {
+    charEvents: {
       reqStatus: '+paranoid',
       text: "txt-evt-sanity-paranoid",
       report: "txt-evt-sanity-paranoid-report",
       loyalty: -1
     },
+    select: 'evt-sanity-return',
     sanity: -10,
   },
 
   { 
     id: 'evt-sanity-apply-paranoid',
-    charEffects: {
+    charEvents: {
       reqCharFlags: '-special +humanoid -abomination',
       reqStatus: '-paranoid -blessingPureMind',
       text: "txt-evt-sanity-apply-paranoid",
@@ -1459,10 +1552,11 @@ config.entities.add([
       chat: 'cl-apply-paranoid',
       setStatus: '+paranoid',
     },
+    select: 'evt-sanity-return'
   },
   {
     id: 'evt-sanity-apply-claustrophobic',
-    charEffects: {
+    charEvents: {
       reqStatus: '-blessingPureMind -claustrophobic',
       reqFixtureFlags: '+overhang',
       reqCharFlags: '+humanoid -special -abomination',
@@ -1471,11 +1565,12 @@ config.entities.add([
       text: "txt-evt-sanity-apply-claustrophobic",
       report: "txt-evt-sanity-apply-claustrophobic-report",
     },
+    select: 'evt-sanity-return'
   },
   {
     id: 'evt-sanity-apply-lepidopterophobia',
     reqWorldFlags: '+jungle',
-    charEffects: {
+    charEvents: {
       reqStatus: '-blessingPureMind -lepidopterophobia',
       reqCharFlags: '+humanoid -special -abomination',
       setStatus: '+lepidopterophobia',
@@ -1483,10 +1578,11 @@ config.entities.add([
       text: "txt-evt-sanity-apply-lepidopterophobia",
       report: "txt-evt-sanity-apply-lepidopterophobia-report",
     },
+    select: 'evt-sanity-return'
   },
   {
     id: 'evt-sanity-apply-acrophobia',
-    charEffects: {
+    charEvents: {
       reqStatus: '-blessingPureMind -acrophobia',
       reqFixtureFlags: '+springs',
       reqCharFlags: '+humanoid -special -abomination',
@@ -1495,11 +1591,12 @@ config.entities.add([
       text: "txt-evt-sanity-apply-acrophobia",
       report: "txt-evt-sanity-apply-acrophobia-report",
     },
+    select: 'evt-sanity-return'
   },
   {
     id: 'evt-sanity-apply-dendrophobia',
     reqWorldFlags: '+jungle',
-    charEffects: {
+    charEvents: {
       reqStatus: '-blessingPureMind -dendrophobia',
       reqCharFlags: '+humanoid -special -abomination',
       reqFixtureFlags: '-springs -overhang',
@@ -1509,10 +1606,11 @@ config.entities.add([
       report: "txt-evt-sanity-apply-dendrophobia-report",
       health: -2,
     },
+    select: 'evt-sanity-return'
   },
   {
     id: 'evt-sanity-apply-kleptomania',
-    charEffects: {
+    charEvents: {
       reqStatus: '-blessingPureMind -kleptomania',
       reqCharFlags: '+humanoid -special -abomination',
       setStatus: '+kleptomania',
@@ -1523,7 +1621,7 @@ config.entities.add([
   },
   {
     id: 'evt-sanity-apply-pyromaniac',
-    charEffects: {
+    charEvents: {
       reqStatus: '-blessingPureMind -pyromaniac',
       reqCharFlags: '+humanoid -special -abomination',
       text: "txt-evt-sanity-apply-pyromaniac",
@@ -1531,10 +1629,11 @@ config.entities.add([
       chat: 'cl-apply-pyromaniac',
       setStatus: '+pyromaniac',
     },
+    select: 'evt-sanity-return'
   },
   {
     id: 'evt-sanity-apply-bipolar',
-    charEffects: {
+    charEvents: {
       reqStatus: '-blessingPureMind -bipolar',
       reqCharFlags: '+humanoid -special -abomination',
       text: "txt-evt-sanity-apply-bipolar",
@@ -1542,52 +1641,58 @@ config.entities.add([
       chat: 'cl-apply-bipolar',
       setStatus: '+bipolar',
     },
+    select: 'evt-sanity-return'
   },
   {
     id: 'evt-sanity-apply-scurvy',
-    charEffects: {
+    charEvents: {
       text: "txt-evt-sanity-apply-scurvy",
       reqCharFlags: '-special +humanoid -abomination',
       setStatus: '+scurvy'
-    }
+    },
+    select: 'evt-sanity-return'
   },
   {
     id: 'evt-sanity-apply-sprained',
-    charEffects: {
+    charEvents: {
       text: "txt-evt-sanity-apply-sprained",
       reqCharFlags: '-special +humanoid -abomination',
       setStatus: '+sprained'
-    }
+    },
+    select: 'evt-sanity-return'
   },
   {
     id: 'evt-sanity-apply-hearingLoss',
     reqMaxPerWorld: 1,
-    charEffects: {
+    charEvents: {
       text: "txt-evt-sanity-apply-hearingLoss",
       reqCharFlags: '-special +humanoid -abomination',
       setStatus: '+hearingLoss'
-    }
+    },
+    select: 'evt-sanity-return'
   },
   {
     id: 'evt-sanity-apply-viewingLoss',
     reqMaxPerWorld: 1,
-    charEffects: {
+    charEvents: {
       text: "txt-evt-sanity-apply-viewingLoss",
       reqCharFlags: '-special +humanoid -abomination',
       setStatus: '+viewingLoss'
-    }
+    },
+    select: 'evt-sanity-return'
   },
   {
     id: 'evt-sanity-apply-pneumonia',
-    charEffects: {
+    charEvents: {
       text: "txt-evt-sanity-apply-pneumonia",
       reqCharFlags: '-special +humanoid -abomination',
       setStatus: '+pneumonia'
-    }
+    },
+    select: 'evt-sanity-return'
   },
   { 
     id: 'evt-sanity-alcoholic-turkey',
-    charEffects: {
+    charEvents: {
       reqStatus: '+alcoholic',
       text: "txt-evt-sanity-alcoholic-turkey",
       reqLoyalty: '1..2',
@@ -1599,11 +1704,13 @@ config.entities.add([
           items: {'it-whisky':-1},
           text: "txt-evt-sanity-alcoholic-turkey-1",
           loyalty: +1,
+          select: 'evt-sanity-return'
         },
         {
           actionText: "txt-st-kleptomania-idol-action-1",
           text: "txt-evt-sanity-alcoholic-turkey-2",
           loyalty: -3,
+          select: 'evt-sanity-return'
         }
       ],
     },
@@ -1612,15 +1719,15 @@ config.entities.add([
     id: 'evt-sanity-mummy',
     reqItems: {'it-mummy':1},
     playMusic: ['thm_nature_night_campfire_dark_2'], 
-    events: [
+    select: [
       {
         slots: 1, // Apply Paranoid
-        charEffects: {
+        charEvents: {
           reqStatus: '-paranoid',
           reqCharFlags: '-special',
           text: "txt-evt-sanity-mummy",
           report: "txt-evt-sanity-mummy-report",
-          charEffects: {
+          charEvents: {
             reqStatus: '-paranoid -blessingPureMind',
             reqCharFlags: '+humanoid -special',
             text: "txt-evt-sanity-mummy-1",
@@ -1639,9 +1746,9 @@ config.entities.add([
         actions: [
           {
             actionText: "txt-evt-cave-ghostsQuest-action",
-            combat: [ 
-              {slots:1, 'emy-mummy':1},
-            ],  
+            combat: {
+              refs:{'emy-mummy':1}, win: 'evt-sanity-loot-return', flee: 'evt-sanity-flee-return'
+            }
           }
         ],
       },
@@ -1656,9 +1763,9 @@ config.entities.add([
         actions: [
           {
             actionText: "txt-evt-cave-ghostsQuest-action",
-            combat: [ 
-              {slots:1, 'emy-mummy':2},
-            ],  
+            combat: {
+              refs:{'emy-mummy':1}, win: 'evt-sanity-loot-return', flee: 'evt-sanity-flee-return',
+            }
           }
         ],
       }
@@ -1667,8 +1774,21 @@ config.entities.add([
     
   },
   {
+    id: 'evt-sanity-loot-return',
+    loot:{
+      items:{},
+      cancel: 'evt-sanity-return',
+      close: 'evt-sanity-return'
+    }
+  },
+  {
+    id: 'evt-sanity-flee-return',
+    sanity: -20,
+    select: 'evt-sanity-return'
+  },
+  {
     id: 'evt-sanity-return-friend',
-    storeEffects: {
+    storeEvents: {
       reqAge: '15..',
       reqCharFlags: '+humanoid -imaginary -dead',
       reqLoyalty: '1..',
@@ -1680,19 +1800,21 @@ config.entities.add([
           report: "txt-evt-sanity-friendReturn-report",
           chat: 'cl-friendReturn',
           restoreCharacter: true,
-          loyalty: +1,    
+          loyalty: +1,
+          select: 'evt-sanity-return'
         },
         {
           actionText: "txt-evt-dismiss-default-action",
           text: "txt-evt-sanity-friendReturn-no",
           report: "txt-evt-sanity-friendReturn-report-1",
+          select: 'evt-sanity-return'
         }
       ]
     }
   },
   {
     id: 'evt-sanity-return-angryLeave',
-    storeEffects: {
+    storeEvents: {
       reqCharFlags: '-dead',
       reqLoyalty: '0',
       reqAge: '10..',
@@ -1705,11 +1827,13 @@ config.entities.add([
           chat: 'cl-angryReturn',
           restoreCharacter: true,
           loyalty: +2,
+          select: 'evt-sanity-return'
         },
         {
           actionText: "txt-evt-dismiss-default-action",
           text: "txt-evt-sanity-return-angryLeave-no",
           report: "txt-evt-sanity-return-angryLeave-report-1",
+          select: 'evt-sanity-return'
         }
       ]
     }
@@ -1718,20 +1842,21 @@ config.entities.add([
     id: 'evt-sanity-return-nativeCurse',
     chat: 'cl-generic',
     reqMaxPerWorld: 1,
-    storeEffects: {
+    storeEvents: {
       reqLoyalty: '0',
       reqCharFlags: '+native -dead',
       text: "txt-evt-sanity-angry-native",
     },
-    charEffects: {
+    charEvents: {
       reqCharFlags: '-special +humanoid',
       text: "txt-evt-sanity-angry-native-1",
       setStatus: '+deathCurse'
-    }
+    },
+    select: 'evt-sanity-return'
   },
   {
     id: 'evt-sanity-flavor-imaginary',
-    charEffects: [
+    charEvents: [
       { 
         reqCharFlags: '+imaginary',
         text: "txt-evt-sanity-flavor-imaginary",
@@ -1741,7 +1866,8 @@ config.entities.add([
         text: "txt-evt-sanity-flavor-imaginary-1",
         chat: 'cl-imaginary',
       }, 
-    ]
+    ],
+    select: 'evt-sanity-return'
   },
   {
     id: 'evt-sanity-helpNative-1',
@@ -1766,6 +1892,7 @@ config.entities.add([
         text: "txt-evt-sanity-helpNative-1-no",
         report: "txt-evt-sanity-helpNative-1-no-report",
         chat: 'cl-racist-confirmation',
+        select: 'evt-sanity-return'
       }
     ]
   },
@@ -1777,13 +1904,14 @@ config.entities.add([
     reqItems: {'it-firstAid':1}, alwaysShown: true,
     items: {'it-firstAid':-1},
     standing: +2,
-    events: [
+    select: [
       // {
       //   text:"txt-evt-sanity-helpNative-heal-firstAid-1",
-      //   events: ['evt-sanity-helpNative-recruit-scout','evt-sanity-helpNative-recruit-shaman','evt-sanity-helpNative-recruit-animalHandler'],
+      //   select: ['evt-sanity-helpNative-recruit-scout','evt-sanity-helpNative-recruit-shaman','evt-sanity-helpNative-recruit-animalHandler'],
       // },
       {  
         text:"txt-evt-sanity-helpNative-heal-firstAid-2",
+        select: 'evt-sanity-return'
       }, 
     ],
   },
@@ -1795,44 +1923,46 @@ config.entities.add([
     reqItems: {'it-mushroom-healing':1}, alwaysShown: true,
     items: {'it-mushroom-healing':-1},
     standing: +2,
-    events: [
+    select: [
       // {
       //   text:"txt-evt-sanity-helpNative-heal-mushroom-1",
-      //   events: ['evt-sanity-helpNative-recruit-scout','evt-sanity-helpNative-recruit-shaman','evt-sanity-helpNative-recruit-animalHandler'],
+      //   select: ['evt-sanity-helpNative-recruit-scout','evt-sanity-helpNative-recruit-shaman','evt-sanity-helpNative-recruit-animalHandler'],
       // },
       {  
         text:"txt-evt-sanity-helpNative-heal-mushroom-2",
+        select: 'evt-sanity-return'
       }, 
     ],
   },
   {
     id: 'evt-sanity-helpNative-2',
-    charEffects: {
+    charEvents: {
       count: 'all',
       reqCharFlags: '-nativeWarrior'
     },
-    events: {
+    select: {
       text:"txt-evt-sanity-helpNative-2",
       report: "txt-evt-sanity-helpNative-2-report",
+      partyEvents: { ref: 'evt-setImage-nightCamp' },
       chat: 'cl-helpNative-2',
       actions: [
         {
           actionText: "txt-evt-sanity-helpNative-2-action",
-          partyEffects: { ref: 'evt-setImage-nightCamp' },
           addCharacter: 'pl-native-warrior',
           chat: 'cl-join-nativeWarrior',
-          combat: [ 
-            {slots:1, reqWorld: '..1', 'emy-tiger':1},
-            {slots:1, reqWorld: '2..', 'emy-tiger':2},
-            {slots:1, reqWorld: '2..', 'emy-gorilla':1},
-            {slots:1, reqWorld: '3..', 'emy-crocodile':1},
-            {slots:1, 'emy-hyena':3},    
-          ],          
+          events: [ 
+            {slots:1, reqWorld: '..1', combat: { refs:{'emy-tiger':1}, win: 'evt-sanity-loot-return', flee: 'evt-sanity-flee-return'}},
+            {slots:1, reqWorld: '2..', combat: { refs:{'emy-tiger':2}, win: 'evt-sanity-loot-return', flee: 'evt-sanity-flee-return'}},
+            {slots:1, reqWorld: '2..', combat: { refs:{'emy-gorilla':1}, win: 'evt-sanity-loot-return', flee: 'evt-sanity-flee-return'}},
+            {slots:1, reqWorld: '3..', combat: { refs:{'emy-crocodile':1}, win: 'evt-sanity-loot-return', flee: 'evt-sanity-flee-return'}},
+            {slots:1, combat:{refs:{'emy-hyena':3}, win: 'evt-sanity-loot-return', flee: 'evt-sanity-flee-return'}},
+          ],
         },
         {
           actionText: "txt-st-kleptomania-idol-action-1",
           text: "txt-evt-sanity-helpNative-2-no",
           report: "txt-evt-sanity-helpNative-2-no-report",
+          select: 'evt-sanity-return'
         }
       ]
     },
@@ -1841,11 +1971,12 @@ config.entities.add([
     id: 'evt-sanity-helpNative-recruit',
     text: "txt-evt-sanity-helpNative-recruit",
     report: "txt-evt-sanity-helpNative-recruit-report",
+    select: 'evt-sanity-return'
   },
   {
     id: 'evt-sanity-helpNative-recruit-scout',
     text: "txt-evt-sanity-helpNative-recruit-scout",
-    charEffects: {
+    charEvents: {
       count: "all",
       reqCharFlags: {nativeScout:false},
     },
@@ -1856,17 +1987,19 @@ config.entities.add([
         addCharacter: 'pl-native-scout',
         chat: 'cl-join-nativeScout',
         text: "txt-evt-sanity-helpNative-recruit-scout-1",
+        select: 'evt-sanity-return'
       },
       {
         actionText: "txt-evt-harbor-recruit-action",
         text: "txt-evt-sanity-helpNative-recruit-scout-2",
+        select: 'evt-sanity-return'
       }, 
     ],
   }, 
   {
     id: 'evt-sanity-helpNative-recruit-warrior',
     text: "txt-evt-sanity-helpNative-recruit-warrior",
-    charEffects: {
+    charEvents: {
       count: "all",
       reqCharFlags: {nativeWarrior:false},
     },
@@ -1877,17 +2010,19 @@ config.entities.add([
         addCharacter: 'pl-native-warrior',
         chat: 'cl-join-nativeWarrior',
         text: "txt-evt-sanity-helpNative-recruit-warrior-1",
+        select: 'evt-sanity-return'
       },
       {
         actionText: "txt-evt-harbor-recruit-action",
         text: "txt-evt-sanity-helpNative-recruit-warrior-2",
+        select: 'evt-sanity-return'
       }, 
     ],
   },
   {
     id: 'evt-sanity-helpNative-recruit-shaman',
     text: "txt-evt-sanity-helpNative-recruit-shaman",
-    charEffects: {
+    charEvents: {
       count: "all",
       reqCharFlags: {nativeShaman:false},
     },
@@ -1898,17 +2033,19 @@ config.entities.add([
         addCharacter: 'pl-native-shaman',
         chat: 'cl-join-nativeShaman',
         text: "txt-evt-sanity-helpNative-recruit-shaman-1",
+        select: 'evt-sanity-return'
       },
       {
         actionText: "txt-evt-harbor-recruit-action",
         text: "txt-evt-sanity-helpNative-recruit-shaman-2",
+        select: 'evt-sanity-return'
       },
     ]
   },
   {
     id: 'evt-sanity-helpNative-recruit-animalHandler',
     text: "txt-evt-sanity-helpNative-recruit-animalHandler",
-    charEffects: {
+    charEvents: {
       count: "all",
       reqCharFlags: {nativeAnimalHandler:false},
     },
@@ -1919,10 +2056,12 @@ config.entities.add([
         addCharacter: 'pl-native-animalHandler',
         chat: 'cl-join-nativeAnimalHandler',
         text: "txt-evt-sanity-helpNative-recruit-animalHandler-1",
+        select: 'evt-sanity-return'
       },
       {
         actionText: "txt-evt-harbor-recruit-action",
         text: "txt-evt-sanity-helpNative-recruit-animalHandler-2",
+        select: 'evt-sanity-return'
       },
     ],
   },
@@ -1930,11 +2069,12 @@ config.entities.add([
     id: 'evt-sanity-helpNative-death',
     actionText: "txt-evt-sanity-helpNative-death-action",
     text:"txt-evt-sanity-helpNative-death",
+    select: 'evt-sanity-return'
   },
   { 
     id: 'evt-sanity-paranoid-rope',
     sanity: -10,
-    charEffects: [
+    charEvents: [
       {
         reqStatus: {'st-paranoid':true},optional:false,
         text: "txt-evt-sanity-paranoid-rope",
@@ -1945,18 +2085,20 @@ config.entities.add([
             winEvents: [
               {
                 text: "txt-evt-sanity-paranoid-rope-1",
+                select: 'evt-sanity-return'
               }
             ],
             failEvents: [
               {
                 text: "txt-evt-sanity-paranoid-rope-2",
-                charEffects: {
+                charEvents: {
                   optional: true,
                   text: "txt-evt-sanity-paranoid-rope-3",
                   reqCharFlags: '-special +humanoid',
                   reqStatus: '-paranoid', 
                   health: -4,
                 },
+                select: 'evt-sanity-return'
               },
             ],
           },
@@ -1965,6 +2107,7 @@ config.entities.add([
             reqItems: {'it-rope':1},
             text: "txt-evt-sanity-paranoid-rope-4",
             report: "txt-evt-sanity-paranoid-rope-report",
+            select: 'evt-sanity-return'
           },
         ],
       },
@@ -1976,7 +2119,7 @@ config.entities.add([
   { 
     id: 'evt-sanity-paranoid-racist',
     sanity: -10,
-    charEffects: [
+    charEvents: [
       {
         reqStatus: {'st-paranoid':true, 'st-racist':true},
         chat: 'cl-racist-paranoid',
@@ -1989,31 +2132,34 @@ config.entities.add([
         report: "txt-evt-sanity-paranoid-racist-report-1",
       },
     ],
+    select: 'evt-sanity-return'
   },
   { 
     id: 'evt-sanity-faithLost',
-    charEffects: {
+    charEvents: {
       reqPerk: '+spiritualSolidarity',
       setPerk: '-spiritualSolidarity',
       setCharFlags: '-missionary',
       text: "txt-evt-sanity-faithLost",
       report: "txt-evt-sanity-faithLost-report",
-    }
+    },
+    select: 'evt-sanity-return'
   },
   { 
     id: 'evt-sanity-positive-faithRegained',
-    charEffects: {
+    charEvents: {
       reqCharacter: 'pl-missionary',
       reqPerk: '-spiritualSolidarity',
       setPerk: '+spiritualSolidarity',
       setCharFlags: '+missionary',
       text: "txt-evt-sanity-positive-faithRegained",
       report: "txt-evt-sanity-positive-faithRegained-report",
-    }
+    },
+    select: 'evt-sanity-return'
   },
   { 
     id: 'evt-sanity-positive-notRacist',
-    charEffects: [
+    charEvents: [
       {
         reqStatus: '+racist',
         reqLevel: '2..',
@@ -2027,23 +2173,25 @@ config.entities.add([
         reqCharFlags: '+native',
         text: "txt-evt-sanity-positive-notRacist-native",
       }
-    ]
+    ],
+    select: 'evt-sanity-return'
   },
   { 
     id: 'evt-sanity-positive-goodStanding',
     reqMaxPerWorld: 1,
     text: "txt-evt-sanity-positive-goodStanding",
-    charEffects: {
+    charEvents: {
       reqCharFlags: '+native',
       reqStanding: '3..',
       reqLoyalty: '2..',
       items: {'it-nativeTrinket':1},
       text: "txt-evt-sanity-positive-goodStanding-1"
     },
+    select: 'evt-sanity-return'
   },
   {
     id: 'evt-sanity-timAlone',
-    charEffects: [
+    charEvents: [
       {
         reqCharFlags: '+tim',
         text: "txt-evt-sanity-timAlone",
@@ -2054,12 +2202,13 @@ config.entities.add([
         count: 'all',
         reqCharFlags: '-luis'
       }
-    ]
+    ],
+    select: 'evt-sanity-return'
   },
   {
     id: 'evt-sanity-arctic-frostbite',
     reqBiomeFlags: '+arctic',
-    charEffects: [
+    charEvents: [
       {
         optional: true,
         count: 'any',
@@ -2078,6 +2227,7 @@ config.entities.add([
         reqStatus: '+alcoholic',
         text: "txt-evt-sanity-arctic-frostbite-1"
       }
-    ]
+    ],
+    select: 'evt-sanity-return'
   },
 ])

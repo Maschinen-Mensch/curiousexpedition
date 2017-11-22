@@ -33,7 +33,8 @@ config.entities.add([
     text: "txt-evt-elephantGraveyard-explore",
     report: "txt-evt-elephantGraveyard-explore-report",
     chat: 'cl-scaryPlace',
-    partyEffects: {
+    setFixtureFlags: '+elephantGraveyard',
+    partyEvents: {
       optional: true,
       reqFixtureFlags: '+wildlife',
       text: 'txt-evt-leave-wildlife-hint'
@@ -47,14 +48,14 @@ config.entities.add([
       'thm_nature_mystic_2'
     ],
     actions: [
-      { ref:'evt-searchArea', pushEvent: 'evt-elephantGraveyard-searchOutcome' },
+      { ref:'evt-searchArea'},
       'evt-leave'
     ],
   },
   { 
     id: 'evt-elephantGraveyard-searchOutcome',
     setFixtureFlags: '+explored',
-    events: [
+    select: [
       {slots: 8, ref: 'evt-elephantGraveyard-searchOutcome-1'},
       {slots: 1, ref: 'evt-elephantGraveyard-searchOutcome-2'},
     ],

@@ -253,15 +253,15 @@ config.entities.add( [
     lines: [
       {
         text: "txt-cl-item-tinCan-refuse",
-        reqCharFlags: {humanoid:true, special:false},
+        reqCharFlags: '+humanoid -special',
       },
       {
         text: "txt-cl-item-tinCan-refuse-1",
-        reqCharFlags: [{sterling:true},{moody:true}],
+        reqCharFlags: '+sterling +moody',
       },
       {
         text: "txt-cl-item-tinCan-refuse-2",
-        reqCharFlags: {humanoid:true, moody:true},
+        reqCharFlags: '+humanoid +moody',
       },
     ]
   },
@@ -367,7 +367,7 @@ config.entities.add( [
     lines: [
       {
         text: "txt-cl-item-meat-animal-cooked-bad",
-        reqCharFlags: {humanoid:true},
+        reqCharFlags: '+humanoid',
       }
     ]
   },
@@ -378,14 +378,14 @@ config.entities.add( [
     id: 'cl-necronomicon-portal',
     lines: {
       text: "txt-cl-necronomicon-portal",
-      reqStatus: {'pk-necronomicon':true},
+      reqPerk: '+necronomicon',
     }
   },
   {
     id: 'cl-necronomicon-page',
     lines: {
       text: "txt-cl-necronomicon-page",
-      reqStatus: {'pk-necronomicon':true},
+      reqPerk: '+necronomicon',
     }
   },
   {
@@ -401,14 +401,14 @@ config.entities.add( [
     id: 'cl-cook-meat',
     lines: {
       text: "txt-cl-cook-meat",
-      reqCharFlags: {cook:true},
+      reqCharFlags: '+cook',
     }
   },
   {
     id: 'cl-cook-meat-fail',
     lines: {
       text: "txt-cl-cook-meat-fail",
-      reqCharFlags: {cook:true},
+      reqCharFlags: '+cook',
     }
   },
 
@@ -491,53 +491,53 @@ config.entities.add( [
     lines: [
       {
         text: "txt-cl-newMorning",
-        reqCharFlags: {humanoid:true, special:false},
+        reqCharFlags: '+humanoid -special'
       },
       {
         text: "txt-cl-newMorning-1",
-        reqCharFlags: {humanoid:true, special:true},
+        reqCharFlags: '+humanoid +special',
       },
       {
         text: "txt-cl-newMorning-2",
-        reqCharFlags: {humanoid:true, cultist:true},
+        reqCharFlags: '+humanoid +cultist',
       },
       {
         text: "txt-cl-newMorning-3",
-        reqCharFlags: {humanoid:true, moody:true},
+        reqCharFlags: '+humanoid +moody'
       },
       {
         text: "txt-cl-newMorning-4",
-        reqCharFlags: {humanoid:true, brave:true},
+        reqCharFlags: '+humanoid +brave'
       },
       {
         text: "txt-cl-newMorning-5",
-        reqCharFlags: {humanoid:true, spiritual:true},
+        reqCharFlags: '+humanoid +spiritual',
       },
       {
         text: "txt-cl-newMorning-6",
-        reqCharFlags: {humanoid:true, witty:true},
+        reqCharFlags: '+humanoid +witty',
       },
       {
         text: "txt-cl-newMorning-7",
-        reqCharFlags: {humanoid:true, coward:true},
+        reqCharFlags: '+humanoid +coward',
       },
       {
         text: "txt-cl-newMorning-8",
-        reqCharFlags: {humanoid:true, greedy:true},
+        reqCharFlags: '+humanoid +greedy'
       },
       {
         text: "txt-cl-newMorning-9",
-        reqCharFlags: {humanoid:true},
-        reqStatus: {'st-angry':true},
+        reqCharFlags: '+humanoid',
+        reqStatus: '+angry',
       },
       {
         text: "txt-cl-newMorning-10",
-        reqCharFlags: {sterling:true},
+        reqCharFlags: '+sterling',
       },
       {
         text: "txt-cl-newMorning-11",
-        reqCharFlags: {humanoid:true},
-        reqStatus: {'st-angry':true},  
+        reqCharFlags: '+humanoid',
+        reqStatus: '+angry' 
       },
       {
         text:"txt-cl-newMorning-stark",
@@ -604,7 +604,7 @@ config.entities.add( [
     id: 'cl-slaverySell',
     lines: [
       {
-        reqCharFlags: {humanoid:true, special: false},
+        reqCharFlags: '+humanoid -special',
         text: "txt-cl-slaverySell"
       }
     ]
@@ -613,7 +613,7 @@ config.entities.add( [
     id: 'cl-slaverySell-comment',
     lines: [
       {
-        reqCharFlags: {humanoid:true, special: false},
+        reqCharFlags: '+humanoid -special',
         text: "txt-cl-slaverySell-comment"
       }
     ]
@@ -681,23 +681,23 @@ config.entities.add( [
       },
       {
         text: "txt-cl-leave-1",
-        reqCharFlags: {humanoid:true, moody:true},
+        reqCharFlags: '+humanoid +moody'
       },
       {
         text: "txt-cl-leave-2",
-        reqCharFlags: {humanoid:true, coward:true},
+        reqCharFlags: '+humanoid +coward',
       },
       {
         text: "txt-cl-leave-3",
-        reqCharFlags: {humanoid:true, spiritual:true},
+        reqCharFlags: '+humanoid +spiritual',
       },
       {
         text: "txt-cl-leave-4",
-        reqCharFlags: {humanoid:true, brave:true},
+        reqCharFlags: '+humanoid +brave'
       },
       {
         text: "txt-cl-leave-5",
-        reqCharFlags: {humanoid:true, greedy:true},
+        reqCharFlags: '+humanoid +greedy'
       },
       {
         text: "txt-cl-leave-6",
@@ -713,15 +713,15 @@ config.entities.add( [
     lines: [
       {
         text: "txt-reply-paranoid",
-        reqCharFlags: {humanoid:true}
+        reqCharFlags: '+humanoid'
       },
       {
         text: "txt-reply-paranoid-1",
-        reqCharFlags: {humanoid:true, spiritual:true}
+        reqCharFlags: '+humanoid +spiritual'
       },
       {
         text: "txt-reply-paranoid-2",
-        reqCharFlags: {humanoid:true, moody:true}
+        reqCharFlags: '+humanoid +moody'
       }
     ]
   },
@@ -734,23 +734,23 @@ config.entities.add( [
       },
       {
         text: "txt-reply-applyNegativeStatus-1",
-        reqCharFlags: {humanoid:true, moody:true}
+        reqCharFlags: '+humanoid +moody'
       },
       {
         text: "txt-reply-applyNegativeStatus-2",
-        reqCharFlags: {humanoid:true, spiritual:true}
+        reqCharFlags: '+humanoid +spiritual'
       },
       {
         text: "txt-reply-applyNegativeStatus-3",
-        reqCharFlags: {humanoid:true, coward:true}
+        reqCharFlags: '+humanoid +coward'
       },
       {
         text: "txt-reply-applyNegativeStatus-4",
-        reqCharFlags: {humanoid:true, witty:true}
+        reqCharFlags: '+humanoid +witty'
       },
       {
         text: "txt-reply-applyNegativeStatus-5",
-        reqCharFlags: {humanoid:true, greedy:true}
+        reqCharFlags: '+humanoid +greedy'
       }
     ]
   },
@@ -761,7 +761,7 @@ config.entities.add( [
     id: 'cl-seal-activate',
     lines: {
       text: "txt-cl-seal-activate",
-      reqCharFlags: {humanoid:true, special:false, native:false},
+      reqCharFlags: '+humanoid -special -native',
     }
   },
 
@@ -773,7 +773,7 @@ config.entities.add( [
       { // Racist
         text: "txt-cl-village-enter",
         chat: {id:'reply-racist'},
-        reqCharFlags: {humanoid:true},
+        reqCharFlags: '+humanoid',
         reqStatus: {'st-racist':true},
       },
       { // Generic
@@ -790,28 +790,28 @@ config.entities.add( [
       },
       { // Paranoid
         text: "txt-reply-racist-2",
-        reqCharFlags: {humanoid:true},
+        reqCharFlags: '+humanoid',
         chat: 'reply-paranoid',
         reqStatus: {'st-paranoid':true},
       },
       { // Greedy
         text: "txt-reply-racist-3",
-        reqCharFlags: {humanoid:true, greedy:true}
+        reqCharFlags: '+humanoid +greedy'
       },
       { // Coward
         text: "txt-reply-racist-4",
-        reqCharFlags: {humanoid:true, coward:true},
+        reqCharFlags: '+humanoid +coward',
         chat: 'reply-coward',
       },
       { // Moody
         text: "txt-reply-racist-5",
         chat: 'reply-moody',
-        reqCharFlags: {humanoid:true, moody:true}
+        reqCharFlags: '+humanoid +moody'
       },
       { // Spiritual
         text: "txt-reply-racist-6",
         chat: 'reply-spiritual',
-        reqCharFlags: {humanoid:true, spiritual:true}
+        reqCharFlags: '+humanoid +spiritual'
       }
     ]
   },
@@ -821,7 +821,7 @@ config.entities.add( [
       {
         text: "txt-cl-village-recruit",
         chat: 'reply-racist',
-        reqCharFlags: {humanoid:true},
+        reqCharFlags: '+humanoid',
         reqStatus: {'st-racist':true},
       },
       { 
@@ -831,17 +831,17 @@ config.entities.add( [
       },
       { 
         text: "txt-cl-village-recruit-2",
-        reqCharFlags: {humanoid:true, greedy:true}
+        reqCharFlags: '+humanoid +greedy'
       },
       { 
         text: "txt-cl-village-recruit-3",
         chat: 'reply-moody',
-        reqCharFlags: {humanoid:true, moody:true}
+        reqCharFlags: '+humanoid +moody'
       },
       { 
         text: "txt-cl-village-recruit-4",
         chat: 'reply-spiritual',
-        reqCharFlags: {humanoid:true, spiritual:true}
+        reqCharFlags: '+humanoid +spiritual'
       }
     ]
   },
@@ -1060,7 +1060,7 @@ config.entities.add( [
     id: 'cl-hotAirBalloon-makeRoom',
     lines: {
       text: "txt-cl-hotAirBalloon-makeRoom",
-      reqCharFlags: {humanoid:true, special:false},
+      reqCharFlags: '+humanoid -special'
     }
   },
 
@@ -1095,7 +1095,7 @@ config.entities.add( [
         },
         {
           text: "txt-cl-runAway-6",
-          reqCharFlags: {humanoid:true},
+          reqCharFlags: '+humanoid',
         },
       ],
     },
@@ -1106,14 +1106,14 @@ config.entities.add( [
     id: 'cl-confirm-explorer-female',
     lines: {
       text: "txt-cl-confirm-explorer-female",
-      reqCharFlags: {humanoid:true, special:false},
+      reqCharFlags: '+humanoid -special'
     }
   },
   {
     id: 'cl-confirm-explorer-male',
     lines: {
       text: "txt-cl-confirm-explorer-male",
-      reqCharFlags: {humanoid:true, special:false},
+      reqCharFlags: '+humanoid -special'
     }
   },
 
@@ -1411,19 +1411,19 @@ config.entities.add( [
     lines: [
       {
         text: "txt-reply-coward",
-        reqCharFlags: {humanoid:true, brave:true}
+        reqCharFlags: '+humanoid +brave'
       },
       {
         text: "txt-reply-coward-1",
-        reqCharFlags: {humanoid:true, special:false}
+        reqCharFlags: '+humanoid -special'
       },
       {
         text: "txt-reply-coward-2",
-        reqCharFlags: {humanoid:true, special:true}
+        reqCharFlags: '+humanoid +special'
       },
       {
         text: "txt-reply-coward-3",
-        reqCharFlags: {humanoid:true, cultist:true}
+        reqCharFlags: '+humanoid +cultist'
       }
     ]
   },
@@ -1432,15 +1432,15 @@ config.entities.add( [
     lines: [
       {
         text: "txt-reply-religious",
-        reqCharFlags: {humanoid:true}
+        reqCharFlags: '+humanoid'
       },
       {
         text: "txt-reply-religious-1",
-        reqCharFlags: {humanoid:true, moody:true}
+        reqCharFlags: '+humanoid +moody'
       },
       {
         text: "txt-reply-religious-2",
-        reqCharFlags: {humanoid:true, spiritual:true}
+        reqCharFlags: '+humanoid +spiritual'
       }
     ]
   },
@@ -1449,7 +1449,7 @@ config.entities.add( [
     lines: [
       {
         text: "txt-reply-racist-7",
-        reqCharFlags: {sterling:true},
+        reqCharFlags: '+sterling',
       },
       {
         text: "txt-reply-racist-8",
@@ -1522,21 +1522,21 @@ config.entities.add( [
     id: 'reply-spiritual',
     lines: {
       text: "txt-reply-spiritual",
-      reqCharFlags: {humanoid:true, special:false}
+      reqCharFlags: '+humanoid -special'
     }
   },
   {
     id: 'reply-brave',
     lines: {
       text: "txt-reply-brave",
-      reqCharFlags: {humanoid:true, special:false}
+      reqCharFlags: '+humanoid -special'
     }
   },
   {
     id: 'reply-witty',
     lines: {
       text: "txt-reply-witty",
-      reqCharFlags: {humanoid:true}
+      reqCharFlags: '+humanoid'
     }
   },
   {
@@ -1560,11 +1560,11 @@ config.entities.add( [
     lines: [
       {
         text: "txt-cl-nature",
-        reqCharFlags: {humanoid:true},
+        reqCharFlags: '+humanoid',
       },
       {
         text: "txt-cl-nature-1",
-        reqCharFlags: {brave: true, humanoid:true},
+        reqCharFlags: '+brave +humanoid',
       },
       {
         text: "txt-cl-nature-2",
@@ -1580,7 +1580,7 @@ config.entities.add( [
       },
       {
         text: "txt-cl-nature-5",
-        reqCharFlags: {greedy: true, humanoid:true},
+        reqCharFlags: '+greedy +humanoid',
       },
       {
         text: "txt-cl-nature-6",
@@ -1600,32 +1600,32 @@ config.entities.add( [
     lines: [
       {
         text: "txt-cl-sprawlFire",
-        reqCharFlags: {special:false, humanoid:true, cultist:true},
+        reqCharFlags: '-special +humanoid +cultist',
         chat: 'cl-sprawlFire-reply',
       },
       {
         text: "txt-cl-sprawlFire-1",
-        reqCharFlags: {special:false, humanoid:true, moody: true},
+        reqCharFlags: '-special +humanoid +moody',
         chat: 'cl-sprawlFire-reply',
       },
       {
         text: "txt-cl-sprawlFire-2",
-        reqCharFlags: {special:false, humanoid:true, spiritual: true},
+        reqCharFlags: '-special +humanoid +spiritual',
         chat: 'cl-sprawlFire-reply',
       },
       {
         text: "txt-cl-sprawlFire-3",
-        reqCharFlags: {special:false, humanoid:true, coward: true},
+        reqCharFlags: '-special +humanoid +coward',
         chat: 'cl-sprawlFire-reply',
       },
       {
         text: "txt-cl-sprawlFire-4",
-        reqCharFlags: {special:false, humanoid:true, religious: true},
+        reqCharFlags: '-special +humanoid +religious',
         chat: 'cl-sprawlFire-reply',
       },
       {
         text: "txt-cl-sprawlFire-5",
-        reqCharFlags: {special:false, humanoid:true, brave: true},
+        reqCharFlags: '-special +humanoid +brave',
         chat: 'cl-sprawlFire-reply',
       },
       {
@@ -1651,7 +1651,7 @@ config.entities.add( [
       lines: [
         {
           text: "txt-cl-poisonGas",
-          reqCharFlags: {special:false, humanoid:true},
+          reqCharFlags: '-special +humanoid',
         },
       ]
     },
@@ -1663,31 +1663,31 @@ config.entities.add( [
     lines: [
       {
         text: "txt-cl-startFire",
-        reqCharFlags: {special:false, humanoid:true},
+        reqCharFlags: '-special +humanoid',
       },
       {
         text: "txt-cl-startFire-1",
-        reqCharFlags: {special:false, humanoid:true, cultist:true},
+        reqCharFlags: '-special +humanoid +cultist',
       },
       {
         text: "txt-cl-startFire-2",
-        reqCharFlags: {special:false, humanoid:true, moody: true},
+        reqCharFlags: '-special +humanoid +moody',
       },
       {
         text: "txt-cl-startFire-3",
-        reqCharFlags: {special:false, humanoid:true, spiritual: true},
+        reqCharFlags: '-special +humanoid +spiritual',
       },
       {
         text: "txt-cl-startFire-4",
-        reqCharFlags: {special:false, humanoid:true, coward: true},
+        reqCharFlags: '-special +humanoid +coward',
       },
       {
         text: "txt-cl-startFire-5",
-        reqCharFlags: {special:false, humanoid:true, religious: true},
+        reqCharFlags: '-special +humanoid +religious',
       },
       {
         text: "txt-cl-startFire-6",
-        reqCharFlags: {special:false, humanoid:true, brave: true},
+        reqCharFlags: '-special +humanoid +brave',
       }
     ]
   },
@@ -1699,28 +1699,28 @@ config.entities.add( [
     lines: [
       {
         text: "txt-cl-monsterDen-approach",
-        reqCharFlags: {special:false, humanoid:true},
+        reqCharFlags: '-special +humanoid',
       },
       {
         text: "txt-cl-monsterDen-approach-1",
         reqStatus: {'st-claustrophobic': true},
-        reqCharFlags: {special:false, humanoid:true},
+        reqCharFlags: '-special +humanoid',
       },
       {
         text: "txt-cl-monsterDen-approach-2",
-        reqCharFlags: {spiritual: true, humanoid:true},
+        reqCharFlags: '+spiritual +humanoid',
       },
       {
         text: "txt-cl-monsterDen-approach-3",
-        reqCharFlags: {moody: true, special:false, humanoid:true},
+        reqCharFlags: '+moody -special +humanoid',
       },
       {
         text: "txt-cl-monsterDen-approach-4",
-        reqCharFlags: {brave: true, humanoid:true},
+        reqCharFlags: '+brave +humanoid',
       },
       {
         text: "txt-cl-monsterDen-approach-5",
-        reqCharFlags: {greedy: true, humanoid:true},
+        reqCharFlags: '+greedy +humanoid',
       }
     ]
   },
@@ -1729,7 +1729,7 @@ config.entities.add( [
     lines: [
       {
         text: "txt-cl-monsterDen-initiative",
-        reqCharFlags: {special:false, humanoid:true},
+        reqCharFlags: '-special +humanoid',
       },
     ],
   },
@@ -1743,28 +1743,28 @@ config.entities.add( [
     lines: [
       {
         text: "txt-cl-cave-approach",
-        reqCharFlags: {special:false, humanoid:true},
+        reqCharFlags: '-special +humanoid',
       },
       {
         text: "txt-cl-cave-approach-1",
         reqStatus: {'st-claustrophobic': true},
-        reqCharFlags: {special:false, humanoid:true},
+        reqCharFlags: '-special +humanoid',
       },
       {
         text: "txt-cl-cave-approach-2",
-        reqCharFlags: {spiritual: true, humanoid:true},
+        reqCharFlags: '+spiritual +humanoid',
       },
       {
         text: "txt-cl-cave-approach-3",
-        reqCharFlags: {moody: true, special:false, humanoid:true},
+        reqCharFlags: '+moody -special +humanoid',
       },
       {
         text: "txt-cl-cave-approach-4",
-        reqCharFlags: {brave: true, humanoid:true},
+        reqCharFlags: '+brave +humanoid',
       },
       {
         text: "txt-cl-cave-approach-5",
-        reqCharFlags: {greedy: true, humanoid:true},
+        reqCharFlags: '+greedy +humanoid',
       }
     ]
   },
@@ -1774,12 +1774,12 @@ config.entities.add( [
       {
         text: "txt-cl-cave-sendIn",
         reqStatus: {'st-claustrophobic': true},
-        reqCharFlags: {exploring:true},
+        reqCharFlags: '+exploring',
       },
       {
         text: "txt-cl-cave-sendIn-1",
         reqStatus: {'st-claustrophobic': false},
-        reqCharFlags: {exploring:true},
+        reqCharFlags: '+exploring',
       }
     ]
   },
@@ -1873,15 +1873,15 @@ config.entities.add( [
     lines: [
       {
         text: "txt-cl-sacrileg-warning",
-        reqCharFlags: {native: true, humanoid:true},
+        reqCharFlags: '+native +humanoid',
       },
       {
         text: "txt-cl-sacrileg-warning-1",
-        reqCharFlags: {greedy: false, humanoid:true, special:false},
+        reqCharFlags: '-greedy +humanoid -special',
       },
       {
         text: "txt-cl-sacrileg-warning-2",
-        reqCharFlags: {spiritual: true, humanoid:true},
+        reqCharFlags: '+spiritual +humanoid',
       }
     ]
   },
@@ -1893,19 +1893,19 @@ config.entities.add( [
     lines: [
       {
         text: "txt-cl-shrine-warning",
-        reqCharFlags: {humanoid:true},
+        reqCharFlags: '+humanoid',
       },
       {
         text: "txt-cl-shrine-warning-1",
-        reqCharFlags: {humanoid:true, greedy: true},
+        reqCharFlags: '+humanoid +greedy',
       },
       {
         text: "txt-cl-shrine-warning-2",
-        reqCharFlags: {humanoid:true, brave: true},
+        reqCharFlags: '+humanoid +brave',
       },
       {
         text: "txt-cl-shrine-warning-3",
-        reqCharFlags: {humanoid:true, witty: true},
+        reqCharFlags: '+humanoid +witty',
       }
     ]
   },
@@ -1916,7 +1916,7 @@ config.entities.add( [
     id: 'cl-warning-superstitious',
     lines: {
       text: "txt-cl-warning-superstitious",
-      reqStatus: {'st-superstitious':true}
+      reqStatus: '+superstitious'
     }
   },
 
@@ -1927,15 +1927,15 @@ config.entities.add( [
     lines: [
       {
         text: "txt-cl-shrine-loot",
-        reqCharFlags: {humanoid:true, greedy: true},
+        reqCharFlags: '+humanoid +greedy',
       },
       {
         text: "txt-cl-shrine-loot-1",
-        reqCharFlags: {humanoid:true, special: false},
+        reqCharFlags: '+humanoid -special',
       },
       {
         text: "txt-cl-shrine-loot-2",
-        reqCharFlags: {humanoid:true, native:true},
+        reqCharFlags: '+humanoid +native',
       }
     ]
   },
@@ -1979,26 +1979,26 @@ config.entities.add( [
     lines: [
       {
         text: "txt-cl-sacrileg-loot",
-        reqCharFlags: {moody: true, humanoid:true},
+        reqCharFlags: '+moody +humanoid',
       },
       {
         text: "txt-cl-sacrileg-loot-1",
         chat: 'cl-sacrileg',
-        reqCharFlags: {greedy: true, humanoid:true},
+        reqCharFlags: '+greedy +humanoid',
       },
       {
         text: "txt-cl-sacrileg-loot-2",
         chat: 'cl-sacrileg',
-        reqCharFlags: {brave: true, humanoid:true},
+        reqCharFlags: '+brave +humanoid',
       },
       {
         text: "txt-cl-sacrileg-loot-3",
         chat: 'cl-sacrileg',
-        reqCharFlags: {witty: true, humanoid:true},
+        reqCharFlags: '+witty +humanoid',
       },
       {
         text: "txt-cl-sacrileg-loot-4",
-        reqCharFlags: {spiritual: true, humanoid:true},
+        reqCharFlags: '+spiritual +humanoid',
       }
     ]
   },
@@ -2397,51 +2397,51 @@ config.entities.add( [
         text: "txt-cl-celebration-audience"
       },
       {
-        charEffects: {reqCharacter:'anm-donkey'},
+        charEvents: {reqCharacter:'anm-donkey'},
         text: "txt-cl-celebration-audience-1"
       },
       {
-        charEffects: {reqCharFlags:'+dog'},
+        charEvents: {reqCharFlags:'+dog'},
         text: "txt-cl-celebration-audience-2"
       },
       {
-        charEffects: {reqStatus: '+alcoholic'},
+        charEvents: {reqStatus: '+alcoholic'},
         text: "txt-cl-celebration-audience-3"
       },
       {
         reqWorld: '..3',
-        charEffects: {reqGender:'female', reqCharFlags:'+special'},
+        charEvents: {reqGender:'female', reqCharFlags:'+special'},
         text: "txt-cl-celebration-audience-4"
       },
       {
-        charEffects: {reqCharFlags:'+homeWorld'},
+        charEvents: {reqCharFlags:'+homeWorld'},
         text: "txt-cl-celebration-audience-5"
       },
       {
-        charEffects: {reqCharFlags:'+abomination|+dinosaur'},
+        charEvents: {reqCharFlags:'+abomination|+dinosaur'},
         text: "txt-cl-celebration-audience-6"
       },
       {
-        charEffects: {count:'all', reqCharFlags:'+special|+animal'},
+        charEvents: {count:'all', reqCharFlags:'+special|+animal'},
         text: "txt-cl-celebration-audience-7"
       },
       {
-        charEffects: {count:'4', reqCharFlags:'+special|+animal'},
+        charEvents: {count:'4', reqCharFlags:'+special|+animal'},
         text: "txt-cl-celebration-audience-8"
       },
       {
-        charEffects: {count:'4', reqCharFlags:'+special|+soldier'},
+        charEvents: {count:'4', reqCharFlags:'+special|+soldier'},
         text: "txt-cl-celebration-audience-9"
       },
       {
-        charEffects: [
+        charEvents: [
           {reqGender:'male', reqCharFlags:'+humanoid'},
           {reqGender:'female', reqCharFlags:'+humanoid'}
         ],
         text: "txt-cl-celebration-audience-10"
       },
       {
-        charEffects: {reqCharFlags:'+buffalo'},
+        charEvents: {reqCharFlags:'+buffalo'},
         text: "txt-cl-celebration-audience-11"
       },
     ]

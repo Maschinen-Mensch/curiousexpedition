@@ -37,7 +37,7 @@ config.entities.add([
     sprite: 'it_utility_weatherballoon_1.png',
     value: { base: 10, village: 3, karma:1 },
     maxStack: 20,
-    events: {
+    useEvents: {
       // mapScore: 1,
       // setPartyStatus: {'os-viewDistance-small':true},
       posTile: {range:'..100', closest:true, fixtureFlags:'', fixtureKnown:false},
@@ -59,7 +59,7 @@ config.entities.add([
     maxStack: 1,
     noWeight: true,
     maxChargeTime: 25,
-    events: {
+    useEvents: {
       posTile: {range:'..100', closest:true, fixtureFlags:'+abacus'},
       revealTiles: {fixture:true, centerCam:true, particle: 'pt-magic-reveal'}
     }
@@ -137,10 +137,10 @@ config.entities.add([
     },
     isWeapon: true,
     maxStack: 20,
-    events: {
+    useEvents: {
       posPunch: {radius:{base:0, bonus:'dynamiteBonus'}, range:2},
       playSound: ['sfx_explosion_1'],
-      partyEffects:
+      partyEvents:
       [
         {
           optional: true,
@@ -203,7 +203,7 @@ config.entities.add([
       chat: 'cl-item-dynamite',
       removeItem: true,
       unlockCharacter: 'sp-tesla',
-      events: {
+      select: {
         reqDifficulty: '1..',
         standing: -1,
       },
@@ -384,7 +384,7 @@ config.entities.add([
       polarStation:3,
     },
     maxStack: 20,
-    events: {
+    useEvents: {
       playSound: ['sfx_balloon_flare_fireworks'],
       posPunch: {
         radius:{base:1, bonus:'flareRadius'}, 
@@ -392,7 +392,7 @@ config.entities.add([
       },
       revealTiles: { radius: {base:1, bonus:'flareRadius'}, fixture:true, centerCam:false},
       removeItem: true,
-      events: [
+      select: [
         {
           slots: 1, 
           reqCanstartSprawl: {ref:'spr-fire', radius:1},
@@ -417,12 +417,12 @@ config.entities.add([
       karma: 1,
     },
     maxStack: 20,
-    events: [
+    useEvents: [
       {
         showImage: {src: 'evt_fxt_empty.png', type: 'day'},
         text: "txt-it-nativeTrinket-use",
         chat: "cl-generic",
-        charEffects: [
+        charEvents: [
           {
             optional: true,
             count: "any",
@@ -540,7 +540,7 @@ config.entities.add([
     maxStack: 1,
     maxChargeTime: 30,
     reqWorld: 1,
-    events: {
+    useEvents: {
       posPunch: {radius:2, range:15}, 
       revealTiles: {radius:2, particle: 'pt-magic-reveal'}
     },
@@ -573,11 +573,11 @@ config.entities.add([
     },
     maxStack: 1,
     reqWorld: 1,
-    events: {
+    useEvents: {
       id: 'evt-obsidianMirror-use',
       text: "txt-evt-obsidianMirror-use",
-      events: 'evt-setImage-nightCamp',
-      charEffects: {
+      select: 'evt-setImage-nightCamp',
+      charEvents: {
         reqCharFlags: '-special +humanoid',
         count: 'any',
         actions: {
@@ -614,7 +614,7 @@ config.entities.add([
   //   },
   //   maxStack: 1,
   //   reqWorld: 1,
-  //   events: [
+  //   useEvents: [
   //     {
   //       prio: 1,
   //       reqFixture: {range:'1..50', flags: '+portalDevice'},
@@ -650,9 +650,10 @@ config.entities.add([
       base: 10,
       karma: 1,
     },
-    events: {
+    useEvents: {
       removeItem: true,
       sanity: +10,
+      setPartyFlags: '+NonCocaUsers',
       deactivateZones: {radius:100, turns:1}
     }
   },
@@ -667,7 +668,7 @@ config.entities.add([
       base: 20,
       karma: 1,
     },
-    events: {
+    useEvents: {
       removeItem: true,
       blockRivals: 20
     }
@@ -768,28 +769,28 @@ config.entities.add([
     value: 5,
     maxStack: 10,
     autoRemove: true,
-    events: [
+    useEvents: [
       {
         slots: 2,
         chat: 'cl-cook-meat',
-        charEffects: [
+        charEvents: [
           { 
             optional:false, reqStatusFlags: '+cookSanity',
           },
           { 
-            optional:true, reqStatus: {'pk-cookSanity-1':true},
+            optional:true, reqPerk: '+cookSanity-1',
             items: {'it-meat-animal-cooked-charcoal':1},
           },
           { 
-            optional:true, reqStatus: {'pk-cookSanity-2':true},
+            optional:true, reqPerk: '+cookSanity-2',
             items: {'it-meat-animal-cooked-burnt':1},
           },
           { 
-            optional:true, reqStatus: {'pk-cookSanity-3':true},
+            optional:true, reqPerk: '+cookSanity-3',
             items: {'it-meat-animal-cooked-overcooked':1},
           },
           { 
-            optional:true, reqStatus: {'pk-cookSanity-4':true},
+            optional:true, reqPerk: '+cookSanity-4',
             items: {'it-meat-animal-cooked-perfect':1},
           },
         ],
@@ -807,10 +808,11 @@ config.entities.add([
     maxStack: 20,
     autoRemove: true,
     value: 3,
-    events: [
+    useEvents: [
       {
         sanity: +2,
         removeItem: true,
+        setPartyFlags: '+NonCocaUsers',
         chat: 'cl-item-meat-animal-cooked-bad',
       }
     ]
@@ -825,10 +827,11 @@ config.entities.add([
     maxStack: 20,
     autoRemove: true,
     value: 3,
-    events: [
+    useEvents: [
       {
         sanity: +5,
         removeItem: true,
+        setPartyFlags: '+NonCocaUsers',
         chat: 'cl-item-meat-animal-cooked-bad',
       }
     ]
@@ -843,10 +846,11 @@ config.entities.add([
     maxStack: 20,
     autoRemove: true,
     value: 3,
-    events: [
+    useEvents: [
       {
         sanity: +10,
         removeItem: true,
+        setPartyFlags: '+NonCocaUsers',
         chat: 'cl-item-meat-animal-cooked',
       }
     ]
@@ -864,10 +868,11 @@ config.entities.add([
       base: 5,
       karma: 1,
     },
-    events: [
+    useEvents: [
       {
         sanity: +15,
         removeItem: true,
+        setPartyFlags: '+NonCocaUsers',
         chat: 'cl-item-meat-animal-cooked',
       }
     ]
@@ -894,7 +899,7 @@ config.entities.add([
     description: "txt-it-meta-haggle-1",
     debugCategory: 'haggle',
     sprite: 'it_misc_haggle_1.png',
-    maxStack: 1, value: -5, reqStatus: {'pk-bartering-1':true},
+    maxStack: 1, value: -5, reqPerk: '+bartering-1',
     metaItem: true
   },
   {
@@ -903,7 +908,7 @@ config.entities.add([
     description: "txt-it-meta-haggle-1",
     debugCategory: 'haggle',
     sprite: 'it_misc_haggle_1.png',
-    maxStack: 1, value: -10, reqStatus: {'pk-bartering-2':true},
+    maxStack: 1, value: -10, reqPerk: '+bartering-2',
     metaItem: true
   },
   {
@@ -912,7 +917,7 @@ config.entities.add([
     description: "txt-it-meta-haggle-1",
     debugCategory: 'haggle',
     sprite: 'it_misc_haggle_1.png',
-    maxStack: 1, value: -15, reqStatus: {'pk-bartering-3':true},
+    maxStack: 1, value: -15, reqPerk: '+bartering-3',
     metaItem: true
   },
   {
@@ -921,7 +926,7 @@ config.entities.add([
     description: "txt-it-meta-haggle-1",
     debugCategory: 'haggle',
     sprite: 'it_misc_haggle_1.png',
-    maxStack: 1, value: -20, reqStatus: {'pk-bartering-4':true},
+    maxStack: 1, value: -20, reqPerk: '+bartering-4',
     metaItem: true
   },
   {
@@ -930,7 +935,7 @@ config.entities.add([
     description: "txt-it-meta-haggle-1",
     debugCategory: 'haggle',
     sprite: 'it_misc_haggle_1.png',
-    maxStack: 1, value: -25, reqStatus: {'pk-bartering-5':true},
+    maxStack: 1, value: -25, reqPerk: '+bartering-5',
     metaItem: true
   },
 

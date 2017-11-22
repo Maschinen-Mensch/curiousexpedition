@@ -14,7 +14,7 @@ config.entities.add([
     },
     maxStack: 1,
     maxChargeTime: 10,
-    events: {
+    select: {
       sanity: 10,
       resetPartyStatus: '+aggro',
       playSound: 'sfx_totem'
@@ -32,7 +32,7 @@ config.entities.add([
     },
     maxStack: 1,
     maxChargeTime: 10,
-    events: {
+    select: {
       sanity: 15,
       playSound: 'sfx_totem',
       resetPartyStatus: '+aggro'

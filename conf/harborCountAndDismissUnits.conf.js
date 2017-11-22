@@ -4,12 +4,12 @@ config.entities.add([
 
   {
     id: 'evt-harbor-countTrek',
-    events: [
+    select: [
       {
         reqFreePartyCount: '..-1',
         text: "txt-evt-harbor-countTrek",
         showPartyCount: true,
-        charEffects: [
+        charEvents: [
           {
             count: 'any',
             optional: true,
@@ -18,7 +18,7 @@ config.entities.add([
               actionText: "txt-evt-harbor-countTrek-action",
               removeCharacter: true,
               text: "txt-evt-harbor-countTrek-1",
-              events: 'evt-harbor-eventSelection',
+              select: 'evt-harbor-eventSelection',
             },
           },
           {
@@ -29,7 +29,7 @@ config.entities.add([
               actionText: "txt-evt-harbor-countTrek-action",
               removeCharacter: true,
               text: "txt-evt-harbor-countTrek-2",
-              events: 'evt-harbor-eventSelection',
+              select: 'evt-harbor-eventSelection',
             },
           },
         ],
@@ -37,7 +37,7 @@ config.entities.add([
       {
         prio: 1,
         setPartyFlags: '+harborCheck_UnitCount',
-        events: 'evt-harbor-eventSelection',
+        select: 'evt-harbor-eventSelection',
       },
     ],    
   },
@@ -48,7 +48,7 @@ config.entities.add([
     id: 'evt-harbor-dismissUnit',
     actionText: "txt-evt-harbor-dismissUnit-action",
     text: "txt-evt-harbor-dismissUnit",
-    charEffects: [
+    charEvents: [
       {
         count: 'any',
         optional: true,
@@ -57,7 +57,7 @@ config.entities.add([
           actionText: "txt-evt-harbor-countTrek-action",
           removeCharacter: true,
           text: "txt-evt-harbor-dismissUnit-1",
-          events: 'evt-harbor-eventSelection',
+          select: 'evt-harbor-eventSelection',
         },
       },
       {
@@ -68,13 +68,13 @@ config.entities.add([
           actionText: "txt-evt-harbor-countTrek-action",
           removeCharacter: true,
           text: "txt-evt-harbor-dismissUnit-2",
-          events: 'evt-harbor-eventSelection',
+          select: 'evt-harbor-eventSelection',
         },
       },
     ],
     actions: {
       actionText: "txt-evt-harbor-dismissUnit-action-1",
-      events: 'evt-harbor-eventSelection',
+      select: 'evt-harbor-eventSelection',
     },
   },
 

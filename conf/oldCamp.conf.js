@@ -35,12 +35,13 @@ config.entities.add([
     id: 'evt-oldCamp-enter',
     actionText: "txt-evt-altar-approach-action",
     reqFixtureFlags: '-explored',
+    setFixtureFlags: '+oldCamp',
     chat: 'cl-scaryPlace',
     playMusic: [
       'thm_nature_mystic_1', 
       'thm_nature_mystic_2'
     ],
-    events: [
+    select: [
       {
         reqTutorial: true,
         text: "txt-evt-oldCamp-enter",
@@ -49,7 +50,7 @@ config.entities.add([
           {
             actionText: "txt-evt-oldCamp-enter-action",
             text: "txt-evt-oldCamp-enter-1",
-            events: 'evt-oldCamp-searchOutcome',
+            select: 'evt-oldCamp-searchOutcome',
           },
           {
             actionText: "txt-evt-leave-action",
@@ -60,7 +61,7 @@ config.entities.add([
       },
       {
         reqTutorial: false,
-        partyEffects: [
+        partyEvents: [
           {
             optional: true, reqBiomeFlags: '-arctic',
             showImage: {src: 'evt_fxt_oldCamp_1.png', type:'day'},
@@ -69,21 +70,11 @@ config.entities.add([
           {
             optional: true, reqBiomeFlags: '+arctic',
             text: "txt-evt-oldCamp-enter-arctic",
-            events: [
-              {
-                slots:1,
-                showImage: {
-                  src: 'evt_fxt_oldCamp_arctic.png', type: 'day', showMounted: true,
-                  particles: ['pt-snow-1', 'pt-snow-2', 'pt-snow-3'],
-                },
-              },
-              {
-                slots:1,
-                showImage: {
-                  src: 'evt_fxt_oldCamp_arctic.png', type: 'day', showMounted: true,
-                },
-              }
-            ],
+            showImage: {
+              src: 'evt_fxt_oldCamp_arctic.png', type: 'day', showMounted: true,
+              particles: ['pt-snow-1', 'pt-snow-2', 'pt-snow-3'],
+              particlesChance: 0.5
+            }
           },
           {
             optional: true,
@@ -93,7 +84,7 @@ config.entities.add([
         ],
         report: "txt-evt-oldCamp-enter-report",
         actions: [
-          {ref:'evt-searchArea', pushEvent: 'evt-oldCamp-searchOutcome'}, 
+          {ref:'evt-searchArea'}, 
           'evt-leave'
         ],
       },
@@ -102,12 +93,12 @@ config.entities.add([
   {
     id: 'evt-oldCamp-searchOutcome',
     setFixtureFlags: '+explored',
-    events: [
+    select: [
       {
         reqTutorial: false,
         text: "txt-evt-oldCamp-searchOutcome",
         report: "txt-evt-oldCamp-searchOutcome-report",
-        events: [
+        select: [
           {
             reqDifficulty: '1..',
             loot: {

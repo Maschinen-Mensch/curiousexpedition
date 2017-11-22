@@ -47,7 +47,7 @@ config.entities.add([
     id: 'evt-blessingTemple-secret-approach',
     actionText: "txt-evt-altar-approach-action",
     incAchievement: "ach-mountain-explode-stoneface",
-    events: "evt-blessingTemple-approach"
+    select: "evt-blessingTemple-approach"
   },
   {
     id: 'evt-blessingTemple-approach',
@@ -65,7 +65,7 @@ config.entities.add([
     actionText: "txt-evt-blessingTemple-enter-action",
     showImage: {src: 'evt_fxt_temple_blessing_int_1.png', type:'day'},
     text: "txt-evt-blessingTemple-enter",
-    charEffects: [
+    charEvents: [
       {
         optional: true,
         count: "any",
@@ -81,7 +81,7 @@ config.entities.add([
     chat: 'cl-cave-sendIn',
     report: "txt-evt-blessingTemple-drink-report",
     text: "txt-evt-blessingTemple-drink",
-    events: [
+    select: [
       {
         prio: 1,
         slots: 1, 

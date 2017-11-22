@@ -24,13 +24,13 @@ config.entities.add([
         text: "txt-evt-harbor-quest-idol-1",
         report: "txt-evt-harbor-quest-idol-report-1",
         setPartyStatus: '+idol',
-        events: 'evt-harbor-eventSelection'
+        select: 'evt-harbor-eventSelection'
       },
       {
         actionText: "txt-evt-angry-demandPayment-action-1",
         text: "txt-evt-harbor-quest-idol-2",
         report: "txt-evt-harbor-quest-idol-report-2",
-        events: 'evt-harbor-eventSelection'
+        select: 'evt-harbor-eventSelection'
       },
     ]
   },
@@ -52,7 +52,7 @@ config.entities.add([
         actionText: "txt-evt-angry-demandPayment-action-1",
         text: "txt-evt-harbor-quest-idol-complete-2",
         fame: -fameLarge,
-        events: 'evt-harbor-eventSelection',
+        select: 'evt-harbor-eventSelection',
       },
     ],
   },

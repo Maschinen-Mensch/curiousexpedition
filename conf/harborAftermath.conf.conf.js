@@ -2,7 +2,7 @@ config.entities.add([
 
 	{
 	  id: 'evt-harbor-afterMath-curse',
-	  charEffects: {
+	  charEvents: {
 	    reqStatus: '+deathCurse',
 	    text: "txt-evt-harbor-afterMath-curse",
 	    storeCharacter: true,
@@ -12,7 +12,7 @@ config.entities.add([
 	},
 	{
 	  id: 'evt-harbor-afterMath-renounced',
-	  charEffects: {
+	  charEvents: {
 	    count: 'any',
 	    reqStatus: '+renounced',
 	    text: "txt-evt-harbor-afterMath-renounced",
@@ -27,7 +27,7 @@ config.entities.add([
 	  setPartyStatus: '-promiseSpouse',
 	  npc: 'npc-wife',
 
-	  storeEffects: {
+	  storeEvents: {
 	    reqCharFlags: '+dead +promise',
 	    text: "txt-evt-harbor-afterMath-spouse",
 	    actions: [
@@ -41,7 +41,7 @@ config.entities.add([
 	      {
 	        actionText: "txt-evt-harbor-afterMath-spouse-action-1",
 	        text: "txt-evt-harbor-afterMath-spouse-2",
-	        charEffects: {
+	        charEvents: {
 	          reqCharFlags: '-special -homesick +humanoid',
 	          loyalty: -1
 	        },

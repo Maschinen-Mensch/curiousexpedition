@@ -2,21 +2,21 @@ config.entities.add([
 
   {
     id: 'evt-village-beastMaster',
-    reqFixtureFlags: {beastMaster: true},
+    reqFixtureFlags: '+beastMaster',
     actionText: "txt-evt-village-beastMaster-action",
     text: "txt-evt-village-beastMaster",
     chat: 'cl-beastMaster-recruit',
     showPartyCount: true,
-    events: 'evt-village-beastMaster-actions',
+    select: 'evt-village-beastMaster-actions',
   },
   {
     id: 'evt-village-beastMaster-actions',
-    partyEffects: [
+    partyEvents: [
       {
         optional: true,
         reqFixtureFlags: '-beastSet',
         setFixtureFlags: '+beastSet',
-        events: [
+        select: [
           {slots: 3, setFixtureFlags: '+beastNormal'},
           {slots: 2, setFixtureFlags: '+beastSpecial_1'},
           {slots: 1, setFixtureFlags: '+beastSpecial_2'},
@@ -24,36 +24,36 @@ config.entities.add([
       },
       {
         optional: true, // Standard 1
-        events: [
+        select: [
           {
             reqBiomeFlags: '-arctic',
-            events: 'evt-village-beastMaster-recruit-hyena', 
+            select: 'evt-village-beastMaster-recruit-hyena', 
           },
           {
             reqBiomeFlags: '+arctic',
-            events: 'evt-village-beastMaster-recruit-arcticWolf', 
+            select: 'evt-village-beastMaster-recruit-arcticWolf', 
           },
         ],
       },
       {
         optional: true, // Standard 2
-        events: [
+        select: [
           {
             reqBiomeFlags: '-arctic',
-            events: 'evt-village-beastMaster-recruit-gorilla', 
+            select: 'evt-village-beastMaster-recruit-gorilla', 
           },
           {
             reqBiomeFlags: '+arctic',
-            events: 'evt-village-beastMaster-recruit-polarBear', 
+            select: 'evt-village-beastMaster-recruit-polarBear', 
           },
         ],
       },
       {
         reqFixtureFlags: '+beastNormal', optional: true, // Normal Addition
-        events: [
+        select: [
           {
             reqBiomeFlags: '-arctic',
-            events: 'evt-village-beastMaster-recruit-tiger',
+            select: 'evt-village-beastMaster-recruit-tiger',
           },
           {
             reqBiomeFlags: '+arctic',
@@ -63,27 +63,27 @@ config.entities.add([
       },
       {
         reqFixtureFlags: '+beastSpecial_1', optional: true, // Special 1
-        events: [
+        select: [
           {
             reqBiomeFlags: '-arctic',
-            events: 'evt-village-beastMaster-recruit-tiger-white'
+            select: 'evt-village-beastMaster-recruit-tiger-white'
           },
           {
             reqBiomeFlags: '+arctic',
-            events: 'evt-village-beastMaster-recruit-sabertooth-white',
+            select: 'evt-village-beastMaster-recruit-sabertooth-white',
           },
         ],
       },
       {
         reqFixtureFlags: '+beastSpecial_2', optional: true, // Special 2
-        events: [
+        select: [
           {
             reqBiomeFlags: '-arctic',
-            events: 'evt-village-beastMaster-recruit-tiger-battle',
+            select: 'evt-village-beastMaster-recruit-tiger-battle',
           },
           {
             reqBiomeFlags: '+arctic',
-            events: 'evt-village-beastMaster-recruit-sabertooth-white',
+            select: 'evt-village-beastMaster-recruit-sabertooth-white',
           },
         ],
       },
@@ -99,8 +99,9 @@ config.entities.add([
         reqItems: {'it-animalTooth':5},
         items: {'it-animalTooth':-5},
         text: "txt-evt-village-beastMaster-recruit-beast",
+        setPartyFlags: '+recruitedSomebody',
         addCharacter: 'anm-hyena',
-        events: 'evt-village-beastMaster-actions',
+        select: 'evt-village-beastMaster-actions',
       },
     ],
   },
@@ -113,8 +114,9 @@ config.entities.add([
         reqItems: {'it-animalTooth':10},
         items: {'it-animalTooth':-10},
         text: "txt-evt-village-beastMaster-recruit-beast",
+        setPartyFlags: '+recruitedSomebody',
         addCharacter: 'anm-tiger',
-        events: 'evt-village-beastMaster-actions',
+        select: 'evt-village-beastMaster-actions',
       },
     ],
   },
@@ -127,8 +129,9 @@ config.entities.add([
         reqItems: {'it-animalTooth':15},
         items: {'it-animalTooth':-15},
         text: "txt-evt-village-beastMaster-recruit-beast",
+        setPartyFlags: '+recruitedSomebody',
         addCharacter: 'anm-tiger-white',
-        events: 'evt-village-beastMaster-actions',
+        select: 'evt-village-beastMaster-actions',
       },
     ],
   },
@@ -141,9 +144,10 @@ config.entities.add([
         reqItems: {'it-animalTooth':15},
         items: {'it-animalTooth':-15},
         text: "txt-evt-village-beastMaster-recruit-beast",
+        setPartyFlags: '+recruitedSomebody',
         addCharacter: 'anm-tiger-battle',
         incAchievement: 'ach-battlecat-recruit',
-        events: 'evt-village-beastMaster-actions',
+        select: 'evt-village-beastMaster-actions',
       },
     ],
   },
@@ -156,8 +160,9 @@ config.entities.add([
         reqItems: {'it-animalTooth':10},
         items: {'it-animalTooth':-10},
         text: "txt-evt-village-beastMaster-recruit-beast",
+        setPartyFlags: '+recruitedSomebody',
         addCharacter: 'anm-gorilla',
-        events: 'evt-village-beastMaster-actions',
+        select: 'evt-village-beastMaster-actions',
       },
     ],
   },
@@ -170,8 +175,9 @@ config.entities.add([
         reqItems: {'it-animalTooth':5},
         items: {'it-animalTooth':-5},
         text: "txt-evt-village-beastMaster-recruit-beast",
+        setPartyFlags: '+recruitedSomebody',
         addCharacter: 'anm-wolf-arctic',
-        events: 'evt-village-beastMaster-actions',
+        select: 'evt-village-beastMaster-actions',
       },
     ],
   },
@@ -184,8 +190,9 @@ config.entities.add([
         reqItems: {'it-animalTooth':10},
         items: {'it-animalTooth':-10},
         text: "txt-evt-village-beastMaster-recruit-beast",
+        setPartyFlags: '+recruitedSomebody',
         addCharacter: 'anm-polarBear',
-        events: 'evt-village-beastMaster-actions',
+        select: 'evt-village-beastMaster-actions',
       },
     ],
   },
@@ -198,8 +205,9 @@ config.entities.add([
         reqItems: {'it-animalTooth':15},
         items: {'it-animalTooth':-15},
         text: "txt-evt-village-beastMaster-recruit-beast",
+        setPartyFlags: '+recruitedSomebody',
         addCharacter: 'anm-sabertooth-white',
-        events: 'evt-village-beastMaster-actions',
+        select: 'evt-village-beastMaster-actions',
       },
     ],
   },

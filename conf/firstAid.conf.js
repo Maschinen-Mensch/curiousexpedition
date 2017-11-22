@@ -12,7 +12,7 @@ config.entities.add([
       base: 12,
       karma: 1,
     },
-    events: 'evt-useItem-firstAid'
+    select: 'evt-useItem-firstAid'
   },
 
 // events
@@ -20,9 +20,9 @@ config.entities.add([
   { 
     id: 'evt-useItem-firstAid',
     text: "txt-evt-useItem-firstAid",
-    partyEffects: { ref: 'evt-setImage-nightCamp' },
+    partyEvents: { ref: 'evt-setImage-nightCamp' },
     playMusic: ['thm_nature_night_campfire'],
-    charEffects: [
+    charEvents: [
       {
         count: 'any', optional: true,
         reqItems: {'it-firstAid':1},
@@ -44,7 +44,7 @@ config.entities.add([
     setStatus: '-injured -infected -curse-abomination -jungleRot',
     items: {'it-firstAid':-1},
     health: +100,
-    charEffects: {
+    charEvents: {
       count: 'any', optional: true,
       reqItems: {'it-firstAid':1},
       reqStatus: '+injured | +infected | +curse-abomination | +jungleRot',

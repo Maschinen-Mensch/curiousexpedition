@@ -51,7 +51,7 @@ config.entities.add([
     id: 'evt-stoneStatue',
     actionText: "txt-evt-stoneStatue-action",
     reqFixtureFlags: '-explored',
-    partyEffects: [
+    partyEvents: [
       {
         reqFixtureFlags: '+stoneStatueType_01', optional: true,
         showImage: {src: 'evt_fxt_stoneStatue_1.png', type: 'day'},
@@ -65,13 +65,13 @@ config.entities.add([
         showImage: {src: 'evt_fxt_stoneStatue_3.png', type: 'day'},
       },
     ],
-    events: 'evt-stoneStatue-examine'
+    select: 'evt-stoneStatue-examine'
   },
   {
     id: 'evt-stoneStatue-examine',
     text: "txt-evt-stoneStatue-examine",
     chat: 'cl-sacrileg-warning',
-    partyEffects: {
+    partyEvents: {
       optional: true, 
       reqFixtureFlags: '+hasLoot',
       text: "txt-evt-stoneStatue-examine-1",
@@ -83,7 +83,7 @@ config.entities.add([
     id: 'evt-stoneStatue-loot',
     actionText: "txt-evt-stoneStatue-loot-action",
     chat: 'cl-warning-superstitious',
-    events: [
+    select: [
       {
         reqDifficulty: '1..',
         loot: {
@@ -118,7 +118,7 @@ config.entities.add([
     setPartyFlags: '+sacrileg +superstitious',
     setFixtureFlags: '+explored',
     chat: 'cl-sacrileg-loot',
-    charEffects: {
+    charEvents: {
       chance: 0.3, optional: true, 
       reqCharFlags: '-special +humanoid',
       setPartyFlags: '-superstitious', // don't apply superstitious and trigger aftermath at once 

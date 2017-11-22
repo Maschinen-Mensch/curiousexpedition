@@ -5,7 +5,7 @@ config.entities.add([
   //   description: "Lots of rain recently.",
   //   reqBiomeFlags: '-desert -arctic',
   //   initEvent: {
-  //     partyEffects: [
+  //     partyEvents: [
   //       {
   //         posTile: {biomeFlags: '-arctic -desert', reachable: true},
   //         addZone: {ref: 'zn-mosquito'}

@@ -764,7 +764,7 @@ config.entities.add([
     debugCategory: 'Explorer Perk',
     sprite: 'res_status_healer.png',
     tripEvents: {
-      charEffects: { count:"any", reqCharFlags: '-animal', setStatus: '+woundTreatment'},
+      charEvents: { count:"any", reqCharFlags: '-animal', setStatus: '+woundTreatment'},
     },
   },
   {

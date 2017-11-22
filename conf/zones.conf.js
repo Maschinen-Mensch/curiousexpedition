@@ -14,7 +14,7 @@ config.entities.add([
     id: 'evt-hyena-attack',
     showImage: {type: 'day', src: 'evt_spec_combat_1.png'},
     report: "txt-evt-hyena-attack-report",
-    events: [
+    select: [
       {reqTutorial:true,  combat: [{'emy-hyena':2}]},
       {reqTutorial:false, reqWorld: '..1', combat: [{'emy-hyena':1}, {'emy-hyena':2}]},
       {reqTutorial:false, reqWorld: '2',   combat: [{'emy-hyena':2}, {'emy-hyena':3}]},
@@ -39,7 +39,7 @@ config.entities.add([
     id: 'evt-hyena-black-attack',
     showImage: {type: 'day', src: 'evt_spec_combat_1.png'},
     report: "txt-evt-hyena-black-attack-report",
-    events: [
+    select: [
       {reqDifficulty: '0', combat: [{'emy-hyena':2, 'emy-hyena-black':1}]},
       {reqDifficulty: '1..', reqWorld: '..2', combat: [{'emy-hyena':2, 'emy-hyena-black':1}]},
       {reqDifficulty: '1..', reqWorld: '3..', combat: [{'emy-hyena':3, 'emy-hyena-black':1}]},
@@ -56,7 +56,7 @@ config.entities.add([
   },
   {
     id: 'evt-elephant-attack',
-    events: [
+    select: [
       {
         slots:3, reqDifficulty: '0..', 
         showImage: {type: 'day', src: 'evt_spec_combat_1.png'},
@@ -105,12 +105,12 @@ config.entities.add([
       {
         showImage: {type: 'day', src: 'evt_spec_combat_1.png'},
         report: "txt-zn-tiger-report",
-        partyEffects: {
+        partyEvents: {
           optional: true,
           reqDifficulty: '1..',
           unlockCharacter: 'sp-selous',
         },
-        events: [
+        select: [
           {reqDifficulty: '0..', reqWorld: '0..', prio:2, combat: [{'emy-tiger':1}]},
           {reqDifficulty: '1..', reqWorld: '2..', prio:1, combat: [{slots:3, 'emy-tiger':1},{'emy-tiger':2}]},
           {reqDifficulty: '1..', reqWorld: '4..', prio:1, combat: [{'emy-tiger':2}]}
@@ -144,7 +144,7 @@ config.entities.add([
       {
         showImage: {type: 'day', src: 'evt_spec_combat_1.png'},
         report: "txt-zn-sabertooth-report",
-        events: [
+        select: [
           {reqDifficulty: '0..', reqWorld: '0..', prio:2, combat: [{'emy-sabertooth':1}]},
           {reqDifficulty: '1..', reqWorld: '2..', prio:1, combat: [{slots:3, 'emy-sabertooth':1},{'emy-sabertooth':2}]},
           {reqDifficulty: '1..', reqWorld: '4..', prio:1, combat: [{'emy-sabertooth':2}]}
@@ -164,7 +164,7 @@ config.entities.add([
       {
         showImage: {type: 'day', src: 'evt_spec_combat_1.png'},
         report: "txt-zn-sabertooth-report",
-        events: [
+        select: [
           {reqDifficulty: '0..', reqWorld: '0..', prio:2, combat: [{'emy-sabertooth-white':1}]},
           {reqDifficulty: '1..', reqWorld: '2..', prio:1, combat: [{slots:3, 'emy-sabertooth-white':1},{'emy-sabertooth-white':2}]},
           {reqDifficulty: '1..', reqWorld: '4..', prio:1, combat: [{'emy-sabertooth-white':2}]}
@@ -184,7 +184,7 @@ config.entities.add([
       {
         showImage: {type: 'day', src: 'evt_spec_combat_1.png'},
         report: "txt-zn-wolf-arctic-report",
-        events: [
+        select: [
           {reqDifficulty: '0..', reqWorld: '0..', prio:3, combat: [{'emy-polarBear':1}]},
           {reqDifficulty: '1..', reqWorld: '2..', prio:2, combat: [{slots:3, 'emy-polarBear':1},{'emy-polarBear':2}]},
           {reqDifficulty: '1..', reqWorld: '4..', prio:1, combat: [{'emy-polarBear':3}]}
@@ -204,7 +204,7 @@ config.entities.add([
       {
         showImage: {type: 'day', src: 'evt_spec_combat_1.png'},
         report: "txt-zn-walrus-report",
-        events: [
+        select: [
           {reqDifficulty: '0..', reqWorld: '0..', prio:3, combat: [{'emy-walrus':1}]},
           {reqDifficulty: '1..', reqWorld: '2..', prio:2, combat: [{slots:3, 'emy-walrus':1},{'emy-walrus':2}]},
           {reqDifficulty: '1..', reqWorld: '4..', prio:1, combat: [{'emy-walrus':3}]}
@@ -224,7 +224,7 @@ config.entities.add([
       {
         showImage: {type: 'day', src: 'evt_spec_combat_1.png'},
         report: "txt-zn-yeti-report",
-        events: [
+        select: [
           {reqDifficulty: '0..', reqWorld: '0..', combat: [{'emy-yeti':1}]},
         ]
       }
@@ -242,7 +242,7 @@ config.entities.add([
       {
         showImage: {type: 'day', src: 'evt_spec_combat_1.png'},
         report: "txt-zn-polarBear-report",
-        events: [
+        select: [
           {reqDifficulty: '0..', reqWorld: '0..', prio:4, combat: [{'emy-wolf-arctic':1}]},
           {reqDifficulty: '1..', reqWorld: '1..', prio:3, combat: [{'emy-wolf-arctic':2}]},
           {reqDifficulty: '1..', reqWorld: '3..', prio:2, combat: [{'emy-wolf-arctic':3}]},
@@ -262,7 +262,7 @@ config.entities.add([
     events: {
       showImage: {type: 'day', src: 'evt_spec_combat_1.png'},
       report: "txt-zn-panther-report-1",
-      events: [
+      select: [
         {reqDifficulty: '0..', reqWorld: '0..', prio:2, combat: [{'emy-panther':1}]},
         {reqDifficulty: '1..', reqWorld: '2..', prio:1, combat: [{slots:2, 'emy-panther':1}, {'emy-panther':2}]},
         {reqDifficulty: '1..', reqWorld: '4..', prio:1, combat: [{'emy-panther':2}]}
@@ -281,7 +281,7 @@ config.entities.add([
     events: {
       showImage: {type: 'day', src: 'evt_spec_combat_1.png'},
       report: "txt-zn-gorilla-report",
-      events: [
+      select: [
         {reqDifficulty: '0..', reqWorld: '0..', prio:2, setPartyFlags:'+gorillaCombat', combat: [{'emy-gorilla':1}]},
         {reqDifficulty: '1..', reqWorld: '1..', prio:1, setPartyFlags:'+gorillaCombat', combat: [{slots:4, 'emy-gorilla':1},{'emy-gorilla':2}]},
         {reqDifficulty: '1..', reqWorld: '1..', prio:1, setPartyFlags:'+gorillaCombat', combat: [{'emy-gorilla':2}]}
@@ -300,7 +300,7 @@ config.entities.add([
       {
         showImage: {type: 'day', src: 'evt_spec_combat_1.png'},
         report: "txt-zn-crocodile-report",
-        events: [
+        select: [
           {reqDifficulty: '0..', reqWorld: '0..', prio:2, combat: [{'emy-crocodile':1}]},
           {reqDifficulty: '1..', reqWorld: '4..', prio:1, combat: [{'emy-crocodile':1}, {slots:3, 'emy-crocodile':2}]}
         ],
@@ -319,7 +319,7 @@ config.entities.add([
     events: {
       showImage: {type: 'day', src: 'evt_spec_combat_1.png'},
       report: "txt-zn-zombiePygmy-report",
-      events: [
+      select: [
         {reqDifficulty: '0..', reqWorld: '0..', prio:2, combat: [{'emy-zombiePygmy-warrior':2, 'emy-zombiePygmy-shaman':1}, {'emy-zombiePygmy-warrior':3}]},
         {reqDifficulty: '1..', reqWorld: '3..', prio:1, combat: [{'emy-zombiePygmy-warrior':4, 'emy-zombiePygmy-shaman':1}, {'emy-zombiePygmy-warrior':3, 'emy-zombiePygmy-shaman':2}]},
       ],
@@ -337,7 +337,7 @@ config.entities.add([
     events: {
       showImage: {type: 'day', src: 'evt_spec_combat_1.png'},
       report: "txt-zn-abomination-report-2",
-      events: [
+      select: [
         {combat: [{'emy-abomination':1}]},
       ],
     },
@@ -355,7 +355,7 @@ config.entities.add([
     events: {
       showImage: {type: 'day', src: 'evt_spec_combat_1.png'},
       report: "txt-zn-angryNatives-report",
-      events: [
+      select: [
         {
           reqPartyFlags: '-angryNatives1 -angryNatives2 -angryNatives3 -angryNatives4',
           setPartyFlags: '+angryNatives1',
@@ -396,7 +396,7 @@ config.entities.add([
     events: {
       showImage: {type: 'day', src: 'evt_spec_combat_1.png'},
       report: "txt-zn-angryNatives-report",
-      events: [
+      select: [
         {
           reqPartyFlags: '-angryNatives1 -angryNatives2 -angryNatives3 -angryNatives4',
           setPartyFlags: '+angryNatives1',
@@ -436,7 +436,7 @@ config.entities.add([
       {
         showImage: {type: 'day', src: 'evt_spec_combat_1.png'},
         report: "txt-zn-raptor-report-1",
-        events: [
+        select: [
           {reqDifficulty: '0..', reqWorld: '0..',  prio:2, combat: [{'emy-raptor':1}]},
           {reqDifficulty: '1..', reqWorld: '2..4', prio:1, combat: [{'emy-raptor':1},{'emy-raptor':2}]},
           {reqDifficulty: '1..', reqWorld: '5..',  prio:1,  combat: [{'emy-raptor':2},{slots:2, 'emy-raptor':3}]}
@@ -456,7 +456,7 @@ config.entities.add([
       {
         showImage: {type: 'day', src: 'evt_spec_combat_1.png'},
         report: "txt-zn-giantScorpion-report",
-        events: [
+        select: [
           {reqDifficulty: '0..', reqWorld: '0..', prio:2, combat: [{'emy-giantScorpion':1}]},
           {reqDifficulty: '1..', reqWorld: '3..', prio:1, combat: [{'emy-giantScorpion':2}]},
         ],
@@ -476,7 +476,7 @@ config.entities.add([
       {
         showImage: {type: 'day', src: 'evt_spec_combat_1.png'},
         report: "txt-zn-giantSpiders-report",
-        events: [
+        select: [
           {reqDifficulty: '0',   reqWorld: '0..',  combat: [{'emy-giantSpider':2}, {'emy-giantSpider':1}]},
           {reqDifficulty: '1..', reqWorld: '0..3', combat: [{'emy-giantSpider':3}, {'emy-giantSpider':2}]},
           {reqDifficulty: '1..', reqWorld: '4..',  combat: [{'emy-giantSpider':4}, {'emy-giantSpider':3}]},
@@ -496,7 +496,7 @@ config.entities.add([
       {
         showImage: {type: 'day', src: 'evt_spec_combat_1.png'},
         report: "txt-zn-giantBird-report",
-        events: [
+        select: [
           {reqDifficulty: '0..', reqWorld: '0..', prio:2, combat: [{'emy-giantBird':1}]},
           {reqDifficulty: '1..', reqWorld: '4..', prio:1, combat: [{'emy-giantBird':2}]},
         ],
@@ -532,7 +532,7 @@ config.entities.add([
     events: {
       addButterfly: {count:1}, 
       removeZone:true, 
-      charEffects: {
+      charEvents: {
         optional:true, 
         chance:0.5, 
         reqStatus:'+lepidopterophobia', 
@@ -555,7 +555,7 @@ config.entities.add([
       text: "txt-zn-desertStorm",
       removeZone: true,
       turns: +3,
-      partyEffects: {
+      partyEvents: {
         posTile: {traversable:true, range:'5..7', reachable:true},
         teleport: true,  
       }        

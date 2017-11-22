@@ -18,7 +18,7 @@ config.entities.add([
   //     },
   //     { slots:5 }, // nothing
   //     {
-  //       charEffects: [{
+  //       charEvents: [{
   //         reqCharFlags: '-special +humanoid',
   //         text: "txt-st-alienHeadache-1",
   //         loyalty: -1

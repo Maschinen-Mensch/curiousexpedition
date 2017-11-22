@@ -46,252 +46,195 @@ var achievements = [
     id: "ach-butterfly-collect", //events.coffee::addButterfly
     name: "txt-ach-butterfly-collect",
     desc: "txt-ach-butterfly-collect-desc",
-    img: "res_face_darwin.png",
+    img: "achv_img_ID_07",
     counterTarget: 50
   },
   {
     id: "ach-painting-collect",
     name: "txt-ach-painting-collect",
     desc: "txt-ach-painting-collect-desc",
-    img: null,
+    img: "achv_img_ID_08",
     counterTarget: 50
   },
   {
     id: "ach-studies-collect",
     name: "txt-ach-studies-collect",
     desc: "txt-ach-studies-collect-desc",
-    img: null,
+    img: "achv_img_ID_09",
     counterTarget: 50
-  },
-  {
-    id: "ach-blood-crown",
-    name: "txt-ach-blood-crown",
-    desc: "txt-ach-blood-crown-desc",
-    img: null
   },
   {
     id: "ach-treasure-collect",
     name: "txt-ach-treasure-collect",
     desc: "txt-ach-treasure-collect-desc",
-    img: null,
-    counterTarget: 10
+    img: "achv_img_ID_57",
+    counterTarget: 100
   },
   {
     id: "ach-explorer-collect", //events.coffee::applyUnlockCharacter
     name: "txt-ach-explorer-collect",
     desc: "txt-ach-explorer-collect-desc",
-    img: null,
+    img: "achv_img_ID_12",
     counterTarget: 15,
-  },
-  //Secret achievements
-  {//Missing
-    id: "ach-secret-explorer",
-    name: "txt-ach-secret-explorer",
-    desc: "txt-ach-secret-explorer-desc",
-    img: null,
-    secret: true
-  },
-  {
-    id: "ach-noCanib-husband",
-    name: "txt-ach-noCanib-husband",
-    desc: "txt-ach-noCanib-husband-desc",
-    img: null
-  },
-  {
-    id: "ach-mystery-box",
-    name: "txt-ach-mystery-box",
-    desc: "txt-ach-mystery-box-desc",
-    img: null
-  },
-  {
-    id: "ach-yeti-recruit",
-    name: "txt-ach-yeti-recruit",
-    desc: "txt-ach-yeti-recruit-desc",
-    img: null
-  },
-  {//Missing
-    id: "ach-eggplant-altar",
-    name: "txt-ach-eggplant-altar",
-    desc: "txt-ach-eggplant-altar-desc",
-    img: null,
-  },
-  {//Missing
-    id: "ach-battlecat-recruit",
-    name: "txt-ach-battlecat-recruit",
-    desc: "txt-ach-battlecat-recruit-desc",
-    img: null
-  },
-  {
-    id: "ach-mountain-explode-stoneface",
-    name: "txt-ach-mountain-explode-stoneface",
-    desc: "txt-ach-mountain-explode-stoneface-desc",
-    img: null
-  },
-  {
-    id: "ach-secret-treasure",
-    name: "txt-ach-secret-treasure",
-    desc: "txt-ach-secret-treasure-desc",
-    img: null
   },
   //Gameplay achievements
   {
     id: "ach-positive-standing",
     name: "txt-ach-positive-standing",
     desc: "txt-ach-positive-standing-desc",
-    img: null
+    img: "achv_img_ID_22",
   },
   {
     id: "ach-alcoholics",
     name: "txt-ach-alcoholics",
     desc: "txt-ach-alcoholics-desc",
-    img: null,
+    img: "achv_img_ID_23",
   },
   {
     id: "ach-volcano-explosion",
     name: "txt-ach-volcano-explosion",
     desc: "txt-ach-volcano-explosion-desc",
-    img: null
+    img: "achv_img_ID_24",
   },
-  {//Missing
+  {
     id: "ach-triple-abomination",
     name: "txt-ach-triple-abomination",
     desc: "txt-ach-triple-abomination-desc",
-    img: null,
-    secret: true
+    img: "achv_img_ID_25",
   },
   {
     id: "ach-no-selling",
     name: "txt-ach-no-selling",
     desc: "txt-ach-no-selling-desc",
-    img: null,
+    img: "achv_img_ID_26",
   },
   {
     id: "ach-coca-only",
     name: "txt-ach-coca-only",
     desc: "txt-ach-coca-only-desc",
-    img: null,
-    secret: true
+    img: "achv_img_ID_27",
   },
   {
     id: "ach-hot-air-balloon",
     name: "txt-ach-hot-air-balloon",
     desc: "txt-ach-hot-air-balloon-desc",
-    img: null,
+    img: "achv_img_ID_28",
   },
   {
     id: "ach-beat-tutorial",//tutorial::TutStepEnd
     name: "txt-ach-beat-tutorial",
     desc: "txt-ach-beat-tutorial-desc",
-    img: null
+    img: "achv_img_ID_29",
   },
   //Career Achievements
   {
     id: "ach-third-place",//epilogue.coffee::checkAchievements
     name: "txt-ach-third-place",
     desc: "txt-ach-third-place-desc",
-    img: null
+    img: "achv_img_ID_31",
   },
   {
     id: "ach-second-place",//epilogue.coffee::checkAchievements
     name: "txt-ach-second-place",
     desc: "txt-ach-second-place-desc",
-    img: null
+    img: "achv_img_ID_32",
   },
   {
     id: "ach-first-place",//epilogue.coffee::checkAchievements
     name: "txt-ach-first-place",
     desc: "txt-ach-first-place-desc",
-    img: null
+    img: "achv_img_ID_33",
   },
   {
     id: "ach-gol-frames",//mainMenu::onWonCharacter
     name: "txt-ach-gol-frames",
     desc: "txt-ach-gol-frames-desc",
-    img: null,
+    img: "achv_img_ID_34",
     counterTarget: 19
   },
   {
     id: "ach-plat-frames",//mainMenu::onWonCharacter
     name: "txt-ach-plat-frames",
     desc: "txt-ach-plat-frames-desc",
-    img: null,
+    img: "achv_img_ID_35",
     counterTarget: 19
   },
   {//Missing
     id: "ach-all-items",
     name: "txt-ach-all-items",
     desc: "txt-ach-all-items-desc",
-    img: null,
+    img: "achv_img_ID_36",
+    counterTarget: 164
   },
   {
     id: "ach-reach-world2",
     name: "txt-ach-reach-world2",
     desc: "txt-ach-reach-world2-desc",
-    img: null,
+    img: "achv_img_ID_37",
   },
   {
     id: "ach-reach-world3",
     name: "txt-ach-reach-world3",
     desc: "txt-ach-reach-world3-desc",
-    img: null,
+    img: "achv_img_ID_38",
   },
   {
     id: "ach-reach-world4",
     name: "txt-ach-reach-world4",
     desc: "txt-ach-reach-world4-desc",
-    img: null,
+    img: "achv_img_ID_39",
   },
   {
     id: "ach-reach-world5",
     name: "txt-ach-reach-world5",
     desc: "txt-ach-reach-world5-desc",
-    img: null,
+    img: "achv_img_ID_40",
   },
   {
     id: "ach-reach-world6",
     name: "txt-ach-reach-world6",
     desc: "txt-ach-reach-world6-desc",
-    img: null,
+    img: "achv_img_ID_41",
   },
-  {//Missing
+  {
     id: "ach-expeditions",
     name: "txt-ach-expeditions",
     desc: "txt-ach-expeditions-desc",
-    img: null
+    counterTarget: 100,
+    img: "achv_img_ID_42",
   },
   {
     id: "ach-portals",
     name: "txt-ach-portals",
     desc: "txt-ach-portals-desc",
-    img: null,
+    img: "achv_img_ID_43",
     counterTarget: 20
   },
   {
     id: "ach-recr-natives",
     name: "txt-ach-recr-natives",
     desc: "txt-ach-recr-natives-desc",
-    img: null,
+    img: "achv_img_ID_44",
     counterTarget: 20
   },
   {//Missing
     id: "ach-visit-special",
     name: "txt-ach-visit-special",
     desc: "txt-ach-visit-special-desc",
-    img: null,
-    secret: true
+    img: "achv_img_ID_45",
   },
   {
     id: "ach-recr-dinos",
     name: "txt-ach-recr-dinos",
     desc: "txt-ach-recr-dinos-desc",
-    img: null,
+    img: "achv_img_ID_46",
     counterTarget: 20
   },
   {
     id: "ach-complete-quests",
     name: "txt-ach-complete-quests",
     desc: "txt-ach-complete-quests-desc",
-    img: null,
+    img: "achv_img_ID_47",
     counterTarget: 20
   },
   //Counter Achievements
@@ -299,29 +242,28 @@ var achievements = [
     id: "ach-explode-mountains",
     name: "txt-ach-explode-mountains",
     desc: "txt-ach-explode-mountains-desc",
-    img: null,
+    img: "achv_img_ID_01",
     counterTarget: 50
   },
   {
     id: "ach-revive",
     name: "txt-ach-revive",
     desc: "txt-ach-revive-desc",
-    img: null,
+    img: "achv_img_ID_02",
     counterTarget: 10,
     updateInterval: 1
   },
-  {//Missing
+  {
     id: "ach-stay-portal",
     name: "txt-ach-stay-portal",
     desc: "txt-ach-stay-portal-desc",
-    img: null,
-    secret: true
+    img: "achv_img_ID_03"
   },
   {
     id: "ach-sell-funds", //ranking.coffee::sellOutroItem
     name: "txt-ach-sell-funds",
     desc: "txt-ach-sell-funds-desc",
-    img: null,
+    img: "achv_img_ID_04",
     counterTarget: 100000,
     updateInterval: 1000
   },
@@ -329,7 +271,7 @@ var achievements = [
     id: "ach-sell-fame",//ranking.coffee::giftOutroItem
     name: "txt-ach-sell-fame",
     desc: "txt-ach-sell-fame-desc",
-    img: null,
+    img: "achv_img_ID_05",
     counterTarget: 100000,
     updateInterval: 1000
   },
@@ -337,7 +279,7 @@ var achievements = [
     id: "ach-eat-chocolate",
     name: "txt-ach-eat-chocolate",
     desc: "txt-ach-eat-chocolate-desc",
-    img: null,
+    img: "achv_img_ID_06",
     counterTarget: 500,
     updateInterval: 25
   },
@@ -346,27 +288,173 @@ var achievements = [
     id: "ach-kill-snarfrattle",
     name: "txt-ach-kill-snarfrattle",
     desc: "txt-ach-kill-snarfrattle-desc",
-    img: null
+    img: "achv_img_ID_48",
   },
-  {//Missing
+  {
     id: "ach-headbutt-raptor",
     name: "txt-ach-headbutt-raptor",
     desc: "txt-ach-headbutt-raptor-desc",
-    img: null
+    img: "achv_img_ID_49",
   },
   {
     id: "ach-flee",
     name: "txt-ach-flee",
     desc: "txt-ach-flee-desc",
-    img: null,
-  }
+    counterTarget: 10,
+    img: "achv_img_ID_50",
+  },
+  {
+    id: "ach-no-recruit",
+    name: "txt-ach-no-recruit",
+    desc: "txt-ach-no-recruit-desc",
+    img: "achv_img_ID_30",
+  },
+  {
+    id: "ach-hyena-kills",
+    name: "txt-ach-hyena-kills",
+    desc: "txt-ach-hyena-kills-desc",
+    counterTarget: 100,
+    img: "achv_img_ID_51",
+  },
+  {
+    id: "ach-slave-free",
+    name: "txt-ach-slave-free",
+    desc: "txt-ach-slave-free-desc",
+    img: "achv_img_ID_52",
+  },
+  {
+    id: "ach-crocodile-kills",
+    name: "txt-ach-crocodile-kills",
+    desc: "txt-ach-crocodile-kills-desc",
+    counterTarget: 20,
+    img: "achv_img_ID_53",
+  },
+  {
+    id: "ach-giantBird-kills",
+    name: "txt-ach-giantBird-kills",
+    desc: "txt-ach-giantBird-kills-desc",
+    counterTarget: 10,
+    img: "achv_img_ID_54",
+  },
+  {
+    id: "ach-giantCrab-kill",
+    name: "txt-ach-giantCrab-kill",
+    desc: "txt-ach-giantCrab-kill-desc",
+    img: "achv_img_ID_55",
+  },
+  {
+    id: "ach-giantScorpion-kills",
+    name: "txt-ach-giantScorpion-kills",
+    desc: "txt-ach-giantScorpion-kills-desc",
+    counterTarget: 10,
+    img: "achv_img_ID_56",
+  },
+  {
+    id: "ach-giantSpider-kills",
+    name: "txt-ach-giantSpider-kills",
+    desc: "txt-ach-giantSpider-kills-desc",
+    counterTarget: 20,
+    img: "achv_img_ID_58",
+  },
+  {
+    id: "ach-hatchEggs",
+    name: "txt-ach-hatchEggs",
+    desc: "txt-ach-hatchEggs-desc",
+    counterTarget: 10,
+    img: "achv_img_ID_59",
+  },
+  {
+    id: "ach-giantWalrus-kills",
+    name: "txt-ach-giantWalrus-kills",
+    desc: "txt-ach-giantWalrus-kills-desc",
+    counterTarget: 10,
+    img: "achv_img_ID_60",
+  },
+  {
+    id: "ach-treasure-dig",
+    name: "txt-ach-treasure-dig",
+    desc: "txt-ach-treasure-dig-desc",
+    counterTarget: 10,
+    img: "achv_img_ID_11",
+  },
+  {
+    id: "ach-yeti-recruit",
+    name: "txt-ach-yeti-recruit",
+    desc: "txt-ach-yeti-recruit-desc",
+    img: "achv_img_ID_16",
+    secret: true
+  },
+  {
+    id: "ach-eggplant-altar",
+    name: "txt-ach-eggplant-altar",
+    desc: "txt-ach-eggplant-altar-desc",
+    img: "achv_img_ID_17",
+    secret: true
+  },
+  {
+    id: "ach-battlecat-recruit",
+    name: "txt-ach-battlecat-recruit",
+    desc: "txt-ach-battlecat-recruit-desc",
+    img: "achv_img_ID_18",
+    secret: true
+  },
+  {
+    id: "ach-mountain-explode-stoneface",
+    name: "txt-ach-mountain-explode-stoneface",
+    desc: "txt-ach-mountain-explode-stoneface-desc",
+    img: "achv_img_ID_19",
+    secret: true
+  },
+  {
+    id: "ach-secret-treasure",
+    name: "txt-ach-secret-treasure",
+    desc: "txt-ach-secret-treasure-desc",
+    img: "achv_img_ID_20",
+    secret: true
+  },
+  {
+    id: "ach-balloon-click",
+    name: "txt-ach-balloon-click",
+    desc: "txt-ach-balloon-click-desc",
+    img: "achv_img_ID_21",
+    counterTarget: 10,
+    secret: true
+  },
+  {
+    id: "ach-blood-crown",
+    name: "txt-ach-blood-crown",
+    desc: "txt-ach-blood-crown-desc",
+    img: "achv_img_ID_10",
+    secret: true
+  },
+  {
+    id: "ach-secret-explorer",
+    name: "txt-ach-secret-explorer",
+    desc: "txt-ach-secret-explorer-desc",
+    img: "achv_img_ID_13",
+    secret: true
+  },
+  {
+    id: "ach-noCanib-husband",
+    name: "txt-ach-noCanib-husband",
+    desc: "txt-ach-noCanib-husband-desc",
+    img: "achv_img_ID_14",
+    secret: true
+  },
+  {
+    id: "ach-mystery-box",
+    name: "txt-ach-mystery-box",
+    desc: "txt-ach-mystery-box-desc",
+    img: "achv_img_ID_15",
+    secret: true
+  },
 ]
 
 var staticConfig = 
 {
   versionName: '',
-  enableAchievements: true,
-  footerName: "1.3.0.0m",
+  enableAchievements: false,
+  footerName: "1.3-modBeta8",
   showMods: true,
 
   // is converted to config.diaryText at run-time
@@ -510,7 +598,8 @@ var config = {
     noWeightIconOffset: [+14, -5],
     backgroundColor: '#342a22',
     gridColor: '#67573b',
-    maxPartySlots: 18
+    maxPartySlots: 18,
+    maxCombatSlots: 12
   },
 
   cursor: {
@@ -568,15 +657,16 @@ var config = {
   },
 
   panel: {
-    infoSimple: {img:'hud_info_border_simple.png', offset:26},
-    info: {img:'hud_info_border.png', offset:60},
-    action: {img:'hud_actionButton.png', offset:24},
-    extraAction: {sprite:'hud_button_blank.png', offset:4},
-    menuButton: {img:'hud_menuButton.png', offset:14},
-    mapButton: {img:'hud_menuButton.png', offset:14},
-    chat: {sprite:'hud_chat_bubble.png', offset:12},
-    chatSmall: {sprite:'hud_chat_bubble_small.png', offset:4},
-    inventory: {sprite:'hud_inventory_border.png', offset:1}
+    infoSimple: {img:'hud_info_border_simple.png', offset:26, scale:0.5},
+    info: {img:'hud_info_border.png', offset:60, scale: 0.5},
+    action: {img:'hud_actionButton.png', offset:24, scale: 0.5},
+    extraAction: {sprite:'hud_button_blank.png', offset:4, scale: 0.5},
+    menuButton: {sprite:'hud_button_menu.png', offset:7, scale:1},
+    mapButton: {sprite:'hud_button_menu.png', offset:7, scale:1},
+    modFrame: {sprite:'hud_frame_mod.png', offset:7, scale:1},
+    chat: {sprite:'hud_chat_bubble.png', offset:12, scale:0.5},
+    chatSmall: {sprite:'hud_chat_bubble_small.png', offset:4, scale: 0.5},
+    inventory: {sprite:'hud_inventory_border.png', offset:1, scale: 0.5}
   },
 
   notifications: {
@@ -943,6 +1033,8 @@ var config = {
     invSlotUsable: 'orange',
     invSlotInvalid: 'red',
     zone: 'red',
+
+    infoWarning: 'tomato',
 
     statusBar: 'black',
     statusBarTurns: '#ff49f9',

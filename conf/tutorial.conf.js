@@ -100,18 +100,18 @@ config.entities.add([
     text: "txt-evt-tutorial-overburden-1",
     showImage: {src: 'evt_fxt_empty.png', type: 'day'},
     npc: 'npc-native-generic',
-    npcEffects: {
-      events: [
+    npcEvents: {
+      select: [
         {
           reqGender: 'male',
-          charEffects: {
+          charEvents: {
             reqCharFlags: '-special',
             text: "txt-evt-tutorial-overburden-2",
           },
         },
         {
           reqGender: 'female',
-          charEffects: {
+          charEvents: {
             reqCharFlags: '-special',
             text: "txt-evt-tutorial-overburden-3",
           },
@@ -124,18 +124,20 @@ config.entities.add([
   },
   {
     id: 'evt-tutorial-shipReturn',
-    events: [
+    select: [
       {
         // we just force the combat onto player if he managed to skip it somehow
         reqPartyFlags: '-tutCombatDone',
+        setPartyFlags: '-shipDeny',
         showImage: {type: 'day', src: 'evt_spec_combat_1.png'},
-        combat: [{'emy-tiger':1}]
+        combat: {refs: {'emy-tiger':1}}
       },
       {
         reqPartyFlags: '+tutCombatDone',
         sanity: +100,
         chat: 'tut-shipArrival-1',
         text: "txt-evt-tutorial-shipReturn",
+        removeZones: {radius:20},
         addCharacter: 'pl-soldier-scottish pl-translator anm-donkey',
         actions: {
           actionText: "txt-evt-tutorial-shipReturn-action",

@@ -28,7 +28,7 @@ config.entities.add([
       {
         slots: 1,
         reqFixtureFlags: '-explored',
-        partyEffects: [
+        partyEvents: [
           {reqZone: {flags:'+giantSpiders', range:'..8', count:'0'}},
         ],
         addZone: {ref:'zn-giantSpiders', range:1, seeking:true}
@@ -100,7 +100,7 @@ config.entities.add([
   {
     id: 'evt-monsterDen-giantSpiders-approach',
     reqFixtureFlags: '-explored',
-    partyEffects: [
+    partyEvents: [
       {
         optional: true,
         reqItems: {'it-bloodCrown':1},
@@ -126,7 +126,7 @@ config.entities.add([
     actionText: "txt-evt-cave-explore-torch-action", alwaysShown: true,
     playMusic: ['thm_cave_1', 'thm_cave_2'],
     text: "txt-evt-cave-explore-torch",
-    events: 'evt-monsterDen-giantSpiders-approach-initiative',
+    select: 'evt-monsterDen-giantSpiders-approach-initiative',
   },
   {
     id: 'evt-monsterDen-giantSpiders-explore-pumpkinLantern',
@@ -134,7 +134,7 @@ config.entities.add([
     actionText: "txt-evt-cave-explore-pumpkinLantern-action",
     playMusic: ['thm_cave_1', 'thm_cave_2'],
     text: "txt-evt-cave-explore-pumpkinLantern",
-    events: 'evt-monsterDen-giantSpiders-approach-initiative',
+    select: 'evt-monsterDen-giantSpiders-approach-initiative',
   },
   {
     id: 'evt-monsterDen-giantSpiders-explore-noTorch',
@@ -146,43 +146,52 @@ config.entities.add([
     winEvents: [
       { 
         setFixtureFlags: '+initiative',
-        events: 'evt-monsterDen-giantSpiders-approach-initiative',
+        select: 'evt-monsterDen-giantSpiders-approach-initiative',
       },
     ],
     failEvents: [
       { 
         setFixtureFlags: '-initiative',
-        events: 'evt-monsterDen-giantSpiders-approach-noInitiative',
+        select: 'evt-monsterDen-giantSpiders-approach-noInitiative',
       },
     ],
   },
   {
     id: 'evt-monsterDen-giantSpiders-startCombat',
     actionText: 'txt-evt-cave-ghostsQuest-action',
-    pushEvent: 'evt-monsterDen-giantSpiders-combatAftermath',
-    partyEffects: [
+    partyEvents: [
       { optional: true, reqFixtureFlags: '+opening', showImage: {src: 'evt_fxt_cave_spiders_opening.png'} },
       { optional: true, reqFixtureFlags: '-opening', showImage: {src: 'evt_fxt_cave_spiders.png'} },
       {
         optional: true,
         reqFixtureFlags: '+initiative',
-        events: [
-          {reqDifficulty: '0',   reqWorld: '0..',  combat: {surprise: false, refs: {'emy-giantSpider':2}} },
-          {reqDifficulty: '1',   reqWorld: '0..',  combat: {surprise: false, refs: {'emy-giantSpider':3}} },
-          {reqDifficulty: '1',   reqWorld: '3..',  combat: {surprise: false, refs: {'emy-giantSpider':4}} },
-          {reqDifficulty: '2',   reqWorld: '0..',  combat: {surprise: false, refs: {'emy-giantSpider':4}} },
-          {reqDifficulty: '2',   reqWorld: '3..',  combat: {surprise: false, refs: {'emy-giantSpider':5}} },
+        select: [
+          {reqDifficulty: '0',   reqWorld: '0..',  combat: {surprise: false, refs: {'emy-giantSpider':2}, 
+            win: 'evt-monsterDen-giantSpiders-combatSuccess', flee: 'evt-monsterDen-giantSpiders-combatFail'} },
+          {reqDifficulty: '1',   reqWorld: '0..',  combat: {surprise: false, refs: {'emy-giantSpider':3},
+            win: 'evt-monsterDen-giantSpiders-combatSuccess', flee: 'evt-monsterDen-giantSpiders-combatFail'} },
+          {reqDifficulty: '1',   reqWorld: '3..',  combat: {surprise: false, refs: {'emy-giantSpider':4},
+            win: 'evt-monsterDen-giantSpiders-combatSuccess', flee: 'evt-monsterDen-giantSpiders-combatFail'} },
+          {reqDifficulty: '2',   reqWorld: '0..',  combat: {surprise: false, refs: {'emy-giantSpider':4},
+            win: 'evt-monsterDen-giantSpiders-combatSuccess', flee: 'evt-monsterDen-giantSpiders-combatFail'} },
+          {reqDifficulty: '2',   reqWorld: '3..',  combat: {surprise: false, refs: {'emy-giantSpider':5},
+            win: 'evt-monsterDen-giantSpiders-combatSuccess', flee: 'evt-monsterDen-giantSpiders-combatFail'} },
         ],
       },
       {
         optional: true,
         reqFixtureFlags: '-initiative',
-        events: [
-          {reqDifficulty: '0',   reqWorld: '0..',  combat: {surprise: true, refs: {'emy-giantSpider':2}} },
-          {reqDifficulty: '1',   reqWorld: '0..',  combat: {surprise: true, refs: {'emy-giantSpider':3}} },
-          {reqDifficulty: '1',   reqWorld: '3..',  combat: {surprise: true, refs: {'emy-giantSpider':4}} },
-          {reqDifficulty: '2',   reqWorld: '0..',  combat: {surprise: true, refs: {'emy-giantSpider':4}} },
-          {reqDifficulty: '2',   reqWorld: '3..',  combat: {surprise: true, refs: {'emy-giantSpider':5}} },
+        select: [
+          {reqDifficulty: '0',   reqWorld: '0..',  combat: {surprise: true, refs: {'emy-giantSpider':2},
+            win: 'evt-monsterDen-giantSpiders-combatSuccess', flee: 'evt-monsterDen-giantSpiders-combatFail'} },
+          {reqDifficulty: '1',   reqWorld: '0..',  combat: {surprise: true, refs: {'emy-giantSpider':3},
+            win: 'evt-monsterDen-giantSpiders-combatSuccess', flee: 'evt-monsterDen-giantSpiders-combatFail'} },
+          {reqDifficulty: '1',   reqWorld: '3..',  combat: {surprise: true, refs: {'emy-giantSpider':4},
+            win: 'evt-monsterDen-giantSpiders-combatSuccess', flee: 'evt-monsterDen-giantSpiders-combatFail'} },
+          {reqDifficulty: '2',   reqWorld: '0..',  combat: {surprise: true, refs: {'emy-giantSpider':4},
+            win: 'evt-monsterDen-giantSpiders-combatSuccess', flee: 'evt-monsterDen-giantSpiders-combatFail'} },
+          {reqDifficulty: '2',   reqWorld: '3..',  combat: {surprise: true, refs: {'emy-giantSpider':5},
+            win: 'evt-monsterDen-giantSpiders-combatSuccess', flee: 'evt-monsterDen-giantSpiders-combatFail'} },
         ],
       },
     ],    
@@ -190,7 +199,7 @@ config.entities.add([
 
   {
     id: 'evt-monsterDen-giantSpiders-approach-initiative',
-    partyEffects: [
+    partyEvents: [
       { optional: true, reqFixtureFlags: '+opening', showImage: {src: 'evt_fxt_cave_spiders_opening.png'} },
       { optional: true, reqFixtureFlags: '-opening', showImage: {src: 'evt_fxt_cave_spiders.png'} },
     ],
@@ -211,12 +220,25 @@ config.entities.add([
     ]
   },
   {
+    id: 'evt-monsterDen-giantSpiders-combatSuccess',
+    loot: {
+        items: {},
+        close: 'evt-monsterDen-giantSpiders-combatAftermath',
+        cancel: 'evt-monsterDen-giantSpiders-combatAftermath'
+        }
+  },
+  {
+    id: 'evt-monsterDen-giantSpiders-combatFail',
+    sanity: -20,
+    select: 'evt-monsterDen-giantSpiders-explored-leave'
+  },
+  {
     id: 'evt-monsterDen-giantSpiders-combatAftermath',
-    events: [
+    select: [
       {
         // no opening, nothing happens
         reqFixtureFlags: '-opening',
-        events: 'evt-monsterDen-giantSpiders-explored-leave',
+        select: 'evt-monsterDen-giantSpiders-explored-leave',
       },
       {
         reqFixtureFlags: '+opening',
@@ -243,7 +265,7 @@ config.entities.add([
     setFixtureFlags: '+explored',
     replaceTiles: [{radius:0, old: 'tl-corrupted-mountain', new: 'tl-mountainTraversable'}],
     teleport: true,
-    events: 'evt-leave',
+    select: 'evt-leave',
   },
 
 // ITEMS

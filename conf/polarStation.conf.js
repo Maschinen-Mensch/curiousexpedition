@@ -100,8 +100,8 @@ config.entities.add([
       particles: ['pt-snow-1', 'pt-snow-2', 'pt-snow-3'], particlesChance: 0.5
     },
     playMusic: 'thm_arctic_day_1',
-    events: [
-      { reqFixtureFlags: '+inhabited', events: 'evt-polarStation-enter' },
+    select: [
+      { reqFixtureFlags: '+inhabited', select: 'evt-polarStation-enter' },
       { reqFixtureFlags: '-inhabited', text: 'txt-evt-polarStation-forsaken' },
     ]
   },
@@ -109,9 +109,9 @@ config.entities.add([
     id: 'evt-polarStation-enter',
     text: "txt-evt-polarStation",
     playMusic: 'thm_arctic_day_1',
-    partyEffects: {chance:0.5, npc: 'anm-dog-husky'},
+    partyEvents: {chance:0.5, npc: 'anm-dog-husky'},
     npc: 'npc-arcticResearcher',
-    events: 'evt-polarStation-actions',
+    select: 'evt-polarStation-actions',
   },
   {
     id: 'evt-polarStation-actions',
@@ -146,12 +146,12 @@ config.entities.add([
   {
     id: 'evt-polarStation-stash-done',
     text: "txt-evt-polarStation-stash-done",
-    events: 'evt-polarStation-actions'
+    select: 'evt-polarStation-actions'
   },
   {
     id: 'evt-polarStation-trade-deal',
     text: "txt-evt-polarStation-trade-deal",
-    partyEffects: [
+    partyEvents: [
       {
         optional: true, 
         reqItems: {'it-polarStation-meta-ticket-1':1},
@@ -180,12 +180,12 @@ config.entities.add([
         }
       }
     ],
-    events: 'evt-polarStation-actions'
+    select: 'evt-polarStation-actions'
   },  
   {
     id: 'evt-polarStation-trade-cancel',
     text: "txt-evt-polarStation-trade-cancel",
-    events: 'evt-polarStation-actions'
+    select: 'evt-polarStation-actions'
   },
   {
     id: 'evt-polarStation-travel',
@@ -196,8 +196,7 @@ config.entities.add([
         reqItems: {'it-polarStation-ticket':1},
         items: {'it-polarStation-ticket':-1},
         actionText: "txt-evt-polarStation-action-1",
-        reqFixture: {range: '2..50', flags: '+stationA'},
-        // TODO reqFixture should also check for reachable, or allow reqCount in posTile
+        reqFixture: {range: '2..50', flags: '+stationA', reachable: true},
         posTile: {range: '..50', fixtureFlags: '+stationA', reachable:true},
         forceTravel: true
       },
@@ -205,8 +204,7 @@ config.entities.add([
         reqItems: {'it-polarStation-ticket':1},
         items: {'it-polarStation-ticket':-1},
         actionText: "txt-evt-polarStation-action-2",
-        reqFixture: {range: '2..50', flags: '+stationB'},
-        // TODO reqFixture should also check for reachable, or allow reqCount in posTile
+        reqFixture: {range: '2..50', flags: '+stationB', reachable: true},
         posTile: {range: '..50', fixtureFlags: '+stationB', reachable:true},
         forceTravel: true
       },
@@ -214,15 +212,14 @@ config.entities.add([
         reqItems: {'it-polarStation-ticket':1},
         items: {'it-polarStation-ticket':-1},
         actionText: "txt-evt-polarStation-action-3",
-        reqFixture: {range: '2..50', flags: '+stationC'},
-        // TODO reqFixture should also check for reachable, or allow reqCount in posTile
+        reqFixture: {range: '2..50', flags: '+stationC', reachable: true},
         posTile: {range: '..50', fixtureFlags: '+stationC', reachable:true},
         forceTravel: true
       },
       {
         actionText: "txt-evt-polarStation-travel-action-1", // TODO: use generic text entry
         text: 'txt-evt-polarStation-travel-cancel',
-        events: 'evt-polarStation-actions'
+        select: 'evt-polarStation-actions'
       }
     ]
   },
@@ -230,24 +227,11 @@ config.entities.add([
     id: 'evt-polarStation-rest',
     actionText: "txt-evt-polarStation-rest-action",
     alwaysShown: true,
-    partyEffects: {
-      events: [
-        {
-          slots:1,
-          showImage: {
-            src: 'evt_fxt_sledStation_1_night.png', type: 'night', showMounted: true,
-            particles: ['pt-snow-1', 'pt-snow-2'],
-          },
-        },
-        {
-          slots:1,
-          showImage: {
-            src: 'evt_fxt_sledStation_1_night.png', type: 'night', showMounted: true,
-          },
-        }
-      ],
+    showImage: {
+      src: 'evt_fxt_sledStation_1_night.png', type: 'night', showMounted: true,
+      particles: ['pt-snow-1', 'pt-snow-2'],
+      particlesChance: 0.5
     },
-    showImage: { src: 'evt_fxt_sledStation_1_night.png', type: 'night'},
     playMusic: 'thm_arctic_night_1',
     reqItems: {'it-polarStation-ticket':1},
     items: {'it-polarStation-ticket':-1},
@@ -256,31 +240,19 @@ config.entities.add([
       actionText: "txt-evt-mission-sleep-action",
       turns: 1,
       sanity: sanityRestVillage,
-      events: 'evt-polarStation-morning',
+      select: 'evt-polarStation-morning',
     },
   },
   {
     id: 'evt-polarStation-morning',
-    partyEffects: {
-      events: [
-        {
-          slots:1,
-          showImage: {
-            src: 'evt_fxt_sledStation_1.png', type: 'day', showMounted: true,
-            particles: ['pt-snow-1', 'pt-snow-2', 'pt-snow-3'],
-          },
-        },
-        {
-          slots:1,
-          showImage: {
-            src: 'evt_fxt_sledStation_1.png', type: 'day', showMounted: true,
-          },
-        }
-      ],
+    showImage: {
+      src: 'evt_fxt_sledStation_1.png', type: 'day', showMounted: true,
+      particles: ['pt-snow-1', 'pt-snow-2', 'pt-snow-3'],
+      particlesChance: 0.5
     },
     npc: 'npc-arcticResearcher',
     playMusic: 'thm_arctic_day_1',
     text: "txt-evt-polarStation-morning",
-    events: 'evt-polarStation-actions'
+    select: 'evt-polarStation-actions'
   },
 ])

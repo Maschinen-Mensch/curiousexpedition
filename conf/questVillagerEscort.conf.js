@@ -14,7 +14,7 @@ config.entities.add([
     showImage: {src: 'evt_spec_ship_1.png'},
     npc: 'npc-village-escort-husband',
     report: "txt-evt-harbor-quest-escortVillager-report",
-    npcEffects: {
+    npcEvents: {
       text: "txt-evt-harbor-quest-escortVillager",
       actions: [
         {
@@ -23,14 +23,13 @@ config.entities.add([
           text: "txt-evt-harbor-quest-escortVillager-1",
           report: "txt-evt-harbor-quest-escortVillager-report-1",
           alwaysShown: true,
-          clearPushedEvents: true,
-          events: {ref:'evt-harbor-eventSelection'},
+          select: {ref:'evt-harbor-eventSelection'},
         },
         {
           actionText: "txt-evt-angry-demandPayment-action-1",
           text:"txt-evt-harbor-quest-escortVillager-2",
           report: "txt-evt-harbor-quest-escortVillager-report-2",
-          events: 'evt-harbor-eventSelection',
+          select: 'evt-harbor-eventSelection',
         },
       ],
     },
@@ -40,13 +39,13 @@ config.entities.add([
     showImage: {src: 'evt_spec_ship_1.png'},
     npc: 'npc-village-escort-husband',
     setPartyStatus: '-escortVillager',
-    npcEffects: {
+    npcEvents: {
       text: "txt-evt-harbor-quest-escortVillager-complete",
       report: "txt-evt-harbor-quest-escortVillager-complete-report",
     },
-    events: [
+    select: [
       {
-        charEffects: {
+        charEvents: {
           reqCharFlags: '+escortVillager',
           removeCharacter: true,
         },

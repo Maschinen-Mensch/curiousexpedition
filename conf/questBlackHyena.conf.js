@@ -50,20 +50,20 @@ config.entities.add([
     npc: 'npc-hunter',
     text: "txt-evt-harbor-quest-blackHyena",
     report: "txt-evt-harbor-quest-blackHyena-report",
-    npcEffects: {
+    npcEvents: {
       actions: {
         actionText: "txt-evt-harbor-quest-missionary-action",
         text: "txt-evt-harbor-quest-blackHyena-1",
         report: "txt-evt-harbor-quest-blackHyena-report-1",
         setPartyStatus: {'st-blackHyena':true},
-        events: 'evt-harbor-eventSelection',  
+        select: 'evt-harbor-eventSelection',  
       }
     },
     actions: {
       actionText: "txt-evt-angry-demandPayment-action-1",
       text: "txt-evt-harbor-quest-blackHyena-2",
       report: "txt-evt-harbor-quest-blackHyena-report-2",
-      events: 'evt-harbor-eventSelection',
+      select: 'evt-harbor-eventSelection',
     }
   },
   {
@@ -72,7 +72,7 @@ config.entities.add([
     text: "txt-evt-harbor-quest-blackHyena-complete",
     npc: 'npc-hunter',
     setPartyStatus: '-blackHyena',
-    npcEffects: {
+    npcEvents: {
       actions: {
         incAchievement: "ach-kill-snarfrattle",
         reqItems: {'it-pelt-hyena-black':1},
@@ -88,7 +88,7 @@ config.entities.add([
       actionText: "txt-evt-harbor-quest-schroedinger-complete-action-1",
       text: "txt-evt-harbor-quest-blackHyena-complete-2",
       fame: -fameLarge,
-      events: 'evt-harbor-eventSelection',
+      select: 'evt-harbor-eventSelection',
     }
   }
 ])

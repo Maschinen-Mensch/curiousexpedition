@@ -124,9 +124,9 @@ config.entities.add([
     actionText: "txt-evt-shrine-2-action",
     playMusic: ['thm_shrine_1'],
     chat: 'cl-scaryPlace',
-    partyEffects: [
+    partyEvents: [
       {
-        events: 'evt-shrine-actions',
+        select: 'evt-shrine-actions',
       },
       {
         optional: true, reqFixtureFlags: '+broken',
@@ -225,7 +225,7 @@ config.entities.add([
         failEvents: [
           {
             slots: 4,
-            charEffects: {
+            charEvents: {
               reqCharFlags: '-special +humanoid',
               health: -10,
               text: "txt-evt-shrine-rope-actions-1",
@@ -233,7 +233,7 @@ config.entities.add([
             actions: 'evt-shrine-enter'
           },
           {
-            charEffects: {
+            charEvents: {
               reqCharFlags: '-special +humanoid',
               storeCharacter: true,
               setCharFlags: '+dead',
@@ -244,7 +244,7 @@ config.entities.add([
           },
           {
             priority: 5,
-            charEffects: [
+            charEvents: [
               {
                 reqCharFlags:'+special | -humanoid',
                 count:'all'
@@ -262,27 +262,26 @@ config.entities.add([
   },
   {
     id: 'evt-shrine-actions',
-    events: 'evt-shrine-rope-actions',
+    select: 'evt-shrine-rope-actions',
     actions: [
       { 
         reqFixtureFlags: '-broken -shrineTypeRope',
         actionText: "txt-evt-shrine-actions-action",
-        events: 'evt-shrine-enter' 
+        select: 'evt-shrine-enter' 
       },
       { 
         ref:'evt-shrine-paint',
-        pushEvent: 'evt-shrine-actions'
       },
       {
         actionText: "txt-evt-leave-action",
-        events:'evt-shrine-leave'
+        select:'evt-shrine-leave'
       },
     ],
   },
   { 
     id: 'evt-shrine-enter',
     actionText: "txt-evt-shrine-actions-action",
-    partyEffects: [
+    partyEvents: [
       {
         optional: true, reqBiomeFlags: '-arctic',
         text: "txt-evt-shrine-enter",
@@ -301,7 +300,7 @@ config.entities.add([
     actions: {
       actionText: "txt-evt-shrine-enter-action",
       chat: 'cl-shrine-loot',
-      events: [
+      select: [
         {
           reqDifficulty: '1..',
           loot: {
@@ -343,7 +342,7 @@ config.entities.add([
   { 
     id: 'evt-shrine-lootAftermath',
     extends: 'evt-shrine-loot',
-    events: [
+    select: [
       'evt-shrine-aftermath-mountains',
       'evt-shrine-aftermath-chasm',
       'evt-shrine-aftermath-flood',
@@ -368,7 +367,7 @@ config.entities.add([
         {radius:10, old: 'any', new: 'tl-mountain', particle: ['pt-erupt-mountain'], chance: 0.3},
         {radius:1, old: 'any', new: 'tl-dry', particle: ['pt-erupt-hill']},
       ],
-      events: 'evt-leave',
+      select: 'evt-leave',
     },
   },
   { 
@@ -376,16 +375,16 @@ config.entities.add([
     reqFixtureFlags: '+aftermathChasm',
     text: "txt-evt-shrine-aftermath-chasm",
     report: "txt-evt-shrine-aftermath-chasm-report",
-    events: {
+    select: {
       startSprawl: {ref:'spr-chasm', power:3, worldPower:1},
-      events: 'evt-leave'
+      select: 'evt-leave'
     }
   },
   { 
     id: 'evt-shrine-aftermath-forsake',
     reqFixtureFlags: '+aftermathForsake',
     text: "txt-evt-shrine-aftermath-forsake",
-    partyEffects: [
+    partyEvents: [
       {optional:true, ref:'evt-shrine-aftermath-forsake-fxt'},
       {optional:true, ref:'evt-shrine-aftermath-forsake-fxt'},
       {optional:true, ref:'evt-shrine-aftermath-forsake-fxt'},
@@ -408,7 +407,7 @@ config.entities.add([
       flags: '+native', 
       radius: 50
     },
-    events: 'evt-leave'
+    select: 'evt-leave'
   },
   {
     id: 'evt-shrine-aftermath-forsake-fxt',
@@ -423,11 +422,11 @@ config.entities.add([
     reqFixtureFlags: '+aftermathFlood',
     text: "txt-evt-shrine-aftermath-flood",
     report: "txt-evt-shrine-aftermath-flood-report",
-    events: [
+    select: [
       {
         startSprawl: {ref:'spr-flood', radius:0, power:2},
         setPartyStatus: {'st-curse-flood':true},
-        events: 'evt-leave',
+        select: 'evt-leave',
       },
     ],
   },
@@ -437,7 +436,7 @@ config.entities.add([
     text: "txt-evt-shrine-aftermath-climate",
     report: "txt-evt-shrine-aftermath-climate-report",
     startSprawl: {ref:'spr-dry', radius:0, power:8, worldPower:2},
-    events: 'evt-leave'
+    select: 'evt-leave'
   },
   { 
     id: 'evt-shrine-aftermath-ice',
@@ -445,14 +444,14 @@ config.entities.add([
     text: "txt-evt-shrine-ice",
     report: "txt-evt-shrine-ice",
     startSprawl: {ref:'spr-ice', radius:0, power:8, worldPower:2},
-    events: 'evt-leave'
+    select: 'evt-leave'
   },
   { 
     id: 'evt-shrine-aftermath-volcano',
     reqFixtureFlags: '+aftermathVolcano',
     text: "txt-evt-shrine-aftermath-volcano",
     report: "txt-evt-shrine-aftermath-volcano-report",
-    partyEffects: [
+    partyEvents: [
       {
         addFixture: {ref:'fxt-volcano-spawn-large-active', range:4}
       },
@@ -465,34 +464,34 @@ config.entities.add([
         addFixture: {ref:'fxt-volcano-spawn-large-active', range:10}
       }
     ],
-    events: 'evt-leave',
+    select: 'evt-leave',
   },
   { 
     id: 'evt-shrine-aftermath-poisonGas',
     reqFixtureFlags: '+aftermathPoisonGas',
     text: "txt-evt-shrine-aftermath-poisonGas",
     report: "txt-evt-shrine-aftermath-poisonGas-report",
-    partyEffects: [
+    partyEvents: [
       {addFixture: {ref:'fxt-fumarole-spawn', range:7, setPos:false}},
       {addFixture: {ref:'fxt-fumarole-spawn', range:7, setPos:false}},
       {optional: true, reqWorld: '2..', addFixture: {ref:'fxt-fumarole-spawn', range:7, setPos:false}},
       {optional: true, reqWorld: '3..', addFixture: {ref:'fxt-fumarole-spawn', range:7, setPos:false}},
       {optional: true, reqWorld: '4..', addFixture: {ref:'fxt-fumarole-spawn', range:7, setPos:false}},
     ],
-    events: 'evt-leave',
+    select: 'evt-leave',
   },
   { 
     id: 'evt-shrine-aftermath-corrupted',
     reqFixtureFlags: '+aftermathCorrupted',
     text: "txt-evt-shrine-aftermath-corrupted",
-    partyEffects: [
+    partyEvents: [
       {optional: true,                  addFixture: {ref:'fxt-corrupt-spawn', range:6,   setPos:false}},
       {optional: true,                  addFixture: {ref:'fxt-corrupt-spawn', range:20,  setPos:false}},
       {optional: true,                  addFixture: {ref:'fxt-corrupt-spawn', range:20,  setPos:false}},
       {optional: true, reqWorld: '4..', addFixture: {ref:'fxt-corrupt-spawn', range:25,  setPos:false}},
       {optional: true, reqWorld: '5..', addFixture: {ref:'fxt-corrupt-spawn', range:30,  setPos:false}},
     ],
-    events: 'evt-leave',
+    select: 'evt-leave',
   },
   { 
     id: 'evt-shrine-aftermath-void',
@@ -500,12 +499,12 @@ config.entities.add([
     text: "txt-evt-shrine-aftermath-void",
     report: "txt-evt-shrine-aftermath-void-report",
     startSprawl: {ref:'spr-void', power:10000},
-    events: 'evt-leave',
+    select: 'evt-leave',
   },
   { 
     id: 'evt-shrine-leave',
     actionText: "txt-evt-leave-action",
-    partyEffects: {
+    partyEvents: {
       optional: true,
       reqFixtureFlags: '-broken',
       text: "txt-evt-shrine-leave",

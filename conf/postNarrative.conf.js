@@ -2,7 +2,7 @@ config.entities.add([
 
   {
     id: 'evt-postNarrative-extraCampaign',
-    charEffects: [
+    charEvents: [
       {
         reqCharFlags: '+special',
         text: "txt-evt-postNarrative-extraCampaign" 
@@ -12,7 +12,7 @@ config.entities.add([
 
   {
     id: 'evt-postNarrative',
-    charEffects: [
+    charEvents: [
       {optional:true, consume:true, ref: 'evt-postNarrative-special'},
       {optional:true, consume:true, ref: 'evt-postNarrative-generic'},
       {optional:true, consume:true, ref: 'evt-postNarrative-generic'},
@@ -23,7 +23,7 @@ config.entities.add([
   {
     id: 'evt-postNarrative-special',
     reqCharFlags: '+special',
-    events: [
+    select: [
       {
         reqRanking: '0',
         text: "txt-evt-postNarrative-special"
@@ -42,7 +42,7 @@ config.entities.add([
   {
     id: 'evt-postNarrative-generic',
     reqCharFlags: '-special +humanoid -animal',
-    partyEffects: [
+    partyEvents: [
       { ref: 'evt-postNarrative-middleLife' },
       { ref: 'evt-postNarrative-extra' },
       { ref: 'evt-postNarrative-lateLife' }
@@ -51,7 +51,7 @@ config.entities.add([
 
   {
     id: 'evt-postNarrative-middleLife',
-    events: [
+    select: [
       {
         reqCharFlags: '-missionary',
         text: "txt-evt-postNarrative-middleLife",
@@ -95,7 +95,7 @@ config.entities.add([
   },
   {
     id: 'evt-postNarrative-extra',
-    events: [
+    select: [
       {
         id: 'evt-postNarrative-extra-letters',
         reqLoyalty: '2..',
@@ -210,7 +210,7 @@ config.entities.add([
   },
   {
     id: 'evt-postNarrative-lateLife',
-    events: [
+    select: [
       {
         id: 'evt-postNarrative-lateLife-alcoholicDeath',
         reqStatus: '+alcoholic',

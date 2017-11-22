@@ -26,7 +26,7 @@ config.entities.add([
     flags: '+ailment',
     important: true,
     sprite: "res_status_acrophobia.png",
-    dayEvents: [{slots:2}, {slots:1, events:'evt-acrophobia'}]
+    dayEvents: [{slots:2}, {slots:1, select:'evt-acrophobia'}]
   },
   {
     id: 'evt-acrophobia', // own id for stats tracking
@@ -43,7 +43,7 @@ config.entities.add([
     flags: '+ailment',
     sprite: "res_status_dendrophobia.png",
     important: true,
-    dayEvents: [{slots:1, events:'evt-dendrophobia-angry'}]
+    dayEvents: [{slots:1, select:'evt-dendrophobia-angry'}]
   },
   {
     id: 'evt-dendrophobia-angry', // own id for stats tracking

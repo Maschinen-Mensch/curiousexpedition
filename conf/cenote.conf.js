@@ -41,8 +41,8 @@ config.entities.add([
     showImage: {src: 'evt_fxt_cenote_1_night.png', type: 'night'},
     npc: 'npc-nativeGhost-4',
     text: "txt-evt-cenote-night",
-    partyEffects: 'evt-unlock-specialWorld-withText',
-    events: 'evt-cenote-night-afterSpirit',
+    partyEvents: 'evt-unlock-specialWorld-withText',
+    select: 'evt-cenote-night-afterSpirit',
   },
   {
     id: 'evt-cenote-night-afterSpirit',

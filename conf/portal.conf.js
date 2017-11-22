@@ -72,40 +72,38 @@ config.entities.add([
           showImage: {src: 'evt_spec_space.png', showMounted:false},
           text: "txt-st-portalReturn",
           removeStatus: true,
-          actions: {unwarpWorld: true}  
+          actions: {unwarpWorld: true},
+          setPartyStatus: '-portalStay'
         }
       }
     ],
     debugCategory: 'internal',
   },
-
+  {
+    id: 'st-portalStay',
+    buffDays: '101',
+    dayEvents: [
+      {reqAge: 100, incAchievement:'ach-stay-portal'}
+    ]
+  },
+  
 // events
 
   { 
     id: 'evt-portal-explore',
     actionText: "txt-evt-portal-explore-action",
-    events: [
+    select: [
       {
         reqBiomeFlags: '-arctic',
         showImage: {src: 'evt_fxt_portal_1.png', type:'day'},
       },
       {
         reqBiomeFlags: '+arctic',
-        events: [
-          {
-            slots:1,
-            showImage: {
-              src: 'evt_fxt_portal_2.png', type: 'day', showMounted: true,
-              particles: ['pt-snow-1', 'pt-snow-2', 'pt-snow-3'],
-            },
-          },
-          {
-            slots:1,
-            showImage: {
-              src: 'evt_fxt_portal_2.png', type: 'day', showMounted: true,
-            },
-          }
-        ],
+        showImage: {
+          src: 'evt_fxt_portal_2.png', type: 'day', showMounted: true,
+          particles: ['pt-snow-1', 'pt-snow-2', 'pt-snow-3'],
+          particlesChance: 0.5
+        }
       },
     ],
     chat: 'cl-portal',
@@ -115,15 +113,15 @@ config.entities.add([
   {
     id: 'evt-portal-walkThrough',
     actionText: "txt-fxt-portal-tome-action",
-    charEffects: {
+    charEvents: {
       reqCharFlags:'+special', 
       removeStatusWithFlags: '+localCurse'
     },
-    events: [
+    select: [
       {
         reqBiomeFlags: '+warped',
         text: "txt-evt-portal-walkThrough",
-        setPartyStatus: '-portalReturn',
+        setPartyStatus: '-portalReturn -portalStay',
         actions: {
           actionText: "txt-base-continue",
           unwarpWorld: true,
@@ -133,11 +131,11 @@ config.entities.add([
         reqBiomeFlags: '-warped',
         text: "txt-evt-portal-walkThrough-1",
         report: "txt-evt-portal-walkThrough-report",
-        setPartyStatus: '+portalReturn',
+        setPartyStatus: '+portalReturn +portalStay',
         incAchievement: 'ach-portals',
         replaceFixtures: {},
         actions: {
-          events: [
+          select: [
             {
               slots: 4, 
               report: "txt-evt-portal-walkThrough-report-1",

@@ -13,7 +13,7 @@ config.entities.add([
     spawnEvents: {
       particle: 'pt-erupt-mountain',
       camShake: {power:6, length:2.0},
-      events: [
+      select: [
         {slots:3, addFixture: {ref:'fxt-volcano-spawn-large-active', range:1}},
         {slots:1}
       ]
@@ -36,7 +36,7 @@ config.entities.add([
     setNeighbors: 'tl-mountain',
     spawnEvents: {
       particle: 'pt-erupt-mountain',
-      events: [
+      select: [
         {slots:3, addFixture: {ref:'fxt-volcano-spawn-large-inactive', range:1}},
         {slots:1}
       ]
@@ -114,7 +114,7 @@ config.entities.add([
     dayEvents: [
       {
         reqAge: 10,
-        events: [
+        select: [
           {replaceTiles: [{chance: 0.04, radius:3, old: 'tl-scorchedEarth', new: 'tl-grass'}] },
           {replaceTiles: [{chance: 0.04, radius:3, old: 'tl-scorchedEarth', new: 'tl-jungle-thick'}] },
           {replaceTiles: [{chance: 0.04, radius:3, old: 'tl-scorchedEarth', new: 'tl-jungle-light'}] },

@@ -13,10 +13,11 @@ config.entities.add([
       base: 10,
       karma: 3,
     },
-    events: [
+    useEvents: [
       {
         sanity:+10,
         removeItem: true,
+        setPartyFlags: '+NonCocaUsers',
         incAchievement: 'ach-eat-chocolate',
         playSound: ['sfx_eat_var1', 'sfx_eat_var2'],
         chat: 'cl-item-chocolate',
@@ -39,10 +40,11 @@ config.entities.add([
       {slots: 7},
       {slots: 1, removeItem: true}
     ],
-    events: {
+    useEvents: {
       sanity: +10, 
+      setPartyFlags: '+NonCocaUsers',
       removeItem: true,
-      charEffects: {optional:true, count:'any', setStatus: '-scurvy'},
+      charEvents: {optional:true, count:'any', setStatus: '-scurvy'},
       playSound: ['sfx_eat_var1', 'sfx_eat_var2'],
     }
   },
@@ -59,14 +61,15 @@ config.entities.add([
       karma: 3,
     },
     autoRemove: true,
-    events: {
-      charEffects: [
+    useEvents: {
+      charEvents: [
         {count:'any', health:+1},
         {count:'any', optional:true, setStatus: '-scurvy'},
       ],
       sanity: +5,
       chat: 'cl-item-genericFood',
       playSound: ['sfx_eat_var1', 'sfx_eat_var2'],
+      setPartyFlags: '+NonCocaUsers',
       removeItem: true
     }
   },
@@ -82,13 +85,13 @@ config.entities.add([
       base: 5,
       karma: karmaSmall,
     },
-    events: {
+    useEvents: {
       showImage: {src: 'evt_fxt_empty.png', type: 'day'},
       sanity: {base:10, bonus:'cocaBonus'},
       removeItem: true,
-      charEffects: {optional:true, count:'any', setStatus: '-scurvy'},
+      charEvents: {optional:true, count:'any', setStatus: '-scurvy'},
       playSound: ['sfx_eat_var1', 'sfx_eat_var2'],
-      events: [
+      select: [
         { slots:5, chat: 'cl-cocaLeaves' },
         { slots:1, ref:'evt-trauma' }
       ]
@@ -109,21 +112,22 @@ config.entities.add([
       karma: 5,
     },
     maxStack: 20,
-    events: {
+    useEvents: {
       sanity: {base:20, bonus:'whiskyBonus'},
       playSound: ['sfx_drink_var1', 'sfx_drink_var2'],
       removeItem: true,
       chat: 'cl-alcohol',
-      charEffects: {
+      setPartyFlags: '+NonCocaUsers',
+      charEvents: {
         count: 'any', optional: true,
         reqStatus: '+alcoholic',
         loyalty:+1,
       },
-      events: [
+      select: [
         { slots:  6 },
         { 
           slots:  1, 
-          charEffects: { 
+          charEvents: { 
             optional:true, 
             reqStatus: {'st-alcoholic':false}, 
             reqCharFlags: {humanoid:true, special:false}, 
@@ -146,13 +150,14 @@ config.entities.add([
       karma: 1,
     },
     maxStack: 20,
-    events: [
+    useEvents: [
       {
         reqSanity: '..30',
         sanity: +10,
         chat: 'cl-item-tinCan-eat',
         playSound: ['sfx_eat_var1', 'sfx_eat_var2'],
-        removeItem: true
+        removeItem: true,
+        setPartyFlags: '+NonCocaUsers',
       },
       {
         prio: 1,
@@ -173,14 +178,15 @@ config.entities.add([
       village:10,
       karma: 3,
     },
-    events: {
-      charEffects: [
+    useEvents: {
+      charEvents: [
         {count:'any', optional:true, setStatus: '-scurvy'},
       ],
       sanity: +15,
       chat: 'cl-item-genericFood',
       playSound: ['sfx_eat_var1', 'sfx_eat_var2'],
       removeItem: true,
+      setPartyFlags: '+NonCocaUsers',
     },
     debugCategory: 'sanity',
   },

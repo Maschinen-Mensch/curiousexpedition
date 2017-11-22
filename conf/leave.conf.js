@@ -3,12 +3,10 @@ config.entities.add([
   {
     id: 'evt-leave',
     actionText: "txt-evt-leave-action",
-    clearPushedEvents: true,
     alwaysShown: true,
-    reqTutorial: false,
-    partyEffects: [
+    partyEvents: [
       {
-        events: [
+        select: [
           { prio: 0, reqTutorial: true },
           { prio: 1, ref: 'evt-followed' },
           { prio: 1, slots: 3, ref: 'evt-leave-wildlife' },
@@ -31,7 +29,7 @@ config.entities.add([
     reqFixtureFlags: '+wildlife +explored',
     text: "txt-evt-leave-3",
     report: "txt-evt-leave-report",
-    events: [
+    select: [
       {
         reqBiomeFlags:'+grass | +dry | +desert', 
         addZone: {ref:'zn-hyena', range:2}
@@ -95,10 +93,10 @@ config.entities.add([
   {
     id: 'evt-leave-raptors',
     reqPartyFlags: '+raptors',
-    events: {
+    select: {
       text: "txt-evt-leave-raptors",
       report: "txt-evt-leave-raptors-report",
-      events: [
+      select: [
         {slots: 1, addZone: {ref:'zn-raptor', range:1}},
       ],
     }
@@ -107,7 +105,7 @@ config.entities.add([
     id: 'evt-leave-superstitious',
     reqPartyFlags: '+superstitious',
     chat: 'cl-angry-superstitious',
-    charEffects: {
+    charEvents: {
       reqStatus: '+superstitious -angry',
       loyalty: -1,
       text: "txt-evt-leave-superstitious",
@@ -118,16 +116,16 @@ config.entities.add([
   {
     id: 'evt-leave-cannibal',
     reqPartyFlags: '+cannibalSearch',
-    charEffects: [
+    charEvents: [
       {
-        reqStatus: {'st-cannibal':false},
+        reqStatus: '-cannibal',
         reqCharFlags: '-special +humanoid',
         storeCharacter: true,
         text: "txt-evt-leave"
       },
       {
         optional: true,
-        reqStatus: {'st-cannibal':true},
+        reqStatus: '+cannibal',
         reqCharFlags: '-abomination',
         text: "txt-evt-leave-1"
       },
@@ -149,7 +147,7 @@ config.entities.add([
     chat: 'cl-startFire',
 
     startSprawl: {ref:'spr-fire', radius:1, power:5},
-    charEffects: {
+    charEvents: {
       optional: true,
       reqCharFlags: '-special +humanoid',
       text: "txt-evt-leave-startFire-1"
@@ -165,7 +163,7 @@ config.entities.add([
     chat: 'cl-startFire',
     
     startSprawl: {ref:'spr-fire', radius:1, power:5},
-    charEffects: {
+    charEvents: {
       reqCharFlags: '-special +humanoid',
       reqStatus: '+pyromaniac',
       text: "txt-evt-leave-startFirePyromaniac-1"
@@ -174,14 +172,7 @@ config.entities.add([
   {
     id: 'evt-leave-clearFlags',
     // Clear all flags that have been set in fixtures for leave check
-    setPartyFlags: {
-      superstitious: false, 
-      startFire: false, 
-      sacrileg: false, 
-      wildlife: false,
-      raptors: false,
-      cannibalSearch: false
-    },
+    setPartyFlags: '-superstitious -startFire -sacrileg -wildlife -raptors -cannibalSearch'
   },
 
   {
@@ -191,7 +182,7 @@ config.entities.add([
     setPartyStatus: '-followed-natives',
     reqWarpWorld: false,
 
-    events: {
+    select: {
       text: "txt-evt-followed",
       report: "txt-evt-followed-report",
       npc: [ 

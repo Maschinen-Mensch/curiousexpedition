@@ -49,7 +49,7 @@ config.entities.add([
     description: "txt-it-mushroom-view",
     debugCategory: 'mushroom',
     sprite: 'it_consumable_mushroom_blue.png',
-    events: {
+    useEvents: {
       removeItem:true,
       playSound: ['sfx_eat_var1', 'sfx_eat_var2'],
       sanity: {base:0, bonus:'mushroomSanity'},
@@ -63,7 +63,7 @@ config.entities.add([
     description: "txt-it-mushroom-healing",
     debugCategory: 'mushroom',
     sprite: 'it_consumable_mushroom_red.png',
-    events: 'evt-useItem-mushroom-healing',
+    useEvents: 'evt-useItem-mushroom-healing',
     maxDice: 3,
     //tempDice: 'dc-mushroom',
   },
@@ -73,7 +73,7 @@ config.entities.add([
     name: "txt-it-mushroom-status-name",
     description: "txt-it-mushroom-status",
     sprite: 'it_consumable_mushroom_green.png',
-    events: 'evt-useItem-mushroom-status'
+    useEvents: 'evt-useItem-mushroom-status'
   },
 
   {
@@ -82,12 +82,13 @@ config.entities.add([
     name: "txt-it-mushroom-noAngry-name",
     description: "txt-it-mushroom-noAngry",
     sprite: 'it_consumable_mushroom_purple.png',
-    events: {
-      charEffects: {
+    useEvents: {
+      charEvents: {
         count: 'any', 
         reqCharFlags: '-special +humanoid -abomination', 
         setStatus: '+mushroom-noAngry'
       },      
+      sanity: {base:0, bonus:'mushroomSanity'},
       playSound: ['sfx_eat_var1', 'sfx_eat_var2'],
       removeItem: true,
     }
@@ -108,8 +109,8 @@ config.entities.add([
     name: "txt-it-mushroom-capacity-name",
     description: "txt-it-mushroom-capacity",
     sprite: 'it_consumable_mushroom_slimy.png',
-    events: {
-      charEffects: {reqCharFlags: '+special', setStatus: '+mushroom-capacity'},      
+    useEvents: {
+      charEvents: {reqCharFlags: '+special', setStatus: '+mushroom-capacity'},      
       playSound: ['sfx_eat_var1', 'sfx_eat_var2'],
       removeItem: true,
     }
@@ -129,9 +130,9 @@ config.entities.add([
   { 
     id: 'evt-useItem-mushroom-healing',
     text: "txt-evt-useItem-mushroom-healing",
-    partyEffects: { ref: 'evt-setImage-nightCamp' },
+    partyEvents: { ref: 'evt-setImage-nightCamp' },
     playMusic: ['thm_nature_night_campfire'],
-    charEffects: [
+    charEvents: [
       {
         count: "any",
         optional: true,
@@ -156,15 +157,16 @@ config.entities.add([
     health: 10,
     playSound: ['sfx_eat_var1', 'sfx_eat_var2'],
     items: {'it-mushroom-healing':-1},
+    sanity: {base:0, bonus:'mushroomSanity'},
     chat: 'cl-heal',
-    charEffects: {
+    charEvents: {
       count: "any",
       optional: true,
       reqItems: {'it-mushroom-healing':1},
       reqStatusFlags: '+affliction',
       actions: ['evt-mushroom-healing-heal']
     },
-    events: [
+    select: [
       {
         slots:3,
       },
@@ -210,9 +212,9 @@ config.entities.add([
   { 
     id: 'evt-useItem-mushroom-status',
     text: "txt-evt-useItem-mushroom-status",
-    partyEffects: { ref: 'evt-setImage-nightCamp' },
+    partyEvents: { ref: 'evt-setImage-nightCamp' },
     playMusic: ['thm_nature_night_campfire'],
-    charEffects: {
+    charEvents: {
       optional: true, count: "any",
       reqStatusFlags: '+ailment',
       actions: 'evt-mushroom-status-heal',
@@ -223,6 +225,7 @@ config.entities.add([
     id: 'evt-mushroom-status-heal',
     actionText: "txt-evt-mushroom-healing-heal-action",
     text: "txt-evt-mushroom-status-heal",
+    sanity: {base:0, bonus:'mushroomSanity'},
     removeStatusWithFlags: '+ailment',
     playSound: ['sfx_eat_var1', 'sfx_eat_var2'],
     items: {'it-mushroom-status':-1},
