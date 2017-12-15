@@ -16,17 +16,17 @@ config.testEvents = [
   },
   {
     id: 'evt-debug-teleport',
-    posPunch: {range: 500, radius:0},
+    posPunch: {maxRange: 500, radius:0},
     teleport: true
   },
 
   // -- Test events
 
   {
-    id: 'evt-test-reqFixture',
+    id: 'evt-test-reqLocation',
     select: [
       {
-        reqFixture: {flags:{shrine:true}, range:'..5', fixtureKnown:false},
+        reqLocation: {flags:{shrine:true}, range:'..5', locationKnown:false},
         text: 'shrine in range'
       },
       {
@@ -39,8 +39,8 @@ config.testEvents = [
   {
     id: 'evt-test-reset',
     charEvents: {
-      reqCharFlags: {special:true},
-      resetStatus: {'st-injured':true},
+      reqCharFlags: '+special',
+      resetStatus: '+st-injured',
     }
   },
   {
@@ -52,14 +52,14 @@ config.testEvents = [
   },
   {
     id: 'evt-test-reveal',
-    posFixture: {range:[0,100], closest:true, farKnown: false},
+    posLocation: {range:[0,100], closest:true, farKnown: false},
     revealTiles: {radius:0, centerCam:true, particle: 'pt-magic-reveal'}
   },
   {
     id: 'evt-test-injured-cultist',
     charEvents: [
       {
-        reqCharFlags: {cultist:true},
+        reqCharFlags: '+cultist',
         health: -5
       }
     ]
@@ -80,10 +80,10 @@ config.testEvents = [
     turns: 3,
   },
   {
-    id: 'evt-test-addFixture',
+    id: 'evt-test-addLocation',
     partyEvents: [
-      {addFixture: {ref:'fxt-volcano-spawn-large-active', range:4}},
-      {addFixture: {ref:'fxt-volcano-spawn-large-active', range:4}},
+      {addLocation: {ref:'loc-volcano-spawn-large-active', range:4}},
+      {addLocation: {ref:'loc-volcano-spawn-large-active', range:4}},
     ],
   },
   {
@@ -139,7 +139,7 @@ config.testEvents = [
   },
   {
     id: 'evt-test-addZone',
-    addZone: {ref:'zn-snowStorm', range:8},
+    addZone: {ref:'zn-snowStorm', range:"..8"},
   },
   {
     id: 'evt-test-fever',
@@ -153,14 +153,17 @@ config.testEvents = [
   {
     id: 'evt-test-replace',
     actionText: "ReplaceTest",
-    replaceFixtures: [
-      {range: 30, old:'fxt-hiddenTreasure', new: 'fxt-goldenTemple-grass'}
+    replaceLocations: [
+      {range: "..30", old:'loc-hiddenTreasure', new: 'loc-goldenTemple-grass'}
     ]
   },
   {
     id: 'evt-test-injured',
     select: {
-      charEvents: {reqStatus: {'st-injured':false}, setStatus: {'st-injured':true}}
+      charEvents: {
+        reqStatus: '-st-injured',
+        setStatus: '+st-injured'
+      }
     }
   },
   {
@@ -205,15 +208,15 @@ config.testEvents = [
 
   {
     id: 'evt-test-fumarole',
-    addFixture: {ref:'fxt-fumarole', range:'biome'},
-    revealTiles: {radius:1, fixture:true, centerCam:true},
+    addLocation: {ref:'loc-fumarole', range:'biome'},
+    revealTiles: {radius:1, location:true, centerCam:true},
   },
   {
     id: 'evt-test-corrupt',
     partyEvents: [
-      {addFixture: {ref:'fxt-corrupt-spawn', range:6, setPos:false}},
-      {addFixture: {ref:'fxt-corrupt-spawn', range:20, setPos:false}},
-      {addFixture: {ref:'fxt-corrupt-spawn', range:20, setPos:false}},
+      {addLocation: {ref:'loc-corrupt-spawn', range:6, setPos:false}},
+      {addLocation: {ref:'loc-corrupt-spawn', range:20, setPos:false}},
+      {addLocation: {ref:'loc-corrupt-spawn', range:20, setPos:false}},
     ],
     
     
@@ -221,7 +224,7 @@ config.testEvents = [
 
   {
     id: 'evt-test-fire',
-    posPunch: {radius:0, range:100},
+    posPunch: {radius:0, maxRange:100},
     startSprawl: {ref:'spr-ice', radius:0, power:10000}
   },
   {
@@ -487,7 +490,7 @@ config.testEvents = [
   },
   {
     id: 'evt-test-villageCount',
-    reqFixture: {count:'1..', flags:'+village', range:'..100'}
+    reqLocation: {count:'1..', flags:'+village', range:'..100'}
   },
   {
     id: 'evt-test-paragraph',
@@ -531,12 +534,12 @@ var debug = {
   enableDebugKeys: true,
   hideActionButtons: false,
 
-  showFixtureInfo: false,
+  showLocationInfo: false,
   showBiomeInfo: false,
   showZoneInfo: false,
-  showAgeInfo: false, // if true, age of items, statuses, fixtures is shown
+  showAgeInfo: false, // if true, age of items, statuses, locations is shown
   showFlagsInfo: false,
-  showTutorial: true,
+  showTutorial: false,
   showReport: false,
 
   showExtraLangs: true,
@@ -545,17 +548,14 @@ var debug = {
   skipMainMenu: false, // starts game without going into main menu first
   showHitBoxes: false,
 
-  endlessLoading: true,
-
   hidePath: false,
   freePath: false, // if true path may also point to unknown areas
   skipMetrics: true,
 
   drawAllTiles: false,
   unlockAllExplorers: false,
-  drawAllFixtures: false,
+  drawAllLocations: false,
   drawAllItems: true, // show all items in hall of fame
-  drawOnlyPartyBiome: false,
 
   showBorders: false,
   showViewCost: false,
@@ -578,15 +578,15 @@ var debug = {
   showDebugBar: true,
   skipStartEvents: true,
   autoLevel: true, // automatically level up party for higher expeditions
+  
   // skipSaveGame: false,
   forceLocalSaveGame: true,
-
   timeDilation: 1.0,
 
   // saveGame: "XXX",
   // testWorldValidation: 'evt-test-villageCount', // reloads world until this event does not pass
 
-  // testFixtureCount: 15,
+  // testLocationCount: 15,
 
   testTribe: 'tg-jungle',
   tribeBackground: '#4b3a32',
@@ -599,8 +599,8 @@ var debug = {
   testStatus: 'st-sexist',
   testCharacter: 'pl-native-scout',
   // testGoal: 'gol-goldenTemple-grass',
-  testFixture: 'fxt-polarStation-A',
-  testEvent: 'evt-sanity-helpNative-2',
+  testLocation: 'loc-polarStation-A',
+  testEvent: 'evt-sanity-vulture',
 
-  testPerk: 'pk-impetus',
+  testPerk: 'st-impetus',
 };

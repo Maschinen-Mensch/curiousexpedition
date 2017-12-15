@@ -1,24 +1,21 @@
 config.slotColors = {
-      //Converted from the string constants by search and replace
-      //search| : '([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})'
-      //replace| : [0x$1, 0x$2, 0x$3]
-      explorer: [0xf0, 0xff, 0x00],
-      unit: [0x36, 0xff, 0x00],
-      animal: [0xff, 0xff, 0xff],
-      mounted: [0xff, 0x9c, 0xeb],
-      enemy: [0xff, 0x00, 0x00],
-      npc: [0x00, 0xf6, 0xff],
-      npc2: [0xb7, 0x00, 0xb1],
+  explorer: '#f0ff00',
+  unit: '#36ff00',
+  animal: '#ffffff',
+  mounted: '#ff9ceb',
+  enemy: '#ff0000',
+  npc: '#00f6ff',
+  npc2: '#b700b1',
 
-      'pck-grass': [0xff, 0x00, 0x00],
-      'pck-dry': [0x06, 0xff, 0x00],
-      'pck-desert': [0xf6, 0xff, 0x00],
-      'pck-arctic': [0xa6, 0xff, 0xef],
-      'pck-prehistoric': [0xff, 0x00, 0xe4],
+  'pck-grass': '#ff0000',
+  'pck-dry': '#06ff00',
+  'pck-desert': '#f6ff00',
+  'pck-arctic': '#a6ffef',
+  'pck-prehistoric': '#ff00e4',
 
-      socket: [0xff, 0x00, 0x9c],
-      chimney: [0xff, 0x00, 0x00],
-
-      custom: [0x80, 0x2d, 0xff],
-      custom2: [0xff, 0xc2, 0x4d],
+  socket: '#ff009c',
+  chimney: '#ff0000',
+  campfire: '#802cff',
+  custom: '#6624cc',
+  custom2: '#ffc24d',
 }

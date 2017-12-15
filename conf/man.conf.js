@@ -1,5 +1,5 @@
 config.staticKeywords = [
-  'id', 'cid', 'actionText', 'text', 'optional', 'slots',
+  'id', 'cid', 'mod', 'actionText', 'text', 'optional', 'slots',
   'actions', 'events', 'select', 'charEvents', 'storeEvents', 'partyEvents',
   'count', 'sanityEvent', 'chance', 'posPunch', 'breakPage',
   'popEvent', 'prio', 'alwaysShown', 'delayedEvent',
@@ -22,13 +22,14 @@ config.man = [
   },
   {
     keyword: 'incAchievement',
-    $inline: "Increases achievement counter"
+    $inline: "Increases achievement counter",
+    $description: "**Not usable for modders** Increments achievement counter"
   },
   {
     keyword: 'barter',
-    items: "items to be offered",
-    close: "event that happens on successful deal",
-    cancel: "event that happens when barter is cancelled",
+    _items: "items to be offered (in addition to the general location inventory)",
+    closeEvents: "event that happens on successful deal",
+    _cancelEvents: "event that happens when barter is cancelled",
     _baseValue: "value that is added to deal overall or 'funds' (default: 0)",
     _hidePartyOffer: "hides player inventory",
     _hideNPCInv: "hides npc/location inventory",
@@ -46,8 +47,8 @@ config.man = [
   {
     keyword: 'loot',
     items: "item list to loot",
-    close: "ID of close event",
-    cancel: "ID of cancel event or nothing taking event",
+    closeEvents: "ID of close event (or {} if no follow-up event)",
+    _cancelEvents: "ID of cancel event or nothing taking event (if omitted will use the close event always)",
     _title: "title (default: 'take items')",
     _slots: "max amount of slots (default: unlimited)",
     _itemEvents: "events tied to specific items",
@@ -65,7 +66,7 @@ config.man = [
   },
   {
     keyword: 'revealTiles',
-    _fixture: "should fixtures also be revealed? (default: false)",
+    _location: "should locations also be revealed? (default: false)",
     _radius: "radius of tiles to be revealed (default: 0)",
     _centerCam: "center camera on center position (default: false)",
     _particle: "particle to draw on each tile revealed",
@@ -74,11 +75,11 @@ config.man = [
   },
   {
     keyword: 'revealBiome',
-    _fixtureKnown: "if fixtures should become visible (default: true)",
+    _LocationKnown: "if locations should become visible (default: true)",
     _particle: "particle to spawn on revealed tiles (default: none)",
     $description: "Reveals everything in a biome",
     $pos: true,
-    $example: 'revealBiome: {fixtureKnown:false}'
+    $example: 'revealBiome: {locationKnown:false}'
   },
   {
     keyword: 'reqCanStartSprawl',
@@ -88,12 +89,12 @@ config.man = [
     $pos: true
   },
   {
-    keyword: 'replaceFixtures',
-    _range: "all fixtures in range will be considered (default: 0)",
-    _new: "new ID of the fixture",
-    _old: "list of fixture IDs that are being replaced (default: any)",
-    _oldFlags: "flags of fixtures that are being replaced (default: any)",
-    $description: "Replaces a fixture at that position",
+    keyword: 'replaceLocations',
+    _range: "all locations in range will be considered (default: 0)",
+    _new: "new ID of the location",
+    _old: "list of location IDs that are being replaced (default: any)",
+    _oldFlags: "flags of locations that are being replaced (default: any)",
+    $description: "Replaces a location at that position",
     $pos: true
   },
   {
@@ -116,41 +117,41 @@ config.man = [
   {
     keyword: 'posTile',
     _tiles: "list of tile keywords to be found",
-    _fixtures: "list of fixture keywords to be found",
-    _fixtureFlags: "fixture flag set that needs to fit",
+    _locations: "list of location keywords to be found",
+    _locationFlags: "location flag set that needs to fit",
     _tileFlags: "tile flag set that needs to fit",
     _biomeFlags: "biome flag set that needs to fit",
     _range: "min/max distance (default: 0..100)",
     _tileKnown: "tile is known? (default: find all)",
-    _fixtureKnown: "fixture is known? (default: find all)",
+    _locationKnown: "location is known? (default: find all)",
     _traversable: "tile is not blocking (default: ignore)",
     _reachable: "tile is reachable (default: ignore)",
     _closest: "return closest tile, otherwise a random one",
-    _showHint: "fixture has showHint?",
+    _showHint: "location has showHint?",
     $description: "Sets the position context to something that matches the search requirements"
   },
   {
-    keyword: 'setFixtureParticle',
-    $inline: "sets a new particle of the fixture",
+    keyword: 'setLocationParticle',
+    $inline: "sets a new particle of the location",
     $pos: true,
-    $description: "Sets the particle effect of a fixture"
+    $description: "Sets the particle effect of a location"
   },
   {
-    keyword: 'resetFixtureAge',
-    $inline: "reset the fixture age to zero",
+    keyword: 'resetLocationAge',
+    $inline: "reset the location age to zero",
     $pos: true,
-    $description: "Resets a fixtures age counter"
+    $description: "Resets a locations age counter"
   },
   {
-    keyword: 'reqFixture',
+    keyword: 'reqLocation',
     _count: "which amount to validate (default: '1..')",
     _tileKnown: "if tile should be known (default: ignore)",
-    _fixtureKnown: "if fixture should be far known (default: ignore)",
-    _range: "max distance to fixture (default: 0)",
-    _flags: "flags that fixture needs to match",
+    _locationKnown: "if location should be far known (default: ignore)",
+    _range: "max distance to location (default: 0)",
+    _flags: "flags that location needs to match",
     _reachable: "checks if target is reachable (default: ignore)",
     $pos: true,
-    $description: "Returns true if a matching fixture is found"
+    $description: "Returns true if a matching location is found"
   },
   {
     keyword: 'reqZone',
@@ -161,13 +162,13 @@ config.man = [
     $description: "Returns true if a matching zone is found"
   },
   {
-    keyword: 'addFixture',
-    ref: "id of fixture",
-    _range: "distance in fields from context position or keywords 'biome' or 'world' (default: biome)",
-    _animate: "if new fixture (and tile) should transition in or appear immediately (default: true)",
-    _setPos: "sets the context position to the newly added fixture position (default: true)",
+    keyword: 'addLocation',
+    ref: "id of location",
+    _range: "range from context position or keywords 'biome' or 'world' (default: biome)",
+    _animate: "if new location (and tile) should transition in or appear immediately (default: true)",
+    _setPos: "sets the context position to the newly added location position (default: true)",
     $pos: true,
-    $description: "Adds a fixture at the given position"
+    $description: "Adds a location at the given position"
   },
   {
     keyword: 'camShake',
@@ -199,22 +200,22 @@ config.man = [
   {
     keyword: 'rest',
     sanity: "amount of sanity to regain per day. can use bonus",
-    events: "events triggered after being done with resting",
+    events: "one of these events is triggered after being done with resting",
     $description: "Starts resting"
   },
   {
     keyword: 'reqStatusDayAge',
     ref: "id of status",
-    age: "range of day age (if status does not exist will return -1",
+    age: "range of day age (if status does not exist will return -1)",
     $character: true,
     $description: "Returns true if the given character has had a status for at least age days"
   },
   {
     keyword: 'removeStatusWithFlags',
-    $flags: true,
+    $inline: 'all statuses matching given flag set will be removed',
     $character: true,
     $example: "removeStatusWithFlags: '+sickness|+curse'",
-    $description: 'all statuses matching given flag set will be removed'
+    $description: "Removes any status on a character that matches the flags"
   },
   {
     keyword: 'reqMaxPerWorld',
@@ -230,7 +231,7 @@ config.man = [
   },
   {
     keyword: 'posPunch',
-    _range: "the maximum range from context position (default: 2)",
+    _maxRange: "the maximum distance from context position (default: 2)",
     _radius: "size of area which is affected (default: 0)",
     $pos: true,
     $description: "Lets the player specify a position by clicking on the map"
@@ -371,13 +372,13 @@ config.man = [
     keyword: 'setCharFlags',
     $flags: true,
     $character: true,
-    $description: "Sets the current characters flags",
+    $description: "Sets the current characters flags"
   },
   {
-    keyword: 'setFixtureFlags',
+    keyword: 'setLocationFlags',
     $flags: true,
-    $fixture: true,
-    $description: "Sets the current fixtures flags"
+    $location: true,
+    $description: "Sets the current locations flags"
   },
   {
     keyword: 'playSound',
@@ -400,7 +401,7 @@ config.man = [
     $description: "Starts combat with the given properties"
   },
   {
-    keyword: 'reqItemsFlags',
+    keyword: 'reqItemFlags',
     $inline: "A flag or flag set",
     $example: "reqItemsFlags: '+gun'",
     $flags: true,
@@ -421,15 +422,15 @@ config.man = [
     $description: "Makes specified changes to partys inventory"
   },
   {
+    keyword: 'setPartyFlags',
+    $flags: true,
+    $description: "Sets the partys flags"
+  },
+  {
     keyword: 'playMusic',
     $custom: "list of random music tracks of which one played randomly",
     $example: "playMusic: ['thm_nature_mystic_1', 'thm_nature_mystic_2']",
     $description: "Starts playing specified music"
-  },
-  {
-    keyword: 'setPartyFlags',
-    $flags: true,
-    $description: "Sets the partys flags"
   },
   {
     keyword: 'setStatus',
@@ -449,10 +450,10 @@ config.man = [
     $description: "Returns true if a character matches the given flags"
   },
   {
-    keyword: 'reqFixtureFlags',
+    keyword: 'reqLocationFlags',
     $flags: true,
-    $fixture: true,
-    $description: "Returns true if th current fixture matches the given flags",
+    $location: true,
+    $description: "Returns true if th current location matches the given flags"
   },
   {
     keyword: 'addNPC',
@@ -467,8 +468,8 @@ config.man = [
   {
     keyword: 'removeStatus',
     $character: true,
-    $flags: true,
-    $description: "Removes the given status flags from the current character"
+    $description: "Removes the status which is in current context",
+    $inline: true
   },
   {
     keyword: 'particle',
@@ -484,6 +485,11 @@ config.man = [
     _showCampfire: "should an animated nightfire be shown in center of image (default: false)",
     $custom: true,
     $description: "Specifies the background image and options for the background"
+  },
+  {
+    keyword: 'reqPartyFlags',
+    $flags: true,
+    $description: "Returns true if the party matches the given flags"
   },
   {
     keyword: 'addCharacter',
@@ -508,7 +514,7 @@ config.man = [
   {
     keyword: 'reqTileFlags',
     $flags: true,
-    $description: "Returns true if the tile flags match"
+    $description: "Returns true if the "
   },
   {
     keyword: 'unlockCharacter',
@@ -550,10 +556,6 @@ config.man = [
     keyword: 'reqStanding',
     $inline: "range for current party standing to match",
     $description: "Returns true if the current partys standing matches the range"
-  },
-  {
-    keyword: 'reqPartyFlags',
-    $flags: "Returns true if the party matches the given flags"
   },
   {
     keyword: 'setPartyStatus',
@@ -605,18 +607,6 @@ config.man = [
     keyword: 'reqSanity',
     $inline: "range to match a certain party sanity",
     $description: "Returns true if the current sanity matches the range"
-  },
-  {
-    keyword: 'reqPerk',
-    $flags: true,
-    $character: true,
-    $description: "Returns true if the current character has the given perk"
-  },
-  {
-    keyword: 'setPerk',
-    $flags: true,
-    $character: true,
-    $description: "Sets the current characters perks"
   },
   {
     keyword: 'reqFlags',
@@ -678,6 +668,31 @@ config.man = [
     keyword: 'popEvent',
     $custom: true,
     $description: "Pops the last pushed event and executes it"
+  },
+  {
+    keyword: 'reqItems',
+    $custom: true,
+    $description: "Dictionary with set of required items"
+  },
+  {
+    keyword: 'escape',
+    $custom: true,
+    $description: "Used for spefying hot air balloon escape options"
+  },
+  {
+    keyword: 'resetPartyStatus',
+    $inline: true,
+    $description: "Resets a status that is attached to the explorer"
+  },
+  {
+    keyword: 'superMove',
+    $inline: true,
+    $description: "Makes the next travel trip a free effortless travel trip."
+  },
+  {
+    keyword: 'mapScore',
+    $inline: true,
+    $description: "The amount of map score added or removed."
   }
-  
+
 ]

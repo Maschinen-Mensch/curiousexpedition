@@ -1,45 +1,3 @@
-var xpMedium        =  3;
-var xpSmall         =  1;
-var xpCombatSmall   =  2;
-var xpGoldenPyramid =  5;
-
-var sanityRestVillage     = 30;
-var sanityNaturalFixtures = 8;
-var sanityBoost = 30;
-
-var fameVeryTiny   =  2;
-var fameTiny       =  5;
-var fameVerySmall  = 10;
-var fameSmall      = 20;
-var fameMedium     = 30;
-var fameLarge      = 50;
-var fameVeryLarge  = 70;
-var fameHuge       = 100;
-
-var fundsTiny      =  5;
-var fundsVerySmall = 10;
-var fundsSmall     = 20;
-var fundsMedium    = 30;
-var fundsLarge     = 40;
-var fundsVeryLarge = 60;
-
-var karmaSmall     = 2;
-var karmaMedium    = 10;
-var karmaLarge     = 20;
-var karmaVeryLarge = 50;
-
-var standingCostVillageUse       = -2;
-var standingCostSacrilegSmall    = -1;
-var standingCostSacrilegMedium   = -2;
-var standingCostSacrilegLarge    = -3;
-var standingCostSlaverTrade      = -3;
-
-var mapScoreSmall = 5;
-
-var malusAlcohol = -3;
-var turnsRestNaturalFixtures = 3;
-var turnsSearchArea = 1;
-
 var achievements = [
   //Collection achievements
   {
@@ -75,6 +33,7 @@ var achievements = [
     name: "txt-ach-explorer-collect",
     desc: "txt-ach-explorer-collect-desc",
     img: "achv_img_ID_12",
+    updateInterval: 1,
     counterTarget: 15,
   },
   //Gameplay achievements
@@ -150,14 +109,16 @@ var achievements = [
     name: "txt-ach-gol-frames",
     desc: "txt-ach-gol-frames-desc",
     img: "achv_img_ID_34",
-    counterTarget: 19
+    counterTarget: 19,
+    updateInterval: 1
   },
   {
     id: "ach-plat-frames",//mainMenu::onWonCharacter
     name: "txt-ach-plat-frames",
     desc: "txt-ach-plat-frames-desc",
     img: "achv_img_ID_35",
-    counterTarget: 19
+    counterTarget: 19,
+    updateInterval: 1
   },
   {//Missing
     id: "ach-all-items",
@@ -200,15 +161,16 @@ var achievements = [
     id: "ach-expeditions",
     name: "txt-ach-expeditions",
     desc: "txt-ach-expeditions-desc",
-    counterTarget: 100,
     img: "achv_img_ID_42",
+    counterTarget: 100,
+    updateInterval: 10,
   },
   {
     id: "ach-portals",
     name: "txt-ach-portals",
     desc: "txt-ach-portals-desc",
     img: "achv_img_ID_43",
-    counterTarget: 20
+    counterTarget: 20,
   },
   {
     id: "ach-recr-natives",
@@ -300,8 +262,9 @@ var achievements = [
     id: "ach-flee",
     name: "txt-ach-flee",
     desc: "txt-ach-flee-desc",
-    counterTarget: 10,
     img: "achv_img_ID_50",
+    counterTarget: 10,
+    updateInterval: 3
   },
   {
     id: "ach-no-recruit",
@@ -313,8 +276,8 @@ var achievements = [
     id: "ach-hyena-kills",
     name: "txt-ach-hyena-kills",
     desc: "txt-ach-hyena-kills-desc",
-    counterTarget: 100,
     img: "achv_img_ID_51",
+    counterTarget: 100,
   },
   {
     id: "ach-slave-free",
@@ -333,8 +296,8 @@ var achievements = [
     id: "ach-giantBird-kills",
     name: "txt-ach-giantBird-kills",
     desc: "txt-ach-giantBird-kills-desc",
-    counterTarget: 10,
     img: "achv_img_ID_54",
+    counterTarget: 10,
   },
   {
     id: "ach-giantCrab-kill",
@@ -346,36 +309,37 @@ var achievements = [
     id: "ach-giantScorpion-kills",
     name: "txt-ach-giantScorpion-kills",
     desc: "txt-ach-giantScorpion-kills-desc",
-    counterTarget: 10,
     img: "achv_img_ID_56",
+    counterTarget: 10,
   },
   {
     id: "ach-giantSpider-kills",
     name: "txt-ach-giantSpider-kills",
     desc: "txt-ach-giantSpider-kills-desc",
-    counterTarget: 20,
     img: "achv_img_ID_58",
+    counterTarget: 20,
   },
   {
     id: "ach-hatchEggs",
     name: "txt-ach-hatchEggs",
     desc: "txt-ach-hatchEggs-desc",
-    counterTarget: 10,
     img: "achv_img_ID_59",
+    counterTarget: 10,
+    updateInterval: 1,
   },
   {
     id: "ach-giantWalrus-kills",
     name: "txt-ach-giantWalrus-kills",
     desc: "txt-ach-giantWalrus-kills-desc",
-    counterTarget: 10,
     img: "achv_img_ID_60",
+    counterTarget: 10,
   },
   {
     id: "ach-treasure-dig",
     name: "txt-ach-treasure-dig",
     desc: "txt-ach-treasure-dig-desc",
-    counterTarget: 10,
     img: "achv_img_ID_11",
+    counterTarget: 10,
   },
   {
     id: "ach-yeti-recruit",
@@ -450,12 +414,12 @@ var achievements = [
   },
 ]
 
-var staticConfig = 
+var staticConfig =
 {
   versionName: '',
   enableAchievements: false,
-  footerName: "1.3-modBeta8",
   showMods: true,
+  footerName: "1.3-modBeta8",
 
   // is converted to config.diaryText at run-time
   diaryTextLangs: {
@@ -475,6 +439,14 @@ var staticConfig =
       nonBreaking: '。，:'
     }
   },
+
+  testEvents:[
+    {
+      id: 'evt-debug-teleport',
+      posPunch: {maxRange: 500, radius:0},
+      teleport: true
+    }
+  ],
 
 
   fonts: {
@@ -504,15 +476,17 @@ var staticConfig =
       technicalSmall: "20px Mallanna"
     }
   ],
+
+  achievementTimer: 60*20, // how often we want show a update in seconds
 }
 
 var config = {
   baseViewDist: 1.3, // the base default view distance
   extendedViewDist: 1.3, // the extended view distance
-  simpleFixtureRevealDist: 2, // always reveal if below this distance
+  simpleLocationRevealDist: 2, // always reveal if below this distance
 
-  maxPartyCount: 5,
-  uiMaxPartyCount: 6,
+  maxUnitCount: 5,
+  uiMaxUnitCount: 6,
   uiMaxCapacity: 6,
   uiMaxStatuses: 9,
 
@@ -520,8 +494,8 @@ var config = {
   defaultResellFactor: 1.0, // value for sold items is modified by this factor
   nativeBarterStandingSteps: 15, // how much to trade to increase standing
 
-  unknownFixtureSprite: 'res_tile_chasm_1.png',
-  
+  unknownLocationSprite: 'res_tile_chasm_1.png',
+
   waitTime: 1.0, // time per day when resting
   enableScreenshots: false,
   healthRegenTurn: 8, // how many turns to regen one health
@@ -548,6 +522,8 @@ var config = {
   previewPathPulse: 0.2, // the pulse frequency of the preview path
 
   maxExpedition: 5,
+
+  balloonOffsetY: 120,
 
   entities: [],
 
@@ -664,9 +640,12 @@ var config = {
     menuButton: {sprite:'hud_button_menu.png', offset:7, scale:1},
     mapButton: {sprite:'hud_button_menu.png', offset:7, scale:1},
     modFrame: {sprite:'hud_frame_mod.png', offset:7, scale:1},
+    scrollBar: {sprite:'hud_barter_centerBox.png', offset:2, scale:1},
+    newsFrame: {sprite:'hud_news_background.png', offset:4, scale:1},
     chat: {sprite:'hud_chat_bubble.png', offset:12, scale:0.5},
     chatSmall: {sprite:'hud_chat_bubble_small.png', offset:4, scale: 0.5},
-    inventory: {sprite:'hud_inventory_border.png', offset:1, scale: 0.5}
+    inventory: {sprite:'hud_inventory_border.png', offset:1, scale: 0.5},
+    backButton: {sprite:'hud_checkbox_neutral.png', offset:6, scale: 1}
   },
 
   notifications: {
@@ -697,7 +676,8 @@ var config = {
     postNarrative: 'evt-postNarrative',
     extraNarrative: 'evt-postNarrative-extraCampaign',
     expeditionUnlocks: 'evt-expedition-unlocks',
-    infected: 'evt-infected'
+    infected: 'evt-infected',
+    promotion: null
   },
 
   specialStatuses: {
@@ -708,21 +688,20 @@ var config = {
     overburden: 'st-overburden',
     bipolar: 'st-bipolar',
     sledding: 'st-sledding',
-    
+
     biomeInfo: 'pk-biomeInfo',
     polymath: 'pk-polymath',
     polyglot: 'pk-polyglot',
     cartographer: 'pk-cartographer',
     desertExpert: 'pk-desertExpert',
-    pacifist: 'pk-pacifist',
-    otherworldly: 'pk-otherworldly',
-    animalWhisperer: 'pk-animalWhisperer',
-    naturalLeader: 'pk-naturalLeader',
+    pacifist: 'st-pacifist',
+    otherworldly: 'st-otherworldly',
+    animalWhisperer: 'st-animalWhisperer',
     careerist: 'pk-careerist'
   },
 
   ship: {
-    fixture: 'fxt-ship',
+    location: 'loc-ship',
     defaultTile: 'tl-river-shallow',
     particle: 'pt-ship',
     particleDelay: 0.1,
@@ -774,27 +753,32 @@ var config = {
   },
 
   mainMenuLayers: [
-    {offset:  0, sprite:'london_layer_7.png'},
     {offset:  0, sprite:'london_clouds_3.png'},
     {offset:  0, sprite:'london_clouds_2.png'},
     {offset:  0, sprite:'london_clouds_1.png'},
-    {offset:  0, sprite:'london_layer_6.png', },
-    {offset:  0, sprite:'london_layer_5.png'},
-    // {offset:  0, sprite:'london_layer_5.png', particle:'pt-smoke-menu-3',      interval: 0.7},
-    {offset:  0, sprite:'london_layer_4.png', },
+    {offset:  0, sprite:'london_layer_6.png'},
+    {offset:  0, sprite:'london_layer_7.png'},
+    {offset:  0, sprite:'london_layer_4.png'},
     {offset:  0, sprite:'london_layer_3.png'},
-    // {offset:  0, sprite:'london_layer_3.png', particle:'pt-smoke-menu-2',      interval: 0.7},
-    {offset:  0, sprite:'london_layer_2.png',  },
-    {offset:  0, sprite:'london_layer_1.png', particle:'pt-smoke-menu-1'},
-    // {offset:  0, sprite:'london_layer_1.png', particle:'pt-smoke-menu-1',      interval: 0.7},
+    {offset:  0, sprite:'london_layer_2.png'},
+    {offset:  0, sprite:'london_layer_1.png'},
+  //  {offset:  0, sprite:'london_layer_6.png', },
+  //  {offset:  0, sprite:'london_layer_5.png'},
+  //  {offset:  0, sprite:'london_layer_5.png', particle:'pt-smoke-menu-3',      interval: 0.7},
+  //  {offset:  0, sprite:'london_layer_4.png', },
+  //  {offset:  0, sprite:'london_layer_3.png'},
+  //  {offset:  0, sprite:'london_layer_3.png', particle:'pt-smoke-menu-2',      interval: 0.7},
+  //  {offset:  0, sprite:'london_layer_2.png',  },
+  //  {offset:  0, sprite:'london_layer_1.png', particle:'pt-smoke-menu-1'},
+  //  {offset:  0, sprite:'london_layer_1.png', particle:'pt-smoke-menu-1',      interval: 0.7},
   ],
 
   mapScore: {
-    fixtureDiscoveryDefault: 1, // may be overwritten on fixtures
-    
+    locationDiscoveryDefault: 1, // may be overwritten on locations
+
     biomeBarDelay: 3,
     biomeXPBonus: 0,
-    biomeFameBonus: fameVerySmall,
+    biomeFameBonus: "fameVerySmall",
 
     showBiomeInfo: true,
   },
@@ -841,22 +825,23 @@ var config = {
     maxZoom: [0, -1], // max/min zoom level (default blockSize is 0)
     autoScroll: true, // scroll with party during traveling,
     scrollMargin: -150, // how close scroll gets to screen border
-    
-    biomeSafeZone: 3, // how far off to create fixtures from the borders
-    defaultFixtureMinDist: 3, // min dist from player start pos
+
+    biomeSafeZone: 3, // how far off to create locations from the borders
+    defaultLocationMinDist: 3, // min dist from player start pos
   },
 
   rivals: {
     count: 4, // amount of rivals
     fame: [150, 190], // fame gained after every expedition
     worldBonus: 30,
-    rewards: [200, 150, 100, 50, 0]
+    rewards: [200, 150, 100, 50, 0],
+    scoring: [0.9, 1.16, 1.34, 1.5, 1.0, 1.3]
   },
 
   anim: {
     tileBlendInTime: 0.5, // the speed with which new tiles are blended in
     tileBlendInDelay: 0.2, // the delay for each wave of tiles to become reveled
-    
+
     travelTime: 0.4, // seconds spent per tile while fast traveling
     maxTravelTime: 1.5, // max seconds for traveling
     campTime: 1.0, // seconds spent on turn before switching to next day
@@ -891,13 +876,13 @@ var config = {
   },
 
   campfire: {
-    alpha: [0.6, 1.0],  
+    alpha: [0.6, 1.0],
     speed: 1.3,
     offset: [-26, -67]
   },
 
   fireplace: { // narrator scene
-    alpha: [0.6, 1.0],  
+    alpha: [0.6, 1.0],
     speed: 1.0,
     offset: [15, 35]
   },
@@ -925,7 +910,7 @@ var config = {
     mapOffset: [0, 0], // used to be 0,88
     partyOffset: [7, -20],
     tile: [52, 48],
-    fixture: [52, 48],
+    location: [52, 48],
     hexOffset: [6, 0],
     tileVariations: 7,
     path: [76, 72],
@@ -970,7 +955,30 @@ var config = {
 
   tutorial: {
     character: 'sp-darwin',
-    worlds: ['wd-tutorial-1']
+    worlds: ['wd-tutorial-1'],
+
+    village: 'loc-village-tutorial',
+    oldCamp: 'loc-oldCamp',
+    ship: 'loc-ship',
+    goldenTemple: 'loc-goldenTemple-grass',
+    shrine: 'loc-shrine-2',
+
+    start: 'evt-tutorial-start-3',
+    enterCamp: 'evt-oldCamp-enter',
+    leaveCamp: 'evt-leave',
+    villageEnter: 'evt-village-tutorial-init',
+    villageRest: 'evt-village-tutorial-sleep',
+    villageTrade: 'evt-village-tutorial-trade',
+    villageRecruit: 'evt-village-tutorial-recruit',
+    villageLeave: 'evt-village-tutorial-leave',
+    hyenaAttack: 'evt-hyena-attack',
+    hyenaFlee: 'evt-combat-run',
+    overburden: 'evt-tutorial-overburden-1',
+    shipReturn: 'evt-ship-return',
+    shrineEnter: 'evt-shrine-2',
+    shrineExplore: 'evt-shrine-enter',
+    shrineLoot: 'evt-shrine-lootAftermath',
+    goalEnter: 'evt-goal-explore'
   },
 
   tips: [
@@ -1042,7 +1050,44 @@ var config = {
 
     karmaBarBg: '#333',
     karmaBar: '#2198B2',
-    karmaBarFull: '#1ABF81'
+    karmaBarFull: '#1ABF81',
+    achievements: ['#973200', '#FBEA2E', '#A8D1D2']
+  },
+
+  standardValues: {
+    sanityRestVillage       : 30,
+    sanityNaturalLocations  : 8,
+    sanityBoost             : 30,
+
+    fameVeryTiny    : 2,
+    fameTiny        : 5,
+    fameVerySmall   : 10,
+    fameSmall       : 20,
+    fameMedium      : 30,
+    fameLarge       : 50,
+    fameVeryLarge   : 70,
+    fameHuge        : 100,
+
+    fundsTiny       : 5,
+    fundsVerySmall  : 10,
+    fundsSmall      : 20,
+    fundsMedium     : 30,
+    fundsLarge      : 40,
+    fundsVeryLarge  : 60,
+
+    karmaSmall      : 2,
+    karmaMedium     : 10,
+    karmaLarge      : 20,
+    karmaVeryLarge  : 50,
+
+    standingCostVillageUse        : -2,
+    standingCostSacrilegSmall     : -1,
+    standingCostSacrilegMedium    : -2,
+    standingCostSacrilegLarge     : -3,
+    standingCostSlaverTrade       : -3,
+
+    mapScoreSmall  : 5,
+    malusAlcohol  : -3
   },
 
   // todo convert to entities
@@ -1066,7 +1111,7 @@ var config = {
     flareRange: "txt-bonus-flareRange",
     flareRadius: "txt-bonus-flareRadius",
     animalCapacity: "txt-bonus-animalCapacity",
-    
+
     loyaltyBoost: '%txt-bonus-loyaltyBoost',
     tripCost: '%txt-base-sanity-travel',
     compass: "%txt-bonus-compass",
@@ -1118,7 +1163,7 @@ var config = {
     worldmap: {
       rival: "txt-help-worldmap-rival"
     },
-    
+
     settings: {
       quickText: "txt-help-settings-quickText",
       button: "txt-help-settings-button",
@@ -1130,7 +1175,7 @@ var config = {
 
       scale1: ["txt-help-settings-scale1", "txt-help-settings-scale-refuse"],
       scale2: ["txt-help-settings-scale2", "txt-help-settings-scale-refuse"],
-      scale3: ["txt-help-settings-scale2", "txt-help-settings-scale-refuse"],
+      scale3: ["txt-help-settings-scale3", "txt-help-settings-scale-refuse"],
       scaleStrech: ["txt-help-settings-scaleS", "txt-help-settings-scale-refuse"],
     }
   },
@@ -1210,24 +1255,22 @@ var config = {
 
 };
 
-//Initializing debug values that are required one way or another.
-var debug = 
+// initializing debug values. use debug.conf.js to overwrite these
+var debug =
 {
   testTribe: 'tg-jungle',
   tribeBackground: '#4b3a32',
-
-  testExplorer: 'sp-darwin',
-  testWorldLevel: 1, // if set new games start with this world
-  testDifficulty: 1, // default difficulty
-  testPocket: 'pck-grass',
-  testItem: 'it-tomePage-chasm',
-  testStatus: 'st-sexist',
-  testCharacter: 'pl-native-scout',
-  // testGoal: 'gol-goldenTemple-grass',
-  testFixture: 'fxt-polarStation-A',
-  testEvent: 'evt-sanity-nativeGhosts',
-
-  testPerk: 'pk-impetus',
+  testExplorer: null,
+  testWorldLevel: null, // if set new games start with this world
+  testDifficulty: null, // default difficulty
+  testPocket: null,
+  testItem: null,
+  testStatus: null,
+  testCharacter: null,
+  testGoal: null,
+  testLocation: null,
+  testEvent: null,
+  testPerk: null,
 };
 
 //Merge static config into config
