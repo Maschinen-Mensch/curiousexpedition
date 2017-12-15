@@ -1,0 +1,189 @@
+[
+  {
+    id: pck-debug
+    name: pck-debug-name
+    slotMarker: hud_mapMarker_desert.png
+    description: txt-pck-debug
+    ambientSound: sfx_loop_desert_1
+    goals: gol-goldenTemple-grass
+    locations: [
+      {ref: loc-village-1}
+      {ref: loc-village-2}
+      {ref: loc-village-3}
+      {ref: loc-village-4}
+      {ref: loc-village-bones}
+    ]
+    biomes: [
+      {ref: bio-debug-grass}
+      {ref: bio-debug-dry}
+      {ref: bio-debug-desert}
+    ]
+  }
+  {
+    id: grp-goldenTemple
+    group: [
+      {slots: 1, ref: loc-goldenTemple-grass}
+      {slots: 1, ref: loc-goldenTemple-dry}
+      {slots: 1, ref: loc-goldenTemple-desert}
+      {slots: 1, ref: loc-goldenTemple-arctic}
+    ]
+  }
+  {
+    id: grp-village
+    group: [
+      {slots: 2, ref: loc-village-1}
+      {slots: 1, ref: loc-village-2}
+      {slots: 1, ref: loc-village-3}
+      {slots: 1, ref: loc-village-4}
+      {slots: 1, ref: loc-village-inuit}
+    ]
+  }
+  {
+    id: grp-sanity-nature
+    group: [
+      {slots: 2, ref: loc-waterfall}
+      {slots: 1, ref: loc-healingSprings}
+      {slots: 1, ref: loc-overhang}
+      {slots: 2, ref: loc-oasis}
+    ]
+  }
+  {
+    id: grp-rest
+    group: [
+      {slots: 2, group: grp-village}
+      {slots: 1, ref: loc-mission}
+      {slots: 1, ref: loc-waterfall}
+      {slots: 1, ref: loc-healingSprings}
+      {slots: 1, ref: loc-overhang}
+      {slots: 1, ref: loc-oasis}
+    ]
+  }
+  {
+    id: grp-village-fantastic
+    group: [
+      {slots: 1, ref: loc-village-bones}
+    ]
+  }
+  {
+    id: grp-utility
+    group: [
+      {slots: 1, ref: loc-trader}
+      {slots: 1, ref: loc-shamanHut}
+      {slots: 1, ref: loc-slaver}
+    ]
+  }
+  {
+    id: grp-monsterDen
+    group: [
+      {slots: 1, ref: loc-raptorNest}
+    ]
+  }
+  {
+    id: grp-treasure
+    group: [
+      {slots: 1, ref: loc-shrine-2}
+      {slots: 1, ref: loc-shrine-3}
+      {slots: 1, ref: loc-shrine-4}
+      {slots: 1, ref: loc-shrine-rope}
+      {slots: 1, ref: loc-shrine-arctic}
+      {slots: 5, ref: loc-tomb-1}
+    ]
+  }
+  {
+    id: grp-loot
+    group: [
+      {slots: 6, ref: loc-elephantGraveyard}
+      {slots: 6, ref: loc-mammothGraveyard}
+      {slots: 6, ref: loc-oldCamp}
+      {slots: 3, ref: loc-shipwreck}
+      {slots: 3, ref: loc-arcticStockpile}
+      {slots: 1, ref: loc-stoneStatue01}
+      {slots: 1, ref: loc-stoneStatue02}
+      {slots: 1, ref: loc-stoneStatue03}
+    ]
+  }
+  {
+    id: grp-special
+    group: [
+      {slots: 1, ref: loc-blessingTemple}
+      {slots: 1, ref: loc-portal, reqDifficulty: 1..}
+      {slots: 1, ref: loc-altar, reqDifficulty: 1..}
+      {slots: 1, ref: loc-cenote, reqDifficulty: 1..}
+    ]
+  }
+  {
+    id: grp-cave
+    group: [
+      {slots: 1, ref: loc-cave}
+    ]
+  }
+  {
+    id: grp-sacrileg
+    group: [
+      {slots: 1, ref: loc-stoneStatue01}
+      {slots: 1, ref: loc-stoneStatue02}
+      {slots: 1, ref: loc-stoneStatue03}
+      {slots: 2, ref: loc-stoneCircle}
+    ]
+  }
+  {
+    id: grp-stoneStatue
+    group: [
+      {slots: 1, ref: loc-stoneStatue01}
+      {slots: 1, ref: loc-stoneStatue02}
+      {slots: 1, ref: loc-stoneStatue03}
+    ]
+  }
+  {
+    id: grp-eyeCandy-grasslands
+    group: [
+      {slots: 2, ref: loc-giantTree}
+      {slots: 1, ref: loc-mountainFace}
+      {slots: 1, ref: loc-rockFormation}
+    ]
+  }
+  {
+    id: grp-eyeCandy-drylands
+    group: [
+      {slots: 1, ref: loc-rockFormation}
+      {slots: 2, ref: loc-giantSkeleton}
+      {slots: 1, ref: loc-mountainFace}
+    ]
+  }
+  {
+    id: bio-debug-grass
+    name: bio-debug-grass-name
+    flags: {grass: true}
+    eventImg: {day: evt_bio_grasslands_1.png, night: evt_bio_grasslands_1_night.png}
+    tokenIdx: 0
+    terrain: [
+      {perlin: 0, tile: tl-grass}
+    ]
+    locations: []
+    zones: []
+  }
+  {
+    id: bio-debug-dry
+    name: bio-debug-dry-name
+    flags: {dry: true}
+    eventImg: {day: evt_bio_grasslands_1.png, night: evt_bio_grasslands_1_night.png}
+    tokenIdx: 0
+    terrain: [
+      {perlin: 0, tile: tl-dry}
+    ]
+    locations: []
+    zones: []
+  }
+  {
+    id: bio-debug-desert
+    name: bio-debug-desert-name
+    flags: {desert: true}
+    eventImg: {day: evt_bio_grasslands_1.png, night: evt_bio_grasslands_1_night.png}
+    tokenIdx: 0
+    terrain: [
+      {perlin: 0, tile: tl-desert}
+    ]
+    locations: []
+    zones: []
+  }
+]

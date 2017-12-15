@@ -1,0 +1,744 @@
+[
+  {
+    id: st-viewDistance-1
+    title: txt-pk-viewDistance-1-title
+    description: txt-pk-viewDistance-1
+    bonus: {viewDist: 0.3}
+    sprite: res_status_viewDistance.png
+    debugCategory: Unit Perk
+  }
+  {
+    id: st-viewDistance-2
+    extends: st-viewDistance-1
+    title: txt-pk-viewDistance-2-title
+    bonus: {viewDist: 0.45}
+  }
+  {
+    id: st-viewDistance-3
+    extends: st-viewDistance-1
+    title: txt-pk-viewDistance-3-title
+    bonus: {viewDist: 0.6}
+  }
+  {
+    id: st-viewDistance-4
+    extends: st-viewDistance-1
+    title: txt-pk-viewDistance-4-title
+    bonus: {viewDist: 0.75}
+  }
+  {
+    id: st-handlerCapacity-1
+    title: txt-pk-handlerCapacity-1-title
+    description: txt-pk-handlerCapacity-1
+    sprite: res_status_animalWhisperer.png
+    bonus: {animalCapacity: 1}
+    debugCategory: Unit Perk
+  }
+  {
+    id: st-handlerCapacity-2
+    extends: st-handlerCapacity-1
+    bonus: {animalCapacity: 2}
+    title: txt-pk-handlerCapacity-2-title
+  }
+  {
+    id: st-handlerCapacity-3
+    extends: st-handlerCapacity-1
+    bonus: {animalCapacity: 3}
+    title: txt-pk-handlerCapacity-3-title
+  }
+  {
+    id: st-handlerCapacity-4
+    extends: st-handlerCapacity-1
+    bonus: {animalCapacity: 4}
+    title: txt-pk-handlerCapacity-4-title
+  }
+  {
+    id: st-mountainTrooper-1
+    title: txt-pk-mountainTrooper-1-title
+    description: txt-pk-mountainTrooper-1
+    sprite: res_status_climber.png
+    bonus: {
+      moveCost: -2
+      reqTiles: tl-hill tl-plateau
+    }
+    debugCategory: Unit Perk
+  }
+  {
+    id: st-mountainTrooper-2
+    extends: st-mountainTrooper-1
+    title: txt-pk-mountainTrooper-2-title
+    bonus: {
+      moveCost: -4
+      reqTiles: [tl-hill, tl-plateau]
+    }
+  }
+  {
+    id: st-mountainTrooper-3
+    extends: st-mountainTrooper-1
+    title: txt-pk-mountainTrooper-3-title
+    bonus: {
+      moveCost: -6
+      reqTiles: [tl-hill, tl-plateau]
+    }
+  }
+  {
+    id: st-mountainTrooper-4
+    extends: st-mountainTrooper-1
+    title: txt-pk-mountainTrooper-4-title
+    bonus: {
+      moveCost: -8
+      reqTiles: [tl-hill, tl-plateau]
+    }
+  }
+  {
+    id: st-villageSanity-1
+    title: txt-pk-villageSanity-1-title
+    description: txt-pk-villageSanity-1
+    bonus: {villageSanityBonus: 20}
+    sprite: res_status_villageSanity.png
+    debugCategory: Unit Perk
+  }
+  {
+    id: st-villageSanity-2
+    extends: st-villageSanity-1
+    title: txt-pk-villageSanity-2-title
+    bonus: {villageSanityBonus: 30}
+  }
+  {
+    id: st-villageSanity-3
+    extends: st-villageSanity-1
+    title: txt-pk-villageSanity-3-title
+    bonus: {villageSanityBonus: 40}
+  }
+  {
+    id: st-villageSanity-4
+    extends: st-villageSanity-1
+    title: txt-pk-villageSanity-4-title
+    bonus: {villageSanityBonus: 50}
+  }
+  {
+    id: st-combatSanity-1
+    title: txt-pk-combatSanity-1-title
+    description: txt-pk-combatSanity-1
+    bonus: {combatSanity: 10}
+    sprite: res_status_combatSanity.png
+    debugCategory: Unit Perk
+  }
+  {
+    id: st-combatSanity-2
+    extends: st-combatSanity-1
+    title: txt-pk-combatSanity-2-title
+    bonus: {combatSanity: 15}
+  }
+  {
+    id: st-combatSanity-3
+    extends: st-combatSanity-1
+    title: txt-pk-combatSanity-3-title
+    bonus: {combatSanity: 20}
+  }
+  {
+    id: st-combatSanity-4
+    extends: st-combatSanity-1
+    title: txt-pk-combatSanity-4-title
+    bonus: {combatSanity: 30}
+  }
+  {
+    id: st-maxSanity-1
+    title: txt-pk-maxSanity-1-title
+    sprite: res_status_strongMind.png
+    debugCategory: Unit Perk
+    bonus: {maxSanity: 10}
+  }
+  {
+    id: st-maxSanity-2
+    extends: st-maxSanity-1
+    title: txt-pk-maxSanity-2-title
+    bonus: {maxSanity: 20}
+  }
+  {
+    id: st-maxSanity-3
+    extends: st-maxSanity-1
+    title: txt-pk-maxSanity-3-title
+    bonus: {maxSanity: 30}
+  }
+  {
+    id: st-maxSanity-4
+    extends: st-maxSanity-1
+    title: txt-pk-maxSanity-4-title
+    bonus: {maxSanity: 40}
+  }
+  {
+    id: st-combatChance-1
+    title: txt-pk-combatChance-1-title
+    description: txt-pk-combatChance-1
+    sprite: res_status_stealth.png
+    bonus: {zoneEventChance: -0.2}
+    debugCategory: Unit Perk
+  }
+  {
+    id: st-combatChance-2
+    extends: st-combatChance-1
+    title: txt-pk-combatChance-2-title
+    bonus: {zoneEventChance: -0.3}
+  }
+  {
+    id: st-combatChance-3
+    extends: st-combatChance-1
+    title: txt-pk-combatChance-3-title
+    bonus: {zoneEventChance: -0.4}
+  }
+  {
+    id: st-combatChance-4
+    extends: st-combatChance-1
+    title: txt-pk-combatChance-4-title
+    bonus: {zoneEventChance: -0.5}
+  }
+  {
+    id: st-whiskyIncrease-1
+    title: txt-pk-whiskyIncrease-1-title
+    description: txt-pk-whiskyIncrease-1
+    bonus: {whiskyBonus: 10}
+    sprite: res_status_whiskeyExpert.png
+    debugCategory: Unit Perk
+  }
+  {
+    id: st-whiskyIncrease-2
+    extends: st-whiskyIncrease-1
+    title: txt-pk-whiskyIncrease-2-title
+    bonus: {whiskyBonus: 15}
+  }
+  {
+    id: st-whiskyIncrease-3
+    extends: st-whiskyIncrease-1
+    title: txt-pk-whiskyIncrease-3-title
+    bonus: {whiskyBonus: 20}
+  }
+  {
+    id: st-whiskyIncrease-4
+    extends: st-whiskyIncrease-1
+    title: txt-pk-whiskyIncrease-4-title
+    bonus: {whiskyBonus: 25}
+  }
+  {
+    id: st-cocaIncrease-1
+    title: txt-st-cocaIncrease-1-title
+    description: txt-pk-cocaIncrease-1
+    bonus: {cocaBonus: 5}
+    sprite: res_status_occultVision.png
+    debugCategory: Unit Perk
+  }
+  {
+    id: st-cocaIncrease-2
+    extends: st-cocaIncrease-1
+    title: txt-pk-cocaIncrease-2-title
+    bonus: {cocaBonus: 10}
+  }
+  {
+    id: st-cocaIncrease-3
+    extends: st-cocaIncrease-1
+    title: txt-pk-cocaIncrease-3-title
+    bonus: {cocaBonus: 15}
+  }
+  {
+    id: st-cocaIncrease-4
+    extends: st-cocaIncrease-1
+    title: txt-pk-cocaIncrease-4-title
+    bonus: {cocaBonus: 20}
+  }
+  {
+    id: st-flare-1
+    title: txt-pk-flare-1-title
+    description: txt-pk-flare-1
+    bonus: {flareRadius: 1}
+    sprite: res_status_flare.png
+    debugCategory: Unit Perk
+  }
+  {
+    id: st-flare-2
+    extends: st-flare-1
+    title: txt-pk-flare-2-title
+    bonus: {flareRange: 2, flareRadius: 1}
+  }
+  {
+    id: st-flare-3
+    extends: st-flare-1
+    title: txt-pk-flare-3-title
+    bonus: {flareRange: 3, flareRadius: 1}
+  }
+  {
+    id: st-flare-4
+    extends: st-flare-1
+    title: txt-pk-flare-4-title
+    bonus: {flareRange: 3, flareRadius: 2}
+  }
+  {
+    id: st-bartering-1
+    title: txt-pk-bartering-1-title
+    description: txt-pk-bartering-1
+    sprite: res_status_haggle.png
+    debugCategory: Unit Perk
+  }
+  {
+    id: st-bartering-2
+    title: txt-pk-bartering-2-title
+    extends: st-bartering-1
+  }
+  {
+    id: st-bartering-3
+    title: txt-pk-bartering-3-title
+    extends: st-bartering-1
+  }
+  {
+    id: st-bartering-4
+    title: txt-pk-bartering-4-title
+    extends: st-bartering-1
+  }
+  {
+    id: st-cookSanity-1
+    title: txt-pk-cookSanity-1-title
+    description: txt-pk-cookSanity-1
+    flags: +cookSanity
+    sprite: res_status_freshAirFanatic.png
+    bonus: {cookSanity: 5}
+    debugCategory: Unit Perk
+  }
+  {
+    id: st-cookSanity-2
+    extends: st-cookSanity-1
+    title: txt-pk-cookSanity-2-title
+    bonus: {cookSanity: 10}
+  }
+  {
+    id: st-cookSanity-3
+    extends: st-cookSanity-1
+    title: txt-pk-cookSanity-3-title
+    bonus: {cookSanity: 15}
+  }
+  {
+    id: st-cookSanity-4
+    extends: st-cookSanity-1
+    title: txt-pk-cookSanity-4-title
+    bonus: {cookSanity: 20}
+  }
+  {
+    id: st-discoverOasis-1
+    title: txt-pk-discoverOasis-1-title
+    description: txt-pk-discoverOasis-1
+    sprite: res_status_occultVision.png
+    debugCategory: Unit Perk
+    tripEvents: {
+      reqAge: 1
+      posTile: {locations: loc-oasis, closest: true, range: ..10}
+      revealTiles: {radius: 0, location: true, centerCam: false}
+    }
+  }
+  {
+    id: st-discoverOasis-2
+    title: txt-pk-discoverOasis-2-title
+    extends: st-discoverOasis-1
+    tripEvents: {
+      reqAge: 1
+      posTile: {locations: loc-oasis, closest: true, range: ..14}
+      revealTiles: {radius: 1, location: true, centerCam: false}
+    }
+  }
+  {
+    id: st-discoverOasis-3
+    title: txt-pk-discoverOasis-3-title
+    extends: st-discoverOasis-1
+    tripEvents: {
+      reqAge: 1
+      posTile: {locations: loc-oasis, closest: true, range: ..18}
+      revealTiles: {radius: 2, location: true, centerCam: false}
+    }
+  }
+  {
+    id: st-discoverOasis-4
+    title: txt-pk-discoverOasis-4-title
+    extends: st-discoverOasis-1
+    tripEvents: {
+      reqAge: 1
+      posTile: {locations: loc-oasis, closest: true, range: ..25}
+      revealTiles: {radius: 2, location: true, centerCam: false}
+    }
+  }
+  {
+    id: st-artist-1
+    title: txt-pk-artist-1-title
+    description: txt-pk-artist-1
+    sprite: res_status_artist.png
+    debugCategory: Unit Perk
+  }
+  {id: st-artist-2, title: txt-pk-artist-2-title, extends: st-artist-1}
+  {id: st-artist-3, title: txt-pk-artist-3-title, extends: st-artist-1}
+  {id: st-artist-4, title: txt-pk-artist-4-title, extends: st-artist-1}
+  {
+    id: st-journalist-1
+    title: txt-pk-journalist-1-title
+    description: txt-pk-journalist-1
+    sprite: res_status_journalist.png
+    bonus: {fameScale: 0.05}
+    debugCategory: Unit Perk
+  }
+  {
+    id: st-journalist-2
+    extends: st-journalist-1
+    title: txt-pk-journalist-2-title
+    bonus: {fameScale: 0.1}
+  }
+  {
+    id: st-journalist-3
+    extends: st-journalist-1
+    title: txt-pk-journalist-3-title
+    bonus: {fameScale: 0.15}
+  }
+  {
+    id: st-journalist-4
+    extends: st-journalist-1
+    title: txt-pk-journalist-4-title
+    bonus: {fameScale: 0.2}
+  }
+  {
+    id: st-die-attack
+    title: txt-pk-die-attack-title
+    description: txt-pk-die-attack
+    debugCategory: Explorer Perk
+    isPerk: true
+    sprite: res_status_die_attack.png
+    bonus: {dice: dc-attack-2}
+  }
+  {
+    id: st-die-defend
+    title: txt-pk-die-defend-title
+    description: txt-pk-die-defend
+    debugCategory: Explorer Perk
+    isPerk: true
+    sprite: res_status_die_defend.png
+    bonus: {dice: dc-defend-2}
+  }
+  {
+    id: st-die-support
+    title: txt-pk-die-support-title
+    description: txt-pk-die-support
+    debugCategory: Explorer Perk
+    isPerk: true
+    sprite: res_status_die_support.png
+    bonus: {dice: dc-support-2}
+  }
+  {
+    id: st-pacifist
+    title: txt-pk-pacifist-title
+    description: txt-pk-pacifist
+    debugCategory: Explorer Perk
+    sprite: res_status_loneSurvivor.png
+    bonus: {zoneEventChance: -0.25}
+  }
+  {
+    id: st-otherworldly
+    title: txt-pk-otherworldly-title
+    description: txt-pk-otherworldly
+    debugCategory: Explorer Perk
+    sprite: res_status_loneSurvivor.png
+  }
+  {
+    id: st-animalWhisperer
+    title: txt-pk-animalWhisperer-title
+    description: txt-pk-animalWhisperer
+    debugCategory: Explorer Perk
+    sprite: res_status_loneSurvivor.png
+  }
+  {
+    id: st-naturalLeader
+    title: txt-pk-naturalLeader-title
+    description: txt-pk-naturalLeader
+    debugCategory: Explorer Perk
+    sprite: res_status_leader.png
+    bonus: {maxSanity: -30, maxUnitCount: 1}
+  }
+  {
+    id: st-necronomicon
+    title: txt-pk-necronomicon-title
+    description: txt-pk-necronomicon
+    debugCategory: Explorer Perk
+    sprite: res_status_necronomicon.png
+    bonus: {maxSanity: -30}
+  }
+  {
+    id: st-climber
+    title: txt-pk-climber-title
+    debugCategory: Explorer Perk
+    description: txt-pk-climber
+    bonus: {
+      moveCost: -6
+      reqTiles: [tl-hill, tl-plateau]
+    }
+    isPerk: true
+    sprite: res_status_climber.png
+  }
+  {
+    id: st-eagleEye
+    title: txt-pk-eagleEye-title
+    debugCategory: Explorer Perk
+    description: txt-pk-viewDistance-1
+    bonus: {viewDist: 0.4}
+    isPerk: true
+    sprite: res_status_viewDistance.png
+  }
+  {
+    id: st-strongMind
+    title: txt-pk-strongMind-title
+    debugCategory: Explorer Perk
+    bonus: {maxSanity: 20}
+    isPerk: true
+    sprite: res_status_strongMind.png
+  }
+  {
+    id: st-loneSurvivor
+    title: txt-pk-loneSurvivor-title
+    debugCategory: Explorer Perk
+    description: txt-pk-loneSurvivor
+    isPerk: true
+    sprite: res_status_loneSurvivor.png
+  }
+  {
+    id: st-biomeInfo
+    title: txt-pk-biomeInfo-title
+    debugCategory: Explorer Perk
+    description: txt-pk-biomeInfo
+    sprite: res_status_biomeInfo.png
+  }
+  {
+    id: st-polyglot
+    title: txt-pk-polyglot-title
+    debugCategory: Explorer Perk
+    tripEvents: {setCharFlags: +translator}
+    description: txt-pk-polyglot
+    sprite: res_status_polyglot.png
+  }
+  {
+    id: st-navigator
+    title: txt-pk-navigator-title
+    debugCategory: Explorer Perk
+    description: txt-pk-navigator
+    bonus: {compass: 0.3}
+    isPerk: true
+    sprite: res_status_navigator.png
+  }
+  {
+    id: st-impetus
+    title: txt-pk-impetus-title
+    debugCategory: Explorer Perk
+    description: txt-pk-impetus
+    bonus: {tripCost: -0.25}
+    isPerk: true
+    sprite: res_status_navigator.png
+  }
+  {
+    id: st-occultVision
+    title: txt-pk-occultVision-title
+    debugCategory: Explorer Perk
+    description: txt-pk-occultVision
+    bonus: {stoneCircle: 2}
+    isPerk: true
+    sprite: res_status_occultVision.png
+  }
+  {
+    id: st-dreamVisions
+    title: txt-pk-dreamVisions-title
+    debugCategory: Explorer Perk
+    description: txt-pk-dreamVisions
+    sprite: res_status_dreamVisions.png
+    tripEvents: [
+      {
+        slots: 1
+        reqAge: 8
+        resetStatusAge: true
+        reqLocation: {flags: +dreamVisions, locationKnown: false, range: ..25}
+        posTile: {locationFlags: +dreamVisions, locationKnown: false, closest: true}
+        revealTiles: {radius: 1, location: true, centerCam: true, particle: pt-magic-reveal}
+        chat: cl-dreamVisions
+      }
+      {slots: 5, reqAge: 8}
+    ]
+  }
+  {
+    id: st-butterflyEnthusiast
+    title: txt-pk-butterflyEnthusiast-title
+    debugCategory: Explorer Perk
+    description: txt-pk-butterflyEnthusiast
+    bonus: {taxonomySanity: 20}
+    sprite: res_status_butterfly.png
+  }
+  {
+    id: st-waterproof
+    title: txt-pk-waterproof-title
+    debugCategory: Explorer Perk
+    description: txt-pk-waterproof
+    bonus: {moveCost: -3, reqTileFlags: +water}
+    isPerk: true
+    sprite: res_status_waterproof.png
+  }
+  {
+    id: st-natureSanity
+    title: txt-pk-natureSanity-title
+    debugCategory: Explorer Perk
+    description: txt-pk-natureSanity
+    bonus: {natureSanityBonus: 5}
+    isPerk: true
+    sprite: res_status_freshAirFanatic.png
+  }
+  {
+    id: st-jungleExplorer
+    title: txt-pk-jungleExplorer-title
+    debugCategory: Explorer Perk
+    description: txt-pk-jungleExplorer
+    bonus: {moveCost: -3, reqTiles: tl-jungle-thick tl-dry-jungle-thick}
+    isPerk: true
+    sprite: res_status_jungleExplorer.png
+  }
+  {
+    id: st-tacticalMastery
+    title: txt-pk-tacticalMastery-title
+    debugCategory: Explorer Perk
+    description: txt-pk-tacticalMastery
+    bonus: {combatRoll: 1}
+    sprite: res_status_tacticalMastery.png
+  }
+  {
+    id: st-gunExpert
+    title: txt-pk-gunExpert-title
+    debugCategory: Combat
+    description: txt-pk-gunExpert
+    bonus: {gunDamage: 2}
+    isPerk: true
+    sprite: res_status_gunExpert.png
+  }
+  {
+    id: st-desertExpert
+    title: txt-pk-desertExpert-title
+    debugCategory: Explorer Perk
+    description: txt-pk-desertExpert
+    sprite: res_status_desertExplorer.png
+  }
+  {
+    id: st-desertExplorer
+    title: txt-pk-desertExplorer-title
+    debugCategory: Explorer Perk
+    description: txt-pk-desertExplorer
+    bonus: {moveCost: -4, reqTiles: tl-desert}
+    isPerk: true
+    sprite: res_status_desertExplorer.png
+  }
+  {
+    id: st-arcticExplorer
+    title: txt-pk-arcticExplorer-title
+    debugCategory: Explorer Perk
+    description: txt-pk-arcticExplorer
+    bonus: {moveCost: -4, reqTiles: tl-deepSnow}
+    isPerk: true
+    sprite: res_status_arcticExplorer.png
+  }
+  {
+    id: st-explosionExpert
+    title: txt-pk-explosionExpert-title
+    debugCategory: Explorer Perk
+    description: txt-pk-explosionExpert
+    bonus: {dynamiteBonus: 1}
+    isPerk: true
+    sprite: res_status_dynamite.png
+  }
+  {
+    id: st-spiritualSolidarity
+    title: txt-pk-spiritualSolidarity-title
+    debugCategory: Explorer Perk
+    description: txt-pk-spiritualSolidarity
+    sprite: res_status_spiritualSolidarity.png
+  }
+  {
+    id: st-blackMarket
+    title: txt-pk-blackMarket-title
+    debugCategory: Explorer Perk
+    description: txt-pk-blackMarket
+    isPerk: true
+    sprite: res_status_blackMarket.png
+  }
+  {
+    id: st-heavyCarrier
+    title: txt-pk-heavyCarrier-title
+    description: txt-pk-heavyCarrier
+    sprite: res_status_heavyCarrier.png
+    bonus: {capacity: 2}
+    isPerk: true
+    debugCategory: Explorer Perk
+  }
+  {
+    id: st-greatReputation
+    title: txt-pk-goodReputation-title
+    description: txt-pk-goodReputation
+    sprite: res_status_standing.png
+    bonus: {startStanding: 4}
+    isPerk: true
+    debugCategory: Explorer Perk
+  }
+  {
+    id: st-goodReputation
+    title: txt-pk-goodReputation-title
+    description: txt-pk-goodReputation
+    sprite: res_status_standing.png
+    bonus: {startStanding: 1}
+  }
+  {
+    id: st-charismatic
+    title: txt-pk-charismatic-title
+    debugCategory: Explorer Perk
+    description: txt-pk-charismatic
+    isPerk: true
+    sprite: res_status_charismatic.png
+  }
+  {
+    id: st-bulletHoarder
+    title: txt-pk-bulletHoarder-title
+    debugCategory: Explorer Perk
+    description: txt-pk-bulletHoarder
+    isPerk: true
+    sprite: res_status_bulletHoarder.png
+    dayEvents: {
+      reqAge: 20..
+      reqItems: {it-markedAmmo: ..4}
+      items: {it-markedAmmo: 1}
+      resetStatusAge: true
+    }
+  }
+  {
+    id: st-polymath
+    title: txt-pk-polymath-title
+    debugCategory: Explorer Perk
+    description: txt-pk-polymath
+    sprite: res_status_polymath.png
+  }
+  {
+    id: st-careerist
+    title: txt-pk-careerist-title
+    debugCategory: Explorer Perk
+    description: txt-pk-careerist
+    isPerk: true
+    sprite: res_status_careerist.png
+    bonus: {loyaltyBoost: 0.5}
+  }
+  {
+    id: st-healer
+    title: txt-pk-healer-title
+    description: txt-pk-healer
+    debugCategory: Explorer Perk
+    sprite: res_status_healer.png
+    tripEvents: {
+      charEvents: {count: any, reqCharFlags: -animal, setStatus: +woundTreatment}
+    }
+  }
+  {
+    id: st-woundTreatment
+    title: txt-pk-woundTreatment-title
+    debugCategory: generic
+    sprite: res_status_regeneration.png
+    bonus: {healthRegen: 0.25}
+  }
+]

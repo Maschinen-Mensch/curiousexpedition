@@ -1,0 +1,226 @@
+[
+  {
+    id: evt-postNarrative-extraCampaign
+    charEvents: [
+      {reqCharFlags: +special, text: txt-evt-postNarrative-extraCampaign}
+    ]
+  }
+  {
+    id: evt-postNarrative
+    charEvents: [
+      {optional: true, consume: true, ref: evt-postNarrative-special}
+      {optional: true, consume: true, ref: evt-postNarrative-generic}
+      {optional: true, consume: true, ref: evt-postNarrative-generic}
+      {optional: true, consume: true, ref: evt-postNarrative-generic}
+      {optional: true, consume: true, ref: evt-postNarrative-generic}
+    ]
+  }
+  {
+    id: evt-postNarrative-special
+    reqCharFlags: +special
+    select: [
+      {reqRanking: 0, text: txt-evt-postNarrative-special}
+      {reqRanking: 1, text: txt-evt-postNarrative-special-1}
+      {reqRanking: 2.., text: txt-evt-postNarrative-special-2}
+    ]
+  }
+  {
+    id: evt-postNarrative-generic
+    reqCharFlags: -special +humanoid -animal
+    partyEvents: [
+      {ref: evt-postNarrative-middleLife}
+      {ref: evt-postNarrative-extra}
+      {ref: evt-postNarrative-lateLife}
+    ]
+  }
+  {
+    id: evt-postNarrative-middleLife
+    select: [
+      {reqCharFlags: -missionary, text: txt-evt-postNarrative-middleLife}
+      {
+        reqPartyFlags: -speaker
+        text: txt-evt-postNarrative-middleLife-1
+        setPartyFlags: +speaker
+        setCharFlags: +publicLife
+      }
+      {
+        reqPartyFlags: -book
+        text: txt-evt-postNarrative-middleLife-2
+        setPartyFlags: +book
+        setCharFlags: +publicLife
+      }
+      {reqCharFlags: +native, text: txt-evt-postNarrative-middleLife-3}
+      {
+        reqCharFlags: +native
+        text: txt-evt-postNarrative-middleLife-4
+        setCharFlags: +nativeLife
+      }
+      {
+        reqCharFlags: +soldier
+        text: txt-evt-postNarrative-middleLife-5
+        setCharFlags: +soldierLife
+      }
+      {reqCharFlags: +cook, text: txt-evt-postNarrative-middleLife-6}
+      {
+        reqCharFlags: +missionary
+        text: txt-evt-postNarrative-middleLife-7
+        setCharFlags: +nativeLife
+      }
+    ]
+  }
+  {
+    id: evt-postNarrative-extra
+    select: [
+      {
+        id: evt-postNarrative-extra-letters
+        reqLoyalty: 2..
+        text: txt-evt-postNarrative-extra
+      }
+      {id: evt-postNarrative-extra-changed, text: txt-evt-postNarrative-extra-1}
+      {id: evt-postNarrative-extra-automobile, text: txt-evt-postNarrative-extra-2}
+      {id: evt-postNarrative-extra-noTrust, text: txt-evt-postNarrative-extra-3}
+      {id: evt-postNarrative-extra-mindful, text: txt-evt-postNarrative-extra-4}
+      {
+        id: evt-postNarrative-extra-animalHabitat
+        text: txt-evt-postNarrative-extra-5
+      }
+      {
+        id: evt-postNarrative-extra-animalName
+        text: txt-evt-postNarrative-extra-animalName
+      }
+      {
+        id: evt-postNarrative-extra-royalName
+        text: txt-evt-postNarrative-extra-royalName
+      }
+      {
+        id: evt-postNarrative-extra-knight
+        reqGender: male
+        reqCharFlags: +publicLife
+        text: txt-evt-postNarrative-extra-royalName-1
+      }
+      {
+        id: evt-postNarrative-extra-nightmares
+        reqCharFlags: -publicLife
+        text: txt-evt-postNarrative-extra-royalName-2
+      }
+      {
+        id: evt-postNarrative-extra-silent
+        reqCharFlags: -publicLife
+        text: txt-evt-postNarrative-extra-royalName-3
+      }
+      {
+        id: evt-postNarrative-extra-soldierLife
+        reqCharFlags: +soldierLife
+        text: txt-evt-postNarrative-extra-soldierLife
+      }
+      {
+        id: evt-postNarrative-extra-kleptomaniacRich
+        reqCharFlags: +kleptmaniac
+        text: txt-evt-postNarrative-extra-kleptomaniacRich
+      }
+      {
+        id: evt-postNarrative-extra-kleptomaniacPoor
+        reqCharFlags: +kleptmaniac
+        text: txt-evt-postNarrative-extra-kleptomaniacPoor
+      }
+      {
+        id: evt-postNarrative-extra-racistChange
+        reqCharFlags: +racist -native
+        text: txt-evt-postNarrative-extra-racistChange
+      }
+      {
+        id: evt-postNarrative-extra-alcoholic
+        reqCharFlags: +alcoholic
+        text: txt-evt-postNarrative-extra-alcoholic
+      }
+      {
+        id: evt-postNarrative-extra-cookCannibal
+        reqCharFlags: +cook
+        reqStatus: +cannibal
+        text: txt-evt-postNarrative-extra-cookCanibal
+      }
+      {
+        id: evt-postNarrative-extra-cookSoup
+        reqCharFlags: +cook +soupLife
+        text: txt-evt-postNarrative-extra-cookSoup
+      }
+      {
+        id: evt-postNarrative-extra-cookPyromaniac
+        reqCharFlags: +cook
+        reqStatus: +pyromaniac
+        text: txt-evt-postNarrative-extra-cookPyromaniac
+      }
+      {
+        id: evt-postNarrative-extra-noLoyalty
+        reqLoyalty: 0
+        text: txt-evt-postNarrative-extra-noLoyalty
+      }
+      {
+        id: evt-postNarrative-extra-bipolar
+        reqStatus: +bipolar
+        text: txt-evt-postNarrative-extra-bipolar
+      }
+      {
+        id: evt-postNarrative-extra-nativeFashion
+        reqCharFlags: +native -nativeLife
+        text: txt-evt-postNarrative-extra-nativeFashion
+      }
+      {
+        id: evt-postNarrative-extra-firstChildName
+        reqLoyalty: 2..
+        reqFlags: -native -missionary
+        text: txt-evt-postNarrative-extra-firstChildName
+      }
+    ]
+  }
+  {
+    id: evt-postNarrative-lateLife
+    select: [
+      {
+        id: evt-postNarrative-lateLife-alcoholicDeath
+        reqStatus: +alcoholic
+        text: txt-evt-postNarrative-lateLife-alcoholicDeath
+      }
+      {
+        id: evt-postNarrative-lateLife-paranoidDeath
+        reqStatus: +paranoid
+        reqCharFlags: -nativeLife
+        text: txt-evt-postNarrative-lateLife-paranoidDeath
+      }
+      {
+        id: evt-postNarrative-lateLife-soldierDeath
+        reqCharFlags: +soldierLife
+        text: txt-evt-postNarrative-lateLife-soldierDeath
+      }
+      {
+        id: evt-postNarrative-lateLife-genericDeath
+        reqCharFlags: -missionary
+        text: txt-evt-postNarrative-lateLife-genericDeath
+      }
+      {
+        id: evt-postNarrative-lateLife-missionaryDeath
+        reqCharFlags: +missionary
+        text: txt-evt-postNarrative-lateLife-missionaryDeath
+      }
+      {
+        id: evt-postNarrative-lateLife-nativeDeath
+        reqCharFlags: +nativeLife
+        text: txt-evt-postNarrative-lateLife-nativeDeath
+      }
+      {
+        id: evt-postNarrative-lateLife-familyDeath
+        reqCharFlags: +nativeLife -missionary
+        text: txt-evt-postNarrative-lateLife-familyDeath
+      }
+      {
+        id: evt-postNarrative-lateLife-lepidopterophobiaDeath
+        reqStatus: +lepidopterophobia
+        text: txt-evt-postNarrative-lateLife-lepidopterophobiaDeath
+      }
+      {
+        id: evt-postNarrative-lateLife-seventhWorldDeath
+        text: txt-evt-postNarrative-lateLife-seventhWorldDeath
+      }
+    ]
+  }
+]

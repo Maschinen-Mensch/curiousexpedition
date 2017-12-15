@@ -1,0 +1,70 @@
+[
+  {
+    id: loc-geysir-spawn-inactive
+    name: txt-fxt-geysir-spawn-inactive-name
+    debugCategory: hazard
+    debugColor: lightgray
+    sprite: res_fxt_geysir_1.png
+    showHint: false
+    hintBiome: false
+    reqBiomeFlags: -desert
+    particle: pt-volcano-inactive
+    setTile: [
+      {ref: tl-river-shallow}
+    ]
+    spawnEvents: {
+      replaceLocations: {new: loc-geysir-inactive}
+    }
+    setNeighbors: [
+      {ref: tl-swamp, reqBiomeFlags: -dry -arctic}
+      {ref: tl-river-shallow, reqBiomeFlags: -arctic}
+      {ref: tl-packIce, reqBiomeFlags: +arctic}
+    ]
+  }
+  {
+    id: loc-geysir-active
+    name: txt-fxt-geysir-active-name
+    debugCategory: hazard
+    debugColor: lightgray
+    sprite: res_fxt_geysir_1.png
+    showHint: false
+    hintBiome: false
+    checkReachability: false
+    particle: pt-geysir-burst
+    setTile: [
+      {ref: tl-river}
+    ]
+    spawnEvents: {
+      camShake: {power: 4, length: 2}
+      startSprawl: {ref: spr-geysir-flood, radius: 0, power: 2}
+      replaceLocations: {range: ..4, old: loc-geysir-inactive, new: loc-geysir-active}
+    }
+    dayEvents: {
+      reqAge: 7
+      replaceLocations: {new: loc-geysir-inactive}
+      startSprawl: {ref: spr-geysir-dry, radius: 0, power: 2}
+    }
+  }
+  {
+    id: loc-geysir-inactive
+    name: txt-fxt-geysir-spawn-inactive-name
+    debugCategory: hazard
+    debugColor: lightgray
+    showHint: false
+    hintBiome: false
+    checkReachability: false
+    particle: pt-geysir-inactive
+    sprite: res_fxt_geysir_1.png
+    setTile: [
+      {ref: tl-river-shallow}
+    ]
+    dayEvents: [
+      {
+        reqAge: 15
+        slots: 1
+        replaceLocations: {new: loc-geysir-active}
+      }
+      {reqAge: 15, slots: 10}
+    ]
+  }
+]

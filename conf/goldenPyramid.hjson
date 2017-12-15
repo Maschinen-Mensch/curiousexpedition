@@ -1,0 +1,561 @@
+[
+  {
+    id: loc-goldenTemple-grass
+    name: txt-fxt-goldenTemple-unearthed-name
+    debugColor: orange
+    debugCategory: goldenPyramid
+    reqBiomeFlags: +grass
+    sprite: res_fxt_goldenTemple_grass_1.png
+    hintCompass: true
+    hintBiome: false
+    mapScore: 0
+    isRemovable: false
+    keepReachable: true
+    flags: +dreamVisions +goldenTemple
+    maximizeDistance: true
+    subLocations: [
+      {ref: loc-ruins-set-1, offsets: 1n}
+      {ref: loc-ruins-set-2, offsets: 1ne}
+      {ref: loc-ruins-set-3, offsets: 1se}
+      {ref: loc-ruins-set-4, offsets: 1s}
+      {ref: loc-ruins-set-5, offsets: 1sw}
+      {ref: loc-ruins-set-6, offsets: 1nw}
+    ]
+    setTile: tl-jungle-thick
+    spawnEvents: [
+      {
+        reqWorld: 1
+        replaceTiles: [
+          {radius: 2, old: any, new: tl-jungle-thick}
+        ]
+      }
+      {
+        reqWorld: 2..3
+        replaceTiles: [
+          {radius: 2, old: any, new: tl-jungle-thick}
+          {radius: 2, old: any, new: tl-mountain, chance: 0.25}
+          {radius: 1, old: any, new: tl-jungle-thick}
+        ]
+      }
+      {
+        reqWorld: 4..
+        replaceTiles: [
+          {radius: 3, old: any, new: tl-jungle-thick}
+          {radius: 3, old: any, new: tl-mountain, chance: 0.5}
+          {radius: 1, old: any, new: tl-jungle-thick}
+        ]
+      }
+    ]
+    actions: evt-goal-explore
+  }
+  {
+    id: loc-goldenTemple-dry
+    debugCategory: goldenPyramid
+    extends: loc-goldenTemple-grass
+    reqBiomeFlags: +dry
+    setTile: tl-dry-jungle-thick
+    spawnEvents: [
+      {
+        reqWorld: 0
+        replaceTiles: [
+          {radius: 1, old: any, new: tl-dry-jungle-thick}
+        ]
+      }
+      {
+        reqWorld: 1
+        replaceTiles: [
+          {radius: 2, old: any, new: tl-dry-jungle-thick}
+        ]
+      }
+      {
+        reqWorld: 2..3
+        replaceTiles: [
+          {radius: 2, old: any, new: tl-dry-jungle-thick}
+          {radius: 2, old: any, new: tl-mountain, chance: 0.4}
+          {radius: 1, old: any, new: tl-dry-jungle-thick}
+        ]
+      }
+      {
+        reqWorld: 4..
+        replaceTiles: [
+          {radius: 2, old: any, new: tl-dry-jungle-thick}
+          {radius: 2, old: any, new: tl-mountain, chance: 0.4}
+          {radius: 1, old: any, new: tl-dry-jungle-thick}
+        ]
+      }
+    ]
+  }
+  {
+    id: loc-goldenTemple-desert
+    extends: loc-goldenTemple-grass
+    reqBiomeFlags: +desert
+    sprite: res_fxt_goldenTemple_unearthed_1.png
+    subLocations: [
+      {ref: loc-ruins-set-desert-1, offsets: 1n}
+      {ref: loc-ruins-set-desert-2, offsets: 1ne}
+      {ref: loc-ruins-set-desert-3, offsets: 1nw}
+    ]
+    setTile: tl-desert
+    spawnEvents: [
+      {
+        reqWorld: 0
+        replaceTiles: [
+          {radius: 2, old: any, new: tl-mountain}
+          {radius: 2, old: any, new: tl-dry-stoneForest, chance: 0.8}
+          {radius: 1, old: any, new: tl-desert}
+        ]
+      }
+      {
+        reqWorld: 1
+        replaceTiles: [
+          {radius: 2, old: any, new: tl-mountain}
+          {radius: 2, old: any, new: tl-dry-stoneForest, chance: 0.7}
+          {radius: 1, old: any, new: tl-desert}
+        ]
+      }
+      {
+        reqWorld: 2..3
+        replaceTiles: [
+          {radius: 2, old: any, new: tl-mountain}
+          {radius: 2, old: any, new: tl-dry-stoneForest, chance: 0.7}
+          {radius: 1, old: any, new: tl-desert}
+        ]
+      }
+      {
+        reqWorld: 4..
+        replaceTiles: [
+          {radius: 2, old: any, new: tl-mountain}
+          {radius: 2, old: any, new: tl-dry-stoneForest, chance: 0.5}
+          {radius: 1, old: any, new: tl-desert}
+        ]
+      }
+    ]
+  }
+  {
+    id: loc-goldenTemple-arctic
+    extends: loc-goldenTemple-grass
+    reqBiomeFlags: +arctic
+    sprite: res_fxt_goldenTemple_arctic_1.png
+    subLocations: [
+      {ref: loc-ruins-set-arctic-1, offsets: 1n}
+      {ref: loc-ruins-set-arctic-2, offsets: 1ne}
+      {ref: loc-ruins-set-arctic-3, offsets: 1nw}
+    ]
+    spawnEvents: [
+      {
+        reqWorld: 0..
+        replaceTiles: [
+          {radius: 2, old: any, new: tl-plateau}
+          {radius: 1, old: any, new: tl-deepSnow}
+        ]
+      }
+    ]
+  }
+  {
+    id: loc-ruins-set
+    isAbstract: true
+    mapScore: 0
+    showHint: false
+    keepReachable: true
+    isRemovable: false
+    showAlways: false
+    linked: true
+    debugCategory: ruins
+  }
+  {
+    id: loc-ruins-set-arctic-1
+    extends: loc-ruins-set
+    sprite: res_fxt_goldenTemple_arctic_2.png
+  }
+  {
+    id: loc-ruins-set-arctic-2
+    extends: loc-ruins-set-arctic-1
+    sprite: res_fxt_goldenTemple_arctic_3.png
+  }
+  {
+    id: loc-ruins-set-arctic-3
+    extends: loc-ruins-set-arctic-1
+    sprite: res_fxt_goldenTemple_arctic_4.png
+  }
+  {
+    id: loc-ruins-set-desert-1
+    extends: loc-ruins-set
+    sprite: res_fxt_goldenTemple_unearthed_2.png
+  }
+  {
+    id: loc-ruins-set-desert-2
+    extends: loc-ruins-set-desert-1
+    sprite: res_fxt_goldenTemple_unearthed_3.png
+  }
+  {
+    id: loc-ruins-set-desert-3
+    extends: loc-ruins-set-desert-1
+    sprite: res_fxt_goldenTemple_unearthed_4.png
+  }
+  {
+    id: loc-ruins-set-1
+    extends: loc-ruins-set
+    sprite: res_fxt_goldenTemple_grass_2.png
+  }
+  {
+    id: loc-ruins-set-2
+    extends: loc-ruins-set-1
+    sprite: res_fxt_goldenTemple_grass_3.png
+  }
+  {
+    id: loc-ruins-set-3
+    extends: loc-ruins-set-1
+    sprite: res_fxt_goldenTemple_grass_4.png
+  }
+  {
+    id: loc-ruins-set-4
+    extends: loc-ruins-set-1
+    sprite: res_fxt_goldenTemple_grass_5.png
+  }
+  {
+    id: loc-ruins-set-5
+    extends: loc-ruins-set-1
+    sprite: res_fxt_goldenTemple_grass_6.png
+  }
+  {
+    id: loc-ruins-set-6
+    extends: loc-ruins-set-1
+    sprite: res_fxt_goldenTemple_grass_7.png
+  }
+  {
+    id: evt-goal-explore
+    reqPartyFlags: -expeditionDone
+    actionText: txt-evt-altar-approach-action
+    select: [
+      {
+        optional: true
+        reqBiomeFlags: +grass | +prehistoric -desert -dry
+        showImage: {src: evt_fxt_goldenPyramid_grass.png, type: none}
+        select: evt-goal-explore-finish
+      }
+      {
+        optional: true
+        reqBiomeFlags: +dry -desert
+        showImage: {src: evt_fxt_goldenPyramid_dry.png, type: none}
+        select: evt-goal-explore-finish
+      }
+      {
+        optional: true
+        reqBiomeFlags: +desert
+        showImage: {src: evt_fxt_goldenPyramid_desert.png, type: none}
+        select: evt-goal-explore-finish
+      }
+      {
+        optional: true
+        reqBiomeFlags: +arctic
+        showImage: {src: evt_fxt_goldenPyramid_arctic.png, type: none}
+        select: evt-goal-explore-finish
+      }
+      {
+        prio: 1
+        optional: true
+        text: "!You have probably modded the game and added a new pyramid for a new biome. If you want your expedition end to play properly you should add a new event to the evt-goal-explore event"
+        select: evt-goal-explore-finish
+      }
+    ]
+  }
+  {
+    id: evt-goal-explore-finish
+    actionText: txt-evt-altar-approach-action
+    playMusic: thm_pyramid
+    text: txt-evt-goal-explore-finish
+    charEvents: [
+      {
+        optional: true
+        reqTutorial: false
+        reqCharFlags: +humanoid -special
+        text: txt-evt-goal-explore-finish-1
+      }
+      {
+        optional: true
+        reqTutorial: false
+        count: all
+        reqCharFlags: -humanoid | +special
+        text: txt-evt-goal-explore-finish-2
+      }
+      {optional: true, reqTutorial: true, text: txt-evt-goal-explore-finish-3}
+    ]
+    chat: cl-endWorld
+    select: [
+      {
+        reqWorld: 3
+        reqDifficulty: 1..
+        reqLocationFlags: -unearthed
+        text: txt-evt-goal-enter
+        actions: {
+          actionText: txt-evt-goal-explore-finish-action
+          alwaysShown: true
+          reqItems: {it-moonStone: 1..}
+          items: {it-moonStone: -1}
+          select: evt-ruins-success
+        }
+      }
+      {
+        reqWorld: 4
+        reqDifficulty: 1..
+        reqLocationFlags: -unearthed
+        text: txt-evt-goal-enter-1
+        actions: {
+          actionText: txt-evt-goal-explore-finish-action
+          alwaysShown: true
+          reqItems: {it-moonStone: 2..}
+          items: {it-moonStone: -2}
+          select: evt-ruins-success
+        }
+      }
+      {
+        reqWorld: 5
+        reqDifficulty: 1..
+        reqLocationFlags: -unearthed
+        text: txt-evt-goal-enter-2
+        actions: {
+          actionText: txt-evt-goal-explore-finish-action
+          alwaysShown: true
+          reqItems: {it-moonStone: 2..}
+          items: {it-moonStone: -2}
+          select: [
+            {select: evt-ruins-success, reqTutorial: false}
+            {select: evt-ruins-success-tutorial, reqTutorial: true}
+          ]
+        }
+      }
+      {reqWorld: 5, reqLocationFlags: +unearthed, actions: evt-ruins-success}
+      {prio: 1, actions: evt-ruins-success}
+    ]
+    actions: evt-leave
+  }
+  {
+    id: evt-ruins-success-tutorial
+    actionText: txt-evt-goal-explore-finish-action
+    text: txt-evt-ruins-success-tutorial
+    endWorld: {}
+  }
+  {
+    id: evt-ruins-success
+    actionText: txt-evt-goal-explore-finish-action
+    report: txt-evt-ruins-success-report
+    select: [
+      {reqDifficulty: ..1, select: evt-expedition-done}
+      {
+        reqDifficulty: 2..
+        text: txt-evt-ruins-success
+        sanity: sanityBoost
+        setPartyFlags: +expeditionDone
+      }
+    ]
+  }
+  {
+    id: evt-expedition-unlocks
+    partyEvents: [
+      {
+        optional: true
+        reqStanding: ..-1
+        setPartyFlags: +badStanding
+      }
+      {
+        optional: true
+        reqWorld: ..4
+        reqItems: {it-dinoSkull: 1..}
+        unlockPocket: pck-prehistoric
+      }
+      {
+        optional: true
+        charEvents: {count: 3, reqCharFlags: +native}
+        reqDifficulty: 1..
+        unlockCharacter: sp-tubman
+      }
+      {
+        optional: true, 
+        reqWorld: 2, 
+        unlockCharacter: sp-kingsley
+      }
+      {
+        optional: true
+        reqWorld: 5..
+        reqRanking: ..2
+        reqNoCombat: true
+        unlockCharacter: sp-lovelace
+      }
+      {
+        optional: true, 
+        reqWorld: 5.., 
+        reqRanking: 0, 
+        unlockCharacter: sp-earhart
+      }
+      {
+        optional: true
+        reqWorld: 5..
+        reqRanking: ..2
+        charEvents: {count: 2, reqCharFlags: -special, reqLevel: 3..}
+        unlockCharacter: sp-garvey
+      }
+      {
+        optional: true
+        reqWorld: 5..
+        reqRanking: ..2
+        reqDifficulty: 1..
+        reqNoCombat: true
+        unlockCharacter: sp-stark
+      }
+      {
+        optional: true
+        reqWorld: 5..
+        reqRanking: ..2
+        charEvents: {reqCharFlags: +dinosaur}
+        unlockCharacter: sp-neel
+      }
+      {
+        optional: true
+        reqWorld: 5..
+        reqRanking: ..2
+        reqDifficulty: 1..
+        reqPartyFlags: -badStanding
+        unlockCharacter: sp-crowley
+      }
+      {
+        optional: true
+        reqWorld: 5..
+        reqPartyFlags: -hadBadStanding
+        incAchievement: ach-positive-standing
+      }
+      {
+        optional: true
+        reqWorld: 5..
+        reqPartyFlags: -soldItem
+        incAchievement: ach-no-selling
+      }
+      {
+        optional: true
+        reqWorld: 5..
+        reqPartyFlags: -abortedExpedition
+        incAchievement: ach-expeditions
+      }
+      {
+        optional: true
+        reqWorld: 5..
+        reqPartyFlags: -nonCocaUsers
+        incAchievement: ach-coca-only
+      }
+      {
+        optional: true
+        reqWorld: 5..
+        reqPartyFlags: -recruitedSomebody
+        incAchievement: ach-no-recruit
+      }
+    ]
+    charEvents: [
+      {optional: true, count: any, setCharFlags: +veteran}
+    ]
+    storeEvents: [
+      {optional: true, count: any, setCharFlags: +dead}
+    ]
+  }
+  {
+    id: evt-expedition-done
+    partyEvents: [
+      {
+        optional: true
+        reqPartyFlags: +harborEventsQuest80Days
+        reqTurns: ..80
+        setPartyFlags: +harborEventsQuest80DaysComplete
+      }
+    ]
+    charEvents: [
+      {reqCharFlags: +special, text: txt-evt-expedition-done-1}
+      {
+        optional: true
+        reqPartyFlags: +escortMissionary
+        reqCharFlags: +missionary
+        text: txt-evt-expedition-done-2
+        report: txt-evt-expedition-done-report
+        removeCharacter: true
+      }
+    ]
+    select: [evt-expedition-done-aftermath]
+  }
+  {
+    id: evt-expedition-done-aftermath
+    select: [
+      {
+        reqTutorial: true
+        actions: {
+          actionText: txt-evt-expedition-done-aftermath-action
+          endWorld: {}
+        }
+      }
+      {
+        prio: 1
+        charEvents: {
+          reqLoyalty: ..3
+          text: txt-evt-expedition-done-native
+          reqStatus: +homesick
+          reqCharFlags: +homeWorld
+          setCharFlags: -homeWorld +homeCheck
+          actions: [
+            {
+              reqDice: mind
+              reqDiceCharFlags: -homeCheck
+              actionText: txt-evt-expedition-done-aftermath-action-1
+              winEvents: {
+                id: evt-expedition-done-native-join
+                text: txt-evt-expedition-done-native-join
+                report: txt-evt-expedition-done-native-join-report
+                setCharFlags: -homeCheck
+                select: evt-expedition-done-aftermath
+              }
+              failEvents: {
+                id: evt-expedition-done-native-stay
+                text: txt-evt-expedition-done-native-stay
+                report: txt-evt-expedition-done-native-stay-report
+                storeCharacter: true
+                setCharFlags: +stayHome -homeCheck
+                select: evt-expedition-done-aftermath
+              }
+            }
+            {
+              actionText: txt-evt-expedition-done-native-stay-action
+              text: txt-evt-expedition-done-native-stay
+              storeCharacter: true
+              setCharFlags: +stayHome -homeCheck
+              select: evt-expedition-done-aftermath
+            }
+          ]
+        }
+      }
+      {
+        prio: 1
+        charEvents: {
+          reqLoyalty: 4..
+          reqStatus: +homesick
+          reqCharFlags: +homeWorld
+          text: txt-evt-expedition-done-native-join
+          setCharFlags: -homeWorld
+          select: evt-expedition-done-aftermath
+        }
+      }
+      {
+        prio: 1
+        charEvents: {
+          reqCharFlags: +imaginary
+          text: txt-evt-expedition-done-3
+          report: txt-evt-expedition-done-report-2
+          removeCharacter: true
+          select: evt-expedition-done-aftermath
+        }
+      }
+      {
+        prio: 2
+        actions: {
+          actionText: txt-evt-expedition-done-native-stay-action-1
+          charEvents: {optional: true, count: any, reqCharFlags: -special, loyalty: 1}
+          endWorld: {}
+        }
+      }
+    ]
+  }
+]

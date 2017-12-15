@@ -1,0 +1,155 @@
+[
+  {
+    id: it-spear
+    name: txt-it-spear-name
+    description: txt-it-spear
+    debugCategory: combat
+    sprite: it_weapon_spear_1.png
+    value: {base: 8, karma: 1}
+    maxStack: 5
+    tempDice: dc-spear
+    maxDice: 3
+    isWeapon: true
+  }
+  {
+    id: it-pistol
+    name: txt-it-pistol-name
+    description: txt-it-pistol
+    flags: +gun
+    reqWorld: ..3
+    sprite: it_weapon_pistol_1.png
+    maxStack: 1
+    value: {base: 50, village: 10, karma: 1}
+    dice: dc-pistol
+    isWeapon: true
+    debugCategory: combat
+  }
+  {
+    id: it-pistol-improved
+    name: txt-it-pistol-improved-name
+    description: txt-it-pistol-improved
+    flags: +gun
+    sprite: it_weapon_pistol_2.png
+    reqWorld: 3..
+    maxStack: 1
+    value: {base: 80, village: 10, karma: 1}
+    dice: dc-pistol-improved
+    isWeapon: true
+    debugCategory: combat
+  }
+  {
+    id: it-shotgun
+    name: txt-it-shotgun-name
+    description: txt-it-shotgun
+    reqWorld: ..3
+    sprite: it_weapon_shotgun_1.png
+    flags: +gun
+    value: {base: 80, village: 10, karma: 1}
+    maxStack: 1
+    dice: dc-shotgun
+    isWeapon: true
+    debugCategory: combat
+  }
+  {
+    id: it-shotgun-improved
+    name: txt-it-shotgun-improved-name
+    description: txt-it-shotgun-improved
+    sprite: it_weapon_shotgun_2.png
+    flags: +gun
+    reqWorld: 3..
+    value: {base: 140, village: 10, karma: 1}
+    maxStack: 1
+    dice: dc-shotgun-improved
+    isWeapon: true
+    debugCategory: combat
+  }
+  {
+    id: it-rifle
+    name: txt-it-rifle-name
+    description: txt-it-rifle
+    reqWorld: ..3
+    sprite: it_weapon_rifle_1.png
+    flags: +gun
+    value: {base: 80, village: 10, karma: 1}
+    maxStack: 1
+    dice: dc-rifle
+    isWeapon: true
+    debugCategory: combat
+  }
+  {
+    id: it-rifle-improved
+    name: txt-it-rifle-improved-name
+    description: txt-it-rifle-improved
+    sprite: it_weapon_rifle_2.png
+    reqWorld: 3..
+    flags: +gun
+    value: {base: 140, village: 10, karma: 1}
+    maxStack: 1
+    dice: dc-rifle-improved
+    isWeapon: true
+    debugCategory: combat
+  }
+  {
+    id: it-teslaGun
+    name: txt-it-teslaGun-name
+    description: txt-it-teslaGun
+    debugCategory: combat
+    sprite: it_weapon_tesla_1.png
+    flags: +gun
+    value: {base: 80, village: 10, karma: 1}
+    maxStack: 50
+    dice: dc-teslaGun
+    isWeapon: true
+  }
+  {
+    id: it-lokiGun
+    name: txt-it-lokiGun-name
+    description: txt-it-lokiGun
+    sprite: it_weapon_tesla_1.png
+    flags: +gun
+    value: {base: 80, village: 10, karma: 1}
+    maxStack: 1
+    dice: dc-lokiGun
+    isWeapon: true
+    showInHallOfFame: false
+    debugCategory: combat
+  }
+  {
+    id: it-ammo
+    name: txt-it-ammo-name
+    description: txt-it-ammo
+    debugCategory: combat
+    sprite: it_weapon_ammo_1.png
+    flags: +ammo
+    value: {base: 8, village: 4, karma: 1}
+    maxStack: 20
+    tempDice: dc-extraBullet
+    maxDice: 3
+    isWeapon: true
+  }
+  {
+    id: it-markedAmmo
+    name: txt-it-markedAmmo-name
+    description: txt-it-ammo
+    debugCategory: combat
+    sprite: it_weapon_ammo_2.png
+    flags: +ammo
+    noWeight: true
+    value: {base: 1, village: 1, karma: 0}
+    maxStack: 5
+    tempDice: dc-extraBullet
+    maxDice: 3
+    isWeapon: true
+  }
+  {
+    id: it-whip
+    name: txt-it-whip-name
+    description: txt-it-whip
+    debugCategory: combat
+    sprite: it_weapon_whip_1.png
+    value: {base: 30, slaver: 60, village: 10, karma: 1}
+    maxStack: 1
+    dice: dc-whip
+    isWeapon: true
+  }
+]

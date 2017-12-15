@@ -1,0 +1,42 @@
+[
+  {
+    id: evt-infectedDeath-amulet
+    charEvents: [
+      {
+        reqStatus: +infected +homesick
+        text: txt-evt-infectedDeath-amulet
+        report: txt-evt-infectedDeath-amulet-report
+        storeCharacter: true
+        setCharFlags: +dead
+      }
+      {
+        posTile: {locationFlags: +village}
+        revealTiles: {radius: 1, location: true, centerCam: true}
+        setLocationFlags: +familyAmulet
+      }
+    ]
+    loot: {
+      items: {it-familyAmulet: 1}
+      closeEvents: {}
+    }
+  }
+  {
+    id: evt-village-familyAmulet
+    reqLocationFlags: +familyAmulet
+    reqItems: {it-familyAmulet: 1..}
+    actionText: txt-evt-village-familyAmulet-action
+    text: txt-evt-village-familyAmulet
+    items: {it-familyAmulet: -1}
+    standing: 2
+    select: evt-village-main-update
+  }
+  {
+    id: it-familyAmulet
+    name: txt-it-familyAmulet-name
+    description: txt-it-familyAmulet
+    sprite: it_special_familyAmulet_1.png
+    debugCategory: quest
+    value: {base: 30, karma: 1}
+    maxStack: 1
+  }
+]

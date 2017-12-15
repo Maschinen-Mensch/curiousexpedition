@@ -1,0 +1,94 @@
+[
+  {
+    id: it-necronomicon
+    name: txt-it-necronomicon-name
+    debugCategory: magic
+    description: txt-it-necronomicon
+    sprite: it_special_book_2.png
+    value: {base: 50, village: 0, karma: karmaVeryLarge}
+    maxStack: 1
+    tripEvents: {reqDifficulty: 1.., unlockCharacter: sp-lovecraft}
+    useEvents: [
+      {
+        slots: 1
+        reqSanity: ..9
+        sanity: -10
+        partyEvents: {ref: evt-setImage-nightCamp}
+        text: txt-it-necronomicon-0
+        removeItem: true
+        startSprawl: {ref: spr-fire, radius: 3, power: 15}
+      }
+      {
+        slots: 1
+        reqSanity: 10..
+        reqBiomeFlags: +warped
+        setPartyStatus: -portalReturn
+        showImage: {src: evt_spec_space.png, showMounted: false}
+        text: txt-it-necronomicon-1
+        actions: {unwarpWorld: true}
+      }
+      {prio: 1, slots: 2, select: evt-necronomicon-page}
+      {
+        prio: 1
+        slots: 10
+        chat: cl-necronomicon-page
+        charEvents: {reqStatus: +necronomicon}
+        select: evt-necronomicon-page
+      }
+      {
+        prio: 1
+        slots: 1
+        reqMaxPerWorld: 1
+        chat: cl-necronomicon-portal
+        charEvents: {reqStatus: +necronomicon}
+        sanity: -35
+        addLocation: {ref: loc-portal, range: ..2}
+      }
+      {
+        prio: 1
+        slots: 8
+        reqSanity: 10..34
+        chat: cl-necronomicon-fail
+        select: evt-necronomicon-page-fail
+        sanity: -35
+      }
+      {
+        prio: 1
+        slots: 3
+        reqSanity: 35..
+        chat: cl-necronomicon-fail
+        select: evt-necronomicon-page-fail
+        sanity: -35
+      }
+    ]
+  }
+  {
+    id: evt-necronomicon-page
+    reqSanity: 10..
+    sanity: -35
+    partyEvents: {ref: evt-setImage-nightCamp}
+    text: txt-evt-necronomicon-page
+    loot: {
+      items: [
+        {slots: 3, il-tomePages: 2}
+        {slots: 1, il-tomePages: 3}
+        {slots: 5, il-tomePages: 1}
+      ]
+      closeEvents: [
+        {
+          slots: 1
+          charEvents: {reqStatus: -necronomicon}
+          text: txt-evt-necronomicon-page-1
+          startSprawl: {ref: spr-fire, radius: 3, power: 15}
+          removeItem: true
+        }
+        {slots: 2}
+      ]
+    }
+  }
+  {
+    id: evt-necronomicon-page-fail
+    partyEvents: {ref: evt-setImage-nightCamp}
+    text: txt-evt-necronomicon-page-fail
+  }
+]

@@ -1,0 +1,308 @@
+[
+  {
+    id: evt-harbor-recruit
+    select: [
+      {
+        reqWorld: 1..
+        reqPartyFlags: -harborCheck_Recruit1
+        setPartyFlags: +harborCheck_Recruit1
+        select: evt-harbor-recruitUnit
+      }
+      {
+        prio: 0
+        reqWorld: 1..
+        reqPartyFlags: +harborCheck_Recruit1 -harborCheck_Recruit2
+        charEvents: {reqStatus: +charismatic}
+        select: {setPartyFlags: +harborCheck_Recruit2, select: evt-harbor-recruitUnit}
+      }
+      {
+        prio: 1
+        reqWorld: 1..
+        reqPartyFlags: +harborCheck_Recruit1 -harborCheck_Recruit2
+        charEvents: {reqStatus: -charismatic}
+        setPartyFlags: +harborCheck_Recruit
+        select: evt-harbor-eventSelection
+      }
+      {
+        prio: 2
+        reqPartyFlags: +harborCheck_Recruit2
+        setPartyFlags: +harborCheck_Recruit
+        select: evt-harbor-eventSelection
+      }
+    ]
+  }
+  {
+    id: evt-harbor-recruitUnit
+    chat: cl-harbor-recruit
+    showPartyCount: true
+    actions: {actionText: txt-evt-harbor-recruit-action, select: evt-harbor-recruit}
+    partyEvents: [
+      {
+        reqRanking: 3..
+        optional: true
+        text: txt-evt-harbor-recruit
+        select: evt-harbor-recruit-select
+      }
+      {
+        reqRanking: 0
+        optional: true
+        text: txt-evt-harbor-recruit-1
+        partyEvents: [
+          {select: evt-harbor-recruit-select}
+          {select: evt-harbor-recruit-select}
+          {select: evt-harbor-recruit-select}
+        ]
+      }
+      {
+        reqRanking: 1
+        optional: true
+        text: txt-evt-harbor-recruit-2
+        partyEvents: [
+          {select: evt-harbor-recruit-select}
+          {select: evt-harbor-recruit-select}
+        ]
+      }
+      {
+        reqRanking: 2
+        optional: true
+        text: txt-evt-harbor-recruit-3
+        partyEvents: [
+          {select: evt-harbor-recruit-select}
+          {select: evt-harbor-recruit-select}
+        ]
+      }
+    ]
+  }
+  {
+    id: evt-harbor-recruit-select
+    select: [
+      evt-harbor-recruit-persianTranslator
+      evt-harbor-recruit-bedouin
+      evt-harbor-recruit-parsiTrader
+      evt-harbor-recruit-soldierBritish
+      evt-harbor-recruit-soldierScottish
+      evt-harbor-recruit-cook
+      evt-harbor-recruit-missionary
+      evt-harbor-recruit-sailor
+      evt-harbor-recruit-cultist
+      evt-harbor-recruit-artist
+      evt-harbor-recruit-mountainTrooper
+      evt-harbor-recruit-sterling
+      evt-harbor-recruit-timLuis
+    ]
+  }
+  {
+    id: evt-harbor-recruit-persianTranslator
+    npc: pl-translator
+    npcEvents: {
+      actions: {
+        alwaysShown: true
+        actionText: txt-evt-harbor-recruit-persianTranslator-action
+        setPartyFlags: +recruitedSomebody
+        addNPC: true
+        chat: cl-join
+        text: txt-evt-harbor-recruit-persianTranslator
+        select: evt-harbor-recruit
+      }
+    }
+    charEvents: {count: all, reqCharFlags: -persianTranslator}
+  }
+  {
+    id: evt-harbor-recruit-mountainTrooper
+    npc: pl-mountainTrooper
+    npcEvents: {
+      actions: {
+        alwaysShown: true
+        actionText: txt-evt-harbor-recruit-mountainTrooper-action
+        setPartyFlags: +recruitedSomebody
+        addNPC: true
+        chat: cl-join
+        text: txt-evt-harbor-recruit-mountainTrooper
+        select: evt-harbor-recruit
+      }
+    }
+    charEvents: {count: all, reqCharFlags: -mountainTrooper}
+  }
+  {
+    id: evt-harbor-recruit-bedouin
+    npc: pl-bedouin
+    npcEvents: {
+      actions: {
+        alwaysShown: true
+        actionText: txt-evt-harbor-recruit-bedouin-action
+        setPartyFlags: +recruitedSomebody
+        addNPC: true
+        chat: cl-join
+        text: txt-evt-harbor-recruit-bedouin
+        select: evt-harbor-recruit
+      }
+    }
+    charEvents: {count: all, reqCharFlags: -bedouin}
+  }
+  {
+    id: evt-harbor-recruit-parsiTrader
+    npc: pl-trader
+    npcEvents: {
+      actions: {
+        alwaysShown: true
+        actionText: txt-evt-harbor-recruit-parsiTrader-action
+        setPartyFlags: +recruitedSomebody
+        addNPC: true
+        chat: cl-join
+        text: txt-evt-harbor-recruit-parsiTrader
+        select: evt-harbor-recruit
+      }
+    }
+    charEvents: {count: all, reqCharFlags: -parsiTrader}
+  }
+  {
+    id: evt-harbor-recruit-soldierBritish
+    npc: pl-soldier-british
+    npcEvents: {
+      actions: {
+        actionText: txt-evt-harbor-recruit-soldierBritish-action
+        alwaysShown: true
+        text: txt-evt-harbor-recruit-soldierBritish
+        setPartyFlags: +recruitedSomebody
+        addNPC: true
+        chat: cl-join
+        select: evt-harbor-recruit
+      }
+    }
+    charEvents: {count: all, reqCharFlags: -soldierBritish}
+  }
+  {
+    id: evt-harbor-recruit-soldierScottish
+    npc: pl-soldier-scottish
+    npcEvents: {
+      actions: {
+        actionText: txt-evt-harbor-recruit-soldierBritish-action
+        alwaysShown: true
+        text: txt-evt-harbor-recruit-soldierScottish
+        setPartyFlags: +recruitedSomebody
+        addNPC: true
+        chat: cl-join
+        select: evt-harbor-recruit
+      }
+    }
+    charEvents: {count: all, reqCharFlags: -soldierScottish}
+  }
+  {
+    id: evt-harbor-recruit-sailor
+    npc: pl-sailor
+    npcEvents: {
+      actions: {
+        alwaysShown: true
+        actionText: txt-evt-harbor-recruit-sailor-action
+        setPartyFlags: +recruitedSomebody
+        addNPC: true
+        chat: cl-join
+        text: txt-evt-harbor-recruit-sailor
+        select: evt-harbor-recruit
+      }
+    }
+    charEvents: {count: all, reqCharFlags: -sailor}
+  }
+  {
+    id: evt-harbor-recruit-cultist
+    npc: pl-cultist
+    npcEvents: {
+      actions: {
+        alwaysShown: true
+        actionText: txt-evt-harbor-recruit-cultist-action
+        setPartyFlags: +recruitedSomebody
+        addNPC: true
+        chat: cl-join
+        text: txt-evt-harbor-recruit-cultist
+        select: evt-harbor-recruit
+      }
+    }
+  }
+  {
+    id: evt-harbor-recruit-sterling
+    reqPartyFlags: -sterling
+    setTempFlags: +recruitSterling
+    reqTempFlags: -recruitSterling
+    npc: pl-sterling
+    npcEvents: {
+      actions: {
+        alwaysShown: true
+        actionText: txt-evt-harbor-recruit-sterling-action
+        setPartyFlags: +recruitedSomebody +sterling
+        addNPC: true
+        chat: cl-join
+        text: txt-evt-harbor-recruit-sterling
+        select: evt-harbor-recruit
+      }
+    }
+  }
+  {
+    id: evt-harbor-recruit-missionary
+    npc: pl-missionary
+    npcEvents: {
+      actions: {
+        alwaysShown: true
+        actionText: txt-evt-harbor-recruit-missionary-action
+        setPartyFlags: +recruitedSomebody
+        addNPC: true
+        chat: cl-join
+        text: txt-evt-harbor-recruit-missionary
+        select: evt-harbor-recruit
+      }
+    }
+    charEvents: {count: all, reqCharFlags: -missionary}
+  }
+  {
+    id: evt-harbor-recruit-cook
+    npc: pl-cook
+    npcEvents: {
+      actions: {
+        alwaysShown: true
+        actionText: txt-evt-harbor-recruit-cook-action
+        setPartyFlags: +recruitedSomebody
+        addNPC: true
+        chat: cl-join
+        text: txt-evt-harbor-recruit-cook
+        select: evt-harbor-recruit
+      }
+    }
+    charEvents: {count: all, reqCharFlags: -cook}
+  }
+  {
+    id: evt-harbor-recruit-artist
+    npc: pl-artist
+    npcEvents: {
+      actions: {
+        alwaysShown: true
+        actionText: txt-evt-harbor-recruit-artist-action
+        setPartyFlags: +recruitedSomebody
+        addNPC: true
+        items: {it-canvas: 3}
+        chat: cl-join
+        text: txt-evt-harbor-recruit-artist
+        select: evt-harbor-recruit
+      }
+    }
+    charEvents: {count: all, reqCharFlags: -artist}
+  }
+  {
+    id: evt-harbor-recruit-timLuis
+    npc: [pl-tim, anm-dog-luis]
+    reqPartyFlags: -timLuis
+    setTempFlags: +recruitTimLuis
+    reqTempFlags: -recruitTimLuis
+    npcEvents: {
+      reqCharFlags: +tim
+      actions: {
+        alwaysShown: true
+        actionText: txt-evt-harbor-recruit-timLuis-action
+        setPartyFlags: +timLuis +recruitedSomebody
+        addNPC: true
+        addCharacter: anm-dog-luis
+        chat: cl-join
+        text: txt-evt-harbor-recruit-timLuis-1
+        select: evt-harbor-recruit
+      }
+    }
+  }
+]

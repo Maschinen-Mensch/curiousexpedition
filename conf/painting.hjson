@@ -1,0 +1,329 @@
+[
+  {
+    id: evt-painting-create
+    items: {it-canvas: -1}
+    select: [
+      {
+        charEvents: [
+          {
+            optional: true
+            reqStatus: +artist-1
+            partyEvents: [
+              {
+                optional: true
+                reqTempFlags: +paintingNative
+                items: {it-painting-native-1: 1}
+              }
+              {
+                optional: true
+                reqTempFlags: +paintingLocation
+                items: {it-painting-location-1: 1}
+              }
+              {
+                optional: true
+                reqTempFlags: +paintingShrine
+                items: {it-painting-shrine-1: 1}
+              }
+            ]
+          }
+          {
+            optional: true
+            reqStatus: +artist-2
+            partyEvents: [
+              {
+                optional: true
+                reqTempFlags: +paintingNative
+                items: {it-painting-native-2: 1}
+              }
+              {
+                optional: true
+                reqTempFlags: +paintingLocation
+                items: {it-painting-location-2: 1}
+              }
+              {
+                optional: true
+                reqTempFlags: +paintingShrine
+                items: {it-painting-shrine-2: 1}
+              }
+            ]
+          }
+          {
+            optional: true
+            reqStatus: +artist-3
+            partyEvents: [
+              {
+                optional: true
+                reqTempFlags: +paintingNative
+                items: {it-painting-native-3: 1}
+              }
+              {
+                optional: true
+                reqTempFlags: +paintingLocation
+                items: {it-painting-location-3: 1}
+              }
+              {
+                optional: true
+                reqTempFlags: +paintingShrine
+                items: {it-painting-shrine-3: 1}
+              }
+            ]
+          }
+          {
+            optional: true
+            reqStatus: +artist-4
+            partyEvents: [
+              {
+                optional: true
+                reqTempFlags: +paintingNative
+                items: {it-painting-native-4: 1}
+              }
+              {
+                optional: true
+                reqTempFlags: +paintingLocation
+                items: {it-painting-location-4: 1}
+              }
+              {
+                optional: true
+                reqTempFlags: +paintingShrine
+                items: {it-painting-shrine-4: 1}
+              }
+            ]
+          }
+          evt-painting-done
+        ]
+      }
+    ]
+    incAchievement: ach-painting-collect
+  }
+  {
+    id: evt-painting-angry
+    items: {it-canvas: -1}
+    chat: cl-angry
+    charEvents: {
+      reqCharFlags: +artist
+      text: txt-evt-painting-angry
+      report: txt-evt-painting-angry-report
+    }
+    partyEvents: [
+      {select: evt-painting-done}
+    ]
+  }
+  {
+    id: evt-painting-done
+    select: [
+      {optional: true, reqLocationFlags: +shrine, select: evt-shrine-actions}
+      {
+        optional: true
+        reqLocationFlags: +villageNight
+        setLocationFlags: -villageNight
+        select: evt-village-actions-night
+      }
+    ]
+  }
+  {
+    id: evt-shrine-paint
+    actionText: txt-evt-shrine-paint-action
+    reqLocationFlags: -painting
+    setLocationFlags: +painting +shrine
+    charEvents: [
+      {
+        reqCharFlags: +artist
+        reqItems: {it-canvas: 1..}
+      }
+      {
+        optional: true
+        reqStatus: -st-angry
+        reqCharFlags: +artist
+        text: txt-evt-shrine-paint
+        select: [
+          {
+            slots: 1
+            text: txt-evt-shrine-paint-1
+            report: txt-evt-shrine-paint-report
+            setTempFlags: +paintingShrine
+            select: evt-painting-create
+          }
+        ]
+      }
+      {
+        optional: true
+        reqCharFlags: +artist
+        reqStatus: +st-angry
+        select: evt-painting-angry
+      }
+    ]
+  }
+  {
+    id: evt-village-actions-night-painting
+    actionText: txt-evt-village-actions-night-painting-action
+    reqLocationFlags: -painting
+    setLocationFlags: +painting +villageNight
+    charEvents: [
+      {
+        reqCharFlags: +artist
+        count: 1
+        reqItems: {it-canvas: 1..}
+      }
+      {
+        optional: true
+        reqCharFlags: +artist
+        count: 1
+        reqStatus: -st-angry
+        text: txt-evt-village-actions-night-painting
+        select: [
+          {
+            slots: 1
+            reqStanding: -5..10
+            text: txt-evt-village-actions-night-painting-1
+            report: txt-evt-village-actions-night-painting-report
+            setTempFlags: +paintingNative
+            select: evt-painting-create
+          }
+          {
+            slots: 3
+            reqStanding: -10..-3
+            text: txt-evt-village-actions-night-painting-2
+            report: txt-evt-village-actions-night-painting-report-1
+            items: {it-canvas: -1}
+            setTempFlags: +paintingNative
+          }
+        ]
+      }
+      {
+        optional: true
+        reqCharFlags: +artist
+        count: 1
+        reqStatus: +st-angry
+        select: evt-painting-angry
+      }
+    ]
+  }
+  {
+    id: it-canvas
+    name: txt-it-canvas-name
+    description: txt-it-canvas
+    debugCategory: painting
+    sprite: it_painting_canvas_1.png
+    maxStack: 10
+    value: {base: 10, village: 1, karma: 1}
+  }
+  {
+    id: it-painting-collection
+    name: txt-it-painting-collection-name
+    description: txt-it-painting-collection
+    debugCategory: painting
+    fame: fameVerySmall
+    funds: fundsTiny
+    sprite: it_painting_folder_1.png
+    maxStack: 1
+    losable: false
+  }
+  {
+    id: it-painting-native-1
+    name: txt-it-painting-native-1-name
+    description: txt-it-painting-native-1
+    collectionItem: it-painting-collection
+    debugCategory: painting
+    value: {base: 10, village: 50}
+    fame: fameVerySmall
+    funds: fundsTiny
+    sprite: it_painting_native_1.png
+    maxStack: 10
+  }
+  {
+    id: it-painting-native-2
+    extends: it-painting-native-1
+    description: txt-it-painting-native-2
+    debugCategory: painting
+    fame: fameSmall
+    funds: fundsVerySmall
+  }
+  {
+    id: it-painting-native-3
+    extends: it-painting-native-1
+    description: txt-it-painting-native-3
+    debugCategory: painting
+    fame: fameMedium
+    funds: fundsSmall
+  }
+  {
+    id: it-painting-native-4
+    extends: it-painting-native-1
+    description: txt-it-painting-native-4
+    debugCategory: painting
+    fame: fameLarge
+    funds: fundsMedium
+  }
+  {
+    id: it-painting-location-1
+    name: txt-it-painting-location-1-name
+    description: txt-it-painting-location-1
+    collectionItem: it-painting-collection
+    debugCategory: painting
+    value: {base: 10, village: 40}
+    fame: fameVerySmall
+    funds: fundsTiny
+    sprite: it_painting_landscape_1.png
+    maxStack: 10
+  }
+  {
+    id: it-painting-location-2
+    extends: it-painting-location-1
+    description: txt-it-painting-location-2
+    debugCategory: painting
+    fame: fameSmall
+    funds: fundsVerySmall
+  }
+  {
+    id: it-painting-location-3
+    extends: it-painting-location-1
+    description: txt-it-painting-location-3
+    debugCategory: painting
+    fame: fameMedium
+    funds: fundsSmall
+  }
+  {
+    id: it-painting-location-4
+    extends: it-painting-location-1
+    description: txt-it-painting-location-4
+    debugCategory: painting
+    fame: fameLarge
+    funds: fundsMedium
+  }
+  {
+    id: it-painting-shrine-1
+    name: txt-it-painting-shrine-1-name
+    description: txt-it-painting-shrine-1
+    collectionItem: it-painting-collection
+    debugCategory: painting
+    value: {base: 10, village: 40}
+    fame: fameVerySmall
+    funds: fundsTiny
+    sprite: it_painting_shrine_1.png
+    maxStack: 10
+  }
+  {
+    id: it-painting-shrine-2
+    extends: it-painting-shrine-1
+    description: txt-it-painting-shrine-2
+    debugCategory: painting
+    fame: fameSmall
+    funds: fundsVerySmall
+  }
+  {
+    id: it-painting-shrine-3
+    extends: it-painting-shrine-1
+    description: txt-it-painting-shrine-3
+    debugCategory: painting
+    fame: fameMedium
+    funds: fundsSmall
+  }
+  {
+    id: it-painting-shrine-4
+    extends: it-painting-shrine-1
+    description: txt-it-painting-shrine-4
+    debugCategory: painting
+    fame: fameLarge
+    funds: fundsMedium
+  }
+]

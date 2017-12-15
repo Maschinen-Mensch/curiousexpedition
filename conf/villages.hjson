@@ -1,0 +1,617 @@
+[
+  {
+    id: loc-village-1
+    name: txt-fxt-village-1-name
+    reqBiomeFlags: -desert -arctic
+    flags: +village +villageType_1 +settlement +inhabited
+    worldMap: true
+    sprite: res_fxt_village_2.png
+    initItems: {il-trade-village: 6, it-jewels: 1, it-water: 20, il-metaItems: 99}
+    priceTable: village
+    particle: pt-village-1
+    setTile: [
+      {ref: tl-grass, reqBiomeFlags: +grass}
+      {ref: tl-dry, reqBiomeFlags: +dry | +desert}
+    ]
+    setNeighbors: [
+      {count: 2, ref: tl-jungle-thick, reqBiomeFlags: +grass}
+      {count: 2, ref: tl-dry-jungle-thick, reqBiomeFlags: +dry}
+      {count: 3, ref: tl-mountain}
+      {ref: tl-river-shallow}
+    ]
+    actions: evt-village-init
+    sprawlEvents: {id: spr-fire, standing: -3}
+    subLocations: {
+      ref: loc-subLocation-village-1 loc-subLocation-village-2
+      offsets: 4n 4sw 4se
+      chance: 0.75
+    }
+    spawnEvents: [
+      {setLocationFlags: +tribeWarriors}
+      {setLocationFlags: +tribeScouts}
+      {setLocationFlags: +tribeShamans}
+    ]
+    dayEvents: [
+      {
+        reqStanding: -10
+        reqLocationFlags: -angry +inhabited
+        setLocationFlags: +angry
+        select: [
+          {reqLocationFlags: +villageType_1, setLocationParticle: pt-village-2-angry}
+          {prio: 1, setLocationParticle: pt-village-2-angry}
+        ]
+      }
+      {
+        reqLocationFlags: +angry
+        partyEvents: [
+          {
+            reqZone: {flags: +native, range: ..6, count: 0}
+          }
+          {
+            reqZone: {flags: +native, range: world, count: ..2}
+          }
+        ]
+        select: [
+          {reqTileFlags: -counting0, setTileFlags: +counting0}
+          {reqTileFlags: +counting0 -counting1 -counting2, setTileFlags: +counting1}
+          {reqTileFlags: +counting0 +counting1 -counting2, setTileFlags: +counting2}
+          {
+            reqTileFlags: +counting2 +counting1 +counting0
+            setTileFlags: -counting2 -counting1 -counting0
+            select: [
+              {
+                reqLocationFlags: -villageType_lizard
+                addZone: {ref: zn-angryNatives, range: ..1}
+              }
+              {
+                prio: 1
+                addZone: {ref: zn-angryLizards, range: ..1}
+              }
+            ]
+          }
+        ]
+      }
+    ]
+    debugCategory: village
+    debugColor: "#64ff58"
+  }
+  {
+    id: loc-subLocation
+    debugCategory: subLocations
+    debugColor: blue
+    showHint: false
+    hideParty: false
+  }
+  {
+    id: loc-subLocation-village-1
+    extends: loc-subLocation
+    sprite: [
+      {ref: res_fxt_sub_fire_1.png, reqBiomeFlags: -arctic}
+      {ref: res_fxt_sub_fire_3.png, reqBiomeFlags: +arctic}
+    ]
+    setTile: [
+      {ref: tl-dry, reqBiomeFlags: +dry | +desert}
+      {ref: tl-deepSnow, reqBiomeFlags: +arctic}
+      {ref: tl-grass, reqBiomeFlags: +grass | +prehistoric}
+    ]
+  }
+  {
+    id: loc-subLocation-village-2
+    extends: loc-subLocation-village-1
+    sprite: [
+      {ref: res_fxt_sub_fire_2.png, reqBiomeFlags: -arctic}
+      {ref: res_fxt_sub_fire_4.png, reqBiomeFlags: +arctic}
+    ]
+  }
+  {
+    id: loc-village-2
+    extends: loc-village-1
+    reqBiomeFlags: +dry -arctic
+    sprite: res_fxt_village_1.png
+    flags: +village +villageType_2 +settlement +inhabited
+    initItems: particle: pt-village-2
+    setNeighbors: [
+      {count: 1, ref: tl-dry}
+      {count: 4, ref: tl-hill}
+      {ref: tl-river-shallow}
+    ]
+  }
+  {
+    id: loc-village-3
+    extends: loc-village-1
+    sprite: res_fxt_village_water.png
+    reqBiomeFlags: -desert -dry -arctic
+    flags: +village +villageType_3 +settlement +inhabited
+    reqWorld: 1..
+    particle: pt-village-2
+    setTile: [
+      {ref: tl-river-shallow, reqBiomeFlags: +dry | +grass | +mushrooms}
+      {ref: tl-sulfur-shallow, reqBiomeFlags: +prehistoric -mushrooms}
+    ]
+    setNeighbors: [
+      {count: 5, ref: tl-river-shallow, reqBiomeFlags: +dry | +grass | +mushrooms}
+      {count: 5, ref: tl-sulfur-shallow, reqBiomeFlags: +prehistoric -mushrooms}
+    ]
+  }
+  {
+    id: loc-village-4
+    extends: loc-village-1
+    flags: +village +villageType_4 +tribeNomads +settlement +inhabited
+    reqBiomeFlags: +desert -arctic
+    sprite: res_fxt_village_desert.png
+    setTile: tl-desert
+    setNeighbors: [
+      {count: 6, ref: tl-desert}
+    ]
+    particle: pt-village-2
+  }
+  {
+    id: loc-village-bones
+    extends: loc-village-1
+    flags: +village +villageType_lizard +settlement +inhabited
+    reqBiomeFlags: -desert -arctic
+    sprite: res_fxt_village_bones.png
+    particle: pt-village-bones
+    spawnEvents: [
+      {setLocationFlags: +tribeLizards}
+    ]
+    setTile: [
+      {ref: tl-dry, reqBiomeFlags: +dry | +desert }
+      {ref: tl-corrupted-plains, reqBiomeFlags: +corrupted}
+      {ref: tl-grass-bushes, reqBiomeFlags: +prehistoric | +grass | +water}
+    ]
+    setNeighbors: [
+      {count: 3, ref: tl-dry-jungle-light, reqBiomeFlags: +dry | +desert }
+      {count: 3, ref: tl-corrupted-jungle-light, reqBiomeFlags: +corrupted }
+      {
+        count: 3
+        ref: tl-jungle-light
+        reqBiomeFlags: +prehistoric | +grass | +water
+      }
+    ]
+  }
+  {
+    id: evt-village-init
+    actionText: txt-evt-village-init-action
+    reqLocationFlags: -angry
+    select: evt-village-setImageDay-enter
+  }
+  {
+    id: evt-village-enterCheck
+    setLocationFlags: +enterEvent
+    select: [
+      {ref: evt-village-notWelcome}
+      {prio: 1, ref: evt-village-main}
+    ]
+  }
+  {
+    id: evt-village-enter
+    chat: cl-village-enter
+    select: [
+      {reqLocationFlags: -inhabited, text: txt-evt-village-enter-forsaken}
+      {select: evt-village-enter-selectEvent}
+    ]
+  }
+  {
+    id: evt-village-actions
+    select: [
+      {
+        actions: [
+          evt-village-familyAmulet
+          evt-village-quest-letter
+          evt-village-quest-missionary
+          evt-village-rest
+          evt-village-recruit
+          evt-village-trade
+          evt-village-beastMaster
+          evt-village-leave
+        ]
+      }
+    ]
+  }
+  {
+    id: evt-village-actions-night
+    actions: [
+      evt-village-actions-night-anthropology
+      evt-village-actions-night-painting
+      evt-village-sleep
+      evt-village-stealIdol
+    ]
+  }
+  {
+    id: evt-village-main
+    partyEvents: [
+      {
+        optional: true
+        reqLocationFlags: +idolVillage -tribeLizards
+        text: txt-evt-village-main
+      }
+      {
+        optional: true
+        text: txt-evt-village-main-0
+        report: txt-evt-village-main-report
+      }
+      {
+        optional: true
+        reqStanding: 0..1
+        text: txt-evt-village-main-1
+        report: txt-evt-village-main-report-1
+      }
+      {
+        optional: true
+        reqStanding: -3..-1
+        text: txt-evt-village-main-2
+        report: txt-evt-village-main-report-2
+      }
+      {
+        optional: true
+        reqStanding: -6..-4
+        text: txt-evt-village-main-3
+        report: txt-evt-village-main-report-3
+      }
+      {
+        optional: true
+        reqStanding: -8..-7
+        text: txt-evt-village-main-4
+        report: txt-evt-village-main-report-4
+      }
+      {
+        charEvents: [
+          {
+            optional: true
+            reqStanding: -2..
+            reqCharFlags: +translator -special
+            setTempFlags: +translatorUnit
+            text: txt-evt-village-main-5
+          }
+          {
+            optional: true
+            reqStanding: -2..
+            reqCharFlags: +translator +special
+            reqTempFlags: -translatorUnit
+            text: txt-evt-village-main-6
+          }
+        ]
+      }
+    ]
+    select: evt-village-actions
+  }
+  {
+    id: evt-village-rest
+    alwaysShown: true
+    actionText: txt-evt-village-rest-action
+    reqTileFlags: -restFail
+    select: [
+      {
+        reqStanding: -2..10
+        text: txt-evt-village-rest-1
+        report: txt-evt-village-rest-report
+        select: evt-village-nightSelect
+      }
+      {
+        reqStanding: -8..-3
+        text: txt-evt-village-rest-2
+        barter: {
+          baseValue: {base: 15}
+          closeEvents: {text: txt-evt-village-rest-3, select: evt-village-nightSelect}
+          cancelEvents: {text: txt-evt-village-rest-no, select: evt-village-actions}
+        }
+      }
+    ]
+  }
+  {
+    id: evt-village-sleep
+    actionText: txt-evt-mission-sleep-action
+    sanity: {base: sanityRestVillage, bonus: villageSanityBonus}
+    turns: 1
+    standing: standingCostVillageUse
+    charEvents: {optional: true, reqStatus: +polyglot, standing: null}
+    select: evt-village-morning
+  }
+  {
+    id: evt-village-morning
+    text: txt-evt-village-morning
+    chat: cl-newMorning
+    select: evt-village-setImageDay-update
+  }
+  {
+    id: evt-village-trade
+    actionText: txt-evt-mission-trade-action
+    alwaysShown: true
+    reqLocationFlags: -tradeFail
+    select: [
+      {
+        barter: {
+          closeEvents: {
+            text: txt-evt-village-trade
+            select: [
+              {reqTileFlags: -traded, setTileFlags: +traded, select: evt-village-actions}
+              {prio: 1, select: evt-village-actions}
+            ]
+          }
+          cancelEvents: {text: txt-evt-village-trade-1, select: evt-village-actions}
+        }
+      }
+      {
+        reqStanding: ..-7
+        setLocationFlags: +tradeFail
+        text: txt-evt-village-trade-refuse
+        select: evt-village-main-update
+      }
+    ]
+  }
+  {
+    id: evt-village-leave
+    actionText: txt-evt-leave-action
+    alwaysShown: true
+    select: [
+      {
+        reqPartyFlags: +escortVillagerShrineInfo
+        setPartyFlags: -escortVillagerShrineInfo
+        charEvents: {reqCharFlags: +escortVillager, text: txt-evt-village-leave-escort}
+        posTile: {locationFlags: +shrine}
+        revealTiles: {radius: 1, centerCam: true}
+      }
+      {
+        prio: 1
+        charEvents: [
+          {
+            optional: true
+            reqCharFlags: -special +humanoid
+            text: txt-evt-village-leave
+          }
+          {
+            optional: true
+            count: all
+            reqCharFlags: +special | -humanoid
+            text: txt-evt-village-leave-1
+          }
+          {
+            optional: true
+            chance: 0.3
+            reqLocationFlags: +idolVillage
+            reqStatus: +kleptomania
+            setLocationFlags: -idolVillage
+            setStatus: +kleptomania-idol
+          }
+          {
+            optional: true
+            chance: 0.6
+            reqStatus: +racist
+            text: txt-evt-village-leave-2
+          }
+          {
+            optional: true
+            chance: 0.3
+            reqCharFlags: +native -slave
+            text: txt-evt-village-leave-3
+          }
+        ]
+        partyEvents: [
+          {
+            optional: true
+            reqLocationFlags: +wedding
+            setLocationFlags: -wedding
+            standing: -2
+            text: txt-evt-village-leave-wedding
+          }
+          {
+            optional: true
+            chance: 0.5
+            reqStanding: -3..-1
+            reqPartyStatus: -followed-natives
+            setPartyStatus: +followed-natives
+            text: txt-evt-village-leave-4
+          }
+          {
+            optional: true
+            reqStanding: -10..-4
+            reqPartyStatus: -followed-natives
+            setPartyStatus: +followed-natives
+            text: txt-evt-village-leave-5
+          }
+        ]
+      }
+    ]
+  }
+  {
+    id: evt-village-notWelcome
+    reqStanding: ..-9
+    text: txt-evt-village-notWelcome
+    actions: evt-village-leave
+  }
+  {
+    id: evt-village-main-update
+    actionText: txt-evt-village-main-update-action
+    partyEvents: [
+      {
+        optional: true
+        reqStanding: [2, 10]
+        text: txt-evt-village-main-update-0
+      }
+      {
+        optional: true
+        reqStanding: [-1, 1]
+        text: txt-evt-village-main-update
+      }
+      {
+        optional: true
+        reqStanding: [-3, -2]
+        text: txt-evt-village-main-update-1
+      }
+      {
+        optional: true
+        reqStanding: [-6, -4]
+        text: txt-evt-village-main-update-2
+      }
+      {
+        optional: true
+        reqStanding: [-8, -7]
+        text: txt-evt-village-main-update-3
+      }
+      {
+        optional: true
+        reqLocationFlags: +idolVillage
+        text: txt-evt-village-main-update-idol
+      }
+      {
+        optional: true
+        chance: 0.3
+        reqLocationFlags: +wedding
+        setLocationFlags: -wedding
+        text: txt-evt-village-main-update-weddingDone
+      }
+      {
+        optional: true
+        reqLocationFlags: +wedding
+        text: txt-evt-village-main-update-wedding
+      }
+    ]
+    select: evt-village-actions
+  }
+  {
+    id: evt-village-setImageDay-update
+    partyEvents: [evt-village-setImageDay, evt-village-placeNPCs, evt-village-main-update]
+  }
+  {
+    id: evt-village-setImageDay-enter
+    partyEvents: [evt-village-setImageDay, evt-village-placeNPCs, evt-village-enter]
+  }
+  {
+    id: evt-village-setImageDay-actions
+    partyEvents: [evt-village-setImageDay, evt-village-placeNPCs, evt-village-actions]
+  }
+  {
+    id: evt-village-setImageDay
+    partyEvents: [
+      {
+        reqLocationFlags: +villageType_1
+        optional: true
+        playMusic: thm_village_2
+        showImage: {src: evt_fxt_village_1.png, type: day}
+      }
+      {
+        reqLocationFlags: +villageType_2
+        optional: true
+        playMusic: thm_village_2
+        showImage: {src: evt_fxt_village_1.png, type: day}
+      }
+      {
+        reqLocationFlags: +villageType_3
+        optional: true
+        playMusic: thm_village_2
+        showImage: {src: evt_fxt_village_3.png, type: day}
+      }
+      {
+        reqLocationFlags: +villageType_4
+        optional: true
+        playMusic: thm_village_2
+        showImage: {src: evt_fxt_village_4.png, type: day}
+      }
+      {
+        reqLocationFlags: +villageType_inuit
+        optional: true
+        playMusic: thm_arctic_village_1
+        showImage: {
+          src: evt_fxt_village_inuit_1.png
+          type: day
+          showMounted: true
+          particles: [pt-snow-1, pt-snow-2, pt-snow-3]
+          particlesChance: 0.5
+        }
+      }
+      {
+        reqLocationFlags: +villageType_lizard
+        optional: true
+        playMusic: thm_village_2
+        showImage: {src: evt_fxt_village_bones.png, type: day}
+      }
+    ]
+  }
+  {
+    id: evt-village-setImageNight
+    partyEvents: [
+      {
+        optional: true
+        reqLocationFlags: +villageType_1
+        playMusic: thm_village_3
+        showImage: {src: evt_fxt_village_1_night.png, type: night, showMounted: false}
+      }
+      {
+        optional: true
+        reqLocationFlags: +villageType_2
+        playMusic: thm_village_3
+        showImage: {src: evt_fxt_village_1_night.png, type: night, showMounted: false}
+      }
+      {
+        optional: true
+        reqLocationFlags: +villageType_3
+        playMusic: thm_village_3
+        showImage: {src: evt_fxt_village_3_night.png, type: night, showMounted: false}
+      }
+      {
+        optional: true
+        reqLocationFlags: +villageType_4
+        playMusic: thm_village_3
+        showImage: {src: evt_fxt_village_4_night.png, type: night, showMounted: false}
+      }
+      {
+        optional: true
+        reqLocationFlags: +villageType_inuit
+        playMusic: thm_arctic_night_1
+        showImage: {
+          src: evt_fxt_village_inuit_1_night.png
+          type: night
+          showMounted: false
+          particles: [pt-snow-1, pt-snow-2]
+          particlesChance: 0.5
+        }
+      }
+      {
+        optional: true
+        reqLocationFlags: +villageType_lizard
+        showImage: {src: evt_fxt_village_bones_night.png, type: night, showMounted: false}
+      }
+      {select: evt-village-placeNPCs}
+    ]
+  }
+  {
+    id: evt-village-placeNPCs
+    select: [
+      {
+        reqLocationFlags: -villageType_lizard
+        npc: [
+          npc-native-generic-chief
+          npc-native-generic
+          npc-native-generic
+          npc-native-generic
+          npc-native-generic
+          npc-native-generic
+          npc-native-generic
+        ]
+      }
+      {
+        reqLocationFlags: +villageType_lizard
+        npc: [
+          npc-village-lizard-chief
+          npc-village-lizard-generic
+          npc-village-lizard-generic
+          npc-village-lizard-generic
+          npc-village-lizard-generic
+          npc-village-lizard-generic
+          npc-village-lizard-generic
+        ]
+      }
+    ]
+  }
+  {
+    id: evt-village-replaceAngry
+    setLocationFlags: +angry
+    setLocationParticle: pt-village-2-angry
+  }
+  {id: loc-village-1-angry, extends: loc-village-1}
+  {id: loc-village-2-angry, extends: loc-village-2}
+  {id: loc-village-3-angry, extends: loc-village-3}
+  {id: loc-village-4-angry, extends: loc-village-4}
+  {id: loc-village-bones-angry, extends: loc-village-bones}
+]

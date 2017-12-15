@@ -1,0 +1,113 @@
+[
+  {
+    id: loc-altar
+    name: txt-fxt-altar-name
+    debugCategory: special
+    worldMap: true
+    debugColor: red
+    reqBiomeFlags: +dry | +grass | +arctic
+    dist: 5
+    flags: +altar +dreamVisions
+    sprite: [
+      {ref: res_fxt_altar.png, reqBiomeFlags: -arctic -dry -desert}
+      {ref: res_fxt_altar_dry.png, reqBiomeFlags: +dry|+desert}
+      {ref: res_fxt_altar_arctic.png, reqBiomeFlags: +arctic}
+    ]
+    setTile: [
+      {ref: tl-dry-jungle-thick, reqBiomeFlags: +dry|+desert}
+      {ref: tl-jungle-thick, reqBiomeFlags: +grass}
+      {ref: tl-snowForest, reqBiomeFlags: +arctic}
+    ]
+    setNeighbors: [
+      {count: 4, ref: tl-jungle-thick, reqBiomeFlags: +grass | +prehistoric -desert}
+      {count: 4, ref: tl-dry-jungle-thick, reqBiomeFlags: +dry}
+      {count: 4, ref: tl-cactusForest, reqBiomeFlags: +desert}
+      {count: 4, ref: tl-snowForest, reqBiomeFlags: +arctic}
+    ]
+    actions: evt-altar-approach
+  }
+  {
+    id: evt-altar-approach
+    actionText: txt-evt-altar-approach-action
+    text: txt-evt-altar-approach
+    partyEvents: evt-superstitious-complain
+    select: evt-altar-actions
+  }
+  {
+    id: evt-altar-actions
+    partyEvents: {
+      select: [
+        {
+          slots: 1
+          reqBiomeFlags: +arctic
+          showImage: {
+            src: evt_fxt_altar_1.png
+            type: day
+            showMounted: false
+            particles: pt-snow-1 pt-snow-2 pt-snow-3
+            particlesChance: 0.5
+          }
+        }
+        {
+          slots: 1
+          showImage: {src: evt_fxt_altar_1.png, type: day, showMounted: false}
+        }
+      ]
+    }
+    actions: [evt-altar-drop, evt-altar-revive, evt-leave]
+  }
+  {
+    id: evt-altar-drop
+    actionText: txt-evt-altar-actions-action
+    showImage: {src: evt_fxt_altar_1.png, type: day, showMounted: false}
+    barter: {
+      title: txt-evt-altar-actions-title
+      baseValue: karma
+      closeEvents: evt-altar-dropDone
+      cancelEvents: evt-altar-cancel
+      itemEvents: [
+        {
+          items: {it-treasure-eggplant: 1}
+          ref: {
+            incAchievement: ach-eggplant-altar
+            text: txt-evt-altar-eggplant-done
+            select: evt-altar-actions
+          }
+        }
+      ]
+      priceTable: karma
+      hideNPCInv: true
+    }
+  }
+  {
+    id: evt-altar-dropDone
+    text: txt-evt-altar-done
+    select: evt-altar-actions
+  }
+  {
+    id: evt-altar-revive
+    alwaysShown: true
+    actionText: txt-evt-altar-revive-action
+    text: txt-evt-altar-revive
+    reqKarma: 75..
+    storeEvents: {
+      count: ..4
+      reqCharFlags: +dead
+      actions: {
+        actionText: txt-evt-altar-revive-action-1
+        text: txt-evt-altar-revive-1
+        restoreCharacter: true
+        incAchievement: ach-revive
+        karma: -75
+        select: evt-altar-actions
+      }
+    }
+    partyEvents: evt-superstitious-angry
+    actions: {actionText: txt-evt-action-nothing, select: evt-altar-actions}
+  }
+  {
+    id: evt-altar-cancel
+    text: txt-evt-altar-cancel
+    select: evt-altar-actions
+  }
+]

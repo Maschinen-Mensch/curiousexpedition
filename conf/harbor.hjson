@@ -1,0 +1,255 @@
+[
+  {
+    id: evt-harbor
+    text: txt-evt-harbor
+    report: txt-evt-harbor-report
+    setPartyFlags: -harborCheck_AfterMath -harborCheck_QuestCompleted -harborCheck_QuestOffer -harborCheck_Recruit -harborCheck_UnitCount -harborCheck_Recruit1 -harborCheck_Recruit2
+    playMusic: thm_harbor_1
+    resetGlobalInv: harbor
+    select: evt-harbor-eventSelection
+  }
+  {
+    id: evt-harbor-eventSelection
+    actionText: Continue
+    showImage: {src: evt_spec_ship_1.png}
+    partyEvents: [
+      {
+        optional: true
+        reqPartyFlags: +harborCheck_UnitCount
+        select: evt-harbor-finalActions
+      }
+      {
+        optional: true
+        reqPartyFlags: +harborCheck_Recruit -harborCheck_UnitCount
+        select: evt-harbor-countTrek
+      }
+      {
+        optional: true
+        reqPartyFlags: +harborCheck_QuestOffer -harborCheck_Recruit
+        reqWorld: 1..
+        select: evt-harbor-recruit
+      }
+      {
+        optional: true
+        reqPartyFlags: +harborCheck_QuestCompleted -harborCheck_QuestOffer
+        select: evt-harbor-quest-offer
+      }
+      {
+        optional: true
+        reqPartyFlags: +harborCheck_AfterMath -harborCheck_QuestCompleted
+        select: evt-harbor-quest-completedCheck
+      }
+      {
+        optional: true
+        reqPartyFlags: -harborCheck_AfterMath
+        select: evt-harbor-afterMathCheck
+      }
+    ]
+  }
+  {
+    id: evt-harbor-afterMathCheck
+    select: [
+      evt-harbor-afterMath-curse
+      evt-harbor-afterMath-renounced
+      evt-harbor-afterMath-spouse
+      { 
+        prio: 1
+        setPartyFlags: +harborCheck_AfterMath
+        select: evt-harbor-eventSelection
+      }
+    ]
+  }
+  {
+    id: evt-harbor-quest-completedCheck
+    select: [
+      {
+        reqPartyStatus: +instrument
+        select: evt-harbor-quest-musician-complete
+      }
+      {
+        reqPartyStatus: +escortVillager
+        select: evt-harbor-quest-escortVillager-complete
+      }
+      {
+        reqPartyStatus: +idol
+        select: evt-harbor-quest-idol-complete
+      }
+      {
+        reqPartyStatus: +blackHyena
+        select: evt-harbor-quest-blackHyena-complete
+      }
+      {
+        reqPartyStatus: +schroedinger
+        select: evt-harbor-quest-schroedinger-complete
+      }
+      {
+        reqPartyStatus: +husband
+        select: evt-harbor-quest-husband-complete
+      }
+      {
+        reqPartyFlags: -harborOffer +harborEventsQuest80Days
+        select: evt-harbor-quest-80Days-complete
+      }
+      {
+        reqPartyStatus: +st-konrad
+        select: evt-quest-konrad-complete
+      }
+      {
+        reqStatusFlags: +arcticClaim
+        select: evt-harbor-quest-arcticClaim-complete
+      }
+      {
+        prio: 1
+        setPartyFlags: +harborCheck_QuestCompleted
+        select: evt-harbor-eventSelection
+      }
+    ]
+  }
+  {
+    id: evt-harbor-quest-offer
+    setPartyFlags: +harborCheck_QuestOffer
+    setPartyStatus: -idol  -80days -instrument -konrad -blackHyena -husband -schroedinger 
+    removeStatusWithFlags: +arcticClaim
+    select: [
+      {
+        reqWorld: 0, 
+        select: evt-harbor-quest-letter
+      }
+      {
+        reqWorld: 0
+        charEvents: {count: all, reqCharFlags: -missionary}
+        select: evt-harbor-quest-missionary
+      }
+      {
+        reqWorld: 0, 
+        select: evt-harbor-quest-escortVillager
+      }
+      {
+        reqWorld: 1..4
+        reqWorldFlags: -fantastic
+        reqPartyFlags: -questIdol
+        setPartyFlags: +questIdol
+        select: evt-harbor-quest-idol
+      }
+      {
+        reqWorld: 1..4
+        reqWorldFlags: -arctic
+        reqPartyFlags: -questHusband
+        setPartyFlags: +questHusband
+        select: evt-harbor-quest-husband
+      }
+      {
+        reqWorld: 1..4
+        reqWorldFlags: -fantastic | -arctic
+        reqPartyFlags: -questBlackHyena
+        setPartyFlags: +questBlackHyena
+        select: evt-harbor-quest-blackHyena
+      }
+      {
+        reqWorld: 1..4
+        reqWorldFlags: -fantastic
+        reqPartyFlags: -questSchroedinger
+        setPartyFlags: +questSchroedinger
+        select: evt-harbor-quest-schroedinger
+      }
+      {
+        reqWorld: 1..4
+        reqWorldFlags: -fantastic
+        reqPartyFlags: -questInstrument
+        setPartyFlags: +questInstrument
+        select: evt-harbor-quest-musician
+      }
+      {
+        reqWorld: 1..2
+        reqPartyFlags: -quest80Days
+        setPartyFlags: +quest80Days
+        select: evt-harbor-quest-80Days
+      }
+      {
+        reqWorld: 1..4
+        reqPartyFlags: -questKonrad
+        setPartyFlags: +questKonrad
+        select: evt-quest-konrad
+      }
+      {
+        reqWorld: 1..4
+        reqWorldFlags: +arctic
+        reqPartyFlags: -questArcticClaim
+        setPartyFlags: +questArcticClaim
+        select: evt-harbor-quest-arcticClaim
+      }
+      {
+        reqWorld: 5..
+        select: evt-harbor-offer-map
+      }
+      {
+        reqWorldFlags: +fantastic
+        select: evt-harbor-offer-map
+      }
+    ]
+  }
+  {
+    id: evt-harbor-finalActions
+    text: txt-evt-harbor-select
+    actions: [
+      {
+        actionText: txt-evt-harbor-select-action
+        reqWorld: 1..
+        select: evt-harbor-equipment
+      }
+      {
+        actionText: txt-evt-harbor-select-action-1
+        reqWorld: 1..
+        select: evt-harbor-animalImprovement
+      }
+      {ref: evt-harbor-setSail}
+    ]
+  }
+  {id: evt-harbor-setSail, actionText: txt-evt-harbor-setSail-action}
+  {
+    id: evt-harbor-quest-reward
+    actionText: txt-evt-harbor-quest-reward-action
+    select: [
+      {
+        slots: 5
+        text: txt-evt-harbor-quest-reward
+        funds: 80
+        select: evt-harbor-eventSelection
+      }
+      {
+        slots: 3
+        text: txt-evt-harbor-quest-reward-1
+        funds: 100
+        select: evt-harbor-eventSelection
+      }
+      {
+        slots: 1
+        text: txt-evt-harbor-quest-reward-2
+        funds: 120
+        select: evt-harbor-eventSelection
+      }
+    ]
+  }
+  {
+    id: evt-harbor-offer-map
+    npc: pl-native-scout
+    text: txt-evt-harbor-offer-map
+    report: txt-evt-harbor-offer-map-report
+    actions: [
+      {
+        actionText: txt-evt-harbor-offer-map-action
+        barter: {
+          hidePartyOffer: true
+          items: {il-maps: 1}
+          baseValue: funds
+          closeEvents: evt-harbor-eventSelection
+          cancelEvents: evt-harbor-eventSelection
+        }
+      }
+      {
+        actionText: txt-evt-harbor-recruit-action, 
+        select: evt-harbor-eventSelection
+      }
+    ]
+  }
+]

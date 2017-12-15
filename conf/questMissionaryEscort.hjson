@@ -1,0 +1,56 @@
+[
+  {
+    id: st-missionary
+    debugCategory: Quest
+    title: txt-st-missionary-title
+    description: txt-st-missionary
+    autoRemove: true
+    sprite: res_status_missionary.png
+    important: true
+  }
+  {
+    id: evt-harbor-quest-missionary
+    reqFreePartyCount: 1..
+    npc: pl-missionary
+    npcEvents: {
+      text: txt-evt-harbor-quest-missionary
+      report: txt-evt-harbor-quest-missionary-report
+      actions: [
+        {
+          actionText: txt-evt-harbor-quest-missionary-action
+          setPartyStatus: +missionary
+          text: txt-evt-harbor-quest-missionary-1
+          report: txt-evt-harbor-quest-missionary-report-1
+          alwaysShown: true
+          addNPC: true
+          chat: cl-join
+          select: evt-harbor-eventSelection
+        }
+        {
+          actionText: txt-evt-angry-demandPayment-action-1
+          text: txt-evt-harbor-quest-missionary-2
+          report: txt-evt-harbor-quest-missionary-report-2
+          select: evt-harbor-eventSelection
+        }
+      ]
+    }
+  }
+  {
+    id: evt-village-quest-missionary
+    actionText: txt-evt-village-quest-missionary-action
+    reqPartyStatus: +missionary
+    setPartyStatus: -missionary
+    reqLocationFlags: +questMissionary
+    setLocationFlags: -questMissionary
+    charEvents: {
+      reqCharFlags: +missionary
+      text: txt-evt-village-quest-missionary
+      posTile: {locationFlags: +shrine}
+      removeCharacter: true
+      revealTiles: {radius: 1, centerCam: true}
+    }
+    report: txt-evt-village-quest-missionary-report
+    standing: 2
+    select: evt-village-main-update
+  }
+]

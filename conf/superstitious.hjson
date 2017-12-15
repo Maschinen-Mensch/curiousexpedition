@@ -1,0 +1,30 @@
+[
+  {
+    id: st-superstitious
+    title: txt-st-superstitious-title
+    description: txt-st-superstitious
+    flags: +ailment
+    debugCategory: Ailment
+    important: true
+    sprite: res_status_superstitious.png
+  }
+  {
+    id: evt-superstitious-complain
+    charEvents: {
+      optional: true
+      count: any
+      reqStatus: +superstitious
+      text: txt-evt-superstitious-complain
+    }
+  }
+  {
+    id: evt-superstitious-angry
+    charEvents: {
+      optional: true
+      reqStatus: +superstitious
+      text: txt-evt-superstitious-angry
+      loyalty: -1
+      chat: cl-angry-superstitious
+    }
+  }
+]

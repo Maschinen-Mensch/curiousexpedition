@@ -1,0 +1,178 @@
+[
+  {
+    id: loc-volcano-spawn-large-active
+    name: txt-fxt-volcano-spawn-large-active-name
+    debugCategory: hazard
+    debugColor: lightgray
+    showHint: false
+    hintBiome: false
+    particle: pt-volcano-burst
+    setTile: tl-volcano-active
+    spawnEvents: {
+      particle: pt-erupt-mountain
+      camShake: {power: 6, length: 2}
+      select: [
+        {
+          slots: 3
+          addLocation: {ref: loc-volcano-spawn-large-active, range: ..1}
+        }
+        {slots: 1}
+      ]
+    }
+    dayEvents: [
+      {
+        reqTutorial: true
+        replaceLocations: {new: loc-volcano-active-endless}
+      }
+      {
+        reqTutorial: false
+        replaceLocations: {new: loc-volcano-active}
+      }
+    ]
+  }
+  {
+    id: loc-volcano-spawn-large-inactive
+    name: txt-fxt-volcano-spawn-large-inactive-name
+    debugCategory: hazard
+    debugColor: lightgray
+    sprite: res_fxt_volcano_inactive.png
+    showHint: false
+    hintBiome: false
+    particle: pt-volcano-inactive
+    setTile: tl-volcano-active
+    setNeighbors: tl-mountain
+    spawnEvents: {
+      particle: pt-erupt-mountain
+      select: [
+        {
+          slots: 3
+          addLocation: {ref: loc-volcano-spawn-large-inactive, range: ..1}
+        }
+        {slots: 1}
+      ]
+    }
+    dayEvents: {
+      replaceLocations: {new: loc-volcano-inactive}
+    }
+  }
+  {
+    id: loc-volcano-spawn-small-active
+    name: txt-fxt-volcano-spawn-large-active-name
+    debugCategory: hazard
+    debugColor: lightgray
+    showHint: false
+    hintBiome: false
+    particle: pt-volcano-burst
+    setTile: tl-volcano-active
+    sprite: res_fxt_volcano_active.png
+    spawnEvents: {
+      camShake: {power: 6, length: 2}
+      particle: pt-erupt-mountain
+    }
+    dayEvents: {
+      replaceLocations: {new: loc-volcano-active}
+    }
+  }
+  {
+    id: loc-volcano-spawn-small-inactive
+    name: txt-fxt-volcano-spawn-large-inactive-name
+    debugCategory: hazard
+    debugColor: lightgray
+    sprite: res_fxt_volcano_inactive.png
+    showHint: false
+    hintBiome: false
+    particle: pt-volcano-inactive
+    setTile: tl-volcano-active
+    spawnEvents: {particle: pt-erupt-mountain}
+    dayEvents: {
+      replaceLocations: {new: loc-volcano-inactive}
+    }
+  }
+  {
+    id: loc-volcano-active
+    name: txt-fxt-volcano-spawn-large-active-name
+    debugCategory: hazard
+    debugColor: lightgray
+    showHint: false
+    hintBiome: false
+    particle: pt-volcano-burst
+    spawnEvents: {
+      camShake: {power: 6, length: 2}
+      replaceLocations: {range: ..4, old: loc-volcano-inactive, new: loc-volcano-active}
+    }
+    dayEvents: [
+      {
+        reqAge: 7
+        replaceLocations: {new: loc-volcano-inactive}
+      }
+      {
+        prio: 1
+        camShake: {power: 3, length: 1}
+        startSprawl: {ref: spr-fire, radius: 2, power: 2}
+        playSound: volcanoErupt
+      }
+    ]
+  }
+  {
+    id: loc-volcano-inactive
+    name: txt-fxt-volcano-spawn-large-inactive-name
+    debugCategory: hazard
+    debugColor: lightgray
+    showHint: false
+    hintBiome: false
+    particle: pt-volcano-inactive
+    sprite: res_fxt_volcano_inactive.png
+    dayEvents: [
+      {
+        reqAge: 10
+        select: [
+          {
+            replaceTiles: [
+              {chance: 0.04, radius: 3, old: tl-scorchedEarth, new: tl-grass}
+            ]
+          }
+          {
+            replaceTiles: [
+              {chance: 0.04, radius: 3, old: tl-scorchedEarth, new: tl-jungle-thick}
+            ]
+          }
+          {
+            replaceTiles: [
+              {chance: 0.04, radius: 3, old: tl-scorchedEarth, new: tl-jungle-light}
+            ]
+          }
+          {
+            replaceTiles: [
+              {chance: 0.04, radius: 3, old: tl-scorchedEarth, new: tl-grass-bushes}
+            ]
+          }
+        ]
+      }
+      {
+        reqAge: 20
+        slots: 1
+        replaceLocations: {new: loc-volcano-active}
+      }
+      {reqAge: 20, slots: 20}
+    ]
+  }
+  {
+    id: loc-volcano-active-endless
+    name: txt-fxt-volcano-spawn-large-active-name
+    debugCategory: hazard
+    debugColor: lightgray
+    showHint: false
+    sprite: res_fxt_volcano_active.png
+    hintBiome: false
+    particle: pt-volcano-burst
+    spawnEvents: {
+      camShake: {power: 6, length: 2}
+      replaceLocations: {range: ..4, old: loc-volcano-inactive, new: loc-volcano-active-endless}
+    }
+    dayEvents: {
+      camShake: {power: 3, length: 1}
+      startSprawl: {ref: spr-fire, radius: 3, power: 4}
+      playSound: volcanoErupt
+    }
+  }
+]

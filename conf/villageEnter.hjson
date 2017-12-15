@@ -1,0 +1,261 @@
+[
+  {
+    id: evt-village-enter-selectEvent
+    partyEvents: [
+      {
+        optional: true
+        reqLocationFlags: -enterEvent|+harborQuestKonrad
+        text: txt-evt-village-enter-2
+      }
+      {
+        optional: true
+        reqLocationFlags: +tribeWarriors -enterEvent
+        text: txt-evt-village-enter-3
+      }
+      {
+        optional: true
+        reqLocationFlags: +tribeScouts -enterEvent
+        text: txt-evt-village-enter-4
+      }
+      {
+        optional: true
+        reqLocationFlags: +tribeShamans -enterEvent
+        text: txt-evt-village-enter-5
+      }
+      {
+        optional: true
+        reqLocationFlags: +tribeNomads -enterEvent
+        text: txt-evt-village-enter-6
+      }
+      {
+        optional: true
+        reqLocationFlags: +tribeLizards -enterEvent
+        text: txt-evt-village-enter-7
+      }
+    ]
+    select: [
+      {
+        prio: 1
+        reqWorld: 1..
+        reqLocationFlags: +idolVillage
+        select: evt-village-enter-idol
+      }
+      {
+        prio: 1
+        reqLocationFlags: +harborQuestKonrad
+        select: evt-village-enter-konrad
+      }
+      {
+        prio: 1
+        reqPartyStatus: +escortVillager
+        reqPartyFlags: -escortVillagerRecruited
+        select: evt-village-enter-escortVillager
+      }
+      {
+        prio: 1
+        charEvents: {reqCharFlags: +homeWorld +slave, select: evt-village-enter-slave}
+      }
+      {
+        prio: 1
+        charEvents: {reqCharFlags: +homeWorld +slave, select: evt-village-enter-slave}
+      }
+      {
+        prio: 1
+        reqLocationFlags: +enterEvent
+        text: txt-evt-village-enter-1
+        select: evt-village-enterCheck
+      }
+      {
+        prio: 3
+        reqStanding: -2..
+        charEvents: {reqStatus: +blessingHoly}
+        select: evt-village-enter-blessingHoly
+      }
+      {
+        prio: 3
+        reqWorld: 1..
+        reqLocationFlags: -idolSet -tribeLizards
+        setLocationFlags: +idolVillage
+        select: evt-village-enter-idol
+      }
+      {
+        prio: 3
+        reqWorld: 1..
+        reqStanding: ..-1
+        select: evt-village-enter-requestPresents
+      }
+      {
+        prio: 3
+        reqWorld: 1..
+        reqStanding: ..-1
+        select: evt-village-enter-whatDoWeWant
+      }
+      {
+        prio: 3
+        reqWorld: 1..
+        reqStanding: -3..
+        select: evt-village-enter-beastMaster
+      }
+      {prio: 3, select: evt-village-enter-neutral}
+      {prio: 3, reqStanding: 2.., select: evt-village-enter-presents}
+      {prio: 3, reqStanding: -2.., select: evt-village-enter-food}
+    ]
+  }
+  {
+    id: evt-village-enter-whatDoWeWant
+    npc: [
+      npc-native-generic
+    ]
+    npcEvents: {
+      text: txt-evt-village-enter-whatDoWeWant
+      actions: [
+        {
+          actionText: txt-evt-mission-cultist-rest-action
+          setLocationFlags: +recruitFail +tradeFail
+          text: txt-evt-village-enter-whatDoWeWant-1
+          select: evt-village-enterCheck
+        }
+        {
+          actionText: txt-evt-village-enter-whatDoWeWant-action
+          setTileFlags: +restFail
+          text: txt-evt-village-enter-whatDoWeWant-2
+          select: evt-village-enterCheck
+        }
+        {
+          actionText: txt-evt-village-enter-whatDoWeWant-action-1
+          select: [
+            {
+              text: txt-evt-village-enter-whatDoWeWant-3
+              select: evt-village-replaceAngry
+              actions: evt-leave
+            }
+            {
+              text: txt-evt-village-enter-whatDoWeWant-4
+              items: {it-map-treasure: 1}
+              actions: evt-village-enterCheck
+            }
+          ]
+        }
+      ]
+    }
+  }
+  {
+    id: evt-village-enter-slave
+    charEvents: {
+      reqCharFlags: +homeWorld +slave
+      text: txt-evt-village-enter-slave
+      actions: [
+        {
+          actionText: txt-evt-village-enter-slave-action
+          standing: 4
+          select: {
+            text: txt-evt-village-enter-slave-1
+            select: [
+              {
+                slots: 5
+                text: txt-evt-village-enter-slave-2
+                removeCharacter: true
+                actions: evt-village-enterCheck
+              }
+              {
+                slots: 1
+                text: txt-evt-village-enter-slave-3
+                loyalty: 4
+                setCharFlags: -slave
+                actions: evt-village-enterCheck
+              }
+            ]
+          }
+        }
+        {
+          actionText: txt-evt-village-enter-slave-action-1
+          text: txt-evt-village-enter-slave-4
+          standing: -2
+          loyalty: -3
+          actions: evt-village-main
+        }
+      ]
+    }
+  }
+  {
+    id: evt-village-enter-presents
+    text: txt-evt-village-enter-presents
+    loot: {
+      items: [
+        {slots: 1, il-trade-village: 1, it-mango: 4}
+        {slots: 1, il-loot-native: 1, it-cocaLeaves: 3}
+      ]
+      closeEvents: evt-village-enterCheck
+    }
+  }
+  {
+    id: evt-village-enter-blessingHoly
+    standing: 4
+    charEvents: {reqStatus: +blessingHoly, text: txt-evt-village-enter-blessingHoly}
+    actions: evt-village-enterCheck
+  }
+  {
+    id: evt-village-enter-beastMaster
+    text: txt-evt-village-enter-beastMaster
+    setLocationFlags: +beastMaster
+    actions: evt-village-enterCheck
+  }
+  {
+    id: evt-village-enter-neutral
+    text: txt-evt-village-enter-neutral
+    actions: evt-village-enterCheck
+  }
+  {
+    id: evt-village-enter-idol
+    text: txt-evt-village-enter-idol
+    actions: evt-village-enterCheck
+  }
+  {
+    id: evt-village-enter-food
+    text: txt-evt-village-enter-food
+    loot: {
+      items: {it-meat-animal-cooked-perfect: 3}
+      closeEvents: evt-village-enterCheck
+    }
+  }
+  {
+    id: evt-village-enter-requestPresents
+    text: txt-evt-village-enter-requestPresents
+    barter: {
+      baseValue: {base: 15}
+      closeEvents: {
+        text: txt-evt-village-enter-requestPresents-1
+        select: evt-village-enterCheck
+      }
+      cancelEvents: {
+        select: [
+          {
+            slots: 1
+            select: evt-village-replaceAngry
+            text: txt-evt-village-enter-requestPresents-2
+          }
+          {
+            slots: 1
+            setLocationFlags: -enterEvent
+            text: txt-evt-village-enter-requestPresents-3
+          }
+        ]
+      }
+    }
+  }
+  {
+    id: evt-village-enter-escortVillager
+    npc: pl-village-escort
+    setPartyFlags: +escortVillagerRecruited
+    npcEvents: {
+      text: txt-evt-village-enter-escortVillager
+      setPartyFlags: +escortVillagerShrineInfo
+      actions: {
+        actionText: txt-evt-sanity-angry-action
+        addNPC: true
+        standing: 2
+        select: evt-village-enterCheck
+      }
+    }
+  }
+]

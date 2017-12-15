@@ -1,0 +1,67 @@
+[
+  {
+    id: st-lepidopterophobia
+    title: txt-st-lepidopterophobia-title
+    description: txt-st-lepidopterophobia
+    flags: +ailment
+    sprite: res_status_lepidopterophobia.png
+    important: true
+    debugCategory: Ailment
+  }
+  {
+    id: st-claustrophobic
+    title: txt-st-claustrophobic-title
+    description: txt-st-claustrophobic
+    flags: +ailment
+    debugCategory: Ailment
+    important: true
+    sprite: res_status_claustrophobic.png
+  }
+  {
+    id: st-acrophobia
+    title: txt-st-acrophobia-title
+    description: txt-st-acrophobia
+    debugCategory: Ailment
+    flags: +ailment
+    important: true
+    sprite: res_status_acrophobia.png
+    dayEvents: [
+      {slots: 2}
+      {slots: 1, select: evt-acrophobia}
+    ]
+  }
+  {id: evt-acrophobia, reqTiles: tl-hill, loyalty: -1, chat: cl-phobia-travel}
+  {
+    id: st-dendrophobia
+    title: txt-st-dendrophobia-title
+    description: txt-st-dendrophobia
+    debugCategory: Ailment
+    flags: +ailment
+    sprite: res_status_dendrophobia.png
+    important: true
+    dayEvents: [
+      {slots: 1, select: evt-dendrophobia-angry}
+    ]
+  }
+  {
+    id: evt-dendrophobia-angry
+    reqAge: 3..
+    reqLocation: {range: ..1, flags: +giantTree}
+    loyalty: -1
+    chat: cl-apply-dendrophobia
+    resetStatusAge: true
+  }
+  {
+    id: cl-apply-dendrophobia
+    lines: {
+      text: txt-cl-apply-dendrophobia
+    }
+  }
+  {
+    id: cl-phobia-travel
+    lines: {
+      text: txt-cl-phobia-travel
+      reqLoyalty: 2..
+    }
+  }
+]

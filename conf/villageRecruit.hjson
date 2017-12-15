@@ -1,0 +1,265 @@
+[
+  {
+    id: evt-village-recruit
+    reqLocationFlags: -recruitFail
+    actionText: txt-evt-mission-cultist-recruit-action
+    text: txt-evt-village-recruit
+    showPartyCount: true
+    alwaysShown: true
+    chat: cl-village-recruit
+    partyEvents: [
+      {select: evt-village-setImageDay}
+    ]
+    actions: {
+      actionText: txt-evt-dismiss-default-action-1
+      select: evt-village-setImageDay-update
+    }
+    select: [
+      {reqStanding: ..1, text: txt-evt-village-recruit-refuse}
+      {
+        prio: 1
+        text: txt-evt-village-recruit-1
+        setLocationFlags: +recruitFail
+        partyEvents: [
+          {select: evt-village-recruit-select-humanoid, optional: true}
+          {select: evt-village-recruit-select-humanoid, optional: true}
+          {select: evt-village-recruit-select-animal, optional: true}
+        ]
+      }
+    ]
+  }
+  {
+    id: evt-village-recruit-select-humanoid
+    select: [
+      evt-village-recruit-warrior
+      evt-village-recruit-scout
+      evt-village-recruit-shaman
+      evt-village-recruit-bedouin
+      evt-village-recruit-lizard-warrior
+      evt-village-recruit-lizard-shaman
+      evt-village-recruit-animalHandler
+    ]
+  }
+  {
+    id: evt-village-recruit-select-animal
+    select: [
+      evt-village-recruit-donkey
+      evt-village-recruit-buffalo
+      evt-village-recruit-camel
+      evt-village-recruit-husky
+      evt-village-recruit-parasaurolophus
+      evt-village-recruit-chasmosaurus
+    ]
+  }
+  {
+    id: evt-village-recruit-warrior
+    reqLocationFlags: +tribeWarriors | +tribeInuit
+    npc: pl-native-warrior
+    npcEvents: {
+      actions: {
+        actionText: txt-evt-village-recruit-warrior-action
+        text: txt-evt-village-recruit-warrior
+        setPartyFlags: +recruitedSomebody
+        addNPC: true
+        setCharFlags: +homeWorld
+        setStatus: +homesick
+        chat: cl-join
+        incAchievement: ach-recr-natives
+        select: evt-village-setImageDay-update
+      }
+    }
+  }
+  {
+    id: evt-village-recruit-scout
+    reqLocationFlags: +tribeScouts
+    npc: pl-native-scout
+    npcEvents: {
+      actions: {
+        actionText: txt-evt-village-recruit-scout-action
+        text: txt-evt-village-recruit-scout
+        setPartyFlags: +recruitedSomebody
+        addNPC: true
+        setCharFlags: +homeWorld
+        setStatus: +homesick
+        chat: cl-join
+        incAchievement: ach-recr-natives
+        select: evt-village-setImageDay-update
+      }
+    }
+  }
+  {
+    id: evt-village-recruit-shaman
+    reqLocationFlags: +tribeShamans
+    npc: pl-native-shaman
+    npcEvents: {
+      actions: {
+        actionText: txt-evt-village-recruit-shaman-action
+        text: txt-evt-village-recruit-shaman
+        setPartyFlags: +recruitedSomebody
+        addNPC: true
+        setCharFlags: +homeWorld
+        setStatus: +homesick
+        chat: cl-join
+        incAchievement: ach-recr-natives
+        select: evt-village-setImageDay-update
+      }
+    }
+  }
+  {
+    id: evt-village-recruit-bedouin
+    reqLocationFlags: +tribeNomads
+    npc: pl-bedouin
+    npcEvents: {
+      actions: {
+        actionText: txt-evt-harbor-recruit-bedouin-action
+        text: txt-evt-village-recruit-bedouin
+        setPartyFlags: +recruitedSomebody
+        addNPC: true
+        setCharFlags: +homeWorld
+        setStatus: +homesick
+        chat: cl-join
+        incAchievement: ach-recr-natives
+        select: evt-village-main-update
+      }
+    }
+  }
+  {
+    id: evt-village-recruit-lizard-warrior
+    reqLocationFlags: +tribeLizards
+    npc: pl-lizard-warrior
+    npcEvents: {
+      actions: {
+        actionText: txt-evt-village-recruit-warrior-action
+        text: txt-evt-village-recruit-lizard-warrior
+        setPartyFlags: +recruitedSomebody
+        addNPC: true
+        setCharFlags: +homeWorld
+        setStatus: +homesick
+        incAchievement: ach-recr-natives
+        select: evt-village-main-update
+      }
+    }
+  }
+  {
+    id: evt-village-recruit-lizard-shaman
+    reqLocationFlags: +tribeLizards
+    npc: pl-lizard-shaman
+    npcEvents: {
+      actions: {
+        actionText: txt-evt-village-recruit-shaman-action
+        text: txt-evt-village-recruit-lizard-shaman
+        setPartyFlags: +recruitedSomebody
+        addNPC: true
+        setCharFlags: +homeWorld
+        setStatus: +homesick
+        incAchievement: ach-recr-natives
+        select: evt-village-main-update
+      }
+    }
+  }
+  {
+    id: evt-village-recruit-animalHandler
+    reqLocationFlags: +tribeWarriors | +tribeScouts | +tribeShamans
+    charEvents: {count: all, reqCharFlags: -nativeAnimalHandler}
+    npc: pl-native-animalHandler
+    npcEvents: {
+      actions: {
+        actionText: txt-evt-village-recruit-animalHandler-action
+        text: txt-evt-village-recruit-animalHandler
+        setPartyFlags: +recruitedSomebody
+        addNPC: true
+        setCharFlags: +homeWorld
+        setStatus: +homesick
+        chat: cl-join
+        incAchievement: ach-recr-natives
+        select: evt-village-main-update
+      }
+    }
+  }
+  {
+    id: evt-village-recruit-donkey
+    reqLocationFlags: +tribeWarriors | +tribeScouts | +tribeShamans
+    npc: anm-donkey
+    npcEvents: {
+      actions: {
+        actionText: txt-anm-donkey-title
+        text: txt-evt-village-recruit-animal-generic
+        setPartyFlags: +recruitedSomebody
+        addNPC: true
+        select: evt-village-main-update
+      }
+    }
+  }
+  {
+    id: evt-village-recruit-buffalo
+    reqLocationFlags: +tribeWarriors | +tribeScouts | +tribeShamans
+    npc: anm-waterBuffalo
+    npcEvents: {
+      actions: {
+        actionText: txt-anm-waterBuffalo-title
+        text: txt-evt-village-recruit-animal-generic
+        setPartyFlags: +recruitedSomebody
+        addNPC: true
+        select: evt-village-main-update
+      }
+    }
+  }
+  {
+    id: evt-village-recruit-camel
+    reqLocationFlags: +tribeNomads
+    npc: anm-camel
+    npcEvents: {
+      actions: {
+        actionText: txt-anm-camel-title
+        text: txt-evt-village-recruit-animal-generic
+        setPartyFlags: +recruitedSomebody
+        addCharacter: anm-camel
+        select: evt-village-main-update
+      }
+    }
+  }
+  {
+    id: evt-village-recruit-husky
+    reqLocationFlags: +tribeInuit
+    npc: anm-dog-husky
+    npcEvents: {
+      actions: {
+        actionText: txt-anm-dog-husky-title
+        text: txt-evt-village-recruit-animal-generic
+        setPartyFlags: +recruitedSomebody
+        addCharacter: anm-dog-husky
+        select: evt-village-main-update
+      }
+    }
+  }
+  {
+    id: evt-village-recruit-parasaurolophus
+    reqLocationFlags: +tribeLizards
+    npc: anm-parasaurolophus
+    npcEvents: {
+      actions: {
+        actionText: txt-anm-parasaurolophus-title
+        text: txt-evt-village-recruit-animal-generic
+        setPartyFlags: +recruitedSomebody
+        addCharacter: anm-parasaurolophus
+        incAchievement: ach-recr-dino
+        select: evt-village-main-update
+      }
+    }
+  }
+  {
+    id: evt-village-recruit-chasmosaurus
+    reqLocationFlags: +tribeLizards
+    npc: anm-chasmosaurus
+    npcEvents: {
+      actions: {
+        actionText: txt-anm-chasmosaurus-title
+        text: txt-evt-village-recruit-animal-generic
+        setPartyFlags: +recruitedSomebody
+        addCharacter: anm-chasmosaurus
+        incAchievement: ach-recr-dino
+        select: evt-village-main-update
+      }
+    }
+  }
+]

@@ -1,0 +1,129 @@
+[
+  {
+    id: loc-shamanHut
+    name: txt-fxt-shamanHut-name
+    initItems: {il-trade-shamanHut: 4, il-tomePages: 4, il-metaItems: 99}
+    priceTable: shamanHut
+    sprite: res_fxt_shamanHut.png
+    particle: pt-shamanHut
+    flags: +dreamVisions +inhabited
+    actions: [evt-shamanHut-enter]
+    reqBiomeFlags: -desert
+    setNeighbors: [
+      {ref: tl-swamp, reqBiomeFlags: -prehistoric -dry}
+      {ref: tl-sulfur-swamp, reqBiomeFlags: +prehistoric -dry}
+      {ref: tl-jungle-thick, reqBiomeFlags: -dry}
+      {ref: tl-dry-jungle-thick, reqBiomeFlags: +dry}
+      {ref: tl-dry-jungle-thick, reqBiomeFlags: +dry}
+      {ref: tl-river-shallow, reqBiomeFlags: -prehistoric -dry}
+      {ref: tl-sulfur-shallow, reqBiomeFlags: +prehistoric -dry}
+    ]
+    setTile: [
+      {ref: tl-sulfur-swamp, reqBiomeFlags: +prehistoric -dry}
+      {ref: tl-dry-jungle-thick, reqBiomeFlags: +dry}
+      {ref: tl-swamp}
+    ]
+    debugColor: deeppink
+  }
+  {
+    id: loc-shamanHut-forsaken
+    name: txt-fxt-shamanHut-name
+    debugColor: "#770057"
+    sprite: res_fxt_shamanHut.png
+    actions: evt-shamanHut-forsaken
+  }
+  {id: evt-shamanHut-forsaken, text: txt-evt-shamanHut-forsaken}
+  {
+    id: evt-shamanHut-enter
+    actionText: txt-evt-shamanHut-enter-action
+    text: txt-evt-shamanHut-enter
+    report: txt-evt-shamanHut-enter-report
+    showImage: {src: evt_fxt_shamanHut_1.png, type: day}
+    npc: [pl-native-shaman]
+    select: evt-shamanHut-actions
+  }
+  {
+    id: evt-shamanHut-trade
+    actionText: txt-evt-mission-trade-action
+    text: txt-evt-shamanHut-trade
+    barter: {closeEvents: evt-shamanHut-trade-deal, cancelEvents: evt-shamanHut-trade-cancel}
+  }
+  {
+    id: evt-shamanHut-trade-deal
+    text: txt-evt-shamanHut-trade-deal
+    select: evt-shamanHut-actions
+  }
+  {
+    id: evt-shamanHut-trade-cancel
+    text: txt-evt-shamanHut-trade-cancel
+    select: evt-shamanHut-actions
+  }
+  {
+    id: evt-shamanHut-heal-trade
+    actionText: txt-evt-shamanHut-heal-trade-action
+    text: txt-evt-shamanHut-heal-trade
+    charEvents: {count: any, reqStatus: +injured | +infected}
+    barter: {
+      baseValue: 20
+      closeEvents: evt-shamanHut-heal-trade-deal
+      cancelEvents: evt-shamanHut-trade-cancel
+    }
+  }
+  {
+    id: evt-shamanHut-heal-trade-deal
+    text: txt-evt-shamanHut-heal-trade-deal
+    charEvents: {
+      count: any
+      reqStatus: +injured | +infected
+      actions: evt-shamanHut-heal-injured
+    }
+  }
+  {
+    id: evt-shamanHut-heal-injured
+    actionText: txt-evt-firstAid-heal-action
+    text: txt-evt-shamanHut-heal-injured
+    report: txt-evt-shamanHut-heal-injured-report
+    setStatus: -infected
+    health: 20
+    select: evt-shamanHut-actions
+  }
+  {
+    id: evt-shamanHut-cleanse-trade
+    actionText: txt-evt-shamanHut-cleanse-trade-action
+    chat: cl-shamanGarvey
+    text: txt-evt-shamanHut-cleanse-trade
+    charEvents: {reqStatusFlags: +ailment | +rabies}
+    barter: {
+      baseValue: 20
+      closeEvents: evt-shamanHut-cleanse-trade-deal
+      cancelEvents: evt-shamanHut-trade-cancel
+    }
+  }
+  {
+    id: evt-shamanHut-cleanse-trade-deal
+    text: txt-evt-shamanHut-cleanse-trade-deal
+    charEvents: {
+      count: any
+      reqStatusFlags: +ailment | +rabies
+      reqCharFlags: -abomination
+      actions: evt-shamanHut-cleanse
+    }
+  }
+  {
+    id: evt-shamanHut-cleanse
+    actionText: txt-evt-shamanHut-cleanse-action
+    text: txt-evt-shamanHut-cleanse
+    report: txt-evt-shamanHut-cleanse-report
+    removeStatusWithFlags: +ailment | +rabies
+    select: evt-shamanHut-actions
+  }
+  {
+    id: evt-shamanHut-actions
+    actions: [
+      evt-shamanHut-heal-trade
+      evt-shamanHut-cleanse-trade
+      evt-shamanHut-trade
+      evt-leave
+    ]
+  }
+]

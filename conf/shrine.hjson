@@ -1,0 +1,567 @@
+[
+  {
+    id: loc-shrine-2
+    name: txt-fxt-shrine-2-name
+    sprite: res_fxt_temple_5.png
+    worldMap: true
+    reqBiomeFlags: -arctic
+    flags: +shrine +dreamVisions +ruins
+    setTile: [
+      {ref: tl-dry-jungle-thick, reqBiomeFlags: +dry}
+      {ref: tl-dry, reqBiomeFlags: +desert}
+      {ref: tl-jungle-thick}
+    ]
+    setNeighbors: [
+      {count: 5, ref: tl-jungle-thick, reqBiomeFlags: +grass | +prehistoric -desert}
+      {count: 5, ref: tl-dry-jungle-thick, reqBiomeFlags: +dry}
+      {count: 4, ref: tl-mountain, reqBiomeFlags: +desert}
+    ]
+    spawnEvents: [
+      {prio: 1, reqTutorial: true, setLocationFlags: +aftermathVolcano}
+      {prio: 2, slots: 3, setLocationFlags: +aftermathFlood}
+      {
+        prio: 2
+        slots: 3
+        setLocationFlags: +aftermathMountains
+        reqBiomeFlags: -arctic
+      }
+      {prio: 2, slots: 3, setLocationFlags: +aftermathIce, reqBiomeFlags: -arctic}
+      {prio: 2, slots: 3, setLocationFlags: +aftermathDry, reqBiomeFlags: -desert}
+      {prio: 2, slots: 1, setLocationFlags: +aftermathForsake}
+      {prio: 2, slots: 3, setLocationFlags: +aftermathVolcano, reqWorld: 1..}
+      {prio: 2, slots: 3, setLocationFlags: +aftermathPoisonGas, reqWorld: 2..}
+      {prio: 2, slots: 3, setLocationFlags: +aftermathCorrupted, reqWorld: 2..}
+      {prio: 2, slots: 3, setLocationFlags: +aftermathChasm, reqWorld: 2..}
+      {
+        prio: 2
+        slots: 3
+        setLocationFlags: +aftermathVoid
+        reqWorld: 3..
+        reqDifficulty: 1..
+      }
+    ]
+    subLocations: {
+      ref: loc-subLocation-shrine-1 loc-subLocation-shrine-2
+      offsets: 4ne 4nw 4sw 4se
+      chance: 0.5
+    }
+    actions: evt-shrine-2
+    debugCategory: shrine
+    debugColor: red
+  }
+  {
+    id: loc-subLocation-shrine-1
+    extends: loc-subLocation
+    sprite: [
+      {ref: res_fxt_sub_stoneBlocks_1.png, reqBiomeFlags: -arctic}
+      {ref: res_fxt_sub_stoneBlocks_3.png, reqBiomeFlags: +arctic}
+    ]
+    setTile: [
+      {ref: tl-dry, reqBiomeFlags: +dry | +desert}
+      {ref: tl-deepSnow, reqBiomeFlags: +arctic}
+      {ref: tl-grass}
+    ]
+  }
+  {
+    id: loc-subLocation-shrine-2
+    extends: loc-subLocation-shrine-1
+    sprite: [
+      {ref: res_fxt_sub_stoneBlocks_2.png, reqBiomeFlags: -arctic}
+      {ref: res_fxt_sub_stoneBlocks_4.png, reqBiomeFlags: +arctic}
+    ]
+  }
+  {
+    id: loc-shrine-3
+    debugCategory: shrine
+    extends: loc-shrine-2
+    sprite: res_fxt_temple_2.png
+  }
+  {
+    id: loc-shrine-4
+    debugCategory: shrine
+    extends: loc-shrine-2
+    sprite: res_fxt_temple_1.png
+  }
+  {
+    id: loc-shrine-rope
+    extends: loc-shrine-2
+    reqWorld: 1..
+    sprite: res_fxt_temple_4.png
+    flags: +shrine +shrineTypeRope +dreamVisions +ruins
+    setTile: tl-hill
+    setNeighbors: [
+      {count: 4, ref: tl-jungle-thick, reqBiomeFlags: +grass | +prehistoric -desert}
+      {count: 2, ref: tl-hill, reqBiomeFlags: +grass | +prehistoric -desert}
+      {count: 4, ref: tl-dry-jungle-thick, reqBiomeFlags: +dry}
+      {count: 2, ref: tl-hill, reqBiomeFlags: +dry}
+      {count: 4, ref: tl-mountain, reqBiomeFlags: +desert}
+      {count: 2, ref: tl-hill, reqBiomeFlags: +desert}
+    ]
+    debugCategory: shrine
+  }
+  {
+    id: loc-shrine-6
+    debugCategory: shrine
+    extends: loc-shrine-rope
+    sprite: res_fxt_temple_4.png
+  }
+  {
+    id: loc-shrine-arctic
+    extends: loc-shrine-2
+    reqBiomeFlags: +arctic
+    sprite: res_fxt_temple_arctic.png
+    flags: +shrine +dreamVisions +ruins
+    setTile: [
+      {ref: tl-deepSnow}
+      {ref: tl-frozenPlains}
+      {ref: tl-crystalForest}
+    ]
+    setNeighbors: [
+      {count: 3, ref: tl-deepSnow}
+      {count: 3, ref: tl-crystalForest}
+    ]
+    debugCategory: shrine
+  }
+  {
+    id: evt-shrine-2
+    actionText: txt-evt-shrine-2-action
+    playMusic: [thm_shrine_1]
+    chat: cl-scaryPlace
+    partyEvents: [
+      {select: evt-shrine-actions}
+      {
+        optional: true
+        reqLocationFlags: +broken
+        showImage: {src: evt_fxt_shrine_1.png, type: day}
+        text: txt-evt-shrine-4
+      }
+      {
+        optional: true
+        reqLocationFlags: -broken -shrineTypeRope
+        reqBiomeFlags: -arctic
+        showImage: {src: evt_fxt_shrine_1.png, type: day}
+        text: txt-evt-shrine-2
+      }
+      {
+        optional: true
+        reqLocationFlags: -broken +shrineTypeRope
+        showImage: {src: evt_fxt_shrine_2.png, type: day}
+        text: txt-evt-shrine-3
+      }
+      {
+        optional: true
+        reqBiomeFlags: -broken +arctic
+        showImage: {
+          src: evt_fxt_shrine_arctic.png
+          type: day
+          showMounted: true
+          particles: pt-snow-1 pt-snow-2 pt-snow-3
+          particlesChance: 0.5
+        }
+        text: txt-evt-shrine-arctic
+      }
+      {
+        optional: true
+        reqLocationFlags: -broken +aftermathMountains
+        text: txt-evt-shrine-5
+      }
+      {
+        optional: true
+        reqLocationFlags: -broken +aftermathChasm
+        text: txt-evt-shrine-9
+      }
+      {
+        optional: true
+        reqLocationFlags: -broken +aftermathFlood
+        text: txt-evt-shrine-10
+      }
+      {
+        optional: true
+        reqLocationFlags: -broken +aftermathDry
+        text: txt-evt-shrine-11
+      }
+      {
+        optional: true
+        reqLocationFlags: -broken +aftermathVolcano
+        text: txt-evt-shrine-12
+      }
+      {
+        optional: true
+        reqLocationFlags: -broken +aftermathPoisonGas
+        text: txt-evt-shrine-14
+      }
+      {
+        optional: true
+        reqLocationFlags: -broken +aftermathCorrupted
+        text: txt-evt-shrine-15
+      }
+      {
+        optional: true
+        reqLocationFlags: -broken +aftermathVoid
+        text: txt-evt-shrine-13
+      }
+      {
+        optional: true
+        reqLocationFlags: -broken +aftermathForsake
+        text: txt-evt-shrine-hint-forsaken
+      }
+      {
+        optional: true
+        reqLocationFlags: -broken +aftermathIce
+        text: txt-evt-shrine-hint-ice
+      }
+    ]
+  }
+  {
+    id: evt-shrine-rope-actions
+    reqLocationFlags: -broken +shrineTypeRope
+    actions: [
+      {
+        actionText: txt-evt-shrine-rope-actions-action
+        alwaysShown: true
+        reqItems: {it-rope: 1..}
+        text: txt-evt-shrine-rope-actions-useRope
+        items: {it-rope: -1}
+        actions: evt-shrine-enter
+      }
+      {
+        actionText: txt-evt-shrine-rope-actions-action-1
+        alwaysShown: true
+        reqItems: {it-climbingGear: 1..}
+        text: txt-evt-shrine-rope-actions-useGear
+        items: {it-climbingGear: -1}
+        actions: evt-shrine-enter
+      }
+      {
+        actionText: txt-evt-shrine-rope-actions-action-2
+        text: txt-evt-shrine-rope-actions-challenge
+        reqDice: agility
+        winEvents: {text: txt-evt-shrine-rope-actions, actions: evt-shrine-enter}
+        failEvents: [
+          {
+            slots: 4
+            charEvents: {
+              reqCharFlags: -special +humanoid
+              health: -10
+              text: txt-evt-shrine-rope-actions-1
+            }
+            actions: evt-shrine-enter
+          }
+          {
+            charEvents: {
+              reqCharFlags: -special +humanoid
+              storeCharacter: true
+              setCharFlags: +dead
+              sanity: -15
+              text: txt-evt-shrine-rope-actions-2
+            }
+            actions: evt-shrine-enter
+          }
+          {
+            prio: 5
+            charEvents: [
+              {reqCharFlags: +special | -humanoid, count: all}
+              {reqCharFlags: +special, text: txt-evt-shrine-rope-actions-3, health: -10}
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  {
+    id: evt-shrine-actions
+    select: evt-shrine-rope-actions
+    actions: [
+      {
+        reqLocationFlags: -broken -shrineTypeRope
+        actionText: txt-evt-shrine-actions-action
+        select: evt-shrine-enter
+      }
+      {ref: evt-shrine-paint}
+      {actionText: txt-evt-leave-action, select: evt-shrine-leave}
+    ]
+  }
+  {
+    id: evt-shrine-enter
+    actionText: txt-evt-shrine-actions-action
+    partyEvents: [
+      {
+        optional: true
+        reqBiomeFlags: -arctic
+        text: txt-evt-shrine-enter
+        report: txt-evt-shrine-enter-report
+        showImage: {src: evt_fxt_shrine_int_1.png, showMounted: false}
+      }
+      {
+        optional: true
+        reqBiomeFlags: +arctic
+        text: txt-evt-shrine-arctic-enter
+        report: txt-evt-shrine-arctic-enter-report
+        showImage: {src: evt_fxt_shrine_arctic_int.png, showMounted: false}
+      }
+    ]
+    playMusic: [thm_shrine_2]
+    chat: cl-shrine-warning
+    actions: {
+      actionText: txt-evt-shrine-enter-action
+      chat: cl-shrine-loot
+      select: [
+        {
+          reqDifficulty: 1..
+          loot: {
+            items: [
+              {slots: 6, il-treasure-highValue: 1, il-treasure-lowValue: 1, it-moonStone: 1}
+              {slots: 2, il-treasure-highValue: 2, it-moonStone: 1}
+              {slots: 1, il-treasure-highValue: 1, il-tomePages: 1, it-moonStone: 1}
+              {slots: 1, il-treasure-highValue: 1, il-magic: 1, it-moonStone: 1}
+            ]
+            closeEvents: evt-shrine-lootAftermath
+            cancelEvents: evt-shrine-leave
+            itemEvents: {
+              items: {it-metalCube: 1}
+              ref: evt-shrine-loot
+            }
+          }
+        }
+        {
+          reqDifficulty: 0
+          loot: {
+            items: [
+              {slots: 6, il-treasure-highValue: 1, il-treasure-lowValue-easy: 1}
+              {slots: 2, il-treasure-highValue: 2}
+              {slots: 1, il-treasure-highValue: 1, il-tomePages: 2}
+              {slots: 1, il-treasure-highValue: 1, il-magic: 1}
+            ]
+            closeEvents: evt-shrine-lootAftermath
+            cancelEvents: evt-shrine-leave
+            itemEvents: {
+              items: {it-metalCube: 1}
+              ref: evt-shrine-loot
+            }
+          }
+        }
+      ]
+    }
+  }
+  {
+    id: evt-shrine-loot
+    text: txt-evt-shrine-loot
+    standing: standingCostSacrilegLarge
+    chat: cl-sacrileg-loot
+    setLocationFlags: +broken
+  }
+  {
+    id: evt-shrine-lootAftermath
+    extends: evt-shrine-loot
+    select: [
+      evt-shrine-aftermath-mountains
+      evt-shrine-aftermath-chasm
+      evt-shrine-aftermath-flood
+      evt-shrine-aftermath-dry
+      evt-shrine-aftermath-ice
+      evt-shrine-aftermath-volcano
+      evt-shrine-aftermath-void
+      evt-shrine-aftermath-forsake
+      evt-shrine-aftermath-poisonGas
+      evt-shrine-aftermath-corrupted
+    ]
+  }
+  {
+    id: evt-shrine-aftermath-mountains
+    reqLocationFlags: +aftermathMountains
+    text: txt-evt-shrine-aftermath-mountains
+    report: txt-evt-shrine-aftermath-mountains-report
+    actions: {
+      playSound: sfx_volcanoErupt
+      camShake: {power: 8, length: 1.2}
+      setPartyFlags: +sacrileg
+      replaceTiles: [
+        {
+          radius: 10
+          old: any
+          new: tl-mountain
+          particle: pt-erupt-mountain
+          chance: 0.3
+        }
+        {
+          radius: 1
+          old: any
+          new: tl-dry
+          particle: pt-erupt-hill
+        }
+      ]
+      select: evt-leave
+    }
+  }
+  {
+    id: evt-shrine-aftermath-chasm
+    reqLocationFlags: +aftermathChasm
+    text: txt-evt-shrine-aftermath-chasm
+    report: txt-evt-shrine-aftermath-chasm-report
+    startSprawl: {ref: spr-chasm, power: 3, worldPower: 1}
+    select: evt-leave
+  }
+  {
+    id: evt-shrine-aftermath-forsake
+    reqLocationFlags: +aftermathForsake
+    text: txt-evt-shrine-aftermath-forsake
+    partyEvents: [
+      {optional: true, ref: evt-shrine-aftermath-forsake-fxt}
+      {optional: true, ref: evt-shrine-aftermath-forsake-fxt}
+      {optional: true, ref: evt-shrine-aftermath-forsake-fxt}
+      {optional: true, ref: evt-shrine-aftermath-forsake-fxt}
+      {optional: true, ref: evt-shrine-aftermath-forsake-fxt}
+      {optional: true, ref: evt-shrine-aftermath-forsake-fxt}
+      {optional: true, ref: evt-shrine-aftermath-forsake-fxt}
+      {optional: true, ref: evt-shrine-aftermath-forsake-fxt}
+      {optional: true, ref: evt-shrine-aftermath-forsake-fxt}
+      {optional: true, ref: evt-shrine-aftermath-forsake-fxt}
+      {optional: true, ref: evt-shrine-aftermath-forsake-fxt}
+      {optional: true, ref: evt-shrine-aftermath-forsake-fxt}
+      {optional: true, ref: evt-shrine-aftermath-forsake-fxt}
+    ]
+    replaceLocations: [
+      {range: ..50, old: loc-trader}
+      {range: ..50, old: loc-slaver}
+    ]
+    removeZones: {flags: +native, radius: 50}
+    select: evt-leave
+  }
+  {
+    id: evt-shrine-aftermath-forsake-fxt
+    reqLocation: {flags: +inhabited}
+    posTile: {locationFlags: +inhabited}
+    setLocationFlags: -inhabited -angry
+    setLocationParticle: ""
+  }
+  {
+    id: evt-shrine-aftermath-flood
+    reqLocationFlags: +aftermathFlood
+    text: txt-evt-shrine-aftermath-flood
+    report: txt-evt-shrine-aftermath-flood-report
+    startSprawl: {ref: spr-flood, radius: 0, power: 2}
+    setPartyStatus: +st-curse-flood
+    select: evt-leave
+  }
+  {
+    id: evt-shrine-aftermath-dry
+    reqLocationFlags: +aftermathDry
+    text: txt-evt-shrine-aftermath-climate
+    report: txt-evt-shrine-aftermath-climate-report
+    startSprawl: {ref: spr-dry, radius: 0, power: 8, worldPower: 2}
+    select: evt-leave
+  }
+  {
+    id: evt-shrine-aftermath-ice
+    reqLocationFlags: +aftermathIce
+    text: txt-evt-shrine-ice
+    report: txt-evt-shrine-ice
+    startSprawl: {ref: spr-ice, radius: 0, power: 8, worldPower: 2}
+    select: evt-leave
+  }
+  {
+    id: evt-shrine-aftermath-volcano
+    reqLocationFlags: +aftermathVolcano
+    text: txt-evt-shrine-aftermath-volcano
+    report: txt-evt-shrine-aftermath-volcano-report
+    actions: {
+      playSound: sfx_volcanoErupt
+      partyEvents: [
+        {
+          addLocation: {ref: loc-volcano-spawn-large-active, range: ..4}
+        }
+        {
+          addLocation: {ref: loc-volcano-spawn-large-active, range: ..4}
+        }
+        {
+          optional: true
+          reqTutorial: true
+          addLocation: {ref: loc-volcano-spawn-large-active, range: ..10}
+        }
+      ]
+      select: evt-leave
+    }
+  }
+  {
+    id: evt-shrine-aftermath-poisonGas
+    reqLocationFlags: +aftermathPoisonGas
+    text: txt-evt-shrine-aftermath-poisonGas
+    report: txt-evt-shrine-aftermath-poisonGas-report
+    actions: {
+      partyEvents: [
+        {
+          addLocation: {ref: loc-fumarole-spawn, range: ..7, setPos: false}
+        }
+        {
+          addLocation: {ref: loc-fumarole-spawn, range: ..7, setPos: false}
+        }
+        {
+          optional: true
+          reqWorld: 2..
+          addLocation: {ref: loc-fumarole-spawn, range: ..7, setPos: false}
+        }
+        {
+          optional: true
+          reqWorld: 3..
+          addLocation: {ref: loc-fumarole-spawn, range: ..7, setPos: false}
+        }
+        {
+          optional: true
+          reqWorld: 4..
+          addLocation: {ref: loc-fumarole-spawn, range: ..7, setPos: false}
+        }
+      ]
+      select: evt-leave
+    }
+  }
+  {
+    id: evt-shrine-aftermath-corrupted
+    reqLocationFlags: +aftermathCorrupted
+    text: txt-evt-shrine-aftermath-corrupted
+    actions: {
+      partyEvents: [
+        {
+          optional: true
+          addLocation: {ref: loc-corrupt-spawn, range: ..6, setPos: false}
+        }
+        {
+          optional: true
+          addLocation: {ref: loc-corrupt-spawn, range: ..20, setPos: false}
+        }
+        {
+          optional: true
+          addLocation: {ref: loc-corrupt-spawn, range: ..20, setPos: false}
+        }
+        {
+          optional: true
+          reqWorld: 4..
+          addLocation: {ref: loc-corrupt-spawn, range: ..25, setPos: false}
+        }
+        {
+          optional: true
+          reqWorld: 5..
+          addLocation: {ref: loc-corrupt-spawn, range: ..30, setPos: false}
+        }
+      ]
+      select: evt-leave
+    }
+  }
+  {
+    id: evt-shrine-aftermath-void
+    reqLocationFlags: +aftermathVoid
+    text: txt-evt-shrine-aftermath-void
+    report: txt-evt-shrine-aftermath-void-report
+    startSprawl: {ref: spr-void, power: 10000}
+    select: evt-leave
+  }
+  {
+    id: evt-shrine-leave
+    actionText: txt-evt-leave-action
+    partyEvents: {
+      optional: true
+      reqLocationFlags: -broken
+      text: txt-evt-shrine-leave
+      report: txt-evt-shrine-leave-report
+    }
+  }
+]

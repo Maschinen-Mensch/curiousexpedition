@@ -1,0 +1,878 @@
+[
+  {
+    id: evt-village-nightSelect
+    partyEvents: evt-village-setImageNight
+    select: [
+      {slots: 1, ref: evt-village-rest-alcohol}
+      {slots: 3, ref: evt-village-rest-racist}
+      {slots: 3, ref: evt-village-rest-paranoid}
+      {slots: 1, ref: evt-village-rest-offerEat}
+      {slots: 4, ref: evt-village-rest-mummy}
+      {slots: 3, ref: evt-village-rest-kleptomania}
+      {slots: 3, ref: evt-village-rest-killOffer}
+      {slots: 1, ref: evt-village-rest-whisky}
+      {slots: 1, ref: evt-village-rest-loveStay}
+      {slots: 1, ref: evt-village-rest-animalFeast}
+      {slots: 5, ref: evt-village-rest-tiedUnit}
+      {slots: 5, ref: evt-village-rest-imaginaryArgument}
+      {slots: 1, ref: evt-village-rest-child}
+      {slots: 1, ref: evt-village-rest-rash}
+      {slots: 3, ref: evt-village-rest-bongoPlayer}
+      {slots: 3, ref: evt-village-rest-angryUnit}
+      {slots: 3, ref: evt-village-rest-badRumors}
+      {slots: 1, ref: evt-village-rest-unlockSpecialWorld}
+      {slots: 9, ref: evt-village-rest-positive-gameover}
+      {slots: 1, ref: evt-village-rest-wedding}
+      {slots: 1, ref: evt-village-rest-maturation}
+      {slots: 1, ref: evt-village-rest-funeral}
+      {slots: 2, ref: evt-village-rest-flavor-generic}
+      {slots: 1, ref: evt-village-rest-flavor-idol}
+      {slots: 1, ref: evt-village-rest-questionGender}
+      {slots: 1, ref: evt-village-rest-questionMankind}
+      {slots: 1, ref: evt-village-rest-questionSuperiorLife}
+      {slots: 1, ref: evt-village-rest-questionPolygamy}
+    ]
+  }
+  {
+    id: evt-village-rest-flavor-generic
+    text: txt-evt-village-rest-generic
+    report: txt-evt-village-rest-generic-report
+    select: evt-village-actions-night
+  }
+  {
+    id: evt-village-rest-unlockSpecialWorld
+    text: txt-evt-village-rest-unlockSpecialWorld
+    report: txt-evt-village-rest-unlockSpecialWorld-report
+    actions: [
+      {
+        actionText: txt-evt-village-rest-unlockSpecialWorld-action
+        barter: {
+          baseValue: {base: 15}
+          closeEvents: {
+            partyEvents: evt-village-actions-night
+            select: evt-unlock-specialWorld-withText
+          }
+          cancelEvents: {
+            text: txt-evt-village-rest-unlockSpecialWorld-1
+            select: evt-village-actions-night
+          }
+        }
+      }
+      {
+        actionText: txt-evt-village-rest-unlockSpecialWorld-action-1
+        text: txt-evt-village-rest-unlockSpecialWorld-no
+        select: evt-village-actions-night
+      }
+    ]
+  }
+  {
+    id: evt-village-rest-alcohol
+    chat: cl-alcohol
+    text: txt-evt-village-rest-alcohol
+    report: txt-evt-village-rest-alcohol-report
+    actions: [
+      {
+        actionText: txt-evt-mission-sleep-event-2-accept-action
+        chat: cl-alcohol
+        text: txt-evt-village-rest-alcohol-1
+        report: txt-evt-village-rest-alcohol-report-1
+        sanity: 10
+        compassScore: malusAlcohol
+        standing: 1
+        charEvents: [
+          {
+            chance: 0.4
+            optional: true
+            reqCharFlags: +humanoid -special
+            reqStatus: -alcoholic
+            setStatus: +alcoholic
+            text: txt-evt-village-rest-alcohol-2
+            report: txt-evt-village-rest-alcohol-report-2
+          }
+          {optional: true, count: any, sanity: {base: 0, bonus: whiskyBonus}}
+        ]
+        select: evt-village-actions-night
+      }
+      {
+        actionText: txt-evt-angry-demandPayment-action-1
+        standing: -1
+        text: txt-evt-village-rest-alcohol-3
+        report: txt-evt-village-rest-alcohol-report-3
+        select: evt-village-actions-night
+      }
+    ]
+  }
+  {
+    id: evt-village-rest-racist
+    charEvents: {
+      reqStatus: +racist
+      text: txt-evt-village-rest-racist
+      report: txt-evt-village-rest-racist-report
+    }
+    standing: -1
+    select: evt-village-actions-night
+  }
+  {
+    id: evt-village-rest-paranoid
+    charEvents: {
+      reqStatus: +st-paranoid
+      text: txt-evt-village-rest-paranoid
+      report: txt-evt-village-rest-paranoid-report
+    }
+    standing: -1
+    select: [
+      {ref: evt-village-actions-night}
+    ]
+  }
+  {
+    id: evt-village-rest-compassScore
+    text: txt-evt-village-rest-compassScore
+    report: txt-evt-village-rest-compassScore-report
+    compassScore: 5
+    select: [
+      {ref: evt-village-actions-night}
+    ]
+  }
+  {
+    id: evt-village-rest-offerEat
+    text: txt-evt-village-rest-offerEat
+    report: txt-evt-village-rest-offerEat-report
+    charEvents: {
+      optional: true
+      reqCharFlags: +native
+      text: txt-evt-village-rest-offerEat-1
+      report: txt-evt-village-rest-offerEat-report-1
+    }
+    actions: [
+      {
+        actionText: txt-evt-village-rest-offerEat-action
+        text: txt-evt-village-rest-offerEat-2
+        report: txt-evt-village-rest-offerEat-report-2
+        charEvents: {optional: true, reqCharFlags: +native, text: txt-evt-village-rest-offerEat}
+        sanity: -20
+        standing: 1
+        select: [
+          {ref: evt-village-actions-night}
+        ]
+      }
+      {
+        actionText: txt-evt-angry-demandPayment-action-1
+        standing: -1
+        text: txt-evt-village-rest-offerEat-3
+        report: txt-evt-village-rest-offerEat-report-3
+        select: [
+          {ref: evt-village-actions-night}
+        ]
+      }
+    ]
+  }
+  {
+    id: evt-village-rest-mummy
+    text: txt-evt-village-rest-mummy
+    report: txt-evt-village-rest-mummy-report
+    reqItems: {it-mummy: 1..}
+    standing: -1
+    actions: [
+      {
+        actionText: txt-evt-village-rest-mummy-action
+        text: txt-evt-village-rest-mummy-1
+        report: txt-evt-village-rest-mummy-report-1
+        items: {it-mummy: -1}
+        select: [
+          {ref: evt-village-actions-night}
+        ]
+      }
+      {
+        actionText: txt-evt-angry-demandPayment-action-1
+        standing: -3
+        text: txt-evt-village-rest-mummy-2
+        report: txt-evt-village-rest-mummy-report-2
+        select: [
+          {ref: evt-village-actions-night}
+        ]
+      }
+    ]
+  }
+  {
+    id: evt-village-rest-killOffer
+    charEvents: [
+      {
+        optional: false
+        reqStatus: +paranoid +racist
+        text: txt-evt-village-rest-killOffer
+        report: txt-evt-village-rest-killOffer-report
+        actions: [
+          {
+            actionText: txt-evt-village-rest-killOffer-action
+            text: txt-evt-village-rest-killOffer-1
+            report: txt-evt-village-rest-killOffer-report-1
+            removeCharacter: true
+            standing: 2
+            select: evt-village-actions-night
+          }
+          {
+            actionText: txt-evt-village-rest-unlockSpecialWorld-action-1
+            text: txt-evt-village-rest-killOffer-2
+            report: txt-evt-village-rest-killOffer-report-2
+            select: evt-village-actions-night
+          }
+        ]
+      }
+    ]
+  }
+  {
+    id: evt-village-rest-questionMankind
+    text: txt-evt-village-rest-questionMankind
+    report: txt-evt-village-rest-questionMankind-report
+    chat: cl-villageReligion
+    actions: [
+      {
+        actionText: txt-evt-village-rest-questionMankind-action
+        text: txt-evt-village-rest-questionMankind-1
+        report: txt-evt-village-rest-questionMankind-report-1
+        select: evt-village-actions-night
+      }
+      {
+        actionText: txt-evt-village-rest-questionMankind-action-1
+        charEvents: {optional: true, count: any, loyalty: -1, reqCharFlags: +missionary}
+        text: txt-evt-village-rest-questionMankind-2
+        report: txt-evt-village-rest-questionMankind-report-2
+        select: evt-village-actions-night
+      }
+      {
+        actionText: txt-evt-village-rest-questionMankind-action-2
+        charEvents: {
+          optional: true
+          chance: 0.5
+          count: any
+          loyalty: -1
+          reqCharFlags: +missionary
+        }
+        text: txt-evt-village-rest-questionMankind-3
+        report: txt-evt-village-rest-questionMankind-report-3
+        select: evt-village-actions-night
+      }
+    ]
+  }
+  {
+    id: evt-village-rest-whisky
+    text: txt-evt-village-rest-whisky
+    report: txt-evt-village-rest-whisky-report
+    reqItems: {it-whisky: 1..}
+    actions: [
+      {
+        actionText: txt-evt-village-rest-whisky-action
+        text: txt-evt-village-rest-whisky-1
+        report: txt-evt-village-rest-whisky-report-1
+        items: {it-whisky: -1}
+        standing: 1
+        select: [
+          {ref: evt-village-actions-night}
+        ]
+      }
+      {
+        actionText: txt-evt-angry-demandPayment-action-1
+        text: txt-evt-village-rest-whisky-2
+        report: txt-evt-village-rest-whisky-report-2
+        select: [
+          {ref: evt-village-actions-night}
+        ]
+      }
+    ]
+  }
+  {
+    id: evt-village-rest-loveStay
+    charEvents: {
+      reqCharFlags: -special +humanoid
+      reqStatus: -racist
+      text: txt-evt-village-rest-loveStay
+      actions: [evt-village-rest-loveStay-yes, evt-village-rest-loveStay-no]
+    }
+  }
+  {
+    id: evt-village-rest-loveStay-yes
+    actionText: txt-evt-village-rest-loveStay-yes-action
+    text: txt-evt-village-rest-loveStay-yes
+    report: txt-evt-village-rest-loveStay-report
+    removeCharacter: true
+    standing: 4
+    charEvents: {
+      reqStatus: +racist
+      optional: true
+      text: txt-evt-village-rest-loveStay-yes-racist
+    }
+    select: evt-village-actions-night
+  }
+  {
+    id: evt-village-rest-loveStay-no
+    actionText: txt-evt-village-enter-slave-action-1
+    loyalty: -2
+    text: txt-evt-village-rest-loveStay-no
+    select: evt-village-actions-night
+  }
+  {
+    id: evt-village-rest-animalFeast
+    text: txt-evt-village-rest-animalFeast
+    charEvents: {
+      reqCharFlags: -humanoid -imaginary
+      count: any
+      actions: {
+        actionText: txt-evt-village-rest-animalFeast-action
+        text: txt-evt-village-rest-animalFeast-yes
+        report: txt-evt-village-rest-animalFeast-report
+        storeCharacter: true
+        standing: 5
+        select: evt-village-actions-night
+      }
+    }
+    actions: {
+      actionText: txt-pl-cultist-action
+      text: txt-evt-village-rest-animalFeast-no
+      select: evt-village-actions-night
+    }
+  }
+  {
+    id: evt-village-rest-questionSuperiorLife
+    text: txt-evt-village-rest-questionSuperiorLife
+    chat: cl-villageHuizinga
+    actions: [
+      {
+        actionText: txt-evt-village-rest-questionSuperiorLife-action
+        text: txt-evt-village-rest-questionSuperiorLife-1
+        standing: -2
+        charEvents: {count: 1, optional: true, reqStatus: +st-homesick, loyalty: 1}
+        select: evt-village-actions-night
+      }
+      {
+        actionText: txt-evt-village-rest-questionSuperiorLife-action-1
+        text: txt-evt-village-rest-questionSuperiorLife-2
+        standing: 2
+        select: evt-village-actions-night
+      }
+      {
+        actionText: txt-evt-village-rest-questionMankind-action-2
+        text: txt-evt-village-rest-questionSuperiorLife-3
+        select: evt-village-actions-night
+      }
+    ]
+  }
+  {
+    id: evt-village-rest-tiedUnit
+    storeEvents: {
+      reqCharFlags: -native +humanoid -dead
+      reqAge: 20..
+      text: txt-evt-village-rest-tiedUnit
+      report: txt-evt-village-rest-tiedUnit-report
+      actions: [
+        {
+          actionText: txt-evt-village-rest-tiedUnit-action
+          text: txt-evt-village-rest-tiedUnit-barter
+          barter: {
+            baseValue: 50
+            closeEvents: {
+              text: txt-evt-village-rest-tiedUnit-1
+              report: txt-evt-village-rest-tiedUnit-report-1
+              restoreCharacter: true
+              select: evt-village-actions-night
+            }
+            cancelEvents: {
+              actionText: txt-st-kleptomania-idol-action-1
+              text: txt-evt-village-rest-tiedUnit-2
+              report: txt-evt-village-rest-tiedUnit-report-2
+              unstoreCharacter: true
+              select: evt-village-actions-night
+            }
+          }
+        }
+        {
+          actionText: txt-st-kleptomania-idol-action-1
+          text: txt-evt-village-rest-tiedUnit-3
+          report: txt-evt-village-rest-tiedUnit-report-3
+          unstoreCharacter: true
+          select: evt-village-actions-night
+        }
+      ]
+    }
+  }
+  {
+    id: evt-village-rest-imaginaryArgument
+    charEvents: {
+      reqCharFlags: +imaginary
+      text: txt-evt-village-rest-imaginaryArgument
+      standing: -3
+      select: evt-village-actions-night
+    }
+  }
+  {
+    id: evt-village-rest-questionPolygamy
+    select: [
+      {
+        charEvents: {reqCharFlags: +special, reqGender: male}
+        text: txt-evt-village-rest-questionPolygamy
+        actions: [
+          {
+            actionText: txt-evt-village-rest-questionPolygamy-action
+            text: txt-evt-village-rest-questionPolygamy-1
+            select: evt-village-actions-night
+          }
+          {
+            actionText: txt-evt-village-rest-questionPolygamy-action-1
+            text: txt-evt-village-rest-questionPolygamy-2
+            select: evt-village-actions-night
+          }
+        ]
+      }
+      {
+        charEvents: {reqCharFlags: +special, reqGender: female}
+        text: txt-evt-village-rest-questionPolygamy-3
+        actions: [
+          {
+            actionText: txt-evt-village-rest-questionPolygamy-action-2
+            text: txt-evt-village-rest-questionPolygamy-4
+            select: evt-village-actions-night
+          }
+          {
+            actionText: txt-evt-village-rest-questionPolygamy-action-3
+            text: txt-evt-village-rest-questionPolygamy-5
+            select: evt-village-actions-night
+          }
+        ]
+      }
+    ]
+  }
+  {
+    id: evt-village-rest-child
+    reqFreePartyCount: 1..
+    charEvents: {
+      reqCharFlags: +humanoid -special
+      reqStatus: -racist
+      setCharFlags: +lover
+      select: [
+        {setPartyFlags: +loverM, text: txt-evt-village-rest-childM}
+        {setPartyFlags: +loverF, text: txt-evt-village-rest-childF}
+      ]
+    }
+    actions: [evt-village-rest-child-yes, evt-village-rest-child-no]
+  }
+  {
+    id: evt-village-rest-child-yes
+    actionText: txt-evt-village-rest-child-yes-action
+    text: txt-evt-village-rest-child-yes
+    select: [evt-village-rest-child-success, evt-village-rest-child-failure]
+  }
+  {
+    id: evt-village-rest-child-no
+    actionText: txt-evt-angry-demandPayment-action-1
+    charEvents: {
+      reqCharFlags: +lover
+      setCharFlags: -lover
+      loyalty: -2
+      text: txt-evt-village-rest-child-no
+    }
+    select: evt-village-actions-night
+  }
+  {
+    id: evt-village-rest-child-success
+    text: txt-evt-village-rest-child-success
+    partyEvents: [
+      {
+        select: [
+          {
+            charEvents: {reqCharFlags: -nativeScout, count: all}
+            select: [
+              {
+                reqPartyFlags: +loverM
+                addCharacter: {id: pl-native-scout, gender: male}
+              }
+              {
+                reqPartyFlags: +loverF
+                addCharacter: {id: pl-native-scout, gender: female}
+              }
+            ]
+          }
+          {
+            charEvents: {reqCharFlags: -nativeShaman, count: all}
+            select: [
+              {
+                reqPartyFlags: +loverM
+                addCharacter: {id: pl-native-shaman, gender: male}
+              }
+              {
+                reqPartyFlags: +loverF
+                addCharacter: {id: pl-native-shaman, gender: female}
+              }
+            ]
+          }
+          {
+            charEvents: {reqCharFlags: -nativeWarrior, count: all}
+            select: [
+              {
+                reqPartyFlags: +loverM
+                addCharacter: {id: pl-native-warrior, gender: male}
+              }
+              {
+                reqPartyFlags: +loverF
+                addCharacter: {id: pl-native-warrior, gender: female}
+              }
+            ]
+          }
+          {
+            charEvents: {reqCharFlags: -nativeAnimalHandler, count: all}
+            select: [
+              {
+                reqPartyFlags: +loverM
+                addCharacter: {id: pl-native-animalHandler, gender: male}
+              }
+              {
+                reqPartyFlags: +loverF
+                addCharacter: {id: pl-native-animalHandler, gender: female}
+              }
+            ]
+          }
+        ]
+      }
+      {setPartyFlags: -loverM -loverF}
+      evt-village-replaceAngry
+    ]
+  }
+  {
+    id: evt-village-rest-child-failure
+    charEvents: {
+      reqCharFlags: +lover
+      text: txt-evt-village-rest-child-failure
+      standing: standingCostSacrilegLarge
+      actions: [
+        {
+          actionText: txt-act-barter-action
+          text: txt-evt-village-rest-child-failure-barter
+          barter: {
+            baseValue: {base: 50}
+            closeEvents: {
+              text: txt-evt-village-rest-child-failure-1
+              report: txt-evt-village-rest-child-failure-report
+              select: evt-village-actions-night
+            }
+            cancelEvents: {
+              actionText: txt-st-kleptomania-idol-action-1
+              text: txt-evt-village-rest-child-failure-2
+              report: txt-evt-village-rest-child-failure-report-1
+              removeCharacter: true
+              select: evt-village-actions-night
+            }
+          }
+        }
+        {
+          actionText: txt-st-kleptomania-idol-action-1
+          text: txt-evt-village-rest-child-failure-3
+          report: txt-evt-village-rest-child-failure-report-2
+          removeCharacter: true
+          select: evt-village-actions-night
+        }
+      ]
+    }
+  }
+  {
+    id: evt-village-rest-angryUnit
+    charEvents: {
+      reqStatus: +st-angry
+      text: txt-evt-village-rest-angryUnit
+      actions: [
+        {
+          actionText: txt-evt-village-rest-angryUnit-action
+          text: txt-evt-village-rest-angryUnit-1
+          select: [
+            {
+              text: txt-evt-village-rest-angryUnit-2
+              removeCharacter: true
+              select: evt-village-actions-night
+            }
+            {
+              text: txt-evt-village-rest-angryUnit-3
+              loyalty: 1
+              select: evt-village-actions-night
+            }
+          ]
+        }
+        {
+          actionText: txt-evt-village-rest-angryUnit-action-1
+          text: txt-evt-village-rest-angryUnit-4
+          select: evt-village-actions-night
+        }
+      ]
+    }
+  }
+  {
+    id: evt-village-rest-badRumors
+    charEvents: {reqCharFlags: +special, text: txt-evt-village-rest-badRumors}
+    storeEvents: {reqLoyalty: 0, text: txt-evt-village-rest-badRumors-1}
+    select: evt-village-actions-night
+  }
+  {
+    id: evt-village-rest-rash
+    text: txt-evt-village-rest-rash
+    actions: [
+      {
+        actionText: txt-evt-village-rest-rash-action
+        text: txt-evt-village-rest-rash-1
+        standing: 1
+        charEvents: {chance: 0.5, setPartyStatus: +jungleFever}
+        select: evt-village-actions-night
+      }
+      {
+        actionText: txt-evt-village-rest-rash-action-1
+        text: txt-evt-village-rest-rash-2
+        standing: -1
+        select: evt-village-actions-night
+      }
+    ]
+  }
+  {
+    id: evt-village-rest-questionGender
+    text: txt-evt-village-rest-questionGender
+    report: txt-evt-village-rest-questionGender-report
+    actions: [
+      {
+        charEvents: {
+          optional: true
+          count: any
+          reqCharFlags: +humanoid -special
+          reqGender: male
+          loyalty: -1
+        }
+        actionText: txt-evt-village-rest-questionGender-action
+        text: txt-evt-village-rest-questionGender-1
+        report: txt-evt-village-rest-questionGender-report-1
+        select: evt-village-actions-night
+      }
+      {
+        charEvents: {
+          optional: true
+          count: any
+          reqCharFlags: +humanoid -special
+          reqGender: female
+          loyalty: -1
+        }
+        actionText: txt-evt-village-rest-questionGender-action-1
+        text: txt-evt-village-rest-questionGender-2
+        report: txt-evt-village-rest-questionGender-report-2
+        select: evt-village-actions-night
+      }
+      {
+        charEvents: {optional: true, count: any, reqStatus: +sexist, loyalty: -1}
+        actionText: txt-evt-village-rest-questionGender-action-2
+        text: txt-evt-village-rest-questionGender-3
+        report: txt-evt-village-rest-questionGender-report-3
+        select: evt-village-actions-night
+      }
+    ]
+  }
+  {
+    id: evt-village-rest-bongoPlayer
+    reqItems: {it-bongos: 1..}
+    text: txt-evt-village-rest-bongoPlayer
+    actions: [
+      {
+        actionText: txt-evt-village-rest-bongoPlayer-action
+        text: txt-evt-village-rest-bongoPlayer-1
+        select: [
+          {
+            text: txt-evt-village-rest-bongoPlayer-2
+            items: {it-bongos: -1}
+            select: evt-village-actions-night
+          }
+          {
+            slots: 2
+            text: txt-evt-village-rest-bongoPlayer-3
+            items: {it-bongos: -1, it-bongosTuned: 1}
+            select: evt-village-actions-night
+          }
+        ]
+      }
+      {
+        actionText: txt-evt-angry-demandPayment-action-1
+        standing: standingCostSacrilegSmall
+        text: txt-evt-village-rest-bongoPlayer-4
+        select: evt-village-actions-night
+      }
+    ]
+  }
+  {
+    id: evt-village-rest-positive-gameover
+    reqStanding: 8..
+    reqWorld: 3..
+    reqDifficulty: 1..
+    text: txt-evt-village-rest-positive-gameover
+    report: txt-evt-village-rest-positive-gameover-report
+    actions: [
+      {
+        actionText: txt-evt-village-rest-positive-gameover-action
+        text: txt-evt-village-rest-positive-gameover-1
+        actions: [
+          {
+            actionText: txt-evt-village-rest-positive-gameover-action
+            text: txt-evt-village-rest-positive-gameover-2
+            charEvents: {reqCharFlags: +special, text: txt-evt-village-rest-positive-gameover-3}
+            unlockCharacter: sp-fortune
+            actions: {gameOver: The End}
+          }
+          evt-village-rest-positive-gameover-cancel
+        ]
+      }
+      evt-village-rest-positive-gameover-cancel
+    ]
+  }
+  {
+    id: evt-village-rest-positive-gameover-cancel
+    actionText: txt-evt-village-rest-positive-gameover-cancel-action
+    text: txt-evt-village-rest-positive-gameover-cancel
+    select: evt-village-actions-night
+  }
+  {
+    id: evt-village-rest-wedding
+    reqMaxPerWorld: 1
+    text: txt-evt-village-rest-wedding
+    setLocationFlags: +wedding
+    partyEvents: {
+      select: [
+        {text: txt-evt-village-rest-wedding-var1}
+        {text: txt-evt-village-rest-wedding-var2}
+        {text: txt-evt-village-rest-wedding-var3}
+      ]
+    }
+    select: evt-village-actions-night
+  }
+  {
+    id: evt-village-rest-funeral-bless
+    actionText: txt-evt-village-rest-funeral-bless-action
+    reqDice: mind
+    winEvents: {
+      text: txt-evt-village-rest-funeral-missionary-bless-success
+      standing: 2
+      select: evt-village-actions-night
+    }
+    failEvents: {
+      text: txt-evt-village-rest-funeral-missionary-bless-fail
+      standing: -2
+      select: evt-village-actions-night
+    }
+  }
+  {
+    id: evt-village-rest-funeral-noBless
+    actionText: txt-evt-village-rest-funeral-noBless-action
+    text: txt-evt-village-rest-funeral-missionary-noBless
+    loyalty: -1
+    select: evt-village-actions-night
+  }
+  {
+    id: evt-village-rest-funeral
+    text: txt-evt-village-rest-funeral
+    select: [
+      {
+        reqCharFlags: +missionary
+        text: txt-evt-village-rest-funeral-missionary
+        actions: [evt-village-rest-funeral-bless, evt-village-rest-funeral-noBless]
+      }
+      {prio: 1, ref: evt-village-actions-night}
+    ]
+  }
+  {
+    id: evt-village-rest-maturation
+    reqMaxPerWorld: 1
+    reqLocationFlags: -wedding
+    text: txt-evt-village-rest-maturation
+    partyEvents: [
+      {
+        optional: true
+        text: txt-evt-village-rest-maturation-var1
+        reqBiomeFlags: -desert -jungle
+      }
+      {
+        optional: true
+        text: txt-evt-village-rest-maturation-varDesert
+        reqBiomeFlags: +desert
+      }
+      {
+        optional: true
+        text: txt-evt-village-rest-maturation-varJungle
+        reqBiomeFlags: +jungle
+      }
+      {optional: true, text: txt-evt-village-rest-maturation-2}
+    ]
+    charEvents: {
+      reqCharFlags: +special
+      actions: {
+        actionText: txt-evt-village-rest-maturation-yes-action
+        reqDice: agility | stability
+        winEvents: {
+          id: evt-village-rest-maturation-win
+          text: txt-evt-village-rest-maturation-win
+          standing: 2
+          select: evt-village-actions-night
+        }
+        failEvents: {
+          id: evt-village-rest-maturation-fail
+          text: txt-evt-village-rest-maturation-fail
+          standing: -2
+          select: evt-village-actions-night
+        }
+      }
+    }
+    actions: {
+      id: evt-village-rest-maturation-no
+      actionText: txt-evt-village-rest-maturation-no-action
+      text: txt-evt-village-rest-maturation-no
+      standing: -1
+      select: evt-village-actions-night
+    }
+  }
+  {
+    id: evt-village-rest-flavor-idol
+    reqLocationFlags: +idolVillage
+    reqMaxPerWorld: 1
+    text: txt-evt-village-rest-flavor-idol
+    select: evt-village-actions-night
+  }
+  {
+    id: evt-village-stealIdol
+    reqLocationFlags: +idolVillage
+    reqDice: stability
+    actionText: txt-evt-village-stealIdol-action
+    items: {it-idol: 1}
+    winEvents: {
+      id: evt-village-stealIdol-win
+      standing: standingCostSacrilegSmall
+      setLocationFlags: -idolVillage
+      text: txt-evt-village-stealIdol-success
+      report: txt-evt-village-stealIdol-success-report
+    }
+    failEvents: {
+      id: evt-village-stealIdol-fail
+      standing: standingCostSacrilegLarge
+      text: txt-evt-village-stealIdol-fail
+      select: evt-village-replaceAngry
+    }
+  }
+  {
+    id: evt-village-actions-night-anthropology
+    actionText: txt-evt-village-actions-night-anthropology-action
+    text: txt-evt-village-actions-night-anthropology
+    charEvents: {reqStatus: +anthropology}
+    reqTileFlags: -anthropology
+    setTileFlags: +anthropology
+    report: txt-evt-village-actions-night-anthropology-report
+    items: {it-anthropologicalStudies: 1}
+    incAchievement: ach-studies-collect
+    select: [
+      {
+        slots: 3
+        text: txt-evt-village-actions-night-anthropology-1
+        select: evt-village-actions-night
+      }
+      {
+        slots: 1
+        text: txt-evt-village-actions-night-anthropology-2
+        select: evt-village-actions-night
+      }
+    ]
+  }
+]

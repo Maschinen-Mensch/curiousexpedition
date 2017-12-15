@@ -1,0 +1,35 @@
+[
+  {
+    id: loc-cave-ghostsQuest
+    extends: loc-cave
+    spawnEvents: {setLocationFlags: +caveTypeGhostsQuest}
+  }
+  {
+    id: evt-cave-ghostsQuest
+    setLocationFlags: +explored
+    setPartyFlags: +nativeGhostQuest
+    showImage: {src: evt_fxt_cave_spiders.png}
+    text: txt-evt-cave-ghostsQuest
+    report: txt-evt-cave-ghostsQuest-report
+    actions: {
+      actionText: txt-evt-cave-ghostsQuest-action
+      combat: [
+        {emy-giantSpider: 2, emy-giantSpider-quest: 1}
+      ]
+    }
+  }
+  {
+    id: evt-cave-monsterDen-giantSpiders
+    setLocationFlags: +explored
+    setPartyFlags: +nativeGhostQuest
+    showImage: {src: evt_fxt_cave_spiders.png}
+    text: txt-evt-cave-monsterDen-giantSpiders
+    report: txt-evt-cave-monsterDen-giantSpiders-report
+    actions: {
+      actionText: txt-evt-cave-ghostsQuest-action
+      combat: [
+        {emy-giantSpider: 2}
+      ]
+    }
+  }
+]

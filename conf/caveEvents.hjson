@@ -1,0 +1,210 @@
+[
+
+  {
+    id: evt-cave-opening
+    setLocationFlags: +explored
+    showImage: {src: evt_fxt_cave_hole.png}
+    text: txt-evt-cave-opening
+    report: txt-evt-cave-opening-report
+    charEvents: [
+      {optional: true, count: any, actions: evt-cave-sendIn}
+      {
+        optional: true
+        count: all
+        reqCharFlags: +humanoid -special
+        reqStatus: +st-injured
+        text: txt-evt-cave-opening-1
+        report: txt-evt-cave-opening-report-1
+      }
+    ]
+    actions: evt-cave-explored-leave
+  }
+  {
+    id: evt-cave-paintings
+    showImage: {src: evt_fxt_cave_paintings.png}
+    setLocationFlags: +explored
+    text: txt-evt-cave-paintings
+    report: txt-evt-cave-paintings-report
+    select: evt-unlock-specialWorld-noText
+    actions: evt-cave-explored-leave
+  }
+  {
+    id: evt-cave-mushrooms
+    showImage: {src: evt_fxt_cave_mushrooms.png}
+    chat: cl-nature
+    text: txt-evt-cave-mushrooms
+    report: txt-evt-cave-mushrooms-report
+    actions: [
+      {
+        actionText: txt-evt-cave-mushrooms-action
+        setLocationFlags: +explored
+        text: txt-evt-cave-mushrooms-1
+        loot: {
+          items: [
+            {slots: 1, il-mushrooms: 1}
+            {slots: 3, il-mushrooms: 2}
+            {slots: 1, il-mushrooms: 3}
+          ]
+          closeEvents: evt-cave-explored-leave
+        }
+      }
+      evt-cave-mushrooms-refillWater
+      evt-cave-explored-leave
+    ]
+  }
+  {
+    id: evt-cave-mushrooms-refillWater
+    actionText: txt-evt-cave-mushrooms-refillWater-action
+    chat: cl-water-pack
+    items: {it-water: 20}
+    select: evt-cave-mushrooms
+  }
+  {
+    id: evt-cave-corpses
+    showImage: {src: evt_fxt_cave_corpses.png}
+    chat: cl-scaryPlace
+    text: txt-evt-cave-corpses
+    report: txt-evt-cave-corpses-report
+    actions: [
+      {
+        actionText: txt-evt-cave-corpses-action
+        chat: cl-scaryPlace
+        setLocationFlags: +explored
+        text: txt-evt-cave-corpses-1
+        report: txt-evt-cave-corpses-report-1
+        loot: {
+          items: [
+            {slots: 1, il-loot-standard: 3}
+            {slots: 2, il-loot-standard: 2}
+            {slots: 1, it-map-treasure: 1, it-shovel: 1, il-loot-standard: 2}
+            {slots: 1, il-treasure-lowValue: 1, it-jewels: 1, il-loot-standard: 1}
+            {slots: 1, il-magic: 1, il-loot-standard: 2}
+          ]
+          closeEvents: evt-cave-explored-leave
+        }
+      }
+      evt-cave-explored-leave
+    ]
+  }
+  {
+    id: evt-cave-mummy
+    showImage: {src: evt_fxt_cave_mummy.png}
+    setLocationFlags: +explored
+    chat: cl-sacrileg-warning
+    text: txt-evt-cave-mummy
+    report: txt-evt-cave-mummy-report
+    actions: [
+      {
+        actionText: txt-evt-cave-mummy-action
+        chat: cl-sacrileg-loot
+        setLocationFlags: +explored
+        text: txt-evt-cave-mummy-1
+        setPartyFlags: +sacrileg
+        loot: {
+          items: [
+            {slots: 1, it-mummy: 2}
+            {slots: 3, it-mummy: 1}
+            {slots: 1, it-mummy: 1, it-jewels: 1}
+            {slots: 1, it-mummy: 1, il-treasure-lowValue: 1}
+          ]
+          closeEvents: evt-cave-explored-leave
+        }
+      }
+      evt-cave-explored-leave
+    ]
+  }
+  {
+    id: evt-cave-sendIn
+    actionText: txt-evt-cave-sendIn-action
+    setCharFlags: +exploring
+    reqCharFlags: -special +humanoid
+    chat: cl-cave-sendIn
+    report: txt-evt-cave-sendIn-report
+    reqDice: awarenes
+    charEvents: [
+      {
+        optional: true
+        reqStatus: +claustrophobic
+        reqCharFlags: +exploring
+        text: txt-evt-cave-sendIn
+      }
+      {
+        optional: true
+        reqStatus: -claustrophobic
+        reqCharFlags: +exploring
+        text: txt-evt-cave-sendIn-1
+      }
+    ]
+    winEvents: {ref: evt-cave-outcome-rewards}
+    failEvents: {ref: evt-cave-outcome-bad-1}
+  }
+  {
+    id: evt-cave-outcome-rewards
+    setLocationFlags: +explored
+    select: [
+      {
+        slots: 5
+        charEvents: {
+          reqCharFlags: +exploring
+          setCharFlags: -exploring
+          text: txt-evt-cave-outcome-rewards
+          report: txt-evt-cave-outcome-rewards-report
+        }
+        loot: {
+          items: [
+            {slots: 3, il-loot-standard: 3, it-jewels: 1}
+            {slots: 1, il-treasure-lowValue: 2, it-jewels: 1}
+            {slots: 1, il-magic: 1, il-tomePages: 2}
+          ]
+          closeEvents: evt-cave-explored-leave
+        }
+      }
+      {
+        slots: 1
+        charEvents: {
+          reqCharFlags: +exploring
+          setCharFlags: -exploring
+          text: txt-evt-cave-outcome-rewards-1
+        }
+        loot: {
+          items: {il-magic: 1}
+          closeEvents: evt-cave-explored-leave
+        }
+      }
+    ]
+  }
+  {
+    id: evt-cave-outcome-bad-1
+    charEvents: [
+      {reqCharFlags: +exploring, reqStatus: -claustrophobic}
+      {
+        optional: true
+        reqCharFlags: +exploring +native
+        setCharFlags: -exploring
+        setTempFlags: +nativeExploring
+        storeCharacter: true
+        text: txt-evt-cave-outcome-bad-1
+        report: txt-evt-cave-outcome-bad-1-report
+      }
+      {
+        optional: true
+        reqCharFlags: +exploring -native
+        setCharFlags: -exploring
+        storeCharacter: true
+        text: txt-evt-cave-outcome-bad-2
+        report: txt-evt-cave-outcome-bad-1-report-1
+      }
+      {
+        optional: true
+        count: 1
+        chance: 0.8
+        reqCharFlags: -exploring
+        reqStatus: +racist
+        reqTempFlags: +nativeExploring
+        text: txt-evt-cave-outcome-bad-3
+      }
+      {count: any, optional: true, actions: evt-cave-sendIn}
+    ]
+    actions: evt-cave-explored-leave
+  }
+]

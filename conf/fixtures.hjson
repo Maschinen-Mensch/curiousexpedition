@@ -1,0 +1,116 @@
+[
+  {
+    id: loc-magneticMountain
+    name: txt-fxt-magneticMountain-name
+    debugCategory: nature
+    debugColor: "#64ff58"
+    sprite: res_fxt_magneticMountain.png
+    showHint: false
+    hintBiome: false
+    flags: +magnetic
+    hintCompass: true
+    particle: pt-magnetic
+    setTile: tl-mountain
+  }
+  {
+    id: loc-rockFormation
+    name: txt-fxt-rockFormation-name
+    debugCategory: decorative
+    sprite: res_fxt_rockFormation.png
+    showHint: false
+    mapScore: 0
+    setTile: [
+      {ref: tl-grass, reqBiomeFlags: +prehistoric | +grass}
+      {ref: tl-dry, reqBiomeFlags: +dry | +desert}
+    ]
+  }
+  {
+    id: loc-giantTree
+    name: txt-fxt-giantTree-name
+    debugCategory: decorative
+    flags: +giantTree
+    sprite: res_fxt_giantTree.png
+    showHint: false
+    reqBiomeFlags: -dry -desert
+    mapScore: 0
+    setTile: tl-jungle-thick
+    setNeighbors: [
+      {count: 4, ref: tl-jungle-thick}
+    ]
+  }
+  {
+    id: loc-mountainFace
+    name: txt-fxt-mountainFace-name
+    debugCategory: decorative
+    sprite: res_fxt_mountainFace.png
+    flags: +mountainFace +mountain
+    showHint: false
+    mapScore: 0
+    setTile: tl-mountain
+  }
+  {
+    id: loc-special-chasmCircle-bridge
+    name: txt-fxt-special-chasmCircle-bridge-name
+    subLocations: [
+      {ref: loc-stoneStatue01, offsets: 1ne}
+      {ref: loc-stoneStatue01, offsets: 2ne}
+      {ref: loc-stoneStatue01, offsets: 3ne}
+    ]
+  }
+  {
+    id: loc-special-chasmCircle
+    name: txt-fxt-special-chasmCircle-name
+    sprite: res_fxt_giantSkeleton.png
+    spawnEvents: {
+      replaceTiles: [
+        {radius: 3, old: any, new: tl-pit-grass, chance: 0.3}
+        {radius: 2, old: any, new: tl-pit-grass}
+        {radius: 1, old: any, new: tl-grass}
+      ]
+    }
+  }
+  {
+    id: loc-special-caveCircle-blessingTemple
+    name: txt-fxt-special-caveCircle-blessingTemple-name
+    spawnEvents: {
+      replaceTiles: [
+        {radius: 3, old: any, new: tl-dry}
+        {radius: 3, old: any, new: tl-dry-jungle-thick, chance: 0.3}
+        {radius: 2, old: any, new: tl-mountain}
+        {radius: 1, old: any, new: tl-dry}
+        {radius: 1, old: any, new: tl-dry-stoneForest, chance: 0.2}
+      ]
+      select: [
+        {
+          partyEvents: [
+            {
+              addLocation: {ref: loc-blessingTemple-noNeighbors, range: 0}
+            }
+            {
+              addLocation: {ref: loc-cave-noNeighbors, range: ..2}
+            }
+          ]
+        }
+      ]
+    }
+  }
+  {
+    id: loc-cave-noNeighbors
+    extends: loc-cave
+    setNeighbors: []
+    setTile: tl-mountain
+  }
+  {
+    id: loc-giantSkeleton
+    name: txt-fxt-giantSkeleton-name
+    debugCategory: decorative
+    sprite: res_fxt_giantSkeleton.png
+    showHint: false
+    mapScore: 0
+    setTile: [
+      {ref: tl-grass, reqBiomeFlags: +prehistoric -desert | +grass}
+      {ref: tl-dry, reqBiomeFlags: +dry -desert}
+      {ref: tl-desert, reqBiomeFlags: +desert}
+    ]
+  }
+]

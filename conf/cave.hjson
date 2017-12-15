@@ -1,0 +1,303 @@
+[
+  {
+    id: loc-cave
+    name: txt-fxt-cave-name
+    flags: +cave
+    keepReachable: true
+    sprite: [
+      {ref: res_fxt_cave.png, reqBiomeFlags: -arctic}
+      {ref: res_fxt_cave_arctic.png, reqBiomeFlags: +arctic}
+    ]
+    setTile: [
+      {ref: tl-mountain, reqBiomeFlags: -arctic}
+      {ref: tl-glacier-land, reqBiomeFlags: +arctic}
+    ]
+    setNeighbors: [
+      {ref: tl-mountain, count: 3, reqBiomeFlags: -arctic}
+      {ref: tl-glacier-land, count: 3, reqBiomeFlags: +arctic}
+    ]
+    actions: evt-cave-approach
+    debugCategory: cave
+    debugColor: "#5DADE2"
+  }
+  {
+    id: evt-cave-setCaveType
+    select: [
+      {slots: 20, setLocationFlags: +caveTypeCorpses}
+      {slots: 15, setLocationFlags: +caveTypeOpening}
+      {slots: 10, setLocationFlags: +caveTypePaintings, reqWorld: 1..4}
+      {slots: 10, setLocationFlags: +caveTypeMushrooms}
+      {slots: 10, setLocationFlags: +caveTypeMummy}
+      {slots: 2, reqBiomeFlags: +arctic, setLocationFlags: +caveTypeYeti}
+    ]
+  }
+  {
+    id: evt-cave-selectCaveEvent
+    actionText: txt-evt-sanity-angry-action
+    select: [
+      {reqLocationFlags: +caveTypeOpening, select: evt-cave-opening}
+      {reqLocationFlags: +caveTypePaintings, select: evt-cave-paintings}
+      {reqLocationFlags: +caveTypeMushrooms, select: evt-cave-mushrooms}
+      {reqLocationFlags: +caveTypeCorpses, select: evt-cave-corpses}
+      {reqLocationFlags: +caveTypeMummy, select: evt-cave-mummy}
+      {reqLocationFlags: +caveTypeTeleport, select: evt-cave-teleport-arrive}
+      {reqLocationFlags: +caveTypeGhostsQuest, select: evt-cave-ghostsQuest}
+      {reqLocationFlags: +caveTypeYeti, select: evt-cave-yeti}
+      {reqLocationFlags: +caveTypeMonsterDenGiantSpiders, select: evt-cave-monsterDen-giantSpiders}
+    ]
+  }
+  {
+    id: evt-cave-approach
+    reqLocationFlags: -explored
+    actionText: txt-evt-cave-approach-action
+    playMusic: [thm_nature_mystic_1, thm_nature_mystic_2]
+    partyEvents: [
+      {
+        optional: true,
+        reqLocationFlags: -caveTypeSet
+        setLocationFlags: +caveTypeSet
+        select: evt-cave-setCaveType
+      }
+      {  
+        optional: true
+        select: [
+          {
+            reqBiomeFlags: -arctic
+            showImage: {src: evt_fxt_cave_1.png, type: day}
+          }
+          {
+            optional: true
+            reqBiomeFlags: +arctic
+            showImage: {
+              src: evt_fxt_cave_arctic.png, type: day
+              particles: pt-snow-1 pt-snow-2 pt-snow-3, particlesChance: 0.5
+            }
+          }
+        ]
+      }
+      {
+        optional: true
+        reqLocationFlags: +caveTypeYeti
+        select: [
+          {
+            reqPartyFlags: -yetiEncountered
+            setPartyFlags: +yetiEncountered
+            select: evt-cave-yeti
+          }
+          {
+            reqPartyFlags: +yetiEncountered
+            setLocationFlags: -caveTypeYeti
+            select: evt-cave-setCaveType
+          }
+        ]
+      }
+      {
+        optional: true
+        reqLocationFlags: -caveTypeYeti
+        text: txt-evt-cave-approach
+        chat: cl-cave-approach
+        select: evt-cave-approach-actions
+      }
+    ]
+  }
+  {
+    id: evt-cave-approach-actions
+    actions: [
+      evt-cave-explore-torch
+      evt-cave-explore-pumpkinLantern
+      evt-cave-explore-noTorch
+      evt-leave
+    ]
+  }
+  {
+    id: evt-cave-explore-torch
+    reqItems: {it-torch: 1..}
+    alwaysShown: true
+    actionText: txt-evt-cave-explore-torch-action
+    reqLocationFlags: -caveTypeYeti
+    items: {it-torch: -1}
+    playMusic: thm_cave_1 thm_cave_2
+    text: txt-evt-cave-explore-torch
+    select: evt-cave-selectCaveEvent
+  }
+  {
+    id: evt-cave-explore-pumpkinLantern
+    reqItems: {it-pumpkinLantern: 1..}
+    actionText: txt-evt-cave-explore-pumpkinLantern-action
+    playMusic: [thm_cave_1, thm_cave_2]
+    text: txt-evt-cave-explore-pumpkinLantern
+    select: evt-cave-selectCaveEvent
+  }
+  {
+    id: evt-cave-win-explore
+    loot: {
+      items: {}
+      closeEvents: evt-cave-selectCaveEvent
+    }
+  }
+  {
+    id: evt-cave-flee-explore
+    sanity: -20
+    select: evt-cave-selectCaveEvent
+  }
+  {
+    id: evt-cave-explored-leave
+    actionText: txt-evt-cave-explored-leave-action
+    partyEvents: [
+      {
+        optional: true
+        reqBiomeFlags: -arctic
+        replaceTiles: {radius: 0, old: tl-mountain, new: tl-mountainTraversable, animate: false}
+      }
+      {
+        optional: true
+        reqBiomeFlags: +arctic
+        replaceTiles: {
+          radius: 0
+          old: tl-glacier-land
+          new: tl-glacier-land-traversable
+          animate: false
+        }
+      }
+      {
+        teleport: true
+      }
+    ]
+    select: evt-leave
+  }
+  {
+    id: evt-cave-explore-noTorch
+    actionText: txt-evt-cave-explore-noTorch-action
+    reqLocationFlags: -caveTypeYeti
+    playMusic: [thm_cave_1, thm_cave_2]
+    showImage: {src: evt_fxt_cave_darkness.png, type: day}
+    text: txt-evt-cave-explore-noTorch
+    reqDice: awarenes
+    winEvents: [
+      {text: txt-evt-cave-explore-noTorch-1}
+    ]
+    failEvents: [
+      {
+        slots: 5
+        setLocationFlags: +noTorchInjury
+        charEvents: {reqCharFlags: +humanoid -special -abomination, reqStatus: -injured}
+        text: txt-evt-cave-explore-noTorch-2
+      }
+      {
+        slots: 3
+        reqDifficulty: 1..
+        setLocationFlags: +spiders
+        text: txt-evt-cave-explore-noTorch-3
+      }
+      {
+        slots: 6
+        charEvents: {reqCharFlags: +humanoid -special -abomination, reqStatus: +claustrophobic}
+        text: txt-evt-cave-explore-noTorch-4
+        select: [
+          {slots: 3, setLocationFlags: +noTorchClaustrophobic}
+          {slots: 1, setLocationFlags: +noTorchClaustrophobicDeath}
+        ]
+      }
+      {
+        slots: 2
+        reqDifficulty: 1..
+        charEvents: {reqCharFlags: +humanoid -special -abomination}
+        setLocationFlags: +noTorchDeath
+        text: txt-evt-cave-explore-noTorch-5
+      }
+      {
+        slots: 2
+        charEvents: {reqCharFlags: +humanoid -special -abomination}
+        setLocationFlags: +noTorchAbomination
+        text: txt-evt-cave-explore-noTorch-6
+      }
+    ]
+    actions: [
+      {
+        actionText: txt-evt-sanity-angry-action
+        showImage: {src: evt_fxt_cave_darkness_2.png}
+        text: txt-evt-cave-explore-noTorch-7
+        charEvents: [
+          {
+            optional: true
+            reqLocationFlags: +noTorchInjury
+            reqCharFlags: -special +humanoid -abomination
+            reqStatus: -injured
+            health: -6
+            text: txt-evt-cave-explore-noTorch-8
+          }
+          {
+            optional: true
+            reqLocationFlags: +spiders
+            text: txt-evt-cave-explore-noTorch-9
+            select: [
+              {
+                reqWorld: ..2
+                slots: 2
+                combat: {
+                  refs: {emy-giantSpider: 1, winEvents: evt-cave-win-explore, fleeEvents: evt-cave-flee-explore}
+                }
+              }
+              {
+                reqWorld: 2..
+                slots: 1
+                combat: {
+                  refs: {emy-giantSpider: 2, winEvents: evt-cave-win-explore, fleeEvents: evt-cave-flee-explore}
+                }
+              }
+              {
+                reqWorld: 4..
+                slots: 2
+                combat: {
+                  refs: {emy-giantSpider: 3, winEvents: evt-cave-win-explore, fleeEvents: evt-cave-flee-explore}
+                }
+              }
+            ]
+          }
+          {
+            optional: true
+            reqLocationFlags: +noTorchClaustrophobic
+            charEvents: {
+              reqCharFlags: -special +humanoid -abomination
+              reqStatus:  +st-claustrophobic
+              text: txt-evt-cave-explore-noTorch-10
+            }
+            sanity: -20
+          }
+          {
+            optional: true
+            reqLocationFlags: +noTorchClaustrophobicDeath
+            charEvents: {
+              reqCharFlags: -special +humanoid -abomination
+              reqStatus:  +st-claustrophobic
+              text: txt-evt-cave-explore-noTorch-11
+              storeCharacter: true
+              setCharFlags: +dead
+            }
+            sanity: -20
+          }
+          {
+            optional: true
+            reqLocationFlags: +noTorchDeath
+            charEvents: {
+              reqCharFlags: -special +humanoid -abomination
+              text: txt-evt-cave-explore-noTorch-12
+              storeCharacter: true
+            }
+          }
+          {
+            optional: true
+            reqLocationFlags: +noTorchAbomination
+            charEvents: {
+              reqCharFlags: -special +humanoid -abomination
+              text: txt-evt-cave-explore-noTorch-13
+              removeCharacter: true
+            }
+            addCharacter: pl-abomination
+          }
+        ]
+        actions: evt-cave-selectCaveEvent
+      }
+    ]
+  }
+]

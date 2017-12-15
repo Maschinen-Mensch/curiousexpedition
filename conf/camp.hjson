@@ -1,0 +1,94 @@
+[
+  {
+    id: it-camp
+    name: txt-it-camp-name
+    description: txt-it-camp
+    sprite: it_utility_camp_1.png
+    value: {base: 60, karma: 1}
+    maxStack: 1
+    debugCategory: utility
+    useEvents: {
+      partyEvents: [
+        {
+          reqLocation: {flags: "", range: 0}
+          optional: true
+          setTempFlags: +campFail
+          chat: cl-camp-fail
+        }
+        {
+          reqTiles: tl-river-shallow tl-sulfur-shallow tl-packIce
+          optional: true
+          setTempFlags: +campFail
+          chat: cl-camp-fail
+        }
+        {
+          reqTempFlags: -campFail
+          optional: true
+          chat: cl-camp-success
+          turns: 3
+          addLocation: {ref: loc-camp, range: 0}
+          removeItem: true
+        }
+      ]
+    }
+  }
+  {
+    id: loc-camp
+    name: txt-fxt-camp-name
+    flags: +camp
+    mapScore: 0
+    sprite: res_fxt_camp.png
+    actions: evt-camp-explore
+    debugColor: "#64ff58"
+  }
+  {
+    id: evt-camp-explore
+    actionText: txt-evt-camp-explore-action
+    text: txt-evt-camp-explore
+    chat: cl-nature
+    playMusic: thm_nature_1
+    partyEvents: [
+      {
+        optional: true
+        reqBiomeFlags: -arctic
+        showImage: {src: evt_fxt_campItem_1.png, type: day}
+      }
+      {
+        optional: true
+        reqBiomeFlags: +arctic
+        showImage: {
+          src: evt_fxt_campItem_1.png
+          type: day
+          showMounted: false
+          particles: pt-snow-1 pt-snow-2 pt-snow-3
+          particlesChance: 0.5
+        }
+      }
+    ]
+    select: evt-camp-actions
+  }
+  {
+    id: evt-camp-packUp
+    actionText: txt-evt-camp-packUp-action
+    text: txt-evt-camp-packUp
+    turns: 3
+    replaceLocations: {}
+    items: [
+      {it-camp: 1}
+    ]
+    setPartyFlags: -startFire
+    select: evt-leave
+  }
+  {
+    id: evt-camp-morning
+    text: txt-evt-camp-morning
+    showImage: {src: evt_fxt_campItem_1.png, type: day}
+    playMusic: thm_nature_1
+    chat: cl-newMorning
+    select: evt-camp-actions
+  }
+  {
+    id: evt-camp-actions
+    actions: evt-nature-rest evt-camp-packUp evt-leave
+  }
+]

@@ -1,0 +1,258 @@
+[
+  {
+    id: loc-village-tutorial
+    extends: loc-village-1
+    actions: evt-village-tutorial-init
+    spawnEvents: {setLocationFlags: +tribeWarriors}
+  }
+  {
+    id: evt-village-tutorial-init
+    actionText: txt-evt-village-init-action
+    select: evt-village-tutorial-setImageDay-enter
+  }
+  {
+    id: evt-village-tutorial-setImageDay-enter
+    partyEvents: [evt-village-tutorial-setImageDay, evt-village-tutorial-enter]
+  }
+  {
+    id: evt-village-tutorial-setImageDay
+    partyEvents: [
+      {
+        reqLocationFlags: +villageType_1
+        optional: true
+        showImage: {src: evt_fxt_village_1.png, type: day}
+        playMusic: thm_village_2
+      }
+      {
+        reqLocationFlags: +villageType_1 +inhabited
+        optional: true
+        npc: [
+          npc-native-generic-chief
+          npc-native-generic
+          npc-native-generic
+          npc-native-generic
+          npc-native-generic
+          npc-native-generic
+          npc-native-generic
+        ]
+      }
+    ]
+  }
+  {
+    id: evt-village-tutorial-enter
+    chat: cl-village-enter
+    select: [
+      {text: txt-evt-village-enter, select: evt-village-tutorial-enterCheck}
+    ]
+  }
+  {
+    id: evt-village-tutorial-enterCheck
+    setLocationFlags: +enterEvent
+    select: [
+      {prio: 1, ref: evt-village-tutorial-main}
+    ]
+  }
+  {
+    id: evt-village-tutorial-main
+    text: txt-evt-village-main-tut
+    select: evt-village-tutorial-actions
+  }
+  {
+    id: evt-village-tutorial-actions
+    select: [
+      {
+        actions: [
+          evt-village-tutorial-rest
+          evt-village-tutorial-recruit
+          evt-village-tutorial-trade
+          evt-village-tutorial-leave
+        ]
+      }
+    ]
+  }
+  {
+    id: evt-village-tutorial-main-update
+    actionText: txt-evt-village-main-update-action
+    partyEvents: [
+      {
+        optional: true
+        prio: -1
+        reqTutorial: true
+        text: txt-evt-village-main-update-tut
+      }
+    ]
+    select: evt-village-tutorial-actions
+  }
+  {
+    id: evt-village-tutorial-rest
+    alwaysShown: true
+    actionText: txt-evt-village-rest-action
+    reqTileFlags: -restFail
+    partyEvents: evt-village-tutorial-setImageNight
+    select: [
+      {text: txt-evt-village-rest, select: evt-village-tutorial-nightSelect}
+    ]
+  }
+  {
+    id: evt-village-tutorial-sleep
+    actionText: txt-evt-mission-sleep-action
+    sanity: {base: sanityRestVillage, bonus: villageSanityBonus}
+    turns: 1
+    standing: standingCostVillageUse
+    select: evt-village-tutorial-morning
+  }
+  {
+    id: evt-village-tutorial-morning
+    text: txt-evt-village-morning
+    chat: cl-newMorning
+    select: evt-village-tutorial-setImageDay-update
+  }
+  {
+    id: evt-village-tutorial-trade
+    actionText: txt-evt-mission-trade-action
+    alwaysShown: true
+    reqLocationFlags: -tradeFail
+    select: [
+      {
+        barter: {
+          closeEvents: {
+            text: txt-evt-village-trade
+            select: [
+              {
+                reqTileFlags: -traded
+                setTileFlags: +traded
+                select: evt-village-tutorial-actions
+              }
+              {prio: 1, select: evt-village-tutorial-actions}
+            ]
+          }
+          cancelEvents: {text: txt-evt-village-trade-1, select: evt-village-tutorial-actions}
+        }
+      }
+    ]
+  }
+  {
+    id: evt-village-tutorial-leave
+    actionText: txt-evt-leave-action
+    alwaysShown: true
+    select: [
+      {
+        prio: 1
+        charEvents: [
+          {
+            optional: true
+            reqCharFlags: -special +humanoid
+            text: txt-evt-village-leave
+          }
+          {
+            optional: true
+            count: all
+            reqCharFlags: +special | -humanoid
+            text: txt-evt-village-leave-1
+          }
+        ]
+      }
+    ]
+  }
+  {
+    id: evt-village-tutorial-setImageDay-update
+    partyEvents: [evt-village-tutorial-setImageDay, evt-village-tutorial-main-update]
+  }
+  {
+    id: evt-village-tutorial-setImageDay-actions
+    partyEvents: [evt-village-tutorial-setImageDay, evt-village-tutorial-actions]
+  }
+  {
+    id: evt-village-tutorial-setImageNight
+    partyEvents: [
+      {
+        optional: true
+        reqLocationFlags: +villageType_1
+        playMusic: thm_village_3
+        showImage: {src: evt_fxt_village_1_night.png, type: night, showMounted: false}
+        npc: [
+          npc-native-generic-chief
+          npc-native-generic
+          npc-native-generic
+          npc-native-generic
+          npc-native-generic
+        ]
+      }
+    ]
+  }
+  {
+    id: evt-village-tutorial-recruit
+    reqLocationFlags: -recruitFail
+    actionText: txt-evt-mission-cultist-recruit-action
+    text: txt-evt-village-recruit
+    showPartyCount: true
+    alwaysShown: true
+    chat: cl-village-recruit
+    partyEvents: [
+      {
+        reqLocationFlags: +villageType_1
+        optional: true
+        showImage: {src: evt_fxt_village_1.png, type: day}
+      }
+    ]
+    actions: {
+      actionText: txt-evt-dismiss-default-action-1
+      select: evt-village-tutorial-setImageDay-update
+    }
+    select: [
+      {reqStanding: ..1, text: txt-evt-village-recruit-refuse}
+      {
+        prio: 1
+        text: txt-evt-village-recruit-1
+        setLocationFlags: +recruitFail
+        partyEvents: [
+          {
+            select: evt-village-tutorial-recruit-warrior
+            reqTutorial: true
+            optional: true
+          }
+          {
+            select: evt-village-tutorial-recruit-warrior
+            reqTutorial: true
+            optional: true
+          }
+          {
+            select: evt-village-tutorial-recruit-warrior
+            reqTutorial: true
+            optional: true
+          }
+        ]
+      }
+    ]
+  }
+  {
+    id: evt-village-tutorial-recruit-warrior
+    reqLocationFlags: +tribeWarriors | +tribeInuit
+    npc: pl-native-warrior
+    npcEvents: {
+      actions: {
+        actionText: txt-evt-village-recruit-warrior-action
+        text: txt-evt-village-recruit-warrior
+        setPartyFlags: +recruitedSomebody
+        addNPC: true
+        setCharFlags: +homeWorld
+        setStatus: +homesick
+        chat: cl-join
+        incAchievement: ach-recr-natives
+        select: evt-village-tutorial-setImageDay-update
+      }
+    }
+  }
+  {
+    id: evt-village-tutorial-nightSelect
+    select: [
+      {prio: -1, ref: evt-village-rest-tutorial}
+    ]
+  }
+  {
+    id: evt-village-rest-tutorial
+    reqTutorial: true
+    text: txt-evt-village-rest-tutorial
+    actions: evt-village-tutorial-sleep
+  }
+]

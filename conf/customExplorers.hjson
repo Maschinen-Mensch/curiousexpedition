@@ -1,0 +1,1062 @@
+[
+  {
+    id: sp-ee-base
+    health: 6
+    bonus: {capacity: 2}
+    flags: +special +humanoid
+    debugCategory: BaseProfessions
+  }
+  {
+    id: sp-ee-naturalist
+    extends: sp-ee-base
+    title: txt-sp-ee-naturalist-title
+    description: txt-sp-ee-naturalist
+    levels: [
+      {statuses: st-butterflyEnthusiast, dice: dc-support-2 dc-defend-1}
+    ]
+    characters: pl-soldier-scottish pl-translator anm-donkey
+    spawnEvents: {
+      items: {it-whisky: 4, it-torch: 3, it-shotgun: 1, it-machete: 10}
+    }
+  }
+  {
+    id: sp-ee-ethnographer
+    extends: sp-ee-base
+    title: txt-sp-ee-ethnographer-title
+    description: txt-sp-ee-ethnographer
+    levels: [
+      {statuses: st-polyglot, dice: dc-support-2 dc-defend-1}
+    ]
+    characters: pl-native-starting-warrior pl-translator anm-donkey
+    spawnEvents: {
+      items: {it-chocolate: 8, it-shovel: 3, it-pistol: 1, it-machete: 10}
+    }
+  }
+  {
+    id: sp-ee-inventorArchaeologist
+    extends: sp-ee-base
+    title: txt-sp-ee-inventorArchaeologist-title
+    description: txt-sp-ee-inventorArchaeologist
+    levels: [
+      {statuses: st-strongMind, dice: dc-support-2 dc-support-2}
+    ]
+    characters: pl-cook pl-trader anm-waterBuffalo
+    spawnEvents: {
+      items: {it-chocolate: 10, it-shovel: 3, it-lokiGun: 1, it-machete: 10}
+    }
+  }
+  {
+    id: sp-ee-diplomat
+    extends: sp-ee-base
+    title: txt-sp-ee-diplomat-title
+    description: txt-sp-ee-diplomat
+    levels: [
+      {statuses: st-bartering-4, dice: dc-attack-2 dc-support-1}
+    ]
+    characters: pl-native-starting-scout pl-translator anm-donkey
+    spawnEvents: {
+      items: {it-chocolate: 8, it-shovel: 3, it-pistol: 1, it-machete: 10}
+    }
+  }
+  {
+    id: sp-ee-adventurer
+    extends: sp-ee-base
+    title: txt-sp-ee-adventurer-title
+    description: txt-sp-ee-adventurer
+    levels: [
+      {statuses: st-natureSanity, dice: dc-defend-2 dc-attack-1}
+    ]
+    characters: pl-translator anm-dog-hunting anm-camel
+    spawnEvents: {
+      items: {it-chocolate: 8, it-torch: 3, it-shotgun: 1, it-machete: 10}
+    }
+  }
+  {
+    id: sp-ee-aviator
+    extends: sp-ee-base
+    title: txt-sp-ee-aviator-title
+    description: txt-sp-ee-aviator
+    levels: [
+      {statuses: st-flare-4, dice: dc-attack-2 dc-support-1}
+    ]
+    characters: pl-native-starting-animalHandler anm-donkey
+    spawnEvents: {
+      items: {it-whisky: 4, it-costonFlare: 7, it-pistol: 1, it-machete: 10}
+    }
+  }
+  {
+    id: sp-ee-anthropologist
+    extends: sp-ee-base
+    title: txt-sp-ee-anthropologist-title
+    description: txt-sp-ee-anthropologist
+    levels: [
+      {statuses: st-anthropology, dice: dc-support-2 dc-defend-1}
+    ]
+    characters: pl-artist pl-translator anm-donkey
+    spawnEvents: {
+      items: {it-chocolate: 8, it-torch: 3, it-pistol: 1, it-machete: 10}
+    }
+  }
+  {
+    id: sp-ee-pirate
+    extends: sp-ee-base
+    title: txt-sp-ee-pirate-title
+    description: txt-sp-ee-pirate
+    levels: [
+      {
+        statuses: [st-blackMarket, st-waterproof]
+        dice: dc-attack-2 dc-defend-1
+      }
+    ]
+    characters: pl-sailor pl-cook anm-tortoise
+    spawnEvents: {
+      items: {it-whisky: 4, it-shovel: 3, it-pistol: 1, it-binoculars: 1}
+    }
+  }
+  {
+    id: sp-ee-missionary
+    extends: sp-ee-base
+    title: txt-sp-ee-missionary-title
+    description: txt-sp-ee-missionary
+    levels: [
+      {
+        statuses: [st-strongMind, st-spiritualSolidarity]
+        dice: dc-defend-2 dc-support-1
+      }
+    ]
+    characters: pl-soldier-british pl-trader anm-donkey
+    spawnEvents: {
+      items: {it-whisky: 4, it-torch: 3, it-shotgun: 1, it-machete: 10}
+    }
+  }
+  {
+    id: sp-ee-archeologist
+    extends: sp-ee-base
+    title: txt-sp-ee-archeologist-title
+    description: txt-sp-ee-archeologist
+    levels: [
+      {
+        statuses: [st-heavyCarrier]
+        dice: dc-defend-2 dc-attack-1
+      }
+    ]
+    characters: pl-soldier-scottish pl-sailor anm-waterBuffalo
+    spawnEvents: {
+      items: {it-whisky: 4, it-shovel: 10, it-pendulum-treasure: 1, it-machete: 10}
+    }
+  }
+  {
+    id: sp-ee-inventor
+    extends: sp-ee-base
+    title: txt-sp-ee-inventor-title
+    description: txt-sp-ee-inventor
+    levels: [
+      {
+        statuses: [st-strongMind]
+        dice: dc-support-2 dc-support-2
+      }
+    ]
+    characters: pl-cook pl-trader anm-donkey
+    spawnEvents: {
+      items: {it-chocolate: 4, it-shovel: 3, it-teslaGun: 1, it-machete: 10}
+    }
+  }
+  {
+    id: sp-ee-politician
+    extends: sp-ee-base
+    title: txt-sp-ee-politician-title
+    description: txt-sp-ee-politician
+    levels: [
+      {
+        statuses: [st-pacifist]
+        dice: dc-support-2 dc-defend-1
+      }
+    ]
+    characters: pl-translator pl-artist anm-donkey
+    spawnEvents: {
+      items: {it-chocolate: 4, it-shovel: 3, it-marbles: 20, it-binoculars: 1, it-machete: 10}
+    }
+  }
+  {
+    id: sp-ee-royalCartographer
+    extends: sp-ee-base
+    title: txt-sp-ee-royalCartographer-title
+    description: txt-sp-ee-royalCartographer
+    levels: [
+      {
+        statuses: [st-charismatic, st-careerist]
+        dice: dc-support-1 dc-attack-2
+      }
+    ]
+    characters: pl-cultist anm-tiger-white
+    spawnEvents: {
+      items: {it-cocaLeaves: 10, it-jewels: 5, it-marbles: 10}
+    }
+  }
+  {
+    id: sp-ee-ladyNight
+    extends: sp-ee-base
+    title: txt-sp-ee-ladyNight-title
+    description: txt-sp-ee-ladyNight
+    levels: [
+      {
+        statuses: [st-blessingClaws, st-blessingRegeneration]
+        dice: dc-defend-2 dc-attack-2
+      }
+    ]
+    characters: pl-cultist pl-sterling pl-sailor
+    spawnEvents: {
+      items: {it-chocolate: 4, it-voodooDoll: 3, it-crystalBall: 1}
+    }
+  }
+  {
+    id: sp-ee-robert
+    extends: sp-ee-base
+    title: txt-sp-ee-robert-title
+    description: txt-sp-ee-robert
+    levels: [
+      {
+        statuses: [st-blessingHoly]
+        dice: dc-defend-1 dc-support-2
+      }
+    ]
+    characters: anm-dog-hunting
+    spawnEvents: {
+      items: {it-chocolate: 20}
+    }
+  }
+  {
+    id: sp-ee-blitzkriegsler
+    extends: sp-ee-base
+    title: txt-sp-ee-blitzkriegsler-title
+    description: txt-sp-ee-blitzkriegsler
+    levels: [
+      {
+        statuses: [st-polyglot]
+        dice: dc-attack-1 dc-support-2
+      }
+    ]
+    characters: pl-soldier-british pl-trader anm-donkey
+    spawnEvents: {
+      items: {it-whisky: 4, it-torch: 3, it-shotgun: 1, it-machete: 10}
+    }
+  }
+  {
+    id: sp-ee-scapegrace
+    extends: sp-ee-base
+    title: txt-sp-ee-scapegrace-title
+    description: txt-sp-ee-scapegrace
+    levels: [
+      {
+        statuses: [st-combatChance-4]
+        dice: dc-attack-2 dc-defend-1
+      }
+    ]
+    characters: pl-trader pl-native-starting-scout anm-donkey
+    spawnEvents: {
+      items: {it-whisky: 4, it-torch: 3, it-pistol: 1, it-machete: 10}
+    }
+  }
+  {
+    id: sp-ee-cossack
+    extends: sp-ee-base
+    title: txt-sp-ee-cossack-title
+    description: txt-sp-ee-cossack
+    levels: [
+      {
+        statuses: [st-blackMarket]
+        dice: dc-attack-2 dc-defend-2
+      }
+    ]
+    characters: pl-artist pl-cook anm-donkey
+    spawnEvents: {
+      items: {it-whisky: 8, it-rope: 1, it-spear: 4, it-canvas: 5}
+    }
+  }
+  {
+    id: sp-ee-wolfman
+    extends: sp-ee-base
+    title: txt-sp-ee-wolfman-title
+    description: txt-sp-ee-wolfman
+    levels: [
+      {
+        statuses: [st-blessingClaws]
+        dice: dc-attack-2 dc-defend-2
+      }
+    ]
+    characters: pl-translator pl-native-starting-shaman anm-hyena
+    spawnEvents: {
+      items: {it-whisky: 8, it-rope: 5, it-pistol: 1, it-torch: 5}
+    }
+  }
+  {
+    id: sp-ee-pewdiepie
+    extends: sp-ee-base
+    title: txt-sp-ee-pewdiepie-title
+    description: txt-sp-ee-pewdiepie
+    levels: [
+      {
+        statuses: [st-charismatic, st-naturalLeader]
+        dice: dc-support-2 dc-support-2
+      }
+    ]
+    characters: anm-dog-pug
+    spawnEvents: {
+      items: {it-chocolate: 10, it-dynamite: 10}
+    }
+  }
+  {
+    id: sp-ee-lawyer
+    extends: sp-ee-base
+    title: txt-sp-ee-lawyer-title
+    description: txt-sp-ee-lawyer
+    levels: [
+      {
+        statuses: [st-careerist]
+        dice: dc-support-2 dc-support-2
+      }
+    ]
+    characters: anm-donkey pl-sterling pl-translator
+    spawnEvents: {
+      items: {it-chocolate: 5, it-marbles: 10, it-pistol: 1, it-machete: 10}
+    }
+  }
+  {
+    id: sp-ee-mathematician
+    extends: sp-ee-base
+    title: txt-sp-ee-mathematician-title
+    description: txt-sp-ee-mathematician
+    levels: [
+      {
+        statuses: [st-polymath]
+        dice: dc-support-2 dc-support-2
+      }
+    ]
+    characters: pl-soldier-british anm-dog-hunting anm-donkey
+    spawnEvents: {
+      items: {it-abacus: 1, it-chocolate: 5, it-torch: 3, it-ammo: 5, it-costonFlare: 3}
+    }
+  }
+  {
+    id: sp-ee-filmographer
+    extends: sp-ee-base
+    title: txt-sp-ee-filmographer-title
+    description: txt-sp-ee-filmographer
+    levels: [
+      {
+        statuses: [st-eagleEye]
+        dice: dc-defend-2 dc-support-2
+      }
+    ]
+    characters: pl-soldier-scottish pl-translator anm-waterBuffalo
+    spawnEvents: {
+      items: {it-chocolate: 5, it-torch: 3, it-shotgun: 1, it-costonFlare: 3}
+    }
+  }
+  {
+    id: sp-ee-mountainTrooper
+    extends: sp-ee-base
+    title: txt-sp-ee-mountainTrooper-title
+    description: txt-sp-ee-mountainTrooper
+    levels: [
+      {
+        statuses: [st-climber]
+        dice: dc-attack-2 dc-support-1
+      }
+    ]
+    characters: pl-artist pl-cook anm-donkey
+    spawnEvents: {
+      items: {it-tinCans: 8, it-rifle: 1, it-climbingGear: 8, it-canvas: 5}
+    }
+  }
+  {
+    id: sp-ee-gronkh
+    extends: sp-ee-base
+    title: Adventurer
+    description: txt-sp-ee-gronkh
+    levels: [
+      {
+        statuses: st-greatReputation st-natureSanity
+        dice: dc-attack-2 dc-support-1
+      }
+    ]
+    characters: pl-soldier-british pl-translator anm-waterBuffalo
+    spawnEvents: {
+      items: {it-chocolate: 8, it-whip: 1, it-climbingGear: 5, it-torch: 5}
+    }
+  }
+  {
+    id: sp-ee-journalist
+    extends: sp-ee-base
+    title: txt-sp-ee-journalist-title
+    description: txt-sp-ee-journalist
+    levels: [
+      {
+        statuses: [st-journalist-4, st-whiskyIncrease-1]
+        dice: dc-attack-1 dc-support-2
+      }
+    ]
+    characters: pl-soldier-british pl-sailor
+    spawnEvents: {
+      items: {it-whisky: 5, it-pistol: 1, it-rope: 5}
+    }
+  }
+  {
+    id: sp-ee-composer
+    extends: sp-ee-base
+    title: txt-sp-ee-composer-title
+    description: txt-sp-ee-composer
+    levels: [
+      {
+        statuses: [st-careerist]
+        dice: dc-support-2 dc-defend-1
+      }
+    ]
+    characters: pl-bedouin pl-artist anm-raptor
+    spawnEvents: {
+      items: {it-chocolate: 5, it-bongosTuned: 1, it-hornFlute: 5, it-torch: 5}
+    }
+  }
+  {
+    id: sp-ee-artist
+    extends: sp-ee-base
+    title: txt-pl-artist-title
+    description: txt-pl-artist
+    levels: [
+      {statuses: st-artist-4, dice: dc-support-2 dc-support-2}
+    ]
+    flags: +special +humanoid +artist
+    characters: pl-bedouin pl-trader anm-dog-buckwheat
+    spawnEvents: {
+      items: {it-chocolate: 5, it-canvas: 7, it-ammo: 10, it-torch: 5}
+    }
+  }
+  {
+    id: sp-rami
+    name: Rami Ismail
+    extends: sp-ee-diplomat
+    unlockPin: 1988
+    debugCategory: FamousPeople
+    title: txt-sp-rami-title
+    description: txt-sp-rami
+    variations: [
+      {
+        gender: male
+        sprite: ee_sprite_rami.png
+        miniSprite: ee_sprite_rami_mini.png
+        portrait: ee_face_rami.png
+      }
+    ]
+  }
+  {
+    id: sp-kai
+    name: Kai
+    extends: sp-ee-archeologist
+    unlockPin: 0048
+    debugCategory: Customers
+    variations: [
+      {
+        gender: male
+        sprite: ee_sprite_kai.png
+        miniSprite: ee_sprite_kai_mini.png
+        portrait: ee_face_kai.png
+      }
+    ]
+  }
+  {
+    id: sp-TheCalcutec
+    name: Austin Walker
+    extends: sp-ee-ethnographer
+    unlockPin: 8038
+    debugCategory: Customers
+    variations: [
+      {
+        gender: male
+        sprite: ee_sprite_thecalcutec.png
+        miniSprite: ee_sprite_thecalcutec_mini.png
+        portrait: ee_face_thecalcutec.png
+      }
+    ]
+  }
+  {
+    id: sp-Jargo
+    name: Sir Chorge
+    extends: sp-ee-pirate
+    unlockPin: 1401
+    debugCategory: Customers
+    variations: [
+      {
+        gender: male
+        sprite: ee_sprite_jargo.png
+        miniSprite: ee_sprite_jargo_mini.png
+        portrait: ee_face_jargo.png
+      }
+    ]
+  }
+  {
+    id: sp-sockgarters
+    name: Alison Zawacki
+    extends: sp-ee-adventurer
+    unlockPin: 1946
+    debugCategory: Customers
+    variations: [
+      {
+        gender: female
+        sprite: ee_sprite_sockgarters.png
+        miniSprite: ee_sprite_sockgarters_mini.png
+        portrait: ee_face_sockgarters.png
+      }
+    ]
+  }
+  {
+    id: sp-codingconduct
+    name: E.S. Goffterding
+    extends: sp-ee-anthropologist
+    unlockPin: 2543
+    debugCategory: Customers
+    variations: [
+      {
+        gender: male
+        sprite: ee_sprite_codingconduct.png
+        miniSprite: ee_sprite_codingconduct_mini.png
+        portrait: ee_face_codingconduct.png
+      }
+    ]
+  }
+  {
+    id: sp-Anselan
+    name: David Brender
+    extends: sp-ee-missionary
+    unlockPin: 6731
+    debugCategory: Customers
+    variations: [
+      {
+        gender: male
+        sprite: ee_sprite_anselan.png
+        miniSprite: ee_sprite_anselan_mini.png
+        portrait: ee_face_anselan.png
+      }
+    ]
+  }
+  {
+    id: sp-Loki
+    name: Loki Texilake
+    extends: sp-ee-inventorArchaeologist
+    unlockPin: 0509
+    debugCategory: Customers
+    variations: [
+      {
+        gender: male
+        sprite: ee_sprite_loki.png
+        miniSprite: ee_sprite_loki_mini.png
+        portrait: ee_face_loki.png
+      }
+    ]
+  }
+  {
+    id: sp-Gloegg
+    name: Gloegg
+    extends: sp-ee-inventor
+    unlockPin: 8879
+    debugCategory: Customers
+    variations: [
+      {
+        gender: male
+        sprite: ee_sprite_gloegg.png
+        miniSprite: ee_sprite_gloegg_mini.png
+        portrait: ee_face_gloegg.png
+      }
+    ]
+  }
+  {
+    id: sp-diffsky
+    name: Matthew Hadley
+    extends: sp-ee-inventor
+    unlockPin: 1192
+    debugCategory: Customers
+    variations: [
+      {
+        gender: male
+        sprite: ee_sprite_diffsky.png
+        miniSprite: ee_sprite_diffsky_mini.png
+        portrait: ee_face_diffsky.png
+      }
+    ]
+  }
+  {
+    id: sp-Mammam
+    name: Freiherr von Gehlsdorf
+    extends: sp-ee-politician
+    unlockPin: 1523
+    debugCategory: Customers
+    variations: [
+      {
+        gender: male
+        sprite: ee_sprite_mammam.png
+        miniSprite: ee_sprite_mammam_mini.png
+        portrait: ee_face_mammam.png
+      }
+    ]
+  }
+  {
+    id: sp-Rohrimyr
+    name: Sir Deddlee Endeavour
+    extends: sp-ee-aviator
+    unlockPin: 7112
+    debugCategory: Customers
+    variations: [
+      {
+        gender: male
+        sprite: ee_sprite_rohrimyr.png
+        miniSprite: ee_sprite_rohrimyr_mini.png
+        portrait: ee_face_rohrimyr.png
+      }
+    ]
+  }
+  {
+    id: sp-lietu
+    name: Duke Lietu
+    extends: sp-ee-royalCartographer
+    unlockPin: 2559
+    debugCategory: Customers
+    variations: [
+      {
+        gender: male
+        sprite: ee_sprite_lietu.png
+        miniSprite: ee_sprite_lietu_mini.png
+        portrait: ee_face_lietu.png
+      }
+    ]
+  }
+  {
+    id: sp-olivia
+    name: Olivia White
+    extends: sp-ee-ladyNight
+    unlockPin: 8643
+    debugCategory: Customers
+    variations: [
+      {
+        gender: female
+        sprite: ee_sprite_olivia.png
+        miniSprite: ee_sprite_olivia_mini.png
+        portrait: ee_face_olivia.png
+      }
+    ]
+  }
+  {
+    id: sp-robert
+    name: Robert
+    extends: sp-ee-robert
+    unlockPin: 0713
+    debugCategory: EasterEgg
+    variations: [
+      {
+        gender: male
+        sprite: ee_sprite_robert.png
+        miniSprite: ee_sprite_robert_mini.png
+        portrait: ee_face_robert.png
+      }
+    ]
+  }
+  {
+    id: sp-bamwich
+    name: Baron Victor von Paragon
+    extends: sp-ee-naturalist
+    unlockPin: 3008
+    debugCategory: Customers
+    variations: [
+      {
+        gender: male
+        sprite: ee_sprite_bamwich.png
+        miniSprite: ee_sprite_bamwich_mini.png
+        portrait: ee_face_bamwich.png
+      }
+    ]
+  }
+  {
+    id: sp-blitzkriegsler
+    name: Blitz Kriegsler
+    extends: sp-ee-blitzkriegsler
+    unlockPin: 4321
+    debugCategory: FamousPeople
+    variations: [
+      {
+        gender: male
+        sprite: ee_sprite_blitzkriegsler.png
+        miniSprite: ee_sprite_blitzkriegsler_mini.png
+        portrait: ee_face_blitzkriegsler.png
+      }
+    ]
+  }
+  {
+    id: sp-zacharias
+    name: Zacharias Zour
+    extends: sp-ee-scapegrace
+    unlockPin: 0709
+    debugCategory: Customers
+    variations: [
+      {
+        gender: male
+        sprite: ee_sprite_zacharias.png
+        miniSprite: ee_sprite_zacharias_mini.png
+        portrait: ee_face_zacharias.png
+      }
+    ]
+  }
+  {
+    id: sp-dimir
+    name: Dimir
+    extends: sp-ee-cossack
+    unlockPin: 8150
+    debugCategory: Customers
+    variations: [
+      {
+        gender: male
+        sprite: ee_sprite_dimir.png
+        miniSprite: ee_sprite_dimir_mini.png
+        portrait: ee_face_dimir.png
+      }
+    ]
+  }
+  {
+    id: sp-reddick
+    name: Reddick Campbell
+    extends: sp-ee-aviator
+    unlockPin: 7321
+    debugCategory: Customers
+    variations: [
+      {
+        gender: male
+        sprite: ee_sprite_reddick.png
+        miniSprite: ee_sprite_reddick_mini.png
+        portrait: ee_face_reddick.png
+      }
+    ]
+  }
+  {
+    id: sp-talbot
+    name: Lawrence Talbodd
+    extends: sp-ee-wolfman
+    unlockPin: 1941
+    debugCategory: Customers
+    variations: [
+      {
+        gender: male
+        sprite: ee_sprite_talbot.png
+        miniSprite: ee_sprite_talbot_mini.png
+        portrait: ee_face_talbot.png
+      }
+    ]
+  }
+  {
+    id: sp-pewdiepie
+    name: Felix Kjellberg
+    extends: sp-ee-pewdiepie
+    unlockPin: 1989
+    debugCategory: FamousPeople
+    variations: [
+      {
+        gender: male
+        sprite: ee_sprite_pewdiepie.png
+        miniSprite: ee_sprite_pewdiepie_mini.png
+        portrait: ee_face_pewdiepie.png
+      }
+    ]
+  }
+  {
+    id: sp-sokulski
+    name: Rafal Sokulski
+    extends: sp-ee-lawyer
+    unlockPin: 9192
+    debugCategory: Customers
+    variations: [
+      {
+        gender: male
+        sprite: ee_sprite_sokulski.png
+        miniSprite: ee_sprite_sokulski_mini.png
+        portrait: ee_face_sokulski.png
+      }
+    ]
+  }
+  {
+    id: sp-aeryn
+    name: Aeryn
+    extends: sp-ee-naturalist
+    unlockPin: 7493
+    debugCategory: Customers
+    variations: [
+      {
+        gender: mixed
+        sprite: ee_sprite_aeryn.png
+        miniSprite: ee_sprite_aeryn_mini.png
+        portrait: ee_face_aeryn.png
+      }
+    ]
+  }
+  {
+    id: sp-amiculus
+    name: Christophorus Amiculus
+    extends: sp-ee-mathematician
+    unlockPin: 0101
+    debugCategory: Customers
+    variations: [
+      {
+        gender: male
+        sprite: ee_sprite_amiculus.png
+        miniSprite: ee_sprite_amiculus_mini.png
+        portrait: ee_face_amiculus.png
+      }
+    ]
+  }
+  {
+    id: sp-norman
+    name: G.K. Norman
+    extends: sp-ee-filmographer
+    unlockPin: 2686
+    debugCategory: Customers
+    variations: [
+      {
+        gender: male
+        sprite: ee_sprite_norman.png
+        miniSprite: ee_sprite_norman_mini.png
+        portrait: ee_face_norman.png
+      }
+    ]
+  }
+  {
+    id: sp-schneider
+    name: Fridericus Schneider
+    extends: sp-ee-inventor
+    unlockPin: 5543
+    debugCategory: Customers
+    variations: [
+      {
+        gender: male
+        sprite: ee_sprite_schneider.png
+        miniSprite: ee_sprite_schneider_mini.png
+        portrait: ee_face_schneider.png
+      }
+    ]
+  }
+  {
+    id: sp-bhaak
+    name: Dingir Bhaak
+    extends: sp-ee-inventor
+    unlockPin: 1987
+    debugCategory: Customers
+    variations: [
+      {
+        gender: mixed
+        sprite: ee_sprite_bhaak.png
+        miniSprite: ee_sprite_bhaak_mini.png
+        portrait: ee_face_bhaak.png
+      }
+    ]
+    spawnEvents: {
+      items: {it-chocolate: 4, it-shovel: 3, it-pendulum-yendor: 1, it-machete: 10}
+    }
+  }
+  {
+    id: sp-belli
+    name: Tim Belli
+    extends: sp-ee-mountainTrooper
+    unlockPin: 9137
+    debugCategory: Customers
+    variations: [
+      {
+        gender: male
+        sprite: ee_sprite_belli.png
+        miniSprite: ee_sprite_belli_mini.png
+        portrait: ee_face_belli.png
+      }
+    ]
+  }
+  {
+    id: sp-gronkh
+    name: Gregor Onkh
+    extends: sp-ee-gronkh
+    unlockPin: 1977
+    debugCategory: FamousPeople
+    variations: [
+      {
+        gender: male
+        sprite: ee_sprite_gronkh.png
+        miniSprite: ee_sprite_gronkh_mini.png
+        portrait: ee_face_gronkh.png
+      }
+    ]
+  }
+  {
+    id: sp-scherschel
+    name: Fabian Aleksandar Scherschel
+    extends: sp-ee-journalist
+    unlockPin: 1871
+    debugCategory: Customers
+    variations: [
+      {
+        gender: male
+        sprite: ee_sprite_scherschel.png
+        miniSprite: ee_sprite_scherschel_mini.png
+        portrait: ee_face_scherschel.png
+      }
+    ]
+  }
+  {
+    id: sp-megan
+    name: Megan Carnes
+    extends: sp-ee-composer
+    unlockPin: 4488
+    debugCategory: Customers
+    variations: [
+      {
+        gender: female
+        sprite: ee_sprite_megan.png
+        miniSprite: ee_sprite_megan_mini.png
+        portrait: ee_face_megan.png
+      }
+    ]
+  }
+  {
+    id: sp-otting
+    name: Allison Otting
+    extends: sp-ee-artist
+    unlockPin: 7348
+    debugCategory: Customers
+    variations: [
+      {
+        gender: female
+        sprite: ee_sprite_otting.png
+        miniSprite: ee_sprite_otting_mini.png
+        portrait: ee_face_otting.png
+      }
+    ]
+  }
+  {
+    id: sp-hercule
+    name: Hercule Boumba
+    extends: sp-ee-adventurer
+    unlockPin: 1633
+    debugCategory: Customers
+    variations: [
+      {
+        gender: male
+        sprite: ee_sprite_hercule.png
+        miniSprite: ee_sprite_hercule_mini.png
+        portrait: ee_face_hercule.png
+      }
+    ]
+  }
+  {
+    id: sp-kristmann
+    name: Johannes Kristmann
+    extends: sp-ee-naturalist
+    unlockPin: 1234
+    description: txt-sp-kristmann
+    debugCategory: EasterEgg
+    variations: [
+      {
+        gender: male
+        sprite: ee_sprite_kristmann.png
+        miniSprite: ee_sprite_kristmann_mini.png
+        portrait: ee_face_kristmann.png
+      }
+    ]
+  }
+  {
+    id: sp-djemili
+    name: Riad Djemili
+    extends: sp-ee-inventor
+    unlockPin: 0607
+    description: txt-sp-djemili
+    debugCategory: EasterEgg
+    variations: [
+      {
+        gender: male
+        sprite: ee_sprite_djemili.png
+        miniSprite: ee_sprite_djemili_mini.png
+        portrait: ee_face_djemili.png
+      }
+    ]
+  }
+  {
+    id: sp-benedikt
+    name: Benedikt Meyer
+    extends: sp-ee-adventurer
+    unlockPin: 8319
+    description: txt-sp-ee-adventurer
+    debugCategory: Customers
+    variations: [
+      {
+        gender: male
+        sprite: ee_sprite_benedikt.png
+        miniSprite: ee_sprite_benedikt_mini.png
+        portrait: ee_face_benedikt.png
+      }
+    ]
+    levels: [
+      {statuses: st-natureSanity st-jungleExplorer, dice: dc-support-2 dc-support-1}
+    ]
+    characters: pl-native-starting-scout anm-raptor
+    spawnEvents: {
+      items: {it-whisky: 2, it-rifle: 1, it-rope: 5, it-torch: 3}
+    }
+  }
+  {
+    id: sp-friedrich
+    name: Jörg S. Friedrich
+    extends: sp-ee-politician
+    unlockPin: 0305
+    description: txt-sp-ee-politician
+    debugCategory: Customers
+    variations: [
+      {
+        gender: male
+        sprite: ee_sprite_friedrich.png
+        miniSprite: ee_sprite_friedrich_mini.png
+        portrait: ee_face_friedrich.png
+      }
+    ]
+    characters: pl-mountainTrooper anm-donkey anm-dog-pug-don
+  }
+  {
+    id: sp-bingham
+    name: Hiram Bingham
+    extends: sp-ee-adventurer
+    unlockPin: 1875
+    debugCategory: Customers
+    variations: [
+      {
+        gender: male
+        sprite: ee_sprite_bingham.png
+        miniSprite: ee_sprite_bingham_mini.png
+        portrait: ee_face_bingham.png
+      }
+    ]
+  }
+  {
+    id: sp-mystery
+    name: Sound of Mystery
+    extends: sp-ee-wolfman
+    unlockPin: 7319
+    debugCategory: FamousPeople
+    variations: [
+      {
+        gender: male
+        sprite: ee_sprite_mystery.png
+        miniSprite: ee_sprite_mystery_mini.png
+        portrait: ee_face_mystery.png
+      }
+    ]
+    description: txt-sp-ee-adventurer
+    levels: [
+      {
+        statuses: st-blessingClaws st-polyglot
+        dice: dc-attack-2 dc-support-2
+      }
+    ]
+    characters: pl-native-starting-shaman
+    spawnEvents: {
+      items: {it-whisky: 6, it-egg-raptor:1, it-egg-tortoise:1}
+    }
+  }
+]

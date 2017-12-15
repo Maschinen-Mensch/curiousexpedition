@@ -1,0 +1,485 @@
+[
+  {
+    id: evt-world-init
+    compassScore: 15
+    setPartyFlags: -harborEventsRecruit -harborEventsRecruit2 -harborEventsMap -imaginaryFriend -followedByNatives -nativeHelp -noSanityRacistFood -noSanitySexist -lostPersonalItem -expeditionDone -gorillaCombat -jingleFirstTimePlayed -playJingle
+    charEvents: [
+      {count: any, setCharFlags: -homeWorld}
+      {optional: true, reqStatus: +loneSurvivor, setPartyFlags: +loneSurvivor}
+    ]
+    partyEvents: [
+      {reqTutorial: false, setPartyStatus: +playJingle}
+      {setPartyStatus: +ambientParticle}
+      {
+        optional: true
+        reqSanity: 111..999
+        reqTutorial: false
+        setPartyFlags: +sanityReport
+        setPartyStatus: +sanityReport-high
+      }
+      {
+        optional: true
+        reqSanity: 71..110
+        reqTutorial: false
+        setPartyFlags: +sanityReport
+        setPartyStatus: +sanityReport-medium
+      }
+      {
+        optional: true
+        reqSanity: 20..70
+        reqTutorial: false
+        setPartyFlags: +sanityReport
+        setPartyStatus: +sanityReport-low
+      }
+      {optional: true, reqDifficulty: 0, compassScore: 99999}
+      {optional: true, ref: evt-occultVision-reveal}
+      {optional: true, ref: evt-occultVision-reveal}
+      {optional: true, ref: evt-occultVision-reveal}
+      {optional: true, ref: evt-polarStation-reveal}
+      {optional: true, ref: evt-polarStation-reveal}
+      {optional: true, ref: evt-polarStation-reveal}
+    ]
+  }
+  {
+    id: evt-warpedWorld-start
+    addLocation: {ref: loc-portal, range: 0}
+    incAchievement: ach-portals
+  }
+  {
+    id: evt-world-start
+    select: [
+      {prio: 0, ref: evt-tutorial-start-1}
+      {prio: 1, ref: evt-ship-arrival}
+    ]
+  }
+  {
+    id: evt-world-initQuests
+    partyEvents: [
+      {
+        optional: true
+        reqItems: {it-quest-1-letter: 1..}
+        text: txt-evt-world-initQuests
+        posTile: {locationFlags: +village, closest: true}
+        revealTiles: {radius: 1, location: true, centerCam: false}
+        setLocationFlags: +questLetter
+      }
+      {
+        optional: true
+        reqWorld: 0
+        reqPartyStatus: +missionary
+        charEvents: {reqCharFlags: +missionary, text: txt-evt-world-initQuests-1}
+        posTile: {locationFlags: +village, closest: true}
+        revealTiles: {radius: 1, location: true, centerCam: false}
+        setLocationFlags: +questMissionary
+      }
+      {
+        optional: true
+        reqWorld: 0
+        reqPartyStatus: +escortVillager
+        text: txt-evt-world-initQuests-2
+        posTile: {locationFlags: +village, closest: true}
+        revealTiles: {radius: 1, location: true, centerCam: false}
+      }
+      {
+        optional: true
+        reqPartyStatus: +arcticClaim-4
+        select: evt-quest-arcticClaim-worldInit
+      }
+      {
+        optional: true
+        reqPartyStatus: +husband
+        addLocation: {ref: loc-quest-husband, range: world}
+      }
+      {
+        optional: true
+        reqPartyStatus: +idol
+        posTile: {locationFlags: +village}
+        setLocationFlags: +idolSet +idolVillage
+      }
+      {
+        optional: true
+        reqPartyStatus: +blackHyena
+        addZone: {ref: zn-hyena-black, range: 15..50, reachable: true}
+      }
+      {
+        optional: true
+        reqPartyStatus: +konrad
+        posTile: {locationFlags: +village}
+        setLocationFlags: +harborQuestKonrad
+      }
+    ]
+  }
+  {
+    id: evt-polarStation-reveal
+    reqBiomeFlags: +arctic
+    posTile: {range: ..100, locationKnown: false, locationFlags: +polarStation -mapped}
+    setLocationFlags: +mapped
+    revealTiles: {radius: 1, location: true}
+  }
+  {
+    id: evt-occultVision-reveal
+    charEvents: {reqStatus: +occultVision}
+    posTile: {range: ..100, locationKnown: false, locationFlags: +occultVision}
+    revealTiles: {radius: 1, location: true, particle: pt-magic-reveal}
+  }
+  {
+    id: evt-unlock-specialWorld-withText
+    select: [
+      {
+        reqWorld: 1..
+        text: txt-evt-unlock-specialWorld-withText
+        unlockPocket: pck-whiteTiger
+      }
+      {
+        reqWorld: 1..
+        text: txt-evt-unlock-specialWorld-withText-1
+        unlockPocket: pck-waterTemple
+      }
+      {
+        reqWorld: 1..
+        text: txt-evt-unlock-specialWorld-withText-2
+        unlockPocket: pck-volcano-dry
+      }
+      {
+        text: txt-evt-unlock-specialWorld-withText-3
+        unlockPocket: pck-prehistoric
+      }
+      {
+        text: txt-evt-unlock-specialWorld-withText-4
+        unlockPocket: pck-elephantGraveyard
+      }
+    ]
+  }
+  {
+    id: evt-unlock-specialWorld-noText
+    select: [
+      {slots: 1, reqWorld: 1.., unlockPocket: pck-whiteTiger}
+      {slots: 1, reqWorld: 1.., unlockPocket: pck-waterTemple}
+      {slots: 1, reqWorld: 1.., unlockPocket: pck-volcano-dry}
+      {slots: 1, unlockPocket: pck-prehistoric}
+      {slots: 1, unlockPocket: pck-elephantGraveyard}
+    ]
+  }
+  {
+    id: evt-searchArea
+    actionText: txt-evt-searchArea-action
+    text: txt-evt-searchArea
+    turns: 1
+    setTileFlags: +explored
+    partyEvents: [
+      {
+        charEvents: {
+          optional: true, 
+          reqStatus: +st-cannibal, 
+          setPartyFlags: +cannibalSearch
+        }
+      }
+      {
+        optional: true
+        reqLocationFlags: +elephantGraveyard
+        select: evt-elephantGraveyard-searchOutcome
+      }
+      {
+        optional: true
+        reqLocationFlags: +mammothGraveyard
+        select: evt-mammothGraveyard-searchOutcome
+      }
+      {
+        optional: true
+        reqLocationFlags: +oldCamp
+        select: evt-oldCamp-searchOutcome
+      }
+      {
+        optional: true
+        reqLocationFlags: +raptorNest
+        select: evt-raptorNest-searchOutcome
+      }
+      {
+        optional: true
+        reqLocationFlags: +shipwreck
+        select: evt-shipwreck-searchOutcome
+      }
+    ]
+    chat: cl-generic
+  }
+  {
+    id: evt-combat-loot
+    sanity: {base: 0, bonus: combatSanity}
+    select: [
+      {
+        reqLocationFlags: +harborQuestKonrad
+        select: evt-village-quest-konrad-loot
+      }
+      {
+        reqLocationFlags: +slaverCombat
+        text: txt-evt-combat-loot
+        loot: {
+          items: {}
+          closeEvents: evt-slaver-combatOutcome
+        }
+      }
+      {
+        reqPartyFlags: +missionFight
+        setPartyFlags: -missionFight
+        items: {it-meat-raw: 2}
+        select: evt-mission-sleep-event-5-win
+      }
+      {
+        prio: 1
+        text: txt-evt-combat-loot-1
+        report: txt-evt-combat-loot-report
+        loot: {items: {}, closeEvents: {}}
+        select: {reqDifficulty: 1.., standing: -1}
+      }
+    ]
+  }
+  {
+    id: evt-combat-run
+    actionText: txt-evt-combat-run-action
+    text: txt-evt-combat-run
+    report: txt-evt-combat-run-report
+    incAchievement: ach-flee
+    partyEvents: { 
+      optional: true
+      reqPartyFlags: +abominationCombat
+      setPartyFlags: -abominationCombat
+      addZone: {ref: zn-abomination, range: ..3}
+    }
+    select: [
+      {
+        prio: 0
+        reqTutorial: true
+        setPartyFlags: +tutCombatDone
+        deactivateZones: {radius: 1, turns: 1000}
+      }
+      {
+        prio: 1
+        reqDifficulty: 1..
+        charEvents: {
+          count: any
+          reqCharFlags: -special
+          reqHealth: 0
+          text: txt-zn-abomination
+          storeCharacter: true
+          setCharFlags: +dead
+          report: txt-zn-abomination-report
+        }
+      }
+      {
+        prio: 2, 
+        slots: 3, 
+        sanity: -10, 
+        reqDifficulty: 0, 
+        text: txt-zn-abomination-1
+      }
+      {
+        prio: 2
+        slots: 3
+        sanity: -20
+        reqDifficulty: 1..
+        text: txt-zn-abomination-2
+      }
+      {
+        prio: 2
+        slots: 2
+        sanity: -20
+        reqDifficulty: 1..
+        text: txt-zn-abomination-3
+        reqItemsValue: 25..
+        dropItems: 25
+      }
+      {
+        prio: 2
+        slots: 1
+        sanity: -20
+        reqDifficulty: 1..
+        charEvents: {
+          count: 1
+          reqCharFlags: -special
+          text: txt-zn-abomination-4
+          storeCharacter: true
+          setCharFlags: +dead
+          report: txt-zn-abomination-report-1
+        }
+      }
+    ]
+    deactivateZones: {radius: 1, turns: 3}
+  }
+  {
+    id: evt-trauma
+    select: [
+      {
+        charEvents: {
+          reqStatus: -paranoid -blessingPureMind
+          reqCharFlags: +humanoid -special -abomination
+          setStatus: +st-paranoid
+          chat: cl-apply-paranoid
+          text: txt-evt-trauma
+          report: txt-evt-trauma-report
+        }
+      }
+      {
+        charEvents: {
+          reqStatus: -claustrophobic -blessingPureMind
+          reqCharFlags: +humanoid -special -abomination
+          setStatus: +st-claustrophobic
+          chat: cl-apply-claustrophobic
+          text: txt-evt-trauma-1
+          report: txt-evt-trauma-report-1
+        }
+      }
+      {
+        charEvents: {
+          reqStatus: -lepidopterophobia -blessingPureMind
+          reqCharFlags: +humanoid -special -abomination
+          setStatus: +st-lepidopterophobia
+          chat: cl-apply-lepidopterophobia
+          text: txt-evt-trauma-2
+          report: txt-evt-trauma-report-2
+        }
+      }
+      {
+        charEvents: {
+          reqStatus: -kleptomania -blessingPureMind
+          reqCharFlags: +humanoid -special -abomination
+          setStatus: +st-kleptomania
+          text: txt-evt-trauma-3
+          report: txt-evt-trauma-report-3
+        }
+      }
+      {
+        charEvents: {
+          reqStatus: -superstitious -blessingPureMind
+          reqCharFlags: +humanoid -special -abomination
+          setStatus: +st-superstitious
+          chat: cl-apply-superstitious
+          text: txt-evt-trauma-4
+          report: txt-evt-trauma-report-4
+        }
+      }
+      {
+        charEvents: {
+          reqStatus: -pyromaniac -blessingPureMind
+          reqCharFlags: +humanoid -special -abomination
+          setStatus: +pyromaniac
+          chat: cl-apply-pyromaniac
+          text: txt-evt-trauma-5
+          report: txt-evt-trauma-report-5
+        }
+      }
+    ]
+  }
+  {
+    id: evt-sprawl-fire
+    showImage: {src: evt_spec_fire.png, type: day}
+    chat: cl-sprawlFire
+    sanity: -10
+    select: [
+      {prio: 0, reqTutorial: true}
+      {slots: 6}
+      {
+        reqPartyStatus: -fireSafe
+        setPartyStatus: +fireSafe
+        charEvents: [
+          {
+            reqCharFlags: -special
+            text: txt-evt-sprawl-fire
+            storeCharacter: true
+            setCharFlags: +dead
+            consume: true
+          }
+          {
+            chance: 0.25
+            optional: true
+            reqCharFlags: -special +humanoid
+            text: txt-evt-sprawl-fire-1
+            setStatus: +pyromaniac
+          }
+        ]
+      }
+      {
+        reqPartyCount: 0
+        reqPartyStatus: -fireSafe
+        reqTutorial: false
+        text: txt-evt-sprawl-fire-2
+      }
+    ]
+  }
+  {
+    id: evt-tile-river
+    text: txt-evt-tile-river
+    posTile: {
+      traversable: true, 
+      closest: true, 
+      range: ..10
+    }
+    teleport: true
+    partyEvents: [
+      {
+        optional: true
+        chance: 0.5
+        dropItems: 50
+        reqItemsValue: 25..
+        text: txt-evt-tile-river-1
+      }
+      {
+        optional: true
+        chance: 0.5
+        reqCharFlags: -special
+        text: txt-evt-tile-river-2
+      }
+    ]
+  }
+  {
+    id: evt-tile-pit
+    gameOver: Your trek fell into a dark chasm.
+    report: txt-evt-tile-pit-report
+  }
+  {
+    id: evt-setImage-nightCamp
+    select: [
+      {
+        reqBiomeFlags: -arctic
+        showImage: {
+          src: evt_spec_nightCamp_1.png, 
+          showCampfire: true, 
+          showMounted: false
+        }
+        playMusic: thm_nature_2
+      }
+      {
+        reqBiomeFlags: +arctic
+        playMusic: thm_arctic_night_1
+        showImage: {
+          src: evt_spec_nightCamp_arctic_1.png
+          type: day
+          showCampfire: true
+          showMounted: false
+          particles: pt-snow-1 pt-snow-2
+          particlesChance: 0.5
+        }
+      }
+      {
+        reqBiomeFlags: +arctic
+        playMusic: thm_arctic_night_1
+        showImage: {
+          src: evt_spec_nightCamp_arctic_2.png
+          type: day
+          showCampfire: true
+          showMounted: false
+          particles: pt-snow-1 pt-snow-2
+          particlesChance: 0.5
+        }
+      }
+    ]
+  }
+  {
+    id: evt-celebration
+    text: txt-evt-celebration
+    showImage: {
+      src: evt_spec_celebration_1.png
+      npcMovement: true
+      particles: pt-confetti-1
+    }
+  }
+]

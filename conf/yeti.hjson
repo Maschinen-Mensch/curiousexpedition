@@ -1,0 +1,260 @@
+[
+  {
+    id: pl-yeti
+    title: txt-pl-yeti-title
+    description: txt-pl-yeti
+    debugCategory: Special
+    miniSprite: res_porter_yeti_mini.png
+    variations: [
+      {
+        gender: male
+        name: yetiMale
+        sprite: res_porter_yeti_1.png
+        portrait: res_face_yeti_1.png
+      }
+      {
+        gender: female
+        name: yetiFemale
+        sprite: res_porter_yeti_1.png
+        portrait: res_face_yeti_1.png
+      }
+    ]
+    capacity: 4
+    health: 12
+    flags: +yeti -humanoid
+    spawnEvents: {}
+    levels: [
+      {statuses: st-loyaltyBuff-1, dice: dc-yeti!4 dc-beast-taunt!3}
+      {statuses: st-loyaltyBuff-2, dice: dc-yeti!5 dc-beast-taunt!4}
+      {statuses: st-loyaltyBuff-3, dice: dc-yeti!5 dc-beast-taunt!5}
+      {statuses: st-loyaltyBuff-4, dice: dc-yeti!6 dc-beast-taunt!6}
+    ]
+  }
+  {
+    id: emy-yeti
+    debugCategory: Enemy
+    name: txt-pl-yeti-title
+    health: 18
+    dice: [dc-yeti, dc-yeti]
+    items: {it-meat-raw: 4, it-animalTooth: 2, it-yetiPaw: 2}
+    sprite: emy_yeti_1.png
+    isLeftFacingSprite: true
+  }
+  {
+    id: st-loyaltyBuff-1
+    title: txt-pk-loyaltyBuff-1-title
+    debugCategory: Unit Perk
+    description: txt-pk-loyaltyBuff
+    sprite: res_status_loyalty.png
+    dayEvents: [
+      {
+        reqAge: 1
+        charEvents: {count: any, reqCharFlags: -special -animal, loyalty: 1}
+      }
+      {reqAge: 80.., resetStatusAge: true}
+    ]
+  }
+  {
+    id: st-loyaltyBuff-2
+    title: txt-pk-loyaltyBuff-2-title
+    extends: st-loyaltyBuff-1
+    dayEvents: [
+      {
+        reqAge: 1
+        charEvents: {count: any, reqCharFlags: -special -animal, loyalty: 1}
+      }
+      {reqAge: 60.., resetStatusAge: true}
+    ]
+  }
+  {
+    id: st-loyaltyBuff-3
+    title: txt-pk-loyaltyBuff-3-title
+    extends: st-loyaltyBuff-1
+    dayEvents: [
+      {
+        reqAge: 1
+        charEvents: {count: any, reqCharFlags: -special -animal, loyalty: 1}
+      }
+      {reqAge: 40.., resetStatusAge: true}
+    ]
+  }
+  {
+    id: st-loyaltyBuff-4
+    title: txt-pk-loyaltyBuff-4-title
+    extends: st-loyaltyBuff-1
+    dayEvents: [
+      {
+        reqAge: 1
+        charEvents: {count: any, reqCharFlags: -special -animal, loyalty: 1}
+      }
+      {reqAge: 30.., resetStatusAge: true}
+    ]
+  }
+  {
+    id: evt-cave-yeti
+    setLocationFlags: +explored
+    showImage: {src: evt_fxt_cave_arctic_yeti.png, type: day}
+    npc: emy-yeti
+    text: txt-evt-cave-yeti-approach
+    actions: [
+      {
+        actionText: txt-base-attack
+        showImage: {src: evt_fxt_cave_arctic_yeti.png, type: day}
+        combat: {
+          surprise: false
+          refs: {emy-yeti: 1}
+        }
+      }
+      {
+        actionText: Do nothing
+        text: txt-evt-cave-yeti-doNothing
+        actions: {
+          actionText: txt-evt-cave-ghostsQuest-action
+          showImage: {src: evt_fxt_cave_arctic_yeti.png, type: day}
+          combat: {
+            surprise: true
+            refs: {emy-yeti: 1}
+          }
+        }
+      }
+      {
+        actionText: txt-evt-cave-yeti-offerObject-action
+        text: txt-evt-cave-yeti-offerObject
+        actions: [
+          {
+            actionText: txt-it-muktuk-name
+            reqItems: {it-muktuk: 1..}
+            items: {it-muktuk: -1}
+            select: evt-cave-yeti-offerWrong
+          }
+          {
+            actionText: txt-it-ammo-name
+            reqItems: {it-ammo: 1..}
+            items: {it-ammo: -1}
+            select: evt-cave-yeti-offerWrong
+          }
+          {
+            actionText: txt-it-rope-name
+            reqItems: {it-rope: 1..}
+            items: {it-rope: -1}
+            select: evt-cave-yeti-offerWrong
+          }
+          {
+            actionText: txt-it-machete-name
+            reqItems: {it-machete: 1..}
+            items: {it-machete: -1}
+            select: evt-cave-yeti-offerWrong
+          }
+          {
+            actionText: txt-it-meat-raw-name
+            reqItems: {it-meat-raw: 1..}
+            items: {it-meat-raw: -1}
+            select: evt-cave-yeti-offerWrong
+          }
+          {
+            actionText: txt-it-animalTooth-name
+            reqItems: {it-animalTooth: 1..}
+            items: {it-animalTooth: -1}
+            select: evt-cave-yeti-offerWrong
+          }
+          {
+            actionText: txt-it-whisky-name
+            reqItems: {it-whisky: 1..}
+            items: {it-whisky: -1}
+            select: evt-cave-yeti-recruit
+          }
+          {
+            actionText: txt-it-tinCans-name
+            reqItems: {it-tinCans: 1..}
+            items: {it-tinCans: -1}
+            select: evt-cave-yeti-recruit
+          }
+          {
+            actionText: txt-it-mushroom-view-name
+            reqItems: {it-mushroom-view: 1..}
+            items: {it-mushroom-view: -1}
+            select: evt-cave-yeti-recruit
+          }
+          {
+            actionText: txt-it-mushroom-healing-name
+            reqItems: {it-mushroom-healing: 1..}
+            items: {it-mushroom-healing: -1}
+            select: evt-cave-yeti-recruit
+          }
+          {
+            actionText: txt-it-mushroom-status-name
+            reqItems: {it-mushroom-status: 1..}
+            items: {it-mushroom-status: -1}
+            select: evt-cave-yeti-recruit
+          }
+          {
+            actionText: txt-it-mushroom-noAngry-name
+            reqItems: {it-mushroom-noAngry: 1..}
+            items: {it-mushroom-noAngry: -1}
+            select: evt-cave-yeti-recruit
+          }
+          {
+            actionText: txt-it-mushroom-capacity-name
+            reqItems: {it-mushroom-capacity: 1..}
+            items: {it-mushroom-capacity: -1}
+            select: evt-cave-yeti-recruit
+          }
+          {
+            actionText: txt-it-weatherBalloon-name
+            reqItems: {it-weatherBalloon: 1..}
+            items: {it-weatherBalloon: -1}
+            select: evt-cave-yeti-recruit
+          }
+          {
+            actionText: txt-it-miniPuppets-name
+            reqItems: {it-miniPuppets: 1..}
+            items: {it-miniPuppets: -1}
+            select: evt-cave-yeti-recruit
+          }
+          {
+            actionText: Improvise
+            reqDice: mind stability
+            winEvents: {ref: evt-cave-yeti-recruit}
+            failEvents: {
+              text: txt-evt-cave-yeti-improviseFail
+              actions: {
+                actionText: txt-evt-cave-ghostsQuest-action
+                showImage: {src: evt_fxt_cave_arctic_yeti.png, type: day}
+                combat: {
+                  surprise: true
+                  refs: {emy-yeti: 1}
+                }
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+  {
+    id: evt-cave-yeti-recruit
+    addCharacter: pl-yeti
+    showImage: {src: evt_fxt_cave_arctic.png, type: day}
+    incAchievement: ach-yeti-recruit
+    select: {
+      charEvents: {reqCharFlags: +yeti, text: txt-evt-cave-yeti-recruit}
+    }
+  }
+  {
+    id: evt-cave-yeti-offerWrong
+    text: txt-evt-cave-yeti-offerWrong
+    actions: {
+      actionText: txt-evt-cave-ghostsQuest-action
+      showImage: {src: evt_fxt_cave_arctic_yeti.png, type: day}
+      combat: {
+        surprise: true
+        refs: {emy-yeti: 1}
+      }
+    }
+    showImage: {src: evt_fxt_cave_arctic_yeti.png, type: day}
+    combat: {
+      surprise: true
+      refs: {emy-yeti: 1}
+    }
+  }
+]

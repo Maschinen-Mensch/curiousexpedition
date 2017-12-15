@@ -1,0 +1,51 @@
+[
+  {
+    id: st-hallucinations
+    title: txt-st-hallucinations-title
+    description: txt-st-hallucinations
+    flags: +ailment
+    debugCategory: Ailment
+    sprite: res_status_hallucinations.png
+    important: true
+    autoRemove: true
+    buffDays: 20..40
+    tripEvents: {
+      reqLocation: {flags: +hallucinations, range: ..10, count: 0}
+      posTile: {reachable: true, traversable: true, range: ..10}
+      addLocation: {ref: loc-hallucination, animate: false, range: 0}
+    }
+    buffEndEvents: {
+      chat: cl-feelingBetter
+      replaceLocations: {old: loc-hallucination, range: ..100}
+    }
+  }
+  {
+    id: evt-sanity-apply-hallucinations
+    charEvents: {
+      text: txt-evt-sanity-apply-hallucinations
+      reqCharFlags: +special
+      setStatus: +hallucinations
+    }
+    select: evt-sanity-return
+  }
+  {
+    id: loc-hallucination
+    name: txt-st-hallucinations-title
+    debugCategory: hallucinations
+    flags: +hallucinations
+    sprite: res_fxt_treasureLocation.png
+    showHint: true
+    mapScore: 0
+    revealEvents: {
+      replaceLocations: {}
+      chat: cl-hallucinations
+    }
+  }
+  {
+    id: cl-hallucinations
+    lines: [
+      {text: txt-cl-hallucinations, reqCharFlags: +special}
+      {text: txt-cl-hallucinations-1, reqCharFlags: -special +humanoid}
+    ]
+  }
+]
