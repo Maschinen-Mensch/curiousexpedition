@@ -251,7 +251,7 @@
       text: txt-evt-village-enter-escortVillager
       setPartyFlags: +escortVillagerShrineInfo
       actions: {
-        actionText: txt-evt-sanity-angry-action
+        actionText: txt-evt-base-continue
         addNPC: true
         standing: 2
         select: evt-village-enterCheck

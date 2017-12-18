@@ -467,32 +467,28 @@
     autoRemove: true
     useEvents: [
       {
-        slots: 2
-        chat: cl-cook-meat
-        charEvents: [
-          {optional: false, reqStatusFlags: +cookSanity}
-          {
-            optional: true
-            reqStatus: +cookSanity-1
-            items: {it-meat-animal-cooked-charcoal: 1}
-          }
-          {
-            optional: true
-            reqStatus: +cookSanity-2
-            items: {it-meat-animal-cooked-burnt: 1}
-          }
-          {
-            optional: true
-            reqStatus: +cookSanity-3
-            items: {it-meat-animal-cooked-overcooked: 1}
-          }
-          {
-            optional: true
-            reqStatus: +cookSanity-4
-            items: {it-meat-animal-cooked-perfect: 1}
-          }
-        ]
+        prio: 0
+        charEvents: {reqStatus: +cookSanity-4, chat: cl-cook-meat}
         removeItem: true
+        items: {it-meat-animal-cooked-perfect: 1}
+      }
+      {
+        prio: 1
+        charEvents: {reqStatus: +cookSanity-3, chat: cl-cook-meat}
+        removeItem: true
+        items: {it-meat-animal-cooked-overcooked: 1}
+      }
+      {
+        prio: 2
+        charEvents: {reqStatus: +cookSanity-2, chat: cl-cook-meat}
+        removeItem: true
+        items: {it-meat-animal-cooked-burnt: 1}
+      }
+      {
+        prio: 3
+        charEvents: {reqStatus: +cookSanity-1, chat: cl-cook-meat}
+        removeItem: true
+        items: {it-meat-animal-cooked-charcoal: 1}
       }
     ]
   }

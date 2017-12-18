@@ -726,7 +726,10 @@
     sprite: hud_dice_symbol_martialArts_5.png
     bgSprite: hud_dice_bg_attack_1.png
   }
-  {id: df-poison, sprite: hud_dice_symbol_spider_2.png}
+  {
+    id: df-poison, 
+    sprite: hud_dice_symbol_spider_2.png
+  }
   {
     id: dp-attack
     name: txt-attack-name

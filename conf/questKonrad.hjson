@@ -45,7 +45,7 @@
         npc: pl-soldier-british
         text: txt-evt-quest-konrad-complete-1
         fame: -fameLarge
-        actions: {actionText: txt-evt-sanity-angry-action, select: evt-harbor-eventSelection}
+        actions: {actionText: txt-evt-base-continue, select: evt-harbor-eventSelection}
       }
     ]
   }

@@ -124,7 +124,7 @@
       text: txt-evt-sanity-angry
       report: txt-evt-sanity-angry-report
       actions: {
-        actionText: txt-evt-sanity-angry-action
+        actionText: txt-evt-base-continue
         barter: {
           baseValue: {base: 15}
           items: {il-metaItems: 99}

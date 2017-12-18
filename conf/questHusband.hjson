@@ -126,7 +126,7 @@
         text: txt-evt-harbor-quest-husband-complete-3
         fame: -fameLarge
         actions: {
-          actionText: txt-evt-sanity-angry-action
+          actionText: txt-evt-base-continue
           select: evt-harbor-eventSelection
         }
       }
