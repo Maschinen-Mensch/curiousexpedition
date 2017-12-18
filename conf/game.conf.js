@@ -419,7 +419,7 @@ var staticConfig =
   versionName: '',
   enableAchievements: false,
   showMods: true,
-  footerName: "1.3-modBeta8",
+  footerName: "1.3-modBeta9",
 
   // is converted to config.diaryText at run-time
   diaryTextLangs: {
@@ -1041,6 +1041,7 @@ var config = {
     invSlotUsable: 'orange',
     invSlotInvalid: 'red',
     zone: 'red',
+    news: '#E5D4B3',
 
     infoWarning: 'tomato',
 

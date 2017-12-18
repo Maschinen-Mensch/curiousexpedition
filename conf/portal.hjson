@@ -233,7 +233,7 @@
         reqWorld: 5
         select: 1
         group: [
-          null
+          {}
           {slots: 3, ref: zn-giantBird}
           {slots: 3, ref: zn-raptor}
           {slots: 3, ref: zn-raptor}

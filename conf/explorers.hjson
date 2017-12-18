@@ -15,10 +15,7 @@
     description: txt-sp-darwin
     characters: pl-soldier-scottish pl-translator anm-donkey
     health: 6
-    spawnEvents: {
-      reqTutorial: false
-      items: {it-whisky: 4, it-torch: 3, it-shotgun: 1, it-machete: 10}
-    }
+    items: {it-whisky: 4, it-torch: 3, it-shotgun: 1, it-machete: 10}
     levels: [
       {statuses: st-butterflyEnthusiast, dice: dc-support-2 dc-defend-1}
     ]
@@ -37,9 +34,7 @@
     description: txt-sp-curie
     characters: pl-missionary anm-dog-hunting anm-donkey
     health: 2
-    spawnEvents: {
-      items: {it-chocolate: 4, it-torch: 3, it-firstAid: 2, it-ammo: 5, it-climbingGear: 5}
-    }
+    items: {it-chocolate: 4, it-torch: 3, it-firstAid: 2, it-ammo: 5, it-climbingGear: 5}
     levels: [
       {statuses: st-polymath, dice: dc-support-2 dc-support-1}
     ]
@@ -59,9 +54,7 @@
     description: txt-sp-burton
     health: 8
     characters: pl-soldier-british pl-native-starting-scout
-    spawnEvents: {
-      items: {it-whisky: 3, it-torch: 3, it-rope: 10, it-spear: 3}
-    }
+    items: {it-whisky: 3, it-torch: 3, it-rope: 10, it-spear: 3}
     levels: [
       {statuses: st-polyglot, dice: dc-attack-2 dc-attack-2}
     ]
@@ -80,9 +73,7 @@
     description: txt-sp-huizinga
     health: 4
     characters: [pl-artist, pl-translator, anm-donkey]
-    spawnEvents: {
-      items: {it-whisky: 2, it-torch: 3, it-canvas: 5, it-pistol: 1, it-shovel: 5}
-    }
+    items: {it-whisky: 2, it-torch: 3, it-canvas: 5, it-pistol: 1, it-shovel: 5}
     levels: [
       {statuses: st-anthropology, dice: dc-support-2 dc-support-1}
     ]
@@ -107,9 +98,7 @@
     unlockHint: txt-sp-kingsley-unlock
     characters: [pl-translator, pl-native-starting-warrior, anm-donkey]
     health: 6
-    spawnEvents: {
-      items: {it-chocolate: 8, it-torch: 3, it-shovel: 5}
-    }
+    items: {it-chocolate: 8, it-torch: 3, it-shovel: 5}
     levels: [
       {statuses: st-pacifist, dice: dc-support-2 dc-defend-1}
     ]
@@ -141,9 +130,7 @@
       }
     ]
     characters: [pl-native-starting-animalHandler, pl-sailor, anm-donkey]
-    spawnEvents: {
-      items: {it-whisky: 2, it-torch: 5, it-climbingGear: 3, it-pistol: 1, it-ammo: 5}
-    }
+    items: {it-whisky: 2, it-torch: 5, it-climbingGear: 3, it-pistol: 1, it-ammo: 5}
     levels: [
       {statuses: st-navigator, dice: dc-attack-2 dc-support-1}
     ]
@@ -163,9 +150,7 @@
       {gender: male, sprite: res_expl_tesla.png, portrait: res_face_tesla.png}
     ]
     characters: [pl-cook, pl-trader, anm-donkey]
-    spawnEvents: {
-      items: {it-whisky: 2, it-dynamite: 5, it-fireworks: 3, it-teslaGun: 1, it-shovel: 5}
-    }
+    items: {it-whisky: 2, it-dynamite: 5, it-fireworks: 3, it-teslaGun: 1, it-shovel: 5}
     levels: [
       {statuses: st-strongMind, dice: dc-support-2 dc-support-2}
     ]
@@ -184,9 +169,7 @@
       {gender: female, sprite: res_expl_neel.png, portrait: res_face_neel.png}
     ]
     characters: anm-waterBuffalo anm-dog-hunting
-    spawnEvents: {
-      items: {it-chocolate: 4, it-fireworks: 4, it-rope: 3, it-torch: 3, it-shovel: 5}
-    }
+    items: {it-chocolate: 4, it-fireworks: 4, it-rope: 3, it-torch: 3, it-shovel: 5}
     levels: [
       {statuses: st-animalWhisperer, dice: dc-defend-2 dc-defend-1}
     ]
@@ -205,9 +188,7 @@
       {gender: male, sprite: res_expl_garvey.png, portrait: res_face_garvey.png}
     ]
     characters: [pl-translator, pl-native-starting-scout, anm-donkey]
-    spawnEvents: {
-      items: {it-whisky: 2, it-rope: 3, it-machete: 5, it-ammo: 5, it-shovel: 5}
-    }
+    items: {it-whisky: 2, it-rope: 3, it-machete: 5, it-ammo: 5, it-shovel: 5}
     levels: [
       {statuses: st-naturalLeader, dice: dc-attack-1 dc-support-1}
     ]
@@ -230,9 +211,7 @@
       }
     ]
     characters: [pl-soldier-scottish, pl-missionary, anm-donkey]
-    spawnEvents: {
-      items: {it-cocaLeaves: 5, it-costonFlare: 3, it-torch: 3, it-ammo: 3}
-    }
+    items: {it-cocaLeaves: 5, it-costonFlare: 3, it-torch: 3, it-ammo: 3}
     levels: [
       {statuses: st-impetus, dice: dc-support-1 dc-attack-1}
     ]
@@ -252,9 +231,7 @@
       {gender: male, sprite: res_expl_selous.png, portrait: res_face_selous.png}
     ]
     characters: [pl-trader, pl-cook, anm-donkey]
-    spawnEvents: {
-      items: {it-whisky: 2, it-rope: 3, it-camp: 1, it-rifle: 1, it-shovel: 5}
-    }
+    items: {it-whisky: 2, it-rope: 3, it-camp: 1, it-rifle: 1, it-shovel: 5}
     levels: [
       {statuses: st-tacticalMastery, dice: dc-attack-2 dc-support-1}
     ]
@@ -273,9 +250,7 @@
       {gender: female, sprite: res_expl_stark.png, portrait: res_face_stark.png}
     ]
     characters: [anm-camel, pl-bedouin, pl-cook]
-    spawnEvents: {
-      items: {it-whisky: 2, it-costonFlare: 3, it-rope: 3, it-rifle: 1, it-shovel: 5}
-    }
+    items: {it-whisky: 2, it-costonFlare: 3, it-rope: 3, it-rifle: 1, it-shovel: 5}
     levels: [
       {statuses: st-desertExpert, dice: dc-support-2 dc-attack-1}
     ]
@@ -300,9 +275,7 @@
       }
     ]
     characters: [pl-soldier-british, pl-soldier-scottish, anm-donkey]
-    spawnEvents: {
-      items: {it-necronomicon: 1, it-whisky: 4, it-torch: 3, it-pistol: 1, it-metalCube: 1}
-    }
+    items: {it-necronomicon: 1, it-whisky: 4, it-torch: 3, it-pistol: 1, it-metalCube: 1}
     levels: [
       {statuses: st-necronomicon, dice: dc-support-2 dc-support-1}
     ]
@@ -321,9 +294,7 @@
       {gender: female, sprite: res_expl_bird.png, portrait: res_face_bird.png}
     ]
     characters: [pl-soldier-scottish, pl-native-starting-shaman, anm-donkey]
-    spawnEvents: {
-      items: {it-whisky: 2, it-dynamite: 3, it-torch: 5, it-pistol: 1, it-shovel: 5}
-    }
+    items: {it-whisky: 2, it-dynamite: 3, it-torch: 5, it-pistol: 1, it-shovel: 5}
     levels: [
       {statuses: st-biomeInfo, dice: dc-support-1 dc-attack-2}
     ]
@@ -342,9 +313,7 @@
       {gender: female, sprite: res_expl_tubman.png, portrait: res_face_tubman.png}
     ]
     characters: [pl-missionary, pl-native-starting-warrior, anm-donkey]
-    spawnEvents: {
-      items: {it-chocolate: 4, it-torch: 3, it-fireworks: 5, it-ammo: 7, it-climbingGear: 10}
-    }
+    items: {it-chocolate: 4, it-torch: 3, it-fireworks: 5, it-ammo: 7, it-climbingGear: 10}
     levels: [
       {statuses: st-dreamVisions, dice: dc-attack-1 dc-support-2}
     ]
@@ -363,9 +332,7 @@
       {gender: male, sprite: res_expl_crowley.png, portrait: res_face_crowley.png}
     ]
     characters: [pl-cultist, pl-cultist, pl-cultist]
-    spawnEvents: {
-      items: {it-cocaLeaves: 10, it-dynamite: 6, it-shovel: 4}
-    }
+    items: {it-cocaLeaves: 10, it-dynamite: 6, it-shovel: 4}
     levels: [
       {statuses: st-occultVision, dice: dc-attack-2 dc-attack-1}
     ]
@@ -389,9 +356,7 @@
       }
     ]
     characters: [pl-soldier-british, anm-dog-hunting, anm-donkey]
-    spawnEvents: {
-      items: {it-abacus: 1, it-chocolate: 4, it-torch: 3, it-ammo: 5, it-costonFlare: 3}
-    }
+    items: {it-abacus: 1, it-chocolate: 4, it-torch: 3, it-ammo: 5, it-costonFlare: 3}
     levels: [
       {statuses: st-polymath, dice: dc-support-2 dc-defend-1}
     ]
@@ -406,15 +371,7 @@
     description: txt-sp-amundsen
     characters: pl-native-animalHandler-inuit anm-dog-husky anm-dog-husky
     health: 6
-    spawnEvents: {
-      items: {
-        it-chocolate: 5
-        it-climbingGear: 6
-        it-shotgun: 1
-        it-snowshoe: 10
-        it-polarStation-ticket: 10
-      }
-    }
+    items: {it-chocolate:5, it-climbingGear: 6, it-shotgun: 1, it-snowshoe: 10, it-polarStation-ticket: 10}
     levels: [
       {statuses: st-arcticExplorer, dice: dc-support-2 dc-defend-1}
     ]
@@ -438,9 +395,7 @@
     characters: anm-waterBuffalo pl-cook
     health: 4
     healthBonus: 1
-    spawnEvents: {
-      items: {it-chocolate: 5, it-torch: 3, it-rope: 10, it-firstAid: 4}
-    }
+    items: {it-chocolate: 5, it-torch: 3, it-rope: 10, it-firstAid: 4}
     levels: [
       {statuses: st-healer, dice: dc-feihong dc-support-2}
     ]

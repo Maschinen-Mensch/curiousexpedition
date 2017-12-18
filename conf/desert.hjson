@@ -31,13 +31,13 @@
       ]
       [
         {ref: loc-stoneCircle}
-        null
-        null
+        {}
+        {}
         {ref: loc-trader}
       ]
       [
         {ref: grp-treasure}
-        null
+        {}
         {ref: grp-treasure}
         {ref: grp-special}
         {ref: grp-treasure}
@@ -53,8 +53,8 @@
         {reqWorld: 3.., chance: 0.5, select: 2, ref: loc-cave-teleport}
       ]
       [
-        null
-        null
+        {}
+        {}
         {reqDifficulty: 1.., ref: loc-magneticMountain}
         {reqDifficulty: 1.., ref: loc-magneticMountain}
         {reqDifficulty: 1.., ref: loc-magneticMountain}
@@ -153,7 +153,7 @@
         reqWorld: 4..
         select: 1
         group: [
-          null
+          {}
           {slots: 1, ref: zn-panther}
           {slots: 2, ref: zn-giantBird}
           {slots: 2, ref: zn-raptor}
@@ -206,7 +206,7 @@
         reqWorld: 4..
         select: 1
         group: [
-          null
+          {}
           {slots: 1, ref: zn-panther}
           {slots: 2, ref: zn-giantBird}
           {slots: 2, ref: zn-raptor}
@@ -268,7 +268,7 @@
         reqWorld: 4..5
         select: 1
         group: [
-          null
+          {}
           {slots: 1, ref: zn-panther}
           {slots: 2, ref: zn-giantBird}
           {slots: 2, ref: zn-raptor}
@@ -326,7 +326,7 @@
         reqWorld: 4..5
         select: 1
         group: [
-          null
+          {}
           {slots: 1, ref: zn-panther}
           {slots: 2, ref: zn-giantBird}
           {slots: 2, ref: zn-raptor}
@@ -387,7 +387,7 @@
         reqWorld: 4..5
         select: 1
         group: [
-          null
+          {}
           {slots: 1, ref: zn-panther}
           {slots: 2, ref: zn-giantBird}
           {slots: 2, ref: zn-raptor}
@@ -450,7 +450,7 @@
         reqWorld: 4..5
         select: 1
         group: [
-          null
+          {}
           {slots: 1, ref: zn-panther}
           {slots: 2, ref: zn-giantBird}
           {slots: 2, ref: zn-raptor}
@@ -508,7 +508,7 @@
         reqWorld: 4..5
         select: 1
         group: [
-          null
+          {}
           {slots: 1, ref: zn-panther}
           {slots: 2, ref: zn-giantBird}
           {slots: 4, ref: zn-raptor}

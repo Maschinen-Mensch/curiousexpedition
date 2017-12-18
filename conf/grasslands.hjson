@@ -36,7 +36,7 @@
         {ref: grp-loot}
       ]
       [
-        null
+        {}
         {
           select: 3
           group: [
@@ -48,7 +48,7 @@
       ]
       [
         {ref: grp-treasure}
-        null
+        {}
         {ref: grp-treasure}
         {ref: grp-special}
         {ref: grp-treasure}
@@ -64,8 +64,8 @@
         {reqWorld: 3.., chance: 0.5, select: 2, ref: loc-cave-teleport}
       ]
       [
-        null
-        null
+        {}
+        {}
         {reqDifficulty: 1.., ref: loc-magneticMountain}
         {reqDifficulty: 1.., ref: loc-magneticMountain}
         {reqDifficulty: 1.., ref: loc-magneticMountain}

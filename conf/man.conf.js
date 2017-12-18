@@ -440,8 +440,8 @@ config.man = [
   },
   {
     keyword: 'reqStatus',
-    $character: true,
     $flags: true,
+    $character: true,
     $description: "Returns true if the current character matches the status flags"
   },
   {
@@ -457,7 +457,7 @@ config.man = [
   },
   {
     keyword: 'addNPC',
-    $custom: true,
+    $inline: "true if context npc should be added to party",
     $description: "Adds a specified or the current contexts npc to the party"
   },
   {
@@ -494,6 +494,9 @@ config.man = [
   {
     keyword: 'addCharacter',
     $custom: true,
+    $inline: "@ID of character",
+    id: "@ID of character",
+    _gender: "male or female or hybrid (default: random male/female)",
     $description: "Adds the specified character to the party"
   },
   {
@@ -681,17 +684,17 @@ config.man = [
   },
   {
     keyword: 'resetPartyStatus',
-    $inline: true,
+    $inline: "true or false",
     $description: "Resets a status that is attached to the explorer"
   },
   {
     keyword: 'superMove',
-    $inline: true,
+    $inline: "true or false",
     $description: "Makes the next travel trip a free effortless travel trip."
   },
   {
     keyword: 'mapScore',
-    $inline: true,
+    $inline: "true or false",
     $description: "The amount of map score added or removed."
   }
 

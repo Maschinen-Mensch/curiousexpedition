@@ -15,9 +15,7 @@
       {statuses: st-butterflyEnthusiast, dice: dc-support-2 dc-defend-1}
     ]
     characters: pl-soldier-scottish pl-translator anm-donkey
-    spawnEvents: {
-      items: {it-whisky: 4, it-torch: 3, it-shotgun: 1, it-machete: 10}
-    }
+    items: {it-whisky: 4, it-torch: 3, it-shotgun: 1, it-machete: 10}
   }
   {
     id: sp-ee-ethnographer
@@ -28,9 +26,7 @@
       {statuses: st-polyglot, dice: dc-support-2 dc-defend-1}
     ]
     characters: pl-native-starting-warrior pl-translator anm-donkey
-    spawnEvents: {
-      items: {it-chocolate: 8, it-shovel: 3, it-pistol: 1, it-machete: 10}
-    }
+    items: {it-chocolate: 8, it-shovel: 3, it-pistol: 1, it-machete: 10}
   }
   {
     id: sp-ee-inventorArchaeologist
@@ -41,9 +37,7 @@
       {statuses: st-strongMind, dice: dc-support-2 dc-support-2}
     ]
     characters: pl-cook pl-trader anm-waterBuffalo
-    spawnEvents: {
-      items: {it-chocolate: 10, it-shovel: 3, it-lokiGun: 1, it-machete: 10}
-    }
+    items: {it-chocolate: 10, it-shovel: 3, it-lokiGun: 1, it-machete: 10}
   }
   {
     id: sp-ee-diplomat
@@ -54,9 +48,7 @@
       {statuses: st-bartering-4, dice: dc-attack-2 dc-support-1}
     ]
     characters: pl-native-starting-scout pl-translator anm-donkey
-    spawnEvents: {
-      items: {it-chocolate: 8, it-shovel: 3, it-pistol: 1, it-machete: 10}
-    }
+    items: {it-chocolate: 8, it-shovel: 3, it-pistol: 1, it-machete: 10}
   }
   {
     id: sp-ee-adventurer
@@ -67,9 +59,7 @@
       {statuses: st-natureSanity, dice: dc-defend-2 dc-attack-1}
     ]
     characters: pl-translator anm-dog-hunting anm-camel
-    spawnEvents: {
-      items: {it-chocolate: 8, it-torch: 3, it-shotgun: 1, it-machete: 10}
-    }
+    items: {it-chocolate: 8, it-torch: 3, it-shotgun: 1, it-machete: 10}
   }
   {
     id: sp-ee-aviator
@@ -80,9 +70,7 @@
       {statuses: st-flare-4, dice: dc-attack-2 dc-support-1}
     ]
     characters: pl-native-starting-animalHandler anm-donkey
-    spawnEvents: {
-      items: {it-whisky: 4, it-costonFlare: 7, it-pistol: 1, it-machete: 10}
-    }
+    items: {it-whisky: 4, it-costonFlare: 7, it-pistol: 1, it-machete: 10}
   }
   {
     id: sp-ee-anthropologist
@@ -93,9 +81,7 @@
       {statuses: st-anthropology, dice: dc-support-2 dc-defend-1}
     ]
     characters: pl-artist pl-translator anm-donkey
-    spawnEvents: {
-      items: {it-chocolate: 8, it-torch: 3, it-pistol: 1, it-machete: 10}
-    }
+    items: {it-chocolate: 8, it-torch: 3, it-pistol: 1, it-machete: 10}
   }
   {
     id: sp-ee-pirate
@@ -109,9 +95,7 @@
       }
     ]
     characters: pl-sailor pl-cook anm-tortoise
-    spawnEvents: {
-      items: {it-whisky: 4, it-shovel: 3, it-pistol: 1, it-binoculars: 1}
-    }
+    items: {it-whisky: 4, it-shovel: 3, it-pistol: 1, it-binoculars: 1}
   }
   {
     id: sp-ee-missionary
@@ -125,9 +109,7 @@
       }
     ]
     characters: pl-soldier-british pl-trader anm-donkey
-    spawnEvents: {
-      items: {it-whisky: 4, it-torch: 3, it-shotgun: 1, it-machete: 10}
-    }
+    items: {it-whisky: 4, it-torch: 3, it-shotgun: 1, it-machete: 10}
   }
   {
     id: sp-ee-archeologist
@@ -141,9 +123,7 @@
       }
     ]
     characters: pl-soldier-scottish pl-sailor anm-waterBuffalo
-    spawnEvents: {
-      items: {it-whisky: 4, it-shovel: 10, it-pendulum-treasure: 1, it-machete: 10}
-    }
+    items: {it-whisky: 4, it-shovel: 10, it-pendulum-treasure: 1, it-machete: 10}
   }
   {
     id: sp-ee-inventor
@@ -157,9 +137,7 @@
       }
     ]
     characters: pl-cook pl-trader anm-donkey
-    spawnEvents: {
-      items: {it-chocolate: 4, it-shovel: 3, it-teslaGun: 1, it-machete: 10}
-    }
+    items: {it-chocolate: 4, it-shovel: 3, it-teslaGun: 1, it-machete: 10}
   }
   {
     id: sp-ee-politician
@@ -173,9 +151,7 @@
       }
     ]
     characters: pl-translator pl-artist anm-donkey
-    spawnEvents: {
-      items: {it-chocolate: 4, it-shovel: 3, it-marbles: 20, it-binoculars: 1, it-machete: 10}
-    }
+    items: {it-chocolate: 4, it-shovel: 3, it-marbles: 20, it-binoculars: 1, it-machete: 10}
   }
   {
     id: sp-ee-royalCartographer
@@ -189,9 +165,7 @@
       }
     ]
     characters: pl-cultist anm-tiger-white
-    spawnEvents: {
-      items: {it-cocaLeaves: 10, it-jewels: 5, it-marbles: 10}
-    }
+    items: {it-cocaLeaves: 10, it-jewels: 5, it-marbles: 10}
   }
   {
     id: sp-ee-ladyNight
@@ -205,9 +179,7 @@
       }
     ]
     characters: pl-cultist pl-sterling pl-sailor
-    spawnEvents: {
-      items: {it-chocolate: 4, it-voodooDoll: 3, it-crystalBall: 1}
-    }
+    items: {it-chocolate: 4, it-voodooDoll: 3, it-crystalBall: 1}
   }
   {
     id: sp-ee-robert
@@ -221,9 +193,7 @@
       }
     ]
     characters: anm-dog-hunting
-    spawnEvents: {
-      items: {it-chocolate: 20}
-    }
+    items: {it-chocolate: 20}
   }
   {
     id: sp-ee-blitzkriegsler
@@ -237,9 +207,7 @@
       }
     ]
     characters: pl-soldier-british pl-trader anm-donkey
-    spawnEvents: {
-      items: {it-whisky: 4, it-torch: 3, it-shotgun: 1, it-machete: 10}
-    }
+    items: {it-whisky: 4, it-torch: 3, it-shotgun: 1, it-machete: 10}
   }
   {
     id: sp-ee-scapegrace
@@ -253,9 +221,7 @@
       }
     ]
     characters: pl-trader pl-native-starting-scout anm-donkey
-    spawnEvents: {
-      items: {it-whisky: 4, it-torch: 3, it-pistol: 1, it-machete: 10}
-    }
+    items: {it-whisky: 4, it-torch: 3, it-pistol: 1, it-machete: 10}
   }
   {
     id: sp-ee-cossack
@@ -269,9 +235,7 @@
       }
     ]
     characters: pl-artist pl-cook anm-donkey
-    spawnEvents: {
-      items: {it-whisky: 8, it-rope: 1, it-spear: 4, it-canvas: 5}
-    }
+    items: {it-whisky: 8, it-rope: 1, it-spear: 4, it-canvas: 5}
   }
   {
     id: sp-ee-wolfman
@@ -285,9 +249,7 @@
       }
     ]
     characters: pl-translator pl-native-starting-shaman anm-hyena
-    spawnEvents: {
-      items: {it-whisky: 8, it-rope: 5, it-pistol: 1, it-torch: 5}
-    }
+    items: {it-whisky: 8, it-rope: 5, it-pistol: 1, it-torch: 5}
   }
   {
     id: sp-ee-pewdiepie
@@ -301,9 +263,7 @@
       }
     ]
     characters: anm-dog-pug
-    spawnEvents: {
-      items: {it-chocolate: 10, it-dynamite: 10}
-    }
+    items: {it-chocolate: 10, it-dynamite: 10}
   }
   {
     id: sp-ee-lawyer
@@ -317,9 +277,7 @@
       }
     ]
     characters: anm-donkey pl-sterling pl-translator
-    spawnEvents: {
-      items: {it-chocolate: 5, it-marbles: 10, it-pistol: 1, it-machete: 10}
-    }
+    items: {it-chocolate: 5, it-marbles: 10, it-pistol: 1, it-machete: 10}
   }
   {
     id: sp-ee-mathematician
@@ -333,9 +291,7 @@
       }
     ]
     characters: pl-soldier-british anm-dog-hunting anm-donkey
-    spawnEvents: {
-      items: {it-abacus: 1, it-chocolate: 5, it-torch: 3, it-ammo: 5, it-costonFlare: 3}
-    }
+    items: {it-abacus: 1, it-chocolate: 5, it-torch: 3, it-ammo: 5, it-costonFlare: 3}
   }
   {
     id: sp-ee-filmographer
@@ -349,9 +305,7 @@
       }
     ]
     characters: pl-soldier-scottish pl-translator anm-waterBuffalo
-    spawnEvents: {
-      items: {it-chocolate: 5, it-torch: 3, it-shotgun: 1, it-costonFlare: 3}
-    }
+    items: {it-chocolate: 5, it-torch: 3, it-shotgun: 1, it-costonFlare: 3}
   }
   {
     id: sp-ee-mountainTrooper
@@ -365,9 +319,7 @@
       }
     ]
     characters: pl-artist pl-cook anm-donkey
-    spawnEvents: {
-      items: {it-tinCans: 8, it-rifle: 1, it-climbingGear: 8, it-canvas: 5}
-    }
+    items: {it-tinCans: 8, it-rifle: 1, it-climbingGear: 8, it-canvas: 5}
   }
   {
     id: sp-ee-gronkh
@@ -381,9 +333,7 @@
       }
     ]
     characters: pl-soldier-british pl-translator anm-waterBuffalo
-    spawnEvents: {
-      items: {it-chocolate: 8, it-whip: 1, it-climbingGear: 5, it-torch: 5}
-    }
+    items: {it-chocolate: 8, it-whip: 1, it-climbingGear: 5, it-torch: 5}
   }
   {
     id: sp-ee-journalist
@@ -397,9 +347,7 @@
       }
     ]
     characters: pl-soldier-british pl-sailor
-    spawnEvents: {
-      items: {it-whisky: 5, it-pistol: 1, it-rope: 5}
-    }
+    items: {it-whisky: 5, it-pistol: 1, it-rope: 5}
   }
   {
     id: sp-ee-composer
@@ -413,9 +361,7 @@
       }
     ]
     characters: pl-bedouin pl-artist anm-raptor
-    spawnEvents: {
-      items: {it-chocolate: 5, it-bongosTuned: 1, it-hornFlute: 5, it-torch: 5}
-    }
+    items: {it-chocolate: 5, it-bongosTuned: 1, it-hornFlute: 5, it-torch: 5}
   }
   {
     id: sp-ee-artist
@@ -427,9 +373,7 @@
     ]
     flags: +special +humanoid +artist
     characters: pl-bedouin pl-trader anm-dog-buckwheat
-    spawnEvents: {
-      items: {it-chocolate: 5, it-canvas: 7, it-ammo: 10, it-torch: 5}
-    }
+    items: {it-chocolate: 5, it-canvas: 7, it-ammo: 10, it-torch: 5}
   }
   {
     id: sp-rami
@@ -852,9 +796,7 @@
         portrait: ee_face_bhaak.png
       }
     ]
-    spawnEvents: {
-      items: {it-chocolate: 4, it-shovel: 3, it-pendulum-yendor: 1, it-machete: 10}
-    }
+    items: {it-chocolate: 4, it-shovel: 3, it-pendulum-yendor: 1, it-machete: 10}
   }
   {
     id: sp-belli
@@ -997,9 +939,7 @@
       {statuses: st-natureSanity st-jungleExplorer, dice: dc-support-2 dc-support-1}
     ]
     characters: pl-native-starting-scout anm-raptor
-    spawnEvents: {
-      items: {it-whisky: 2, it-rifle: 1, it-rope: 5, it-torch: 3}
-    }
+    items: {it-whisky: 2, it-rifle: 1, it-rope: 5, it-torch: 3}
   }
   {
     id: sp-friedrich
@@ -1055,8 +995,6 @@
       }
     ]
     characters: pl-native-starting-shaman
-    spawnEvents: {
-      items: {it-whisky: 6, it-egg-raptor:1, it-egg-tortoise:1}
-    }
+    items: {it-whisky: 6, it-egg-raptor:1, it-egg-tortoise:1}
   }
 ]

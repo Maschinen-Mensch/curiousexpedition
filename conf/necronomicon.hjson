@@ -6,6 +6,7 @@
     description: txt-it-necronomicon
     sprite: it_special_book_2.png
     value: {base: 50, village: 0, karma: karmaVeryLarge}
+    reqWorld: 1..
     maxStack: 1
     tripEvents: {reqDifficulty: 1.., unlockCharacter: sp-lovecraft}
     useEvents: [
