@@ -1,0 +1,33 @@
+{
+  modInfo:
+  {
+    id: templateMod
+    name: Template Mod
+    authors: Your_Name_Here
+    version: "1.0"
+    # set enabled to true to activate this mod
+    enabled: false
+    defaultLang: en
+    preview: modPreviewImage
+    description: This is an empty mod template to help you get started. Adventure awaits!
+  }
+
+  imageData:[
+
+    # Find all images on GitHub: https://github.com/Maschinen-Mensch/curiousexpedition/tree/master/img
+    # Use provided template graphics as a starting point: https://github.com/Maschinen-Mensch/curiousexpedition/tree/master/moddingTemplates-assets
+    
+    {
+      id: modPreviewImage
+      file: templateMod/modPreview.png
+    }
+  ]
+
+  modEntries:[
+
+    # Find out what you can do with mods on our wiki documentation wiki: http://curious-expedition.wikia.com/wiki/Modding:Home
+    # Look at all the scripts of the game to understand what you can do: https://github.com/Maschinen-Mensch/curiousexpedition/tree/master/conf
+  
+  
+  ]
+}

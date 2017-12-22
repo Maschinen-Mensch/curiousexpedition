@@ -1,0 +1,76 @@
+[
+    {
+      id: loc-cd-harbor-1
+      name: txt-loc-cd-harbor-1
+      reqBiomeFlags: +ocean
+      flags: +harbor
+      sprite: res_fxt_village_water.png
+      particle: pt-village-2
+      setTile: tl-cd-ocean-deep
+      setNeighbors: [tl-cd-land-grass]
+      actions: evt-waterfall-explore
+      debugCategory: curiousDive
+      debugColor: "#64ff58"
+    }
+    {
+      id: loc-cd-harbor-2
+      extends: loc-cd-harbor-1
+    }
+    {
+      id: loc-cd-goal
+      name: txt-fxt-goldenTemple-unearthed-name
+      debugColor: orange
+      debugCategory: curiousDive
+      reqBiomeFlags: +ocean
+      sprite: res_fxt_goldenTemple_grass_1.png
+      hintCompass: true
+      hintBiome: false
+      mapScore: 0
+      isRemovable: false
+      keepReachable: true
+      flags: +goal
+      maximizeDistance: true
+      subLocations: [
+        {ref: loc-ruins-set-1, offsets: 1n}
+        {ref: loc-ruins-set-2, offsets: 1ne}
+        {ref: loc-ruins-set-3, offsets: 1se}
+        {ref: loc-ruins-set-4, offsets: 1s}
+        {ref: loc-ruins-set-5, offsets: 1sw}
+        {ref: loc-ruins-set-6, offsets: 1nw}
+      ]
+      setTile: tl-jungle-thick
+      spawnEvents: [
+        {
+          reqWorld: 1..
+          replaceTiles: [
+            # {radius: 2, old: any, new: tl-river}
+          ]
+        }
+      ]
+      actions: evt-goal-explore
+    } 
+    {
+      id: gol-cd-goal
+      description: txt-gol-goldenTemple-moonStone
+      locations: loc-cd-goal
+    }
+    {
+      id: grp-cd-harbor
+      group: [
+        {slots: 1, ref: loc-cd-harbor-1}
+        {slots: 1, ref: loc-cd-harbor-2}
+        {slots: 1, ref: loc-cd-harbor-1}
+        {slots: 1, ref: loc-cd-harbor-2}
+        {slots: 1, ref: loc-cd-harbor-1}
+        {slots: 1, ref: loc-cd-harbor-2}
+        {slots: 1, ref: loc-cd-harbor-1}
+        {slots: 1, ref: loc-cd-harbor-2}
+        {slots: 1, ref: loc-cd-harbor-1}
+        {slots: 1, ref: loc-cd-harbor-2}
+        {slots: 1, ref: loc-cd-harbor-1}
+        {slots: 1, ref: loc-cd-harbor-2}
+        {slots: 1, ref: loc-cd-harbor-1}
+        {slots: 1, ref: loc-cd-harbor-2}
+      ]
+    }
+]

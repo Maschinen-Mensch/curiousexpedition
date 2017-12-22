@@ -1,0 +1,218 @@
+{
+  modInfo:
+  {
+    id: scientificAssistant
+    name: Scientific Assistant
+    authors: Maschinen-Mensch
+    version: "0.1.0.0"
+    preview: mod_preview
+    twitter: http://twitter.com/maschimensch
+    weblink: http://maschinen-mensch.com
+    mail: support@maschinen-mensch.com
+    description: "Adds a character that can be recruited at the harbor. It will give you some extra sanity when collecing butterflies (stackable with Darwin's perk). This should allow you to develop interesting strategies around planning your route with butterfly positions in mind."
+    languages: en
+  }
+  imageData:[
+    {
+      id: mod_preview
+      file: scientificAssistant/mod_preview.png
+    }
+    {
+      id: sprite_1
+      file: scientificAssistant/pl_sprite_scientificAssistant_1.png
+    }
+    {
+      id: sprite_2
+      file: scientificAssistant/pl_sprite_scientificAssistant_2.png
+    }
+    {
+      id: sprite_3
+      file: scientificAssistant/pl_sprite_scientificAssistant_3.png
+    }
+    {
+      id: sprite_4
+      file: scientificAssistant/pl_sprite_scientificAssistant_4.png
+    }
+    {
+      id: face_1
+      file: scientificAssistant/pl_face_scientificAssistant_1.png
+    }
+    {
+      id: face_2
+      file: scientificAssistant/pl_face_scientificAssistant_2.png
+    }
+    {
+      id: face_3
+      file: scientificAssistant/pl_face_scientificAssistant_3.png
+    }
+    {
+      id: face_4
+      file: scientificAssistant/pl_face_scientificAssistant_4.png
+    }
+    {
+      id: miniSprite_1
+      file: scientificAssistant/pl_minisprite_scientificAssistant_1.png
+    }
+    {
+      id: miniSprite_2
+      file: scientificAssistant/pl_minisprite_scientificAssistant_2.png
+    }
+    {
+      id: miniSprite_3
+      file: scientificAssistant/pl_minisprite_scientificAssistant_3.png
+    }
+    {
+      id: miniSprite_4
+      file: scientificAssistant/pl_minisprite_scientificAssistant_4.png
+    }
+  ],
+  modEntries:[
+    { # Character definition
+      id: pl-scientificAssistant 
+      title: txt-pl-scientificAssistant-title
+      health: 4
+      capacity: 2
+      flags: +porter +humanoid +scientificAssistant
+      debugCategory: Modding
+      variations: [
+        {
+          gender: male
+          name: westernCharacterMale
+          sprite: sprite_1
+          portrait: face_1
+          miniSprite: miniSprite_1
+        },
+        {
+          gender: male
+          name: westernCharacterMale
+          flags: +darkSkinned
+          sprite: sprite_2
+          portrait: face_2
+          miniSprite: miniSprite_2
+        },
+        {
+          gender: hybrid
+          name: westernCharacterFemale
+          sprite: sprite_3
+          portrait: face_3
+          miniSprite: miniSprite_3
+        },
+        {
+          gender: male
+          name: westernCharacterMale
+          sprite: sprite_4
+          portrait: face_4
+          miniSprite: miniSprite_4
+        },
+      ],
+      
+      spawnEvents: {
+        partyEvents: [
+          {
+            #Random chance to apply a negative status from the beginning on
+            select: [ 
+              {
+                slots:2
+                setStatus: +alcoholic
+              }
+              {
+                slots:1
+                setStatus: +kleptomania
+              }
+              {
+                slots:10
+              }
+            ]
+          }
+          { 
+            # Personality will influence the kind of chatlines that may be triggered for this character based on the entries at chat.conf.js
+             select: [ 
+              {
+                slots:1
+                setCharFlags: +witty
+              }
+              {
+                slots:1
+                setCharFlags: +brave
+              }
+              {
+                slots:1
+                setCharFlags: +coward
+              }
+            ]
+          }
+        ]     
+      }
+      levels: [ 
+        { # LEVEL 1 (starting)
+          statuses: st-scientificAssistant-1
+          dice: dc-support-1
+        }
+        { # LEVEL 2
+          statuses: st-scientificAssistant-2
+          dice: dc-support-1 dc-support-1
+        }
+        { # LEVEL 3
+          statuses: st-scientificAssistant-3
+          dice: dc-support-2 dc-support-1
+        }
+        { # LEVEL 4 (max)
+          statuses: st-scientificAssistant-4
+          dice: dc-support-2 dc-support-2
+        }
+      ]
+    }
+    # Custom perk defintion
+    { 
+      id: st-scientificAssistant-1
+      title: txt-pk-researchAssistance-1-title
+      description: txt-pk-researchAssistance-description
+      sprite: res_status_butterfly.png
+      debugCategory:Unit Perk
+      bonus: {taxonomySanity: 10}
+    }
+    {
+      id: st-scientificAssistant-2
+      extends: st-scientificAssistant-1
+      title: txt-pk-researchAssistance-2-title
+      bonus: {taxonomySanity: 20}
+    }
+    {
+      id: st-scientificAssistant-3
+      extends: st-scientificAssistant-1
+      title: txt-pk-researchAssistance-3-title
+      bonus: {taxonomySanity: 30}
+    }
+    {
+      id: st-scientificAssistant-4
+      extends: st-scientificAssistant-1
+      title: txt-pk-researchAssistance-4-title
+      bonus: {taxonomySanity: 40}
+    }
+    # Hook up to Harbor HUB events so that character can be recruited
+    {
+      targetId: +evt-harbor-recruit-select::select
+      slots:1
+      ref: evt-harbor-recruit-scientificAssistant
+    }
+    {
+      id: evt-harbor-recruit-scientificAssistant
+      npc: pl-scientificAssistant
+      npcEvents: {
+        actions: {
+          alwaysShown: true
+          actionText: txt-evt-harbor-recruit-scientificAssistant-action
+          setPartyFlags: +recruitedSomebody
+          addNPC: true
+          chat: cl-join
+          text: txt-evt-harbor-recruit-scientificAssistant
+          select: evt-harbor-recruit
+        }
+      }
+      charEvents: { 
+        count: all
+        reqCharFlags: -scientificAssistant
+      },
+    }
+  ]
+}

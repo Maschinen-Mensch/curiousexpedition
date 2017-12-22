@@ -1,0 +1,55 @@
+{
+  modInfo:
+  {
+    id: rivers
+    name: Rivers
+    authors: 8BitBeard
+    version: "1.0"
+    enabled: true
+    defaultLang: en
+    preview: modPreviewImage
+    description: "Rivers!"
+  }
+
+  imageData:[
+    {
+      id: modPreviewImage
+      file: templateMod/modPreview.png
+    }
+  ]
+
+  modEntries:[
+    {
+      id: loc-riverSpring
+      name: "River Spring"
+      debugCategory: Modding
+      showHint: false
+      hintBiome: false
+      sprite: res_fxt_volcano_active.png
+      spawnEvents: {
+        select: [
+          { setLocationFlags: +riverDirection_N }
+          { setLocationFlags: +riverDirection_E }
+          { setLocationFlags: +riverDirection_S }
+          { setLocationFlags: +riverDirection_W }
+        ]
+      }
+    }
+    {
+      id: loc-river
+      name: "River Spring"
+      debugCategory: Modding
+      showHint: false
+      hintBiome: false
+      sprite: res_fxt_volcano_inactive.png
+    }
+    {
+      id: tl-realRiver
+      name: "River"
+      extends: tl-plateau
+      viewCost: 0.1
+      moveCost: -1
+      flags: +river
+    }
+  ]
+}

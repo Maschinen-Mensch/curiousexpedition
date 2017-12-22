@@ -1,0 +1,58 @@
+[
+    {
+      id: tl-cd-ocean-base
+      name: txt-tl-cd-ocean-deep
+      flags: +ocean +deep
+      borderTag: water
+      viewCost: 0
+      moveCost: 1
+      particle: pt-water
+    }
+    {
+      id: tl-cd-ocean-deep
+      extends: tl-cd-ocean-base 
+      sprites: [
+        res_tl_ocean_deep_01
+      ]
+    }
+    {
+      id: tl-cd-ocean-medium
+      extends: tl-cd-ocean-base
+      sprites: [
+        res_tl_ocean_medium_01
+      ]
+    }
+    {
+      id: tl-cd-ocean-shallow
+      extends: tl-cd-ocean-base
+      sprites: [
+        res_tl_ocean_shallow_01
+      ]
+    }
+    {
+      id: tl-cd-land-grass
+      name: txt-tl-cd-land-grass
+      sprites: [
+        res_tile_grass_1.png
+        res_tile_grass_1.png
+        res_tile_grass_2.png
+        res_tile_grass_3.png
+        res_tile_grass_3.png
+        res_tile_grass_4.png
+        res_tile_grass_5.png
+        res_tile_grass_6.png
+        res_tile_grass_7.png
+        res_tile_grass_7.png
+        res_tile_grass_8.png
+        res_tile_grass_9.png
+        res_tile_grass_10.png
+        res_tile_grass_11.png
+        res_tile_grass_12.png
+        res_tile_grass_13.png
+      ]
+      borderImgIdx: 1
+      borderPrio: 2
+      viewCost: 0
+      moveCost: -1
+    }
+]

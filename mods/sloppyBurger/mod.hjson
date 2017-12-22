@@ -1,0 +1,52 @@
+{
+  modInfo:
+  {
+    id: sloppyBurger
+    name: The Sloppy Burger item.
+    authors: jkristman
+    version: "1.0"
+    enabled: false
+    defaultLang: en
+    preview: it_sloppyBurger.png
+  },
+  imageData:[
+    {
+      id: it_sloppyBurger.png
+      file: sloppyBurger/it_sloppyBurger.png
+    }
+  ],
+  modEntries:[
+    {
+      id: it-sloppyBurger
+      name: txt-it-sloppyBurger-name
+      description: txt-it-sloppyBurger
+      debugCategory: sanity
+      sprite: it_sloppyBurger.png
+      value: 7
+      maxStack: 20
+      select: [
+        {
+          slots: 3
+          sanity: 5
+          removeItem: true
+        }
+        {
+          slots: 2
+          sanity: 10
+          removeItem: true
+        }
+        {
+          slots: 1
+          sanity: 15
+          removeItem: true
+        }
+
+      ]
+    }
+    {
+      targetId: +il-harbor-rations::items
+      it-sloppyBurger: 10
+      slots: 2
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  #The modInfo section contains information about the mod
+  #like who made it, what version it is or what its display name should be
+  modInfo:
+  {
+    id: trex
+    name: T-Rex
+    authors: Maschinen-Mensch
+    version: "0.1.0.0"
+    preview: trex-large.png
+    twitter: http://twitter.com/maschimensch
+    weblink: http://maschinen-mensch.com
+    mail: support@maschinen-mensch.com
+    description: "Adds a T-Rex into the game as well as a quest to hunt it"
+    defaultLang: en
+  },
+  #The imageData section describes all the new images and sprites that need to be loaded
+  imageData:[
+    {
+      #This is the id we give it, we will refer to the image only by its id
+      id: trex-large.png
+      #The path to the image inside the mods directory
+      file: trex/trex-large.png
+    }
+    {
+      id: trex-zone.png
+      file: trex/trex-zone.png
+    }
+  ]
+  modEntries:[
+    #First order of business
+    #We are adding a new enemy to the game. The game can tell we want to make an enemy because of the emy- prefix
+    #Since we don't want to modify anything already in the game, there is no target it
+
+    #We give the new enemy the trex-large.png sprite that we defined above
+    #It has 20 HP and 4 attack dice. Those dice do not exist yet, so we will have to add them later as well
+    #It also drops the item it-trexTooth, which we will also have to add
+    {
+      id: emy-trex
+      debugCategory: Enemy
+      name: txt-emy-trex-name
+      health: 20
+      dice: dc-attack-enemy-trex dc-attack-enemy-trex dc-attack-enemy-trex dc-attack-enemy-trex
+      items: {it-meat-raw:10, it-trexTooth:3}
+      sprite: trex-large.png
+      isLeftFacingSprite: true
+    }
+    #We are adding the dice now
+    #Again no target-id is necessary
+    #We just have to specify the faces and the background of the dice
+    {
+      id: dc-attack-enemy-trex
+      sprite: hud_dice_bg_emy_1.png
+      faces: claw_3 claw_3 teeth teeth stomp stomp
+    }
+    #Next we're creating the item
+    #Its name and description start with txt- so the game will look for the text in the translations
+    #Next we assign it a sprite (which we reuse from the game)
+    #After that we give it a value for trading, in this case it's usually worth 40 but traders consider it worth 60
+    #Then some extra information for maximum stack size and how much fame and funds they are worth and we are done.
+    #No more lose ends for the enemy
+    {
+      id: it-trexTooth
+      name: txt-it-trexTooth-name
+      description: txt-it-trexTooth
+      debugCategory: trophy
+      sprite: it_animal_tooth_1.png
+      value: {base: 40, trader: 60}
+      maxStack: 5
+      fame: fameLarge
+      funds: fundsLarge
+    }
+    #But, as it is, the enemy won't show up anywhere, we didn't tell the game how or where to spawn the t-rex yet
+    #So first we define a zone, zones are the red areas you can see on the map that trigger enemies chasing you
+    #This zone will display our trex-zone.png sprite
+    #It moves 0.8 tiles per step and has a 75% chance to aggro per turn
+    #If the zone collides with us we start combat with the t-rex
+    {
+      id: zn-trex
+      name: txt-zn-trex-name
+      sprite: trex-zone.png
+      borderImgIdx: 0
+      size: [4,4]
+      aggroChance: 0.75
+      moveSpeed: 0.8
+      events: {
+        showImage: {type: day, src: evt_spec_combat_1.png},
+        report: txt-zn-trex-report,
+        combat: [{emy-trex:1}]
+      },
+    }
+    #That's it for being able to spawn the trex in the game, but it's much more exciting to have a quest.
+    #For that we'll include the trex-quest.hjson file in order to keep the main file more readable
+    {
+      import: trex/trex-quest.hjson
+    }
+  ]
+}

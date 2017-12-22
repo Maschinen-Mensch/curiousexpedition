@@ -1,0 +1,93 @@
+  #In this file we are defining everything we need to add a new quest to the game
+[
+  #This time we want to modify something that is already in the game.
+  #So this time we have a target to add to, namely the evt-harbor-quest-offer events
+  #We add an event to it that triggers when we are at least in world 4 and the world is prehistoric
+  #On top of that we require that the party doesn't have the trex-hunt flag set so that this will only trigger once
+  #In that case we trigger another event that starts the quest
+  {
+    targetId: evt-harbor-quest-offer::select
+    slots: 20
+    reqWorld: 4..
+    reqWorldFlags: "+prehistoric"
+    reqPartyFlags: "-trex-hunt"
+    setPartyFlags: "+trex-hunt"
+    select: "evt-harbor-quest-trex-hunt"
+  }
+
+  #This is the event that we trigger to offer the trex quest to the player
+  #We're not adding something existing, so once again we don't need a targetId
+  #We display some text and then offer the player two actions to take
+  #Either accept the quest in which case we set a flag to remember it was accepted
+  #Or not to, in which case we don't set the flag and simply move on
+  {
+    id: evt-harbor-quest-trex-hunt
+    text: txt-evt-trex-hunt-quest
+    actions: [
+      {
+        actionText: "txt-generic-accept"
+        text: "txt-evt-trex-hunt-accept"
+        setPartyFlags: "+trex-hunt-accepted"
+        actions: evt-harbor-eventSelection
+      },
+      {
+        actionText: "txt-generic-refuse"
+        text: "txt-evt-trex-hunt-refuse"
+        events: evt-harbor-eventSelection
+      },
+    ]
+  }
+  #Now if the quest was accepted, we want a trex to spawn in the world
+  #The evt-world-initQuest is responsible for initialising quests in a world
+  #So we add a small event to its partyEffects
+  #If the trex-hunt-accepted flag is set we create a new zone with a trex in it.
+  {
+    targetId: evt-world-initQuests::partyEvents
+    optional: true
+    reqPartyFlags: "+trex-hunt-accepted"
+    addZone: {
+      ref: zn-trex
+      range: 15..50
+      reachable: true
+    }
+  }
+
+  #The T-rex will now spawn in the game world when we have accepted the quest
+  #Next we want to make sure that we check if the player finished the quest when he returns from the expedition
+  #In order to do that we add a new event to the evt-harbor-quest-completedCheck events
+  #Our event requires the trex-hunt-accepted flag to be set and will then call the event to handle returning from that quest
+  {
+    targetId: evt-harbor-quest-completedCheck::select
+    reqPartyFlags: "+trex-hunt-accepted"
+    select: evt-harbor-quest-trex-hunt-complete
+  }
+
+  #This event contains an npc, so he will show up in the animated scene on the right
+  #We are adding two possible actions for the player here:
+  #1. If the player has at least one it-trexTooth item, he has the option to give one to the NPC and receive a reward
+  #2. And of course we can always not give one and take a hit to our fame
+  {
+    id: evt-harbor-quest-trex-hunt-complete
+    reqPartyFlags: "+trex-hunt-accepted"
+    setPartyFlags: "-trex-hunt-accepted"
+    text: "txt-evt-harbor-quest-trex-complete"
+    npc: npc-hunter
+    npcEvents: {
+      actions: {
+        reqItems: {it-trexTooth: 1..}
+        alwaysShown: true
+        actionText: "txt-evt-harbor-quest-trex-complete-action"
+        text: "txt-evt-harbor-quest-trex-complete-1"
+        report: "txt-evt-harbor-quest-trex-complete-report"
+        items: {it-trexTooth: -1}
+        actions: evt-harbor-quest-reward
+      }
+    }, 
+    actions: {
+      actionText: "txt-evt-harbor-quest-trex-fail-action"
+      text: "txt-evt-harbor-quest-trex-fail"
+      fame: "-fameLarge"
+      select: evt-harbor-eventSelection
+    }
+  }
+]

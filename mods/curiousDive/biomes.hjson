@@ -1,0 +1,22 @@
+[
+    {
+      id: bio-cd-generic
+      flags: +generic
+      debugColor: pink
+      eventImg: {day: evt_bio_grasslands_1.png, night: evt_bio_grasslands_1_night.png}
+      terrain: [
+        {perlin: 0.7, tile: tl-cd-ocean-deep}
+        {perlin: 0.6, tile: tl-cd-ocean-medium}
+        {perlin: 0.5, tile: tl-cd-ocean-shallow}
+        {perlin: 0.4, tile: tl-cd-land-grass}
+        {perlin: 0.3, tile: tl-cd-ocean-shallow}
+        {perlin: 0.2, tile: tl-cd-ocean-medium}
+        {perlin: 0.0, tile: tl-cd-ocean-deep}
+      ]
+      locations: [
+        
+      ]
+      zones: [
+      ]
+    }
+]

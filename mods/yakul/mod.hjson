@@ -1,0 +1,262 @@
+{
+  modInfo:
+  {
+    id: yakul
+    name: The Yakul
+    authors: Maschinen-Mensch
+    version: "0.1.0.0"
+    preview: mod_preview
+    twitter: http://twitter.com/maschimensch
+    weblink: http://maschinen-mensch.com
+    mail: support@maschinen-mensch.com
+    description: "Adds an animal that can be recruited at normal native villages. It behaves as a normal pack animal and can carry crates and be mounted. When mounted, it will add the climber perk, making it easier to traverse hill areas."
+    defaultLang: en
+  }
+  imageData:[
+    {
+      id: mod_preview
+      file: yakul/mod_preview.png
+    }
+    {
+      id: crates
+      file: yakul/crates_yakul.png
+    }
+    {
+      id: saddle
+      type: slotted
+      file: yakul/saddle_yakul.png
+    }
+    {
+      id: sprite_01
+      file: yakul/sprite_yakul_01.png
+    }
+    {
+      id: face_01
+      file: yakul/face_yakul_01.png
+    }
+    {
+     file: yakul/face_yakul_01_small.png
+    }
+    {
+      id: minisprite_01
+      file: yakul/minisprite_yakul_01.png
+    }
+    {
+      id: sprite_02
+      file: yakul/sprite_yakul_02.png
+    }
+    {
+      id: face_02
+      file: yakul/face_yakul_02.png
+    }
+    {
+      id: face_small_02
+      file: yakul/face_small_yakul_02.png
+    }
+    {
+      id: minisprite_02
+      file: yakul/minisprite_yakul_02.png
+    }
+    {
+      id: sprite_03
+      file: yakul/sprite_yakul_03.png
+    }
+    {
+      id: face_03
+      file: yakul/face_yakul_03.png
+    }
+    {
+      id: face_small_03
+      file: yakul/face_small_yakul_03.png
+    }
+    {
+      id: minisprite_03
+      file: yakul/minisprite_yakul_03.png
+    }
+    {
+      id: sprite_04
+      file: yakul/sprite_yakul_04.png
+    }
+    {
+      id: face_04
+      file: yakul/face_yakul_04.png
+    }
+    {
+      id: face_small_04
+      file: yakul/face_small_yakul_04.png
+    }
+    {
+      id: minisprite_04
+      file: yakul/minisprite_yakul_04.png
+    }
+    {
+      id: sprite_05
+      file: yakul/sprite_yakul_05.png
+    }
+    {
+      id: face_05
+      file: yakul/face_yakul_05.png
+    }
+    {
+      id: face_small_05
+      file: yakul/face_small_yakul_05.png
+    }
+    {
+      id: minisprite_05
+      file: yakul/minisprite_yakul_05.png
+    }
+    {
+      id: sprite_06
+      file: yakul/sprite_yakul_06.png
+    }
+    {
+      id: face_06
+      file: yakul/face_yakul_06.png
+    }
+    {
+      id: face_small_06
+      file: yakul/face_small_yakul_06.png
+    }
+    {
+      id: minisprite_06
+      file: yakul/minisprite_yakul_06.png
+    }
+  ],
+  modEntries:[
+    {
+      id: anm-yakul
+      title: txt-anm-yakul-title
+      description: txt-anm-yakul
+      health: 8
+      capacity: 3
+      flags: +animal +packAnimal +mammal
+      debugCategory: Modding
+      variations: [
+        {
+          gender: female
+          name: animalFemale
+          sprite: sprite_01
+          portrait: face_01
+          miniSprite: minisprite_01
+        }
+        {
+          gender: male
+          name: animalMale
+          sprite: sprite_01
+          portrait: face_01
+          miniSprite: minisprite_01
+        }
+        {
+          gender: female
+          name: animalFemale
+          sprite: sprite_02
+          portrait: face_02
+          miniSprite: minisprite_02
+        }
+        {
+          gender: male
+          name: animalMale
+          sprite: sprite_02
+          portrait: face_02
+          miniSprite: minisprite_02
+        }
+        {
+          gender: female
+          name: animalFemale
+          sprite: sprite_03
+          portrait: face_03
+          miniSprite: minisprite_03
+        }
+        {
+          gender: male
+          name: animalMale
+          sprite: sprite_03
+          portrait: face_03
+          miniSprite: minisprite_03
+        }
+        {
+          gender: female
+          name: animalFemale
+          sprite: sprite_04
+          portrait: face_04
+          miniSprite: minisprite_04
+        }
+        {
+          gender: male
+          name: animalMale
+          sprite: sprite_04
+          portrait: face_04
+          miniSprite: minisprite_04
+        }
+        {
+          gender: female
+          name: animalFemale
+          sprite: sprite_05
+          portrait: face_05
+          miniSprite: minisprite_05
+        }
+        {
+          gender: male
+          name: animalMale
+          sprite: sprite_05
+          portrait: face_05
+          miniSprite: minisprite_05
+        }
+        {
+          gender: female
+          name: animalFemale
+          sprite: sprite_06
+          portrait: face_06
+          miniSprite: minisprite_06
+        }
+        {
+          gender: male
+          name: animalMale
+          sprite: sprite_06
+          portrait: face_06
+          miniSprite: minisprite_06
+        }
+      ]
+      extraSprites: 
+      {
+        crates: crates
+        saddle: saddle
+      }
+      isMountable: true
+      mountedStatuses: st-mount-3 st-climber
+      bonus: {capacity: -1, reqMounted: true}
+      mountedDice: dc-yakul-1!6
+      levels: [
+        {}
+        {dice: dc-yakul-1!4}
+        {dice: dc-yakul-1!5}
+        {dice: dc-yakul-1!6}
+      ]
+    }
+    # Dice
+    {
+      id: dc-yakul-1
+      sprite: hud_dice_bg_animal_1.png
+      faces: hoof ram ram horns horns horns 
+    }
+    # Recruit in generic village
+    {
+      targetId: +evt-village-recruit-select-animal::select
+      ref: evt-village-recruit-yakul
+    }
+    {
+      id: evt-village-recruit-yakul
+      reqLocationFlags: +tribeWarriors | +tribeScouts | +tribeShamans | +tribeInuit
+      npc: anm-yakul
+      npcEvents: {
+        actions: {
+          actionText: txt-anm-yakul-title
+          text: txt-evt-village-recruit-animal-generic
+          setPartyFlags: +recruitedSomebody
+          addNPC: true
+          select: evt-village-main-update
+        }
+      }
+    }
+  ]
+}

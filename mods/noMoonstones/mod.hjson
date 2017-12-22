@@ -1,0 +1,42 @@
+{
+  modInfo:
+  {
+    id: noMoonstones
+    name: No More Moonstones
+    authors: 8BitBeard
+    version: "1.0"
+    enabled: true
+    defaultLang: en
+    preview: noMoonstones_modPreviewImage
+    description: "You hate those pyramids that require moonstones to enter? With this mod, you will never need moonstones to enter a pyramid. The drawback: ALL pyramids will require at least one seal to be unlocked. Moonstones will still spawn, but serve no purpose other than trading."
+  }
+
+  imageData:[ 
+    {
+      id: noMoonstones_modPreviewImage
+      file: noMoonstones/modPreview.png
+    }
+  ]
+  modEntries:[
+    {
+      targetId: /pck-grass::goals
+      data: ["gol-goldenTemple-buried"]
+    }
+    {
+      targetId: /pck-dry::goals
+      data: ["gol-goldenTemple-buried"]
+    }
+    {
+      targetId: /pck-arctic::goals
+      data: ["gol-goldenTemple-buried"]
+    }
+    {
+      targetId: /pck-desert::goals
+      data: ["gol-goldenTemple-buried"]
+    }
+    {
+      targetId: /pck-prehistoric::goals
+      data: ["gol-goldenTemple-buried"]
+    }
+  ]
+}

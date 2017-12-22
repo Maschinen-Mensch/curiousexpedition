@@ -1,0 +1,21 @@
+{
+  modInfo:
+  {
+    id: endless
+    name: Endless Mode
+    authors: ByteRiot
+    version: "0.1.0.0"
+    preview: endless_thumb.png
+    description: "Why ever get enough The Curious Expedition? Play endless!"
+    defaultLang: en
+  },
+  imageData:[
+    {
+      id: endless_thumb.png
+      file: endless/endless_thumb.png
+    }
+  ],
+  configSettings:{
+    maxExpedition: 999
+  }
+}
