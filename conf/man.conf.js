@@ -409,10 +409,10 @@ config.man = [
   },
   {
     keyword: 'chat',
-    id: "ID of the chat line entry. can also be single string pointing to ID",
+    id: "@id of the chat line entry",
     _chance: "the random chance for chat line to be triggered (default: 1.0)",
+    $inline: "@id of the chat line entry",
     $example: "chat: {chance:0.5, id:'cl-chat'}",
-    $custom: true,
     $description: "Shows a specific chat line"
   },
   {
@@ -469,7 +469,7 @@ config.man = [
     keyword: 'removeStatus',
     $character: true,
     $description: "Removes the status which is in current context",
-    $inline: true
+    $inline: "true or false"
   },
   {
     keyword: 'particle',
@@ -493,10 +493,10 @@ config.man = [
   },
   {
     keyword: 'addCharacter',
-    $custom: true,
-    $inline: "@ID of character",
-    id: "@ID of character",
+    id: "@id of character",
     _gender: "male or female or hybrid (default: random male/female)",
+    $custom: true, // because of the custom inline event syntax
+    $inline: "@id of character",
     $description: "Adds the specified character to the party"
   },
   {
@@ -521,12 +521,12 @@ config.man = [
   },
   {
     keyword: 'unlockCharacter',
-    $inline: "ID of explorer to unlock",
+    $inline: "@id of explorer to unlock",
     $description: "Unlocks specified character"
   },
   {
     keyword: 'warpWorld',
-    $inline: "warp to a random warp world"
+    $inline: "@id of world to warp to"
   },
   {
     keyword: 'reqItemsValue',

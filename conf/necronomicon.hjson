@@ -81,9 +81,12 @@
           charEvents: {reqStatus: -necronomicon}
           text: txt-evt-necronomicon-page-1
           startSprawl: {ref: spr-fire, radius: 3, power: 15}
-          removeItem: true
+          items: [{
+            it-necronomicon: -1
+          }]
         }
-        {slots: 2}
+        {slots: 2
+          select: evt-leave}
       ]
     }
   }

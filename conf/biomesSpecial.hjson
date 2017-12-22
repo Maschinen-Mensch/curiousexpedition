@@ -4,6 +4,7 @@
     extends: pck-grass
     name: txt-pck-whiteTiger-name
     description: txt-pck-whiteTiger
+    flags: +jungle +special
     specialBiomes: bio-whiteTiger
   }
   {
@@ -11,6 +12,7 @@
     extends: pck-grass
     name: txt-pck-waterTemple-name
     description: txt-pck-waterTemple
+    flags: +jungle +special
     ambientSound: sfx_loop_swamp_1
     specialBiomes: bio-waterTemple
   }
@@ -19,6 +21,7 @@
     extends: pck-grass
     name: txt-pck-elephantGraveyard-name
     description: txt-pck-elephantGraveyard
+    flags: +jungle +special
     ambientSound: sfx_loop_swamp_1
     specialBiomes: bio-elephantGraveyard
   }
@@ -27,6 +30,7 @@
     extends: pck-dry
     name: txt-pck-volcano-dry-name
     description: txt-pck-volcano-dry
+    flags: +jungle +special
     locations: [
       {reqWorld: 1.., select: 1, ref: loc-volcano-spawn-large-inactive}
       {reqWorld: 2.., select: 1, ref: loc-volcano-spawn-large-inactive}
@@ -43,9 +47,12 @@
   {
     id: bio-whiteTiger
     name: txt-bio-whiteTiger-name
-    flags: {grass: true}
+    flags: +jungle +special
     dist: 1
-    eventImg: {day: evt_bio_grasslands_1.png, night: evt_bio_grasslands_1_night.png}
+    eventImg: {
+      day: evt_bio_grasslands_1.png, 
+      night: evt_bio_grasslands_1_night.png
+    }
     tokenIdx: 1
     terrain: [
       {perlin: 0.9, tile: tl-swamp}
@@ -86,9 +93,12 @@
   {
     id: bio-waterTemple
     name: txt-bio-waterTemple-name
+    flags: +jungle +special +water
     dist: 1
-    flags: {grass: true, water: true}
-    eventImg: {day: evt_bio_grasslands_1.png, night: evt_bio_grasslands_1_night.png}
+    eventImg: {
+      day: evt_bio_grasslands_1.png, 
+      night: evt_bio_grasslands_1_night.png
+    }
     tokenIdx: 1
     terrain: [
       {perlin: 0.87, tile: tl-grass}
@@ -118,8 +128,11 @@
     id: bio-elephantGraveyard
     name: txt-bio-elephantGraveyard-name
     dist: 1
-    flags: {grass: true, water: true}
-    eventImg: {day: evt_bio_grasslands_1.png, night: evt_bio_grasslands_1_night.png}
+    flags: +jungle +special +water
+    eventImg: {
+      day: evt_bio_grasslands_1.png, 
+      night: evt_bio_grasslands_1_night.png
+    }
     tokenIdx: 4
     terrain: [
       {perlin: 0.92, tile: tl-jungle-light}

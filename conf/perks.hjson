@@ -220,7 +220,7 @@
   }
   {
     id: st-cocaIncrease-1
-    title: txt-st-cocaIncrease-1-title
+    title: txt-pk-cocaIncrease-1-title
     description: txt-pk-cocaIncrease-1
     bonus: {cocaBonus: 5}
     sprite: res_status_occultVision.png
@@ -326,7 +326,7 @@
     sprite: res_status_occultVision.png
     debugCategory: Unit Perk
     tripEvents: {
-      reqAge: 1
+      reqAge: 1..
       posTile: {locations: loc-oasis, closest: true, range: ..10}
       revealTiles: {radius: 0, location: true, centerCam: false}
     }
@@ -336,7 +336,7 @@
     title: txt-pk-discoverOasis-2-title
     extends: st-discoverOasis-1
     tripEvents: {
-      reqAge: 1
+      reqAge: 1..
       posTile: {locations: loc-oasis, closest: true, range: ..14}
       revealTiles: {radius: 1, location: true, centerCam: false}
     }
@@ -346,7 +346,7 @@
     title: txt-pk-discoverOasis-3-title
     extends: st-discoverOasis-1
     tripEvents: {
-      reqAge: 1
+      reqAge: 1..
       posTile: {locations: loc-oasis, closest: true, range: ..18}
       revealTiles: {radius: 2, location: true, centerCam: false}
     }
@@ -356,7 +356,7 @@
     title: txt-pk-discoverOasis-4-title
     extends: st-discoverOasis-1
     tripEvents: {
-      reqAge: 1
+      reqAge: 1..
       posTile: {locations: loc-oasis, closest: true, range: ..25}
       revealTiles: {radius: 2, location: true, centerCam: false}
     }
@@ -549,15 +549,14 @@
     sprite: res_status_dreamVisions.png
     tripEvents: [
       {
-        slots: 1
-        reqAge: 8
+        reqAge: 8..
         resetStatusAge: true
         reqLocation: {flags: +dreamVisions, locationKnown: false, range: ..25}
         posTile: {locationFlags: +dreamVisions, locationKnown: false, closest: true}
         revealTiles: {radius: 1, location: true, centerCam: true, particle: pt-magic-reveal}
         chat: cl-dreamVisions
       }
-      {slots: 5, reqAge: 8}
+      {slots: 5}
     ]
   }
   {

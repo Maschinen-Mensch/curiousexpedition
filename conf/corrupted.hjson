@@ -375,7 +375,7 @@
     removeLocation: false
     particle: pt-corrupt
     viewCost: 0
-    blockZone: true
+    blockZone: false
   }
   {
     id: pt-corrupt

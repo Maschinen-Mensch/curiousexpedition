@@ -109,7 +109,7 @@
     reqBiomeFlags: +dry -arctic
     sprite: res_fxt_village_1.png
     flags: +village +villageType_2 +settlement +inhabited
-    initItems: particle: pt-village-2
+    particle: pt-village-2
     setNeighbors: [
       {count: 1, ref: tl-dry}
       {count: 4, ref: tl-hill}
@@ -199,7 +199,6 @@
         actions: [
           evt-village-familyAmulet
           evt-village-quest-letter
-          evt-village-quest-missionary
           evt-village-rest
           evt-village-recruit
           evt-village-trade
@@ -305,7 +304,7 @@
     sanity: {base: sanityRestVillage, bonus: villageSanityBonus}
     turns: 1
     standing: standingCostVillageUse
-    charEvents: {optional: true, reqStatus: +polyglot, standing: null}
+    charEvents: {optional: true, reqStatus: +polyglot, standing: -standingCostVillageUse}
     select: evt-village-morning
   }
   {

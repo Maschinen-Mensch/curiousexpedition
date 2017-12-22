@@ -102,7 +102,7 @@
     }
     dayEvents: [
       {
-        reqAge: 7
+        reqAge: 7..
         replaceLocations: {new: loc-volcano-inactive}
       }
       {
@@ -124,7 +124,7 @@
     sprite: res_fxt_volcano_inactive.png
     dayEvents: [
       {
-        reqAge: 10
+        reqAge: 10..
         select: [
           {
             replaceTiles: [
@@ -149,11 +149,11 @@
         ]
       }
       {
-        reqAge: 20
+        reqAge: 20..
         slots: 1
         replaceLocations: {new: loc-volcano-active}
       }
-      {reqAge: 20, slots: 20}
+      {reqAge: 20.., slots: 20}
     ]
   }
   {

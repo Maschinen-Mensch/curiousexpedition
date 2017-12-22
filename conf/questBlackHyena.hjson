@@ -58,7 +58,6 @@
     setPartyStatus: -blackHyena
     npcEvents: {
       actions: {
-        incAchievement: ach-kill-snarfrattle
         reqItems: {it-pelt-hyena-black: 1..}
         alwaysShown: true
         actionText: txt-evt-harbor-quest-blackHyena-complete-action

@@ -242,7 +242,7 @@
         text: txt-evt-village-recruit-animal-generic
         setPartyFlags: +recruitedSomebody
         addCharacter: anm-parasaurolophus
-        incAchievement: ach-recr-dino
+        incAchievement: ach-recr-dinos
         select: evt-village-main-update
       }
     }
@@ -257,7 +257,7 @@
         text: txt-evt-village-recruit-animal-generic
         setPartyFlags: +recruitedSomebody
         addCharacter: anm-chasmosaurus
-        incAchievement: ach-recr-dino
+        incAchievement: ach-recr-dinos
         select: evt-village-main-update
       }
     }

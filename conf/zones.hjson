@@ -70,6 +70,7 @@
     id: evt-hyena-black-attack
     showImage: {type: day, src: evt_spec_combat_1.png}
     report: txt-evt-hyena-black-attack-report
+    setPartyFlags: +snarfrattleCombat
     select: [
       {
         reqDifficulty: 0

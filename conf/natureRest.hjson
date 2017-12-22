@@ -1238,7 +1238,7 @@
     id: evt-sanity-kleptomania-stealItem
     chat: cl-generic
     charEvents: {reqStatus: +kleptomania, text: txt-evt-sanity-kleptomania-stealItem}
-    reqItemsValue: 5....
+    reqItemsValue: 5..
     dropItems: 5
     select: evt-sanity-return
   }

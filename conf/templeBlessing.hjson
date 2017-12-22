@@ -179,7 +179,7 @@
     debugCategory: blessing
     description: txt-st-blessingPureMind
     sprite: res_status_pureMind.png
-    dayEvents: {reqAge: 1, removeStatusWithFlags: +ailment}
+    dayEvents: {reqAge: 1.., removeStatusWithFlags: +ailment}
   }
   {
     id: st-blessingLeatherskin

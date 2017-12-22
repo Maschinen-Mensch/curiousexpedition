@@ -17,9 +17,9 @@
     important: true
     sprite: res_status_alcoholic.png
     dayEvents: [
-      {reqAge: 35, loyalty: -1, resetStatusAge: true}
+      {reqAge: 35.., loyalty: -1, resetStatusAge: true}
       {
-        charEvents: {count: 4, reqStatus: +alcoholic, incAchievement: ach-alcoholics}
+        charEvents: {count: 3.., reqStatus: +alcoholic, incAchievement: ach-alcoholics}
       }
     ]
   }

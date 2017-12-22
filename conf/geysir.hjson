@@ -40,7 +40,7 @@
       replaceLocations: {range: ..4, old: loc-geysir-inactive, new: loc-geysir-active}
     }
     dayEvents: {
-      reqAge: 7
+      reqAge: 7..
       replaceLocations: {new: loc-geysir-inactive}
       startSprawl: {ref: spr-geysir-dry, radius: 0, power: 2}
     }
@@ -59,12 +59,8 @@
       {ref: tl-river-shallow}
     ]
     dayEvents: [
-      {
-        reqAge: 15
-        slots: 1
-        replaceLocations: {new: loc-geysir-active}
-      }
-      {reqAge: 15, slots: 10}
+      { reqAge: 15.., replaceLocations: {new: loc-geysir-active}}
+      {slots: 10}
     ]
   }
 ]

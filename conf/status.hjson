@@ -45,16 +45,11 @@
     description: txt-st-abomination-eat
     sprite: res_status_cannibal.png
     tripEvents: [
-      {
-        slots: 1
-        reqAge: 4
-        resetStatusAge: true
-        select: evt-sanity-abomination-hungry
-      }
-      {slots: 5}
+      { reqAge: 4.., resetStatusAge: true, delayedEvent: evt-sanity-abomination-hungry}
+      { slots: 5 }
     ]
     dayEvents: {
-      charEvents: {count: 3, reqCharFlags: +abomination, incAchievement: ach-triple-abomination}
+      charEvents: {count: 3.., reqCharFlags: +abomination, incAchievement: ach-triple-abomination}
     }
   }
   {
@@ -66,13 +61,13 @@
     important: true
     sprite: res_status_bitingMarks.png
     tripEvents: [
-      evt-become-abomination
+      {delayedEvent: evt-become-abomination}
       {slots: 6, reqAge: 4}
     ]
   }
   {
     id: evt-become-abomination
-    reqAge: 4
+    reqAge: 4..
     partyEvents: {ref: evt-setImage-nightCamp}
     playMusic: thm_nature_night_campfire_dark_2
     charEvents: {
@@ -91,10 +86,10 @@
       {
         startSprawl: {ref: spr-flood, power: 1}
       }
-      {reqWorld: ..2, reqAge: 12, removeStatus: true}
-      {reqWorld: 3, reqAge: 16, removeStatus: true}
-      {reqWorld: 4, reqAge: 20, removeStatus: true}
-      {reqWorld: 5.., reqAge: 24, removeStatus: true}
+      {reqWorld: ..2, reqAge: 12.., removeStatus: true}
+      {reqWorld: 3, reqAge: 16.., removeStatus: true}
+      {reqWorld: 4, reqAge: 20.., removeStatus: true}
+      {reqWorld: 5.., reqAge: 24.., removeStatus: true}
     ]
   }
   {
@@ -127,7 +122,7 @@
   {
     id: st-fireSafe
     debugCategory: internal
-    dayEvents: {reqAge: 2, removeStatus: true}
+    dayEvents: {reqAge: 2.., removeStatus: true}
   }
   {
     id: st-mount-1
@@ -360,12 +355,12 @@
     debugCategory: internal
     dayEvents: [
       {
-        reqAge: 2
+        reqAge: 2..
         reqPartyFlags: -jingleFirstTimePlayed
         setPartyFlags: +jingleFirstTimePlayed
         playMusic: jgl_good_1 jgl_good_2 jgl_good_3
       }
-      {reqAge: 45, setPartyFlags: +playJingle, reqPartyFlags: -playJingle}
+      {reqAge: 45.., setPartyFlags: +playJingle, reqPartyFlags: -playJingle}
       {
         slots: 1
         reqPartyFlags: +playJingle

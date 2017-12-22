@@ -431,7 +431,6 @@
       }
       {
         optional: true
-        reqWorld: 5..
         reqPartyFlags: -abortedExpedition
         incAchievement: ach-expeditions
       }
@@ -446,6 +445,36 @@
         reqWorld: 5..
         reqPartyFlags: -recruitedSomebody
         incAchievement: ach-no-recruit
+      }
+      {
+        optional: true
+        reqWorldFlags: +special
+        incAchievement: ach-visit-special
+      }
+      {
+        optional: true
+        reqWorld: 5..
+        reqRanking: ..2
+        incAchievement: ach-third-place
+      }
+      {
+        optional: true
+        reqWorld: 5..
+        reqRanking: ..1
+        incAchievement: ach-second-place
+      }
+      {
+        optional: true
+        reqWorld: 5..
+        reqRanking: 0
+        incAchievement: ach-first-place
+      }
+      {
+        optional: true
+        charEvents: {reqCharFlags: +secret}
+        reqWorld: 5..
+        reqRanking: ..2
+        incAchievement: ach-secret-explorer
       }
     ]
     charEvents: [

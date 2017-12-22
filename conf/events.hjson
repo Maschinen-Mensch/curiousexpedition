@@ -204,6 +204,14 @@
   }
   {
     id: evt-combat-loot
+    partyEvents: [
+      {
+        optional: true
+        reqPartyFlags: +snarfrattleCombat
+        setPartyFlags: -snarfrattleCombat
+        incAchievement: ach-kill-snarfrattle
+      }
+    ]
     sanity: {base: 0, bonus: combatSanity}
     select: [
       {
@@ -239,12 +247,19 @@
     text: txt-evt-combat-run
     report: txt-evt-combat-run-report
     incAchievement: ach-flee
-    partyEvents: { 
-      optional: true
-      reqPartyFlags: +abominationCombat
-      setPartyFlags: -abominationCombat
-      addZone: {ref: zn-abomination, range: ..3}
-    }
+    partyEvents: [
+      { 
+        optional: true
+        reqPartyFlags: +abominationCombat
+        setPartyFlags: -abominationCombat
+        addZone: {ref: zn-abomination, range: ..3}
+      }
+      {
+        optional: true
+        reqPartyFlags: +snarfrattleCombat
+        setPartyFlags: -snarfrattleCombat
+      }
+    ]
     select: [
       {
         prio: 0

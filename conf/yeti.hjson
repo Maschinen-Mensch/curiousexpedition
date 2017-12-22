@@ -48,7 +48,7 @@
     sprite: res_status_loyalty.png
     dayEvents: [
       {
-        reqAge: 1
+        reqAge: 1..
         charEvents: {count: any, reqCharFlags: -special -animal, loyalty: 1}
       }
       {reqAge: 80.., resetStatusAge: true}
@@ -60,7 +60,7 @@
     extends: st-loyaltyBuff-1
     dayEvents: [
       {
-        reqAge: 1
+        reqAge: 1..
         charEvents: {count: any, reqCharFlags: -special -animal, loyalty: 1}
       }
       {reqAge: 60.., resetStatusAge: true}
@@ -72,7 +72,7 @@
     extends: st-loyaltyBuff-1
     dayEvents: [
       {
-        reqAge: 1
+        reqAge: 1..
         charEvents: {count: any, reqCharFlags: -special -animal, loyalty: 1}
       }
       {reqAge: 40.., resetStatusAge: true}
@@ -84,7 +84,7 @@
     extends: st-loyaltyBuff-1
     dayEvents: [
       {
-        reqAge: 1
+        reqAge: 1..
         charEvents: {count: any, reqCharFlags: -special -animal, loyalty: 1}
       }
       {reqAge: 30.., resetStatusAge: true}

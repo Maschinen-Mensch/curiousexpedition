@@ -38,20 +38,20 @@
     dayEvents: [
       {
         reqTileFlags: -active
-        reqAge: 30
+        reqAge: 30..
         setTileFlags: +active
         setLocationParticle: pt-fumarole-smoke-active
         resetLocationAge: true
       }
       {
         reqTileFlags: +active -poisonGasSpawned
-        reqAge: 3
+        reqAge: 3..
         setTileFlags: +poisonGasSpawned
         addZone: {ref: zn-poisonGas, range: ..2}
       }
       {
         reqTileFlags: +active
-        reqAge: 4
+        reqAge: 4..
         setTileFlags: -active -poisonGasSpawned
         setLocationParticle: pt-fumarole-smoke-1
         resetLocationAge: true
@@ -71,7 +71,7 @@
     dayEvents: [
       {
         slots: 1
-        reqAge: 30
+        reqAge: 30..
         replaceLocations: {new: loc-fumarole-active}
       }
       {slots: 3}
@@ -86,13 +86,13 @@
     }
     dayEvents: [
       {
-        reqAge: 3
+        reqAge: 3..
         reqTileFlags: -poisonGasSpawned
         setTileFlags: +poisonGasSpawned
         addZone: {ref: zn-poisonGas, range: ..2}
       }
       {
-        reqAge: 4
+        reqAge: 4..
         replaceLocations: {new: loc-fumarole-inactive}
       }
     ]

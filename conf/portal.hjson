@@ -69,9 +69,7 @@
   {
     id: st-portalStay
     buffDays: 101
-    dayEvents: [
-      {reqAge: 100, incAchievement: ach-stay-portal}
-    ]
+    dayEvents: {reqAge: 100.., incAchievement: ach-stay-portal}
   }
   {
     id: evt-portal-explore

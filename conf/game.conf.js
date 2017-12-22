@@ -417,9 +417,9 @@ var achievements = [
 var staticConfig =
 {
   versionName: '',
-  enableAchievements: false,
+  enableAchievements: true,
   showMods: true,
-  footerName: "1.3-modBeta10",
+  footerName: "1.3.0.6",
 
   // is converted to config.diaryText at run-time
   diaryTextLangs: {
@@ -438,6 +438,28 @@ var staticConfig =
       separator: '',
       nonBreaking: '。，:'
     }
+  },
+
+  slotColors : {
+    explorer: '#f0ff00',
+    unit: '#36ff00',
+    animal: '#ffffff',
+    mounted: '#ff9ceb',
+    enemy: '#ff0000',
+    npc: '#00f6ff',
+    npc2: '#b700b1',
+
+    'pck-grass': '#ff0000',
+    'pck-dry': '#06ff00',
+    'pck-desert': '#f6ff00',
+    'pck-arctic': '#a6ffef',
+    'pck-prehistoric': '#ff00e4',
+
+    socket: '#ff009c',
+    chimney: '#ff0000',
+    campfire: '#802cff',
+    custom: '#6624cc',
+    custom2: '#ffc24d',
   },
 
   testEvents:[
@@ -688,16 +710,13 @@ var config = {
     overburden: 'st-overburden',
     bipolar: 'st-bipolar',
     sledding: 'st-sledding',
-
-    biomeInfo: 'pk-biomeInfo',
-    polymath: 'pk-polymath',
-    polyglot: 'pk-polyglot',
-    cartographer: 'pk-cartographer',
-    desertExpert: 'pk-desertExpert',
+    biomeInfo: 'st-biomeInfo',
+    polymath: 'st-polymath',
+    cartographer: 'st-cartographer',
+    desertExpert: 'st-desertExpert',
     pacifist: 'st-pacifist',
     otherworldly: 'st-otherworldly',
     animalWhisperer: 'st-animalWhisperer',
-    careerist: 'pk-careerist'
   },
 
   ship: {

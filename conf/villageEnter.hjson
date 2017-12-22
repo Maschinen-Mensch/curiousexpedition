@@ -42,6 +42,12 @@
       }
       {
         prio: 1
+        reqPartyStatus: +missionary, setPartyStatus: -missionary
+        reqLocationFlags: +questMissionary, setLocationFlags: -questMissionary
+        select: evt-village-enter-missionary
+      }
+      {
+        prio: 1
         reqLocationFlags: +harborQuestKonrad
         select: evt-village-enter-konrad
       }
@@ -251,7 +257,7 @@
       text: txt-evt-village-enter-escortVillager
       setPartyFlags: +escortVillagerShrineInfo
       actions: {
-        actionText: txt-evt-base-continue
+        actionText: txt-base-continue
         addNPC: true
         standing: 2
         select: evt-village-enterCheck

@@ -33,7 +33,7 @@
   }
   {
     id: evt-cave-selectCaveEvent
-    actionText: txt-evt-base-continue
+    actionText: txt-base-continue
     select: [
       {reqLocationFlags: +caveTypeOpening, select: evt-cave-opening}
       {reqLocationFlags: +caveTypePaintings, select: evt-cave-paintings}
@@ -214,7 +214,7 @@
     ]
     actions: [
       {
-        actionText: txt-evt-base-continue
+        actionText: txt-base-continue
         showImage: {src: evt_fxt_cave_darkness_2.png}
         text: txt-evt-cave-explore-noTorch-7
         charEvents: [
@@ -228,7 +228,7 @@
           }
           {
             optional: true
-            reqLocationFlags: +spiders
+            reqLocationFlags: +spiders, setLocationFlags: -spiders
             text: txt-evt-cave-explore-noTorch-9
             select: [
               {

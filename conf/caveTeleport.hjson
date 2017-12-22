@@ -6,15 +6,33 @@
       {ref: tl-hill, count: 5, reqBiomeFlags: -arctic}
       {ref: tl-plateau, count: 5, reqBiomeFlags: +arctic}
     ]
-    spawnEvents: {setLocationFlags: +caveTypeTeleport}
+    spawnEvents: {setLocationFlags: +caveTypeTeleport +caveTypeSet}
     debugColor: SANDYBROWN
   }
   {
     id: evt-cave-teleport-arrive
-    showImage: {src: evt_fxt_cave_teleport.png}
-    text: txt-evt-cave-teleport-arrive
-    report: txt-evt-cave-teleport-arrive-report
-    actions: [evt-cave-teleport, evt-cave-explored-leave]
+    select: [
+      {
+        reqLocationFlags: -teleportedOnce
+        setLocationFlags: +teleportedOnce
+        showImage: {src: evt_fxt_cave_teleport.png}
+        text: txt-evt-cave-teleport-arrive
+        report: txt-evt-cave-teleport-arrive-report
+        actions: [evt-cave-teleport, evt-cave-explored-leave]
+      }
+      {
+        reqLocationFlags: +teleportedOnce
+        select: evt-cave-teleport-doTeleport
+      }
+    ]
+  }
+  {
+    id: evt-cave-teleport-doTeleport
+    posTile: {range: 2.., locationFlags: +caveTypeTeleport}
+    setLocationFlags: +teleportedOnce
+    charEvents: {reqCharFlags: +special, removeStatusWithFlags: +localCurse}
+    teleport: true
+    turns: 3
   }
   {
     id: evt-cave-teleport
@@ -24,12 +42,9 @@
     select: [
       {
         reqLocation: {range: 2.., flags: +caveTypeTeleport}
-        charEvents: {reqCharFlags: +special, removeStatusWithFlags: +localCurse}
+        select: evt-cave-teleport-doTeleport
         text: txt-evt-cave-teleport
         report: txt-evt-cave-teleport-report
-        posTile: {range: 2.., locationFlags: +caveTypeTeleport}
-        teleport: true
-        turns: 3
         actions: evt-cave-explored-leave
       }
       {

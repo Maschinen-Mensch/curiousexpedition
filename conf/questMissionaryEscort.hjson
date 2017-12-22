@@ -36,12 +36,8 @@
     }
   }
   {
-    id: evt-village-quest-missionary
+    id: evt-village-enter-missionary
     actionText: txt-evt-village-quest-missionary-action
-    reqPartyStatus: +missionary
-    setPartyStatus: -missionary
-    reqLocationFlags: +questMissionary
-    setLocationFlags: -questMissionary
     charEvents: {
       reqCharFlags: +missionary
       text: txt-evt-village-quest-missionary
@@ -49,8 +45,9 @@
       removeCharacter: true
       revealTiles: {radius: 1, centerCam: true}
     }
-    report: txt-evt-village-quest-missionary-report
     standing: 2
-    select: evt-village-main-update
+    actions: {
+      select: evt-village-enterCheck
+    }
   }
 ]
