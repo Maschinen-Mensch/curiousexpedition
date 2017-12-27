@@ -1,0 +1,51 @@
+{
+  modInfo:
+  {
+    id: slapface
+    name: Slap Face!
+    authors: ByteRiot
+    version: "0.1.0.1"
+    preview: slapface_thumb.png
+    email: riad@curius-expedition.com
+    description: "Adds a much needed Slap button to the character interface. When words are not enough anymore, it's time to get slapping."
+    defaultLang: en
+  },
+  imageData:[
+    {
+      id: slapface_thumb.png
+      file: slapface/slapface_thumb.png
+    }
+  ]
+  modEntries: [
+    {
+      id: btn-punish
+      title: txt-evt-slapFace-button
+      useEvents: evt-slapFace
+      reqCharFlags: -special -animal
+    },
+    {
+      id: evt-slapFace
+      text: txt-evt-slapFace
+      health: -1
+      select: [
+        {
+          slots: 5
+          loyalty: -1
+          text: txt-evt-slapFace-neg
+        },
+        {
+          slots: 5
+          loyalty: 1
+          reqHealth: 1..
+          text: txt-evt-slapFace-pos
+        }
+        {
+          loyalty: -1
+          text: txt-evt-slapFace-counter
+          charEvents: {reqCharFlags:+special, health:-2}
+        }
+      ]
+    }
+  ]
+  
+}
