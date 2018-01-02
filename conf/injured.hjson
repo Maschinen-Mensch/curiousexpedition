@@ -30,7 +30,7 @@
     description: txt-st-dying
     sprite: res_status_infected.png
     important: true
-    blocksHealthRegen: true
+    blockHealthRegen: true
     dayEvents: {
       delayedEvent: [
         {

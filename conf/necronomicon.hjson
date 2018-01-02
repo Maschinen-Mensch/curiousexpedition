@@ -11,8 +11,7 @@
     tripEvents: {reqDifficulty: 1.., unlockCharacter: sp-lovecraft}
     useEvents: [
       {
-        slots: 1
-        reqSanity: ..9
+        reqSanity: ..19
         sanity: -10
         partyEvents: {ref: evt-setImage-nightCamp}
         text: txt-it-necronomicon-0
@@ -20,7 +19,6 @@
         startSprawl: {ref: spr-fire, radius: 3, power: 15}
       }
       {
-        slots: 1
         reqSanity: 10..
         reqBiomeFlags: +warped
         setPartyStatus: -portalReturn
@@ -28,7 +26,11 @@
         text: txt-it-necronomicon-1
         actions: {unwarpWorld: true}
       }
-      {prio: 1, slots: 2, select: evt-necronomicon-page}
+      {
+        prio: 1, 
+        slots: 2, 
+        select: evt-necronomicon-page
+      }
       {
         prio: 1
         slots: 10
@@ -38,7 +40,6 @@
       }
       {
         prio: 1
-        slots: 1
         reqMaxPerWorld: 1
         chat: cl-necronomicon-portal
         charEvents: {reqStatus: +necronomicon}
@@ -71,14 +72,14 @@
     text: txt-evt-necronomicon-page
     loot: {
       items: [
-        {slots: 3, il-tomePages: 2}
+        {slots: 3, il-tomePages: 2}  
         {slots: 1, il-tomePages: 3}
         {slots: 5, il-tomePages: 1}
       ]
       closeEvents: [
         {
           slots: 1
-          charEvents: {reqStatus: -necronomicon}
+          reqPartyStatus: -necronomicon
           text: txt-evt-necronomicon-page-1
           startSprawl: {ref: spr-fire, radius: 3, power: 15}
           items: [{

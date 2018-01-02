@@ -23,6 +23,7 @@
     important: true
     autoRemove: true
     bonus: {healthRegen: -0.75}
+    blockLevelUp: true
     dayEvents: [
       {
         reqAge: 40..
