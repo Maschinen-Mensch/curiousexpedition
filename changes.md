@@ -3,7 +3,7 @@
 * Modding improvements
   * Added support for requirements for perks in the celebration screen. Possible use cases: only offering some perks for some explorers, having some perks as prequisite for other perks (e.g. level 1, level 2, level 3 perks), offering perks depending on visited terrain types, having a curse disallows choosing a new perk for one expedition, etc..
   * Added support for adding custom character buttons (in the same style as the promote or mount button). They can have their own requirements and can trigger a custom event when clicked. A new example mod slapFace showing how to use this can be found on our githug page https://github.com/Maschinen-Mensch/curiousexpedition/tree/master/mods
-  * Added a new console viewer which is more stream lined than the previous version (more work to be done here). There is a new "Open Log" button on the modding screen to open it. Also game events should now be contributed to the correct mod making it easier to debug things. The console will be improved further
+  * Added a new log viewer which is more stream lined than the previous version (more work to be done here). There is a new "Show Log" button on the modding screen to open it and also on the in-game debug bar. Also game events should now be contributed to the correct mod making it easier to debug things.
   * Fixed modding feature check only accounted for the first new entity type instead of counting all of them
   * Fixed mod version parsing was not working when the number was not written in quotes. Also reduced the amount of numbers designating the version to just two (A.B) instead of (A.B.C.D).
   * Fixed parsing mods without imgData breaking game graphics
