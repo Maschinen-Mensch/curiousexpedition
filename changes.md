@@ -1,3 +1,14 @@
+# 1.3.2 (January 3rd, 2018)
+
+* Fixed altar broke when sacrificing certain items
+* Fixed window not covering whole game area
+* Modding
+  * Added refresh button to modding screen which allows to reload mods without leaving screen
+  * Remember entity history for in-game debug bar
+  * Add bonus syntax support for XP, compass score, karma
+  * Print syntax parsing errors for mods in debug console
+  * Fixed upload button
+
 # 1.3.1 (January 2nd, 2018)
 
 * Modding improvements
@@ -30,7 +41,6 @@
 * Other changes
   * Cosmic Indifference perk should now also working if there are other human trek members. Raised the required sanity to use Necronomicon without burning it to 20
   * Corrupted sprawl should no longer kill zones
-
 
 # 1.3.0 (December 20th, 2017) "Modding & Achievements!"
 
@@ -195,11 +205,9 @@
 * Chinese update!
   * Added new explorer Huang Feihong with special attacks
   * Added Traditional and Simplified Chinese language translation (Thanks so much to Project Gutenberg)
-
 * Tuning
   * Increased health bonus for regeneration blessing
   * Increased level health bonus for Marie Curie
-
 * Bugfixes
   * Fixed overlong text in epilogue screen
   * Fixed signature rifle was not using correct die
@@ -425,14 +433,12 @@
   * Weatherballoon still gives +1 map score, but also reveals the closest location now
   * Set butterfly collection to unlosable
   * Added purple mushrooms
-
 * World variation
   * Retuned all worlds to offer more biome variety
   * All the expeditions still have one main biome, but you might now also encounter single regions of different biomes (e.g. desert next to jungle)
   * Retuned the spawning of settlements and natural camp sites. There basically is now always one per region.
   * In grassland worlds there was always a village near the ship arrival location. That village is usually not there anymore.
   * There is now also more variation in the biomes surrounding the world. In addition to the mountains and river biome, there is now also a jungle and pit biome variation. Entering these will now write the message "Impassable region" and change the background color of the map in that region.
-
 * Improved ship landing location
 * To get a preview about the number of locations in a region, the region has to have been entered once
 * Show when next rival will arrive in info box for race bar
@@ -461,7 +467,6 @@
   * Added visual notification for changes to loyalty
   * Added loyalty bonus after each expedition for all remaining trek members
   * Native trek members that want to leave the trek at the end of an expedition, can now be convinced to stay by passing a mind die challenge
-
 * Combat and Enemies
   * Added surprise attacks. When an attack is not initiated by the player, the enemies get to strike first in combat
   * Enemies may now also use shield attacks now
@@ -470,14 +475,12 @@
   * Enemy zones that are still in aggro delay should not attack player
   * Added smarter path finding for enemies
   * Reduced shield effect of spear shield attack from 3 to 2
-
 * Loot
   * Hidden treasures (found via treasure maps) will now always contain a magical item
   * Shamans will now always offer tome pages
   * Removed horn flutes and mini puppets from magic loot table. They are normal items now.
   * Increased loot gained from raiding tombs
   * Reduced item cost of some utility items like coston flare, fireworks, horn flute
-
 * Misc
   * Luis now is a free unit and will not count towards the unit count limit
   * Reduced chance for alcoholism
@@ -508,7 +511,6 @@
   * Improved image for water village event
   * Tweaked fire animation / flickering
   * Going through portals removes flood curse
-
 * Bugfixes
   * Fixed crash in epilogue screen when having lizard people in trek
   * Fixed ship was drawn too big when zooming out at start of expedition
@@ -1358,11 +1360,9 @@ This is a big update for us. We've added the much awaited dinosaur riding featur
   * All pack-animals (including dinosaurs) can be mounted by the explorer now.
   * Mounting animals reduces their carrying capacity, but reduces base movement costs and unlocks special combat dice.
   * Have fun finding all the new dinosaur unit types that we added.
-
 * New Locations
   * Bone village, home to the infamous lizard people
   * Raptor nests, great place to find living dinosaur eggs
-
 * Layout
   * We've reworked the overall layout to feature a new party side bar with  character portraits for all units. The party side bar is also visible during events, allowing to inspect the party quickly.
   * The sanity bar is now bigger and centered on the screen. The path cost for the current travel route is also previewed on the bar.
@@ -1371,11 +1371,9 @@ This is a big update for us. We've added the much awaited dinosaur riding featur
   * All chat lines are now shown in chat bubbles.
   * Less statuses will be shown next to the character. Hover over characters to see the full list.
   * The character portraits shown on top of the event image have been optimized in size.
-
 * Character selection screen
   * Its now possible to hover over the items and support characters of each explorer to get more information.
   * Explorers that have finished the game are shown with a golden frame.
-
 * Misc
   * Show region info only for regions which already have been entered
   * Missing adventurer does not consume a unit slot anymore
@@ -1384,7 +1382,6 @@ This is a big update for us. We've added the much awaited dinosaur riding featur
   * The celebration crowd will now comment on the party and your success
   * New particle for explored regions
   * Hot air balloon now needs at least two humanoid party members to set up
-
 * Bugfixes
   * Fixed world gen sometimes creating unreachable locations. Sorry about that!
   * Haggle icon was missing
@@ -1402,7 +1399,6 @@ This is a big update for us. We've added the much awaited dinosaur riding featur
   * Increased cost for fleeing from combat
   * Confrontations with natives now uses the village price table
   * Finishing Konrad quest will give slight standing boost
-
 * Bugfixes
   * Reset followed-by-natives status when leaving expedition
   * Fixed cenote for all pyramid types
@@ -1426,20 +1422,16 @@ Here is a more detailed list of highlights in this alpha:
   * A new pyramid type was added, which is buried when the expedition starts. Find all the golden seals to unearth it!
   * The world map screen will give you an idea what goal to expect at each destination.
   * Different types of goals will you award different amounts of fame.
-
 * Quests
   * Added various new quests. We don't want to spoil exactly which, but be careful with Snarfrattle, that's a dangerous beast.
   * Each quest type will only be offered once per play-through
-
 * New actions
   * Added a button for waiting. Does nothing else, just waiting.
   * Added a button for balloon escape. Allows you to abandon your current expedition, but you won't get points for finding the golden pyramid and you might have to leave behind some of your inventory. 
-
 * Locations
   * Tower shrines can be visited without having a rope (at increased risk of injury)
   * Caves can be visited without torches (at increased risk of injury)
   * Villages and biome types are not hardcoded anymore, so you now might also find scouts outside of dry lands now
-
 * Item changes
   * Improved quest rewards loot table
   * Slightly reduced health kit price
@@ -1448,24 +1440,19 @@ Here is a more detailed list of highlights in this alpha:
   * Weather balloon now gives a small sight advantage and also has no waiting cost anymore
   * Canvases max stack increased to 10; harbor shop now sells more canvases.
   * Improved overburen handling: when losing party members or discarding items, empty slots will automatically be cleaned up.
-
 * Perks
   * Increased sanity gained when having a translator in village
   * Improved occult vision perk to work without having to rest first
   * Improved power of dream visions perk
-
 * Nature Disasters
   * Traversing through fire might be deadly now
   * Made the void more readable by adding new particles
-
 * Abominations
   * Its no longer possible to heal abominations in shaman huts
   * The chance of turning into a abomination when being marked has been increased.
-
 * Music
   * Added music track for pyramids
   * Increased the fade out time of the music, so you will be able to hear the event music tracks longer.
-
 * Bugfixes
   * Restoring a save game with multiple cultists was broken. Unfortunately you won't be able to move your save games from Alpha 11 to Alpha 12.
   * Explorers should automatically level up after each expedition

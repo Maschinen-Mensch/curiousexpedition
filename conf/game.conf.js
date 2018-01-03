@@ -419,7 +419,7 @@ var staticConfig =
   versionName: '',
   enableAchievements: true,
   showMods: true,
-  footerName: "1.3.1.0",
+  footerName: "1.3.2.2",
 
   // is converted to config.diaryText at run-time
   diaryTextLangs: {
