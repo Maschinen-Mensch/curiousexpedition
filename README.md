@@ -1,14 +1,14 @@
 # Overview
-[addZone](#{addZone) [incAchievement](#{incAchievement) [barter](#{barter) [resetGlobalInv](#{resetGlobalInv) [loot](#{loot) [startSprawl](#{startSprawl) [revealTiles](#{revealTiles) [revealBiome](#{revealBiome) [reqCanStartSprawl](#{reqCanStartSprawl) [replaceLocations](#{replaceLocations) [replaceTiles](#{replaceTiles) [deactivateZones](#{deactivateZones) [posTile](#{posTile) [setLocationParticle](#{setLocationParticle) [resetLocationAge](#{resetLocationAge) [reqLocation](#{reqLocation) [reqZone](#{reqZone) [addLocation](#{addLocation) [camShake](#{camShake) [dropItems](#{dropItems) [endWorld](#{endWorld) [addButterfly](#{addButterfly) [regenBiome](#{regenBiome) [rest](#{rest) [reqStatusDayAge](#{reqStatusDayAge) [removeStatusWithFlags](#{removeStatusWithFlags) [reqMaxPerWorld](#{reqMaxPerWorld) [reqWorld](#{reqWorld) [posPunch](#{posPunch) [blockRivals](#{blockRivals) [resetStatusAge](#{resetStatusAge) [removeItem](#{removeItem) [removeZone](#{removeZone) [removeZones](#{removeZones) [reqWaiting](#{reqWaiting) [storeCharacter](#{storeCharacter) [unstoreCharacter](#{unstoreCharacter) [loyalty](#{loyalty) [cloneCharacter](#{cloneCharacter) [reqExplorer](#{reqExplorer) [reqTutorial](#{reqTutorial) [reqFame](#{reqFame) [reqFunds](#{reqFunds) [reqWarpWorld](#{reqWarpWorld) [showPartyCount](#{showPartyCount) [removeCharacter](#{removeCharacter) [turns](#{turns) [sanity](#{sanity) [teleport](#{teleport) [reqKarma](#{reqKarma) [compassScore](#{compassScore) [health](#{health) [forceTravel](#{forceTravel) [npc](#{npc) [setCharFlags](#{setCharFlags) [setLocationFlags](#{setLocationFlags) [playSound](#{playSound) [setBiomeFlags](#{setBiomeFlags) [combat](#{combat) [reqItemFlags](#{reqItemFlags) [chat](#{chat) [items](#{items) [setPartyFlags](#{setPartyFlags) [playMusic](#{playMusic) [setStatus](#{setStatus) [reqStatus](#{reqStatus) [reqCharFlags](#{reqCharFlags) [reqLocationFlags](#{reqLocationFlags) [addNPC](#{addNPC) [clearPushedEvents](#{clearPushedEvents) [removeStatus](#{removeStatus) [particle](#{particle) [showImage](#{showImage) [reqPartyFlags](#{reqPartyFlags) [addCharacter](#{addCharacter) [reqBiomeFlags](#{reqBiomeFlags) [reqDifficulty](#{reqDifficulty) [pushEvent](#{pushEvent) [reqTileFlags](#{reqTileFlags) [unlockCharacter](#{unlockCharacter) [warpWorld](#{warpWorld) [reqItemsValue](#{reqItemsValue) [reqLoyalty](#{reqLoyalty) [reqLevel](#{reqLevel) [unlockPocket](#{unlockPocket) [reqRanking](#{reqRanking) [reqStanding](#{reqStanding) [setPartyStatus](#{setPartyStatus) [setTempFlags](#{setTempFlags) [reqTempFlags](#{reqTempFlags) [reqWorldFlags](#{reqWorldFlags) [reqPartyStatus](#{reqPartyStatus) [setTileFlags](#{setTileFlags) [reqGender](#{reqGender) [ref](#{ref) [extends](#{extends) [reqSanity](#{reqSanity) [reqFlags](#{reqFlags) [reqStatusFlags](#{reqStatusFlags) [reqPartyCount](#{reqPartyCount) [reqHealth](#{reqHealth) [reqTiles](#{reqTiles) [reqTurns](#{reqTurns) [reqCharacter](#{reqCharacter) [setWorldFlags](#{setWorldFlags) [reqDifficulty](#{reqDifficulty) [reqWorld](#{reqWorld) [standing](#{standing) [popEvent](#{popEvent) [reqItems](#{reqItems) [escape](#{escape) [resetPartyStatus](#{resetPartyStatus) [superMove](#{superMove) [mapScore](#{mapScore) 
+[addZone](#addZone) [incAchievement](#incAchievement) [barter](#barter) [resetGlobalInv](#resetGlobalInv) [loot](#loot) [startSprawl](#startSprawl) [revealTiles](#revealTiles) [revealBiome](#revealBiome) [reqCanStartSprawl](#reqCanStartSprawl) [replaceLocations](#replaceLocations) [replaceTiles](#replaceTiles) [deactivateZones](#deactivateZones) [posTile](#posTile) [setLocationParticle](#setLocationParticle) [resetLocationAge](#resetLocationAge) [reqLocation](#reqLocation) [reqZone](#reqZone) [addLocation](#addLocation) [camShake](#camShake) [dropItems](#dropItems) [endWorld](#endWorld) [addButterfly](#addButterfly) [regenBiome](#regenBiome) [rest](#rest) [reqStatusDayAge](#reqStatusDayAge) [removeStatusWithFlags](#removeStatusWithFlags) [reqMaxPerWorld](#reqMaxPerWorld) [reqWorld](#reqWorld) [posPunch](#posPunch) [blockRivals](#blockRivals) [resetStatusAge](#resetStatusAge) [removeItem](#removeItem) [removeZone](#removeZone) [removeZones](#removeZones) [reqWaiting](#reqWaiting) [storeCharacter](#storeCharacter) [unstoreCharacter](#unstoreCharacter) [loyalty](#loyalty) [cloneCharacter](#cloneCharacter) [reqExplorer](#reqExplorer) [reqTutorial](#reqTutorial) [reqFame](#reqFame) [reqFunds](#reqFunds) [reqWarpWorld](#reqWarpWorld) [showPartyCount](#showPartyCount) [removeCharacter](#removeCharacter) [turns](#turns) [sanity](#sanity) [teleport](#teleport) [reqKarma](#reqKarma) [compassScore](#compassScore) [health](#health) [forceTravel](#forceTravel) [npc](#npc) [setCharFlags](#setCharFlags) [setLocationFlags](#setLocationFlags) [playSound](#playSound) [setBiomeFlags](#setBiomeFlags) [combat](#combat) [reqItemFlags](#reqItemFlags) [chat](#chat) [items](#items) [setPartyFlags](#setPartyFlags) [playMusic](#playMusic) [setStatus](#setStatus) [reqStatus](#reqStatus) [reqCharFlags](#reqCharFlags) [reqLocationFlags](#reqLocationFlags) [addNPC](#addNPC) [clearPushedEvents](#clearPushedEvents) [removeStatus](#removeStatus) [particle](#particle) [showImage](#showImage) [reqPartyFlags](#reqPartyFlags) [addCharacter](#addCharacter) [reqBiomeFlags](#reqBiomeFlags) [reqDifficulty](#reqDifficulty) [pushEvent](#pushEvent) [reqTileFlags](#reqTileFlags) [unlockCharacter](#unlockCharacter) [warpWorld](#warpWorld) [reqItemsValue](#reqItemsValue) [reqLoyalty](#reqLoyalty) [reqLevel](#reqLevel) [unlockPocket](#unlockPocket) [reqRanking](#reqRanking) [reqStanding](#reqStanding) [setPartyStatus](#setPartyStatus) [setTempFlags](#setTempFlags) [reqTempFlags](#reqTempFlags) [reqWorldFlags](#reqWorldFlags) [reqPartyStatus](#reqPartyStatus) [setTileFlags](#setTileFlags) [reqGender](#reqGender) [ref](#ref) [extends](#extends) [reqSanity](#reqSanity) [reqFlags](#reqFlags) [reqStatusFlags](#reqStatusFlags) [reqPartyCount](#reqPartyCount) [reqHealth](#reqHealth) [reqTiles](#reqTiles) [reqTurns](#reqTurns) [reqCharacter](#reqCharacter) [setWorldFlags](#setWorldFlags) [reqDifficulty](#reqDifficulty) [reqWorld](#reqWorld) [standing](#standing) [popEvent](#popEvent) [reqItems](#reqItems) [escape](#escape) [resetPartyStatus](#resetPartyStatus) [superMove](#superMove) [mapScore](#mapScore) 
 
 # Commands
 ## addZone
 
 Adds a new zone to the world
-* **ref** id of zone
-* **range** (*optional*) max range of where zones is possibly spawned
-* **seeking** (*optional*) true if zone should already be aggroed
-* **reachable** (*optional*) true if must be reachable (default:false)
+* `ref` id of zone
+* `range` (*optional*) max range of where zones is possibly spawned
+* `seeking` (*optional*) true if zone should already be aggroed
+* `reachable` (*optional*) true if must be reachable (default:false)
 
 ## incAchievement
 
@@ -17,16 +17,16 @@ Adds a new zone to the world
 ## barter
 
 Starts a trading screen
-* **items** (*optional*) items to be offered (in addition to the general location inventory)
-* **closeEvents** event that happens on successful deal
-* **cancelEvents** (*optional*) event that happens when barter is cancelled
-* **baseValue** (*optional*) value that is added to deal overall or 'funds' (default: 0)
-* **hidePartyOffer** (*optional*) hides player inventory
-* **hideNPCInv** (*optional*) hides npc/location inventory
-* **title** (*optional*) title shown instead of 'their inventory'
-* **priceTable** (*optional*) pricetable to be used
-* **globalInv** (*optional*) all barter that share the same globalInv ID will share the same inventory
-* **itemEvents** (*optional*) events tied to specific items
+* `items` (*optional*) items to be offered (in addition to the general location inventory)
+* `closeEvents` event that happens on successful deal
+* `cancelEvents` (*optional*) event that happens when barter is cancelled
+* `baseValue` (*optional*) value that is added to deal overall or 'funds' (default: 0)
+* `hidePartyOffer` (*optional*) hides player inventory
+* `hideNPCInv` (*optional*) hides npc/location inventory
+* `title` (*optional*) title shown instead of 'their inventory'
+* `priceTable` (*optional*) pricetable to be used
+* `globalInv` (*optional*) all barter that share the same globalInv ID will share the same inventory
+* `itemEvents` (*optional*) events tied to specific items
 
 ## resetGlobalInv
 
@@ -35,35 +35,35 @@ Resets a global inventory
 ## loot
 
 Shows a menu for looting
-* **items** item list to loot
-* **closeEvents** ID of close event (or {} if no follow-up event)
-* **cancelEvents** (*optional*) ID of cancel event or nothing taking event (if omitted will use the close event always)
-* **title** (*optional*) title (default: 'take items')
-* **slots** (*optional*) max amount of slots (default: unlimited)
-* **itemEvents** (*optional*) events tied to specific items
+* `items` item list to loot
+* `closeEvents` ID of close event (or {} if no follow-up event)
+* `cancelEvents` (*optional*) ID of cancel event or nothing taking event (if omitted will use the close event always)
+* `title` (*optional*) title (default: 'take items')
+* `slots` (*optional*) max amount of slots (default: unlimited)
+* `itemEvents` (*optional*) events tied to specific items
 
 ## startSprawl
 
 Starts a sprawl in the world
-* **ref** id of sprawl
-* **radius** (*optional*) max radius in which to spawn (default: 0)
-* **power** (*optional*) power of new sprawl (default: 100)
-* **worldPower** (*optional*) mutiplier for world level added to power (default: 0)
-* **count** (*optional*) the number of random tiles affected (default: 1)
+* `ref` id of sprawl
+* `radius` (*optional*) max radius in which to spawn (default: 0)
+* `power` (*optional*) power of new sprawl (default: 100)
+* `worldPower` (*optional*) mutiplier for world level added to power (default: 0)
+* `count` (*optional*) the number of random tiles affected (default: 1)
 
 ## revealTiles
 
 Reveals part of the map
-* **location** (*optional*) should locations also be revealed? (default: false)
-* **radius** (*optional*) radius of tiles to be revealed (default: 0)
-* **centerCam** (*optional*) center camera on center position (default: false)
-* **particle** (*optional*) particle to draw on each tile revealed
+* `location` (*optional*) should locations also be revealed? (default: false)
+* `radius` (*optional*) radius of tiles to be revealed (default: 0)
+* `centerCam` (*optional*) center camera on center position (default: false)
+* `particle` (*optional*) particle to draw on each tile revealed
 
 ## revealBiome
 
 Reveals everything in a biome
-* **LocationKnown** (*optional*) if locations should become visible (default: true)
-* **particle** (*optional*) particle to spawn on revealed tiles (default: none)
+* `LocationKnown` (*optional*) if locations should become visible (default: true)
+* `particle` (*optional*) particle to spawn on revealed tiles (default: none)
 
 ```
 revealBiome: {locationKnown:false}
@@ -72,48 +72,48 @@ revealBiome: {locationKnown:false}
 ## reqCanStartSprawl
 
 Returns true if the specified sprawl can be started at the position
-* **ref** the ID of the sprawl to be checked
-* **radius** (*optional*) radius in which to check for sprawl requirements (default: 0)
+* `ref` the ID of the sprawl to be checked
+* `radius` (*optional*) radius in which to check for sprawl requirements (default: 0)
 
 ## replaceLocations
 
 Replaces a location at that position
-* **range** (*optional*) all locations in range will be considered (default: 0)
-* **new** (*optional*) new ID of the location
-* **old** (*optional*) list of location IDs that are being replaced (default: any)
-* **oldFlags** (*optional*) flags of locations that are being replaced (default: any)
+* `range` (*optional*) all locations in range will be considered (default: 0)
+* `new` (*optional*) new ID of the location
+* `old` (*optional*) list of location IDs that are being replaced (default: any)
+* `oldFlags` (*optional*) flags of locations that are being replaced (default: any)
 
 ## replaceTiles
 
 Replaces one tile with another
-* **new** new id of tile
-* **old** IDs of old tiles or ANY to replace all
-* **radius** (*optional*) maximum distance to consider (default: 0)
-* **chance** (*optional*) random chance for tile to be replaced (default: 1)
-* **particle** (*optional*) particle to spawn on replaced tile
-* **animate** (*optional*) if new tile should transition in or appear immediately (default: true)
+* `new` new id of tile
+* `old` IDs of old tiles or ANY to replace all
+* `radius` (*optional*) maximum distance to consider (default: 0)
+* `chance` (*optional*) random chance for tile to be replaced (default: 1)
+* `particle` (*optional*) particle to spawn on replaced tile
+* `animate` (*optional*) if new tile should transition in or appear immediately (default: true)
 
 ## deactivateZones
 
 Makes zones in a specific area inactive
-* **radius** (*optional*) radius in which all zones are deactivated (default: 0)
-* **turns** (*optional*) the amount of turns to deactive the zones (default: 2)
+* `radius` (*optional*) radius in which all zones are deactivated (default: 0)
+* `turns` (*optional*) the amount of turns to deactive the zones (default: 2)
 
 ## posTile
 
 Sets the position context to something that matches the search requirements
-* **tiles** (*optional*) list of tile keywords to be found
-* **locations** (*optional*) list of location keywords to be found
-* **locationFlags** (*optional*) location flag set that needs to fit
-* **tileFlags** (*optional*) tile flag set that needs to fit
-* **biomeFlags** (*optional*) biome flag set that needs to fit
-* **range** (*optional*) min/max distance (default: 0..100)
-* **tileKnown** (*optional*) tile is known? (default: find all)
-* **locationKnown** (*optional*) location is known? (default: find all)
-* **traversable** (*optional*) tile is not blocking (default: ignore)
-* **reachable** (*optional*) tile is reachable (default: ignore)
-* **closest** (*optional*) return closest tile, otherwise a random one
-* **showHint** (*optional*) location has showHint?
+* `tiles` (*optional*) list of tile keywords to be found
+* `locations` (*optional*) list of location keywords to be found
+* `locationFlags` (*optional*) location flag set that needs to fit
+* `tileFlags` (*optional*) tile flag set that needs to fit
+* `biomeFlags` (*optional*) biome flag set that needs to fit
+* `range` (*optional*) min/max distance (default: 0..100)
+* `tileKnown` (*optional*) tile is known? (default: find all)
+* `locationKnown` (*optional*) location is known? (default: find all)
+* `traversable` (*optional*) tile is not blocking (default: ignore)
+* `reachable` (*optional*) tile is reachable (default: ignore)
+* `closest` (*optional*) return closest tile, otherwise a random one
+* `showHint` (*optional*) location has showHint?
 
 ## setLocationParticle
 
@@ -126,33 +126,33 @@ Resets a locations age counter
 ## reqLocation
 
 Returns true if a matching location is found
-* **count** (*optional*) which amount to validate (default: '1..')
-* **tileKnown** (*optional*) if tile should be known (default: ignore)
-* **locationKnown** (*optional*) if location should be far known (default: ignore)
-* **range** (*optional*) max distance to location (default: 0)
-* **flags** (*optional*) flags that location needs to match
-* **reachable** (*optional*) checks if target is reachable (default: ignore)
+* `count` (*optional*) which amount to validate (default: '1..')
+* `tileKnown` (*optional*) if tile should be known (default: ignore)
+* `locationKnown` (*optional*) if location should be far known (default: ignore)
+* `range` (*optional*) max distance to location (default: 0)
+* `flags` (*optional*) flags that location needs to match
+* `reachable` (*optional*) checks if target is reachable (default: ignore)
 
 ## reqZone
 
 Returns true if a matching zone is found
-* **count** (*optional*) range for which number of zones to validate (default: '1..')
-* **range** (*optional*) range in which to check for zones (default: 'world')
-* **flags** (*optional*) zone flags for which to check (default: ignore)
+* `count` (*optional*) range for which number of zones to validate (default: '1..')
+* `range` (*optional*) range in which to check for zones (default: 'world')
+* `flags` (*optional*) zone flags for which to check (default: ignore)
 
 ## addLocation
 
 Adds a location at the given position
-* **ref** id of location
-* **range** (*optional*) range from context position or keywords 'biome' or 'world' (default: biome)
-* **animate** (*optional*) if new location (and tile) should transition in or appear immediately (default: true)
-* **setPos** (*optional*) sets the context position to the newly added location position (default: true)
+* `ref` id of location
+* `range` (*optional*) range from context position or keywords 'biome' or 'world' (default: biome)
+* `animate` (*optional*) if new location (and tile) should transition in or appear immediately (default: true)
+* `setPos` (*optional*) sets the context position to the newly added location position (default: true)
 
 ## camShake
 
 Shakes the screen
-* **power** (*optional*) the intensity of the screen shake (default: 1)
-* **length** (*optional*) the duration in seconds (default: 0.2)
+* `power` (*optional*) the intensity of the screen shake (default: 1)
+* `length` (*optional*) the duration in seconds (default: 0.2)
 
 ## dropItems
 
@@ -161,17 +161,17 @@ Drops items from the players inventory until a specific value is lost
 ## endWorld
 
 Ends the current expedition
-* **goalFame** (*optional*) if false no goal fame is awarded (default: true)
+* `goalFame` (*optional*) if false no goal fame is awarded (default: true)
 
 ## addButterfly
 
 Adds butterflies to the partys inventory
-* **count** (*optional*) how many butterflies are found (default: 1)
+* `count` (*optional*) how many butterflies are found (default: 1)
 
 ## regenBiome
 
 Replaces current biome with newly generated one
-* **biomeId** (*optional*) new biome ID for the biome. (default: keep previous)
+* `biomeId` (*optional*) new biome ID for the biome. (default: keep previous)
 
 ```
 regenBiome: {}
@@ -180,14 +180,14 @@ regenBiome: {}
 ## rest
 
 Starts resting
-* **sanity** amount of sanity to regain per day. can use bonus
-* **events** one of these events is triggered after being done with resting
+* `sanity` amount of sanity to regain per day. can use bonus
+* `events` one of these events is triggered after being done with resting
 
 ## reqStatusDayAge
 
 Returns true if the given character has had a status for at least age days
-* **ref** id of status
-* **age** range of day age (if status does not exist will return -1)
+* `ref` id of status
+* `age` range of day age (if status does not exist will return -1)
 
 ## removeStatusWithFlags
 
@@ -216,8 +216,8 @@ reqWorld: '2..3'
 ## posPunch
 
 Lets the player specify a position by clicking on the map
-* **maxRange** (*optional*) the maximum distance from context position (default: 2)
-* **radius** (*optional*) size of area which is affected (default: 0)
+* `maxRange` (*optional*) the maximum distance from context position (default: 2)
+* `radius` (*optional*) size of area which is affected (default: 0)
 
 ## blockRivals
 
@@ -254,8 +254,8 @@ removeZone: true
 ## removeZones
 
 Removes all zones matching the criteria
-* **radius** (*optional*) radius in which all zones are removed (default: 0)
-* **flags** (*optional*) type of zones to remove (default: '')
+* `radius` (*optional*) radius in which all zones are removed (default: 0)
+* `flags` (*optional*) type of zones to remove (default: '')
 
 ## reqWaiting
 
@@ -368,8 +368,8 @@ Sets the flags of the biome at the contexts position
 ## combat
 
 Starts combat with the given properties
-* **refs** enemy set that is attacking player. can also be a list of sets with relative slot probability
-* **surprise** (*optional*) true if enemies get to attack first (default: false)
+* `refs` enemy set that is attacking player. can also be a list of sets with relative slot probability
+* `surprise` (*optional*) true if enemies get to attack first (default: false)
 
 ```
 combat: {surprise:true, refs: [{slots:2, 'emy-giantScorpion':1}]}
@@ -386,8 +386,8 @@ reqItemsFlags: '+gun'
 ## chat
 
 Shows a specific chat line
-* **id** @id of the chat line entry
-* **chance** (*optional*) the random chance for chat line to be triggered (default: 1.0)
+* `id` @id of the chat line entry
+* `chance` (*optional*) the random chance for chat line to be triggered (default: 1.0)
 
 ```
 chat: {chance:0.5, id:'cl-chat'}
@@ -448,11 +448,11 @@ Emmits all specified particles
 ## showImage
 
 Specifies the background image and options for the background
-* **src** (*optional*) image source
-* **npc** (*optional*) list of NPCs (default: [])
-* **npcMovement** (*optional*) if NPCs should be moving, used for celebration (default: false)
-* **showMounted** (*optional*) should NPCs that are mounted be drawn on their animal (default: true)
-* **showCampfire** (*optional*) should an animated nightfire be shown in center of image (default: false)
+* `src` (*optional*) image source
+* `npc` (*optional*) list of NPCs (default: [])
+* `npcMovement` (*optional*) if NPCs should be moving, used for celebration (default: false)
+* `showMounted` (*optional*) should NPCs that are mounted be drawn on their animal (default: true)
+* `showCampfire` (*optional*) should an animated nightfire be shown in center of image (default: false)
 
 ## reqPartyFlags
 
@@ -461,8 +461,8 @@ Returns true if the party matches the given flags
 ## addCharacter
 
 Adds the specified character to the party
-* **id** @id of character
-* **gender** (*optional*) male or female or hybrid (default: random male/female)
+* `id` @id of character
+* `gender` (*optional*) male or female or hybrid (default: random male/female)
 
 ## reqBiomeFlags
 
