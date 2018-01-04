@@ -7,7 +7,9 @@
   * Remember entity history for in-game debug bar
   * Add bonus syntax support for XP, compass score, karma
   * Print syntax parsing errors for mods in debug console
+  * Added a warnings/error counter to the show-log button in the debug bar (gets reset on every mod refresh)
   * Fixed upload button
+  * Fixed corrupted game state after deleting mods
 
 # 1.3.1 (January 2nd, 2018)
 
