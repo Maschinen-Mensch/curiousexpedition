@@ -1,7 +1,13 @@
-# 1.3.2 (January 3rd, 2018)
+# 1.3.2 (January 4th, 2018)
 
-* Fixed altar broke when sacrificing certain items
-* Fixed window not covering whole game area
+* Made reset profile less likely to be hit accidentely
+* Bugfixes
+  * Fixed altar broke when sacrificing certain items
+  * Fixed window not covering whole game area
+  * Fixed showing item count on actions with required items
+  * Fixed unlocking characters
+  * Fixed issues with steam achievement syncing
+  * Reduced target count for explorer-collect achievement
 * Modding
   * Added refresh button to modding screen which allows to reload mods without leaving screen
   * Remember entity history for in-game debug bar

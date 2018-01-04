@@ -34,7 +34,7 @@ var achievements = [
     desc: "txt-ach-explorer-collect-desc",
     img: "achv_img_ID_12",
     updateInterval: 1,
-    counterTarget: 15,
+    counterTarget: 13,
   },
   //Gameplay achievements
   {
@@ -419,7 +419,7 @@ var staticConfig =
   versionName: '',
   enableAchievements: true,
   showMods: true,
-  footerName: "1.3.2.2",
+  footerName: "1.3.2.4",
 
   // is converted to config.diaryText at run-time
   diaryTextLangs: {
