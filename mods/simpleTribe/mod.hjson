@@ -1,0 +1,165 @@
+{
+  modInfo:
+  {
+    id: simpleTribe
+    name: Simple Tribes Example
+    authors: 8BitBeard
+    version: "1.0"
+    enabled: true
+    defaultLang: en
+    preview: modPreviewImage
+    description: "An example mod to show the general structure of generative tribes. This is really only the very basic version, so go experiment with all the possibilites!"
+  }
+
+  imageData:[
+
+    { id: modPreviewImage, file: simpleTribe/modPreview.png }
+    
+    { id: sT-portrait-m-body-base-1, file: simpleTribe/img/simpleTribe_m_charPortrait_body_base_1.png }
+    #{ id: sT-portrait-m-body-cloth-1, file: simpleTribe/img/simpleTribe_m_charPortrait_body_cloth_1.png }
+    { id: sT-portrait-m-body-shading-1, file: simpleTribe/img/simpleTribe_m_charPortrait_body_shading_1.png }
+    
+    { id: sT-portrait-m-head-base-1, file: simpleTribe/img/simpleTribe_m_charPortrait_head_base_1.png }
+    { id: sT-portrait-m-head-decal-1, file: simpleTribe/img/simpleTribe_m_charPortrait_head_decal_1.png }
+    { id: sT-portrait-m-head-shading-1, file: simpleTribe/img/simpleTribe_m_charPortrait_head_shading_1.png }
+
+    { id: sT-portrait-m-ears-1, file: simpleTribe/img/simpleTribe_m_charPortrait_ears_1.png }
+    { id: sT-portrait-m-eyes-1, file: simpleTribe/img/simpleTribe_m_charPortrait_eyes_1.png }
+    { id: sT-portrait-m-mouth-1, file: simpleTribe/img/simpleTribe_m_charPortrait_mouth_1.png }
+    { id: sT-portrait-m-nose-1, file: simpleTribe/img/simpleTribe_m_charPortrait_nose_1.png }
+    #{ id: sT-portrait-m-hair-head-1, file: simpleTribe/img/simpleTribe_m_charPortrait_hair_head_1.png }
+
+    { id: sT-colors, file: simpleTribe/img/simpleTribe_colors.png }
+  ]
+
+  modEntries:[
+    {
+      id: tg-simpleTribe
+      layers: [
+        tgl-sT-body-base
+        tgl-sT-body-shading
+        #tgl-sT-body-cloth
+
+        tgl-sT-head-base
+        tgl-sT-head-decal
+        tgl-sT-head-shading
+
+        tgl-sT-mouth
+        tgl-sT-nose
+        tgl-sT-ears
+        tgl-sT-eyes
+        #tgl-sT-hair-head
+      ]
+    }
+    {
+      id: tgl-sT-body-base
+      colors: sT-colors, alpha: 1, key: body
+      male: [
+        { portrait: sT-portrait-m-body-base-1 }
+      ]
+      female: [
+        { portrait: sT-portrait-m-body-base-1 }
+      ]
+    }
+    {
+      id: tgl-sT-body-shading
+      colors: sT-colors, alpha: 0.5, key: body
+      male: [
+        { portrait: sT-portrait-m-body-shading-1 }
+      ]
+      female: [
+        { portrait: sT-portrait-m-body-shading-1 }
+      ]
+    }
+    {
+      id: tgl-sT-body-cloth
+      colors: sT-colors, alpha: 1
+      male: [
+        { portrait: sT-portrait-m-body-cloth-1 }
+      ]
+      female: [
+        { portrait: sT-portrait-m-body-cloth-1  }
+      ]
+    }
+    {
+      id: tgl-sT-head-base
+      colors: sT-colors, alpha: 1
+      male: [
+        { portrait: sT-portrait-m-head-base-1 }
+      ]
+      female: [
+        { portrait: sT-portrait-m-head-base-1  }
+      ]
+    }
+    {
+      id: tgl-sT-head-decal
+      colors: sT-colors, alpha: 1
+      male: [
+        { portrait: sT-portrait-m-head-decal-1 }
+      ]
+      female: [
+        { portrait: sT-portrait-m-head-decal-1 }
+      ]
+    }
+    {
+      id: tgl-sT-head-shading
+      colors: sT-colors, alpha: 0.5
+      male: [
+        { portrait: sT-portrait-m-head-shading-1 }
+      ]
+      female: [
+        { portrait: sT-portrait-m-head-shading-1 }
+      ]
+    }
+    {
+      id: tgl-sT-mouth
+      colors: sT-colors, alpha: 1
+      male: [
+        { portrait: sT-portrait-m-mouth-1 }
+      ]
+      female: [
+        { portrait: sT-portrait-m-mouth-1 }
+      ]
+    }
+    {
+      id: tgl-sT-nose
+      colors: sT-colors, alpha: 1
+      male: [
+        { portrait: sT-portrait-m-nose-1 }
+      ]
+      female: [
+        { portrait: sT-portrait-m-nose-1 }
+      ]
+    }
+    {
+      id: tgl-sT-ears
+      colors: sT-colors, alpha: 1
+      male: [
+        { portrait: sT-portrait-m-ears-1 }
+      ]
+      female: [
+        { portrait: sT-portrait-m-ears-1  }
+      ]
+    }
+    {
+      id: tgl-sT-eyes
+      colors: sT-colors, alpha: 1
+      male: [
+        { portrait: sT-portrait-m-eyes-1 }
+      ]
+      female: [
+        { portrait: sT-portrait-m-eyes-1 }
+      ]
+    }
+    {
+      id: tgl-sT-hair-head
+      colors: sT-colors, alpha: 1
+      male: [
+        { portrait: sT-portrait-m-hair-head-1 }
+      ]
+      female: [
+        { portrait: sT-portrait-m-hair-head-1 }
+      ]
+    }
+  ]
+}

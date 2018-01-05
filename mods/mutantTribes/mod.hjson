@@ -1,0 +1,221 @@
+{
+  modInfo:
+  {
+    id: mutantTribes
+    name: Mutant Tribes
+    authors: 8BitBeard
+    version: "0.1"
+    enabled: true
+    defaultLang: en
+    preview: modPreviewImage
+    description: MUTANTS EVERYWHERE!
+  }
+
+  imageData:[
+
+    { id: modPreviewImage, file: mutantTribes/modPreview.png }
+    
+    { id: mT-portrait-m-body-base-1, file: mutantTribes/img/mutantTribe_m_charPortrait_body_base_1.png }
+    { id: mT-portrait-m-body-cloth-1, file: mutantTribes/img/mutantTribe_m_charPortrait_body_cloth_1.png }
+    { id: mT-portrait-m-body-decal-1, file: mutantTribes/img/mutantTribe_m_charPortrait_body_decal_1.png }
+    { id: mT-portrait-m-body-decoration-1, file: mutantTribes/img/mutantTribe_m_charPortrait_body_decoration_1.png }
+    { id: mT-portrait-m-body-shading-1, file: mutantTribes/img/mutantTribe_m_charPortrait_body_shading_1.png }
+    { id: mT-portrait-m-head-decal-1, file: mutantTribes/img/mutantTribe_m_charPortrait_head_decal_1.png }
+    { id: mT-portrait-m-head-decoration-1, file: mutantTribes/img/mutantTribe_m_charPortrait_head_decoration_1.png }
+    { id: mT-portrait-m-ears-1, file: mutantTribes/img/mutantTribe_m_charPortrait_ears_1.png }
+    { id: mT-portrait-m-eyes-1, file: mutantTribes/img/mutantTribe_m_charPortrait_eyes_1.png }
+    { id: mT-portrait-m-hair-back-1, file: mutantTribes/img/mutantTribe_m_charPortrait_hair_back_1.png }
+    { id: mT-portrait-m-hair-facial-1, file: mutantTribes/img/mutantTribe_m_charPortrait_hair_facial_1.png }
+    { id: mT-portrait-m-hair-head-1, file: mutantTribes/img/mutantTribe_m_charPortrait_hair_head_1.png }
+    { id: mT-portrait-m-head-base-1, file: mutantTribes/img/mutantTribe_m_charPortrait_head_base_1.png }
+    { id: mT-portrait-m-head-shading-1, file: mutantTribes/img/mutantTribe_m_charPortrait_head_shading_1.png }
+    { id: mT-portrait-m-mouth-1, file: mutantTribes/img/mutantTribe_m_charPortrait_mouth_1.png }
+    { id: mT-portrait-m-nose-1, file: mutantTribes/img/mutantTribe_m_charPortrait_nose_1.png }
+    { id: mT-colors, file: mutantTribes/img/mutantTribes_colors.png }
+  ]
+
+  modEntries:[
+
+    {
+      id: tg-mutantTribes
+      layers: [
+        tgl-mT-body-base
+        tgl-mT-body-decal
+        tgl-mT-body-shading
+        tgl-mT-body-decoration
+        tgl-mT-body-cloth
+        tgl-mT-hair-back
+        tgl-mT-head-base
+        tgl-mT-ears
+        tgl-mT-head-decal
+        tgl-mT-head-shading
+        tgl-mT-hair-facial
+        tgl-mT-mouth
+        tgl-mT-nose
+        tgl-mT-eyes
+        tgl-mT-hair-head
+        tgl-mT-head-decoration
+      ]
+    }
+    {
+      id: tgl-mT-body-base
+      colors: mT-colors, alpha: 1, key: body
+      male: [
+        { portrait: mT-portrait-m-body-base-1 }
+      ]
+      female: [
+        { portrait: mT-portrait-m-body-base-1 }
+      ]
+    }
+    {
+      id: tgl-mT-body-decal
+      colors: mT-colors, alpha: 1, key: body
+      male: [
+        { portrait: mT-portrait-m-body-decal-1 }
+      ]
+      female: [
+        { portrait: mT-portrait-m-body-decal-1 }
+      ]
+    }
+    {
+      id: tgl-mT-body-shading
+      colors: mT-colors, alpha: 0.5, key: body
+      male: [
+        { portrait: mT-portrait-m-body-shading-1 }
+      ]
+      female: [
+        { portrait: mT-portrait-m-body-shading-1 }
+      ]
+    }
+    {
+      id: tgl-mT-body-decoration
+      colors: mT-colors, alpha: 1, key: body
+      male: [
+        { portrait: mT-portrait-m-body-decoration-1 }
+      ]
+      female: [
+        { portrait: mT-portrait-m-body-decoration-1 }
+      ]
+    }
+    {
+      id: tgl-mT-body-cloth
+      colors: mT-colors, alpha: 1
+      male: [
+        { portrait: mT-portrait-m-body-cloth-1 }
+      ]
+      female: [
+        { portrait: mT-portrait-m-body-cloth-1  }
+      ]
+    }
+    {
+      id: tgl-mT-hair-back
+      colors: mT-colors, alpha: 1
+      male: [
+        { portrait: mT-portrait-m-hair-back-1 }
+      ]
+      female: [
+        { portrait: mT-portrait-m-hair-back-1  }
+      ]
+    }
+    {
+      id: tgl-mT-head-base
+      colors: mT-colors, alpha: 1
+      male: [
+        { portrait: mT-portrait-m-head-base-1 }
+      ]
+      female: [
+        { portrait: mT-portrait-m-head-base-1  }
+      ]
+    }
+    {
+      id: tgl-mT-ears
+      colors: mT-colors, alpha: 1
+      male: [
+        { portrait: mT-portrait-m-ears-1 }
+      ]
+      female: [
+        { portrait: mT-portrait-m-ears-1  }
+      ]
+    }
+    {
+      id: tgl-mT-head-decal
+      colors: mT-colors, alpha: 1
+      male: [
+        { portrait: mT-portrait-m-head-decal-1 }
+      ]
+      female: [
+        { portrait: mT-portrait-m-head-decal-1 }
+      ]
+    }
+    {
+      id: tgl-mT-head-shading
+      colors: mT-colors, alpha: 0.5
+      male: [
+        { portrait: mT-portrait-m-head-shading-1 }
+      ]
+      female: [
+        { portrait: mT-portrait-m-head-shading-1 }
+      ]
+    }
+    {
+      id: tgl-mT-hair-facial
+      colors: mT-colors, alpha: 1
+      male: [
+        { portrait: mT-portrait-m-hair-facial-1 }
+      ]
+      female: [
+        { portrait: mT-portrait-m-hair-facial-1 }
+      ]
+    }
+    {
+      id: tgl-mT-mouth
+      colors: mT-colors, alpha: 1
+      male: [
+        { portrait: mT-portrait-m-mouth-1 }
+      ]
+      female: [
+        { portrait: mT-portrait-m-mouth-1 }
+      ]
+    }
+    {
+      id: tgl-mT-nose
+      colors: mT-colors, alpha: 1
+      male: [
+        { portrait: mT-portrait-m-nose-1 }
+      ]
+      female: [
+        { portrait: mT-portrait-m-nose-1 }
+      ]
+    }
+    {
+      id: tgl-mT-eyes
+      colors: mT-colors, alpha: 1
+      male: [
+        { portrait: mT-portrait-m-eyes-1 }
+      ]
+      female: [
+        { portrait: mT-portrait-m-eyes-1 }
+      ]
+    }
+    {
+      id: tgl-mT-hair-head
+      colors: mT-colors, alpha: 1
+      male: [
+        { portrait: mT-portrait-m-hair-head-1 }
+      ]
+      female: [
+        { portrait: mT-portrait-m-hair-head-1 }
+      ]
+    }
+    {
+      id: tgl-mT-head-decoration
+      colors: mT-colors, alpha: 1
+      male: [
+        { portrait: mT-portrait-m-head-decoration-1 }
+      ]
+      female: [
+        { portrait: mT-portrait-m-head-decoration-1 }
+      ]
+    }
+  ]
+}
