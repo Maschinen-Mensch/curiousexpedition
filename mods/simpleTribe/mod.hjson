@@ -20,14 +20,21 @@
     { id: sT-portrait-m-body-shading-1, file: simpleTribe/img/simpleTribe_m_charPortrait_body_shading_1.png }
     
     { id: sT-portrait-m-head-base-1, file: simpleTribe/img/simpleTribe_m_charPortrait_head_base_1.png }
-    { id: sT-portrait-m-head-decal-1, file: simpleTribe/img/simpleTribe_m_charPortrait_head_decal_1.png }
+    { id: sT-portrait-m-head-base-2, file: simpleTribe/img/simpleTribe_m_charPortrait_head_base_2.png }
     { id: sT-portrait-m-head-shading-1, file: simpleTribe/img/simpleTribe_m_charPortrait_head_shading_1.png }
+    { id: sT-portrait-m-head-shading-2, file: simpleTribe/img/simpleTribe_m_charPortrait_head_shading_2.png }
+    { id: sT-portrait-m-head-decal-1, file: simpleTribe/img/simpleTribe_m_charPortrait_head_decal_1.png }
 
     { id: sT-portrait-m-ears-1, file: simpleTribe/img/simpleTribe_m_charPortrait_ears_1.png }
+    { id: sT-portrait-m-ears-2, file: simpleTribe/img/simpleTribe_m_charPortrait_ears_2.png }
     { id: sT-portrait-m-eyes-1, file: simpleTribe/img/simpleTribe_m_charPortrait_eyes_1.png }
+    { id: sT-portrait-m-eyes-2, file: simpleTribe/img/simpleTribe_m_charPortrait_eyes_2.png }
     { id: sT-portrait-m-mouth-1, file: simpleTribe/img/simpleTribe_m_charPortrait_mouth_1.png }
+    { id: sT-portrait-m-mouth-2, file: simpleTribe/img/simpleTribe_m_charPortrait_mouth_2.png }
     { id: sT-portrait-m-nose-1, file: simpleTribe/img/simpleTribe_m_charPortrait_nose_1.png }
-    #{ id: sT-portrait-m-hair-head-1, file: simpleTribe/img/simpleTribe_m_charPortrait_hair_head_1.png }
+    { id: sT-portrait-m-nose-2, file: simpleTribe/img/simpleTribe_m_charPortrait_nose_2.png }
+    { id: sT-portrait-m-hair-head-1, file: simpleTribe/img/simpleTribe_m_charPortrait_hair_head_1.png }
+    { id: sT-portrait-m-hair-head-2, file: simpleTribe/img/simpleTribe_m_charPortrait_hair_head_2.png }
 
     { id: sT-colors, file: simpleTribe/img/simpleTribe_colors.png }
   ]
@@ -48,7 +55,7 @@
         tgl-sT-nose
         tgl-sT-ears
         tgl-sT-eyes
-        #tgl-sT-hair-head
+        tgl-sT-hair-head
       ]
     }
     {
@@ -83,17 +90,19 @@
     }
     {
       id: tgl-sT-head-base
-      colors: sT-colors, alpha: 1
+      colors: sT-colors, alpha: 1, key: head
       male: [
         { portrait: sT-portrait-m-head-base-1 }
+        { portrait: sT-portrait-m-head-base-2 }
       ]
       female: [
         { portrait: sT-portrait-m-head-base-1  }
+        { portrait: sT-portrait-m-head-base-2 }
       ]
     }
     {
       id: tgl-sT-head-decal
-      colors: sT-colors, alpha: 1
+      colors: sT-colors, alpha: 1, chance: 0.2
       male: [
         { portrait: sT-portrait-m-head-decal-1 }
       ]
@@ -103,12 +112,14 @@
     }
     {
       id: tgl-sT-head-shading
-      colors: sT-colors, alpha: 0.5
+      colors: sT-colors, alpha: 0.5, key: head
       male: [
         { portrait: sT-portrait-m-head-shading-1 }
+        { portrait: sT-portrait-m-head-shading-2 }
       ]
       female: [
         { portrait: sT-portrait-m-head-shading-1 }
+        { portrait: sT-portrait-m-head-shading-2 }
       ]
     }
     {
@@ -116,9 +127,11 @@
       colors: sT-colors, alpha: 1
       male: [
         { portrait: sT-portrait-m-mouth-1 }
+        { portrait: sT-portrait-m-mouth-2 }
       ]
       female: [
         { portrait: sT-portrait-m-mouth-1 }
+        { portrait: sT-portrait-m-mouth-2 }
       ]
     }
     {
@@ -126,9 +139,11 @@
       colors: sT-colors, alpha: 1
       male: [
         { portrait: sT-portrait-m-nose-1 }
+        { portrait: sT-portrait-m-nose-2 }
       ]
       female: [
         { portrait: sT-portrait-m-nose-1 }
+        { portrait: sT-portrait-m-nose-2 }
       ]
     }
     {
@@ -136,9 +151,11 @@
       colors: sT-colors, alpha: 1
       male: [
         { portrait: sT-portrait-m-ears-1 }
+        { portrait: sT-portrait-m-ears-2 }
       ]
       female: [
-        { portrait: sT-portrait-m-ears-1  }
+        { portrait: sT-portrait-m-ears-1 }
+        { portrait: sT-portrait-m-ears-2 }
       ]
     }
     {
@@ -146,9 +163,11 @@
       colors: sT-colors, alpha: 1
       male: [
         { portrait: sT-portrait-m-eyes-1 }
+        { portrait: sT-portrait-m-eyes-2 }
       ]
       female: [
         { portrait: sT-portrait-m-eyes-1 }
+        { portrait: sT-portrait-m-eyes-2 }
       ]
     }
     {
@@ -156,9 +175,11 @@
       colors: sT-colors, alpha: 1
       male: [
         { portrait: sT-portrait-m-hair-head-1 }
+        { portrait: sT-portrait-m-hair-head-2 }
       ]
       female: [
         { portrait: sT-portrait-m-hair-head-1 }
+        { portrait: sT-portrait-m-hair-head-2 }
       ]
     }
   ]
