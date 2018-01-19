@@ -1,0 +1,5 @@
+[2018-01-11 21:48:07] layer "res_tileBorder_plateau_ne_1.png": Duplicate path: res_tileBorder_plateau_ne_1.png
+[2018-01-11 21:48:07] layer "res_tileBorder_plateau_se_1.png": Duplicate path: res_tileBorder_plateau_se_1.png
+[2018-01-11 21:48:07] layer "res_tileBorder_plateau_s_1.png": Duplicate path: res_tileBorder_plateau_s_1.png
+[2018-01-11 21:48:07] layer "res_tileBorder_plateau_sw_1.png": Duplicate path: res_tileBorder_plateau_sw_1.png
+[2018-01-11 21:48:07] layer "res_tileBorder_plateau_nw_1.png": Duplicate path: res_tileBorder_plateau_nw_1.png

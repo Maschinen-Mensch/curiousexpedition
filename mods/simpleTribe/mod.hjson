@@ -14,16 +14,46 @@
   imageData:[
 
     { id: modPreviewImage, file: simpleTribe/modPreview.png }
-    
+    { id: sT-colors, file: simpleTribe/img/simpleTribe_colors.png }
+
+    { id: sT-sprite-shadow-1, file: simpleTribe/img/simpleTribe_m_charSprite_shadow_1.png }
+    { id: sT-sprite-shadow-2, file: simpleTribe/img/simpleTribe_m_charSprite_shadow_2.png }
+    { id: sT-sprite-shadow-3, file: simpleTribe/img/simpleTribe_m_charSprite_shadow_3.png }
+    # MALE
     { id: sT-portrait-m-body-base-1, file: simpleTribe/img/simpleTribe_m_charPortrait_body_base_1.png }
-    #{ id: sT-portrait-m-body-cloth-1, file: simpleTribe/img/simpleTribe_m_charPortrait_body_cloth_1.png }
     { id: sT-portrait-m-body-shading-1, file: simpleTribe/img/simpleTribe_m_charPortrait_body_shading_1.png }
+    { id: sT-sprite-m-body-base-1, file: simpleTribe/img/simpleTribe_m_charSprite_body_base_1.png }
+    { id: sT-sprite-m-body-shading-1, file: simpleTribe/img/simpleTribe_m_charSprite_body_shading_1.png }
+    { id: sT-sprite-m-body-arms-1, file: simpleTribe/img/simpleTribe_m_charSprite_body_arms_1.png }
+    { id: sT-sprite-m-body-arms-2, file: simpleTribe/img/simpleTribe_m_charSprite_body_arms_2.png }
+    { id: sT-sprite-m-body-arms-3, file: simpleTribe/img/simpleTribe_m_charSprite_body_arms_3.png }
+    { id: sT-sprite-m-body-arms-4, file: simpleTribe/img/simpleTribe_m_charSprite_body_arms_4.png }
+    { id: sT-sprite-m-body-arms-5, file: simpleTribe/img/simpleTribe_m_charSprite_body_arms_5.png }
+
+    { id: sT-portrait-m-body-cloth-1, file: simpleTribe/img/simpleTribe_m_charPortrait_body_cloth_1.png }
+    { id: sT-portrait-m-body-cloth-2, file: simpleTribe/img/simpleTribe_m_charPortrait_body_cloth_2.png }
+    { id: sT-portrait-m-body-cloth-3, file: simpleTribe/img/simpleTribe_m_charPortrait_body_cloth_3.png }
+    { id: sT-portrait-m-body-cloth-4, file: simpleTribe/img/simpleTribe_m_charPortrait_body_cloth_4.png }
+    { id: sT-sprite-m-body-cloth-1, file: simpleTribe/img/simpleTribe_m_charSprite_body_cloth_1.png }
+    { id: sT-sprite-m-body-cloth-2, file: simpleTribe/img/simpleTribe_m_charSprite_body_cloth_2.png }
+    { id: sT-sprite-m-body-cloth-3, file: simpleTribe/img/simpleTribe_m_charSprite_body_cloth_3.png }
+    { id: sT-sprite-m-body-cloth-4, file: simpleTribe/img/simpleTribe_m_charSprite_body_cloth_4.png }
+    { id: sT-sprite-m-body-cloth-lower-1, file: simpleTribe/img/simpleTribe_m_charSprite_body_cloth_lower_1.png }
+    { id: sT-sprite-m-body-cloth-lower-2, file: simpleTribe/img/simpleTribe_m_charSprite_body_cloth_lower_2.png }
+    { id: sT-sprite-m-body-cloth-lower-3, file: simpleTribe/img/simpleTribe_m_charSprite_body_cloth_lower_3.png }
+    { id: sT-sprite-m-body-cloth-lower-4, file: simpleTribe/img/simpleTribe_m_charSprite_body_cloth_lower_4.png }
+    { id: sT-sprite-m-body-cloth-lower-5, file: simpleTribe/img/simpleTribe_m_charSprite_body_cloth_lower_5.png }
+
     
     { id: sT-portrait-m-head-base-1, file: simpleTribe/img/simpleTribe_m_charPortrait_head_base_1.png }
     { id: sT-portrait-m-head-base-2, file: simpleTribe/img/simpleTribe_m_charPortrait_head_base_2.png }
     { id: sT-portrait-m-head-shading-1, file: simpleTribe/img/simpleTribe_m_charPortrait_head_shading_1.png }
     { id: sT-portrait-m-head-shading-2, file: simpleTribe/img/simpleTribe_m_charPortrait_head_shading_2.png }
+
     { id: sT-portrait-m-head-decal-1, file: simpleTribe/img/simpleTribe_m_charPortrait_head_decal_1.png }
+    { id: sT-portrait-m-head-decal-2, file: simpleTribe/img/simpleTribe_m_charPortrait_head_decal_2.png }
+    { id: sT-sprite-m-head-decal-1, file: simpleTribe/img/simpleTribe_m_charSprite_head_decal_1.png }
+    { id: sT-sprite-m-head-decal-2, file: simpleTribe/img/simpleTribe_m_charSprite_head_decal_2.png }
 
     { id: sT-portrait-m-ears-1, file: simpleTribe/img/simpleTribe_m_charPortrait_ears_1.png }
     { id: sT-portrait-m-ears-2, file: simpleTribe/img/simpleTribe_m_charPortrait_ears_2.png }
@@ -33,19 +63,60 @@
     { id: sT-portrait-m-mouth-2, file: simpleTribe/img/simpleTribe_m_charPortrait_mouth_2.png }
     { id: sT-portrait-m-nose-1, file: simpleTribe/img/simpleTribe_m_charPortrait_nose_1.png }
     { id: sT-portrait-m-nose-2, file: simpleTribe/img/simpleTribe_m_charPortrait_nose_2.png }
+
     { id: sT-portrait-m-hair-head-1, file: simpleTribe/img/simpleTribe_m_charPortrait_hair_head_1.png }
     { id: sT-portrait-m-hair-head-2, file: simpleTribe/img/simpleTribe_m_charPortrait_hair_head_2.png }
+    { id: sT-sprite-m-hair-head-1, file: simpleTribe/img/simpleTribe_m_charSprite_hair_head_1.png }
+    { id: sT-sprite-m-hair-head-2, file: simpleTribe/img/simpleTribe_m_charSprite_hair_head_2.png }
+    { id: sT-portrait-m-hair-back-1, file: simpleTribe/img/simpleTribe_m_charPortrait_hair_back_1.png }
 
-    { id: sT-colors, file: simpleTribe/img/simpleTribe_colors.png }
+    #FEMALE
+    { id: sT-portrait-f-body-base-1, file: simpleTribe/img/simpleTribe_f_charPortrait_body_base_1.png }
+    { id: sT-portrait-f-body-shading-1, file: simpleTribe/img/simpleTribe_f_charPortrait_body_shading_1.png }
+    { id: sT-sprite-f-body-base-1, file: simpleTribe/img/simpleTribe_f_charSprite_body_base_1.png }
+    { id: sT-sprite-f-body-shading-1, file: simpleTribe/img/simpleTribe_f_charSprite_body_shading_1.png }
+  
+    { id: sT-portrait-f-head-base-1, file: simpleTribe/img/simpleTribe_f_charPortrait_head_base_1.png }
+    { id: sT-portrait-f-head-base-2, file: simpleTribe/img/simpleTribe_f_charPortrait_head_base_2.png }
+    { id: sT-portrait-f-head-shading-1, file: simpleTribe/img/simpleTribe_f_charPortrait_head_shading_1.png }
+    { id: sT-portrait-f-head-shading-2, file: simpleTribe/img/simpleTribe_f_charPortrait_head_shading_2.png }
+
+    { id: sT-portrait-f-ears-1, file: simpleTribe/img/simpleTribe_f_charPortrait_ears_1.png }
+    { id: sT-portrait-f-ears-2, file: simpleTribe/img/simpleTribe_f_charPortrait_ears_2.png }
+    { id: sT-portrait-f-eyes-1, file: simpleTribe/img/simpleTribe_f_charPortrait_eyes_1.png }
+    { id: sT-portrait-f-eyes-2, file: simpleTribe/img/simpleTribe_f_charPortrait_eyes_2.png }
+    { id: sT-portrait-f-mouth-1, file: simpleTribe/img/simpleTribe_f_charPortrait_mouth_1.png }
+    { id: sT-portrait-f-mouth-2, file: simpleTribe/img/simpleTribe_f_charPortrait_mouth_2.png }
+    { id: sT-portrait-f-nose-1, file: simpleTribe/img/simpleTribe_f_charPortrait_nose_1.png }
+    { id: sT-portrait-f-nose-2, file: simpleTribe/img/simpleTribe_f_charPortrait_nose_2.png }
+
+    { id: sT-portrait-f-hair-head-1, file: simpleTribe/img/simpleTribe_f_charPortrait_hair_head_1.png }
+    { id: sT-portrait-f-hair-head-2, file: simpleTribe/img/simpleTribe_f_charPortrait_hair_head_2.png }
+    { id: sT-portrait-f-hair-back-1, file: simpleTribe/img/simpleTribe_f_charPortrait_hair_back_1.png }
+    { id: sT-portrait-f-hair-back-2, file: simpleTribe/img/simpleTribe_f_charPortrait_hair_back_2.png }
+    { id: sT-sprite-f-hair-head-1, file: simpleTribe/img/simpleTribe_f_charSprite_hair_head_1.png }
+    { id: sT-sprite-f-hair-head-2, file: simpleTribe/img/simpleTribe_f_charSprite_hair_head_2.png }
+    { id: sT-sprite-f-hair-back-1, file: simpleTribe/img/simpleTribe_f_charSprite_hair_back_1.png }
+    { id: sT-sprite-f-hair-back-2, file: simpleTribe/img/simpleTribe_f_charSprite_hair_back_2.png }
+
+    
   ]
 
   modEntries:[
     {
       id: tg-simpleTribe
       layers: [
+        tgl-sT-shadow
         tgl-sT-body-base
         tgl-sT-body-shading
-        #tgl-sT-body-cloth
+        tgl-sT-body-arms
+
+        tgl-sT-body-cloth
+        tgl-sT-body-cloth2
+        tgl-sT-body-cloth-lower
+
+        tgl-sT-hair-back
+        tgl-sT-ears
 
         tgl-sT-head-base
         tgl-sT-head-decal
@@ -53,40 +124,104 @@
 
         tgl-sT-mouth
         tgl-sT-nose
-        tgl-sT-ears
         tgl-sT-eyes
         tgl-sT-hair-head
+      ]
+    }
+    {
+      id: tgl-sT-shadow
+      key: arms
+      male: [
+        { body: sT-sprite-shadow-1 }
+        { body: sT-sprite-shadow-2 }
+        { body: sT-sprite-shadow-3 }
+        { body: sT-sprite-shadow-1 }
+        { body: sT-sprite-shadow-1 }
+      ]
+      female: [
+        { body: sT-sprite-shadow-1 }
+        { body: sT-sprite-shadow-2 }
+        { body: sT-sprite-shadow-3 }
+        { body: sT-sprite-shadow-1 }
+        { body: sT-sprite-shadow-1 }
       ]
     }
     {
       id: tgl-sT-body-base
       colors: sT-colors, alpha: 1, key: body
       male: [
-        { portrait: sT-portrait-m-body-base-1 }
+        { portrait: sT-portrait-m-body-base-1, body: sT-sprite-m-body-base-1 }
       ]
       female: [
-        { portrait: sT-portrait-m-body-base-1 }
+        { portrait: sT-portrait-f-body-base-1, body: sT-sprite-m-body-base-1 }
       ]
     }
     {
       id: tgl-sT-body-shading
       colors: sT-colors, alpha: 0.5, key: body
       male: [
-        { portrait: sT-portrait-m-body-shading-1 }
+        { portrait: sT-portrait-m-body-shading-1, body: sT-sprite-m-body-shading-1 }
       ]
       female: [
-        { portrait: sT-portrait-m-body-shading-1 }
+        { portrait: sT-portrait-f-body-shading-1, body: sT-sprite-m-body-shading-1 }
+      ]
+    }
+    {
+      id: tgl-sT-body-arms
+      colors: sT-colors, key: arms
+      male: [
+        { body: sT-sprite-m-body-arms-1 }
+        { body: sT-sprite-m-body-arms-2 }
+        { body: sT-sprite-m-body-arms-3 }
+        { body: sT-sprite-m-body-arms-4 }
+        { body: sT-sprite-m-body-arms-5 }
+      ]
+      female: [
+        { body: sT-sprite-m-body-arms-1 }
+        { body: sT-sprite-m-body-arms-2 }
+        { body: sT-sprite-m-body-arms-3 }
+        { body: sT-sprite-m-body-arms-4 }
+        { body: sT-sprite-m-body-arms-5 }
       ]
     }
     {
       id: tgl-sT-body-cloth
       colors: sT-colors, alpha: 1
       male: [
-        { portrait: sT-portrait-m-body-cloth-1 }
+        { portrait: sT-portrait-m-body-cloth-1, body: sT-sprite-m-body-cloth-1 }
+        { portrait: sT-portrait-m-body-cloth-2, body: sT-sprite-m-body-cloth-2 }
+        { portrait: sT-portrait-m-body-cloth-3, body: sT-sprite-m-body-cloth-3 }
+        { portrait: sT-portrait-m-body-cloth-4, body: sT-sprite-m-body-cloth-4 }
       ]
       female: [
-        { portrait: sT-portrait-m-body-cloth-1  }
+        { portrait: sT-portrait-m-body-cloth-1, body: sT-sprite-m-body-cloth-1 }
+        { portrait: sT-portrait-m-body-cloth-2, body: sT-sprite-m-body-cloth-2 }
+        { portrait: sT-portrait-m-body-cloth-3, body: sT-sprite-m-body-cloth-3 }
+        { portrait: sT-portrait-m-body-cloth-4, body: sT-sprite-m-body-cloth-4 }
       ]
+    }
+    {
+      id: tgl-sT-body-cloth-lower
+      colors: sT-colors, alpha: 1
+      male: [
+        { body: sT-sprite-m-body-cloth-lower-1 }
+        { body: sT-sprite-m-body-cloth-lower-2 }
+        { body: sT-sprite-m-body-cloth-lower-3 }
+        { body: sT-sprite-m-body-cloth-lower-4 }
+        { body: sT-sprite-m-body-cloth-lower-5 }
+      ]
+      female: [
+        { body: sT-sprite-m-body-cloth-lower-1 }
+        { body: sT-sprite-m-body-cloth-lower-2 }
+        { body: sT-sprite-m-body-cloth-lower-3 }
+        { body: sT-sprite-m-body-cloth-lower-4 }
+        { body: sT-sprite-m-body-cloth-lower-5 }
+      ]
+    }
+    {
+      id: tgl-sT-body-cloth2
+      chance: 0.5
+      extends: tgl-sT-body-cloth
     }
     {
       id: tgl-sT-head-base
@@ -96,18 +231,20 @@
         { portrait: sT-portrait-m-head-base-2 }
       ]
       female: [
-        { portrait: sT-portrait-m-head-base-1  }
-        { portrait: sT-portrait-m-head-base-2 }
+        { portrait: sT-portrait-f-head-base-1 }
+        { portrait: sT-portrait-f-head-base-2 }
       ]
     }
     {
       id: tgl-sT-head-decal
-      colors: sT-colors, alpha: 1, chance: 0.2
+      colors: sT-colors, alpha: 1, chance: 0.5
       male: [
-        { portrait: sT-portrait-m-head-decal-1 }
+        { portrait: sT-portrait-m-head-decal-1, body: sT-sprite-m-head-decal-1 }
+        { portrait: sT-portrait-m-head-decal-2, body: sT-sprite-m-head-decal-2 }
       ]
       female: [
-        { portrait: sT-portrait-m-head-decal-1 }
+        { portrait: sT-portrait-m-head-decal-1, body: sT-sprite-m-head-decal-1 }
+        { portrait: sT-portrait-m-head-decal-2, body: sT-sprite-m-head-decal-2 }
       ]
     }
     {
@@ -118,8 +255,8 @@
         { portrait: sT-portrait-m-head-shading-2 }
       ]
       female: [
-        { portrait: sT-portrait-m-head-shading-1 }
-        { portrait: sT-portrait-m-head-shading-2 }
+        { portrait: sT-portrait-f-head-shading-1 }
+        { portrait: sT-portrait-f-head-shading-2 }
       ]
     }
     {
@@ -130,8 +267,8 @@
         { portrait: sT-portrait-m-mouth-2 }
       ]
       female: [
-        { portrait: sT-portrait-m-mouth-1 }
-        { portrait: sT-portrait-m-mouth-2 }
+        { portrait: sT-portrait-f-mouth-1 }
+        { portrait: sT-portrait-f-mouth-2 }
       ]
     }
     {
@@ -142,8 +279,8 @@
         { portrait: sT-portrait-m-nose-2 }
       ]
       female: [
-        { portrait: sT-portrait-m-nose-1 }
-        { portrait: sT-portrait-m-nose-2 }
+        { portrait: sT-portrait-f-nose-1 }
+        { portrait: sT-portrait-f-nose-2 }
       ]
     }
     {
@@ -154,8 +291,8 @@
         { portrait: sT-portrait-m-ears-2 }
       ]
       female: [
-        { portrait: sT-portrait-m-ears-1 }
-        { portrait: sT-portrait-m-ears-2 }
+        { portrait: sT-portrait-f-ears-1 }
+        { portrait: sT-portrait-f-ears-2 }
       ]
     }
     {
@@ -166,20 +303,31 @@
         { portrait: sT-portrait-m-eyes-2 }
       ]
       female: [
-        { portrait: sT-portrait-m-eyes-1 }
-        { portrait: sT-portrait-m-eyes-2 }
+        { portrait: sT-portrait-f-eyes-1 }
+        { portrait: sT-portrait-f-eyes-2 }
       ]
     }
     {
       id: tgl-sT-hair-head
       colors: sT-colors, alpha: 1
       male: [
-        { portrait: sT-portrait-m-hair-head-1 }
-        { portrait: sT-portrait-m-hair-head-2 }
+        { portrait: sT-portrait-m-hair-head-1, body: sT-sprite-m-hair-head-1 }
+        { portrait: sT-portrait-m-hair-head-2, body: sT-sprite-m-hair-head-2 }
       ]
       female: [
-        { portrait: sT-portrait-m-hair-head-1 }
-        { portrait: sT-portrait-m-hair-head-2 }
+        { portrait: sT-portrait-f-hair-head-1, body: sT-sprite-f-hair-head-1 }
+        { portrait: sT-portrait-f-hair-head-2, body: sT-sprite-f-hair-head-2 }
+      ]
+    }
+    {
+      id: tgl-sT-hair-back
+      colors: sT-colors, alpha: 1
+      male: [
+        { portrait: sT-portrait-m-hair-back-1 }
+      ]
+      female: [
+        { portrait: sT-portrait-f-hair-back-1, body: sT-sprite-f-hair-back-1 }
+        { portrait: sT-portrait-f-hair-back-2, body: sT-sprite-f-hair-back-2 }
       ]
     }
   ]
