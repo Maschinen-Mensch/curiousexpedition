@@ -3,15 +3,15 @@
   #like who made it, what version it is or what its display name should be
   modInfo:
   {
-    id: trex
+    id: t-rex
     name: T-Rex
-    authors: Maschinen-Mensch
-    version: "0.1.0.0"
-    preview: trex-large.png
+    authors: ["Eyes", "Maschinen-Mensch", "Ole"]
+    version: "0.4.0.0"
+    preview: mod-preview
     twitter: http://twitter.com/maschimensch
     weblink: http://maschinen-mensch.com
     mail: support@maschinen-mensch.com
-    description: "Adds a T-Rex into the game as well as a quest to hunt it"
+    description: "Adds a T-Rex into the game as well as a quest to hunt it."
     defaultLang: en
   },
   #The imageData section describes all the new images and sprites that need to be loaded
@@ -20,11 +20,15 @@
       #This is the id we give it, we will refer to the image only by its id
       id: trex-large.png
       #The path to the image inside the mods directory
-      file: trex/trex-large.png
+      file: t-rex/trex-large.png
     }
     {
       id: trex-zone.png
-      file: trex/trex-zone.png
+      file: t-rex/trex-zone.png
+    }
+    {
+      id: mod-preview
+      file: t-rex/mod_preview.png
     }
   ]
   modEntries:[
@@ -84,6 +88,7 @@
       aggroChance: 0.75
       moveSpeed: 0.8
       events: {
+        id: evt-trex-attack
         showImage: {type: day, src: evt_spec_combat_1.png},
         report: txt-zn-trex-report,
         combat: [{emy-trex:1}]
@@ -92,7 +97,7 @@
     #That's it for being able to spawn the trex in the game, but it's much more exciting to have a quest.
     #For that we'll include the trex-quest.hjson file in order to keep the main file more readable
     {
-      import: trex/trex-quest.hjson
+      import: t-rex/trex-quest.hjson
     }
   ]
 }
