@@ -126,6 +126,7 @@
             radius: {base: 0, bonus: dynamiteBonus}
             old: [
               tl-mountain
+              tl-corrupted-mountain
               tl-volcano-active
               tl-volcano-inactive
               tl-grass
@@ -704,7 +705,7 @@
       {slots: 2, it-metalCube: 1}
       {slots: 2, it-totemStick: 2}
       {slots: 1, it-crystalBall: 1}
-      {slots: 1, it-wadjetEye: 2}
+      {slots: 1, it-wadjetEye: 1}
       {slots: 1, it-necronomicon: 1}
       {slots: 1, it-obsidianMirror: 1}
       {slots: 1, it-pendulum-shrine: 1}
@@ -715,25 +716,28 @@
   {
     id: il-tomePages
     items: [
-      {slots: 1, it-tomePage-randomTeleport: 1}
-      {slots: 1, it-tomePage-healingSprings: 1}
-      {slots: 1, it-tomePage-waterfall: 1}
-      {slots: 1, it-tomePage-hill: 1}
-      {slots: 1, it-tomePage-waterDrain: 1}
-      {slots: 1, it-tomePage-superMove: 1}
-      {slots: 1, it-tomePage-targetTeleport: 1}
-      {slots: 1, it-tomePage-mountain: 1}
-      {slots: 1, it-tomePage-chasm: 1}
-      {slots: 1, it-tomePage-fire: 1}
-      {slots: 1, it-tomePage-fertile: 1}
-      {slots: 1, it-tomePage-dry: 1}
-      {slots: 1, it-tomePage-abomination: 1}
-      {slots: 1, it-tomePage-lake: 1}
-      {slots: 1, it-tomePage-regen: 1}
-      {slots: 1, it-tomePage-shipReturn: 1}
-      {slots: 1, it-tomePage-vision: 1}
-      {slots: 1, it-tomePage-portal: 1}
-      {slots: 1, it-tomePage-eagle: 1}
+      {slots: 2, it-tomePage-randomTeleport: 1}
+      {slots: 2, it-tomePage-healingSprings: 1}
+      {slots: 2, it-tomePage-waterfall: 1}
+      {slots: 2, it-tomePage-hill: 1}
+      {slots: 2, it-tomePage-waterDrain: 1}
+      {slots: 2, it-tomePage-superMove: 1}
+      {slots: 2, it-tomePage-targetTeleport: 1}
+      {slots: 2, it-tomePage-mountain: 1}
+      {slots: 2, it-tomePage-chasm: 1}
+      {slots: 2, it-tomePage-fire: 1}
+      {slots: 2, it-tomePage-fertile: 1}
+      {slots: 2, it-tomePage-dry: 1}
+      {slots: 2, it-tomePage-abomination: 1}
+      {slots: 2, it-tomePage-lake: 1}
+      {slots: 2, it-tomePage-regen: 1}
+      {slots: 2, it-tomePage-shipReturn: 1}
+      {slots: 2, it-tomePage-vision: 1}
+      {slots: 2, it-tomePage-portal: 1}
+      {slots: 2, it-tomePage-eagle: 1}
+      {slots: 1, it-tomePage-corrupted: 1}
+      {slots: 2, it-tomePage-monsterDen: 1}
+      {slots: 2, it-tomePage-wisdom: 1}
     ]
   }
   {

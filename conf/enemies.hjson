@@ -139,7 +139,7 @@
     debugCategory: Enemy
     name: txt-emy-triceratops-name
     health: 25
-    dice: [dc-attack-enemy-7]
+    dice: [dc-attack-enemy-triceratops]
     items: [
       {slots: 1, it-meat-raw: 4, it-triceratopsHorn: 1}
       {slots: 1, it-meat-raw: 4, it-triceratopsHorn: 2}

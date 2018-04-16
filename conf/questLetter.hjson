@@ -24,12 +24,10 @@
     id: evt-harbor-quest-letter
     npc: npc-trader
     text: txt-evt-harbor-quest-letter
-    report: txt-evt-harbor-quest-letter-report
     actions: [
       {
         actionText: txt-evt-harbor-quest-missionary-action
         text: txt-evt-harbor-quest-letter-1
-        report: txt-evt-harbor-quest-letter-report-1
         items: {it-quest-1-letter: 1}
         setPartyStatus: +st-letter
         select: evt-harbor-eventSelection
@@ -37,7 +35,6 @@
       {
         actionText: txt-evt-angry-demandPayment-action-1
         text: txt-evt-harbor-quest-letter-2
-        report: txt-evt-harbor-quest-letter-report-2
         select: evt-harbor-eventSelection
       }
     ]
@@ -46,7 +43,6 @@
     id: evt-village-quest-letter
     actionText: txt-evt-village-quest-letter-action
     text: txt-evt-village-quest-letter
-    report: txt-evt-village-quest-letter-report
     reqItems: {it-quest-1-letter: 1..}
     items: {it-quest-1-letter: -1}
     reqLocationFlags: +questLetter

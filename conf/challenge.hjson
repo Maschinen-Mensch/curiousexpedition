@@ -192,7 +192,7 @@
   {
     id: dc-attack-enemy-wolf-arctic
     sprite: hud_dice_bg_emy_1.png
-    faces: claw_1 claw_2 claw_3 teeth
+    faces: claw_1 claw_2 claw_3 teeth blank blank
   }
   {
     id: dc-beast-wolf-arctic
@@ -202,7 +202,7 @@
   {
     id: dc-attack-enemy-walrus
     sprite: hud_dice_bg_emy_1.png
-    faces: stomp teeth teeth tail tail
+    faces: stomp teeth teeth tail tail blank
   }
   {
     id: dc-beast-tiger-battle
@@ -228,6 +228,11 @@
     id: dc-attack-enemy-elephant
     sprite: hud_dice_bg_emy_1.png
     faces: stomp stomp stomp ram ram ram
+  }
+  {
+    id: dc-attack-enemy-triceratops
+    sprite: hud_dice_bg_emy_1.png
+    faces: beak stomp stomp stomp ram ram
   }
   {
     id: dc-attack-enemy-crocodile
@@ -357,7 +362,7 @@
   {
     id: dc-raptor-1
     sprite: hud_dice_bg_animal_1.png
-    faces: claw_1 claw_1 claw_2 teeth teeth claw_2
+    faces: claw_1 claw_2 claw_3 teeth teeth claw_3
   }
   {
     id: dc-tortoise-1
@@ -402,12 +407,12 @@
   {
     id: dc-abomination-1
     sprite: hud_dice_bg_animal_1.png
-    faces: claw_1 claw_2 teeth teeth
+    faces: claw_1 claw_2 teeth teeth blank blank
   }
   {
     id: dc-abomination-2
     sprite: hud_dice_bg_animal_1.png
-    faces: tentacle tentacle tentacle claw_3
+    faces: tentacle tentacle tentacle claw_3 blank blank
   }
   {
     id: dc-yeti
@@ -1195,7 +1200,7 @@
     name: txt-attack-name-50
     faces: dynamite
     damage: 6
-    groupDamage: 2
+    groupDamage: 3
     multiAttack: true
     sound: sfx_explosion_1
   }
@@ -1204,7 +1209,7 @@
     name: txt-attack-name-51
     faces: dynamite awarenes
     damage: 8
-    groupDamage: 2
+    groupDamage: 4
     multiAttack: true
     sound: sfx_explosion_1
   }
@@ -1212,7 +1217,7 @@
     id: dp-attack52
     name: txt-attack-name-52
     faces: dynamite mind
-    damage: 6
+    damage: 4
     multiAttack: true
     sound: sfx_explosion_1
   }

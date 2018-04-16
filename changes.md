@@ -1,3 +1,122 @@
+# 1.3.8 (April 16th, 2018)
+
+* Content
+  * Added Abomination
+  * Adjusted cultist coca stash
+  * Adjusted Jungle Rot icon
+  * The New Game gallery now can have multiple pages of explorers if more than 20 are unlocked
+    * Can now have multiple custom explorers unlocked at once
+* Modding
+  * Tile Border Sprites can now be modded, just add a borderSprites section to your tile (full documentation coming soon)
+  * Improved warnings that are printed to the log when mod content contains errors
+  * Fixed issues with the replace operator not always working
+  * Game now longer creates a mods/mods folder
+  * Fixed issues with mod localisation files
+  * Loading mod data when starting a new game only happens if necessary, so there's not a large hitch by default
+  * The small portrait image id will only have a file extension appended if necessary
+* Debug Bar
+  * Expedition maps are now generated with using a seed.
+    * While hovering over the "Test Game" button in the debug bar with your mouse, type to enter the string that will be used to generate the Test Game
+    * A map generated with the same seed and parameters (Pocket, Difficulty, Expedition number etc) will always generate the same map layout
+    * When starting a game, the seed will be printed to the log. This can help with reporting bugs.
+  * Added a "God" toggle to fights: when active, your party cannot be harmed
+  * Added a "Win" button to fights: when clicked, you kill all enemies
+  * When spawning a tile, if that can't be spawned at the player location it will be spawned one tile north (instead of nothing happening)
+  * Reloading mods now properly reloads images
+  * Can now start a Test Game using a pocket that doesn't contain a goal (a goal will be spawned)
+* Bugfixes
+  * Steam Achievements and Workshop integration now works correctly on Mac (the overlay doesn't display though)
+  * Fix for game not respecting the OS scaling setting
+  * Fixed scaling changes not taking effect immediately
+  * Fixed debug bar not rendering correctly at some scaling settings  
+  * Fixed issue where small white dots would sometimes appear on the landscape
+  * Fixed issues with tiles missing borders along the region borders
+  * Fixed issues with tile borders still rendering even when tiles have been consumed by the void
+  * Fixed Bug where forsaken Villages sometimes fire non-forsaken events
+  * Fixed superstitious animals
+  * Mission now checks if trek is full before offering to recruit cultist after cultist takeover
+
+# 1.3.7 (April 5th, 2018)
+
+* Content
+  * Added 3 new tome pages
+  * Added triceratops
+* Bugfixes
+  * Fixed issues with uploading new mods
+  * Fixed cloud sync between different OS
+  * Moved Linux save game path from ~/* to ~/.config/*
+  * Fixed some dice showing wrong number of faces
+  * Fixed some typos
+
+# 1.3.6 (March 7th, 2018)
+
+* Reworked world map to show numbers next to locations. This makes the display more readable and easier extendable for modders
+* Tuning
+  * Improved friendly raptor health and damage
+  * Tuned dynamite attacks; reduced damage and increased self damage
+  * Reduced altar requirements slightly
+* Achievements
+  * Achievements Good Heart, Fame without Fortune, Trippy Trip, No new friends now require to finish the game in the top 3 to unlock
+  * Fixed treasure achievement was exploitable by trading treasure back and forth
+* Modding
+  * Added support for extending any entity property, regardless of wether it was used in the original content or not)
+  * Added procedural tribes to debug entity list
+  * Added missing localization strings for modding screen
+  * Support for manually specifying steam ID for mods
+* Bugfixes
+  * Fixed cmd click on OSX acting as right click
+  * Fixed lots of chat lines not triggering correctly anymore
+  * Fixed corrupted mountain could not be blown up with dynamite
+  * Fixed various typos
+
+# 1.3.5 (February 6th, 2018)
+
+* Changed Lovecraft unlock condition to using Necronomicon instead of just finding it
+* On the world map extra worlds and unvisited worlds were shown in gold color. Now only extra worlds are shown in gold color. Unvisited worlds are marked with the fame badge, making it easier to distinguish between the two.
+* Bugfixes
+  * Fixed golden pyramid not spawning in some special biomes
+  * Fixed not being able to explore golden pyramid in some special biomes
+  * Fixed broken names of special worlds on world map
+  * Fixed Linux crash on startup
+* Modding
+  * Added support for fallback entries in build lists
+
+# 1.3.4 (January 30th, 2018)
+
+* Fixed green mushroom not giving sanity boost for shamans
+* Fixed stuck in celebration screen when no medals left
+* Removed report button as we are reworking them
+* Fixed some achievements not triggering if they were accomplished before the achievement update
+* Fixed performance issues on some machines
+* Mod Tools
+  * Fixed not being able to update steam mods due to bad cache
+  * Fixed game not loading when missing images, instead a proper error message will be printed
+  * After refreshing all mods should be enabled again
+  * Remember debug choices in main menu debug bar
+  * Improved colors in the debug bar
+  * Added clear button to log viewer
+  * Removed some debug flags and set them to always be automatically enabled
+  * Added "Event Checks" check box to log viewer, allowing to see very detailed event computation in the log and understand why exactly a event is failing or not
+  * Print log output to tce-log.txt file as well
+
+# 1.3.3 (January 11th, 2018)
+
+* Modding Features
+  * Added "reload mods" to in-game debug bar, allowing to adapt script and play the change without having to restart the game
+  * Added support for reqXP and reqMapScore
+  * Added support for specifying custom loyalty for characters
+  * Modding recognized as disabled when all mods have been disabled manually
+  * Added debug button N for enabling/disabling tile borders for debugging
+  * Made parsing of mods more robust
+* Bugfixes
+  * Fixed overriding image slots in mods
+  * Fixed support for mods on OSX
+  * Fixed stunned dice in combat were never reset
+  * Fixed debug text showing up in game
+  * Steam: Fixed unsubbing mod did not remove it from game
+  * Steam: Fixed redownloading previously subscribed mods
+  * Steam: Fixed mods being stored in wrong folder
+
 # 1.3.2 (January 4th, 2018)
 
 * Made reset profile less likely to be hit accidentely

@@ -87,19 +87,19 @@ var achievements = [
   },
   //Career Achievements
   {
-    id: "ach-third-place",//epilogue.coffee::checkAchievements
+    id: "ach-third-place",
     name: "txt-ach-third-place",
     desc: "txt-ach-third-place-desc",
     img: "achv_img_ID_31",
   },
   {
-    id: "ach-second-place",//epilogue.coffee::checkAchievements
+    id: "ach-second-place",
     name: "txt-ach-second-place",
     desc: "txt-ach-second-place-desc",
     img: "achv_img_ID_32",
   },
   {
-    id: "ach-first-place",//epilogue.coffee::checkAchievements
+    id: "ach-first-place",
     name: "txt-ach-first-place",
     desc: "txt-ach-first-place-desc",
     img: "achv_img_ID_33",
@@ -419,7 +419,9 @@ var staticConfig =
   versionName: '',
   enableAchievements: true,
   showMods: true,
-  footerName: "1.3.2.4",
+  showReport: false,
+  footerName: "1.3.8.1",
+  sanityCheckEvents: true,
 
   // is converted to config.diaryText at run-time
   diaryTextLangs: {
@@ -844,6 +846,7 @@ var config = {
     maxZoom: [0, -1], // max/min zoom level (default blockSize is 0)
     autoScroll: true, // scroll with party during traveling,
     scrollMargin: -150, // how close scroll gets to screen border
+    showBorders: true,
 
     biomeSafeZone: 3, // how far off to create locations from the borders
     defaultLocationMinDist: 3, // min dist from player start pos
@@ -1211,7 +1214,7 @@ var config = {
   // ],
 
   report: {
-    startWorld: 'txt-startworld-report'
+    // startWorld: 'txt-startworld-report'
   },
 
   narrator: [
@@ -1280,17 +1283,9 @@ var debug =
 {
   testTribe: 'tg-jungle',
   tribeBackground: '#4b3a32',
-  testExplorer: null,
-  testWorldLevel: null, // if set new games start with this world
-  testDifficulty: null, // default difficulty
-  testPocket: null,
-  testItem: null,
   testStatus: null,
-  testCharacter: null,
   testGoal: null,
-  testLocation: null,
-  testEvent: null,
-  testPerk: null,
+  eventChecks: false
 };
 
 //Merge static config into config

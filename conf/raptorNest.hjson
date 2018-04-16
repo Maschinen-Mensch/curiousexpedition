@@ -29,7 +29,6 @@
     id: evt-raptorNest-main
     text: txt-evt-raptorNest-main
     setLocationFlags: +raptorNest
-    report: txt-evt-raptorNest-main-report
     chat: cl-deadlyPlace
     actions: [
       evt-searchArea
@@ -43,7 +42,6 @@
       {
         slots: 1
         text: txt-evt-raptorNest-searchOutcome
-        report: txt-evt-raptorNest-searchOutcome-report
         loot: {
           items: {it-egg-raptor: 1}
           closeEvents: evt-leave
@@ -52,7 +50,6 @@
       {
         slots: 2
         text: txt-evt-raptorNest-searchOutcome-1
-        report: txt-evt-raptorNest-searchOutcome-report-1
         loot: {
           items: [
             {slots: 1, il-loot-standard: 2}
@@ -84,7 +81,6 @@
       actions: {
         actionText: txt-evt-raptor-adult-action
         text: txt-evt-raptor-adult-1
-        report: txt-evt-raptor-adult-report
         addNPC: true
         actions: evt-leave
       }

@@ -106,7 +106,6 @@
     playMusic: [thm_nature_mystic_1, thm_nature_mystic_2]
     showImage: {src: evt_fxt_monsterDen_corrupted.png, type: day}
     text: txt-evt-monsterDen-giantSpiders-approach
-    report: txt-evt-monsterDen-giantSpiders-approach-report
     chat: cl-monsterDen-approach
     actions: [
       evt-monsterDen-giantSpiders-explore-torch
@@ -342,7 +341,6 @@
       {radius: 0, old: tl-corrupted-mountain, new: tl-mountainTraversable}
     ]
     setLocationFlags: +explored
-    report: txt-evt-monsterDen-giantSpiders-opening-explore-report
     setPartyStatus: +portalReturn
     warpWorld: wd-warped-corrupted
   }
@@ -472,7 +470,14 @@
       res_tile_corrupted_plains_6.png
       res_tile_corrupted_plains_7.png
     ]
-    borderImgIdx: 29
+    borderSprites: [
+      [res_tileBorder_corrupted_plains_n_1.png]
+      [res_tileBorder_corrupted_plains_ne_1.png]
+      [res_tileBorder_corrupted_plains_se_1.png]
+      [res_tileBorder_corrupted_plains_s_1.png]
+      [res_tileBorder_corrupted_plains_sw_1.png]
+      [res_tileBorder_corrupted_plains_nw_1.png]
+    ]
     borderPrio: 11
     level: 0
     viewCost: 0.15
@@ -501,7 +506,14 @@
       res_tile_corrupted_jungle_thick_6.png
       res_tile_corrupted_jungle_thick_7.png
     ]
-    borderImgIdx: 30
+    borderSprites: [
+      [res_tileBorder_corrupted_jungle_thick_n_1.png]
+      [res_tileBorder_corrupted_jungle_thick_ne_1.png]
+      [res_tileBorder_corrupted_jungle_thick_se_1.png]
+      [res_tileBorder_corrupted_jungle_thick_s_1.png]
+      [res_tileBorder_corrupted_jungle_thick_sw_1.png]
+      [res_tileBorder_corrupted_jungle_thick_nw_1.png]
+    ]
     borderPrio: 17
     viewCost: 0.4
     moveCost: {default: 8, it-machete: 3}
@@ -509,9 +521,6 @@
     moveSounds: sfx_move_jungle_1 sfx_move_jungle_2 sfx_move_jungle_3
     travelParticle: pt-travel-jungle
     hideParty: true
-    breakStamps: true
-    breakLines: true
-    hasTaxonomy: true
     sprawls: [
       {id: spr-fire, chance: 0.3, lifeTime: 12}
       {id: spr-dry, burnedTile: tl-dry-jungle-thick}
@@ -532,7 +541,14 @@
       res_tile_corrupted_jungle_light_6.png
       res_tile_corrupted_jungle_light_7.png
     ]
-    borderImgIdx: 32
+    borderSprites: [
+      [res_tileBorder_corrupted_jungle_light_n_1.png]
+      [res_tileBorder_corrupted_jungle_light_ne_1.png]
+      [res_tileBorder_corrupted_jungle_light_se_1.png]
+      [res_tileBorder_corrupted_jungle_light_s_1.png]
+      [res_tileBorder_corrupted_jungle_light_sw_1.png]
+      [res_tileBorder_corrupted_jungle_light_nw_1.png]
+    ]
     borderPrio: 13
     viewCost: 0.25
     breakStamps: true
@@ -560,7 +576,14 @@
       res_tile_corrupted_mountain_6.png
       res_tile_corrupted_mountain_7.png
     ]
-    borderImgIdx: 31
+    borderSprites: [
+      [res_tileBorder_corrupted_mountain_n_1.png]
+      [res_tileBorder_corrupted_mountain_ne_1.png]
+      [res_tileBorder_corrupted_mountain_se_1.png]
+      [res_tileBorder_corrupted_mountain_s_1.png]
+      [res_tileBorder_corrupted_mountain_sw_1.png]
+      [res_tileBorder_corrupted_mountain_nw_1.png]
+    ]
     borderPrio: 16
     elevation: 3
     viewCost: 0.6
@@ -594,7 +617,14 @@
       res_tile_corrupted_stoneForest_6.png
       res_tile_corrupted_stoneForest_7.png
     ]
-    borderImgIdx: 33
+    borderSprites: [
+      [res_tileBorder_corrupted_stoneForest_n_1.png]
+      [res_tileBorder_corrupted_stoneForest_ne_1.png]
+      [res_tileBorder_corrupted_stoneForest_se_1.png]
+      [res_tileBorder_corrupted_stoneForest_s_1.png]
+      [res_tileBorder_corrupted_stoneForest_sw_1.png]
+      [res_tileBorder_corrupted_stoneForest_nw_1.png]
+    ]
     borderPrio: 13
     viewCost: 0.4
     moveCost: 3
@@ -622,7 +652,14 @@
       res_tile_corrupted_river_6.png
       res_tile_corrupted_river_7.png
     ]
-    borderImgIdx: 34
+    borderSprites: [
+      [res_tileBorder_corrupted_river_n_1.png]
+      [res_tileBorder_corrupted_river_ne_1.png]
+      [res_tileBorder_corrupted_river_se_1.png]
+      [res_tileBorder_corrupted_river_s_1.png]
+      [res_tileBorder_corrupted_river_sw_1.png]
+      [res_tileBorder_corrupted_river_nw_1.png]
+    ]
     borderPrio: 18
     borderTag: water
     viewCost: 0.1
@@ -646,7 +683,14 @@
       res_tile_corrupted_river_shallow_6.png
       res_tile_corrupted_river_shallow_7.png
     ]
-    borderImgIdx: 34
+    borderSprites: [
+      [res_tileBorder_corrupted_river_n_1.png]
+      [res_tileBorder_corrupted_river_ne_1.png]
+      [res_tileBorder_corrupted_river_se_1.png]
+      [res_tileBorder_corrupted_river_s_1.png]
+      [res_tileBorder_corrupted_river_sw_1.png]
+      [res_tileBorder_corrupted_river_nw_1.png]
+    ]
     borderPrio: 18
     borderTag: water
     moveCost: 4

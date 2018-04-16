@@ -697,5 +697,4 @@ config.man = [
     $inline: "true or false",
     $description: "The amount of map score added or removed."
   }
-
 ]

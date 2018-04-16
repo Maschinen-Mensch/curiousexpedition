@@ -180,7 +180,7 @@
       }
     ]
     extraSprites: {crates: res_anm_raptor_crates.png, saddle: res_anm_raptor_saddle.png}
-    health: 12
+    health: 13
     miniSprite: res_anm_raptor_1_mini.png
     mountedDice: dc-raptor-1!4 dc-raptor-1!4
     isMountable: true

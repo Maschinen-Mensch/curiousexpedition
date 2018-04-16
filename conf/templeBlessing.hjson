@@ -5,7 +5,7 @@
     reqBiomeFlags: -arctic
     flags: +shrineBlessing +dreamVisions +ruins
     sprite: res_fxt_templeBlessing_1.png
-    worldMap: true
+    worldMap: templeBlessing
     dist: 5
     setTile: tl-mountain
     setNeighbors: [
@@ -49,7 +49,6 @@
     actionText: txt-evt-altar-approach-action
     showImage: {src: evt_fxt_temple_blessing_1.png, type: day}
     text: txt-evt-blessingTemple-approach
-    report: txt-evt-blessingTemple-approach-report
     actions: [evt-blessingTemple-enter, evt-leave]
   }
   {
@@ -67,7 +66,6 @@
     actionText: txt-evt-blessingTemple-drink-action
     reqCharFlags: -special +humanoid
     chat: cl-cave-sendIn
-    report: txt-evt-blessingTemple-drink-report
     text: txt-evt-blessingTemple-drink
     select: [
       {
@@ -77,7 +75,6 @@
         setStatus: +blessingPureMind
         removeStatusWithFlags: +ailment
         text: txt-evt-blessingTemple-drink-1
-        report: txt-evt-blessingTemple-drink-report-1
       }
       {
         prio: 1
@@ -86,7 +83,6 @@
         setStatus: +blessingRegeneration -infected
         text: txt-evt-blessingTemple-drink-2
         health: 10
-        report: txt-evt-blessingTemple-drink-report-2
       }
       {
         prio: 1
@@ -95,7 +91,6 @@
         setStatus: +blessingHoly
         text: txt-evt-blessingTemple-drink-3
         standing: 3
-        report: txt-evt-blessingTemple-drink-report-3
       }
       {
         prio: 1
@@ -103,7 +98,6 @@
         reqStatus: -blessingInhumanStrength
         setStatus: +blessingInhumanStrength
         text: txt-evt-blessingTemple-drink-4
-        report: txt-evt-blessingTemple-drink-report-4
       }
       {
         prio: 1
@@ -111,7 +105,6 @@
         reqStatus: -blessingLeatherskin
         setStatus: +blessingLeatherskin
         text: txt-evt-blessingTemple-drink-5
-        report: txt-evt-blessingTemple-drink-report-5
       }
       {
         prio: 1
@@ -119,12 +112,10 @@
         reqStatus: -blessingClaws
         setStatus: +blessingClaws
         text: txt-evt-blessingTemple-drink-6
-        report: txt-evt-blessingTemple-drink-report-6
       }
       {
         prio: 2
         text: txt-evt-blessingTemple-drink-7
-        report: txt-evt-blessingTemple-drink-report-7
       }
     ]
     actions: evt-blessingTemple-leave

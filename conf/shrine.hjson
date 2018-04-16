@@ -3,7 +3,7 @@
     id: loc-shrine-2
     name: txt-fxt-shrine-2-name
     sprite: res_fxt_temple_5.png
-    worldMap: true
+    worldMap: shrine
     reqBiomeFlags: -arctic
     flags: +shrine +dreamVisions +ruins
     setTile: [
@@ -27,7 +27,7 @@
       }
       {prio: 2, slots: 3, setLocationFlags: +aftermathIce, reqBiomeFlags: -arctic}
       {prio: 2, slots: 3, setLocationFlags: +aftermathDry, reqBiomeFlags: -desert}
-      {prio: 2, slots: 1, setLocationFlags: +aftermathForsake}
+      {prio: 2, slots: 2, setLocationFlags: +aftermathForsake}
       {prio: 2, slots: 3, setLocationFlags: +aftermathVolcano, reqWorld: 1..}
       {prio: 2, slots: 3, setLocationFlags: +aftermathPoisonGas, reqWorld: 2..}
       {prio: 2, slots: 3, setLocationFlags: +aftermathCorrupted, reqWorld: 2..}
@@ -289,14 +289,12 @@
         optional: true
         reqBiomeFlags: -arctic
         text: txt-evt-shrine-enter
-        report: txt-evt-shrine-enter-report
         showImage: {src: evt_fxt_shrine_int_1.png, showMounted: false}
       }
       {
         optional: true
         reqBiomeFlags: +arctic
         text: txt-evt-shrine-arctic-enter
-        report: txt-evt-shrine-arctic-enter-report
         showImage: {src: evt_fxt_shrine_arctic_int.png, showMounted: false}
       }
     ]
@@ -370,7 +368,6 @@
     id: evt-shrine-aftermath-mountains
     reqLocationFlags: +aftermathMountains
     text: txt-evt-shrine-aftermath-mountains
-    report: txt-evt-shrine-aftermath-mountains-report
     actions: {
       playSound: sfx_volcanoErupt
       camShake: {power: 8, length: 1.2}
@@ -397,7 +394,6 @@
     id: evt-shrine-aftermath-chasm
     reqLocationFlags: +aftermathChasm
     text: txt-evt-shrine-aftermath-chasm
-    report: txt-evt-shrine-aftermath-chasm-report
     startSprawl: {ref: spr-chasm, power: 3, worldPower: 1}
     select: evt-leave
   }
@@ -438,7 +434,6 @@
     id: evt-shrine-aftermath-flood
     reqLocationFlags: +aftermathFlood
     text: txt-evt-shrine-aftermath-flood
-    report: txt-evt-shrine-aftermath-flood-report
     startSprawl: {ref: spr-flood, radius: 0, power: 2}
     setPartyStatus: +st-curse-flood
     select: evt-leave
@@ -447,7 +442,6 @@
     id: evt-shrine-aftermath-dry
     reqLocationFlags: +aftermathDry
     text: txt-evt-shrine-aftermath-climate
-    report: txt-evt-shrine-aftermath-climate-report
     startSprawl: {ref: spr-dry, radius: 0, power: 8, worldPower: 2}
     select: evt-leave
   }
@@ -455,7 +449,6 @@
     id: evt-shrine-aftermath-ice
     reqLocationFlags: +aftermathIce
     text: txt-evt-shrine-ice
-    report: txt-evt-shrine-ice
     startSprawl: {ref: spr-ice, radius: 0, power: 8, worldPower: 2}
     select: evt-leave
   }
@@ -463,7 +456,6 @@
     id: evt-shrine-aftermath-volcano
     reqLocationFlags: +aftermathVolcano
     text: txt-evt-shrine-aftermath-volcano
-    report: txt-evt-shrine-aftermath-volcano-report
     actions: {
       playSound: sfx_volcanoErupt
       partyEvents: [
@@ -486,7 +478,6 @@
     id: evt-shrine-aftermath-poisonGas
     reqLocationFlags: +aftermathPoisonGas
     text: txt-evt-shrine-aftermath-poisonGas
-    report: txt-evt-shrine-aftermath-poisonGas-report
     actions: {
       partyEvents: [
         {
@@ -550,7 +541,6 @@
     id: evt-shrine-aftermath-void
     reqLocationFlags: +aftermathVoid
     text: txt-evt-shrine-aftermath-void
-    report: txt-evt-shrine-aftermath-void-report
     startSprawl: {ref: spr-void, power: 10000}
     select: evt-leave
   }
@@ -561,7 +551,6 @@
       optional: true
       reqLocationFlags: -broken
       text: txt-evt-shrine-leave
-      report: txt-evt-shrine-leave-report
     }
   }
 ]

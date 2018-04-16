@@ -20,6 +20,18 @@
     items: {it-whisky: 4, it-torch: 3, it-shotgun: 1, it-machete: 10}
   }
   {
+    id: sp-ee-soldier
+    extends: sp-ee-base
+    isAbstract: true
+    title: txt-sp-ee-soldier-title
+    description: txt-sp-ee-soldier
+    levels: [
+      {statuses: st-whiskyIncrease-4, dice: dc-attack-2 dc-defend-2}
+    ]
+    characters: pl-soldier-british pl-soldier-british anm-donkey
+    items: {it-whisky: 5, it-firstAid: 2, it-shotgun: 1, it-machete: 5}
+  }
+  {
     id: sp-ee-ethnographer
     extends: sp-ee-base
     isAbstract: true
@@ -999,6 +1011,21 @@
         sprite: ee_sprite_bingham.png
         miniSprite: ee_sprite_bingham_mini.png
         portrait: ee_face_bingham.png
+      }
+    ]
+  }
+  {
+    id: sp-smith
+    name: Eric Smith
+    extends: sp-ee-soldier
+    unlockPin: 4632
+    debugCategory: Customers
+    variations: [
+      {
+        gender: male
+        sprite: ee_sprite_smith.png
+        miniSprite: ee_sprite_smith_mini.png
+        portrait: ee_face_smith.png
       }
     ]
   }

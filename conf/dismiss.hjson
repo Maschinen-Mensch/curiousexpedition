@@ -18,7 +18,6 @@
       {
         actionText: txt-evt-dismiss-default-action
         text: txt-evt-dismiss-default
-        report: txt-evt-dismiss-default-report
         select: [
           {
             reqCharFlags: +dinosaur
@@ -46,7 +45,6 @@
       {
         actionText: txt-evt-dismiss-default-action
         text: txt-evt-dismiss-western-1
-        report: txt-evt-dismiss-western-report
         storeCharacter: true
         charEvents: {
           count: any
@@ -63,7 +61,6 @@
     id: evt-dismiss-abomination
     reqCharFlags: +abomination
     text: txt-evt-dismiss-abomination
-    report: txt-evt-dismiss-abomination-report
     actions: [
       {
         actionText: txt-evt-cave-ghostsQuest-action
@@ -94,7 +91,6 @@
       {
         actionText: txt-evt-dismiss-default-action
         text: txt-evt-dismiss-tim-2
-        report: txt-evt-dismiss-tim-report
         storeCharacter: true
         charEvents: [
           {
@@ -118,7 +114,6 @@
       {
         actionText: txt-evt-dismiss-default-action
         text: txt-evt-dismiss-luis-1
-        report: txt-evt-dismiss-luis-report
         storeCharacter: true
         charEvents: {reqCharFlags: +tim, loyalty: -3}
       }

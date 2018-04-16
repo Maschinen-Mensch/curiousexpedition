@@ -11,19 +11,16 @@
     id: evt-harbor-quest-idol
     npc: npc-trader
     text: txt-evt-harbor-quest-idol
-    report: txt-evt-harbor-quest-idol-report
     actions: [
       {
         actionText: txt-evt-harbor-quest-missionary-action
         text: txt-evt-harbor-quest-idol-1
-        report: txt-evt-harbor-quest-idol-report-1
         setPartyStatus: +idol
         select: evt-harbor-eventSelection
       }
       {
         actionText: txt-evt-angry-demandPayment-action-1
         text: txt-evt-harbor-quest-idol-2
-        report: txt-evt-harbor-quest-idol-report-2
         select: evt-harbor-eventSelection
       }
     ]
@@ -40,7 +37,6 @@
         text: txt-evt-harbor-quest-idol-complete-1
         reqItems: {it-idol: 1..}
         items: {it-idol: -1}
-        report: txt-evt-harbor-quest-idol-complete-report
         incAchievement: ach-complete-quests
         actions: evt-harbor-quest-reward
       }

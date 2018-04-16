@@ -6,7 +6,7 @@
     dist: 5
     hasStash: true
     priceTable: polarStation
-    worldMap: true
+    worldMap: polarStation
     initItems: {
       il-trade-polarStation-sanity: 1
       il-trade-polarStation-equipment: 3

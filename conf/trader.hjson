@@ -74,7 +74,6 @@
     id: evt-trader-enter
     actionText: txt-evt-trader-enter-action
     text: txt-evt-trader-enter
-    report: txt-evt-trader-enter-report
     playMusic: thm_utility_2
     npc: npc-trader
     showImage: {src: evt_fxt_trader_1.png, type: day}

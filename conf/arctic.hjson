@@ -86,7 +86,7 @@
       ]
       [
         {
-          reqWorld: 5
+          reqWorld: 5..
           select: 1
           group: [
             {slots: 1, select: 1, ref: loc-volcano-spawn-large-inactive}
@@ -476,7 +476,38 @@
       res_tile_packIce_5.png
       res_tile_packIce_6.png
     ]
-    borderImgIdx: 39
+    borderSprites: [
+      [
+        res_tileBorder_arcticSea_n_1.png
+        res_tileBorder_arcticSea_n_2.png
+        res_tileBorder_arcticSea_n_3.png
+      ]
+      [
+        res_tileBorder_arcticSea_ne_1.png
+        res_tileBorder_arcticSea_ne_2.png
+        res_tileBorder_arcticSea_ne_3.png
+      ]
+      [
+        res_tileBorder_arcticSea_se_1.png
+        res_tileBorder_arcticSea_se_2.png
+        res_tileBorder_arcticSea_se_3.png
+      ]
+      [
+        res_tileBorder_arcticSea_s_1.png
+        res_tileBorder_arcticSea_s_2.png
+        res_tileBorder_arcticSea_s_3.png
+      ]
+      [
+        res_tileBorder_arcticSea_sw_1.png
+        res_tileBorder_arcticSea_sw_2.png
+        res_tileBorder_arcticSea_sw_3.png
+      ]
+      [
+        res_tileBorder_arcticSea_nw_1.png
+        res_tileBorder_arcticSea_nw_2.png
+        res_tileBorder_arcticSea_nw_3.png
+      ]
+    ]
     borderPrio: 6
     moveCost: 4
     borderTag: water
@@ -546,7 +577,6 @@
         res_tileBorder_arcticSea_nw_3.png
       ]
     ]
-    borderImgIdx: 39
     borderPrio: 6
     borderTag: water
     viewCost: 0.1
@@ -595,7 +625,14 @@
       res_tile_deepSnow_11.png
       res_tile_deepSnow_12.png
     ]
-    borderImgIdx: 35
+    borderSprites: [
+      [res_tileBorder_deepSnow_n_1.png]
+      [res_tileBorder_deepSnow_ne_1.png]
+      [res_tileBorder_deepSnow_se_1.png]
+      [res_tileBorder_deepSnow_s_1.png]
+      [res_tileBorder_deepSnow_sw_1.png]
+      [res_tileBorder_deepSnow_nw_1.png]
+    ]
     borderPrio: 2
     moveCost: {default: 10, it-snowshoe: 5}
     viewCost: 0.4
@@ -621,7 +658,38 @@
       res_tile_glacier_water_4.png
       res_tile_glacier_water_5.png
     ]
-    borderImgIdx: 39
+    borderSprites: [
+      [
+        res_tileBorder_arcticSea_n_1.png
+        res_tileBorder_arcticSea_n_2.png
+        res_tileBorder_arcticSea_n_3.png
+      ]
+      [
+        res_tileBorder_arcticSea_ne_1.png
+        res_tileBorder_arcticSea_ne_2.png
+        res_tileBorder_arcticSea_ne_3.png
+      ]
+      [
+        res_tileBorder_arcticSea_se_1.png
+        res_tileBorder_arcticSea_se_2.png
+        res_tileBorder_arcticSea_se_3.png
+      ]
+      [
+        res_tileBorder_arcticSea_s_1.png
+        res_tileBorder_arcticSea_s_2.png
+        res_tileBorder_arcticSea_s_3.png
+      ]
+      [
+        res_tileBorder_arcticSea_sw_1.png
+        res_tileBorder_arcticSea_sw_2.png
+        res_tileBorder_arcticSea_sw_3.png
+      ]
+      [
+        res_tileBorder_arcticSea_nw_1.png
+        res_tileBorder_arcticSea_nw_2.png
+        res_tileBorder_arcticSea_nw_3.png
+      ]
+    ]
     borderPrio: 6
     borderOnlyKnown: true
     elevation: 3
@@ -677,7 +745,6 @@
       [res_tileBorder_glacier_land_nw_1.png, res_tileBorder_glacier_land_nw_2.png]
     ]
     borderPrio: 7
-    borderImgIdx: 41
     borderOnlyKnown: true
     elevation: 3
     viewCost: 0.6
@@ -722,7 +789,14 @@
       res_tile_frozenPlains_9.png
       res_tile_frozenPlains_10.png
     ]
-    borderImgIdx: 38
+    borderSprites: [
+      [res_tileBorder_frozenPlains_n_1.png]
+      [res_tileBorder_frozenPlains_ne_1.png]
+      [res_tileBorder_frozenPlains_se_1.png]
+      [res_tileBorder_frozenPlains_s_1.png]
+      [res_tileBorder_frozenPlains_sw_1.png]
+      [res_tileBorder_frozenPlains_nw_1.png]
+    ]
     borderPrio: 1
     viewCost: 0.25
     moveCost: 2
@@ -754,7 +828,14 @@
       res_tile_plateau_6.png
       res_tile_plateau_7.png
     ]
-    borderImgIdx: 36
+    borderSprites: [
+      [res_tileBorder_plateau_n_1.png]
+      [res_tileBorder_plateau_ne_1.png]
+      [res_tileBorder_plateau_se_1.png]
+      [res_tileBorder_plateau_s_1.png]
+      [res_tileBorder_plateau_sw_1.png]
+      [res_tileBorder_plateau_nw_1.png]
+    ]
     borderPrio: 8
     viewCost: 0.6
     elevation: 2.2
@@ -783,7 +864,14 @@
       res_tile_snowForest_5.png
       res_tile_snowForest_6.png
     ]
-    borderImgIdx: 37
+    borderSprites: [
+      [res_tileBorder_snowForest_n_1.png]
+      [res_tileBorder_snowForest_ne_1.png]
+      [res_tileBorder_snowForest_se_1.png]
+      [res_tileBorder_snowForest_s_1.png]
+      [res_tileBorder_snowForest_sw_1.png]
+      [res_tileBorder_snowForest_nw_1.png]
+    ]
     borderPrio: 3
     viewCost: 0.4
     moveCost: 3
@@ -809,7 +897,14 @@
       res_tile_chrystalForest_5.png
       res_tile_chrystalForest_6.png
     ]
-    borderImgIdx: 40
+    borderSprites: [
+      [res_tileBorder_chrystalForest_n_1.png]
+      [res_tileBorder_chrystalForest_ne_1.png]
+      [res_tileBorder_chrystalForest_se_1.png]
+      [res_tileBorder_chrystalForest_s_1.png]
+      [res_tileBorder_chrystalForest_sw_1.png]
+      [res_tileBorder_chrystalForest_nw_1.png]
+    ]
     borderPrio: 4
     viewCost: 0.4
     moveCost: 4
@@ -838,7 +933,14 @@
       res_tile_arcticChasm_6.png
       res_tile_arcticChasm_7.png
     ]
-    borderImgIdx: 42
+    borderSprites: [
+      [res_tileBorder_arcticChasm_n_1.png]
+      [res_tileBorder_arcticChasm_ne_1.png]
+      [res_tileBorder_arcticChasm_se_1.png]
+      [res_tileBorder_arcticChasm_s_1.png]
+      [res_tileBorder_arcticChasm_sw_1.png]
+      [res_tileBorder_arcticChasm_nw_1.png]
+    ]
     borderPrio: 5
     borderOnlyKnown: true
     borderTag: pit

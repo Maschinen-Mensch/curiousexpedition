@@ -3,7 +3,7 @@
     id: loc-altar
     name: txt-fxt-altar-name
     debugCategory: special
-    worldMap: true
+    worldMap: altar
     debugColor: red
     reqBiomeFlags: +dry | +grass | +arctic
     dist: 5
@@ -68,16 +68,18 @@
       itemEvents: [
         {
           items: {it-treasure-eggplant: 1}
-          ref: {
-            incAchievement: ach-eggplant-altar
-            text: txt-evt-altar-eggplant-done
-            select: evt-altar-actions
-          }
+          ref: evt-altar-eggplant
         }
       ]
       priceTable: karma
       hideNPCInv: true
     }
+  }
+  {
+    id: evt-altar-eggplant
+    incAchievement: ach-eggplant-altar
+    text: txt-evt-altar-eggplant-done
+    select: evt-altar-actions
   }
   {
     id: evt-altar-dropDone
@@ -89,7 +91,7 @@
     alwaysShown: true
     actionText: txt-evt-altar-revive-action
     text: txt-evt-altar-revive
-    reqKarma: 75..
+    reqKarma: 60..
     storeEvents: {
       count: ..4
       reqCharFlags: +dead
@@ -98,7 +100,7 @@
         text: txt-evt-altar-revive-1
         restoreCharacter: true
         incAchievement: ach-revive
-        karma: -75
+        karma: -60
         select: evt-altar-actions
       }
     }

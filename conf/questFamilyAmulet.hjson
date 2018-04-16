@@ -5,7 +5,6 @@
       {
         reqStatus: +infected +homesick
         text: txt-evt-infectedDeath-amulet
-        report: txt-evt-infectedDeath-amulet-report
         storeCharacter: true
         setCharFlags: +dead
       }

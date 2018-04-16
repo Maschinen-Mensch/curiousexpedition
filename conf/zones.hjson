@@ -13,7 +13,6 @@
   {
     id: evt-hyena-attack
     showImage: {type: day, src: evt_spec_combat_1.png}
-    report: txt-evt-hyena-attack-report
     select: [
       {
         reqTutorial: true
@@ -69,7 +68,6 @@
   {
     id: evt-hyena-black-attack
     showImage: {type: day, src: evt_spec_combat_1.png}
-    report: txt-evt-hyena-black-attack-report
     setPartyFlags: +snarfrattleCombat
     select: [
       {
@@ -110,7 +108,6 @@
         slots: 3
         reqDifficulty: 0..
         showImage: {type: day, src: evt_spec_combat_1.png}
-        report: txt-evt-elephant-attack-report
         combat: [
           {emy-elephant: 1}
         ]
@@ -118,7 +115,6 @@
       {
         reqDifficulty: 1..
         showImage: {type: day, src: evt_spec_combat_1.png}
-        report: txt-evt-elephant-attack-report-1
         combat: [
           {emy-elephant: 2}
         ]
@@ -136,17 +132,15 @@
       {
         slots: 3
         showImage: {type: day, src: evt_spec_combat_1.png}
-        report: txt-zn-triceratops-report
         combat: [
-          {emy-triceratops: 1}
+          {emy-triceratops: 2}
         ]
       }
       {
         slots: 1
         showImage: {type: day, src: evt_spec_combat_1.png}
-        report: txt-zn-triceratops-report-1
         combat: [
-          {emy-triceratops: 2}
+          {emy-triceratops: 1}
         ]
       }
     ]
@@ -162,7 +156,6 @@
     events: [
       {
         showImage: {type: day, src: evt_spec_combat_1.png}
-        report: txt-zn-tiger-report
         partyEvents: {optional: true, reqDifficulty: 1.., unlockCharacter: sp-selous}
         select: [
           {
@@ -204,7 +197,6 @@
     moveSpeed: 2
     events: {
       showImage: {type: day, src: evt_spec_combat_1.png}
-      report: txt-zn-tiger-white-report
       combat: [
         {emy-tiger-white: 1}
       ]
@@ -221,7 +213,6 @@
     events: [
       {
         showImage: {type: day, src: evt_spec_combat_1.png}
-        report: txt-zn-sabertooth-report
         select: [
           {
             reqDifficulty: 0..
@@ -263,7 +254,6 @@
     events: [
       {
         showImage: {type: day, src: evt_spec_combat_1.png}
-        report: txt-zn-sabertooth-report
         select: [
           {
             reqDifficulty: 0..
@@ -305,7 +295,6 @@
     events: [
       {
         showImage: {type: day, src: evt_spec_combat_1.png}
-        report: txt-zn-wolf-arctic-report
         select: [
           {
             reqDifficulty: 0..
@@ -347,7 +336,6 @@
     events: [
       {
         showImage: {type: day, src: evt_spec_combat_1.png}
-        report: txt-zn-walrus-report
         select: [
           {
             reqDifficulty: 0..
@@ -389,7 +377,6 @@
     events: [
       {
         showImage: {type: day, src: evt_spec_combat_1.png}
-        report: txt-zn-yeti-report
         select: [
           {
             reqDifficulty: 0..
@@ -413,7 +400,6 @@
     events: [
       {
         showImage: {type: day, src: evt_spec_combat_1.png}
-        report: txt-zn-polarBear-report
         select: [
           {
             reqDifficulty: 0..
@@ -461,7 +447,6 @@
     moveSpeed: 1.5
     events: {
       showImage: {type: day, src: evt_spec_combat_1.png}
-      report: txt-zn-panther-report-1
       select: [
         {
           reqDifficulty: 0..
@@ -502,7 +487,6 @@
     moveSpeed: 0.5
     events: {
       showImage: {type: day, src: evt_spec_combat_1.png}
-      report: txt-zn-gorilla-report
       select: [
         {
           reqDifficulty: 0..
@@ -546,7 +530,6 @@
     events: [
       {
         showImage: {type: day, src: evt_spec_combat_1.png}
-        report: txt-zn-crocodile-report
         select: [
           {
             reqDifficulty: 0..
@@ -580,7 +563,6 @@
     moveSpeed: 2
     events: {
       showImage: {type: day, src: evt_spec_combat_1.png}
-      report: txt-zn-zombiePygmy-report
       select: [
         {
           reqDifficulty: 0..
@@ -614,7 +596,6 @@
     moveSpeed: 0.75
     events: {
       showImage: {type: day, src: evt_spec_combat_1.png}
-      report: txt-zn-abomination-report-2
       select: [
         {
           combat: [
@@ -637,7 +618,6 @@
     moveSpeed: 0.75
     events: {
       showImage: {type: day, src: evt_spec_combat_1.png}
-      report: txt-zn-angryNatives-report
       select: [
         {
           reqPartyFlags: -angryNatives1 -angryNatives2 -angryNatives3 -angryNatives4
@@ -688,7 +668,6 @@
     moveSpeed: 0.75
     events: {
       showImage: {type: day, src: evt_spec_combat_1.png}
-      report: txt-zn-angryNatives-report
       select: [
         {
           reqPartyFlags: -angryNatives1 -angryNatives2 -angryNatives3 -angryNatives4
@@ -738,7 +717,6 @@
     events: [
       {
         showImage: {type: day, src: evt_spec_combat_1.png}
-        report: txt-zn-raptor-report-1
         select: [
           {
             reqDifficulty: 0..
@@ -781,7 +759,6 @@
     events: [
       {
         showImage: {type: day, src: evt_spec_combat_1.png}
-        report: txt-zn-giantScorpion-report
         select: [
           {
             reqDifficulty: 0..
@@ -815,7 +792,6 @@
     events: [
       {
         showImage: {type: day, src: evt_spec_combat_1.png}
-        report: txt-zn-giantSpiders-report
         select: [
           {
             reqDifficulty: 0
@@ -856,7 +832,6 @@
     events: [
       {
         showImage: {type: day, src: evt_spec_combat_1.png}
-        report: txt-zn-giantBird-report
         select: [
           {
             reqDifficulty: 0..
@@ -889,7 +864,6 @@
     events: [
       {
         showImage: {type: day, src: evt_spec_combat_1.png}
-        report: txt-zn-giantCrab-report
         combat: [
           {emy-giantCrab: 1}
         ]

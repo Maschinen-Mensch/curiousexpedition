@@ -11,19 +11,16 @@
     id: evt-quest-konrad
     npc: pl-soldier-british
     text: txt-evt-quest-konrad
-    report: txt-evt-quest-konrad-report
     actions: [
       {
         actionText: txt-evt-harbor-quest-missionary-action
         setPartyStatus: +st-konrad
         text: txt-evt-quest-konrad-1
-        report: txt-evt-quest-konrad-report-1
         select: evt-harbor-eventSelection
       }
       {
         actionText: txt-evt-angry-demandPayment-action-1
         text: txt-evt-quest-konrad-2
-        report: txt-evt-quest-konrad-report-2
         select: evt-harbor-eventSelection
       }
     ]
@@ -59,7 +56,6 @@
     id: evt-village-quest-konrad
     actionText: txt-evt-village-quest-konrad-action
     text: txt-evt-village-quest-konrad
-    report: txt-evt-village-quest-konrad-report
     actions: [
       {
         actionText: txt-evt-cave-ghostsQuest-action
@@ -111,7 +107,6 @@
     id: evt-village-quest-konrad-success
     setTileFlags: -harborQuestKonrad
     text: txt-evt-village-quest-konrad-success
-    report: txt-evt-village-quest-konrad-success-report
     standing: 2
     select: evt-village-setImageDay-actions
   }

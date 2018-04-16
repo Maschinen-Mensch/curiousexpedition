@@ -87,7 +87,7 @@
       ]
       [
         {
-          reqWorld: 5
+          reqWorld: 5..
           select: 1
           group: [
             {slots: 1, select: 1, ref: loc-volcano-spawn-large-inactive}
@@ -202,7 +202,7 @@
           {slots: 1, ref: zn-raptor}
         ]
       }
-      {change: 1, select: 1, ref: zn-butterflies}
+      {chance: 1, select: 1, ref: zn-butterflies}
       {chance: 0.3, select: 1, ref: zn-elephant}
     ]
   }

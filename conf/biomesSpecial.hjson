@@ -2,35 +2,27 @@
   {
     id: pck-whiteTiger
     extends: pck-grass
-    name: txt-pck-whiteTiger-name
-    description: txt-pck-whiteTiger
-    flags: +jungle +special
+    flags: +grass +jungle +special
     specialBiomes: bio-whiteTiger
   }
   {
     id: pck-waterTemple
     extends: pck-grass
-    name: txt-pck-waterTemple-name
-    description: txt-pck-waterTemple
-    flags: +jungle +special
+    flags: +grass +jungle +special
     ambientSound: sfx_loop_swamp_1
     specialBiomes: bio-waterTemple
   }
   {
     id: pck-elephantGraveyard
     extends: pck-grass
-    name: txt-pck-elephantGraveyard-name
-    description: txt-pck-elephantGraveyard
-    flags: +jungle +special
+    flags: +grass +jungle +special
     ambientSound: sfx_loop_swamp_1
     specialBiomes: bio-elephantGraveyard
   }
   {
     id: pck-volcano-dry
     extends: pck-dry
-    name: txt-pck-volcano-dry-name
-    description: txt-pck-volcano-dry
-    flags: +jungle +special
+    flags: +dry +jungle +special
     locations: [
       {reqWorld: 1.., select: 1, ref: loc-volcano-spawn-large-inactive}
       {reqWorld: 2.., select: 1, ref: loc-volcano-spawn-large-inactive}
@@ -47,7 +39,7 @@
   {
     id: bio-whiteTiger
     name: txt-bio-whiteTiger-name
-    flags: +jungle +special
+    flags: +grass +jungle +special
     dist: 1
     eventImg: {
       day: evt_bio_grasslands_1.png, 
@@ -93,7 +85,7 @@
   {
     id: bio-waterTemple
     name: txt-bio-waterTemple-name
-    flags: +jungle +special +water
+    flags: +grass +jungle +special +water
     dist: 1
     eventImg: {
       day: evt_bio_grasslands_1.png, 
@@ -128,7 +120,7 @@
     id: bio-elephantGraveyard
     name: txt-bio-elephantGraveyard-name
     dist: 1
-    flags: +jungle +special +water
+    flags: +grass +jungle +special +water
     eventImg: {
       day: evt_bio_grasslands_1.png, 
       night: evt_bio_grasslands_1_night.png

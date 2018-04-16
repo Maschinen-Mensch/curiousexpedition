@@ -77,7 +77,7 @@
       ]
       [
         {
-          reqWorld: 5
+          reqWorld: 5..
           select: 1
           group: [
             {slots: 1, select: 1, ref: loc-volcano-spawn-large-inactive}

@@ -5,7 +5,7 @@
     reqWorld: 2..
     reqBiomeFlags: -desert -arctic
     flags: +dreamVisions
-    worldMap: true
+    worldMap: cenote
     sprite: res_fxt_cenote.png
     setNeighbors: [
       {ref: tl-jungle-thick, reqBiomeFlags: +grass | +prehistoric}

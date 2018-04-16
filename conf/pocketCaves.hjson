@@ -1,9 +1,7 @@
 [
   {
     id: pck-caves
-    name: txt-pck-caves-name
     slotMarker: hud_mapMarker_desert.png
-    description: txt-pck-caves
     ambientSound: sfx_loop_desert_1
     goals: [gol-goldenTemple-grass]
     locations: [

@@ -39,7 +39,6 @@
     charEvents: {
       reqStatus: +kleptomania
       text: txt-evt-village-rest-kleptomania
-      report: txt-evt-village-rest-kleptomania-report
     }
     standing: -1
     select: evt-village-actions-night

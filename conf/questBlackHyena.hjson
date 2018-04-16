@@ -33,12 +33,10 @@
     id: evt-harbor-quest-blackHyena
     npc: npc-hunter
     text: txt-evt-harbor-quest-blackHyena
-    report: txt-evt-harbor-quest-blackHyena-report
     npcEvents: {
       actions: {
         actionText: txt-evt-harbor-quest-missionary-action
         text: txt-evt-harbor-quest-blackHyena-1
-        report: txt-evt-harbor-quest-blackHyena-report-1
         setPartyStatus: +blackHyena
         select: evt-harbor-eventSelection
       }
@@ -46,7 +44,6 @@
     actions: {
       actionText: txt-evt-angry-demandPayment-action-1
       text: txt-evt-harbor-quest-blackHyena-2
-      report: txt-evt-harbor-quest-blackHyena-report-2
       select: evt-harbor-eventSelection
     }
   }
@@ -62,7 +59,6 @@
         alwaysShown: true
         actionText: txt-evt-harbor-quest-blackHyena-complete-action
         text: txt-evt-harbor-quest-blackHyena-complete-1
-        report: txt-evt-harbor-quest-blackHyena-complete-report
         items: {it-pelt-hyena-black: -1}
         incAchievement: ach-complete-quests
         actions: evt-harbor-quest-reward

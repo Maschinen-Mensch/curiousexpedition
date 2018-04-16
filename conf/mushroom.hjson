@@ -98,7 +98,8 @@
     sprite: it_consumable_mushroom_slimy.png
     useEvents: {
       charEvents: {reqCharFlags: +special, setStatus: +mushroom-capacity}
-      playSound: [sfx_eat_var1, sfx_eat_var2]
+      sanity: {base: 0, bonus: mushroomSanity}
+      playSound: sfx_eat_var1 sfx_eat_var2
       removeItem: true
     }
   }
@@ -155,7 +156,6 @@
       {
         slots: 1
         text: txt-evt-mushroom-healing-heal-1
-        report: txt-evt-mushroom-healing-heal-report
         reqCharFlags: -special +humanoid
         reqStatus: -blessingPureMind
         setStatus: +st-paranoid
@@ -164,7 +164,6 @@
       {
         slots: 1
         text: txt-evt-mushroom-healing-heal-2
-        report: txt-evt-mushroom-healing-heal-report-1
         reqCharFlags: -special +humanoid
         reqStatus: -blessingPureMind
         setStatus: +st-cannibal
@@ -172,7 +171,6 @@
       {
         slots: 1
         text: txt-evt-mushroom-healing-heal-3
-        report: txt-evt-mushroom-healing-heal-report-2
         reqCharFlags: -special +humanoid
         reqStatus: -blessingPureMind
         setStatus: +st-lepidopterophobia
@@ -181,8 +179,7 @@
       {
         slots: 1
         text: txt-evt-mushroom-healing-heal-4
-        report: txt-evt-mushroom-healing-heal-report-3
-        reqCharFlags: -special
+        reqCharFlags: -special +humanoid
         reqStatus: -blessingPureMind
         setStatus: +st-superstitious
         chat: cl-apply-superstitious

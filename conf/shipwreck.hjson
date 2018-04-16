@@ -56,7 +56,6 @@
   {
     id: evt-shipwreck-searchOutcome
     setLocationFlags: +explored
-    report: txt-evt-shipwreck-searchOutcome-report
     loot: {
       items: [
         {slots: 10, it-dynamite: 4, il-loot-standard: 1}

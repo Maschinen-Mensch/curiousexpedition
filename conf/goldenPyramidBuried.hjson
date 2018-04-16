@@ -20,7 +20,7 @@
       {slots: 1, ref: loc-goldenSeal-volcano}
       {slots: 1, ref: loc-goldenSeal-monster}
       {slots: 1, ref: loc-goldenSeal-fumarole}
-      {reqWorld: ..6, slots: 1, ref: loc-goldenSeal-geysir}
+      {slots: 1, ref: loc-goldenSeal-geysir}
     ]
   }
   {
@@ -77,7 +77,7 @@
     spawnEvents: [
       {reqWorld: ..3, setTileFlags: +seals1}
       {reqWorld: 4, setTileFlags: +seals2}
-      {reqWorld: 5, setTileFlags: +seals3}
+      {reqWorld: 5.., setTileFlags: +seals3}
     ]
     actions: evt-goldenTemple-buried-approach
   }

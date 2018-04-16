@@ -37,7 +37,6 @@
     id: evt-shamanHut-enter
     actionText: txt-evt-shamanHut-enter-action
     text: txt-evt-shamanHut-enter
-    report: txt-evt-shamanHut-enter-report
     showImage: {src: evt_fxt_shamanHut_1.png, type: day}
     npc: [pl-native-shaman]
     select: evt-shamanHut-actions
@@ -82,7 +81,6 @@
     id: evt-shamanHut-heal-injured
     actionText: txt-evt-firstAid-heal-action
     text: txt-evt-shamanHut-heal-injured
-    report: txt-evt-shamanHut-heal-injured-report
     setStatus: -infected
     health: 20
     select: evt-shamanHut-actions
@@ -113,7 +111,6 @@
     id: evt-shamanHut-cleanse
     actionText: txt-evt-shamanHut-cleanse-action
     text: txt-evt-shamanHut-cleanse
-    report: txt-evt-shamanHut-cleanse-report
     removeStatusWithFlags: +ailment | +rabies
     select: evt-shamanHut-actions
   }

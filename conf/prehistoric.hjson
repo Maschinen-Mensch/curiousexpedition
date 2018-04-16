@@ -1,12 +1,11 @@
 [
   {
     id: pck-prehistoric
-    name: txt-pck-prehistoric-name
+    name: txt-bio-warped-prehistoric-name
     flags: +fantastic +prehistoric
     borderBiome: [bio-outside-sea]
     previewSprite: hud_worldmap_pocketPreview_mushrooms.png
     slotMarker: hud_mapMarker_grass.png
-    description: txt-pck-prehistoric
     ambientSound: sfx_loop_prehistoric_1
     goals: gol-goldenTemple-buried
     locations: [
@@ -25,7 +24,7 @@
         ]
       }
       {
-        reqWorld: 5
+        reqWorld: 5..
         select: 2
         group: [
           {slots: 2, select: 6, ref: loc-volcano-spawn-small-inactive}
@@ -131,7 +130,7 @@
         ]
       }
       {
-        reqWorld: 5
+        reqWorld: 5..
         chance: 1
         select: 1
         group: [
@@ -142,8 +141,10 @@
           {slots: 2, ref: zn-giantCrab}
           {slots: 2, ref: zn-zombiePygmy}
           {slots: 1, ref: zn-giantScorpion}
+          
         ]
       }
+      {chance: 0.5, ref: zn-triceratops, select: 1}
     ]
   }
   {

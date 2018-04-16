@@ -4,7 +4,7 @@
     name: txt-fxt-village-1-name
     reqBiomeFlags: -desert -arctic
     flags: +village +villageType_1 +settlement +inhabited
-    worldMap: true
+    worldMap: village
     sprite: res_fxt_village_2.png
     initItems: {il-trade-village: 6, it-jewels: 1, it-water: 20, il-metaItems: 99}
     priceTable: village
@@ -32,6 +32,31 @@
       {setLocationFlags: +tribeShamans}
     ]
     dayEvents: [
+      {
+        reqLocationFlags: -inhabited
+        partyEvents: [
+          {
+            reqZone: {flags: +abomination, range: ..12, count: 0}
+          }
+          {
+            reqZone: {flags: +abomination, range: world, count: ..2}
+          }
+        ]
+        select: [
+          {reqTileFlags: -counting0, setTileFlags: +counting0}
+          {reqTileFlags: +counting0 -counting1 -counting2, setTileFlags: +counting1}
+          {reqTileFlags: +counting0 +counting1 -counting2, setTileFlags: +counting2}
+          {
+            reqTileFlags: +counting2 +counting1 +counting0
+            setTileFlags: -counting2 -counting1 -counting0
+            select: [
+              {
+                addZone: {ref: zn-abomination, range: ..1}
+              }
+            ]
+          }
+        ]
+      }
       {
         reqStanding: -10
         reqLocationFlags: -angry +inhabited
@@ -189,7 +214,7 @@
     chat: cl-village-enter
     select: [
       {reqLocationFlags: -inhabited, text: txt-evt-village-enter-forsaken}
-      {select: evt-village-enter-selectEvent}
+      {prio: 1, ref: evt-village-enter-selectEvent}
     ]
   }
   {
@@ -228,31 +253,26 @@
       {
         optional: true
         text: txt-evt-village-main-0
-        report: txt-evt-village-main-report
       }
       {
         optional: true
         reqStanding: 0..1
         text: txt-evt-village-main-1
-        report: txt-evt-village-main-report-1
       }
       {
         optional: true
         reqStanding: -3..-1
         text: txt-evt-village-main-2
-        report: txt-evt-village-main-report-2
       }
       {
         optional: true
         reqStanding: -6..-4
         text: txt-evt-village-main-3
-        report: txt-evt-village-main-report-3
       }
       {
         optional: true
         reqStanding: -8..-7
         text: txt-evt-village-main-4
-        report: txt-evt-village-main-report-4
       }
       {
         charEvents: [
@@ -284,7 +304,6 @@
       {
         reqStanding: -2..10
         text: txt-evt-village-rest-1
-        report: txt-evt-village-rest-report
         select: evt-village-nightSelect
       }
       {

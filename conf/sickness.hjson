@@ -99,7 +99,7 @@
     id: st-jungleRot
     title: txt-st-jungleRot-title
     description: txt-st-jungleRot
-    sprite: res_status_fever.png
+    sprite: res_status_rash.png
     flags: +ailment +affliction
     important: true
     autoRemove: true
@@ -159,7 +159,6 @@
       reqCharFlags: +sickDeath
       text: txt-evt-sickDeath
       removeCharacter: true
-      report: txt-evt-sickDeath-report
     }
     actions: evt-leave
   }

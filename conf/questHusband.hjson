@@ -66,26 +66,22 @@
     setTileFlags: +explored
     showImage: {src: evt_fxt_oldCamp_1.png, type: day}
     text: txt-evt-quest-husband-escort
-    report: txt-evt-quest-husband-escort-report
     actions: evt-leave
   }
   {
     id: evt-harbor-quest-husband
     npc: npc-wife
     text: txt-evt-harbor-quest-husband
-    report: txt-evt-harbor-quest-husband-report
     actions: [
       {
         actionText: txt-evt-harbor-quest-missionary-action
         text: txt-evt-harbor-quest-husband-1
-        report: txt-evt-harbor-quest-husband-report-1
         setPartyStatus: +st-husband
         select: evt-harbor-eventSelection
       }
       {
         actionText: txt-evt-angry-demandPayment-action-1
         text: txt-evt-harbor-quest-husband-2
-        report: txt-evt-harbor-quest-husband-report-2
         select: evt-harbor-eventSelection
       }
     ]
@@ -118,7 +114,6 @@
           }
         ]
         incAchievement: ach-complete-quests
-        report: txt-evt-harbor-quest-husband-complete-report
         actions: evt-harbor-quest-reward
       }
       {

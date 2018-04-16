@@ -2,7 +2,6 @@
   {
     id: evt-harbor
     text: txt-evt-harbor
-    report: txt-evt-harbor-report
     setPartyFlags: -harborCheck_AfterMath -harborCheck_QuestCompleted -harborCheck_QuestOffer -harborCheck_Recruit -harborCheck_UnitCount -harborCheck_Recruit1 -harborCheck_Recruit2
     playMusic: thm_harbor_1
     resetGlobalInv: harbor
@@ -95,9 +94,9 @@
         select: evt-quest-konrad-complete
       }
       {
-        reqStatusFlags: +arcticClaim
+        charEvents: {reqCharFlags:+special, reqStatusFlags:+arcticClaim}
         select: evt-harbor-quest-arcticClaim-complete
-      }
+      }  
       {
         prio: 1
         setPartyFlags: +harborCheck_QuestCompleted
@@ -234,7 +233,6 @@
     id: evt-harbor-offer-map
     npc: pl-native-scout
     text: txt-evt-harbor-offer-map
-    report: txt-evt-harbor-offer-map-report
     actions: [
       {
         actionText: txt-evt-harbor-offer-map-action

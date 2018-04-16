@@ -12,20 +12,17 @@
     showImage: {src: evt_spec_ship_1.png}
     npc: npc-gentleman
     text: txt-evt-harbor-quest-80Days
-    report: txt-evt-harbor-quest-80Days-report
     actions: [
       {
         actionText: txt-evt-harbor-quest-missionary-action
         setPartyFlags: +harborEventsQuest80Days
         setPartyStatus: +st-80days
         text: txt-evt-harbor-quest-81
-        report: txt-evt-harbor-quest-80Days-report-1
         select: evt-harbor-eventSelection
       }
       {
         actionText: txt-evt-angry-demandPayment-action-1
         text: txt-evt-harbor-quest-82
-        report: txt-evt-harbor-quest-80Days-report-2
         select: evt-harbor-eventSelection
       }
     ]

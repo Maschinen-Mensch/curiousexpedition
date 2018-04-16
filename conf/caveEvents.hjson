@@ -5,7 +5,6 @@
     setLocationFlags: +explored
     showImage: {src: evt_fxt_cave_hole.png}
     text: txt-evt-cave-opening
-    report: txt-evt-cave-opening-report
     charEvents: [
       {optional: true, count: any, actions: evt-cave-sendIn}
       {
@@ -14,7 +13,6 @@
         reqCharFlags: +humanoid -special
         reqStatus: +st-injured
         text: txt-evt-cave-opening-1
-        report: txt-evt-cave-opening-report-1
       }
     ]
     actions: evt-cave-explored-leave
@@ -24,7 +22,6 @@
     showImage: {src: evt_fxt_cave_paintings.png}
     setLocationFlags: +explored
     text: txt-evt-cave-paintings
-    report: txt-evt-cave-paintings-report
     select: evt-unlock-specialWorld-noText
     actions: evt-cave-explored-leave
   }
@@ -33,7 +30,6 @@
     showImage: {src: evt_fxt_cave_mushrooms.png}
     chat: cl-nature
     text: txt-evt-cave-mushrooms
-    report: txt-evt-cave-mushrooms-report
     actions: [
       {
         actionText: txt-evt-cave-mushrooms-action
@@ -64,14 +60,12 @@
     showImage: {src: evt_fxt_cave_corpses.png}
     chat: cl-scaryPlace
     text: txt-evt-cave-corpses
-    report: txt-evt-cave-corpses-report
     actions: [
       {
         actionText: txt-evt-cave-corpses-action
         chat: cl-scaryPlace
         setLocationFlags: +explored
         text: txt-evt-cave-corpses-1
-        report: txt-evt-cave-corpses-report-1
         loot: {
           items: [
             {slots: 1, il-loot-standard: 3}
@@ -92,7 +86,6 @@
     setLocationFlags: +explored
     chat: cl-sacrileg-warning
     text: txt-evt-cave-mummy
-    report: txt-evt-cave-mummy-report
     actions: [
       {
         actionText: txt-evt-cave-mummy-action
@@ -119,7 +112,6 @@
     setCharFlags: +exploring
     reqCharFlags: -special +humanoid
     chat: cl-cave-sendIn
-    report: txt-evt-cave-sendIn-report
     reqDice: awarenes
     charEvents: [
       {
@@ -148,7 +140,6 @@
           reqCharFlags: +exploring
           setCharFlags: -exploring
           text: txt-evt-cave-outcome-rewards
-          report: txt-evt-cave-outcome-rewards-report
         }
         loot: {
           items: [
@@ -184,7 +175,6 @@
         setTempFlags: +nativeExploring
         storeCharacter: true
         text: txt-evt-cave-outcome-bad-1
-        report: txt-evt-cave-outcome-bad-1-report
       }
       {
         optional: true
@@ -192,7 +182,6 @@
         setCharFlags: -exploring
         storeCharacter: true
         text: txt-evt-cave-outcome-bad-2
-        report: txt-evt-cave-outcome-bad-1-report-1
       }
       {
         optional: true

@@ -10,7 +10,6 @@
     setPartyFlags: +nativeGhostQuest
     showImage: {src: evt_fxt_cave_spiders.png}
     text: txt-evt-cave-ghostsQuest
-    report: txt-evt-cave-ghostsQuest-report
     actions: {
       actionText: txt-evt-cave-ghostsQuest-action
       combat: [
@@ -24,7 +23,6 @@
     setPartyFlags: +nativeGhostQuest
     showImage: {src: evt_fxt_cave_spiders.png}
     text: txt-evt-cave-monsterDen-giantSpiders
-    report: txt-evt-cave-monsterDen-giantSpiders-report
     actions: {
       actionText: txt-evt-cave-ghostsQuest-action
       combat: [

@@ -168,7 +168,7 @@
       {
         id: evt-postNarrative-extra-firstChildName
         reqLoyalty: 2..
-        reqFlags: -native -missionary
+        reqCharFlags: -native -missionary
         text: txt-evt-postNarrative-extra-firstChildName
       }
     ]

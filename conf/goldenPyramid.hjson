@@ -229,13 +229,7 @@
     select: [
       {
         optional: true
-        reqBiomeFlags: +grass | +prehistoric -desert -dry
-        showImage: {src: evt_fxt_goldenPyramid_grass.png, type: none}
-        select: evt-goal-explore-finish
-      }
-      {
-        optional: true
-        reqBiomeFlags: +dry -desert
+        reqBiomeFlags: +dry
         showImage: {src: evt_fxt_goldenPyramid_dry.png, type: none}
         select: evt-goal-explore-finish
       }
@@ -252,9 +246,10 @@
         select: evt-goal-explore-finish
       }
       {
+        # we need to make sure that at least one option is ALWAYS available, so no requirements here
         prio: 1
         optional: true
-        text: "!You have probably modded the game and added a new pyramid for a new biome. If you want your expedition end to play properly you should add a new event to the evt-goal-explore event"
+        showImage: {src: evt_fxt_goldenPyramid_grass.png, type: none}
         select: evt-goal-explore-finish
       }
     ]
@@ -309,7 +304,7 @@
         }
       }
       {
-        reqWorld: 5
+        reqWorld: 5..
         reqDifficulty: 1..
         reqLocationFlags: -unearthed
         text: txt-evt-goal-enter-2
@@ -324,8 +319,15 @@
           ]
         }
       }
-      {reqWorld: 5, reqLocationFlags: +unearthed, actions: evt-ruins-success}
-      {prio: 1, actions: evt-ruins-success}
+      {
+        reqWorld: 5..
+        reqLocationFlags: +unearthed
+        actions: evt-ruins-success
+      }
+      {
+        prio: 1, 
+        actions: evt-ruins-success
+      }
     ]
     actions: evt-leave
   }
@@ -338,7 +340,6 @@
   {
     id: evt-ruins-success
     actionText: txt-evt-goal-explore-finish-action
-    report: txt-evt-ruins-success-report
     select: [
       {reqDifficulty: ..1, select: evt-expedition-done}
       {
@@ -382,9 +383,9 @@
         unlockCharacter: sp-lovelace
       }
       {
-        optional: true, 
-        reqWorld: 5.., 
-        reqRanking: 0, 
+        optional: true
+        reqWorld: 5..
+        reqRanking: 0
         unlockCharacter: sp-earhart
       }
       {
@@ -420,12 +421,14 @@
       {
         optional: true
         reqWorld: 5..
+        reqRanking: ..2
         reqPartyFlags: -hadBadStanding
         incAchievement: ach-positive-standing
       }
       {
         optional: true
         reqWorld: 5..
+        reqRanking: ..2
         reqPartyFlags: -soldItem
         incAchievement: ach-no-selling
       }
@@ -437,12 +440,14 @@
       {
         optional: true
         reqWorld: 5..
+        reqRanking: ..2
         reqPartyFlags: -nonCocaUsers
         incAchievement: ach-coca-only
       }
       {
         optional: true
         reqWorld: 5..
+        reqRanking: ..2
         reqPartyFlags: -recruitedSomebody
         incAchievement: ach-no-recruit
       }
@@ -501,7 +506,6 @@
         reqPartyFlags: +escortMissionary
         reqCharFlags: +missionary
         text: txt-evt-expedition-done-2
-        report: txt-evt-expedition-done-report
         removeCharacter: true
       }
     ]
@@ -533,14 +537,12 @@
               winEvents: {
                 id: evt-expedition-done-native-join
                 text: txt-evt-expedition-done-native-join
-                report: txt-evt-expedition-done-native-join-report
                 setCharFlags: -homeCheck
                 select: evt-expedition-done-aftermath
               }
               failEvents: {
                 id: evt-expedition-done-native-stay
                 text: txt-evt-expedition-done-native-stay
-                report: txt-evt-expedition-done-native-stay-report
                 storeCharacter: true
                 setCharFlags: +stayHome -homeCheck
                 select: evt-expedition-done-aftermath
@@ -572,7 +574,6 @@
         charEvents: {
           reqCharFlags: +imaginary
           text: txt-evt-expedition-done-3
-          report: txt-evt-expedition-done-report-2
           removeCharacter: true
           select: evt-expedition-done-aftermath
         }

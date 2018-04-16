@@ -11,19 +11,16 @@
     id: evt-harbor-quest-musician
     npc: npc-trader
     text: txt-evt-harbor-quest-musician
-    report: txt-evt-harbor-quest-musician-report
     actions: [
       {
         actionText: txt-evt-harbor-quest-missionary-action
         text: txt-evt-harbor-quest-musician-1
-        report: txt-evt-harbor-quest-musician-report-1
         setPartyStatus: +st-instrument
         select: evt-harbor-eventSelection
       }
       {
         actionText: txt-evt-angry-demandPayment-action-1
         text: txt-evt-harbor-quest-musician-2
-        report: txt-evt-harbor-quest-musician-report-2
         select: evt-harbor-eventSelection
       }
     ]
@@ -32,7 +29,6 @@
     id: evt-harbor-quest-musician-complete
     npc: npc-trader
     text: txt-evt-harbor-quest-musician-complete
-    report: txt-evt-harbor-quest-musician-complete-report
     select: [
       {
         reqPartyStatus: +instrument
@@ -42,7 +38,6 @@
             actionText: txt-evt-harbor-quest-musician-complete-action
             reqItems: {it-bongos: 1..}
             text: txt-evt-harbor-quest-musician-complete-1
-            report: txt-evt-harbor-quest-musician-complete-report
             items: {it-bongos: -1}
             funds: 40
             setPartyFlags: +soldInstrument
@@ -52,7 +47,6 @@
             actionText: txt-evt-harbor-quest-musician-complete-action-1
             reqItems: {it-bongosTuned: 1..}
             text: txt-evt-harbor-quest-musician-complete-2
-            report: txt-evt-harbor-quest-musician-complete-report-1
             items: {it-bongosTuned: -1}
             funds: 80
             setPartyFlags: +soldInstrument
@@ -63,7 +57,6 @@
             actionText: txt-evt-harbor-quest-musician-complete-action-2
             reqItems: {it-hornFlute: 1..}
             text: txt-evt-harbor-quest-musician-complete-3
-            report: txt-evt-harbor-quest-musician-complete-report-2
             items: {it-hornFlute: -1}
             funds: 25
             setPartyFlags: +soldInstrument

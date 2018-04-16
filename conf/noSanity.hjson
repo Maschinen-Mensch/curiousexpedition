@@ -8,11 +8,9 @@
         reqLoyalty: 1..3
         reqCharFlags: +humanoid -special -abomination
         text: txt-evt-sanity-conflict-joking
-        report: txt-evt-sanity-conflict-joking-report
         actions: {
           actionText: txt-evt-sanity-conflict-joking-action
           text: txt-evt-sanity-conflict-joking-1
-          report: txt-evt-sanity-conflict-joking-report-1
           loyalty: -1
           select: evt-sanity-return
         }
@@ -22,14 +20,12 @@
       actionText: txt-evt-sanity-conflict-joking-action-1
       text: txt-evt-sanity-conflict-joking-2
       chat: cl-ignore
-      report: txt-evt-sanity-conflict-joking-report-2
       charEvents: {
         optional: true
         chance: 0.75
         reqLoyalty: 2..
         reqCharFlags: +humanoid -special -abomination
         text: txt-evt-sanity-conflict-joking-3
-        report: txt-evt-sanity-conflict-joking-report-3
         loyalty: -1
       }
       select: evt-sanity-return
@@ -42,7 +38,6 @@
     reqKarma: 30..
     chat: cl-ghostiesVisit
     text: txt-evt-noSanity-ghosts-help
-    report: txt-evt-noSanity-ghosts-help-report
     actions: [
       {
         actionText: txt-evt-noSanity-ghosts-help-action
@@ -62,7 +57,6 @@
   {
     id: evt-noSanity-ghosts-help-accept
     text: txt-evt-noSanity-ghosts-help-accept
-    report: txt-evt-noSanity-ghosts-help-accept-report
     karma: -30
     partyEvents: {ref: evt-setImage-nightCamp}
     select: evt-sanity-return
@@ -71,7 +65,6 @@
     id: evt-noSanity-ghosts-help-reject
     actionText: txt-pl-cultist-action
     partyEvents: {ref: evt-setImage-nightCamp}
-    report: txt-evt-noSanity-ghosts-help-reject-report
     text: txt-evt-noSanity-ghosts-help-reject
     select: evt-sanity-return
   }
@@ -85,7 +78,6 @@
         setStatus: +racist
         chat: cl-lovecraftRacist
         text: txt-evt-sanity-lovecraft-racist
-        report: txt-evt-sanity-lovecraft-racist-report
       }
     ]
     select: evt-sanity-return
@@ -100,7 +92,6 @@
         reqCharFlags: -special -native +humanoid
         reqLoyalty: 2..
         text: txt-evt-sanity-conflict-rally
-        report: txt-evt-sanity-conflict-rally-report
         loyalty: -1
         sanity: sanityBoost
       }
@@ -115,7 +106,6 @@
       {
         reqCharFlags: -special +native
         text: txt-evt-sanity-conflict-racist
-        report: txt-evt-sanity-conflict-racist-report
         setCharFlags: +tempRacistVictim
       }
       {
@@ -123,12 +113,10 @@
         reqStatus: +racist
         reqLoyalty: 1..
         text: txt-evt-sanity-conflict-racist-1
-        report: txt-evt-sanity-conflict-racist-report-1
         actions: [
           {
             actionText: txt-evt-sanity-conflict-racist-action
             text: txt-evt-sanity-conflict-racist-2
-            report: txt-evt-sanity-conflict-racist-report-2
             loyalty: -1
             select: evt-sanity-return
           }
@@ -156,11 +144,9 @@
         reqStatus: +sexist
         reqGender: male
         text: txt-evt-sanity-conflict-sexistMale
-        report: txt-evt-sanity-conflict-sexistMale-report
         actions: {
           actionText: txt-evt-sanity-conflict-joking-action
           text: txt-evt-sanity-conflict-sexistMale-1
-          report: txt-evt-sanity-conflict-sexistMale-report-1
           loyalty: -1
           select: evt-sanity-return
         }
@@ -170,7 +156,6 @@
     actions: {
       actionText: txt-evt-sanity-conflict-joking-action-1
       text: txt-evt-sanity-conflict-sexistMale-2
-      report: txt-evt-sanity-conflict-sexistMale-report-2
       charEvents: {
         optional: true
         chance: 0.5
@@ -178,7 +163,6 @@
         reqCharFlags: +humanoid -special -abomination
         loyalty: -1
         text: txt-evt-sanity-conflict-sexistMale-3
-        report: txt-evt-sanity-conflict-sexistMale-report-3
       }
       select: evt-sanity-return
     }
@@ -193,11 +177,9 @@
         reqStatus: +sexist
         reqGender: female
         text: txt-evt-sanity-conflict-sexistFemale
-        report: txt-evt-sanity-conflict-sexistFemale-report
         actions: {
           actionText: txt-evt-sanity-conflict-joking-action
           text: txt-evt-sanity-conflict-sexistFemale-1
-          report: txt-evt-sanity-conflict-sexistFemale-report-1
           loyalty: -1
           select: evt-sanity-return
         }
@@ -207,7 +189,6 @@
     actions: {
       actionText: txt-evt-sanity-conflict-joking-action-1
       text: txt-evt-sanity-conflict-sexistFemale-2
-      report: txt-evt-sanity-conflict-sexistFemale-report-2
       charEvents: {
         optional: true
         chance: 0.5
@@ -215,7 +196,6 @@
         reqCharFlags: +humanoid -special -abomination
         loyalty: -1
         text: txt-evt-sanity-conflict-sexistFemale-3
-        report: txt-evt-sanity-conflict-sexistFemale-report-3
       }
       select: evt-sanity-return
     }
@@ -231,7 +211,6 @@
         reqCharFlags: +humanoid -special -native -missionary
         reqLoyalty: 1..
         text: txt-evt-sanity-conflict-lostPersonalItem
-        report: txt-evt-sanity-conflict-lostPersonalItem-report
         setCharFlags: +tempSearching
       }
     ]
@@ -244,13 +223,11 @@
     id: evt-sanity-conflict-lostPersonalItem-search
     actionText: txt-evt-sanity-conflict-lostPersonalItem-search-action
     text: txt-evt-sanity-conflict-lostPersonalItem-search
-    report: txt-evt-sanity-conflict-lostPersonalItem-search-report
     reqDice: awarenes
     charEvents: {
       optional: true
       reqCharFlags: -tempSearching +humanoid -abomination -special
       text: txt-evt-sanity-conflict-lostPersonalItem-search-1
-      report: txt-evt-sanity-conflict-lostPersonalItem-search-report-1
       chance: 0.75
       loyalty: -1
     }
@@ -258,7 +235,6 @@
       {
         turns: 2
         text: txt-evt-sanity-conflict-lostPersonalItem-search-2
-        report: txt-evt-sanity-conflict-lostPersonalItem-search-report-2
         select: evt-sanity-return
       }
     ]
@@ -266,7 +242,6 @@
       {
         turns: 1
         text: txt-evt-sanity-conflict-lostPersonalItem-search-3
-        report: txt-evt-sanity-conflict-lostPersonalItem-search-report-3
         sanity: sanityBoost
         select: evt-sanity-return
       }
@@ -291,7 +266,6 @@
     charEvents: {
       reqCharFlags: +tempSearching
       text: txt-evt-sanity-conflict-lostPersonalItem-ignore
-      report: txt-evt-sanity-conflict-lostPersonalItem-ignore-report
       loyalty: -1
     }
     select: evt-sanity-return
@@ -418,7 +392,6 @@
       reqCharFlags: +humanoid -special -abomination
       reqStatus: -cannibal +infected -renounced
       text: txt-evt-noSanity-injuredDeath
-      report: txt-evt-noSanity-injuredDeath-report
       storeCharacter: true
       setCharFlags: +dead
     }
@@ -433,7 +406,6 @@
         actions: {
           actionText: txt-evt-noSanity-eatAnimal-action
           text: txt-evt-noSanity-eatAnimal
-          report: txt-evt-noSanity-eatAnimal-report
           sanity: 40
           storeCharacter: true
           setCharFlags: +dead
@@ -443,11 +415,9 @@
       {
         reqCharFlags: +humanoid -special -abomination
         text: txt-evt-noSanity-eatAnimal-1
-        report: txt-evt-noSanity-eatAnimal-report-1
         actions: {
           actionText: txt-evt-angry-demandPayment-action-1
           text: txt-evt-noSanity-eatAnimal-2
-          report: txt-evt-noSanity-eatAnimal-report-2
           loyalty: -1
           select: evt-sanity-return
         }
@@ -460,12 +430,10 @@
       {
         reqCharFlags: +humanoid -special -abomination
         text: txt-evt-noSanity-animalAttack
-        report: txt-evt-noSanity-animalAttack-report
         health: -3
         actions: {
           actionText: txt-evt-angry-demandPayment-action-1
           text: txt-evt-noSanity-animalAttack-1
-          report: txt-evt-noSanity-animalAttack-report-1
           loyalty: -2
           select: evt-sanity-return
         }
@@ -473,11 +441,9 @@
       {
         reqCharFlags: +animal
         text: txt-evt-noSanity-animalAttack-2
-        report: txt-evt-noSanity-animalAttack-report-2
         actions: {
           actionText: txt-evt-noSanity-eatAnimal-action
           text: txt-evt-noSanity-animalAttack-3
-          report: txt-evt-noSanity-animalAttack-report-3
           sanity: 40
           storeCharacter: true
           setCharFlags: +dead
@@ -493,7 +459,6 @@
       reqCharFlags: +animal +mammal
       reqStatus: -rabies
       text: txt-evt-noSanity-animalRabies
-      report: txt-evt-noSanity-animalRabies-report
       setStatus: +rabies
       health: -2
     }
@@ -521,13 +486,11 @@
         text: txt-evt-noSanity-paranoidKill
         storeCharacter: true
         setCharFlags: +dead
-        report: txt-evt-noSanity-paranoidKill-report
       }
       {
         reqCharFlags: +humanoid -special
         reqStatus: +paranoid
         text: txt-evt-noSanity-paranoidKill-1
-        report: txt-evt-noSanity-paranoidKill-report-1
       }
     ]
     select: evt-sanity-return
@@ -545,14 +508,12 @@
         reqCharFlags: +humanoid -special -abomination -blessingPureMind
         reqStatus: -cannibal
         text: txt-evt-noSanity-cannibal
-        report: txt-evt-noSanity-cannibal-report
         setStatus: +cannibal
       }
       {
         reqCharFlags: +humanoid -special -abomination
         reqStatus: -cannibal
         text: txt-evt-noSanity-cannibal-1
-        report: txt-evt-noSanity-cannibal-report-1
         storeCharacter: true
         setCharFlags: +dead
       }
@@ -566,7 +527,6 @@
       reqCharFlags: +humanoid -special -abomination -blessingPureMind
       reqStatus: -cannibal
       text: txt-evt-noSanity-gunKill
-      report: txt-evt-noSanity-gunKill-report
       storeCharacter: true
       setCharFlags: +dead
     }
@@ -580,7 +540,6 @@
       reqCharFlags: +humanoid -special -abomination
       items: {it-metalCube: 1}
       text: txt-evt-noSanity-disappearCube
-      report: txt-evt-noSanity-disappearCube-report
       storeCharacter: true
       select: [
         {slots: 1}
@@ -615,7 +574,6 @@
     charEvents: {
       reqCharFlags: +humanoid -special -abomination
       text: txt-evt-noSanity-trap
-      report: txt-evt-noSanity-trap-report
       health: -4
       setStatus: +infected
     }
@@ -819,7 +777,6 @@
     setPartyFlags: +nativeHelp
     charEvents: {count: all, reqCharFlags: -humanoid | +special}
     text: txt-evt-sanity-goodStanding-nativeVisit
-    report: txt-evt-sanity-goodStanding-nativeVisit-report
     actions: [
       {
         actionText: txt-evt-sanity-goodStanding-nativeVisit-action
@@ -863,7 +820,6 @@
     reqPartyFlags: -nativeHelp
     reqLocation: {flags: +village, range: ..12}
     text: txt-evt-sanity-goodStanding-nativeTeleport
-    report: txt-evt-sanity-goodStanding-nativeTeleport-report
     standing: -5
     setPartyFlags: +nativeHelp
     posTile: {locationFlags: +village, range: ..12}
@@ -876,7 +832,6 @@
       {
         reqCharFlags: -humanoid
         text: txt-evt-noSanity-onlyFriend
-        report: txt-evt-noSanity-onlyFriend-report
       }
       {reqCharFlags: +special | -humanoid, count: all}
     ]
@@ -900,11 +855,9 @@
         reqCharFlags: -special +humanoid -soldier -native
         reqLoyalty: 1..
         text: txt-evt-sanity-conflict-queen
-        report: txt-evt-sanity-conflict-queen-report
         actions: {
           actionText: txt-evt-sanity-conflict-joking-action
           text: txt-evt-sanity-conflict-queen-1
-          report: txt-evt-sanity-conflict-queen-report-1
           loyalty: -1
           select: evt-sanity-return
         }
@@ -918,7 +871,6 @@
             actionText: txt-evt-sanity-conflict-joking-action-1
             chat: cl-ignore
             text: txt-evt-sanity-conflict-queen-4
-            report: txt-evt-sanity-conflict-queen-report-3
             loyalty: -1
             select: evt-sanity-return
           }
@@ -932,13 +884,11 @@
       {
         reqCharFlags: -special +humanoid
         text: txt-evt-sanity-conflict-traitor1
-        report: txt-evt-sanity-conflict-traitor1-report
         reqLoyalty: 1..
         consume: true
         actions: {
           actionText: txt-evt-sanity-conflict-traitor1-action
           text: txt-evt-sanity-conflict-traitor1-1
-          report: txt-evt-sanity-conflict-traitor1-report-1
           loyalty: -1
           select: evt-sanity-return
         }
@@ -949,7 +899,6 @@
         actions: {
           actionText: txt-evt-sanity-conflict-traitor1-action-1
           text: txt-evt-sanity-conflict-traitor1-3
-          report: txt-evt-sanity-conflict-traitor1-report-2
           loyalty: -1
           select: evt-sanity-return
         }
@@ -962,13 +911,11 @@
       {
         reqCharFlags: -special +humanoid +traitor
         text: txt-evt-sanity-conflict-traitor2
-        report: txt-evt-sanity-conflict-traitor2-report
         reqLoyalty: 1..
         consume: true
         actions: {
           actionText: txt-evt-sanity-conflict-traitor1-action
           text: txt-evt-sanity-conflict-traitor2-1
-          report: txt-evt-sanity-conflict-traitor2-report-1
           loyalty: -1
           select: evt-sanity-return
         }
@@ -979,7 +926,6 @@
         actions: {
           actionText: txt-evt-sanity-conflict-traitor1-action-1
           text: txt-evt-sanity-conflict-traitor2-3
-          report: txt-evt-sanity-conflict-traitor2-report-2
           loyalty: -1
           select: evt-sanity-return
         }
@@ -1052,7 +998,6 @@
         text: txt-evt-noSanity-eatOnlyFriend
         storeCharacter: true
         setCharFlags: +dead
-        report: txt-evt-noSanity-eatOnlyFriend-report
       }
       {reqCharFlags: +special | -humanoid, count: all}
     ]
@@ -1071,7 +1016,6 @@
         {
           actionText: txt-evt-sanity-return-imaginary-action
           text: txt-evt-sanity-return-imaginary-1
-          report: txt-evt-sanity-return-imaginary-report
           restoreCharacter: true
           setCharFlags: +imaginary
           items: {il-loot-edible: 1}
@@ -1084,7 +1028,6 @@
         {
           actionText: txt-evt-sanity-return-imaginary-action-1
           text: txt-evt-sanity-return-imaginary-2
-          report: txt-evt-sanity-return-imaginary-report-1
           select: evt-sanity-return
         }
       ]
@@ -1100,7 +1043,6 @@
     npc: pl-soldier-british
     npcEvents: {
       text: txt-evt-noSanity-soldierHelp
-      report: txt-evt-noSanity-soldierHelp-report
       sanity: sanityBoost
       addNPC: true
     }
@@ -1113,7 +1055,6 @@
     reqPartyFlags: +loneSurvivor
     setPartyFlags: -loneSurvivor
     text: txt-evt-noSanity-loneSurvivor
-    report: txt-evt-noSanity-loneSurvivor-report
     sanity: 200
     select: evt-sanity-return
   }
@@ -1126,12 +1067,10 @@
       {
         reqStatus: +cannibal
         text: txt-evt-noSanity-lastEntryCannibal
-        report: txt-evt-noSanity-lastEntryCannibal-report
         removeCharacter: true
       }
       {
         reqCharFlags: +special
-        report: txt-evt-noSanity-lastEntryCannibal-report-1
         removeCharacter: true
       }
     ]
@@ -1148,7 +1087,6 @@
         reqCharFlags: +special
         count: all
         text: txt-evt-noSanity-lastEntry-1
-        report: txt-evt-noSanity-lastEntry-report
         removeCharacter: true
       }
     ]

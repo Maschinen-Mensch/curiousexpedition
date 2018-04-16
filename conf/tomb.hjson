@@ -5,7 +5,7 @@
     debugColor: red
     reqBiomeFlags: +desert
     flags: +dreamVisions +ruins
-    worldMap: true
+    worldMap: tomb
     sprite: res_fxt_tomb_1.png
     dist: 5
     setTile: tl-desert
@@ -21,7 +21,6 @@
     actionText: txt-evt-tomb-init-action
     reqTileFlags: -explored
     text: txt-evt-tomb-init
-    report: txt-evt-tomb-init-report
     showImage: {src: evt_fxt_tomb_1.png, type: day}
     playMusic: thm_shrine_1
     chat: cl-scaryPlace
@@ -31,7 +30,6 @@
     id: evt-tomb-enter
     actionText: txt-evt-tomb-enter-action
     text: txt-evt-tomb-enter
-    report: txt-evt-tomb-enter-report
     partyEvents: evt-superstitious-complain
     showImage: {src: evt_fxt_tomb_int_1.png, type: day}
     playMusic: thm_shrine_2

@@ -25,7 +25,6 @@
     reqLocationFlags: -explored
     actionText: txt-evt-altar-approach-action
     text: txt-evt-elephantGraveyard-explore
-    report: txt-evt-elephantGraveyard-explore-report
     chat: cl-scaryPlace
     setLocationFlags: +elephantGraveyard
     partyEvents: {
@@ -58,7 +57,6 @@
   {
     id: evt-elephantGraveyard-searchOutcome-2
     text: txt-evt-elephantGraveyard-searchOutcome-2
-    report: txt-evt-elephantGraveyard-searchOutcome-2-report
     loot: {
       items: [
         {slots: 6, it-egg-tortoise: 1}

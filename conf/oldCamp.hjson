@@ -77,7 +77,6 @@
             text: txt-evt-leave-wildlife-hint
           }
         ]
-        report: txt-evt-oldCamp-enter-report
         actions: [
           {ref: evt-searchArea}
           evt-leave
@@ -92,7 +91,6 @@
       {
         reqTutorial: false
         text: txt-evt-oldCamp-searchOutcome
-        report: txt-evt-oldCamp-searchOutcome-report
         select: [
           {
             reqDifficulty: 1..

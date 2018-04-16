@@ -2,7 +2,7 @@
   {
     id: loc-portal
     name: txt-fxt-portal-name
-    worldMap: true
+    worldMap: portal
     sprite: [
       {ref: res_fxt_portal.png, reqBiomeFlags: -arctic}
       {ref: res_fxt_portal_arctic.png, reqBiomeFlags: +arctic}
@@ -23,7 +23,6 @@
     id: loc-portal-tome
     name: txt-fxt-portal-name
     debugCategory: special
-    worldMap: true
     sprite: res_fxt_portal.png
     flags: +portalTome
     actions: {
@@ -108,7 +107,6 @@
       {
         reqBiomeFlags: -warped
         text: txt-evt-portal-walkThrough-1
-        report: txt-evt-portal-walkThrough-report
         setPartyStatus: +portalReturn +portalStay
         incAchievement: ach-portals
         replaceLocations: {}
@@ -116,17 +114,14 @@
           select: [
             {
               slots: 4
-              report: txt-evt-portal-walkThrough-report-1
               warpWorld: wd-warped-prehistoric
             }
             {
               slots: 2
-              report: txt-evt-portal-walkThrough-report-2
               warpWorld: wd-warped-refill
             }
             {
               slots: 1
-              report: txt-evt-portal-walkThrough-report-3
               warpWorld: wd-warped-blessing
             }
           ]
@@ -228,7 +223,7 @@
         ]
       }
       {
-        reqWorld: 5
+        reqWorld: 5..
         select: 1
         group: [
           {}

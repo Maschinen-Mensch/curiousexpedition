@@ -40,7 +40,6 @@
       reqStatus: -cannibal -renounced
       reqLoyalty: 0
       text: txt-evt-angry-runAway
-      report: txt-evt-angry-runAway-report
       storeCharacter: true
     }
     chat: cl-runAway
@@ -51,7 +50,6 @@
       reqCharFlags: +humanoid +native -special
       reqLoyalty: 0
       text: txt-evt-angry-nativeLeave
-      report: txt-evt-angry-nativeLeave-report
       storeCharacter: true
     }
     items: {it-cocaLeaves: 2}
@@ -63,7 +61,6 @@
       reqStatus: -cannibal
       reqLoyalty: 0
       text: txt-evt-angry-justLeave
-      report: txt-evt-angry-justLeave-report
       storeCharacter: true
     }
     dropItems: 30
@@ -98,11 +95,9 @@
             closeEvents: {
               loyalty: 2
               text: txt-evt-angry-demandPayment-2
-              report: txt-evt-angry-demandPayment-report
             }
             cancelEvents: {
               text: txt-evt-angry-demandPayment-3
-              report: txt-evt-angry-demandPayment-report-1
               storeCharacter: true
             }
           }
@@ -110,7 +105,6 @@
         {
           actionText: txt-evt-angry-demandPayment-action-1
           text: txt-evt-angry-demandPayment-4
-          report: txt-evt-angry-demandPayment-report-2
           storeCharacter: true
         }
       ]
@@ -122,7 +116,6 @@
       reqStatus: +angry
       chat: cl-angry-compensation
       text: txt-evt-sanity-angry
-      report: txt-evt-sanity-angry-report
       actions: {
         actionText: txt-base-continue
         barter: {
@@ -131,13 +124,11 @@
           closeEvents: {
             text: txt-evt-sanity-angry-1
             loyalty: 2
-            report: txt-evt-sanity-angry-report-1
           }
           cancelEvents: {
             text: txt-evt-sanity-angry-2
             setCharFlags: +leftAngry
             storeCharacter: true
-            report: txt-evt-sanity-angry-report-2
           }
         }
       }
@@ -150,7 +141,6 @@
         reqCharFlags: +nativeShaman
         reqLoyalty: 0
         text: txt-evt-angry-shamanCurse
-        report: txt-evt-angry-shamanCurse-report
         storeCharacter: true
       }
       {
@@ -167,7 +157,6 @@
       reqStatus: -renounced
       reqLoyalty: 0
       text: txt-evt-angry-renounced
-      report: txt-evt-angry-renounced-report
       setStatus: +renounced
       chat: cl-angry
     }
@@ -178,7 +167,6 @@
       reqCharFlags: -homeWorld +humanoid -special -abomination -traitor
       reqLoyalty: 0
       text: txt-evt-angry-traitor
-      report: txt-evt-angry-traitor-report
       loyalty: 2
       select: [
         {slots: 2, setCharFlags: +traitor}

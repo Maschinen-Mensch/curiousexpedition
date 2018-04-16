@@ -528,7 +528,6 @@ var logs = {
 
 var debug = {
   sanityCheckEvents: true,
-  sanityCheckLang: true,
 
   traceAssert: true,
   enableDebugKeys: true,
@@ -582,6 +581,7 @@ var debug = {
   // skipSaveGame: false,
   forceLocalSaveGame: true,
   timeDilation: 1.0,
+  eventChecks: false,
 
   // saveGame: "XXX",
   // testWorldValidation: 'evt-test-villageCount', // reloads world until this event does not pass
@@ -590,17 +590,6 @@ var debug = {
 
   testTribe: 'tg-jungle',
   tribeBackground: '#4b3a32',
-
-  testExplorer: 'sp-darwin',
-  testWorldLevel: 1, // if set new games start with this world
-  testDifficulty: 1, // default difficulty
-  testPocket: 'pck-grass',
-  testItem: 'it-tomePage-chasm',
   testStatus: 'st-sexist',
-  testCharacter: 'pl-native-scout',
   // testGoal: 'gol-goldenTemple-grass',
-  testLocation: 'loc-polarStation-A',
-  testEvent: 'evt-sanity-vulture',
-
-  testPerk: 'st-impetus',
 };

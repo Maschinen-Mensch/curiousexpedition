@@ -30,7 +30,6 @@
   {
     id: evt-slaver-enter
     text: txt-evt-slaver-enter
-    report: txt-evt-slaver-enter-report
     showImage: {src: evt_fxt_slaver_1.png, type: day}
     npc: [npc-slaver]
     select: [
@@ -321,7 +320,6 @@
         text: txt-evt-slaver-slaves-payment-1
         showImage: {src: evt_fxt_slaver_1.png, type: day}
         npc: [npc-slaver]
-        report: txt-evt-slaver-slaves-payment-report
         select: evt-slaver-actions
       }
       cancelEvents: {

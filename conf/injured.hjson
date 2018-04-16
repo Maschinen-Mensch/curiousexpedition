@@ -82,7 +82,6 @@
       delayedEvent: {
         partyEvents: evt-setImage-nightCamp
         text: txt-evt-infected-companion
-        report: txt-evt-infected-companion-report
         setStatus: +infected
       }
     }
@@ -103,7 +102,6 @@
       reqStatus: +infected
       reqCharFlags: -special
       text: txt-evt-infectedDeath-companion
-      report: txt-evt-infectedDeath-companion-report
       storeCharacter: true
       setCharFlags: +dead
     }
@@ -114,7 +112,6 @@
       reqStatus: +infected
       reqCharFlags: +special
       text: txt-evt-infectedDeath-explorer
-      report: txt-evt-infectedDeath-explorer-report
     }
   }
   {
@@ -126,7 +123,6 @@
       reqCharFlags: -native +humanoid -animal -special
       reqGender: male
       text: txt-evt-infectedDeath-promise
-      report: txt-evt-infectedDeath-promise-report
       storeCharacter: true
       setCharFlags: +promise +dead
       setPartyStatus: +promiseSpouse
@@ -148,7 +144,6 @@
         reqCharFlags: -special
         optional: true
         text: txt-evt-infectedHeal
-        report: txt-evt-infectedHeal-report
         setStatus: -st-infected
       }
       {
@@ -156,7 +151,6 @@
         reqCharFlags: +special
         optional: true
         text: txt-evt-infectedHeal-1
-        report: txt-evt-infectedHeal-report-1
         setStatus: -st-infected
       }
     ]

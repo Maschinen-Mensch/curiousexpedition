@@ -28,7 +28,7 @@
   }
   {
     id: st-aggro
-    debugCategory: internal
+    debugCategory: generic
     title: txt-st-aggro-title
     description: txt-st-aggro
     flags: +ailment
@@ -40,7 +40,7 @@
   }
   {
     id: st-abomination-eat
-    debugCategory: internal
+    debugCategory: generic
     title: txt-st-cannibal-title
     description: txt-st-abomination-eat
     sprite: res_status_cannibal.png

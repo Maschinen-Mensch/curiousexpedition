@@ -25,7 +25,6 @@
     actionText: txt-evt-leave-action
     reqLocationFlags: +wildlife +explored
     text: txt-evt-leave-3
-    report: txt-evt-leave-report
     select: [
       {
         reqBiomeFlags: +grass | +dry | +desert
@@ -92,7 +91,6 @@
     reqPartyFlags: +raptors
     select: {
       text: txt-evt-leave-raptors
-      report: txt-evt-leave-raptors-report
       select: [
         {
           slots: 1
@@ -109,7 +107,6 @@
       reqStatus: +superstitious -angry
       loyalty: -1
       text: txt-evt-leave-superstitious
-      report: txt-evt-leave-superstitious
     }
   }
   {
@@ -137,7 +134,6 @@
     reqCanStartSprawl: {ref: spr-fire, radius: 1}
     reqBiomeFlags: -arctic
     text: txt-evt-leave-startFire
-    report: txt-evt-leave-startFire-report
     chat: cl-startFire
     startSprawl: {ref: spr-fire, radius: 1, power: 5}
     charEvents: {
@@ -151,7 +147,6 @@
     reqCanStartSprawl: {ref: spr-fire, radius: 1}
     reqBiomeFlags: -arctic
     text: txt-evt-leave-startFirePyromaniac
-    report: txt-evt-leave-startFirePyromaniac-report
     chat: cl-startFire
     startSprawl: {ref: spr-fire, radius: 1, power: 5}
     charEvents: {
@@ -172,7 +167,6 @@
     reqWarpWorld: false
     select: {
       text: txt-evt-followed
-      report: txt-evt-followed-report
       npc: [pl-native-warrior, pl-native-warrior, pl-native-warrior]
       actions: [evt-followed-confront-pay, evt-followed-confront-deny]
     }
@@ -196,14 +190,12 @@
     showImage: {type: day, src: evt_spec_combat_1.png}
     winEvents: {
       text: txt-evt-followed-confront-deny
-      report: txt-evt-followed-confront-deny-report
     }
     failEvents: [evt-followed-confront-combat]
   }
   {
     id: evt-followed-confront-combat
     text: txt-evt-followed-confront-combat
-    report: txt-evt-followed-confront-combat-report
     standing: -2
     actions: {
       actionText: txt-evt-cave-ghostsQuest-action
@@ -215,6 +207,5 @@
   {
     id: evt-followed-confront-pay-success
     text: txt-evt-followed-confront-pay-success
-    report: txt-evt-followed-confront-pay-success-report
   }
 ]

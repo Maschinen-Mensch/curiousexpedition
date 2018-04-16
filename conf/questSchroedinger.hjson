@@ -57,7 +57,6 @@
           actionText: txt-it-box-schroedinger-action
           text: txt-it-box-schroedinger-open
           items: {it-box-schroedinger: -1}
-          report: txt-it-box-schroedinger-open-report
           setPartyStatus: -schroedinger
           startSprawl: {ref: spr-void, power: 10000}
           incAchievement: ach-mystery-box
@@ -70,12 +69,10 @@
     id: evt-harbor-quest-schroedinger
     npc: npc-schroedinger
     text: txt-evt-harbor-quest-schroedinger
-    report: txt-evt-harbor-quest-schroedinger-report
     actions: [
       {
         actionText: txt-evt-harbor-quest-missionary-action
         text: txt-evt-harbor-quest-schroedinger-1
-        report: txt-evt-harbor-quest-schroedinger-report-1
         setPartyStatus: +st-schroedinger
         items: {it-map-schroedinger: 1}
         select: evt-harbor-eventSelection
@@ -83,7 +80,6 @@
       {
         actionText: txt-evt-angry-demandPayment-action-1
         text: txt-evt-harbor-quest-schroedinger-2
-        report: txt-evt-harbor-quest-schroedinger-report-2
         select: evt-harbor-eventSelection
       }
     ]
@@ -100,7 +96,6 @@
         text: txt-evt-harbor-quest-schroedinger-complete-1
         reqItems: {it-box-schroedinger: 1..}
         items: {it-box-schroedinger: -1}
-        report: txt-evt-harbor-quest-schroedinger-complete-report
         incAchievement: ach-complete-quests
         actions: evt-harbor-quest-reward
       }

@@ -102,7 +102,6 @@
     charEvents: {
       reqCharFlags: +artist
       text: txt-evt-painting-angry
-      report: txt-evt-painting-angry-report
     }
     partyEvents: [
       {select: evt-painting-done}
@@ -139,7 +138,6 @@
           {
             slots: 1
             text: txt-evt-shrine-paint-1
-            report: txt-evt-shrine-paint-report
             setTempFlags: +paintingShrine
             select: evt-painting-create
           }
@@ -175,7 +173,6 @@
             slots: 1
             reqStanding: -5..10
             text: txt-evt-village-actions-night-painting-1
-            report: txt-evt-village-actions-night-painting-report
             setTempFlags: +paintingNative
             select: evt-painting-create
           }
@@ -183,7 +180,6 @@
             slots: 3
             reqStanding: -10..-3
             text: txt-evt-village-actions-night-painting-2
-            report: txt-evt-village-actions-night-painting-report-1
             items: {it-canvas: -1}
             setTempFlags: +paintingNative
           }

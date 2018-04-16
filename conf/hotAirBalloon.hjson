@@ -18,7 +18,6 @@
   {
     id: evt-hotAirBalloon-access
     text: txt-evt-hotAirBalloon-access
-    report: txt-evt-hotAirBalloon-access-report
     charEvents: {count: 2, reqCharFlags: +humanoid}
     actions: [
       evt-hotAirBalloon-stash
@@ -40,7 +39,6 @@
       actions: {
         actionText: txt-evt-harbor-countTrek-action
         text: txt-evt-hotAirBalloon-makeRoom-1
-        report: txt-evt-hotAirBalloon-makeRoom-report
         removeCharacter: true
         select: evt-hotAirBalloon-access
       }
@@ -117,7 +115,6 @@
     id: evt-hotAirBalloon-takeOff
     actionText: txt-evt-hotAirBalloon-takeOff-action
     text: txt-evt-hotAirBalloon-takeOff
-    report: txt-evt-hotAirBalloon-takeOff-report
     incAchievement: ach-hot-air-balloon
     charEvents: [
       {
@@ -126,7 +123,6 @@
         reqLoyalty: ..2
         reqStatus: +homesick
         text: txt-evt-hotAirBalloon-takeOff-1
-        report: txt-evt-hotAirBalloon-takeOff-report-1
         removeCharacter: true
       }
       {

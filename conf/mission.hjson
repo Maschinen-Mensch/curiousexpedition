@@ -3,7 +3,7 @@
     id: loc-mission
     name: txt-fxt-mission-name
     reqBiomeFlags: -arctic -prehistoric
-    worldMap: true
+    worldMap: mission
     priceTable: mission
     initItems: {il-trade-mission: 3, it-firstAid: 3, il-metaItems: 99}
     reqWorld: 1..
@@ -47,7 +47,6 @@
     showImage: {src: evt_fxt_mission_1.png, type: day}
     npc: npc-missionary
     text: txt-evt-mission-main
-    report: txt-evt-mission-main-report
     charEvents: {reqCharFlags: +missionary, optional: true, text: txt-evt-mission-main-1}
     select: evt-mission-actions
   }
@@ -74,7 +73,6 @@
           closeEvents: {
             text: txt-evt-mission-trade-rest-1
             select: evt-mission-rest
-            report: txt-evt-mission-trade-rest-report
           }
           cancelEvents: evt-mission-trade-cancel
         }
@@ -86,7 +84,6 @@
           closeEvents: {
             text: txt-evt-mission-trade-rest-2
             select: evt-mission-rest
-            report: txt-evt-mission-trade-rest-report-1
           }
           cancelEvents: evt-mission-trade-cancel
         }
@@ -113,7 +110,6 @@
   {
     id: evt-mission-sleep-event-1
     text: txt-evt-mission-sleep-event-1
-    report: txt-evt-mission-sleep-event-1-report
     actions: evt-mission-sleep
   }
   {
@@ -184,7 +180,6 @@
   }
   {
     id: evt-mission-sleep-event-5-fight
-    report: txt-evt-mission-sleep-event-5-fight-report
     setLocationFlags: +abandoned
     actions: [
       {
@@ -286,14 +281,13 @@
   {
     id: evt-mission-abandoned-main
     text: txt-evt-mission-abandoned-main
-    report: txt-evt-mission-abandoned-main-report
     showImage: {src: evt_fxt_mission_1.png, type: day}
     playMusic: [thm_mission_1, thm_mission_2]
     select: evt-mission-abandoned-actions
   }
   {
     id: evt-mission-abandoned-actions
-    actions: [evt-mission-stash-abandoned, evt-leave]
+    actions: [evt-mission-stash-abandoned, evt-mission-abandoned-sleep, evt-leave]
   }
   {
     id: evt-mission-abandoned-sleep
@@ -325,7 +319,6 @@
       reqCharFlags: +cultist
       text: txt-evt-mission-cultist-main
     }
-    report: txt-evt-mission-cultist-main-report
     select: evt-mission-cultist-actions
   }
   {
@@ -344,7 +337,7 @@
     setLocationFlags: +looted
     text: txt-evt-mission-cultist-rest
     loot: {
-      items: {it-cocaLeaves: 10}
+      items: {it-cocaLeaves: 20}
       closeEvents: {
         text: txt-evt-mission-cultist-rest-thanks
         select: evt-mission-cultist-actions
@@ -372,7 +365,6 @@
       {
         actionText: txt-evt-mission-cultist-recruit-action-1
         text: txt-evt-mission-cultist-recruit-yes
-        report: txt-evt-mission-cultist-recruit-yes-report
         addCharacter: {id: pl-cultist}
         chat: cl-join
         select: evt-mission-cultist-actions
@@ -383,5 +375,9 @@
         select: evt-mission-cultist-actions
       }
     ]
+    charEvents: { 
+      count: all
+      reqPartyCount: ..4
+    }
   }
 ]

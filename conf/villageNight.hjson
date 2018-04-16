@@ -36,13 +36,11 @@
   {
     id: evt-village-rest-flavor-generic
     text: txt-evt-village-rest-generic
-    report: txt-evt-village-rest-generic-report
     select: evt-village-actions-night
   }
   {
     id: evt-village-rest-unlockSpecialWorld
     text: txt-evt-village-rest-unlockSpecialWorld
-    report: txt-evt-village-rest-unlockSpecialWorld-report
     actions: [
       {
         actionText: txt-evt-village-rest-unlockSpecialWorld-action
@@ -69,13 +67,11 @@
     id: evt-village-rest-alcohol
     chat: cl-alcohol
     text: txt-evt-village-rest-alcohol
-    report: txt-evt-village-rest-alcohol-report
     actions: [
       {
         actionText: txt-evt-mission-sleep-event-2-accept-action
         chat: cl-alcohol
         text: txt-evt-village-rest-alcohol-1
-        report: txt-evt-village-rest-alcohol-report-1
         sanity: 10
         compassScore: malusAlcohol
         standing: 1
@@ -87,7 +83,6 @@
             reqStatus: -alcoholic
             setStatus: +alcoholic
             text: txt-evt-village-rest-alcohol-2
-            report: txt-evt-village-rest-alcohol-report-2
           }
           {optional: true, count: any, sanity: {base: 0, bonus: whiskyBonus}}
         ]
@@ -97,7 +92,6 @@
         actionText: txt-evt-angry-demandPayment-action-1
         standing: -1
         text: txt-evt-village-rest-alcohol-3
-        report: txt-evt-village-rest-alcohol-report-3
         select: evt-village-actions-night
       }
     ]
@@ -107,7 +101,6 @@
     charEvents: {
       reqStatus: +racist
       text: txt-evt-village-rest-racist
-      report: txt-evt-village-rest-racist-report
     }
     standing: -1
     select: evt-village-actions-night
@@ -117,7 +110,6 @@
     charEvents: {
       reqStatus: +st-paranoid
       text: txt-evt-village-rest-paranoid
-      report: txt-evt-village-rest-paranoid-report
     }
     standing: -1
     select: [
@@ -127,7 +119,6 @@
   {
     id: evt-village-rest-compassScore
     text: txt-evt-village-rest-compassScore
-    report: txt-evt-village-rest-compassScore-report
     compassScore: 5
     select: [
       {ref: evt-village-actions-night}
@@ -136,18 +127,15 @@
   {
     id: evt-village-rest-offerEat
     text: txt-evt-village-rest-offerEat
-    report: txt-evt-village-rest-offerEat-report
     charEvents: {
       optional: true
       reqCharFlags: +native
       text: txt-evt-village-rest-offerEat-1
-      report: txt-evt-village-rest-offerEat-report-1
     }
     actions: [
       {
         actionText: txt-evt-village-rest-offerEat-action
         text: txt-evt-village-rest-offerEat-2
-        report: txt-evt-village-rest-offerEat-report-2
         charEvents: {optional: true, reqCharFlags: +native, text: txt-evt-village-rest-offerEat}
         sanity: -20
         standing: 1
@@ -159,7 +147,6 @@
         actionText: txt-evt-angry-demandPayment-action-1
         standing: -1
         text: txt-evt-village-rest-offerEat-3
-        report: txt-evt-village-rest-offerEat-report-3
         select: [
           {ref: evt-village-actions-night}
         ]
@@ -169,14 +156,12 @@
   {
     id: evt-village-rest-mummy
     text: txt-evt-village-rest-mummy
-    report: txt-evt-village-rest-mummy-report
     reqItems: {it-mummy: 1..}
     standing: -1
     actions: [
       {
         actionText: txt-evt-village-rest-mummy-action
         text: txt-evt-village-rest-mummy-1
-        report: txt-evt-village-rest-mummy-report-1
         items: {it-mummy: -1}
         select: [
           {ref: evt-village-actions-night}
@@ -186,7 +171,6 @@
         actionText: txt-evt-angry-demandPayment-action-1
         standing: -3
         text: txt-evt-village-rest-mummy-2
-        report: txt-evt-village-rest-mummy-report-2
         select: [
           {ref: evt-village-actions-night}
         ]
@@ -200,12 +184,10 @@
         optional: false
         reqStatus: +paranoid +racist
         text: txt-evt-village-rest-killOffer
-        report: txt-evt-village-rest-killOffer-report
         actions: [
           {
             actionText: txt-evt-village-rest-killOffer-action
             text: txt-evt-village-rest-killOffer-1
-            report: txt-evt-village-rest-killOffer-report-1
             removeCharacter: true
             standing: 2
             select: evt-village-actions-night
@@ -213,7 +195,6 @@
           {
             actionText: txt-evt-village-rest-unlockSpecialWorld-action-1
             text: txt-evt-village-rest-killOffer-2
-            report: txt-evt-village-rest-killOffer-report-2
             select: evt-village-actions-night
           }
         ]
@@ -223,20 +204,17 @@
   {
     id: evt-village-rest-questionMankind
     text: txt-evt-village-rest-questionMankind
-    report: txt-evt-village-rest-questionMankind-report
     chat: cl-villageReligion
     actions: [
       {
         actionText: txt-evt-village-rest-questionMankind-action
         text: txt-evt-village-rest-questionMankind-1
-        report: txt-evt-village-rest-questionMankind-report-1
         select: evt-village-actions-night
       }
       {
         actionText: txt-evt-village-rest-questionMankind-action-1
         charEvents: {optional: true, count: any, loyalty: -1, reqCharFlags: +missionary}
         text: txt-evt-village-rest-questionMankind-2
-        report: txt-evt-village-rest-questionMankind-report-2
         select: evt-village-actions-night
       }
       {
@@ -249,7 +227,6 @@
           reqCharFlags: +missionary
         }
         text: txt-evt-village-rest-questionMankind-3
-        report: txt-evt-village-rest-questionMankind-report-3
         select: evt-village-actions-night
       }
     ]
@@ -257,13 +234,11 @@
   {
     id: evt-village-rest-whisky
     text: txt-evt-village-rest-whisky
-    report: txt-evt-village-rest-whisky-report
     reqItems: {it-whisky: 1..}
     actions: [
       {
         actionText: txt-evt-village-rest-whisky-action
         text: txt-evt-village-rest-whisky-1
-        report: txt-evt-village-rest-whisky-report-1
         items: {it-whisky: -1}
         standing: 1
         select: [
@@ -273,7 +248,6 @@
       {
         actionText: txt-evt-angry-demandPayment-action-1
         text: txt-evt-village-rest-whisky-2
-        report: txt-evt-village-rest-whisky-report-2
         select: [
           {ref: evt-village-actions-night}
         ]
@@ -293,7 +267,6 @@
     id: evt-village-rest-loveStay-yes
     actionText: txt-evt-village-rest-loveStay-yes-action
     text: txt-evt-village-rest-loveStay-yes
-    report: txt-evt-village-rest-loveStay-report
     removeCharacter: true
     standing: 4
     charEvents: {
@@ -319,7 +292,6 @@
       actions: {
         actionText: txt-evt-village-rest-animalFeast-action
         text: txt-evt-village-rest-animalFeast-yes
-        report: txt-evt-village-rest-animalFeast-report
         storeCharacter: true
         standing: 5
         select: evt-village-actions-night
@@ -362,7 +334,6 @@
       reqCharFlags: -native +humanoid -dead
       reqAge: 20..
       text: txt-evt-village-rest-tiedUnit
-      report: txt-evt-village-rest-tiedUnit-report
       actions: [
         {
           actionText: txt-evt-village-rest-tiedUnit-action
@@ -371,14 +342,12 @@
             baseValue: 50
             closeEvents: {
               text: txt-evt-village-rest-tiedUnit-1
-              report: txt-evt-village-rest-tiedUnit-report-1
               restoreCharacter: true
               select: evt-village-actions-night
             }
             cancelEvents: {
               actionText: txt-st-kleptomania-idol-action-1
               text: txt-evt-village-rest-tiedUnit-2
-              report: txt-evt-village-rest-tiedUnit-report-2
               unstoreCharacter: true
               select: evt-village-actions-night
             }
@@ -387,7 +356,6 @@
         {
           actionText: txt-st-kleptomania-idol-action-1
           text: txt-evt-village-rest-tiedUnit-3
-          report: txt-evt-village-rest-tiedUnit-report-3
           unstoreCharacter: true
           select: evt-village-actions-night
         }
@@ -549,13 +517,11 @@
             baseValue: {base: 50}
             closeEvents: {
               text: txt-evt-village-rest-child-failure-1
-              report: txt-evt-village-rest-child-failure-report
               select: evt-village-actions-night
             }
             cancelEvents: {
               actionText: txt-st-kleptomania-idol-action-1
               text: txt-evt-village-rest-child-failure-2
-              report: txt-evt-village-rest-child-failure-report-1
               removeCharacter: true
               select: evt-village-actions-night
             }
@@ -564,7 +530,6 @@
         {
           actionText: txt-st-kleptomania-idol-action-1
           text: txt-evt-village-rest-child-failure-3
-          report: txt-evt-village-rest-child-failure-report-2
           removeCharacter: true
           select: evt-village-actions-night
         }
@@ -576,6 +541,7 @@
     charEvents: {
       reqStatus: +st-angry
       text: txt-evt-village-rest-angryUnit
+      standing: -1
       actions: [
         {
           actionText: txt-evt-village-rest-angryUnit-action
@@ -596,7 +562,15 @@
         {
           actionText: txt-evt-village-rest-angryUnit-action-1
           text: txt-evt-village-rest-angryUnit-4
-          select: evt-village-actions-night
+          events: {
+            charEvents: {
+              optional: true
+              reqCharFlags: -special +humanoid
+              reqLoyalty: 1..
+              loyalty:-2
+            }
+            select: evt-village-actions-night
+          }
         }
       ]
     }
@@ -629,7 +603,6 @@
   {
     id: evt-village-rest-questionGender
     text: txt-evt-village-rest-questionGender
-    report: txt-evt-village-rest-questionGender-report
     actions: [
       {
         charEvents: {
@@ -641,7 +614,6 @@
         }
         actionText: txt-evt-village-rest-questionGender-action
         text: txt-evt-village-rest-questionGender-1
-        report: txt-evt-village-rest-questionGender-report-1
         select: evt-village-actions-night
       }
       {
@@ -654,14 +626,12 @@
         }
         actionText: txt-evt-village-rest-questionGender-action-1
         text: txt-evt-village-rest-questionGender-2
-        report: txt-evt-village-rest-questionGender-report-2
         select: evt-village-actions-night
       }
       {
         charEvents: {optional: true, count: any, reqStatus: +sexist, loyalty: -1}
         actionText: txt-evt-village-rest-questionGender-action-2
         text: txt-evt-village-rest-questionGender-3
-        report: txt-evt-village-rest-questionGender-report-3
         select: evt-village-actions-night
       }
     ]
@@ -702,7 +672,6 @@
     reqWorld: 3..
     reqDifficulty: 1..
     text: txt-evt-village-rest-positive-gameover
-    report: txt-evt-village-rest-positive-gameover-report
     actions: [
       {
         actionText: txt-evt-village-rest-positive-gameover-action
@@ -843,7 +812,6 @@
       standing: standingCostSacrilegSmall
       setLocationFlags: -idolVillage
       text: txt-evt-village-stealIdol-success
-      report: txt-evt-village-stealIdol-success-report
     }
     failEvents: {
       id: evt-village-stealIdol-fail
@@ -859,7 +827,6 @@
     charEvents: {reqStatus: +anthropology}
     reqTileFlags: -anthropology
     setTileFlags: +anthropology
-    report: txt-evt-village-actions-night-anthropology-report
     items: {it-anthropologicalStudies: 1}
     incAchievement: ach-studies-collect
     select: [

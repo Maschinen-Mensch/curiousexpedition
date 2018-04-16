@@ -19,7 +19,6 @@
       [res_tileBorder_dry_sw_1.png]
       [res_tileBorder_dry_nw_1.png]
     ]
-    borderImgIdx: 10
     borderPrio: 1
     level: 0
     viewCost: 0.15
@@ -49,7 +48,14 @@
       res_tile_mountain_6.png
       res_tile_mountain_7.png
     ]
-    borderImgIdx: 2
+    borderSprites: [
+      [res_tileBorder_mountain_n_1.png]
+      [res_tileBorder_mountain_ne_1.png]
+      [res_tileBorder_mountain_se_1.png]
+      [res_tileBorder_mountain_s_1.png]
+      [res_tileBorder_mountain_sw_1.png]
+      [res_tileBorder_mountain_nw_1.png]
+    ]
     borderPrio: 6
     elevation: 3
     viewCost: 0.6
@@ -82,7 +88,14 @@
       res_tile_jungle_thick_6.png
       res_tile_jungle_thick_7.png
     ]
-    borderImgIdx: 0
+    borderSprites: [
+      [res_tileBorder_jungle_thick_n_1.png]
+      [res_tileBorder_jungle_thick_ne_1.png]
+      [res_tileBorder_jungle_thick_se_1.png]
+      [res_tileBorder_jungle_thick_s_1.png]
+      [res_tileBorder_jungle_thick_sw_1.png]
+      [res_tileBorder_jungle_thick_nw_1.png]
+    ]
     borderPrio: 7
     viewCost: 0.4
     moveCost: {default: 8, it-machete: 3}
@@ -90,7 +103,6 @@
     moveSounds: sfx_move_jungle_1 sfx_move_jungle_2 sfx_move_jungle_3
     travelParticle: pt-travel-jungle
     hideParty: true
-    hasTaxonomy: true
     sprawls: [
       {id: spr-fire, chance: 0.3, lifeTime: 12}
       {id: spr-dry, burnedTile: tl-dry-jungle-thick}
@@ -112,7 +124,14 @@
       res_tile_jungle_light_6.png
       res_tile_jungle_light_7.png
     ]
-    borderImgIdx: 7
+    borderSprites: [
+      [res_tileBorder_jungle_light_n_1.png]
+      [res_tileBorder_jungle_light_ne_1.png]
+      [res_tileBorder_jungle_light_se_1.png]
+      [res_tileBorder_jungle_light_s_1.png]
+      [res_tileBorder_jungle_light_sw_1.png]
+      [res_tileBorder_jungle_light_nw_1.png]
+    ]
     borderPrio: 3
     viewCost: 0.25
     moveCost: 2
@@ -148,7 +167,14 @@
       res_tile_grass_12.png
       res_tile_grass_13.png
     ]
-    borderImgIdx: 1
+    borderSprites: [
+      [res_tileBorder_grass_n_1.png]
+      [res_tileBorder_grass_ne_1.png]
+      [res_tileBorder_grass_se_1.png]
+      [res_tileBorder_grass_s_1.png]
+      [res_tileBorder_grass_sw_1.png]
+      [res_tileBorder_grass_nw_1.png]
+    ]
     borderPrio: 2
     viewCost: 0.15
     moveCost: 1
@@ -175,7 +201,14 @@
       res_tile_grass_bushes_6.png
       res_tile_grass_bushes_7.png
     ]
-    borderImgIdx: 23
+    borderSprites: [
+      [res_tileBorder_grass_bushes_n_1.png]
+      [res_tileBorder_grass_bushes_ne_1.png]
+      [res_tileBorder_grass_bushes_se_1.png]
+      [res_tileBorder_grass_bushes_s_1.png]
+      [res_tileBorder_grass_bushes_sw_1.png]
+      [res_tileBorder_grass_bushes_nw_1.png]
+    ]
     borderPrio: 2
     viewCost: 0.2
     moveCost: 1
@@ -203,7 +236,14 @@
       res_tile_river_6.png
       res_tile_river_7.png
     ]
-    borderImgIdx: 4
+    borderSprites: [
+      [res_tileBorder_river_n_1.png]
+      [res_tileBorder_river_ne_1.png]
+      [res_tileBorder_river_se_1.png]
+      [res_tileBorder_river_s_1.png]
+      [res_tileBorder_river_sw_1.png]
+      [res_tileBorder_river_nw_1.png]
+    ]
     borderPrio: 5
     borderTag: water
     viewCost: 0.1
@@ -231,7 +271,14 @@
       res_tile_river_shallow_6.png
       res_tile_river_shallow_7.png
     ]
-    borderImgIdx: 4
+    borderSprites: [
+      [res_tileBorder_river_n_1.png]
+      [res_tileBorder_river_ne_1.png]
+      [res_tileBorder_river_se_1.png]
+      [res_tileBorder_river_s_1.png]
+      [res_tileBorder_river_sw_1.png]
+      [res_tileBorder_river_nw_1.png]
+    ]
     borderPrio: 5
     borderTag: water
     moveCost: 4
@@ -259,7 +306,14 @@
       res_tile_swamp_6.png
       res_tile_swamp_7.png
     ]
-    borderImgIdx: 3
+    borderSprites: [
+      [res_tileBorder_swamp_n_1.png]
+      [res_tileBorder_swamp_ne_1.png]
+      [res_tileBorder_swamp_se_1.png]
+      [res_tileBorder_swamp_s_1.png]
+      [res_tileBorder_swamp_sw_1.png]
+      [res_tileBorder_swamp_nw_1.png]
+    ]
     borderPrio: 2
     moveCost: {default: 10, it-rope: 4}
     viewCost: 0.3
@@ -286,7 +340,14 @@
       res_tile_desert_6.png
       res_tile_desert_7.png
     ]
-    borderImgIdx: 6
+    borderSprites: [
+      [res_tileBorder_desert_n_1.png]
+      [res_tileBorder_desert_ne_1.png]
+      [res_tileBorder_desert_se_1.png]
+      [res_tileBorder_desert_s_1.png]
+      [res_tileBorder_desert_sw_1.png]
+      [res_tileBorder_desert_nw_1.png]
+    ]
     borderPrio: 1
     viewCost: 0.1
     flags: +desert
@@ -313,7 +374,14 @@
       res_tile_cactusForest_6.png
       res_tile_cactusForest_7.png
     ]
-    borderImgIdx: 8
+    borderSprites: [
+      [res_tileBorder_cactusForest_n_1.png]
+      [res_tileBorder_cactusForest_ne_1.png]
+      [res_tileBorder_cactusForest_se_1.png]
+      [res_tileBorder_cactusForest_s_1.png]
+      [res_tileBorder_cactusForest_sw_1.png]
+      [res_tileBorder_cactusForest_nw_1.png]
+    ]
     borderPrio: 3
     viewCost: 0.3
     moveCost: 3
@@ -343,8 +411,15 @@
       res_tile_hill_6.png
       res_tile_hill_7.png
     ]
+    borderSprites: [
+      [res_tileBorder_hill_n_1.png]
+      [res_tileBorder_hill_ne_1.png]
+      [res_tileBorder_hill_se_1.png]
+      [res_tileBorder_hill_s_1.png]
+      [res_tileBorder_hill_sw_1.png]
+      [res_tileBorder_hill_nw_1.png]
+    ]
     flags: +hill
-    borderImgIdx: 5
     borderPrio: 4
     travelParticle: pt-travel-hill
     elevation: 2.2
@@ -374,12 +449,18 @@
       res_tile_dry_jungle_thick_6.png
       res_tile_dry_jungle_thick_7.png
     ]
-    borderImgIdx: 12
+    borderSprites: [
+      [res_tileBorder_dry_jungle_thick_n_1.png]
+      [res_tileBorder_dry_jungle_thick_ne_1.png]
+      [res_tileBorder_dry_jungle_thick_se_1.png]
+      [res_tileBorder_dry_jungle_thick_s_1.png]
+      [res_tileBorder_dry_jungle_thick_sw_1.png]
+      [res_tileBorder_dry_jungle_thick_nw_1.png]
+    ]
     borderPrio: 7
     moveCost: {default: 8, it-machete: 3}
     viewCost: 0.4
     hideParty: true
-    hasTaxonomy: true
     eventImg: {day: evt_tile_jungle_dry_1.png, night: evt_tile_jungle_1_night.png}
     travelParticle: pt-travel-jungle-dry
     moveSounds: sfx_move_jungle_1 sfx_move_jungle_2 sfx_move_jungle_3
@@ -404,7 +485,14 @@
       res_tile_dry_jungle_light_6.png
       res_tile_dry_jungle_light_7.png
     ]
-    borderImgIdx: 13
+    borderSprites: [
+      [res_tileBorder_dry_jungle_light_n_1.png]
+      [res_tileBorder_dry_jungle_light_ne_1.png]
+      [res_tileBorder_dry_jungle_light_se_1.png]
+      [res_tileBorder_dry_jungle_light_s_1.png]
+      [res_tileBorder_dry_jungle_light_sw_1.png]
+      [res_tileBorder_dry_jungle_light_nw_1.png]
+    ]
     borderPrio: 3
     moveCost: 2
     viewCost: 0.25
@@ -456,7 +544,14 @@
       res_tile_dry_stoneForest_6.png
       res_tile_dry_stoneForest_7.png
     ]
-    borderImgIdx: 15
+    borderSprites: [
+      [res_tileBorder_dry_stoneForest_n_1.png]
+      [res_tileBorder_dry_stoneForest_ne_1.png]
+      [res_tileBorder_dry_stoneForest_se_1.png]
+      [res_tileBorder_dry_stoneForest_s_1.png]
+      [res_tileBorder_dry_stoneForest_sw_1.png]
+      [res_tileBorder_dry_stoneForest_nw_1.png]
+    ]
     borderPrio: 3
     viewCost: 0.4
     moveCost: 3
@@ -484,7 +579,14 @@
       res_tile_desert_stoneForest_6.png
       res_tile_desert_stoneForest_7.png
     ]
-    borderImgIdx: 28
+    borderSprites: [
+      [res_tileBorder_desert_stoneForest_n_1.png]
+      [res_tileBorder_desert_stoneForest_ne_1.png]
+      [res_tileBorder_desert_stoneForest_se_1.png]
+      [res_tileBorder_desert_stoneForest_s_1.png]
+      [res_tileBorder_desert_stoneForest_sw_1.png]
+      [res_tileBorder_desert_stoneForest_nw_1.png]
+    ]
     borderPrio: 3
     viewCost: 0.4
     moveCost: 4
@@ -514,8 +616,15 @@
       res_tile_chasm_6.png
       res_tile_chasm_7.png
     ]
+    borderSprites: [
+      [res_tileBorder_chasm_desert_n_1.png]
+      [res_tileBorder_chasm_desert_ne_1.png]
+      [res_tileBorder_chasm_desert_se_1.png]
+      [res_tileBorder_chasm_desert_s_1.png]
+      [res_tileBorder_chasm_desert_sw_1.png]
+      [res_tileBorder_chasm_desert_nw_1.png]
+    ]
     borderTag: pit
-    borderImgIdx: 11
     borderPrio: 9
     borderOnlyKnown: true
     viewCost: 0.05
@@ -529,8 +638,28 @@
     ]
     events: evt-tile-pit
   }
-  {id: tl-pit-dry, extends: tl-pit-desert, borderImgIdx: 24}
-  {id: tl-pit-grass, extends: tl-pit-desert, borderImgIdx: 26}
+  {
+    id: tl-pit-dry, extends: tl-pit-desert,   
+    borderSprites: [
+      [res_tileBorder_chasm_dry_n_1.png]
+      [res_tileBorder_chasm_dry_ne_1.png]
+      [res_tileBorder_chasm_dry_se_1.png]
+      [res_tileBorder_chasm_dry_s_1.png]
+      [res_tileBorder_chasm_dry_sw_1.png]
+      [res_tileBorder_chasm_dry_nw_1.png]
+    ]
+  }
+  {
+    id: tl-pit-grass, extends: tl-pit-desert,   
+    borderSprites: [
+      [res_tileBorder_chasm_grass_n_1.png]
+      [res_tileBorder_chasm_grass_ne_1.png]
+      [res_tileBorder_chasm_grass_se_1.png]
+      [res_tileBorder_chasm_grass_s_1.png]
+      [res_tileBorder_chasm_grass_sw_1.png]
+      [res_tileBorder_chasm_grass_nw_1.png]
+    ]
+  }
   {
     id: tl-grass-stoneForest
     name: txt-tl-dry-stoneForest
@@ -543,7 +672,14 @@
       res_tile_grass_stoneForest_6.png
       res_tile_grass_stoneForest_7.png
     ]
-    borderImgIdx: 14
+    borderSprites: [
+      [res_tileBorder_grass_stoneForest_n_1.png]
+      [res_tileBorder_grass_stoneForest_ne_1.png]
+      [res_tileBorder_grass_stoneForest_se_1.png]
+      [res_tileBorder_grass_stoneForest_s_1.png]
+      [res_tileBorder_grass_stoneForest_sw_1.png]
+      [res_tileBorder_grass_stoneForest_nw_1.png]      
+    ]
     borderPrio: 3
     viewCost: 0.4
     moveCost: 3
@@ -573,7 +709,14 @@
       res_tile_giantMushrooms_6.png
       res_tile_giantMushrooms_7.png
     ]
-    borderImgIdx: 14
+    borderSprites: [
+      [res_tileBorder_giantMushrooms_n_1.png]
+      [res_tileBorder_giantMushrooms_ne_1.png]
+      [res_tileBorder_giantMushrooms_se_1.png]
+      [res_tileBorder_giantMushrooms_s_1.png]
+      [res_tileBorder_giantMushrooms_sw_1.png]
+      [res_tileBorder_giantMushrooms_nw_1.png]
+    ]
     borderPrio: 3
     viewCost: 0.4
     moveCost: 2
@@ -600,7 +743,14 @@
       res_tile_sulfur_6.png
       res_tile_sulfur_7.png
     ]
-    borderImgIdx: 16
+    borderSprites: [
+      [res_tileBorder_sulfur_n_1.png]
+      [res_tileBorder_sulfur_ne_1.png]
+      [res_tileBorder_sulfur_se_1.png]
+      [res_tileBorder_sulfur_s_1.png]
+      [res_tileBorder_sulfur_sw_1.png]
+      [res_tileBorder_sulfur_nw_1.png]
+    ]
     borderPrio: 5
     borderTag: water
     viewCost: 0
@@ -625,7 +775,14 @@
       res_tile_sulfur_shallow_6.png
       res_tile_sulfur_shallow_7.png
     ]
-    borderImgIdx: 16
+    borderSprites: [
+      [res_tileBorder_sulfur_n_1.png]
+      [res_tileBorder_sulfur_ne_1.png]
+      [res_tileBorder_sulfur_se_1.png]
+      [res_tileBorder_sulfur_s_1.png]
+      [res_tileBorder_sulfur_sw_1.png]
+      [res_tileBorder_sulfur_nw_1.png]
+    ]
     borderPrio: 5
     borderTag: water
     viewCost: 0
@@ -653,7 +810,14 @@
       res_tile_sulfur_swamp_6.png
       res_tile_sulfur_swamp_7.png
     ]
-    borderImgIdx: 22
+    borderSprites: [
+      [res_tileBorder_sulfur_swamp_n_1.png]
+      [res_tileBorder_sulfur_swamp_ne_1.png]
+      [res_tileBorder_sulfur_swamp_se_1.png]
+      [res_tileBorder_sulfur_swamp_s_1.png]
+      [res_tileBorder_sulfur_swamp_sw_1.png]
+      [res_tileBorder_sulfur_swamp_nw_1.png]
+    ]
     borderPrio: 2
     moveCost: {default: 10, it-rope: 4}
     viewCost: 0.3
@@ -680,7 +844,15 @@
       res_tile_volcano_inactive_6.png
       res_tile_volcano_inactive_7.png
     ]
-    borderImgIdx: 18
+    borderSprites: [
+      [res_tileBorder_volcano_n_1.png]
+      [res_tileBorder_volcano_ne_1.png]
+      [res_tileBorder_volcano_se_1.png]
+      [res_tileBorder_volcano_s_1.png]
+      [res_tileBorder_volcano_sw_1.png]
+      [res_tileBorder_volcano_nw_1.png]
+    ]
+    borderTag: volcano
     borderPrio: 7
     elevation: 3
     viewCost: 0.6
@@ -703,7 +875,15 @@
       res_tile_volcano_active_6.png
       res_tile_volcano_active_7.png
     ]
-    borderImgIdx: 18
+    borderSprites: [
+      [res_tileBorder_volcano_n_1.png]
+      [res_tileBorder_volcano_ne_1.png]
+      [res_tileBorder_volcano_se_1.png]
+      [res_tileBorder_volcano_s_1.png]
+      [res_tileBorder_volcano_sw_1.png]
+      [res_tileBorder_volcano_nw_1.png]
+    ]
+    borderTag: volcano
     borderPrio: 7
     elevation: 3
     viewCost: 0.6

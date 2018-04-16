@@ -3,7 +3,6 @@
     id: pck-debug
     name: pck-debug-name
     slotMarker: hud_mapMarker_desert.png
-    description: txt-pck-debug
     ambientSound: sfx_loop_desert_1
     goals: gol-goldenTemple-grass
     locations: [
@@ -27,6 +26,7 @@
       {slots: 1, ref: loc-goldenTemple-desert}
       {slots: 1, ref: loc-goldenTemple-arctic}
     ]
+    fallback: {ref: loc-goldenTemple-grass}
   }
   {
     id: grp-village
@@ -37,6 +37,7 @@
       {slots: 1, ref: loc-village-4}
       {slots: 1, ref: loc-village-inuit}
     ]
+    fallback: {ref: loc-village-1}
   }
   {
     id: grp-sanity-nature

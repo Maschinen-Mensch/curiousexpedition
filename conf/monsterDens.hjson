@@ -22,7 +22,6 @@
     playMusic: thm_nature_mystic_1 thm_nature_mystic_2
     showImage: {src: evt_fxt_cave_1.png, type: day}
     text: txt-evt-monsterDen-hyena-approach
-    report: txt-evt-monsterDen-hyena-approach-report
     chat: cl-cave-approach
     actions: [evt-leave]
   }

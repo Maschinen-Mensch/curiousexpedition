@@ -235,7 +235,6 @@
       {
         prio: 1
         text: txt-evt-combat-loot-1
-        report: txt-evt-combat-loot-report
         loot: {items: {}, closeEvents: {}}
         select: {reqDifficulty: 1.., standing: -1}
       }
@@ -245,7 +244,6 @@
     id: evt-combat-run
     actionText: txt-evt-combat-run-action
     text: txt-evt-combat-run
-    report: txt-evt-combat-run-report
     incAchievement: ach-flee
     partyEvents: [
       { 
@@ -277,7 +275,6 @@
           text: txt-zn-abomination
           storeCharacter: true
           setCharFlags: +dead
-          report: txt-zn-abomination-report
         }
       }
       {
@@ -314,7 +311,6 @@
           text: txt-zn-abomination-4
           storeCharacter: true
           setCharFlags: +dead
-          report: txt-zn-abomination-report-1
         }
       }
     ]
@@ -330,7 +326,6 @@
           setStatus: +st-paranoid
           chat: cl-apply-paranoid
           text: txt-evt-trauma
-          report: txt-evt-trauma-report
         }
       }
       {
@@ -340,7 +335,6 @@
           setStatus: +st-claustrophobic
           chat: cl-apply-claustrophobic
           text: txt-evt-trauma-1
-          report: txt-evt-trauma-report-1
         }
       }
       {
@@ -350,7 +344,6 @@
           setStatus: +st-lepidopterophobia
           chat: cl-apply-lepidopterophobia
           text: txt-evt-trauma-2
-          report: txt-evt-trauma-report-2
         }
       }
       {
@@ -359,7 +352,6 @@
           reqCharFlags: +humanoid -special -abomination
           setStatus: +st-kleptomania
           text: txt-evt-trauma-3
-          report: txt-evt-trauma-report-3
         }
       }
       {
@@ -369,7 +361,6 @@
           setStatus: +st-superstitious
           chat: cl-apply-superstitious
           text: txt-evt-trauma-4
-          report: txt-evt-trauma-report-4
         }
       }
       {
@@ -379,7 +370,6 @@
           setStatus: +pyromaniac
           chat: cl-apply-pyromaniac
           text: txt-evt-trauma-5
-          report: txt-evt-trauma-report-5
         }
       }
     ]
@@ -448,7 +438,6 @@
   {
     id: evt-tile-pit
     gameOver: Your trek fell into a dark chasm.
-    report: txt-evt-tile-pit-report
   }
   {
     id: evt-setImage-nightCamp

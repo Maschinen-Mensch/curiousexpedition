@@ -111,7 +111,6 @@
     id: evt-stoneStatue-loot-close
     standing: -2
     text: txt-evt-stoneStatue-loot-close
-    report: txt-evt-stoneStatue-loot-close-report
     setPartyFlags: +sacrileg +superstitious
     setLocationFlags: +explored
     chat: cl-sacrileg-loot
