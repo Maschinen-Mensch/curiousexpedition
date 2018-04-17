@@ -6,6 +6,7 @@
   * Adjusted Jungle Rot icon
   * The New Game gallery now can have multiple pages of explorers if more than 20 are unlocked
     * Can now have multiple custom explorers unlocked at once
+    * The random character option is now the first one
 * Modding
   * Tile Border Sprites can now be modded, just add a borderSprites section to your tile (full documentation coming soon)
   * Improved warnings that are printed to the log when mod content contains errors
@@ -38,6 +39,8 @@
   * Fixed crash when entering item screen with mods that add items enabled
   * Fix for being stuck in a location if a mod has set the leave event to be invalid
   * Fix for the game not loading if an image is referenced by multiple sprites
+  * Fix for compass not displaying correctly after loading a saved expedition
+  * Compass is no longer 100% in the first expedition (unless playing on Easy)
 
 # 1.3.7 (April 5th, 2018)
 

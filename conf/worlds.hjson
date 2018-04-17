@@ -39,7 +39,7 @@
     numSites: 2
     biomeCount: [2, 1]
     pockets: [pck-grass, pck-dry]
-    maxCompassScore: [1, 1, 1]
+    maxCompassScore: [1, 20, 40]
     goalFame: 100
     rivalTurns: 100
     debugXP: 2
@@ -56,7 +56,7 @@
     biomeCount: [2, 2]
     pockets: pck-grass pck-dry pck-desert pck-arctic
     blockedBiomes: 1
-    maxCompassScore: [30, 30, 60]
+    maxCompassScore: [1, 30, 60]
     goalFame: 120
     rivalTurns: 120
     debugXP: 3
@@ -66,7 +66,7 @@
     numSites: 3
     biomeCount: [2, 2]
     pockets: pck-grass pck-dry pck-desert pck-arctic
-    maxCompassScore: [40, 40, 80]
+    maxCompassScore: [1, 40, 80]
     goalFame: 140
     rivalTurns: 130
     debugXP: 4
@@ -77,7 +77,7 @@
     biomeCount: [3, 2]
     pockets: pck-grass pck-dry pck-desert pck-arctic
     blockedBiomes: 2
-    maxCompassScore: [50, 50, 100]
+    maxCompassScore: [1, 50, 100]
     goalFame: 160
     rivalTurns: 160
     debugXP: 4
@@ -94,7 +94,7 @@
     biomeCount: [3, 2]
     pockets: pck-grass pck-dry pck-desert pck-arctic
     blockedBiomes: 1
-    maxCompassScore: [60, 60, 120]
+    maxCompassScore: [1, 60, 120]
     goalFame: 180
     rivalTurns: 200
     debugXP: 4
@@ -111,7 +111,7 @@
     biomeCount: [3, 3]
     pockets: pck-prehistoric
     blockedBiomes: 3
-    maxCompassScore: [70, 70, 140]
+    maxCompassScore: [1, 70, 140]
     goalFame: 200
     rivalTurns: 240
     debugXP: 4
@@ -122,7 +122,7 @@
     biomeCount: [4, 3]
     pockets: pck-grass pck-dry pck-desert pck-arctic pck-prehistoric
     blockedBiomes: 5
-    maxCompassScore: [70, 70, 140]
+    maxCompassScore: [1, 70, 140]
     goalFame: 200
   }
   {
@@ -159,7 +159,7 @@
     pockets: pck-world-tutorial-2
     biomeCount: [2, 2]
     startPos: [0, 0]
-    maxCompassScore: [50, 50, 50]
+    maxCompassScore: [1, 50, 50]
     goalFame: 40
   }
   {
@@ -167,7 +167,7 @@
     pockets: pck-world-tutorial-3
     biomeCount: [2, 2]
     startPos: [0, 0]
-    maxCompassScore: [50, 50, 50]
+    maxCompassScore: [1, 50, 50]
     goalFame: 60
   }
 ]

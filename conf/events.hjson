@@ -31,7 +31,6 @@
         setPartyFlags: +sanityReport
         setPartyStatus: +sanityReport-low
       }
-      {optional: true, reqDifficulty: 0, compassScore: 99999}
       {optional: true, ref: evt-occultVision-reveal}
       {optional: true, ref: evt-occultVision-reveal}
       {optional: true, ref: evt-occultVision-reveal}
