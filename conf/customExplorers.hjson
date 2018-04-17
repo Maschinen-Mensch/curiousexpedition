@@ -4,7 +4,7 @@
     isAbstract: true
     health: 6
     bonus: {capacity: 2}
-    flags: +special +humanoid
+    flags: +special +humanoid +secret
     debugCategory: BaseProfessions
   }
   {
@@ -412,7 +412,7 @@
     levels: [
       {statuses: st-artist-4, dice: dc-support-2 dc-support-2}
     ]
-    flags: +special +humanoid +artist
+    flags: +special +humanoid +artist +secret
     characters: pl-bedouin pl-trader anm-dog-buckwheat
     items: {it-chocolate: 5, it-canvas: 7, it-ammo: 10, it-torch: 5}
   }

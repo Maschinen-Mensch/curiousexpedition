@@ -3,7 +3,7 @@
     id: sp-base
     debugCategory: Famous Explorer
     capacity: 2
-    flags: {special: true, humanoid: true}
+    flags: +special +humanoid
   }
   {
     id: sp-darwin
@@ -38,7 +38,7 @@
     levels: [
       {statuses: st-polymath, dice: dc-support-2 dc-support-1}
     ]
-    flags: {special: true, humanoid: true, scientist: true}
+    flags: +special +humanoid +scientist
     variations: [
       {gender: female, sprite: res_expl_curie.png, portrait: res_face_curie.png}
     ]
@@ -102,7 +102,7 @@
     levels: [
       {statuses: st-pacifist, dice: dc-support-2 dc-defend-1}
     ]
-    flags: {special: true, british: true, humanoid: true}
+    flags: +special +humanoid +british
     variations: [
       {
         gender: female
@@ -145,7 +145,7 @@
     miniSprite: res_expl_tesla_mini.png
     health: 4
     unlockHint: txt-sp-tesla-unlock
-    flags: {special: true, humanoid: true, scientist: true}
+    flags: +special +humanoid +scientist
     variations: [
       {gender: male, sprite: res_expl_tesla.png, portrait: res_face_tesla.png}
     ]
@@ -266,7 +266,7 @@
     health: 2
     unlockHint: txt-sp-lovecraft-unlock
     capacity: 1
-    flags: {special: true, english: true, humanoid: true, lovecraft: true}
+    flags: +special +english +humanoid +lovecraft
     variations: [
       {
         gender: male
@@ -347,7 +347,7 @@
     miniSprite: res_expl_lovelace_mini.png
     health: 4
     unlockHint: txt-sp-lovelace-unlock
-    flags: {special: true, british: true, humanoid: true}
+    flags: +special +british +humanoid
     variations: [
       {
         gender: female

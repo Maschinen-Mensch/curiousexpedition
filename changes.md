@@ -35,6 +35,9 @@
   * Fixed Bug where forsaken Villages sometimes fire non-forsaken events
   * Fixed superstitious animals
   * Mission now checks if trek is full before offering to recruit cultist after cultist takeover
+  * Fixed crash when entering item screen with mods that add items enabled
+  * Fix for being stuck in a location if a mod has set the leave event to be invalid
+  * Fix for the game not loading if an image is referenced by multiple sprites
 
 # 1.3.7 (April 5th, 2018)
 
