@@ -7,7 +7,7 @@ config.staticKeywords = [
   'clearPushedEvents', 'consume', 'restoreCharacter', 'karma', 
   'funds', 'reqAge', 'fame', 'unwarpWorld', 'gameOver', 'reqFreePartyCount',
   'isAbstract', 'reqNoCombat', 'showNPC', 'reqTargetChar', 'reqDiceCharFlags',
-  'posTile'
+  'posTile', 'debugCategory'
 ]
 
 config.man = [

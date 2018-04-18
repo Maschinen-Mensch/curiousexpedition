@@ -11,7 +11,7 @@ config.testEvents = [
         {slots:1, 'il-treasure-lowValue':2, 'it-jewels':1},
         {slots:1, 'il-magic':1, 'il-tomePages':2},
       ],
-      close: 'evt-leave'
+      closeEvents: 'evt-leave'
     },
   },
   {
