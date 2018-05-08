@@ -5,7 +5,6 @@
     name: The Sloppy Burger item.
     authors: jkristman
     version: "1.0"
-    enabled: false
     defaultLang: en
     preview: it_sloppyBurger.png
   },
@@ -24,6 +23,10 @@
       sprite: it_sloppyBurger.png
       value: 7
       maxStack: 20
+      useEvents: evt-sloppyBurger-useEvent
+    }
+    {
+      id: evt-sloppyBurger-useEvent
       select: [
         {
           slots: 3
@@ -40,7 +43,6 @@
           sanity: 15
           removeItem: true
         }
-
       ]
     }
     {
