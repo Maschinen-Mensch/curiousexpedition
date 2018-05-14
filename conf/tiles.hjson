@@ -439,6 +439,7 @@
   }
   {
     id: tl-dry-jungle-thick
+    flags: +jungle
     name: txt-tl-dry-jungle-thick
     sprites: [
       res_tile_dry_jungle_thick_1.png
@@ -475,6 +476,7 @@
   }
   {
     id: tl-dry-jungle-light
+    flags: +jungle
     name: txt-tl-dry-jungle-light
     sprites: [
       res_tile_dry_jungle_light_1.png

@@ -1,7 +1,51 @@
-# 1.3.8 (April 16th, 2018)
+# 1.3.9
 
 * Content
-  * Added Abomination
+  * Dendrophobia now adds a "Fear" status when walking in wood or jungle tiles without machetes. Affected characters lose -1 loyalty if staying inside for too long.
+  * Added new Game Over tips (English and German)
+* Modding
+  * Items can now add statuses to the explorer party when in the inventory with the "addStatus" keyword
+  * Added 'Show Flags Info' to Modding Dev Tools, which displays all flags on tiles and characters when enabled
+  * Added error/warning report for mods you've created
+  * MapSounds (for Sprawls, etc) are now specified in config rather than hardcoded (so they can be modded)
+  * When mods get reloaded, the loading bar is now shown
+  * Added "wait" keyword that allows for arbitrary waiting to happen (similar to rest but without sanity gain & with support for custom waiting text)
+  * Added "combatMusic" property to zones and combat events that specifies music to use instead of the default combat music
+  * Can now use mousewheel to scroll list of mods
+  * Mods now support localised descriptions
+  * Mods can specify sound files without needing an additional / at the beginning
+  * Sound files specified by mods are now checked to see if they exist
+  * If mods are disabled, clicking a mod's checkbox will enable mods and the clicked mod
+  * Images are correctly restored and reloaded when mods are enabled/disabled
+* Debug Bar
+  * When selecting an entity, that entity's JSON structure is printed to the log
+* Bugfixes
+  * Mangoes now don't survive the trip back to London
+  * Fixed issue where geysirs could get removed by river tiles
+  * Statuses that get removed by dayEvents don't get updated on the day they're removed
+  * Character perks that have no description will display their bonuses instead in the gallery
+  * Items tagged with autoremove aren't removed before very first expedition
+  * Pack animals don't display crates and saddle together
+  * Enemy attacks work correctly for patterns that contain bonuses
+  * Fix for "Leave" button not being immediately responsive after using teleport cave (now shows the time spent exploring).
+  * Can't use items while character info box is being shown (as they can overlap but the status box will be on top)
+  * Can no longer lose items marked with losable:false
+  * Fix for tile outlines flickering or not rendering between regions
+  * Fix for map containing black areas when playing a small vertical map
+  * Fix for status bonus descriptions not line-wrapping correctly
+  * Fix for abomination feeding intervals becoming ever more frequent after the first feeding
+  * Added some missing aftermath sounds
+  * Fixed villages spawning NPCs even if they are abandoned
+  * Fixed abominations always facing to the left in combat
+  * Improved loading times of web version
+  * Fixed news display having extra spaces in some languages
+  * Fixed startup freeze that happens on linux sometimes
+  * Fixed chinese-language sprites not being used
+
+# 1.3.8 (April 19th, 2018)
+
+* Content
+  * Forsaken villages spawn Abominations
   * Adjusted cultist coca stash
   * Adjusted Jungle Rot icon
   * The New Game gallery now can have multiple pages of explorers if more than 20 are unlocked

@@ -138,7 +138,7 @@
     extraSprites: {crates: res_anm_camel_crates.png, saddle: res_anm_camel_saddle.png}
     health: 8
     isMountable: true
-    mountedDice: dc-camel-1
+    mountedDice: dc-camel-1!4
     mountedStatuses: st-mount-2
     miniSprite: res_anm_camel_mini.png
     flags: +animal +packAnimal +camel +mammal
@@ -182,7 +182,7 @@
     extraSprites: {crates: res_anm_raptor_crates.png, saddle: res_anm_raptor_saddle.png}
     health: 13
     miniSprite: res_anm_raptor_1_mini.png
-    mountedDice: dc-raptor-1!4 dc-raptor-1!4
+    mountedDice: dc-raptor-1!4
     isMountable: true
     mountedStatuses: st-mount-3
     flags: +animal +packAnimal +dinosaur +raptor

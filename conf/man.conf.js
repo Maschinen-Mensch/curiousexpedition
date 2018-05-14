@@ -187,6 +187,10 @@ config.man = [
     $description: "Ends the current expedition"
   },
   {
+    keyword: 'playTutorial',
+    $description: "Begins the tutorial (the current game will be lost)"
+  },
+  {
     keyword: 'addButterfly',
     _count: "how many butterflies are found (default: 1)",
     $description: "Adds butterflies to the partys inventory"
@@ -202,6 +206,13 @@ config.man = [
     sanity: "amount of sanity to regain per day. can use bonus",
     events: "one of these events is triggered after being done with resting",
     $description: "Starts resting"
+  },
+  {
+    keyword: 'wait',
+    turns: "number of turns (days) to wait for",
+    waitLabel: "The text to display above the party on the worldmap while waiting",
+    events: "one of these events is triggered after being done with waiting",
+    $description: "Starts waiting"
   },
   {
     keyword: 'reqStatusDayAge',

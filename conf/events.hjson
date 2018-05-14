@@ -379,7 +379,6 @@
     chat: cl-sprawlFire
     sanity: -10
     select: [
-      {prio: 0, reqTutorial: true}
       {slots: 6}
       {
         reqPartyStatus: -fireSafe

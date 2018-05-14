@@ -33,6 +33,7 @@
     particle: pt-geysir-burst
     setTile: [
       {ref: tl-river}
+      {ref: tl-arcticSea, reqBiomeFlags: +dummmyForCompatibility }
     ]
     spawnEvents: {
       camShake: {power: 4, length: 2}
@@ -57,6 +58,9 @@
     sprite: res_fxt_geysir_1.png
     setTile: [
       {ref: tl-river-shallow}
+      # to prevent geysirs being removed when tile is converted between river types
+      {ref: tl-river, reqBiomeFlags: +dummmyForCompatibility }
+      {ref: tl-arcticSea, reqBiomeFlags: +dummmyForCompatibility }
     ]
     dayEvents: [
       { reqAge: 15.., replaceLocations: {new: loc-geysir-active}}

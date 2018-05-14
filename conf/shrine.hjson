@@ -401,6 +401,9 @@
     id: evt-shrine-aftermath-forsake
     reqLocationFlags: +aftermathForsake
     text: txt-evt-shrine-aftermath-forsake
+    actions: {
+      playSound: sfx_rainstick_c
+    }
     partyEvents: [
       {optional: true, ref: evt-shrine-aftermath-forsake-fxt}
       {optional: true, ref: evt-shrine-aftermath-forsake-fxt}
@@ -457,7 +460,6 @@
     reqLocationFlags: +aftermathVolcano
     text: txt-evt-shrine-aftermath-volcano
     actions: {
-      playSound: sfx_volcanoErupt
       partyEvents: [
         {
           addLocation: {ref: loc-volcano-spawn-large-active, range: ..4}

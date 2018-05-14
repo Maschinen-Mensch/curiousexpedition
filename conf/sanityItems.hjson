@@ -27,6 +27,7 @@
     reqBiomeFlags: -arctic
     sprite: it_consumable_mango_1.png
     value: {base: 5, karma: 3}
+    autoRemove: true
     dayEvents: [
       {slots: 7}
       {slots: 1, removeItem: true}

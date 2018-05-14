@@ -40,16 +40,27 @@
     sprite: res_status_dendrophobia.png
     important: true
     dayEvents: [
-      {slots: 1, select: evt-dendrophobia-angry}
+      {reqTileFlags: -jungle, setStatus: -fear}
+      {reqTileFlags: +jungle, select: evt-dendrophobia-angry-jungleTile}
     ]
   }
   {
-    id: evt-dendrophobia-angry
-    reqAge: 3..
-    reqLocation: {range: ..1, flags: +giantTree}
-    loyalty: -1
-    chat: cl-apply-dendrophobia
-    resetStatusAge: true
+    id: evt-dendrophobia-angry-jungleTile
+    reqItems: {it-machete: 0}
+    setStatus: +st-fear
+  }
+  {
+    id: st-fear
+    debugCategory: Ailment
+    title: txt-st-fear-title
+    description: txt-st-fear
+    sprite: res_status_nausea.png 
+    flags: +fear
+    hideNotifications: true
+    autoRemove: true
+    important: true
+    buffDays: 3
+    buffEndEvents: {chat: cl-apply-dendrophobia, loyalty: -1}
   }
   {
     id: cl-apply-dendrophobia

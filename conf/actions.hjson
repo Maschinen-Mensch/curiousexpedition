@@ -11,4 +11,5 @@
   {id: act-attackZone, actionText: txt-act-attackZone-action}
   {id: act-loot, actionText: txt-act-loot-action}
   {id: act-barter, actionText: txt-act-barter-action}
+  {id: act-restartGame, actionText: txt-demo-restart}
 ]

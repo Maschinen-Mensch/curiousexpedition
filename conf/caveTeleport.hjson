@@ -21,7 +21,8 @@
       }
       {
         reqLocationFlags: +teleportedOnce
-        select: evt-cave-teleport-doTeleport
+        showImage: {src: evt_fxt_cave_teleport.png}
+        actions: [evt-cave-teleport, evt-cave-explored-leave]
       }
     ]
   }
@@ -31,26 +32,31 @@
     setLocationFlags: +teleportedOnce
     charEvents: {reqCharFlags: +special, removeStatusWithFlags: +localCurse}
     teleport: true
-    turns: 3
   }
   {
     id: evt-cave-teleport
     actionText: txt-evt-cave-teleport-action
     playMusic: thm_cave_1 thm_cave_2
     showImage: {src: evt_fxt_cave_teleport.png}
-    select: [
-      {
-        reqLocation: {range: 2.., flags: +caveTypeTeleport}
-        select: evt-cave-teleport-doTeleport
-        text: txt-evt-cave-teleport
-        actions: evt-cave-explored-leave
-      }
-      {
-        prio: 1
-        text: txt-evt-cave-teleport-1
-        turns: 3
-        actions: evt-cave-explored-leave
-      }
-    ]
+    wait:
+    {
+      turns: 3
+      waitLabel: txt-base-exploring
+      events: [
+        {
+          reqLocation: {range: 2.., flags: +caveTypeTeleport}
+          select: evt-cave-teleport-doTeleport
+          text: txt-evt-cave-teleport
+          actions: evt-cave-explored-leave
+          showImage: {src: evt_fxt_cave_teleport.png}
+        }
+        {
+          prio: 1
+          text: txt-evt-cave-teleport-1
+          actions: evt-cave-explored-leave
+          showImage: {src: evt_fxt_cave_teleport.png}
+        }
+      ]
+    }
   }
 ]

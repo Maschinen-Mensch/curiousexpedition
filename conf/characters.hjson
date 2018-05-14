@@ -592,7 +592,7 @@
     variations: [
       {
         gender: male
-        sprite: emy_abomination_1.png
+        sprite: res_porter_abomination_1.png
         portrait: res_face_abomination_1.png
       }
     ]

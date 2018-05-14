@@ -420,7 +420,7 @@ var staticConfig =
   enableAchievements: true,
   showMods: true,
   showReport: false,
-  footerName: "1.3.8.6",
+  footerName: "1.3.9.8",
   sanityCheckEvents: true,
 
   // is converted to config.diaryText at run-time
@@ -661,6 +661,7 @@ var config = {
     info: {img:'hud_info_border.png', offset:60, scale: 0.5},
     action: {img:'hud_actionButton.png', offset:24, scale: 0.5},
     extraAction: {sprite:'hud_button_blank.png', offset:4, scale: 0.5},
+    demoTutorial: {sprite:'hud_button_blank.png', offset:4, scale: 1},
     menuButton: {sprite:'hud_button_menu.png', offset:7, scale:1},
     mapButton: {sprite:'hud_button_menu.png', offset:7, scale:1},
     modFrame: {sprite:'hud_frame_mod.png', offset:7, scale:1},
@@ -1024,6 +1025,16 @@ var config = {
     'txt-tip-18',
     'txt-tip-19',
     'txt-tip-20',
+    'txt-tip-21',
+    'txt-tip-22',
+    'txt-tip-23',
+    'txt-tip-24',
+    'txt-tip-25',
+    'txt-tip-26',
+    'txt-tip-27',
+    'txt-tip-28',
+    'txt-tip-29',
+    'txt-tip-30',
   ],
 
   colors: {
@@ -1195,6 +1206,7 @@ var config = {
       resetProfile: "txt-help-settings-resetProfile",
       saving: "txt-help-settings-saving",
       quit: "txt-help-settings-quit",
+      restartDemo: "txt-help-demo-restart",
 
       scale1: ["txt-help-settings-scale1", "txt-help-settings-scale-refuse"],
       scale2: ["txt-help-settings-scale2", "txt-help-settings-scale-refuse"],
@@ -1274,8 +1286,47 @@ var config = {
     loopGas: 'loop_gas',
 
     sledgeLoop: 'loop_sledge',
-  }
+  },
 
+  mapSounds: [
+    {
+      soundName: "loopVoid",
+      options: {sprawl:"spr-void"}
+    },
+    {
+      soundName: "loopChasm",
+      options: 
+      [ 
+        {sprawl:"spr-chasm"}, 
+        {sprawl:"spr-ice"}
+      ]
+    },
+    {
+      soundName: "loopWildfire",
+      options: [{sprawl:"spr-fire"}]
+    },
+    {
+      soundName: "loopVolcano",
+      options:
+       [
+        {sprawl:"spr-corrupt"}, 
+        {tile: 'tl-volcano-active'}
+       ]
+    },
+    {
+      soundName: "loopFlood",
+      options: [{sprawl:"spr-flood"}]
+    },
+    {
+      soundName: "loopDryfication",
+      options: [{sprawl:"spr-dry"}]
+    },
+    {
+      soundName: "loopGas",
+      options: [{location: 'loc-fumarole-1'}]
+    },
+  ]
+  
 };
 
 // initializing debug values. use debug.conf.js to overwrite these

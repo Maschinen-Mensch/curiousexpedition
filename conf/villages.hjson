@@ -597,7 +597,7 @@
     id: evt-village-placeNPCs
     select: [
       {
-        reqLocationFlags: -villageType_lizard
+        reqLocationFlags: -villageType_lizard +inhabited
         npc: [
           npc-native-generic-chief
           npc-native-generic
@@ -609,7 +609,7 @@
         ]
       }
       {
-        reqLocationFlags: +villageType_lizard
+        reqLocationFlags: +villageType_lizard +inhabited
         npc: [
           npc-village-lizard-chief
           npc-village-lizard-generic

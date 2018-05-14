@@ -574,9 +574,9 @@ var debug = {
   skipExitWarning: true,
   skipPreRoll: true,
 
-  showDebugBar: true,
-  skipStartEvents: true,
-  autoLevel: true, // automatically level up party for higher expeditions
+  showDebugBar: false,
+  skipStartEvents: false,
+  autoLevel: false, // automatically level up party for higher expeditions
   
   // skipSaveGame: false,
   forceLocalSaveGame: true,
@@ -592,4 +592,6 @@ var debug = {
   tribeBackground: '#4b3a32',
   testStatus: 'st-sexist',
   // testGoal: 'gol-goldenTemple-grass',
+
+  isDevMode: true,
 };

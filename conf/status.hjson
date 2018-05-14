@@ -44,11 +44,11 @@
     title: txt-st-cannibal-title
     description: txt-st-abomination-eat
     sprite: res_status_cannibal.png
-    tripEvents: [
-      { reqAge: 4.., resetStatusAge: true, delayedEvent: evt-sanity-abomination-hungry}
-      { slots: 5 }
+    dayEvents: [
+      {slots: 3, reqAge: 25.., delayedEvent: evt-sanity-abomination-hungry, resetStatusAge: true}
+      {slots: 1, reqAge: 25.., resetStatusAge: true}
     ]
-    dayEvents: {
+    tripEvents: {
       charEvents: {count: 3.., reqCharFlags: +abomination, incAchievement: ach-triple-abomination}
     }
   }
@@ -122,7 +122,7 @@
   {
     id: st-fireSafe
     debugCategory: internal
-    dayEvents: {reqAge: 2.., removeStatus: true}
+    dayEvents: {reqAge: 2.., removeStatus: true, reqTutorial: false}
   }
   {
     id: st-mount-1
