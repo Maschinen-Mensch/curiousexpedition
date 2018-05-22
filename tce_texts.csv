@@ -2894,6 +2894,7 @@
 "base-alert","A new adventure awaits!"
 "base-attack","Attack!"
 "base-mounted","Mounted"
+"base-lockChar","$val locked!"
 "base-unlockChar","$val unlocked!"
 "base-unlockSite","New World Discovered!"
 "bonus-animalCapacity","Animal Capacity"

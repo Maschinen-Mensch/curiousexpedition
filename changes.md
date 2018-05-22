@@ -17,6 +17,7 @@
   * Sound files specified by mods are now checked to see if they exist
   * If mods are disabled, clicking a mod's checkbox will enable mods and the clicked mod
   * Images are correctly restored and reloaded when mods are enabled/disabled
+  * The MaxStack property of Items can now be a bonus
 * Debug Bar
   * When selecting an entity, that entity's JSON structure is printed to the log
 * Bugfixes
@@ -41,6 +42,11 @@
   * Fixed news display having extra spaces in some languages
   * Fixed startup freeze that happens on linux sometimes
   * Fixed chinese-language sprites not being used
+  * Fix for sounds always playing at full volume on safari
+  * Can now lock custom explorers again by entering their code in the settings menu once more
+  * Inuit village sprites are now centered correctly on their tile
+  * Corrupted river tiles have +river flag set (so the ship lands properly)
+  * Fixed issue where locations would use incorrect sprite after reloading savegame in some biomes
 
 # 1.3.8 (April 19th, 2018)
 

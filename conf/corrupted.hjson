@@ -643,6 +643,7 @@
   {
     id: tl-corrupted-river
     name: txt-tl-corrupted-river
+    flags: +river
     sprites: [
       res_tile_corrupted_river_1.png
       res_tile_corrupted_river_2.png
