@@ -1,0 +1,189 @@
+{
+    modInfo:
+    {
+        id: harborRecruitment
+        name: Extended Harbor Recruitment
+        authors: VrynnSardo
+        version: "1.1"
+        enabled: true
+        defaultLang: en
+        description: "My second official mod as part of Maschinen-Mensch. As requested by the community, this extends the recruitment list of the harbor to include all characters previously only recruitble at villages, namely natives and lizard people. Enjoy the harbor becoming a place for true intercultural exchange and employment opportunities."
+        preview: mod_preview
+    },
+    imageData: [
+        {
+            id: mod_preview
+            file: harborRecruitment/mod_preview.png
+        }
+    ],
+    modEntries: [
+    {
+      targetId: +evt-harbor-recruit-select::select
+      slots: 1
+      ref: evt-harbor-recruit-nativeWarrior
+    }
+    {
+        id: evt-harbor-recruit-nativeWarrior
+        npc: pl-native-warrior
+        npcEvents: {
+            actions: {
+                alwaysShown: true
+                actionText: txt-evt-village-recruit-warrior-action
+                text: txt-evt-village-recruit-warrior
+                setPartyFlags: +recruitedSomebody
+                addNPC: true
+                chat: cl-join
+                select: evt-harbor-recruit
+                }
+            }
+        charEvents: { 
+        count: all
+        reqCharFlags: -nativeWarrior
+        }
+    }
+    {
+      targetId: +evt-harbor-recruit-select::select
+      slots: 1
+      ref: evt-harbor-recruit-nativeScout
+    }
+    {
+        id: evt-harbor-recruit-nativeScout
+        npc: pl-native-scout
+        npcEvents: {
+        actions: {
+            alwaysShown: true
+            actionText: txt-evt-village-recruit-scout-action
+            text: txt-evt-village-recruit-scout
+            setPartyFlags: +recruitedSomebody
+            addNPC: true
+            chat: cl-join
+            select: evt-harbor-recruit
+            }
+        }
+        charEvents: { 
+        count: all
+        reqCharFlags: -nativeScout
+        }
+    }
+    {
+    targetId: +evt-harbor-recruit-select::select
+    slots: 1
+    ref: evt-harbor-recruit-nativeShaman
+    }
+    {
+    id: evt-harbor-recruit-nativeShaman
+    npc: pl-native-shaman
+    npcEvents: {
+      actions: {
+        actionText: txt-evt-village-recruit-shaman-action
+        text: txt-evt-village-recruit-shaman
+        setPartyFlags: +recruitedSomebody
+        alwaysShown: true
+        addNPC: true
+        chat: cl-join
+        select: evt-harbor-recruit
+            }
+        }
+        charEvents: { 
+        count: all
+        reqCharFlags: -nativeShaman
+        }
+    }
+    {
+    targetId: +evt-harbor-recruit-select::select
+    slots: 0.75
+    ref: evt-harbor-recruit-lizardWarrior
+    }
+    {
+    id: evt-harbor-recruit-lizardWarrior
+    npc: pl-lizard-warrior
+    npcEvents: {
+      actions: {
+        actionText: txt-evt-village-recruit-warrior-action
+        text: txt-evt-village-recruit-lizard-warrior
+        setPartyFlags: +recruitedSomebody
+        alwaysShown: true
+        addNPC: true
+        chat: cl-join
+        select:  evt-harbor-recruit
+      }
+    }
+    charEvents: { 
+        count: all
+        reqCharFlags: -lizard
+        }
+    }
+    {
+    targetId: +evt-harbor-recruit-select::select
+    slots: 0.75
+    ref: evt-harbor-recruit-lizardShaman
+    }
+    {
+    id: evt-harbor-recruit-lizardShaman
+    npc: pl-lizard-shaman
+    npcEvents: {
+      actions: {
+        actionText: txt-evt-village-recruit-shaman-action
+        text: txt-evt-village-recruit-lizard-shaman
+        setPartyFlags: +recruitedSomebody
+        alwaysShown: true
+        addNPC: true
+        chat: cl-join
+        select:  evt-harbor-recruit
+      }
+    }
+    charEvents: { 
+        count: all
+        reqCharFlags: -lizard
+        }
+  }
+  {
+    targetId: +evt-harbor-recruit-select::select
+    slots: 1
+    ref: evt-harbor-recruit-animalHandler
+    }
+  {
+    id: evt-harbor-recruit-animalHandler
+    npc: pl-native-animalHandler
+    npcEvents: {
+      actions: {
+        actionText: txt-evt-village-recruit-animalHandler-action
+        text: txt-evt-village-recruit-animalHandler
+        setPartyFlags: +recruitedSomebody
+        alwaysShown: true
+        addNPC: true
+        chat: cl-join
+        select: evt-harbor-recruit
+      }
+    }
+    charEvents: { 
+        count: all
+        reqCharFlags: -animalHandler
+        }
+    }
+    {
+    targetId: +evt-harbor-recruit-select::select
+    slots: 0.1
+    ref: evt-harbor-recruit-yeti
+    }
+  {
+    id: evt-harbor-recruit-yeti
+    npc: pl-yeti
+    npcEvents: {
+      actions: {
+        actionText: txt-evt-harbor-recruit-yeti-action
+        text: txt-evt-harbor-recruit-yeti
+        setPartyFlags: +recruitedSomebody
+        alwaysShown: true
+        addNPC: true
+        chat: cl-join
+        select: evt-harbor-recruit
+      }
+    }
+    charEvents: { 
+        count: all
+        reqCharFlags: -yeti
+        }
+    }
+    ]
+}

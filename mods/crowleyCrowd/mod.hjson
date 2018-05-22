@@ -1,0 +1,40 @@
+{
+  modInfo:
+  {
+    id: crowleyCrowd
+    name: Crowley's Curious Crowd
+    authors: VrynnSardo
+    version: "1.1"
+    enabled: true
+    defaultLang: en
+    preview: mod_preview
+    description: "My third official mod as part of Maschinen-Mensch. Crowley goes nuts and introduces you to the true cultist lifestyle: Abominations! Tweaked the feeding process so that it becomes more managable as a full-time trek member. Happy hunting (literally)!"
+  }
+  imageData:[
+    {
+        id: mod_preview
+        file: crowleyCrowd/mod_preview.png
+    }
+  ],
+  modEntries:[
+      {
+          targetId: *sp-crowley::items
+          it-meat-raw: 10
+      }
+      {
+          targetId: /sp-crowley::characters
+          data: [pl-cultist, pl-cultist, pl-abomination]
+      }
+      {
+          targetId: *sp-crowley
+          alwaysUnlocked: true
+      }
+      {
+          targetId: /st-abomination-eat::dayEvents
+          data: [
+            {slots: 3, reqAge: 40.., delayedEvent: evt-sanity-abomination-hungry, resetStatusAge: true}
+            {slots: 1, reqAge: 40.., resetStatusAge: true}
+          ]
+      }
+    ]
+}

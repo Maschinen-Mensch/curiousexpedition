@@ -1,0 +1,306 @@
+{
+  modInfo:
+  {
+    id: arcticHunter
+    name: Arctic Hunter
+    authors: VrynnSardo
+    version: "1.0"
+    enabled: true
+    defaultLang: en
+    preview: mod_preview
+    description: "My first official mod as part of Maschinen-Mensch. Adds a character that helps you explore the Arctic, recruitable at the harbor and Arctic villages. Being a pathfinder with fighting experience, the Arctic Hunter helps you move swiftly through the ice and will provide invaluable assistance when hunting for the trophies of the far north." 
+  },
+  imageData:[
+    {
+      id: mod_preview
+      file: arcticHunter/mod_Preview.png
+    }
+    {
+      id: sprite_1_male
+      file: arcticHunter/sprite_arcticHunter_1_male.png
+    }
+    {
+      id: face_1_male
+      file: arcticHunter/face_arcticHunter_1_male.png
+    }
+    {
+      id: face_1_male_small
+      file: arcticHunter/face_arcticHunter_1_male_small.png
+    }
+    {
+      id: miniSprite_1_male
+      file: arcticHunter/miniSprite_arcticHunter_1_male.png
+    }
+    {
+      id: sprite_1_female
+      file: arcticHunter/sprite_arcticHunter_1_female.png
+    }
+    {
+      id: face_1_female
+      file: arcticHunter/face_arcticHunter_1_female.png
+    }
+    {
+      id: face_1_female_small
+      file: arcticHunter/face_arcticHunter_1_female_small.png
+    }
+    {
+      id: miniSprite_1_female
+      file: arcticHunter/miniSprite_arcticHunter_1_female.png
+    }
+    {
+      id: sprite_2_male
+      file: arcticHunter/sprite_arcticHunter_2_male.png
+    }
+    {
+      id: face_2_male
+      file: arcticHunter/face_arcticHunter_2_male.png
+    }
+    {
+      id: face_2_male_small
+      file: arcticHunter/face_arcticHunter_2_male_small.png
+    }
+    {
+      id: miniSprite_2_male
+      file: arcticHunter/miniSprite_arcticHunter_2_male.png
+    }
+    {
+      id: sprite_2_female
+      file: arcticHunter/sprite_arcticHunter_2_female.png
+    }
+    {
+      id: face_2_female
+      file: arcticHunter/face_arcticHunter_2_female.png
+    }
+    {
+      id: face_2_female_small
+      file: arcticHunter/face_arcticHunter_2_female_small.png
+    }
+    {
+      id: miniSprite_2_female
+      file: arcticHunter/miniSprite_arcticHunter_2_female.png
+    }
+    {
+      id: sprite_3_male
+      file: arcticHunter/sprite_arcticHunter_3_male.png
+    }
+    {
+      id: face_3_male
+      file: arcticHunter/face_arcticHunter_3_male.png
+    }
+    {
+      id: face_3_male_small
+      file: arcticHunter/face_arcticHunter_3_male_small.png
+    }
+    {
+      id: miniSprite_3_male
+      file: arcticHunter/miniSprite_arcticHunter_3_male.png
+    }
+    {
+      id: sprite_3_female
+      file: arcticHunter/sprite_arcticHunter_3_female.png
+    }
+    {
+      id: face_3_female
+      file: arcticHunter/face_arcticHunter_3_female.png
+    }
+    {
+      id: face_3_female_small
+      file: arcticHunter/face_arcticHunter_3_female_small.png
+    }
+    {
+      id: miniSprite_3_female
+      file: arcticHunter/miniSprite_arcticHunter_3_female.png
+    }
+  ],
+  modEntries:[
+    {
+      id: st-goodRep
+      title: "txt-st-goodReputation-title"
+      description: txt-st-goodReputation-description
+      sprite: res_status_standing.png
+      bonus: {startStanding: 1}
+    }
+    { 
+      id: st-pathfinder-1
+      title: "txt-st-pathfinder-1-title"
+      description: txt-st-pathfinder-description
+      sprite: res_status_desertExplorer.png
+      debugCategory: Unit Perk
+      bonus: {tripCost: -0.1, reqBiomeFlags: +arctic}
+    }
+    { 
+      id: st-pathfinder-2
+      extends: st-pathfinder-1
+      title: "txt-st-pathfinder-2-title"
+      bonus: {tripCost: -0.2, reqBiomeFlags: +arctic}
+    }
+    { 
+      id: st-pathfinder-3
+      extends: st-pathfinder-1
+      title: "txt-st-pathfinder-3-title"
+      bonus: {tripCost: -0.3, reqBiomeFlags: +arctic}
+    }
+    { 
+      id: st-pathfinder-4
+      extends: st-pathfinder-1
+      title: "txt-st-pathfinder-4-title"
+      bonus: {tripCost: -0.4, reqBiomeFlags: +arctic}
+    }
+    { 
+      id: pl-arcticHunter
+      title: txt-pl-arcticHunter-title
+      health: 6
+      capacity: 2
+      flags: +porter +humanoid +arcticHunter
+      debugCategory: Modding
+      variations: [
+        {
+          gender: male
+          sprite: sprite_1_male
+          portrait: face_1_male
+          miniSprite: miniSprite_1_male
+          name: native
+        }
+        {
+          gender: female
+          sprite: sprite_1_female
+          portrait: face_1_female
+          miniSprite: miniSprite_1_female
+          name: native
+        }
+        {
+          gender: male
+          sprite: sprite_2_male
+          portrait: face_1_male
+          miniSprite: miniSprite_1_male
+          name: native
+        }
+        {
+          gender: female
+          sprite: sprite_2_female
+          portrait: face_2_female
+          miniSprite: miniSprite_2_female
+          name: native
+        }
+        {
+          gender: male
+          sprite: sprite_3_male
+          portrait: face_3_male
+          miniSprite: miniSprite_3_male
+          name: native
+        }
+        {
+          gender: female
+          sprite: sprite_3_female
+          portrait: face_3_female
+          miniSprite: miniSprite_3_female
+          name: native
+        }
+      ]
+      spawnEvents: {
+        partyEvents: [
+          {
+            select: [ 
+              {
+                slots: 3
+                setStatus: +acrophobia
+              }
+              {
+                slots: 2
+                setStatus: +superstitious
+              }
+              {
+                slots: 10
+              }
+            ]
+          } 
+          {
+            select: [ 
+              {
+                slots: 2
+                setCharFlags: +spiritual
+              }
+              {
+                slots: 3
+                setCharFlags: +brave
+              }
+              {
+                slots: 1
+                setCharFlags: +moody
+              }
+            ]
+          }
+        ]
+      }
+      levels: [
+        { 
+          statuses: st-goodRep st-pathfinder-1
+          dice: dc-attack-1
+        }
+        { 
+          statuses: st-goodRep st-pathfinder-2
+          dice: dc-attack-1
+
+        }
+        { 
+          statuses: st-goodRep st-pathfinder-3
+          dice: dc-attack-1 dc-support-1
+
+        }
+        {
+          statuses: st-goodRep st-pathfinder-4
+          dice: dc-attack-2 dc-support-1
+        }
+      ]
+    }
+    {
+      targetId: +evt-harbor-recruit-select::select
+      slots: 1
+      ref: evt-harbor-recruit-arcticHunter
+    }
+    {
+      id: evt-harbor-recruit-arcticHunter
+      npc: pl-arcticHunter
+      npcEvents: {
+        actions: {
+          alwaysShown: true
+          actionText: txt-evt-harbor-recruit-arcticHunter-action
+          setPartyFlags: +recruitedSomebody
+          addNPC: true
+          chat: cl-join
+          text: txt-evt-harbor-recruit-arcticHunter
+          select: evt-harbor-recruit
+        }
+      }
+      charEvents: { 
+        count: all
+        reqCharFlags: -arcticHunter
+      }
+    }
+    {
+      targetId: +evt-village-recruit-select-humanoid::select
+      slots: 2
+      ref: evt-village-recruit-select-humanoid-arcticHunter
+    }
+    {
+      id: evt-village-recruit-select-humanoid-arcticHunter
+      npc: pl-arcticHunter
+      reqBiomeFlags: +arctic
+      npcEvents: {
+        actions: {
+          alwaysShown: true
+          actionText: txt-evt-village-recruit-select-humanoid-arcticHunter-action
+          setPartyFlags: +recruitedSomebody
+          addNPC: true
+          chat: cl-join
+          text: txt-evt-village-recruit-select-humanoid-arcticHunter
+          select: evt-village-recruit
+        }
+      }
+      charEvents: { 
+        count: all
+        reqCharFlags: -arcticHunter
+      }
+    }
+  ]
+}
