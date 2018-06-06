@@ -1,0 +1,183 @@
+{"frames": [
+
+{
+	"filename": "hud_button_dice_roll_1.png",
+	"frame": {"x":448,"y":0,"w":93,"h":74},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":93,"h":74},
+	"sourceSize": {"w":93,"h":74},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "hud_button_dice_roll_2.png",
+	"frame": {"x":541,"y":0,"w":93,"h":74},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":93,"h":74},
+	"sourceSize": {"w":93,"h":74},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "hud_celebration_title_1.png",
+	"frame": {"x":0,"y":0,"w":286,"h":110},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":286,"h":110},
+	"sourceSize": {"w":286,"h":110},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "hud_celebration_title_2.png",
+	"frame": {"x":634,"y":0,"w":123,"h":44},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":123,"h":44},
+	"sourceSize": {"w":123,"h":44},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "hud_char_auction.png",
+	"frame": {"x":757,"y":0,"w":43,"h":62},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":62},
+	"sourceSize": {"w":43,"h":62},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "hud_char_museum.png",
+	"frame": {"x":800,"y":0,"w":43,"h":62},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":62},
+	"sourceSize": {"w":43,"h":62},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "hud_escaped_title_1.png",
+	"frame": {"x":423,"y":74,"w":114,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":114,"h":23},
+	"sourceSize": {"w":114,"h":23},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "hud_expeditionStart_1.png",
+	"frame": {"x":831,"y":85,"w":12,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":12,"h":23},
+	"sourceSize": {"w":12,"h":23},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "hud_expeditionStart_2.png",
+	"frame": {"x":816,"y":62,"w":16,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":23},
+	"sourceSize": {"w":16,"h":23},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "hud_expeditionStart_3.png",
+	"frame": {"x":799,"y":85,"w":16,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":24},
+	"sourceSize": {"w":16,"h":24},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "hud_expeditionStart_4.png",
+	"frame": {"x":782,"y":62,"w":17,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":17,"h":24},
+	"sourceSize": {"w":17,"h":24},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "hud_expeditionStart_5.png",
+	"frame": {"x":815,"y":85,"w":16,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":24},
+	"sourceSize": {"w":16,"h":24},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "hud_expeditionStart_6.png",
+	"frame": {"x":799,"y":62,"w":17,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":17,"h":23},
+	"sourceSize": {"w":17,"h":23},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "hud_expeditionStart_7.png",
+	"frame": {"x":782,"y":86,"w":17,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":17,"h":24},
+	"sourceSize": {"w":17,"h":24},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "hud_expeditionStart_expedition.png",
+	"frame": {"x":651,"y":66,"w":131,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":131,"h":40},
+	"sourceSize": {"w":131,"h":40},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "hud_expeditionStart_line.png",
+	"frame": {"x":286,"y":74,"w":137,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":137,"h":29},
+	"sourceSize": {"w":137,"h":29},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "hud_gameOver_title_1.png",
+	"frame": {"x":634,"y":44,"w":115,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":115,"h":22},
+	"sourceSize": {"w":115,"h":22},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "hud_success_title_1.png",
+	"frame": {"x":537,"y":74,"w":114,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":114,"h":23},
+	"sourceSize": {"w":114,"h":23},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "hud_title.png",
+	"frame": {"x":286,"y":0,"w":162,"h":74},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":162,"h":74},
+	"sourceSize": {"w":162,"h":74},
+	"pivot": {"x":0.5,"y":0.5}
+}],
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "loca_pictureFonts_CHN.png",
+	"format": "RGBA8888",
+	"size": {"w":878,"h":110},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:e478b1218c42dee1b9a5cd9cbf170fdb:a0bce911f939bc0ec15dbc79742eebf6:bf15c18236509cfc89c90855a26daa02$"
+}
+}

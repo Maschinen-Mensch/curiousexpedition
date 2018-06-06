@@ -1,0 +1,462 @@
+{"frames": [
+
+{
+	"filename": "emy_trex_1.png",
+	"frame": {"x":0,"y":0,"w":122,"h":68},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":122,"h":68},
+	"sourceSize": {"w":122,"h":68},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_anm_buckwheat_1.png",
+	"frame": {"x":32,"y":237,"w":12,"h":8},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":12,"h":8},
+	"sourceSize": {"w":12,"h":8},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_anm_buffalo_1.png",
+	"frame": {"x":63,"y":205,"w":37,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":28},
+	"sourceSize": {"w":37,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_anm_buffalo_2.png",
+	"frame": {"x":71,"y":176,"w":37,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":28},
+	"sourceSize": {"w":37,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_anm_buffalo_crates.png",
+	"frame": {"x":100,"y":204,"w":37,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":28},
+	"sourceSize": {"w":37,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_anm_buffalo_saddle.png",
+	"frame": {"x":108,"y":176,"w":37,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":28},
+	"sourceSize": {"w":37,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_anm_camel_1.png",
+	"frame": {"x":78,"y":68,"w":44,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":36},
+	"sourceSize": {"w":44,"h":36},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_anm_camel_2.png",
+	"frame": {"x":0,"y":171,"w":44,"h":34},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":34},
+	"sourceSize": {"w":44,"h":34},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_anm_camel_crates.png",
+	"frame": {"x":78,"y":104,"w":44,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":36},
+	"sourceSize": {"w":44,"h":36},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_anm_camel_saddle.png",
+	"frame": {"x":75,"y":140,"w":44,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":36},
+	"sourceSize": {"w":44,"h":36},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_anm_chasmosaurus_1.png",
+	"frame": {"x":122,"y":40,"w":78,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":78,"h":40},
+	"sourceSize": {"w":78,"h":40},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_anm_chasmosaurus_crates.png",
+	"frame": {"x":122,"y":80,"w":67,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":67,"h":42},
+	"sourceSize": {"w":67,"h":42},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_anm_chasmosaurus_saddle.png",
+	"frame": {"x":0,"y":68,"w":78,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":78,"h":40},
+	"sourceSize": {"w":78,"h":40},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_anm_dog_1.png",
+	"frame": {"x":0,"y":237,"w":18,"h":13},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":18,"h":13},
+	"sourceSize": {"w":18,"h":13},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_anm_donkey_1.png",
+	"frame": {"x":44,"y":184,"w":27,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":21},
+	"sourceSize": {"w":27,"h":21},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_anm_donkey_2.png",
+	"frame": {"x":121,"y":232,"w":27,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":21},
+	"sourceSize": {"w":27,"h":21},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_anm_donkey_3.png",
+	"frame": {"x":229,"y":187,"w":27,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":21},
+	"sourceSize": {"w":27,"h":21},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_anm_donkey_crates.png",
+	"frame": {"x":221,"y":208,"w":27,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":21},
+	"sourceSize": {"w":27,"h":21},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_anm_donkey_saddle.png",
+	"frame": {"x":221,"y":229,"w":27,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":21},
+	"sourceSize": {"w":27,"h":21},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_anm_elephant_1.png",
+	"frame": {"x":0,"y":108,"w":57,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":57,"h":36},
+	"sourceSize": {"w":57,"h":36},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_anm_gorilla_1.png",
+	"frame": {"x":33,"y":205,"w":30,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":29},
+	"sourceSize": {"w":30,"h":29},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_anm_husky_1.png",
+	"frame": {"x":57,"y":108,"w":18,"h":15},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":18,"h":15},
+	"sourceSize": {"w":18,"h":15},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_anm_husky_2.png",
+	"frame": {"x":57,"y":123,"w":18,"h":15},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":18,"h":15},
+	"sourceSize": {"w":18,"h":15},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_anm_husky_3.png",
+	"frame": {"x":57,"y":138,"w":18,"h":15},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":18,"h":15},
+	"sourceSize": {"w":18,"h":15},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_anm_husky_4.png",
+	"frame": {"x":49,"y":169,"w":18,"h":15},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":18,"h":15},
+	"sourceSize": {"w":18,"h":15},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_anm_hyena_1.png",
+	"frame": {"x":49,"y":153,"w":25,"h":16},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":25,"h":16},
+	"sourceSize": {"w":25,"h":16},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_anm_luis.png",
+	"frame": {"x":18,"y":237,"w":14,"h":11},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":14,"h":11},
+	"sourceSize": {"w":14,"h":11},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_anm_parasaurolophus_1.png",
+	"frame": {"x":189,"y":81,"w":67,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":67,"h":42},
+	"sourceSize": {"w":67,"h":42},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_anm_parasaurolophus_crates.png",
+	"frame": {"x":122,"y":122,"w":67,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":67,"h":42},
+	"sourceSize": {"w":67,"h":42},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_anm_parasaurolophus_saddle.png",
+	"frame": {"x":189,"y":123,"w":67,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":67,"h":42},
+	"sourceSize": {"w":67,"h":42},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_anm_polarBear_1.png",
+	"frame": {"x":137,"y":204,"w":40,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":24},
+	"sourceSize": {"w":40,"h":24},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_anm_polarBear_saddle.png",
+	"frame": {"x":148,"y":228,"w":40,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":24},
+	"sourceSize": {"w":40,"h":24},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_anm_pug_1.png",
+	"frame": {"x":119,"y":164,"w":11,"h":7},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":11,"h":7},
+	"sourceSize": {"w":11,"h":7},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_anm_pug_2.png",
+	"frame": {"x":130,"y":164,"w":11,"h":7},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":11,"h":7},
+	"sourceSize": {"w":11,"h":7},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_anm_pug_3.png",
+	"frame": {"x":32,"y":245,"w":12,"h":7},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":12,"h":7},
+	"sourceSize": {"w":12,"h":7},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_anm_raptor_1.png",
+	"frame": {"x":204,"y":27,"w":49,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":49,"h":27},
+	"sourceSize": {"w":49,"h":27},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_anm_raptor_2.png",
+	"frame": {"x":200,"y":54,"w":49,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":49,"h":27},
+	"sourceSize": {"w":49,"h":27},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_anm_raptor_crates.png",
+	"frame": {"x":204,"y":0,"w":51,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":51,"h":27},
+	"sourceSize": {"w":51,"h":27},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_anm_raptor_saddle.png",
+	"frame": {"x":0,"y":144,"w":49,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":49,"h":27},
+	"sourceSize": {"w":49,"h":27},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_anm_sabertooth_white_1.png",
+	"frame": {"x":145,"y":164,"w":44,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":23},
+	"sourceSize": {"w":44,"h":23},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_anm_tiger_1.png",
+	"frame": {"x":79,"y":233,"w":42,"h":17},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":42,"h":17},
+	"sourceSize": {"w":42,"h":17},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_anm_tiger_battleCat.png",
+	"frame": {"x":145,"y":187,"w":42,"h":17},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":42,"h":17},
+	"sourceSize": {"w":42,"h":17},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_anm_tiger_white.png",
+	"frame": {"x":187,"y":187,"w":42,"h":17},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":42,"h":17},
+	"sourceSize": {"w":42,"h":17},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_anm_tortoise_1.png",
+	"frame": {"x":177,"y":204,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_anm_tortoise_2.png",
+	"frame": {"x":189,"y":165,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_anm_tortoise_crates.png",
+	"frame": {"x":222,"y":165,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_anm_tortoise_saddle.png",
+	"frame": {"x":188,"y":226,"w":33,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":22},
+	"sourceSize": {"w":33,"h":22},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_anm_trex_saddle.png",
+	"frame": {"x":0,"y":205,"w":33,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":32},
+	"sourceSize": {"w":33,"h":32},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_anm_triceratops_1.png",
+	"frame": {"x":122,"y":0,"w":82,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":82,"h":40},
+	"sourceSize": {"w":82,"h":40},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_anm_wolf_arctic_1.png",
+	"frame": {"x":44,"y":234,"w":35,"h":19},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":19},
+	"sourceSize": {"w":35,"h":19},
+	"pivot": {"x":0.5,"y":0.5}
+}],
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "_res_anm.png",
+	"format": "RGBA8888",
+	"size": {"w":256,"h":253},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:5a70d7a9997195db3beaa61f246e3dae:b5578b12635c3ac37a0a14fddf012b53:69a654eb677d528341a9234fe9aeb846$"
+}
+}

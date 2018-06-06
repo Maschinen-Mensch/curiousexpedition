@@ -1,0 +1,705 @@
+{"frames": [
+
+{
+	"filename": "res_npc_arcticResearcher_1.png",
+	"frame": {"x":29,"y":100,"w":9,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":9,"h":22},
+	"sourceSize": {"w":9,"h":22},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_arcticResearcher_10.png",
+	"frame": {"x":36,"y":31,"w":9,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":9,"h":23},
+	"sourceSize": {"w":9,"h":23},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_arcticResearcher_11.png",
+	"frame": {"x":34,"y":77,"w":9,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":9,"h":22},
+	"sourceSize": {"w":9,"h":22},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_arcticResearcher_12.png",
+	"frame": {"x":39,"y":100,"w":9,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":9,"h":22},
+	"sourceSize": {"w":9,"h":22},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_arcticResearcher_2.png",
+	"frame": {"x":147,"y":52,"w":9,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":9,"h":23},
+	"sourceSize": {"w":9,"h":23},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_arcticResearcher_3.png",
+	"frame": {"x":157,"y":52,"w":9,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":9,"h":23},
+	"sourceSize": {"w":9,"h":23},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_arcticResearcher_4.png",
+	"frame": {"x":44,"y":77,"w":9,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":9,"h":22},
+	"sourceSize": {"w":9,"h":22},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_arcticResearcher_5.png",
+	"frame": {"x":49,"y":100,"w":9,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":9,"h":22},
+	"sourceSize": {"w":9,"h":22},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_arcticResearcher_6.png",
+	"frame": {"x":167,"y":52,"w":9,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":9,"h":23},
+	"sourceSize": {"w":9,"h":23},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_arcticResearcher_7.png",
+	"frame": {"x":98,"y":99,"w":9,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":9,"h":23},
+	"sourceSize": {"w":9,"h":23},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_arcticResearcher_8.png",
+	"frame": {"x":54,"y":77,"w":9,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":9,"h":22},
+	"sourceSize": {"w":9,"h":22},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_arcticResearcher_9.png",
+	"frame": {"x":100,"y":75,"w":9,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":9,"h":23},
+	"sourceSize": {"w":9,"h":23},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_celebration_1.png",
+	"frame": {"x":168,"y":27,"w":10,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":10,"h":24},
+	"sourceSize": {"w":10,"h":24},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_celebration_10.png",
+	"frame": {"x":108,"y":99,"w":9,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":9,"h":23},
+	"sourceSize": {"w":9,"h":23},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_celebration_11.png",
+	"frame": {"x":91,"y":77,"w":8,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":8,"h":21},
+	"sourceSize": {"w":8,"h":21},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_celebration_12.png",
+	"frame": {"x":0,"y":45,"w":9,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":9,"h":30},
+	"sourceSize": {"w":9,"h":30},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_celebration_13.png",
+	"frame": {"x":58,"y":54,"w":9,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":9,"h":21},
+	"sourceSize": {"w":9,"h":21},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_celebration_14.png",
+	"frame": {"x":34,"y":55,"w":11,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":11,"h":21},
+	"sourceSize": {"w":11,"h":21},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_celebration_15.png",
+	"frame": {"x":132,"y":27,"w":11,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":11,"h":24},
+	"sourceSize": {"w":11,"h":24},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_celebration_2.png",
+	"frame": {"x":120,"y":77,"w":9,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":9,"h":21},
+	"sourceSize": {"w":9,"h":21},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_celebration_3.png",
+	"frame": {"x":159,"y":76,"w":9,"h":18},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":9,"h":18},
+	"sourceSize": {"w":9,"h":18},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_celebration_4.png",
+	"frame": {"x":179,"y":86,"w":8,"h":14},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":8,"h":14},
+	"sourceSize": {"w":8,"h":14},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_celebration_5.png",
+	"frame": {"x":110,"y":75,"w":9,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":9,"h":23},
+	"sourceSize": {"w":9,"h":23},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_celebration_6.png",
+	"frame": {"x":130,"y":77,"w":9,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":9,"h":21},
+	"sourceSize": {"w":9,"h":21},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_celebration_7.png",
+	"frame": {"x":68,"y":53,"w":11,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":11,"h":23},
+	"sourceSize": {"w":11,"h":23},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_celebration_8.png",
+	"frame": {"x":0,"y":76,"w":11,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":11,"h":26},
+	"sourceSize": {"w":11,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_celebration_9.png",
+	"frame": {"x":140,"y":77,"w":9,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":9,"h":21},
+	"sourceSize": {"w":9,"h":21},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_gentleman.png",
+	"frame": {"x":80,"y":53,"w":11,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":11,"h":23},
+	"sourceSize": {"w":11,"h":23},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_ghostie_1.png",
+	"frame": {"x":188,"y":94,"w":8,"h":14},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":8,"h":14},
+	"sourceSize": {"w":8,"h":14},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_ghostie_2.png",
+	"frame": {"x":147,"y":99,"w":8,"h":15},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":8,"h":15},
+	"sourceSize": {"w":8,"h":15},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_ghostie_3.png",
+	"frame": {"x":179,"y":69,"w":8,"h":16},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":8,"h":16},
+	"sourceSize": {"w":8,"h":16},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_ghostie_4.png",
+	"frame": {"x":156,"y":98,"w":8,"h":15},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":8,"h":15},
+	"sourceSize": {"w":8,"h":15},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_ghostie_5.png",
+	"frame": {"x":165,"y":95,"w":7,"h":11},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":7,"h":11},
+	"sourceSize": {"w":7,"h":11},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_ghostie_6.png",
+	"frame": {"x":177,"y":52,"w":10,"h":16},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":10,"h":16},
+	"sourceSize": {"w":10,"h":16},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_ghostie_7.png",
+	"frame": {"x":188,"y":77,"w":9,"h":16},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":9,"h":16},
+	"sourceSize": {"w":9,"h":16},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_lizard_1.png",
+	"frame": {"x":67,"y":0,"w":22,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":22,"h":26},
+	"sourceSize": {"w":22,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_lizard_10.png",
+	"frame": {"x":14,"y":31,"w":21,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":21,"h":20},
+	"sourceSize": {"w":21,"h":20},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_lizard_11.png",
+	"frame": {"x":90,"y":0,"w":22,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":22,"h":26},
+	"sourceSize": {"w":22,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_lizard_12.png",
+	"frame": {"x":12,"y":73,"w":21,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":21,"h":26},
+	"sourceSize": {"w":21,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_lizard_13.png",
+	"frame": {"x":46,"y":27,"w":21,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":21,"h":26},
+	"sourceSize": {"w":21,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_lizard_14.png",
+	"frame": {"x":0,"y":103,"w":11,"h":15},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":11,"h":15},
+	"sourceSize": {"w":11,"h":15},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_lizard_2.png",
+	"frame": {"x":113,"y":0,"w":22,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":22,"h":26},
+	"sourceSize": {"w":22,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_lizard_3.png",
+	"frame": {"x":136,"y":0,"w":22,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":22,"h":26},
+	"sourceSize": {"w":22,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_lizard_4.png",
+	"frame": {"x":14,"y":0,"w":26,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":30},
+	"sourceSize": {"w":26,"h":30},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_lizard_5.png",
+	"frame": {"x":41,"y":0,"w":25,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":25,"h":26},
+	"sourceSize": {"w":25,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_lizard_6.png",
+	"frame": {"x":159,"y":0,"w":22,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":22,"h":26},
+	"sourceSize": {"w":22,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_lizard_7.png",
+	"frame": {"x":83,"y":27,"w":17,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":17,"h":21},
+	"sourceSize": {"w":17,"h":21},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_lizard_8.png",
+	"frame": {"x":101,"y":27,"w":17,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":17,"h":21},
+	"sourceSize": {"w":17,"h":21},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_lizard_9.png",
+	"frame": {"x":10,"y":52,"w":21,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":21,"h":20},
+	"sourceSize": {"w":21,"h":20},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_nativeEscortHusband.png",
+	"frame": {"x":114,"y":51,"w":10,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":10,"h":23},
+	"sourceSize": {"w":10,"h":23},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_nativeGhost_1.png",
+	"frame": {"x":179,"y":27,"w":8,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":8,"h":24},
+	"sourceSize": {"w":8,"h":24},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_nativeGhost_2.png",
+	"frame": {"x":138,"y":99,"w":8,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":8,"h":23},
+	"sourceSize": {"w":8,"h":23},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_nativeGhost_3.png",
+	"frame": {"x":144,"y":27,"w":11,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":11,"h":24},
+	"sourceSize": {"w":11,"h":24},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_nativeGhost_4.png",
+	"frame": {"x":0,"y":0,"w":13,"h":44},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":13,"h":44},
+	"sourceSize": {"w":13,"h":44},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_saddleArtisan_1.png",
+	"frame": {"x":150,"y":76,"w":8,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":8,"h":21},
+	"sourceSize": {"w":8,"h":21},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_slaver_1.png",
+	"frame": {"x":156,"y":27,"w":11,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":11,"h":24},
+	"sourceSize": {"w":11,"h":24},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_trader_1.png",
+	"frame": {"x":125,"y":52,"w":10,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":10,"h":23},
+	"sourceSize": {"w":10,"h":23},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_village1_1.png",
+	"frame": {"x":182,"y":0,"w":15,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":15,"h":24},
+	"sourceSize": {"w":15,"h":24},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_village1_2.png",
+	"frame": {"x":68,"y":27,"w":14,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":14,"h":25},
+	"sourceSize": {"w":14,"h":25},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_village1_3.png",
+	"frame": {"x":136,"y":52,"w":10,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":10,"h":24},
+	"sourceSize": {"w":10,"h":24},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_village1_4.png",
+	"frame": {"x":64,"y":77,"w":8,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":8,"h":22},
+	"sourceSize": {"w":8,"h":22},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_village1_5.png",
+	"frame": {"x":73,"y":77,"w":8,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":8,"h":22},
+	"sourceSize": {"w":8,"h":22},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_village1_6.png",
+	"frame": {"x":12,"y":100,"w":16,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":22},
+	"sourceSize": {"w":16,"h":22},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_village1_7.png",
+	"frame": {"x":188,"y":25,"w":9,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":9,"h":25},
+	"sourceSize": {"w":9,"h":25},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_village1_8.png",
+	"frame": {"x":188,"y":51,"w":9,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":9,"h":25},
+	"sourceSize": {"w":9,"h":25},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_village2_1.png",
+	"frame": {"x":92,"y":49,"w":10,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":10,"h":25},
+	"sourceSize": {"w":10,"h":25},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_village2_2.png",
+	"frame": {"x":103,"y":49,"w":10,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":10,"h":25},
+	"sourceSize": {"w":10,"h":25},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_village2_3.png",
+	"frame": {"x":82,"y":77,"w":8,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":8,"h":22},
+	"sourceSize": {"w":8,"h":22},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_village2_4.png",
+	"frame": {"x":89,"y":100,"w":8,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":8,"h":22},
+	"sourceSize": {"w":8,"h":22},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_village2_5.png",
+	"frame": {"x":46,"y":54,"w":11,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":11,"h":21},
+	"sourceSize": {"w":11,"h":21},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_village2_6.png",
+	"frame": {"x":59,"y":100,"w":9,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":9,"h":22},
+	"sourceSize": {"w":9,"h":22},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_village2_7.png",
+	"frame": {"x":69,"y":100,"w":9,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":9,"h":22},
+	"sourceSize": {"w":9,"h":22},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_village4_1.png",
+	"frame": {"x":118,"y":99,"w":9,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":9,"h":23},
+	"sourceSize": {"w":9,"h":23},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_village4_2.png",
+	"frame": {"x":79,"y":100,"w":9,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":9,"h":22},
+	"sourceSize": {"w":9,"h":22},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_village4_3.png",
+	"frame": {"x":119,"y":27,"w":12,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":12,"h":23},
+	"sourceSize": {"w":12,"h":23},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_village4_4.png",
+	"frame": {"x":128,"y":99,"w":9,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":9,"h":23},
+	"sourceSize": {"w":9,"h":23},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_village4_5.png",
+	"frame": {"x":169,"y":76,"w":9,"h":17},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":9,"h":17},
+	"sourceSize": {"w":9,"h":17},
+	"pivot": {"x":0.5,"y":0.5}
+}],
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "res_npc.png",
+	"format": "RGBA8888",
+	"size": {"w":197,"h":122},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:a27bec3d7a1e02e8fec4d0428f18aff6:a2747e2a7bef777465cb522734fb9e2e:4f195c563be28024ce5695ff3f796edd$"
+}
+}
