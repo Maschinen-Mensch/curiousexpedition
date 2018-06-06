@@ -314,22 +314,6 @@
     isAbsolute: false
   }
   {
-    id: pt-void
-    timer: [0.2, 0.4]
-    velX: [-20, 20]
-    velY: [-15, -25]
-    velScale: -0.25
-    scale: 1.5
-    offsetY: [-10, 10]
-    offsetX: [-1, 10]
-    count: 2
-    color: black
-    weight: 60
-    maxTime: 1.2
-    fadeStart: 0
-    isAbsolute: false
-  }
-  {
     id: pt-flood
     timer: [0.2, 0.4]
     velX: [-20, 20]
@@ -1121,21 +1105,6 @@
     count: 3
     extends: pt-travel-base
     imgSrc: [pt_travel_desert_1.png, pt_travel_desert_2.png]
-  }
-  {
-    id: pt-travel-desert
-    velX: [-1, 1]
-    velY: [-1, 1]
-    velScale: -0.25
-    scale: 1.5
-    ffsetY: [-4, 4]
-    offsetX: [-4, 4]
-    count: 2
-    color: "#e1debb"
-    weight: 0
-    maxTime: 5.5
-    fadeStart: 1.5
-    isAbsolute: false
   }
   {
     id: pt-travel-sulfur

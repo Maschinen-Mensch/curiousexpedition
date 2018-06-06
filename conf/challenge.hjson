@@ -1160,13 +1160,6 @@
     sound: sfx_combat_teslagun_1
   }
   {
-    id: dp-attack45
-    name: txt-attack-name-45
-    faces: lokiGun
-    damage: 2
-    sound: sfx_combat_teslagun_1
-  }
-  {
     id: dp-attack46
     name: txt-attack-name-46
     faces: spear sword

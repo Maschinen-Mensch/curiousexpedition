@@ -420,7 +420,7 @@ var staticConfig =
   enableAchievements: true,
   showMods: true,
   showReport: false,
-  footerName: "1.3.9.9",
+  footerName: "1.3.10.0",
   sanityCheckEvents: true,
 
   // is converted to config.diaryText at run-time
@@ -498,6 +498,12 @@ var staticConfig =
       themedSmall: "25px Averia",
       technicalLarge: "31px Mallanna",
       technicalSmall: "20px Mallanna"
+    },
+    {
+      themedLarge: "72px Averia",
+      themedSmall: "50px Averia",
+      technicalLarge: "62px Mallanna",
+      technicalSmall: "40px Mallanna"
     }
   ],
 
@@ -548,8 +554,17 @@ var config = {
   maxExpedition: 5,
 
   balloonOffsetY: 120,
+  
+  normalGraphicsSettings: {
+    showCloud: true,
+    liveTileEmitterTickMultiplier: 1.0
+  },
+  lowGraphicsSettings: {
+    showCloud: false,
+    liveTileEmitterTickMultiplier: 0.3
+  },
 
-  entities: [],
+  entities: {},
 
   chat: {
     idleDelay: 2, // time without message before new idle message is shown
@@ -1207,11 +1222,13 @@ var config = {
       saving: "txt-help-settings-saving",
       quit: "txt-help-settings-quit",
       restartDemo: "txt-help-demo-restart",
+      lowGraphics: "txt-help-settings-low-graphics",
 
       scale1: ["txt-help-settings-scale1", "txt-help-settings-scale-refuse"],
       scale2: ["txt-help-settings-scale2", "txt-help-settings-scale-refuse"],
       scale3: ["txt-help-settings-scale3", "txt-help-settings-scale-refuse"],
-      scaleStrech: ["txt-help-settings-scaleS", "txt-help-settings-scale-refuse"],
+      scale4: ["txt-help-settings-scale4", "txt-help-settings-scale-refuse"],
+      scaleStrech: ["txt-help-settings-scaleS", "txt-help-settings-scaleS-expensive", "txt-help-settings-scale-refuse"],
     }
   },
 

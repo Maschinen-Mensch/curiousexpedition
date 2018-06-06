@@ -562,11 +562,15 @@ var debug = {
   showConnected: false,
   showSea: false,
   showPathFinder: false,
-  showTileCoords: false, // if true, tile coords are shown in info field
+  showTileCoords: true, // if true, tile coords are shown in info field
   showTriangulationCapture: false,
   showMapLinesDebug: false,
   showCoordLines: false,
   showSprawls: false,
+
+  onlyDrawPlayerBiome: false,   // if true, only the biome that contains the player will be rendered
+  logBiomeRenderStats: false,   // logs biome rendering stats to the console every frame that anything is rendered
+  logGeneralRenderStats: false,
 
   testParticle: 'pt-fire', // trigger this particle when pressing 'u'
   testParticleText: 'Sanity +50',
@@ -574,7 +578,7 @@ var debug = {
   skipExitWarning: true,
   skipPreRoll: true,
 
-  showDebugBar: false,
+  showDebugBar: true,
   skipStartEvents: false,
   autoLevel: false, // automatically level up party for higher expeditions
   

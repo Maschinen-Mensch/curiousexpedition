@@ -1,8 +1,25 @@
-# 1.3.9
+# 1.3.10
+
+* Added Spanish, Polish and Turkish translations
+* Performance and Rendering
+  * If the game detects that it has no GPU, scaling will default to off
+  * Added support for 4K UHD Resolution (3840 x 2160): 1:6 pixel ratio
+  * Can now toggle Stretching setting independently of Scaling
+  * Added warning that scaling is expensive
+  * Improved rendering performance
+  * Improved loading times
+* Bugfixes
+  * Fixed issues with mod language loading and improved logging
+  * Fix for Forsaken shrine aftermaths not removing angry natives
+  * Fixed village funeral event not allowing extra options when you have a missionary in the party
+  * Fix for mousewheel not working on mac
+  * Fix for treasure maps not being rendered correctly after loading a savegame
+
+# 1.3.9 (May 25th 2018)
 
 * Content
   * Dendrophobia now adds a "Fear" status when walking in wood or jungle tiles without machetes. Affected characters lose -1 loyalty if staying inside for too long.
-  * Added new Game Over tips (English and German)
+  * Added new Game Over tips
 * Modding
   * Items can now add statuses to the explorer party when in the inventory with the "addStatus" keyword
   * Added 'Show Flags Info' to Modding Dev Tools, which displays all flags on tiles and characters when enabled

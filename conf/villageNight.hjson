@@ -712,7 +712,7 @@
   }
   {
     id: evt-village-rest-funeral-bless
-    actionText: txt-evt-village-rest-funeral-bless-action
+    actionText: txt-evt-village-rest-funeral-missionary-bless-action
     reqDice: mind
     winEvents: {
       text: txt-evt-village-rest-funeral-missionary-bless-success
@@ -727,7 +727,7 @@
   }
   {
     id: evt-village-rest-funeral-noBless
-    actionText: txt-evt-village-rest-funeral-noBless-action
+    actionText: txt-evt-village-rest-funeral-missionary-noBless-action
     text: txt-evt-village-rest-funeral-missionary-noBless
     loyalty: -1
     select: evt-village-actions-night
@@ -737,9 +737,11 @@
     text: txt-evt-village-rest-funeral
     select: [
       {
-        reqCharFlags: +missionary
-        text: txt-evt-village-rest-funeral-missionary
-        actions: [evt-village-rest-funeral-bless, evt-village-rest-funeral-noBless]
+        charEvents: {
+            reqCharFlags: +missionary
+            text: txt-evt-village-rest-funeral-missionary
+            actions: [evt-village-rest-funeral-bless, evt-village-rest-funeral-noBless]
+          }        
       }
       {prio: 1, ref: evt-village-actions-night}
     ]

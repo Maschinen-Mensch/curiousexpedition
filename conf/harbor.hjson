@@ -9,7 +9,7 @@
   }
   {
     id: evt-harbor-eventSelection
-    actionText: Continue
+    actionText: txt-base-continue
     showImage: {src: evt_spec_ship_1.png}
     partyEvents: [
       {

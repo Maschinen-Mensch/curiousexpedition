@@ -106,7 +106,7 @@
         }
       }
       {
-        actionText: Do nothing
+        actionText: txt-evt-action-nothing
         text: txt-evt-cave-yeti-doNothing
         actions: {
           actionText: txt-evt-cave-ghostsQuest-action
@@ -212,7 +212,7 @@
             select: evt-cave-yeti-recruit
           }
           {
-            actionText: Improvise
+            actionText: txt-evt-cave-yeti-improvise
             reqDice: mind stability
             winEvents: {ref: evt-cave-yeti-recruit}
             failEvents: {
