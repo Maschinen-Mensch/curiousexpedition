@@ -9,11 +9,15 @@
         defaultLang: en
         #preview:
         #description:
-
         #Probs
-        #-Life Anzeige unter Natives funktioniert nicht
-        #-fix "Like Paris in summer" for vapour aftermath
-        #-War Hog change dice
+        #-Followed event eliminate???
+        #-Fix up left native in fight
+        #.Fix desert tilespawn by village
+        #-Seals for Slaves, Dawg!
+        #-Create custom Names for Apes based on Greek Roman Mythology
+        #-Quartermaster: better banana bonus (Steal from Cultist)
+        #-change LokiGun
+        #-dem gorillaz thou
         #-old camp inventory
         #-shipwreck inventory
         #-Beast Master + Warhog recruitment no Popup
@@ -21,9 +25,7 @@
         #-Make two big end text when statue is shown: Win or lose!!!!!!!!!!
         #-Ruins potentially not always spawning? Eg Exp. 1!!!!!!
         #-Remove Altars
-        #-Balance Village Humans independently from aggro or better for aggro????
         #-Night event: Natives approaching to trade: eliminate!
-        #-Check all the village enter events for potential problems
         #-Solve Moonstone requirement
         #-Don't forget to check every text
         #-Change all mentions of shrine to ruin
@@ -31,9 +33,7 @@
         #-wife/husband quest
         #-rescue native warrior quest
         #-Change "Museum" to "Palace" instead
-        #-To England! ---text
-        #-Check Perks -Careerist -Arctic Explorer //
-        #-extra bullets in pillage village: eliminate
+        #-Check Perks -Careerist -Arctic Explorer -desert explorer -jungle explorer//
         #-Rename Baton / Spear attacks
         #-Wife quest: works, but back to london???
         #-Outro Pyramid: Golden City!
@@ -294,8 +294,61 @@
                 id: evt-village-notWelcome
                 reqStanding: ..-9
                 text: txt-evt-village-notWelcome
-                select: evt-village-human-fight
+                select: evt-try-to-pacify
             }
+        }
+        {
+            id: evt-try-to-pacify
+            actions: [
+                {
+                reqDice: mind
+                actionText: txt-evt-pacify-action
+                winEvents: {
+                    select: {
+                        text: txt-evt-pacify-success
+                        standing: 5
+                        select: evt-village-human-actions
+                    }
+                }
+                failEvents: {
+                    text: txt-evt-peaceful-enslavement-fail-2
+                    standing: -3
+                    select: evt-village-human-fight
+                }
+                }
+                {
+                reqDice: stability
+                actionText: txt-evt-negotiate-action
+                winEvents: {
+                    select: {
+                        text: txt-evt-negotiate-success
+                        standing: 5
+                        select: evt-village-human-actions
+                    }
+                }
+                failEvents: {
+                    text: txt-evt-peaceful-enslavement-fail-2
+                    standing: -3
+                    select: evt-village-human-fight
+                }
+                }
+                {
+                reqDice: sword
+                actionText: txt-evt-show-of-force-action
+                winEvents: {
+                    select: {
+                        text: txt-evt-show-of-force-success
+                        standing: 5
+                        select: evt-village-human-actions
+                    }
+              }
+              failEvents: {
+                  text: txt-evt-peaceful-enslavement-fail-2
+                  standing: -3
+                select: evt-village-human-fight
+              }
+            }
+            ]
         }
         {
             targetId: +grp-village::group
@@ -745,7 +798,7 @@
                 {
                     optional: true
                     reqLocationFlags: -broken +aftermathPoisonGas
-                    text: txt-evt-shrine-14
+                    text: txt-evt-shrine-14-mod
                 }
                 {
                     optional: true
@@ -1001,7 +1054,7 @@
                 it-rope: 5
                 it-climbingGear: 5
                 it-machete: 10
-                it-metalCube: 1
+                it-dynamite: 5
             }
         }
         {
@@ -1020,25 +1073,41 @@
             flags: +village +villageType_1 +villageType_human +settlement +inhabited
             worldMap: village
             sprite: village_human
-            initItems: {il-trade-village: 6, it-jewels: 1, it-water: 20, il-metaItems: 99}
-            priceTable: village
+            keepReachable: true
+            #initItems: {il-trade-village: 6, it-jewels: 1, it-water: 20, il-metaItems: 99}
+            #priceTable: village
             particle: pt-village-1
-            #spawnEvents: {
-                #replaceTiles: [
-                    #{radius: 2, old: any, new: tl-jungle-thick}
-                   # {radius: 2, old: any, new: tl-mountain, chance: 0.5}
-                    #{radius: 1, old: any, new: tl-jungle-thick}
-                #]
-           #}
+            spawnEvents: [
+                {
+                    reqBiomeFlags: +dry
+                    replaceTiles: [
+                        {range: 2, old: any, new: tl-dry-jungle-thick}
+                        {range: 3, old: any, new: tl-mountain, chance: 0.675}
+                        #{radius: 2, old: any, new: tl-jungle-thick, reqBiomeFlags: +grass}
+                        #{radius: 2, old: any, new: tl-mountain, chance: 0.5}
+                        #{radius: 1, old: any, new: tl-dry-jungle-thick}
+                    ]
+                }
+                {
+                    reqBiomeFlags: +grass
+                    replaceTiles: [
+                        {range: 2, old: any, new: tl-jungle-thick}
+                        {range: 3, old: any, new: tl-mountain, chance: 0.675}
+                        #{radius: 2, old: any, new: tl-jungle-thick, reqBiomeFlags: +grass}
+                        #{radius: 2, old: any, new: tl-mountain, chance: 0.5}
+                        #{radius: 1, old: any, new: tl-dry-jungle-thick}
+                    ]
+                }
+            ]
             setTile: [
-                {ref: tl-grass, reqBiomeFlags: +grass}
-                {ref: tl-dry, reqBiomeFlags: +dry | +desert}
+                    {ref: tl-grass, reqBiomeFlags: +grass}
+                    {ref: tl-dry, reqBiomeFlags: +dry | +desert}
                 ]
-                setNeighbors: [
-                {count: 2, ref: tl-jungle-thick, reqBiomeFlags: +grass}
-                {count: 2, ref: tl-dry-jungle-thick, reqBiomeFlags: +dry}
-                {count: 2, ref: tl-mountain}
-                {ref: tl-river-shallow}
+            setNeighbors: [
+                    {count: 6, ref: tl-jungle-thick, reqBiomeFlags: +grass}
+                    {count: 6, ref: tl-dry-jungle-thick, reqBiomeFlags: +dry}
+                    #{count: 2, ref: tl-mountain}
+                    #{ref: tl-river-shallow}
                 ]
                 actions: evt-village-init
                 sprawlEvents: {id: spr-fire, standing: -3}
@@ -1074,13 +1143,19 @@
                 {
                     actions: [
                     evt-village-anthropology
-                    evt-village-pillage
                     evt-village-huntSlaves
+                    evt-village-pillage
                     evt-village-evict
                     evt-village-leave
                     ]
                 }
             ]
+        }
+        {
+            targetId: /evt-village-main-update::select
+            data: {
+                select: evt-slaver-actions
+            }
         }
         {
             targetId: /evt-village-recruit
@@ -1094,86 +1169,204 @@
             alwaysShown: true
             chat: cl-village-recruit
             partyEvents: [
-            {select: evt-village-setImageDay}
+                {select: evt-village-setImageDay}
             ]
-            actions: {
-            actionText: txt-evt-dismiss-default-action-1
-            select: evt-village-setImageDay-update
+            actions: [
+            {
+                actionText: txt-evt-dismiss-default-action-1
+                select: evt-village-setImageDay-update
             }
+            ]
             select: [
             #{reqStanding: ..1, text: txt-evt-village-recruit-refuse}
-            {
-                prio: 1
-                text: txt-evt-steal-animals-1
-                setLocationFlags: +recruitFail
-                partyEvents: [
-                {select: evt-village-recruit-select-animal, optional: true}
-                ]
-            }
+                {
+                    prio: 1
+                    text: txt-evt-steal-animals-1
+                    setLocationFlags: +recruitFail
+                    partyEvents: [
+                    {select: evt-village-slaverAnimal-actions, optional: true}
+                    ]
+                }
             ]
             }
         }
-        {
-            targetId: /evt-village-recruit-select-animal
-            data: {
-                id: evt-village-recruit-select-animal
-                select: [
-                evt-village-recruit-donkey
-                evt-village-recruit-buffalo
-                evt-village-recruit-camel
+        #{
+            #targetId: /evt-village-recruit-select-animal
+            #data: {
+                #id: evt-village-recruit-select-animal
+                #partyEvents: [
+                #evt-village-recruit-donkey
+                #evt-village-recruit-buffalo
+                #evt-village-recruit-camel
                 #evt-village-recruit-husky
                 #evt-village-recruit-parasaurolophus
                 #evt-village-recruit-chasmosaurus
-                ]
-            }
+                #]
+            #}
+        #}
+        {
+            id: evt-village-buy-moonstone
+            actionText: txt-evt-buy-moonstone-title
+            text: txt-evt-buy-moonstone
+            #setPartyFlags: +recruitedSomebody
+            alwaysShown: true
+            reqItems: {it-slaves: 8..}
+            items: [
+                {it-slaves: -8}
+            ]
+            select: evt-add-moonstone
+            #select: evt-slaver-actions
         }
+        {
+            id: evt-add-moonstone
+            items: [
+                {it-moonStone: 1}
+            ]
+            select: evt-slaver-actions
+        }
+       
         {
             targetId: /evt-village-recruit-donkey
             data: {
-            id: evt-village-recruit-donkey
-            npc: anm-donkey
-            npcEvents: {
-            actions: {
-                actionText: txt-anm-donkey-title
-                text: txt-evt-village-steal-animal
-                setPartyFlags: +recruitedSomebody
-                addNPC: true
-                select: evt-slaver-actions
-            }
-            }
+                actions: [
+                    {
+                        id: evt-village-recruit-donkey
+                        actionText: txt-anm-donkey-title
+                        text: txt-evt-village-steal-animal
+                        setPartyFlags: +recruitedSomebody
+                        alwaysShown: true
+                        addCharacter: anm-donkey
+                        reqItems: {it-slaves: 3..}
+                        items: {it-slaves: -3}
+                        select: evt-slaver-actions
+                    }
+                ]
             }
         }
         {
             targetId: /evt-village-recruit-buffalo
             data: {
-                id: evt-village-recruit-buffalo
-                npc: anm-waterBuffalo
-                npcEvents: {
-                actions: {
-                    actionText: txt-anm-waterBuffalo-title
-                    text: txt-evt-village-steal-animal
-                    setPartyFlags: +recruitedSomebody
-                    addNPC: true
-                    select: evt-slaver-actions
-                }
-                }
+                actions: [
+                    {
+                        id: evt-village-recruit-buffalo
+                        actionText: txt-anm-waterBuffalo-title
+                        text: txt-evt-village-steal-animal
+                        setPartyFlags: +recruitedSomebody
+                        alwaysShown: true
+                        addCharacter: anm-waterBuffalo
+                        reqItems: {it-slaves: 4..}
+                        items: {it-slaves: -4}
+                        select: evt-slaver-actions
+                    }
+                ]
             }
         }
         {
             targetId: /evt-village-recruit-camel
             data: {
-                id: evt-village-recruit-camel
-                npc: anm-camel
-                npcEvents: {
-                actions: {
-                    actionText: txt-anm-camel-title
-                    text: txt-evt-village-steal-animal
-                    setPartyFlags: +recruitedSomebody
-                    addCharacter: anm-camel
-                    select: evt-slaver-actions
-                }
-                }
+                actions: [
+                    {
+                        id: evt-village-recruit-camel
+                        actionText: txt-anm-camel-title
+                        text: txt-evt-village-steal-animal
+                        setPartyFlags: +recruitedSomebody
+                        addCharacter: anm-camel
+                        alwaysShown: true
+                        reqItems: {it-slaves: 5..}
+                        items: {it-slaves: -5}
+                        select: evt-slaver-actions
+                    }
+                ]
             }
+        }
+        {
+            targetId: /evt-village-recruit-parasaurolophus
+            data: {
+                actions: [
+                    {
+                        id: evt-village-recruit-parasaurolophus
+                        actionText: txt-anm-parasaurolophus-title
+                        text: txt-evt-village-steal-animal
+                        setPartyFlags: +recruitedSomebody
+                        addCharacter: anm-parasaurolophus
+                        alwaysShown: true
+                        reqItems: {it-slaves: 8..}
+                        items: {it-slaves: -8}
+                        select: evt-slaver-actions
+                    }
+                ]
+            }
+        }
+        {
+            targetId: /evt-village-recruit-chasmosaurus
+            data: {
+                actions: [
+                    {
+                        id: evt-village-recruit-chasmosaurus
+                        actionText: txt-anm-chasmosaurus-title
+                        text: txt-evt-village-steal-animal
+                        setPartyFlags: +recruitedSomebody
+                        addCharacter: anm-chasmosaurus
+                        alwaysShown: true
+                        reqItems: {it-slaves: 10..}
+                        items: {it-slaves: -10}
+                        select: evt-slaver-actions
+                    }
+                ]
+            }
+        }
+        {
+            id: evt-village-slaverAnimal-actions
+            partyEvents: [
+            {
+                optional: true
+                reqLocationFlags: -beastSet
+                setLocationFlags: +beastSet
+                select: [
+                {slots: 5, setLocationFlags: +beastNormal}
+                {slots: 3, setLocationFlags: +beastSpecial_1}
+                {slots: 1, setLocationFlags: +beastSpecial_2}
+                ]
+            }
+            {
+                optional: true
+                select: [
+                {reqBiomeFlags: -arctic, select: evt-village-recruit-donkey}
+                ]
+            }
+            {
+                optional: true
+                select: [
+                {reqBiomeFlags: -arctic, select: evt-village-recruit-buffalo}
+                ]
+            }
+            {
+                reqLocationFlags: +beastNormal
+                optional: true
+                select: [
+                {reqBiomeFlags: -arctic, select: evt-village-recruit-camel}
+                ]
+            }
+            {
+                reqLocationFlags: +beastSpecial_1
+                optional: true
+                select: [
+                {reqBiomeFlags: -arctic, select: evt-village-recruit-parasaurolophus}
+                {
+                    reqBiomeFlags: +arctic
+                    select: evt-village-beastMaster-recruit-sabertooth-white
+                }
+                ]
+            }
+            {
+                reqLocationFlags: +beastSpecial_2
+                optional: true
+                select: [
+                {reqBiomeFlags: -arctic, select: evt-village-recruit-chasmosaurus}
+                ]
+            }
+            ]
+            #actions: evt-village-main-update
         }
         {
             id: evt-village-anthropology
@@ -1190,7 +1383,7 @@
             id: evt-village-pillage
             alwaysShown: true
             actionText: txt-evt-village-pillage-action
-            standing: -5
+            standing: -3
             select: evt-village-human-pillage-loot
             #reqTileFlags: -restFail
             #select: [
@@ -1213,19 +1406,19 @@
         {   
             id: evt-burn-village
             camShake: {power: 3, length: 1}
-            startSprawl: {ref: spr-fire, radius: 0, power: 6}
+            startSprawl: {ref: spr-fire, radius: 0, power: 4}
         }
         {
             id: evt-village-huntSlaves
             alwaysShown: true
             text: txt-evt-village-huntSlaves
             actionText: txt-evt-village-huntSlaves-action
-            standing: -3
             setLocationFlags: -inhabited
             actions: [
             {
                 text: txt-evt-peaceful-enslavement-fail
                 actionText: txt-evt-forceful-enslavement-action
+                standing: -3
                 partyEvents: [
                     {
                         chance: 1
@@ -1248,6 +1441,7 @@
               winEvents: {
                 select: {
                     text: txt-evt-peaceful-enslavement-success
+                    standing: 3
                     loot: {
                         items: [
                             {slots:3, it-slaves: 3},
@@ -1260,6 +1454,7 @@
               }
               failEvents: {
                   text: txt-evt-peaceful-enslavement-fail-2
+                  standing: -3
                 select: evt-village-human-fight
               }
             }
@@ -1302,9 +1497,9 @@
             id: evt-village-human-pillage-loot
             loot: {
             items: [
-                {slots:3, il-loot-edible-easy: 2, il-loot-standard: 3, it-jewels: 1},
-                {slots:1, il-loot-edible-easy: 2, il-treasure-lowValue: 2, it-jewels: 1},
-                {slots:1, il-loot-edible-easy: 2, il-magic: 1, il-tomePages: 2},
+                {slots:3, il-loot-edible-easy: 2, il-loot-standard: 3, it-jewels: 1, it-firstAid: 2},
+                {slots:1, il-loot-edible-easy: 2, il-treasure-lowValue: 2, it-jewels: 1, it-firstAid: 4},
+                {slots:1, il-loot-edible-easy: 2, il-magic: 1, il-tomePages: 2, it-firstAid: 4},
             ]
             closeEvents: evt-burn-village
             }
@@ -1444,23 +1639,23 @@
                 }
             levels: [
                 { 
-                    statuses: st-combatSanity-1
-                    #statuses: st-discoverVillage-1
+                    #statuses: st-combatSanity-1
+                    statuses: st-discoverVillage-1
                     dice: dc-attack-1 dc-defend-1
                 }
                 { 
-                    statuses: st-combatSanity-2
-                    #statuses: st-discoverVillage-2
+                    #statuses: st-combatSanity-2
+                    statuses: st-discoverVillage-2
                     dice: dc-attack-2 dc-defend-1
                 }
                 { 
-                    statuses: st-combatSanity-3
-                    #statuses: st-discoverVillage-3
+                    #statuses: st-combatSanity-3
+                    statuses: st-discoverVillage-3
                     dice: dc-attack-2 dc-defend-2
                 }
                 {
-                    statuses: st-combatSanity-4
-                    #statuses: st-discoverVillage-4
+                    #statuses: st-combatSanity-4
+                    statuses: st-discoverVillage-4
                     dice: dc-attack-2 dc-attack-1 dc-defend-2
                 }
             ]
@@ -1503,7 +1698,7 @@
             flags: +discoverVillage1
             tripEvents: {
                 reqAge: 1..
-                posTile: {locations: loc-village-human, closest: true, range: ..10}
+                posTile: {locations: loc-slaver, closest: true, range: ..10}
                 revealTiles: {radius: 0, location: true, centerCam: false}
             }
         }
@@ -1515,7 +1710,7 @@
             flags: +discoverVillage2
             tripEvents: {
                 reqAge: 1..
-                posTile: {locations: loc-village-human, closest: true, range: ..14}
+                posTile: {locations: loc-slaver, closest: true, range: ..14}
                 revealTiles: {radius: 0, location: true, centerCam: false}
             }
         }
@@ -1527,7 +1722,7 @@
             flags: +discoverVillage3
             tripEvents: {
                 reqAge: 1..
-                posTile: {locations: loc-village-human, closest: true, range: ..18}
+                posTile: {locations: loc-slaver, closest: true, range: ..18}
                 revealTiles: {radius: 0, location: true, centerCam: false}
             }
         }
@@ -1539,7 +1734,7 @@
             flags: +discoverVillage4
             tripEvents: {
                 reqAge: 1..
-                posTile: {locations: loc-village-human, closest: true, range: ..25}
+                posTile: {locations: loc-slaver, closest: true, range: ..25}
                 revealTiles: {radius: 0, location: true, centerCam: false}
             }
         }
@@ -1606,13 +1801,14 @@
             id: evt-village-human-fight
             #setLocationFlags: +abandoned
             text: txt-evt-human-fight
-            #setLocationFlags: -inhabited
+            setLocationFlags: -inhabited
             setLocationFlags: +villageFight
             actions: [
             {
                 actionText: txt-evt-human-fight-action
                 #showImage: {type: day, src: evt_spec_combat_1.png}
                 showImage: {src: evt_fxt_village_1.png, type: day}
+                setLocationFlags: -inhabited    
                 select: [
                     {
                         reqStanding: 0..10
@@ -1654,6 +1850,7 @@
             {
                 actionText: txt-evt-human-fight-flee-action
                 text: txt-evt-human-fight-flee
+                setLocationFlags: -inhabited
                 addZone: {ref: zn-angryNatives, range: ..2}
             }
             ]
@@ -1665,7 +1862,7 @@
                         {
                             slots: 2
                             reqAge: 7..7
-                            removeZones: {flags: +fleeingHumans, radius: 50}
+                            removeZones: {flags: +fleeingHumans, range: ..50}
                         }
                 ]
             }
@@ -2243,6 +2440,7 @@
                         {ref: grp-village}
                         #{ref: grp-treasure}
                         {}
+                        {ref: loc-slaver}
                         #{ref: grp-treasure}
                         #{ref: grp-special}
                         #{ref: grp-treasure}
@@ -2945,12 +3143,21 @@
             }
             ]
             levels: [
-            {dice: dc-dog-1!4 dc-beast-taunt!2}
-            {dice: dc-dog-1!5 dc-beast-taunt!3}
-            {dice: dc-dog-3!5 dc-dog-3!4 dc-beast-taunt!4}
-            {dice: dc-dog-3!5 dc-dog-3!5 dc-beast-taunt!5}
+                {dice: dc-warhog-1 dc-warhog-1!3 dc-general}
+                {dice: dc-warhog-1 dc-warhog-1!3 dc-general}
+                {dice: dc-warhog-1 dc-warhog-1!3 dc-general}
+                {dice: dc-warhog-1 dc-warhog-1!3 dc-general}
+            #{dice: dc-dog-1!4 dc-beast-taunt!2}
+            #{dice: dc-dog-1!5 dc-beast-taunt!3}
+            #{dice: dc-dog-3!5 dc-dog-3!4 dc-beast-taunt!4}
+            #{dice: dc-dog-3!5 dc-dog-3!5 dc-beast-taunt!5}
             ]
             }
+        }
+        {
+            id: dc-warhog-1
+            sprite: hud_dice_bg_animal_1.png
+            faces: horns ram ram horns horns ram
         }
         {
             targetId: /pl-tim
@@ -3040,7 +3247,7 @@
             #evt-harbor-recruit-bedouin
             #evt-harbor-recruit-parsiTrader
             evt-harbor-recruit-soldierBritish
-            #evt-harbor-recruit-soldierScottish
+            evt-harbor-recruit-soldierScottish
             evt-harbor-recruit-cook
             #evt-harbor-recruit-missionary
             #evt-harbor-recruit-sailor
@@ -3078,16 +3285,48 @@
             }
         }
         {
+            #evt-slaver-actions-find
             targetId: /evt-slaver-actions
             data: {
             id: evt-slaver-actions
-            actions: [
-            #evt-slaver-inspectSlaves
-            #evt-slaver-sell-unit
-            evt-slaver-trade
-            evt-shamanHut-cleanse-trade
-            evt-village-recruit
-            evt-leave
+            select: [
+                #{   
+                    #reqWorld: 3..
+                    #reqItems: {it-moonStone: 2..}
+                    #actions: [
+                        #evt-slaver-inspectSlaves
+                        #evt-slaver-sell-unit
+                        #evt-slaver-trade
+                        #evt-village-buy-moonstone
+                        #evt-shamanHut-cleanse-trade
+                        #evt-village-recruit
+                        #evt-leave
+                    #]
+                #}
+                {   
+                    reqWorld: 3..
+                    actions: [
+                        #evt-slaver-inspectSlaves
+                        #evt-slaver-sell-unit
+                        evt-slaver-trade
+                        evt-village-buy-moonstone
+                        evt-shamanHut-cleanse-trade
+                        evt-village-recruit
+                        evt-leave
+                    ]
+                }
+                {   
+                    reqWorld: ..2
+                    actions: [
+                        #evt-slaver-inspectSlaves
+                        #evt-slaver-sell-unit
+                        evt-slaver-trade
+                        #evt-village-buy-moonstone
+                        evt-shamanHut-cleanse-trade
+                        evt-village-recruit
+                        evt-leave
+                    ]
+                }
             ]
             }
         }
@@ -3134,6 +3373,7 @@
             sprite: res_fxt_slaver.png
             particle: pt-slaver
             priceTable: slaver
+            flags: +slaver +cave
             actions: evt-slaver-init
             setTile: [
             {ref: tl-dry}
@@ -3146,11 +3386,29 @@
             }
         }
         {
+            targetId: /evt-slaver-trade
+            data: {
+            id: evt-slaver-trade
+            actionText: txt-evt-mission-trade-action
+            select: {
+            barter: {
+                closeEvents: {
+                text: txt-evt-slaver-trade-yes
+                #standing: standingCostSlaverTrade
+                select: evt-slaver-actions
+                }
+                cancelEvents: {text: txt-evt-slaver-trade, select: evt-slaver-actions}
+            }
+            }
+            }
+        }
+        {
+            #slaver-trade
             targetId: /il-trade-slaver
             data: {
             id: il-trade-slaver
             items: [
-            {slots: 1000, it-slaves: 2}
+            {slots: 1000, it-firstAid: 2}
             {slots: 4, it-whisky: 6}
             #{slots: 4, it-ammo: 10}
             #{slots: 3, it-tinCans: 10}
@@ -3227,6 +3485,35 @@
             #{slots: 1, ref: loc-altar, reqDifficulty: 1..}
             {slots: 1, ref: loc-cenote, reqDifficulty: 1..}
             ]
+            }
+        }
+        {
+            targetId: /evt-stoneCircle-enter::actions
+            data:
+            [
+                evt-stoneCircle-revealRuins
+                evt-stoneCircle-revealSettlements
+                evt-stoneCircle-revealNatureRests
+                evt-stoneCircle-revealCaves
+                evt-leave
+            ]
+        }
+        {
+            targetId: /evt-stoneCircle-revealCaves
+            data: {
+                id: evt-stoneCircle-revealCaves
+                extends: evt-stoneCircle-reveal
+                actionText: txt-evt-stoneCircle-revealSlaver-action
+                reqLocation: {flags: +cave, locationKnown: false, range: ..100}
+                partyEvents: [
+                {optional: true, ref: evt-stoneCircle-revealNextCave}
+                {optional: true, ref: evt-stoneCircle-revealNextCave}
+                {optional: true, ref: evt-stoneCircle-revealNextCave}
+                {optional: true, ref: evt-stoneCircle-revealNextCave}
+                {optional: true, ref: evt-stoneCircle-revealNextCave}
+                {optional: true, ref: evt-stoneCircle-revealNextCave}
+                ]
+                select: evt-stoneCircle-aftermath
             }
         }
     ]
