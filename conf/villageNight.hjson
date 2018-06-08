@@ -682,7 +682,7 @@
             text: txt-evt-village-rest-positive-gameover-2
             charEvents: {reqCharFlags: +special, text: txt-evt-village-rest-positive-gameover-3}
             unlockCharacter: sp-fortune
-            actions: {gameOver: The End}
+            actions: {gameOver: txt-gameover-theEnd}
           }
           evt-village-rest-positive-gameover-cancel
         ]

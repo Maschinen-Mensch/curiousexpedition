@@ -537,7 +537,7 @@ var debug = {
   showBiomeInfo: false,
   showZoneInfo: false,
   showAgeInfo: false, // if true, age of items, statuses, locations is shown
-  showFlagsInfo: false,
+  showFlagsInfo: true,
   showTutorial: false,
   showReport: false,
 
@@ -554,7 +554,7 @@ var debug = {
   drawAllTiles: false,
   unlockAllExplorers: false,
   drawAllLocations: false,
-  drawAllItems: true, // show all items in hall of fame
+  drawAllItems: false, // show all items in hall of fame
 
   showBorders: false,
   showViewCost: false,

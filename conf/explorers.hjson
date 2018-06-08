@@ -89,6 +89,49 @@
     debugCategory: Famous Explorer
   }
   {
+    id: sp-amundsen
+    extends: sp-base
+    debugCategory: Famous Explorer
+    alwaysUnlocked: true
+    name: txt-sp-amundsen-name
+    title: txt-sp-amundsen-title
+    description: txt-sp-amundsen
+    characters: pl-native-animalHandler-inuit anm-dog-husky anm-dog-husky
+    health: 6
+    items: {it-chocolate:5, it-climbingGear: 6, it-shotgun: 1, it-snowshoe: 10, it-polarStation-ticket: 10}
+    levels: [
+      {statuses: st-arcticExplorer, dice: dc-support-2 dc-defend-1}
+    ]
+    variations: [
+      {
+        gender: male
+        sprite: res_expl_amundsen.png
+        portrait: res_face_amundsen.png
+      }
+    ]
+    miniSprite: res_expl_amundsen_mini.png
+  }
+  {
+    id: sp-feihong
+    extends: sp-base
+    debugCategory: Famous Explorer
+    alwaysUnlocked: true
+    name: txt-sp-feihong-name
+    title: txt-sp-feihong-title
+    description: txt-sp-feihong
+    characters: anm-waterBuffalo pl-cook
+    health: 4
+    healthBonus: 1
+    items: {it-chocolate: 5, it-torch: 3, it-rope: 10, it-firstAid: 4}
+    levels: [
+      {statuses: st-healer, dice: dc-feihong dc-support-2}
+    ]
+    variations: [
+      {gender: male, sprite: res_expl_feihong.png, portrait: res_face_feihong.png}
+    ]
+    miniSprite: res_expl_feihong_mini.png
+  }
+  {
     id: sp-kingsley
     extends: sp-base
     debugCategory: Famous Explorer
@@ -360,48 +403,5 @@
     levels: [
       {statuses: st-polymath, dice: dc-support-2 dc-defend-1}
     ]
-  }
-  {
-    id: sp-amundsen
-    extends: sp-base
-    debugCategory: Famous Explorer
-    alwaysUnlocked: true
-    name: txt-sp-amundsen-name
-    title: txt-sp-amundsen-title
-    description: txt-sp-amundsen
-    characters: pl-native-animalHandler-inuit anm-dog-husky anm-dog-husky
-    health: 6
-    items: {it-chocolate:5, it-climbingGear: 6, it-shotgun: 1, it-snowshoe: 10, it-polarStation-ticket: 10}
-    levels: [
-      {statuses: st-arcticExplorer, dice: dc-support-2 dc-defend-1}
-    ]
-    variations: [
-      {
-        gender: male
-        sprite: res_expl_amundsen.png
-        portrait: res_face_amundsen.png
-      }
-    ]
-    miniSprite: res_expl_amundsen_mini.png
-  }
-  {
-    id: sp-feihong
-    extends: sp-base
-    debugCategory: Famous Explorer
-    alwaysUnlocked: true
-    name: txt-sp-feihong-name
-    title: txt-sp-feihong-title
-    description: txt-sp-feihong
-    characters: anm-waterBuffalo pl-cook
-    health: 4
-    healthBonus: 1
-    items: {it-chocolate: 5, it-torch: 3, it-rope: 10, it-firstAid: 4}
-    levels: [
-      {statuses: st-healer, dice: dc-feihong dc-support-2}
-    ]
-    variations: [
-      {gender: male, sprite: res_expl_feihong.png, portrait: res_face_feihong.png}
-    ]
-    miniSprite: res_expl_feihong_mini.png
   }
 ]

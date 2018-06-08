@@ -63,9 +63,9 @@
     sprite: res_fxt_giantSkeleton.png
     spawnEvents: {
       replaceTiles: [
-        {radius: 3, old: any, new: tl-pit-grass, chance: 0.3}
-        {radius: 2, old: any, new: tl-pit-grass}
-        {radius: 1, old: any, new: tl-grass}
+        {range: ..3, old: any, new: tl-pit-grass, chance: 0.3}
+        {range: ..2, old: any, new: tl-pit-grass}
+        {range: ..1, old: any, new: tl-grass}
       ]
     }
   }
@@ -74,11 +74,11 @@
     name: txt-fxt-special-caveCircle-blessingTemple-name
     spawnEvents: {
       replaceTiles: [
-        {radius: 3, old: any, new: tl-dry}
-        {radius: 3, old: any, new: tl-dry-jungle-thick, chance: 0.3}
-        {radius: 2, old: any, new: tl-mountain}
-        {radius: 1, old: any, new: tl-dry}
-        {radius: 1, old: any, new: tl-dry-stoneForest, chance: 0.2}
+        {range: ..3, old: any, new: tl-dry}
+        {range: ..3, old: any, new: tl-dry-jungle-thick, chance: 0.3}
+        {range: ..2, old: any, new: tl-mountain}
+        {range: ..1, old: any, new: tl-dry}
+        {range: ..1, old: any, new: tl-dry-stoneForest, chance: 0.2}
       ]
       select: [
         {

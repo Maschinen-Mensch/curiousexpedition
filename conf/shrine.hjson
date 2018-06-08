@@ -374,14 +374,14 @@
       setPartyFlags: +sacrileg
       replaceTiles: [
         {
-          radius: 10
+          range: ..10
           old: any
           new: tl-mountain
           particle: pt-erupt-mountain
           chance: 0.3
         }
         {
-          radius: 1
+          range: ..1
           old: any
           new: tl-dry
           particle: pt-erupt-hill
@@ -423,7 +423,7 @@
       {range: ..50, old: loc-trader}
       {range: ..50, old: loc-slaver}
     ]
-    removeZones: {flags: +native, radius: 50}
+    removeZones: {flags: +native, range: ..50}
     select: evt-leave
   }
   {

@@ -12,7 +12,7 @@
     name: txt-fxt-monsterDen-giantSpiders-name
     debugColor: lightgray
     sprite: res_fxt_monsterDen.png
-    setLocationFlags: +caveTypeMonsterDenGiantSpiders
+    setLocationFlags: +caveTypeMonsterDenGiantSpiders +caveTypeSet
     setNeighbors: [
       tl-corrupted-jungle-thick
       tl-corrupted-jungle-thick
@@ -338,7 +338,7 @@
     id: evt-monsterDen-giantSpiders-opening-explore
     actionText: txt-evt-opening-explore
     replaceTiles: [
-      {radius: 0, old: tl-corrupted-mountain, new: tl-mountainTraversable}
+      {range: 0, old: tl-corrupted-mountain, new: tl-mountainTraversable}
     ]
     setLocationFlags: +explored
     setPartyStatus: +portalReturn
@@ -349,7 +349,7 @@
     actionText: txt-evt-cave-explored-leave-action
     setLocationFlags: +explored
     replaceTiles: [
-      {radius: 0, old: tl-corrupted-mountain, new: tl-mountainTraversable}
+      {range: 0, old: tl-corrupted-mountain, new: tl-mountainTraversable}
     ]
     teleport: true
     select: evt-leave

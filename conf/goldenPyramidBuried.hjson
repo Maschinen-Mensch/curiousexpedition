@@ -243,10 +243,10 @@
     setTile: tl-jungle-thick
     spawnEvents: {
       replaceTiles: [
-        {radius: 4, chance: 0.4, old: any, new: tl-mountain}
-        {radius: 3, chance: 1, old: any, new: tl-mountain}
-        {radius: 2, chance: 1, old: any, new: tl-dry-stoneForest}
-        {radius: 0, chance: 1, old: any, new: tl-dry}
+        {range: ..4, chance: 0.4, old: any, new: tl-mountain}
+        {range: ..3, chance: 1, old: any, new: tl-mountain}
+        {range: ..2, chance: 1, old: any, new: tl-dry-stoneForest}
+        {range: 0, chance: 1, old: any, new: tl-dry}
       ]
       select: [
         {

@@ -2,7 +2,7 @@
   {
     id: loc-cave-ghostsQuest
     extends: loc-cave
-    spawnEvents: {setLocationFlags: +caveTypeGhostsQuest}
+    spawnEvents: {setLocationFlags: +caveTypeGhostsQuest +caveTypeSet}
   }
   {
     id: evt-cave-ghostsQuest

@@ -435,7 +435,7 @@
   }
   {
     id: evt-tile-pit
-    gameOver: Your trek fell into a dark chasm.
+    gameOver: txt-gameover-chasm
   }
   {
     id: evt-setImage-nightCamp

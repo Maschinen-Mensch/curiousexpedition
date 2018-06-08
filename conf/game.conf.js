@@ -125,7 +125,7 @@ var achievements = [
     name: "txt-ach-all-items",
     desc: "txt-ach-all-items-desc",
     img: "achv_img_ID_36",
-    counterTarget: 164
+    counterTarget: 163
   },
   {
     id: "ach-reach-world2",
@@ -420,7 +420,7 @@ var staticConfig =
   enableAchievements: true,
   showMods: true,
   showReport: false,
-  footerName: "1.3.10.0",
+  footerName: "1.3.10.2",
   sanityCheckEvents: true,
 
   // is converted to config.diaryText at run-time

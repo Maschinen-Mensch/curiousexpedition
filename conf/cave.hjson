@@ -147,13 +147,13 @@
       {
         optional: true
         reqBiomeFlags: -arctic
-        replaceTiles: {radius: 0, old: tl-mountain, new: tl-mountainTraversable, animate: false}
+        replaceTiles: {range: 0, old: tl-mountain, new: tl-mountainTraversable, animate: false}
       }
       {
         optional: true
         reqBiomeFlags: +arctic
         replaceTiles: {
-          radius: 0
+          range: 0
           old: tl-glacier-land
           new: tl-glacier-land-traversable
           animate: false

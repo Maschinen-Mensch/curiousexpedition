@@ -40,6 +40,7 @@
       {
         optional: true, 
         reqPartyFlags: +natureSleep, 
+        text: txt-evt-nature-rest-1
         select: evt-nature-sleep
       }
     ]

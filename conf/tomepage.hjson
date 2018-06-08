@@ -138,7 +138,7 @@
       posPunch: {maxRange: 100}
       replaceTiles: {
         old: any
-        radius: 1
+        range: ..1
         new: tl-mountain
         particle: pt-erupt-mountain
         chance: 0.7
@@ -160,17 +160,17 @@
       playSound: sfx_tomePage_var1 sfx_tomePage_var2 sfx_tomePage_var3
       replaceTiles: [
         {
-          radius: 2
+          range: ..2
           old: [tl-river]
           new: tl-river-shallow
         }
         {
-          radius: 2
+          range: ..2
           old: [tl-sulfur]
           new: tl-sulfur-shallow
         }
         {
-          radius: 2
+          range: ..2
           old: [tl-arcticSea]
           new: tl-packIce
         }

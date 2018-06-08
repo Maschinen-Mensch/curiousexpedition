@@ -8,12 +8,31 @@
   * Added warning that scaling is expensive
   * Improved rendering performance
   * Improved loading times
+* Modding
+  * Achievements are now given when mods are enabled (but the debug bar must be disabled)
+  * Mods now support spritesheets
+  * Range syntax is now supported for replaceTile and removeZones; Radius is deprecated
+  * replaceLocations range property supports bonus syntax
+  * Runtime Mod event errors are correctly tagged with the mod
+  * Localisation Mod errors are correctly tagged with the mod
+  * Missing sound files are now correctly detected
 * Bugfixes
   * Fixed issues with mod language loading and improved logging
   * Fix for Forsaken shrine aftermaths not removing angry natives
   * Fixed village funeral event not allowing extra options when you have a missionary in the party
   * Fix for mousewheel not working on mac
   * Fix for treasure maps not being rendered correctly after loading a savegame
+  * Left-clicking on an item while an item is currently being moved no longer attempts to use the clicked-on item, but will instead drop the currently held item if possible
+  * When switching an item with one in a different slot while overburdened, the empty spot will no longer be removed
+  * Ghost Quest and Giant Spider caves don't become other cave types when interacted with
+  * Item and Character achievements work correctly
+  * Explosion Expert perk removes locations in all effected tiles
+  * Fixed villages always saying you were welcome even when you had a low standing
+  * Fixed some unlocalised gameover texts
+  * Reset Profile correctly resets Highscores and Achievements
+  * Fixed seeing multiple notifications for the same achievement
+  * Fixed character unlock notifications not being displayed when the character is actually unlocked
+  * Fixed Trippy Trip achievement
 
 # 1.3.9 (May 25th 2018)
 

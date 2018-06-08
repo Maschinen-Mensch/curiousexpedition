@@ -101,7 +101,8 @@ config.man = [
     keyword: 'replaceTiles',
     new: "new id of tile",
     old: "IDs of old tiles or ANY to replace all",
-    _radius: "maximum distance to consider (default: 0)",
+    _radius: "maximum distance to consider (default: 0); deprecated, use range instead",
+    _range: "min/max distance to consider (default: 0)",
     _chance: "random chance for tile to be replaced (default: 1)",
     _particle: "particle to spawn on replaced tile",
     _animate: "if new tile should transition in or appear immediately (default: true)",
@@ -271,8 +272,9 @@ config.man = [
     $inline: "Removes current context zone from map",
   },
   {
-    keyword: 'removeZones',
-    _radius: "radius in which all zones are removed (default: 0)",
+    keyword: 'removeZones',    
+    _radius: "maximum distance to consider (default: 0); deprecated, use range instead",
+    _range: "min/max distance to consider (default: 0)",
     _flags: "type of zones to remove (default: '')",
     $description: "Removes all zones matching the criteria"
   },

@@ -252,6 +252,7 @@
       }
       {
         optional: true
+        reqStanding: 2..
         text: txt-evt-village-main-0
       }
       {

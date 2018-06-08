@@ -26,23 +26,23 @@
       {
         reqWorld: 1
         replaceTiles: [
-          {radius: 2, old: any, new: tl-jungle-thick}
+          {range: ..2, old: any, new: tl-jungle-thick}
         ]
       }
       {
         reqWorld: 2..3
         replaceTiles: [
-          {radius: 2, old: any, new: tl-jungle-thick}
-          {radius: 2, old: any, new: tl-mountain, chance: 0.25}
-          {radius: 1, old: any, new: tl-jungle-thick}
+          {range: ..2, old: any, new: tl-jungle-thick}
+          {range: ..2, old: any, new: tl-mountain, chance: 0.25}
+          {range: ..1, old: any, new: tl-jungle-thick}
         ]
       }
       {
         reqWorld: 4..
         replaceTiles: [
-          {radius: 3, old: any, new: tl-jungle-thick}
-          {radius: 3, old: any, new: tl-mountain, chance: 0.5}
-          {radius: 1, old: any, new: tl-jungle-thick}
+          {range: ..3, old: any, new: tl-jungle-thick}
+          {range: ..3, old: any, new: tl-mountain, chance: 0.5}
+          {range: ..1, old: any, new: tl-jungle-thick}
         ]
       }
     ]
@@ -58,29 +58,29 @@
       {
         reqWorld: 0
         replaceTiles: [
-          {radius: 1, old: any, new: tl-dry-jungle-thick}
+          {range: ..1, old: any, new: tl-dry-jungle-thick}
         ]
       }
       {
         reqWorld: 1
         replaceTiles: [
-          {radius: 2, old: any, new: tl-dry-jungle-thick}
+          {range: ..2, old: any, new: tl-dry-jungle-thick}
         ]
       }
       {
         reqWorld: 2..3
         replaceTiles: [
-          {radius: 2, old: any, new: tl-dry-jungle-thick}
-          {radius: 2, old: any, new: tl-mountain, chance: 0.4}
-          {radius: 1, old: any, new: tl-dry-jungle-thick}
+          {range: ..2, old: any, new: tl-dry-jungle-thick}
+          {range: ..2, old: any, new: tl-mountain, chance: 0.4}
+          {range: ..1, old: any, new: tl-dry-jungle-thick}
         ]
       }
       {
         reqWorld: 4..
         replaceTiles: [
-          {radius: 2, old: any, new: tl-dry-jungle-thick}
-          {radius: 2, old: any, new: tl-mountain, chance: 0.4}
-          {radius: 1, old: any, new: tl-dry-jungle-thick}
+          {range: ..2, old: any, new: tl-dry-jungle-thick}
+          {range: ..2, old: any, new: tl-mountain, chance: 0.4}
+          {range: ..1, old: any, new: tl-dry-jungle-thick}
         ]
       }
     ]
@@ -100,33 +100,33 @@
       {
         reqWorld: 0
         replaceTiles: [
-          {radius: 2, old: any, new: tl-mountain}
-          {radius: 2, old: any, new: tl-dry-stoneForest, chance: 0.8}
-          {radius: 1, old: any, new: tl-desert}
+          {range: ..2, old: any, new: tl-mountain}
+          {range: ..2, old: any, new: tl-dry-stoneForest, chance: 0.8}
+          {range: ..1, old: any, new: tl-desert}
         ]
       }
       {
         reqWorld: 1
         replaceTiles: [
-          {radius: 2, old: any, new: tl-mountain}
-          {radius: 2, old: any, new: tl-dry-stoneForest, chance: 0.7}
-          {radius: 1, old: any, new: tl-desert}
+          {range: ..2, old: any, new: tl-mountain}
+          {range: ..2, old: any, new: tl-dry-stoneForest, chance: 0.7}
+          {range: ..1, old: any, new: tl-desert}
         ]
       }
       {
         reqWorld: 2..3
         replaceTiles: [
-          {radius: 2, old: any, new: tl-mountain}
-          {radius: 2, old: any, new: tl-dry-stoneForest, chance: 0.7}
-          {radius: 1, old: any, new: tl-desert}
+          {range: ..2, old: any, new: tl-mountain}
+          {range: ..2, old: any, new: tl-dry-stoneForest, chance: 0.7}
+          {range: ..1, old: any, new: tl-desert}
         ]
       }
       {
         reqWorld: 4..
         replaceTiles: [
-          {radius: 2, old: any, new: tl-mountain}
-          {radius: 2, old: any, new: tl-dry-stoneForest, chance: 0.5}
-          {radius: 1, old: any, new: tl-desert}
+          {range: ..2, old: any, new: tl-mountain}
+          {range: ..2, old: any, new: tl-dry-stoneForest, chance: 0.5}
+          {range: ..1, old: any, new: tl-desert}
         ]
       }
     ]
@@ -145,8 +145,8 @@
       {
         reqWorld: 0..
         replaceTiles: [
-          {radius: 2, old: any, new: tl-plateau}
-          {radius: 1, old: any, new: tl-deepSnow}
+          {range: ..2, old: any, new: tl-plateau}
+          {range: ..1, old: any, new: tl-deepSnow}
         ]
       }
     ]
@@ -441,7 +441,7 @@
         optional: true
         reqWorld: 5..
         reqRanking: ..2
-        reqPartyFlags: -nonCocaUsers
+        reqPartyFlags: -nonCocaUsers +cocaUsers
         incAchievement: ach-coca-only
       }
       {

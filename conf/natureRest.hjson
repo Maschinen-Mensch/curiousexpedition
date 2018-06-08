@@ -1580,6 +1580,7 @@
   }
   {
     id: evt-sanity-loot-return
+    text: txt-evt-combat-loot-1
     loot: {
       items: {}
       closeEvents: evt-sanity-return
@@ -1587,6 +1588,7 @@
   }
   {
     id: evt-sanity-flee-return, 
+    text: txt-evt-combat-run
     sanity: -20, 
     select: evt-sanity-return
   }

@@ -119,7 +119,7 @@
         sanity: 100
         chat: cl-tut-shipArrival-1
         text: txt-evt-tutorial-shipReturn
-        removeZones: {radius: 20}
+        removeZones: {range: ..20}
         addCharacter: pl-soldier-scottish pl-translator anm-donkey
         actions: {
           actionText: txt-evt-tutorial-shipReturn-action

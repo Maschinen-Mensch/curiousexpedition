@@ -128,22 +128,22 @@
         select: [
           {
             replaceTiles: [
-              {chance: 0.04, radius: 3, old: tl-scorchedEarth, new: tl-grass}
+              {chance: 0.04, range: ..3, old: tl-scorchedEarth, new: tl-grass}
             ]
           }
           {
             replaceTiles: [
-              {chance: 0.04, radius: 3, old: tl-scorchedEarth, new: tl-jungle-thick}
+              {chance: 0.04, range: ..3, old: tl-scorchedEarth, new: tl-jungle-thick}
             ]
           }
           {
             replaceTiles: [
-              {chance: 0.04, radius: 3, old: tl-scorchedEarth, new: tl-jungle-light}
+              {chance: 0.04, range: ..3, old: tl-scorchedEarth, new: tl-jungle-light}
             ]
           }
           {
             replaceTiles: [
-              {chance: 0.04, radius: 3, old: tl-scorchedEarth, new: tl-grass-bushes}
+              {chance: 0.04, range: ..3, old: tl-scorchedEarth, new: tl-grass-bushes}
             ]
           }
         ]

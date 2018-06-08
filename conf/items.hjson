@@ -123,7 +123,7 @@
         }
         {
           replaceTiles: {
-            radius: {base: 0, bonus: dynamiteBonus}
+            range: {base: 0, bonus: dynamiteBonus}
             old: [
               tl-mountain
               tl-corrupted-mountain
@@ -156,8 +156,8 @@
         }
       ]
       replaceLocations: [
-        {oldFlags: -mountain -settlement}
-        {oldFlags: +mountain +secret, new: loc-blessingTemple-secret}
+        {oldFlags: -mountain -settlement, range: {base: 0, bonus: dynamiteBonus}}
+        {oldFlags: +mountain +secret, new: loc-blessingTemple-secret, range: {base: 0, bonus: dynamiteBonus}}
       ]
       particle: [
         pt-explosion-rock
