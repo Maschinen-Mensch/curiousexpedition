@@ -90,7 +90,7 @@
 "evt-goal-explore-WoA-finish","[The majestic Golden City rose above its environment|The Golden City loomed above one and all|We finally arrived at the Golden City|The exotic landscape complimented the extraordinary Golden City|A marvel of Ape architecture, the Golden City was ours to reach|Our final destination taunted us with its golden glory|The city of gold beckoned us to victory|The goal was presented to us in the form of a city made of gold|There was the Golden City, a pinnacle of Ape engineering]."
 "evt-expedition-done-WoA-action-1","[Glory to the Apes!|Honor!|For the Emperor!|For Fame and Glory!|Onwards to History!|Endless Fame Awaits!|Fortune and Glory!]"
 "evt-goldenCity-approach-action","Approach the Golden City"
-"fxt-goldenCity-unearthed-name","Golden City Empire"
+"fxt-goldenCity-unearthed-name","Golden City of the Empire"
 "evt-goal-explore-WoA-finish-action","Enter the Golden City"
 "zn-fleeingHumans-name","Fleeing Humans"
 "evt-peaceful-enslavement-action","Break their will"
@@ -109,3 +109,8 @@
 "evt-negotiate-action","Appeal to reason"
 "evt-show-of-force-success","We arrayed ourselves in all our martial splendor, weapons on display. The mob backed down...for now."
 "evt-show-of-force-action","Show of force"
+"evt-seal-slaves-title","Tap into Human life force"
+"evt-seal-slaves","The Humans gave their life force as a tribute to the Golden City. The sheer power of the ritual was overwhelming, and you did not have to be a court shaman to feel that change was literally in the air all around the site."
+"evt-goldenSeal-slaves","We approached [a mysterious|a grand|a seemingly ancient|an immemorial] structure that seemed to be partially made out of pure gold. It looked a lot like one of the ancient sites that collected tribute for the Golden Cities. [With some effort we would hopefully be able to trigger it|I believe that with the life force of Humans we could set it into motion|With a little preparation and time we would surely be able to activate it]. However, exactly what would happen upon activation remained a mystery."
+"evt-goldenSeal-1-slaves","[It took us a while, but eventually|After many hours of ritual|After much toil] we were [able|adept enough] to [satisfy|unlock|activate] the [unusual|mysterious|grand|seemingly ancient|enigmatic] mechanism. All of a sudden an enormous column of light [emerged|rose|launched|extended] from the seal."
+

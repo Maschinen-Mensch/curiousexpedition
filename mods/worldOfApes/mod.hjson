@@ -10,9 +10,8 @@
         #preview:
         #description:
         #Probs
-        #-Followed event eliminate???
         #-Fix up left native in fight
-        #.Fix desert tilespawn by village
+        #-Fix desert tilespawn by village
         #-Seals for Slaves, Dawg!
         #-Create custom Names for Apes based on Greek Roman Mythology
         #-Quartermaster: better banana bonus (Steal from Cultist)
@@ -539,6 +538,22 @@
         }
         {
             targetId: /loc-goldenTemple-grass::name
+            data: txt-fxt-goldenCity-unearthed-name
+        }
+        {
+            targetId: /loc-goldenTemple-dry::name
+            data: txt-fxt-goldenCity-unearthed-name
+        }
+        {
+            targetId: /loc-goldenTemple-desert::name
+            data: txt-fxt-goldenCity-unearthed-name
+        }
+        {
+            targetId: /loc-goldenTemple-unearthed::name
+            data: txt-fxt-goldenCity-unearthed-name
+        }
+        {
+            targetId: /loc-goldenTemple-buried::name
             data: txt-fxt-goldenCity-unearthed-name
         }
         {
@@ -1150,6 +1165,83 @@
                     ]
                 }
             ]
+        }
+        {   
+            targetId: /evt-village-leave
+            data: {
+            id: evt-village-leave
+            actionText: txt-evt-leave-action
+            alwaysShown: true
+            select: [
+            {
+                reqPartyFlags: +escortVillagerShrineInfo
+                setPartyFlags: -escortVillagerShrineInfo
+                charEvents: {reqCharFlags: +escortVillager, text: txt-evt-village-leave-escort}
+                posTile: {locationFlags: +shrine}
+                revealTiles: {radius: 1, centerCam: true}
+            }
+            {
+                prio: 1
+                charEvents: [
+                {
+                    optional: true
+                    reqCharFlags: -special +humanoid
+                    text: txt-evt-village-leave
+                }
+                {
+                    optional: true
+                    count: all
+                    reqCharFlags: +special | -humanoid
+                    text: txt-evt-village-leave-1
+                }
+                {
+                    optional: true
+                    chance: 0.3
+                    reqLocationFlags: +idolVillage
+                    reqStatus: +kleptomania
+                    setLocationFlags: -idolVillage
+                    setStatus: +kleptomania-idol
+                }
+                {
+                    optional: true
+                    chance: 0.6
+                    reqStatus: +racist
+                    text: txt-evt-village-leave-2
+                }
+                {
+                    optional: true
+                    chance: 0.3
+                    reqCharFlags: +native -slave
+                    text: txt-evt-village-leave-3
+                }
+                ]
+                partyEvents: [
+                {
+                    optional: true
+                    reqLocationFlags: +wedding
+                    setLocationFlags: -wedding
+                    standing: -2
+                    text: txt-evt-village-leave-wedding
+                }
+                {
+                    optional: true
+                    chance: 0.5
+                    reqStanding: -3..-1
+                    reqPartyStatus: -followed-natives
+                    #setPartyStatus: +followed-natives
+                    text: txt-evt-village-leave-4
+                }
+                {
+                    optional: true
+                    reqStanding: -10..-4
+                    reqPartyStatus: -followed-natives
+                    #setPartyStatus: +followed-natives
+                    text: txt-evt-village-leave-5
+                }
+                ]
+            }
+            ]
+            }
         }
         {
             targetId: /evt-village-main-update::select
@@ -3183,7 +3275,7 @@
             }
             ]
             capacity: 1
-            flags: +porter +nativeAnimalHandler +native +humanoid +darkSkinned +tim
+            flags: +porter +nativeAnimalHandler +humanoid +tim
             spawnEvents: {
             partyEvents: [
                 {
@@ -3515,6 +3607,87 @@
                 ]
                 select: evt-stoneCircle-aftermath
             }
+        }
+            {
+                targetId: /evt-goldenSeal
+                data: {
+                id: evt-goldenSeal
+                actionText: txt-evt-altar-approach-action
+                partyEvents: [
+                {
+                    optional: true
+                    reqBiomeFlags: -arctic
+                    showImage: {src: evt_fxt_goldenSeal_1.png, type: day}
+                }
+                ]
+                text: txt-evt-goldenSeal-slaves
+                actions: [
+                evt-seal-slaves
+                evt-leave
+                ]
+            }   
+            }
+        {
+            id: evt-seal-slaves
+            actionText: txt-evt-seal-slaves-title
+            text: txt-evt-seal-slaves
+            alwaysShown: true
+            reqItems: {it-slaves: 2..}
+            items: [
+                {it-slaves: -2}
+            ]
+            actions: [
+                {
+                    actionText: txt-evt-goldenSeal-action
+                    chat: cl-seal-activate
+                    text: txt-evt-goldenSeal-1-slaves
+                    partyEvents: [
+                    {
+                        optional: true
+                        reqBiomeFlags: -arctic
+                        showImage: {src: evt_fxt_goldenSeal_active.png, type: day}
+                    }
+                    {
+                        optional: true
+                        reqBiomeFlags: +arctic
+                        showImage: {src: evt_fxt_goldenSeal_2_active.png, type: day}
+                    }
+                    ]
+                    actions: {
+                    replaceLocations: {new: loc-goldenSeal-active}
+                    partyEvents: [
+                        {
+                        optional: true
+                        posTile: {locations: loc-goldenTemple-buried}
+                        reqTileFlags: +seals1
+                        revealTiles: {
+                            radius: 2, 
+                            centerCam: true, 
+                            location: true, 
+                            particle: pt-buriedTempleSpawn}
+                        replaceLocations: {new: loc-goldenTemple-unearthed}
+                        camShake: {power: 8, length: 1.5}
+                        particle: pt-sealFlash
+                        playSound: volcanoErupt
+                        }
+                        {
+                        optional: true
+                        posTile: {locations: loc-goldenTemple-buried}
+                        reqTileFlags: +seals2
+                        setTileFlags: -seals2 +seals1
+                        camShake: {power: 8, length: 1.2}
+                        }
+                        {
+                        optional: true
+                        posTile: {locations: loc-goldenTemple-buried}
+                        reqTileFlags: +seals3
+                        setTileFlags: -seals3 +seals2
+                        camShake: {power: 8, length: 1.2}
+                        }
+                    ]
+                    }
+                }
+            ]
         }
     ]
 }
