@@ -597,5 +597,7 @@ var debug = {
   testStatus: 'st-sexist',
   // testGoal: 'gol-goldenTemple-grass',
 
+  outputDiaryLog: false, // if this is on, screenshots of every diary entry will be placed in a folder 'diaryLog' (electron only)
+
   isDevMode: true,
 };

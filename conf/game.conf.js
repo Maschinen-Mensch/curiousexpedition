@@ -420,7 +420,7 @@ var staticConfig =
   enableAchievements: true,
   showMods: true,
   showReport: false,
-  footerName: "1.3.10.2",
+  footerName: "1.3.10.5",
   sanityCheckEvents: true,
 
   // is converted to config.diaryText at run-time
@@ -1227,8 +1227,8 @@ var config = {
       scale1: ["txt-help-settings-scale1", "txt-help-settings-scale-refuse"],
       scale2: ["txt-help-settings-scale2", "txt-help-settings-scale-refuse"],
       scale3: ["txt-help-settings-scale3", "txt-help-settings-scale-refuse"],
-      scale4: ["txt-help-settings-scale4", "txt-help-settings-scale-refuse"],
-      scaleStrech: ["txt-help-settings-scaleS", "txt-help-settings-scaleS-expensive", "txt-help-settings-scale-refuse"],
+      scale6: ["txt-help-settings-scale6", "txt-help-settings-scale-refuse"],
+      scaleStrech: ["txt-help-settings-scaleS", "txt-help-settings-scale-refuse"],
     }
   },
 

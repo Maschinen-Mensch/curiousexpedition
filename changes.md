@@ -1,6 +1,6 @@
 # 1.3.10
 
-* Added Spanish, Polish and Turkish translations
+* Added Polish translation
 * Performance and Rendering
   * If the game detects that it has no GPU, scaling will default to off
   * Added support for 4K UHD Resolution (3840 x 2160): 1:6 pixel ratio
@@ -33,6 +33,8 @@
   * Fixed seeing multiple notifications for the same achievement
   * Fixed character unlock notifications not being displayed when the character is actually unlocked
   * Fixed Trippy Trip achievement
+  * Fixed stats not being correctly incremented after switching difficulty levels
+  * Fixed game not loading correctly on some linux machines
 
 # 1.3.9 (May 25th 2018)
 
