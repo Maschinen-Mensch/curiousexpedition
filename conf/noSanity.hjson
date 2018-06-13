@@ -840,7 +840,7 @@
   {
     id: evt-sanity-conflict-single
     charEvents: {
-      count: 1
+      count: '1'
       reqCharFlags: +humanoid -abomination -homeWorld -special
       reqLoyalty: 1..
       text: txt-evt-sanity-conflict-single
