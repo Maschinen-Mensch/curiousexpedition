@@ -1326,14 +1326,19 @@
           actionText: txt-evt-sanity-fight-action
           reqDice: sword
           winEvents: [
-            {text: txt-evt-sanity-fight-1, loyalty: -1}
+            {
+              text: txt-evt-sanity-fight-1
+              loyalty: -1
+              select: evt-sanity-return
+            }
           ]
           failEvents: [
             {
               text: txt-evt-sanity-fight-2
               storeCharacter: true
+              select: evt-sanity-return
             }
-          ]
+          ]          
         }
       }
     ]
@@ -1426,6 +1431,7 @@
       setStatus: +kleptomania
       text: txt-evt-sanity-apply-kleptomania
     }
+    select: evt-sanity-return
   }
   {
     id: evt-sanity-apply-pyromaniac

@@ -5,7 +5,6 @@
   * If the game detects that it has no GPU, scaling will default to off
   * Added support for 4K UHD Resolution (3840 x 2160): 1:6 pixel ratio
   * Can now toggle Stretching setting independently of Scaling
-  * Added warning that scaling is expensive
   * Improved rendering performance
   * Improved loading times
 * Modding
@@ -33,8 +32,10 @@
   * Fixed seeing multiple notifications for the same achievement
   * Fixed character unlock notifications not being displayed when the character is actually unlocked
   * Fixed Trippy Trip achievement
+  * Fixed Special Visit achievement
   * Fixed stats not being correctly incremented after switching difficulty levels
-  * Fixed game not loading correctly on some linux machines
+  * Fixed ranking display in Italian
+  * Fixed some rest events not actually including a rest
 
 # 1.3.9 (May 25th 2018)
 

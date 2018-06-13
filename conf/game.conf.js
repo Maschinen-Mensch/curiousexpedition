@@ -184,6 +184,7 @@ var achievements = [
     name: "txt-ach-visit-special",
     desc: "txt-ach-visit-special-desc",
     img: "achv_img_ID_45",
+    counterTarget: 5
   },
   {
     id: "ach-recr-dinos",
@@ -420,7 +421,7 @@ var staticConfig =
   enableAchievements: true,
   showMods: true,
   showReport: false,
-  footerName: "1.3.10.5",
+  footerName: "1.3.10.7",
   sanityCheckEvents: true,
 
   // is converted to config.diaryText at run-time
