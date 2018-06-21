@@ -1,8 +1,9 @@
-# 1.3.10
+# 1.3.10 (June 14th 2018)
 
 * Added Polish translation
 * Performance and Rendering
-  * If the game detects that it has no GPU, scaling will default to off
+  * Added Low Graphics setting that reduced particles
+  * If the game detects that it has no GPU, Low Graphics will default to on
   * Added support for 4K UHD Resolution (3840 x 2160): 1:6 pixel ratio
   * Can now toggle Stretching setting independently of Scaling
   * Improved rendering performance

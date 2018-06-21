@@ -4,7 +4,7 @@
     name: pck-debug-name
     slotMarker: hud_mapMarker_desert.png
     ambientSound: sfx_loop_desert_1
-    goals: gol-goldenTemple-grass
+    goals: gol-goldenTemple-moonStone
     locations: [
       {ref: loc-village-1}
       {ref: loc-village-2}

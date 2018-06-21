@@ -595,7 +595,7 @@ var debug = {
   testTribe: 'tg-jungle',
   tribeBackground: '#4b3a32',
   testStatus: 'st-sexist',
-  // testGoal: 'gol-goldenTemple-grass',
+  // testGoal: 'gol-goldenTemple-moonStone',
 
   outputDiaryLog: false, // if this is on, screenshots of every diary entry will be placed in a folder 'diaryLog' (electron only)
 

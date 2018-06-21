@@ -3,7 +3,7 @@
     id: pck-caves
     slotMarker: hud_mapMarker_desert.png
     ambientSound: sfx_loop_desert_1
-    goals: [gol-goldenTemple-grass]
+    goals: [gol-goldenTemple-moonStone]
     locations: [
       {ref: loc-magneticMountain}
     ]
