@@ -9,33 +9,21 @@
         defaultLang: en
         #preview:
         #description:
+
         #Probs
-        #-Fix up left native in fight
-        #-Fix desert tilespawn by village
-        #-Seals for Slaves, Dawg!
+        #-After breaking will, loot and pillage has no items
+        #-Balancing: Recruit animal grey out leave?
+        #-Mood Board Slaver Camp
+        #-Transport Cart mood board
+        #-adjust rival points
+        #-What to do with outro?????????????????????????????????????
+        #-Make two big end text when statue is shown: Win or lose!!!!!!!!!!
         #-Create custom Names for Apes based on Greek Roman Mythology
-        #-Quartermaster: better banana bonus (Steal from Cultist)
-        #-change LokiGun
-        #-dem gorillaz thou
-        #-old camp inventory
-        #-shipwreck inventory
         #-Beast Master + Warhog recruitment no Popup
         #-Weird village enter: ask what your goal is, treasures
-        #-Make two big end text when statue is shown: Win or lose!!!!!!!!!!
-        #-Ruins potentially not always spawning? Eg Exp. 1!!!!!!
         #-Remove Altars
         #-Night event: Natives approaching to trade: eliminate!
-        #-Solve Moonstone requirement
-        #-Don't forget to check every text
-        #-Change all mentions of shrine to ruin
-        #-remove coston flares from village loot list
-        #-wife/husband quest
-        #-rescue native warrior quest
-        #-Change "Museum" to "Palace" instead
-        #-Check Perks -Careerist -Arctic Explorer -desert explorer -jungle explorer//
-        #-Rename Baton / Spear attacks
-        #-Wife quest: works, but back to london???
-        #-Outro Pyramid: Golden City!
+        #-Check Perks -Careerist -Arctic Explorer//
     }
     imageData: [
         #{
@@ -228,6 +216,54 @@
             file: worldOfApes/marauder_minisprite_1.png
         }
         {
+            id: vanguard_sprite_1
+            file: worldOfApes/vanguard_sprite_1.png
+        }
+        {
+            id: vanguard_male_face_1
+            file: worldOfApes/vanguard_male_face_1.png
+        }
+        {
+            id: vanguard_male_face_1_small
+            file: worldOfApes/vanguard_male_face_1_small.png
+        }
+        {
+            id: vanguard_female_face_1
+            file: worldOfApes/vanguard_female_face_1.png
+        }
+        {
+            id: vanguard_female_face_1_small
+            file: worldOfApes/vanguard_female_face_1_small.png
+        }
+        {
+            id: vanguard_minisprite_1
+            file: worldOfApes/vanguard_minisprite_1.png
+        }
+        {
+            id: berserker_sprite_1
+            file: worldOfApes/berserker_sprite_1.png
+        }
+        {
+            id: berserker_male_face_1
+            file: worldOfApes/berserker_male_face_1.png
+        }
+        {
+            id: berserker_male_face_1_small
+            file: worldOfApes/berserker_male_face_1_small.png
+        }
+        {
+            id: berserker_female_face_1
+            file: worldOfApes/berserker_female_face_1.png
+        }
+        {
+            id: berserker_female_face_1_small
+            file: worldOfApes/berserker_female_face_1_small.png
+        }
+        {
+            id: berserker_minisprite_1
+            file: worldOfApes/berserker_minisprite_1.png
+        }
+        {
             id: warhog_sprite_1
             file: worldOfApes/warhog_sprite_1.png
         }
@@ -270,7 +306,117 @@
     ],
     modEntries: [
         {
+            targetId: /sp-darwin
+        }
+        {
+            targetId: /sp-curie
+        }
+        {
+            targetId: /sp-burton
+        }
+        {
+            targetId: /sp-huizinga
+        }
+        {
+            targetId: /sp-kingsley
+        }
+        {
+            targetId: /sp-earhart
+        }
+        {
+            targetId: /sp-tesla
+        }
+        {
+            targetId: /sp-neel
+        }
+        {
+            targetId: /sp-garvey
+        }
+        {
+            targetId: /sp-fortune
+        }
+        {
+            targetId: /sp-selous
+        }
+        {
+            targetId: /sp-stark
+        }
+        {
+            targetId: /sp-lovecraft
+        }
+        {
+            targetId: /sp-bird
+        }
+        {
+            targetId: /sp-tubman
+        }
+        {
+            targetId: /sp-crowley
+        }
+        {
+            targetId: /sp-lovelace
+        }
+        {
+            targetId: /sp-amundsen
+        }
+        {
+            targetId: /sp-feihong
+        }
+        {
             targetId: -loc-slaver::reqWorld
+        }
+        {
+            targetId: /st-charismatic
+        }
+        {
+            targetId: /st-arcticExplorer
+        }
+        {
+            targetId: /st-bulletHoarder
+        }
+        {
+            targetId: /zn-gorilla
+            data: {
+                id: zn-sabertooth
+                name: txt-zn-anm-sabertooth-title
+                sprite: res_zones_sabertooth.png
+                borderImgIdx: 0
+                size: [2, 2]
+                aggroChance: 0.75
+                moveSpeed: 1.5
+                events: [
+                {
+                    showImage: {type: day, src: evt_spec_combat_1.png}
+                    select: [
+                    {
+                        reqDifficulty: 0..
+                        reqWorld: 0..
+                        prio: 2
+                        combat: [
+                        {emy-sabertooth: 1}
+                        ]
+                    }
+                    {
+                        reqDifficulty: 1..
+                        reqWorld: 2..
+                        prio: 1
+                        combat: [
+                        {slots: 3, emy-sabertooth: 1}
+                        {emy-sabertooth: 2}
+                        ]
+                    }
+                    {
+                        reqDifficulty: 1..
+                        reqWorld: 4..
+                        prio: 1
+                        combat: [
+                        {emy-sabertooth: 2}
+                        ]
+                    }
+                    ]
+                }
+                ]
+            }
         }
         {
             targetId: /il-rival-items
@@ -437,31 +583,31 @@
         }
         {
             targetId: /wd-world-1::pockets
-            data: pck-dry
+            data: pck-dry pck-grass pck-desert
         }
         {
             targetId: /wd-world-2::pockets
-            data: pck-dry
+            data: pck-dry pck-grass pck-desert
         }
         {
             targetId: /wd-world-3::pockets
-            data: pck-dry
+            data: pck-dry pck-grass pck-desert
         }
         {
             targetId: /wd-world-4::pockets
-            data: pck-dry
+            data: pck-dry pck-grass pck-desert
         }
         {
             targetId: /wd-world-5::pockets
-            data: pck-dry
+            data: pck-dry pck-grass pck-desert
         }
         {
             targetId: /wd-world-6::pockets
-            data: pck-dry
+            data: pck-dry pck-grass pck-desert
         }
         {
             targetId: /wd-extra-1::pockets
-            data: pck-dry
+            data: pck-dry pck-grass pck-desert
         }
         {
             targetId: /il-loot-edible-easy
@@ -1023,7 +1169,7 @@
                     dice: dc-support-2 dc-support-2 dc-defend-2
                 }
             ]
-            characters: pl-soldier-scottish pl-native-starting-shaman anm-donkey pl-slaveCart
+            characters: pl-mountainTrooper pl-native-starting-shaman anm-donkey pl-slaveCart
             items: {
                 it-whisky: 6
                 it-lokiGun-athena: 1
@@ -1097,7 +1243,7 @@
                     reqBiomeFlags: +dry
                     replaceTiles: [
                         {range: 2, old: any, new: tl-dry-jungle-thick}
-                        {range: 3, old: any, new: tl-mountain, chance: 0.675}
+                        {range: 3, old: any, new: tl-mountain, chance: 0.5}
                         #{radius: 2, old: any, new: tl-jungle-thick, reqBiomeFlags: +grass}
                         #{radius: 2, old: any, new: tl-mountain, chance: 0.5}
                         #{radius: 1, old: any, new: tl-dry-jungle-thick}
@@ -1107,7 +1253,7 @@
                     reqBiomeFlags: +grass
                     replaceTiles: [
                         {range: 2, old: any, new: tl-jungle-thick}
-                        {range: 3, old: any, new: tl-mountain, chance: 0.675}
+                        {range: 3, old: any, new: tl-mountain, chance: 0.5}
                         #{radius: 2, old: any, new: tl-jungle-thick, reqBiomeFlags: +grass}
                         #{radius: 2, old: any, new: tl-mountain, chance: 0.5}
                         #{radius: 1, old: any, new: tl-dry-jungle-thick}
@@ -1408,6 +1554,21 @@
             }
         }
         {
+            id: evt-village-recruit-warmount
+            actions: [
+                {
+                    actionText: txt-anm-warmount-title
+                    text: txt-evt-village-steal-animal
+                    setPartyFlags: +recruitedSomebody
+                    addCharacter: anm-warmount
+                    alwaysShown: true
+                    reqItems: {it-slaves: 10..}
+                    items: {it-slaves: -10}
+                    select: evt-slaver-actions
+                }
+            ]
+        }
+        {
             id: evt-village-slaverAnimal-actions
             partyEvents: [
             {
@@ -1418,6 +1579,7 @@
                 {slots: 5, setLocationFlags: +beastNormal}
                 {slots: 3, setLocationFlags: +beastSpecial_1}
                 {slots: 1, setLocationFlags: +beastSpecial_2}
+                {slots: 1, setLocationFlags: +beastSpecial_3}
                 ]
             }
             {
@@ -1457,6 +1619,13 @@
                 {reqBiomeFlags: -arctic, select: evt-village-recruit-chasmosaurus}
                 ]
             }
+            {
+                reqLocationFlags: +beastSpecial_3
+                optional: true
+                select: [
+                {reqBiomeFlags: -arctic, select: evt-village-recruit-warmount}
+                ]
+            }
             ]
             #actions: evt-village-main-update
         }
@@ -1476,24 +1645,8 @@
             alwaysShown: true
             actionText: txt-evt-village-pillage-action
             standing: -3
+            setLocationFlags: +isLooted
             select: evt-village-human-pillage-loot
-            #reqTileFlags: -restFail
-            #select: [
-            #{
-                #reqStanding: -2..10
-                #text: txt-evt-village-rest-1
-                #select: evt-village-nightSelect
-            #}
-            #{
-                #reqStanding: -8..-3
-                #text: txt-evt-village-rest-2
-                #barter: {
-                #baseValue: {base: 15}
-                #closeEvents: {text: txt-evt-village-rest-3, select: evt-village-nightSelect}
-                #cancelEvents: {text: txt-evt-village-rest-no, select: evt-village-actions}
-                #}
-            #}
-            #]
         }
         {   
             id: evt-burn-village
@@ -1506,6 +1659,7 @@
             text: txt-evt-village-huntSlaves
             actionText: txt-evt-village-huntSlaves-action
             setLocationFlags: -inhabited
+            reqLocationFlags: -recruitFail
             actions: [
             {
                 text: txt-evt-peaceful-enslavement-fail
@@ -1531,23 +1685,25 @@
               reqDice: mind
               actionText: txt-evt-peaceful-enslavement-action
               winEvents: {
+                  setLocationFlags: +recruitFail
                 select: {
                     text: txt-evt-peaceful-enslavement-success
                     standing: 3
                     loot: {
                         items: [
-                            {slots:3, it-slaves: 3},
-                            {slots:2, it-slaves: 4},
-                            {slots:1, it-slaves: 5},
+                            {slots:3, it-slaves: 3}
+                            #{slots:3, it-slaves: 3},
+                            #{slots:2, it-slaves: 4},
+                            #{slots:1, it-slaves: 5},
                         ]
-                        closeEvents: evt-burn-village
+                        closeEvents: evt-village-human-actions
                         }
                 }
               }
               failEvents: {
                   text: txt-evt-peaceful-enslavement-fail-2
                   standing: -3
-                select: evt-village-human-fight
+                select: evt-village-human-huntFight
               }
             }
             ]
@@ -1587,12 +1743,13 @@
         }
         {
             id: evt-village-human-pillage-loot
+            reqLocationFlags: +isLooted
             loot: {
-            items: [
-                {slots:3, il-loot-edible-easy: 2, il-loot-standard: 3, it-jewels: 1, it-firstAid: 2},
-                {slots:1, il-loot-edible-easy: 2, il-treasure-lowValue: 2, it-jewels: 1, it-firstAid: 4},
-                {slots:1, il-loot-edible-easy: 2, il-magic: 1, il-tomePages: 2, it-firstAid: 4},
-            ]
+                items: [
+                    {slots:3, il-loot-edible-easy: 2, il-loot-standard: 3, it-jewels: 1, it-firstAid: 2},
+                    {slots:1, il-loot-edible-easy: 2, il-treasure-lowValue: 2, it-jewels: 1, it-firstAid: 4},
+                    {slots:1, il-loot-edible-easy: 2, il-magic: 1, il-tomePages: 2, it-firstAid: 4},
+                ]
             closeEvents: evt-burn-village
             }
         }
@@ -1612,9 +1769,9 @@
             description: txt-it-slaves
             sprite: slaves_1
             debugCategory: modding
-            value: {base: 50, village: 1}
-            fame: fameLarge
-            funds: fundsLarge
+            value: {base: 20, village: 1}
+            fame: fameSmall
+            funds: fundsSmall
             maxStack: {base: 1, bonus: slaveStacking}
         }
         {
@@ -1689,7 +1846,7 @@
             description: txt-pl-bloodrider
             health: 9
             capacity: 2
-            flags: +porter +cavalry +humanoid
+            flags: +porter +bloodrider +humanoid
             variations: [
                 {
                     gender: male
@@ -1788,11 +1945,13 @@
             sprite: res_status_occultVision.png
             debugCategory: Unit Perk
             flags: +discoverVillage1
-            tripEvents: {
-                reqAge: 1..
-                posTile: {locations: loc-slaver, closest: true, range: ..10}
-                revealTiles: {radius: 0, location: true, centerCam: false}
-            }
+            tripEvents:[ 
+                {
+                    reqAge: 1..
+                    posTile: {locations: loc-slaver, closest: true, range: ..10}
+                    revealTiles: {radius: 0, location: true, centerCam: false}
+                }
+            ]
         }
         { 
             id: st-discoverVillage-2
@@ -1800,7 +1959,8 @@
             title: txt-discoverVillage-2-title
             sprite: res_status_occultVision.png
             flags: +discoverVillage2
-            tripEvents: {
+            tripEvents: 
+            {
                 reqAge: 1..
                 posTile: {locations: loc-slaver, closest: true, range: ..14}
                 revealTiles: {radius: 0, location: true, centerCam: false}
@@ -1830,65 +1990,238 @@
                 revealTiles: {radius: 0, location: true, centerCam: false}
             }
         }
-        #{
-            #targetId: /pl-soldier-british
-            #data: {
-           # id: pl-marauder
-           # debugCategory: Standard
-           # title: txt-pl-marauder-title
-           # description: txt-pl-marauder
-          #variations: [
-          #  {
-           #     gender: male
-           #     name: soldierBritish
-            #    sprite: marauder_sprite_1
-            #    portrait: marauder_male_face_1
-           #     miniSprite: marauder_minisprite_1
-            #}
-            #{
-               # gender: female
-               # name: soldierBritish
-               # sprite: marauder_sprite_1
-               # portrait: marauder_female_face_1
-               # miniSprite: marauder_minisprite_1
-            #}
-            #]
-            #miniSprite: res_porter_soldier_british_mini.png
-            #capacity: 2
-            #health: 8
-            #flags: +porter +humanoid +soldier +soldierBritish +british
-            #spawnEvents: {
-            #partyEvents: [
-            #    {
-            #    select: [
-             #       {slots: 1, setStatus: +claustrophobic}
-             #       {slots: 1, setStatus: +superstitious}
-              #      {slots: 1, setStatus: +kleptomania}
-             #       {slots: 2, setStatus: +alcoholic}
-             #       {slots: 2, setStatus: +racist}
-             #       {slots: 2, setStatus: +sexist}
-              #      {slots: 7}
-              #  ]
-             #   }
-             #   {
-             #   select: [
-             #       {slots: 2, setCharFlags: +moody}
-             #       {slots: 1, setCharFlags: +greedy}
-              #      {slots: 1, setCharFlags: +witty}
-              #      {slots: 1, setCharFlags: +coward}
-               #     {slots: 3, setCharFlags: +brave}
-              #  ]
-              #  }
-           # ]
-           # }
-           # levels: [
-           # {statuses: st-combatSanity-1, dice: dc-attack-1}
-           # {statuses: st-combatSanity-2, dice: dc-attack-1}
-           # {statuses: st-combatSanity-3, dice: dc-defend-1 dc-attack-1}
-          #  {statuses: st-combatSanity-4, dice: dc-defend-1 dc-attack-2}
-           # ]
-           # }
-        #}
+        {
+            targetId: /evt-harbor-recruit-soldierScottish
+            data:
+            {
+            id: evt-harbor-recruit-soldierScottish
+            npc: pl-soldier-scottish
+            npcEvents: {
+            actions: {
+                actionText: txt-evt-harbor-recruit-berzerker-action
+                alwaysShown: true
+                text: txt-evt-harbor-recruit-berzerker
+                setPartyFlags: +recruitedSomebody
+                addNPC: true
+                chat: cl-join
+                select: evt-harbor-recruit
+            }
+            }
+            charEvents: {count: all, reqCharFlags: -soldierScottish}
+        }
+        }
+        {
+            targetId: /pl-soldier-scottish
+            data: {
+            id: pl-soldier-scottish
+            debugCategory: Standard
+            title: txt-pl-berserker-title
+            description: txt-pl-berserker
+            variations: [
+                {
+                    gender: male
+                    name: arabianCharacterMale
+                    sprite: berserker_sprite_1
+                    portrait: berserker_male_face_1
+                    miniSprite: berserker_minisprite_1
+                }
+                {
+                    gender: female
+                    name: arabianCharacterFemale
+                    sprite: berserker_sprite_1
+                    portrait: berserker_female_face_1
+                    miniSprite: berserker_minisprite_1
+                }
+            ]
+            capacity: 2
+            health: 8
+            flags: +porter +humanoid +soldier +soldierScottish
+            spawnEvents: {
+            partyEvents: [
+                {
+                select: [
+                    {slots: 1, setStatus: +claustrophobic}
+                    {slots: 3, setStatus: +superstitious}
+                    {slots: 1, setStatus: +kleptomania}
+                    {slots: 4, setStatus: +alcoholic}
+                    {slots: 2, setStatus: +racist}
+                    {slots: 2, setStatus: +sexist}
+                    {slots: 7}
+                ]
+                }
+                {
+                select: [
+                    {slots: 1, setCharFlags: +moody}
+                    {slots: 1, setCharFlags: +greedy}
+                    {slots: 1, setCharFlags: +witty}
+                    {slots: 1, setCharFlags: +coward}
+                    {slots: 1, setCharFlags: +brave}
+                ]
+                }
+            ]
+            }
+            levels: [
+            {statuses: st-whiskyIncrease-1, dice: dc-attack-1}
+            {statuses: st-whiskyIncrease-2, dice: dc-attack-1}
+            {statuses: st-whiskyIncrease-3, dice: dc-attack-1 dc-attack-1}
+            {statuses: st-whiskyIncrease-4, dice: dc-attack-2 dc-attack-1}
+            ]
+        }
+        }
+        {
+            targetId: /pl-mountainTrooper
+            data: {
+                    id: pl-mountainTrooper
+                    debugCategory: Standard
+                    title: txt-pl-vanguard-title
+                    description: txt-pl-vanguard
+                    variations: [
+                    {
+                        gender: male
+                        name: arabianCharacterMale
+                        sprite: vanguard_sprite_1
+                        portrait: vanguard_male_face_1
+                        miniSprite: vanguard_minisprite_1
+                    }
+                    {
+                        gender: female
+                        name: arabianCharacterFemale
+                        sprite: vanguard_sprite_1
+                        portrait: vanguard_female_face_1
+                        miniSprite: vanguard_minisprite_1
+                    }
+                    ]
+                    capacity: 2
+                    health: 8
+                    flags: +porter +humanoid +soldier
+                    spawnEvents: {
+                    partyEvents: [
+                        {
+                            select: [
+                                {slots: 1, setStatus: +claustrophobic}
+                                {slots: 1, setStatus: +superstitious}
+                                {slots: 1, setStatus: +kleptomania}
+                                {slots: 2, setStatus: +alcoholic}
+                                {slots: 2, setStatus: +racist}
+                                {slots: 2, setStatus: +sexist}
+                                {slots: 7}
+                            ]
+                        }
+                        {
+                            select: [
+                                {slots: 2, setCharFlags: +moody}
+                                {slots: 1, setCharFlags: +greedy}
+                                {slots: 1, setCharFlags: +witty}
+                                {slots: 1, setCharFlags: +coward}
+                                {slots: 3, setCharFlags: +brave}
+                            ]
+                        }
+                    ]
+                }
+                    levels: [
+                    {statuses: st-mountainTrooper-1, dice: dc-defend-1}
+                    {statuses: st-mountainTrooper-2, dice: dc-defend-2}
+                    {statuses: st-mountainTrooper-3, dice: dc-defend-2 dc-attack-1}
+                    {statuses: st-mountainTrooper-4, dice: dc-defend-2 dc-attack-2}
+                    ]
+            }
+        }
+        {
+            targetId: /pl-soldier-british
+            data: {
+            id: pl-soldier-british
+            debugCategory: Standard
+            title: txt-pl-marauder-title
+            description: txt-pl-marauder
+            variations: [
+            {
+                gender: male
+                name: arabianCharacterMale
+                sprite: marauder_sprite_1
+                portrait: marauder_male_face_1
+                miniSprite: marauder_minisprite_1
+            }
+            {
+                gender: female
+                name: arabianCharacterFemale
+                sprite: marauder_sprite_1
+                portrait: marauder_female_face_1
+                miniSprite: marauder_minisprite_1
+            }
+            ]
+            miniSprite: res_porter_soldier_british_mini.png
+            capacity: 2
+            health: 8
+            flags: +porter +humanoid +soldier +soldierBritish +british
+            spawnEvents: {
+            partyEvents: [
+                {
+                select: [
+                    {slots: 1, setStatus: +claustrophobic}
+                    {slots: 1, setStatus: +superstitious}
+                    {slots: 1, setStatus: +kleptomania}
+                    {slots: 2, setStatus: +alcoholic}
+                    {slots: 2, setStatus: +racist}
+                    {slots: 2, setStatus: +sexist}
+                    {slots: 7}
+                ]
+                }
+                {
+                select: [
+                    {slots: 2, setCharFlags: +moody}
+                    {slots: 1, setCharFlags: +greedy}
+                    {slots: 1, setCharFlags: +witty}
+                    {slots: 1, setCharFlags: +coward}
+                    {slots: 3, setCharFlags: +brave}
+                ]
+                }
+            ]
+            }
+            levels: [
+            {statuses: st-combatSanity-1, dice: dc-attack-1}
+            {statuses: st-combatSanity-2, dice: dc-attack-1}
+            {statuses: st-combatSanity-3, dice: dc-defend-1 dc-attack-1}
+            {statuses: st-combatSanity-4, dice: dc-defend-1 dc-attack-2}
+            ]
+            }
+        }
+        {
+            id: evt-village-human-huntFight
+            #setLocationFlags: +abandoned
+            text: txt-evt-human-fight
+            setLocationFlags: -inhabited
+            setLocationFlags: +villageFight
+            actions: [
+            {
+                actionText: txt-evt-human-fight-action
+                #showImage: {type: day, src: evt_spec_combat_1.png}
+                showImage: {src: evt_fxt_village_1.png, type: day}
+                setLocationFlags: -inhabited    
+                select: [
+                    {
+                        #reqStanding: 0..10
+                        setPartyFlags: +villageFight
+                        combat: [
+                            {emy-native-warrior: 1, emy-native-scout: 2}
+                        ]
+                    }
+                    #{
+                        #reqStanding: -2..-1
+                        #setPartyFlags: +villageFight
+                        #combat: [
+                            #{emy-native-warrior: 1, emy-native-scout: 2, emy-native-shaman: 1}
+                        #]
+                    #}
+                ]
+            }
+            {
+                actionText: txt-evt-human-fight-flee-action
+                text: txt-evt-human-fight-flee
+                setLocationFlags: -inhabited
+                addZone: {ref: zn-angryNatives, range: ..2}
+            }
+            ]
+        }
         {
             id: evt-village-human-fight
             #setLocationFlags: +abandoned
@@ -2017,12 +2350,12 @@
                 {slots: 1, it-rifle-improved: 1}
                 {slots: 1, it-teslaGun: 1}
                 #{slots: 1, it-lokiGun: 1}
-                {slots: 2, it-grenade: 10}
-                {slots: 2, it-policebaton: 10}
+                {slots: 2, it-dynamite: 5}
+                #{slots: 2, it-policebaton: 10}
                 {slots: 1, it-telescope: 1}
                 {slots: 1, it-binoculars: 1}
                 {slots: 1, it-sextant: 1}
-                {slots: 1, it-weatherBalloon: 10}
+                {slots: 1, it-weatherBalloon: 3}
                 {slots: 1, it-obsidianMirror: 1}
                 {slots: 1, it-bloodCrown: 1}
                 {slots: 1, it-pumpkinLantern: 1}
@@ -2158,8 +2491,8 @@
         }
         {
             id: it-lokiGun-athena
-            name: txt-it-lokiGun-name
-            description: txt-it-lokiGun
+            name: txt-it-lokiGun-athena-name
+            description: txt-it-lokiGun-athena
             sprite: it_weapon_tesla_1.png
             flags: +gun
             value: {base: 30, village: 10, karma: 1}
@@ -2384,7 +2717,7 @@
         {
             id: evt-eat-banana
             select: [
-                {slots: 9, sanity: 25, removeItem: true, playSound: sfx_eat_var1 sfx_eat_var2}
+                {slots: 9, sanity: 15, removeItem: true, playSound: sfx_eat_var1 sfx_eat_var2}
                 {slots: 1, sanity: 100, superMove: true, removeItem: true, playSound: sfx_tomePage_var1 sfx_tomePage_var2 sfx_tomePage_var3}
             ]
         }
@@ -2399,93 +2732,6 @@
                 goals: gol-goldenTemple-moonStone gol-goldenTemple-buried
                 locations: [
                 [
-                    {ref: grp-village}
-                    {ref: grp-sanity-nature}
-                    {ref: grp-sanity-nature}
-                    {
-                    select: 3
-                    group: [
-                        {ref: grp-village}
-                        {ref: grp-sanity-nature}
-                    ]
-                    }
-                ]
-                [
-                    {ref: grp-cave}
-                    {ref: grp-loot}
-                    {ref: grp-loot}
-                    {ref: grp-cave}
-                    {ref: grp-loot}
-                    {ref: grp-loot}
-                ]
-                [
-                    {chance:1, ref: loc-slaver}
-                ]
-                [
-                    {ref: loc-stoneCircle}
-                    {}
-                    {}
-                    #{ref: loc-trader}
-                    #{ref: loc-slaver}
-                ]
-                [
-                    {ref: grp-treasure}
-                    {}
-                    {ref: grp-treasure}
-                    {ref: grp-special}
-                    {ref: grp-treasure}
-                    {
-                    select: 2
-                    group: [
-                        {ref: grp-special}
-                        {ref: grp-treasure}
-                    ]
-                    }
-                ]
-                [
-                    {reqWorld: 3.., chance: 0.5, select: 2, ref: loc-cave-teleport}
-                ]
-                [
-                    {}
-                    {}
-                    {reqDifficulty: 1.., ref: loc-magneticMountain}
-                    {reqDifficulty: 1.., ref: loc-magneticMountain}
-                    {reqDifficulty: 1.., ref: loc-magneticMountain}
-                ]
-                [
-                    {ref: loc-hiddenTreasure}
-                    {chance: 0.25, ref: loc-mountainFaceSecret}
-                ]
-                ]
-                biomes: [
-                {ref: bio-desert-generic}
-                {select: 1, group: grp-drylands-sanity, chance: 0.1}
-                {select: 2, group: grp-desert-sanity}
-                {
-                    chance: 0.7
-                    select: 1
-                    reqWorld: 3..
-                    group: [
-                    {slots: 1, group: grp-grasslands-sanity}
-                    {slots: 1, group: grp-drylands-sanity}
-                    ]
-                }
-                {select: 5, group: grp-desert-sanity}
-                ]
-                }
-            }
-            {
-                targetId: /pck-dry
-                data: {
-                    id: pck-dry
-                    name: txt-pck-dry-name
-                    flags: +jungle
-                    previewSprite: hud_worldmap_pocketPreview_dry.png
-                    slotMarker: hud_mapMarker_dry.png
-                    ambientSound: sfx_loop_dry_1
-                    goals: [gol-goldenTemple-moonStone, gol-goldenTemple-buried]
-                    locations: [
-                        [
                         {ref: grp-village}
                         {ref: grp-sanity-nature}
                         {ref: grp-sanity-nature}
@@ -2499,7 +2745,7 @@
                         ]
                         [
                             {
-                                select: 2
+                            select: 2
                             group: [
                                 
                                 {ref: grp-village}
@@ -2517,7 +2763,7 @@
                         ]
                         [
                             {
-                                select: 2
+                            select: 2
                             group: [
                                 {ref: loc-stoneCircle}
                                 {}
@@ -2587,21 +2833,151 @@
                         {chance: 0.25, ref: loc-mountainFaceSecret}
                         ]
                     ]
-                    biomes: [
+                biomes: [
+                {ref: bio-desert-generic}
+                {select: 1, group: grp-drylands-sanity, chance: 0.1}
+                {select: 2, group: grp-desert-sanity}
+                {
+                    chance: 0.7
+                    select: 1
+                    reqWorld: 3..
+                    group: [
+                    {slots: 1, group: grp-grasslands-sanity}
+                    {slots: 1, group: grp-drylands-sanity}
+                    ]
+                }
+                {select: 5, group: grp-desert-sanity}
+                ]
+                }
+            }
+            {
+                targetId: /pck-dry
+                data: {
+                    id: pck-dry
+                    name: txt-pck-dry-name
+                    flags: +jungle
+                    previewSprite: hud_worldmap_pocketPreview_dry.png
+                    slotMarker: hud_mapMarker_dry.png
+                    ambientSound: sfx_loop_dry_1
+                    goals: [gol-goldenTemple-moonStone, gol-goldenTemple-buried]
+                    locations: [
+                        [
+                        {ref: grp-village}
+                        {ref: grp-sanity-nature}
+                        {ref: grp-sanity-nature}
+                        {
+                            select: 3
+                            group: [
+                            {ref: grp-village}
+                            {ref: grp-sanity-nature}
+                            ]
+                        }
+                        ]
+                        [
+                            {
+                            select: 2
+                            group: [
+                                
+                                {ref: grp-village}
+                                #{ref: grp-cave}
+                                {ref: grp-loot}
+                                #{ref: grp-loot}
+                                #{ref: grp-cave}
+                                #{ref: grp-loot}
+                                #{ref: grp-loot}
+                            ]
+                            }
+                        ]
+                        [
+                        {chance: 1, ref: loc-slaver}
+                        ]
+                        [
+                            {
+                            select: 2
+                            group: [
+                                {ref: loc-stoneCircle}
+                                {}
+                                {ref: grp-village}
+                                #{ref: loc-shamanHut}
+                                #{ref: loc-trader}
+                                #{ref: loc-slaver}
+                            ]
+                            }
+                        ]
+                        [
+                        {ref: grp-village}
+                        #{ref: grp-treasure}
+                        {}
+                        {ref: loc-slaver}
+                        #{ref: grp-treasure}
+                        #{ref: grp-special}
+                        #{ref: grp-treasure}
+                        {
+                            select: 2
+                            group: [
+                            {ref: grp-village}
+                            #{ref: loc-slaver}
+                            {ref: grp-special}
+                            {ref: grp-treasure}
+                            ]
+                        }
+                        ]
+                        #[
+                        #{reqWorld: 3.., chance: 0.5, select: 2, ref: loc-cave-teleport}
+                        #]
+                        [
+                        {}
+                        {}
+                        {reqDifficulty: 1.., ref: loc-magneticMountain}
+                        {reqDifficulty: 1.., ref: loc-magneticMountain}
+                        {reqDifficulty: 1.., ref: loc-magneticMountain}
+                        ]
+                        [
+                        {reqWorld: 3, select: 1, ref: loc-geysir-inactive}
+                        ]
+                        [
+                        {
+                            reqWorld: 4
+                            select: 2
+                            group: [
+                            {slots: 1, select: 1, ref: loc-volcano-spawn-small-inactive}
+                            {slots: 1, select: 1, ref: loc-volcano-spawn-large-inactive}
+                            {slots: 3, select: 3, ref: loc-geysir-inactive}
+                            {slots: 3, select: 2, ref: loc-geysir-inactive}
+                            ]
+                        }
+                        ]
+                        [
+                        {
+                            reqWorld: 5..
+                            select: 1
+                            group: [
+                            {slots: 1, select: 1, ref: loc-volcano-spawn-large-inactive}
+                            {slots: 1, select: 3, ref: loc-volcano-spawn-small-inactive}
+                            {slots: 3, select: 4, ref: loc-geysir-inactive}
+                            ]
+                        }
+                        ]
+                        [
+                        {ref: loc-hiddenTreasure}
+                        {chance: 0.25, ref: loc-mountainFaceSecret}
+                        ]
+                    ]
+                   biomes: [
                         {select: 1, ref: bio-drylands-generic}
                         {select: 1, group: grp-grasslands-sanity, chance: 0.1}
                         {select: 2, group: grp-drylands-sanity}
                         {
-                        chance: 0.7
-                        select: 1
-                        reqWorld: 3..
-                        group: [
+                            chance: 0.7
+                            select: 1
+                            reqWorld: 3..
+                            group: [
                             {slots: 1, group: grp-desert-sanity}
                             {slots: 1, ref: bio-drylands-desert}
-                        ]
+                            ]
                         }
                         {select: 2, group: grp-drylands-sanity}
-                    ]
+                        ]
                     }
                 }
                 {
@@ -2615,125 +2991,137 @@
                         ambientSound: sfx_loop_grasslands_1
                         goals: [gol-goldenTemple-moonStone, gol-goldenTemple-buried]
                         locations: [
-                            [
+                    [
+                    {ref: grp-village}
+                    {ref: grp-sanity-nature}
+                    {ref: grp-sanity-nature}
+                    {
+                        select: 3
+                        group: [
+                        {ref: grp-village}
+                        {ref: grp-sanity-nature}
+                        ]
+                    }
+                    ]
+                    [
+                        {
+                        select: 2
+                        group: [
+                            
                             {ref: grp-village}
-                            {ref: grp-sanity-nature}
-                            {ref: grp-sanity-nature}
-                            {
-                                select: 3
-                                group: [
-                                {ref: grp-village}
-                                {ref: grp-sanity-nature}
-                                ]
-                            }
-                            ]
-                            [
-                            {ref: grp-cave}
+                            #{ref: grp-cave}
                             {ref: grp-loot}
-                            {ref: grp-cave}
-                            {ref: grp-loot}
-                            {ref: grp-loot}
-                            {ref: grp-loot}
-                            ]
-                            [
-                            {chance:1, ref: loc-slaver}
-                            ]
-                            [
-                            {}
-                            {
-                                select: 3
-                                group: [
-                                {ref: loc-stoneCircle}
-                                #{ref: loc-shamanHut}
-                                #{ref: loc-trader}
-                                #{ref: loc-slaver}
-                                ]
-                            }
-                            ]
-                            [
-                            {ref: grp-treasure}
-                            {}
-                            {ref: grp-treasure}
-                            {ref: grp-special}
-                            {ref: grp-treasure}
-                            {
-                                select: 2
-                                group: [
-                                {ref: grp-special}
-                                {ref: grp-treasure}
-                                ]
-                            }
-                            ]
-                            [
-                            {reqWorld: 3.., chance: 0.5, select: 2, ref: loc-cave-teleport}
-                            ]
-                            [
-                            {}
-                            {}
-                            {reqDifficulty: 1.., ref: loc-magneticMountain}
-                            {reqDifficulty: 1.., ref: loc-magneticMountain}
-                            {reqDifficulty: 1.., ref: loc-magneticMountain}
-                            ]
-                            [
-                            {reqWorld: 3, select: 1, ref: loc-geysir-inactive}
-                            ]
-                            [
-                            {
-                                reqWorld: 4
-                                select: 2
-                                group: [
-                                {slots: 1, select: 1, ref: loc-volcano-spawn-small-inactive}
-                                {slots: 1, select: 1, ref: loc-volcano-spawn-large-inactive}
-                                {slots: 3, select: 3, ref: loc-geysir-inactive}
-                                {slots: 3, select: 2, ref: loc-geysir-inactive}
-                                ]
-                            }
-                            ]
-                            [
-                            {
-                                reqWorld: 5..
-                                select: 1
-                                group: [
-                                {slots: 1, select: 1, ref: loc-volcano-spawn-large-inactive}
-                                {slots: 1, select: 3, ref: loc-volcano-spawn-small-inactive}
-                                {slots: 3, select: 4, ref: loc-geysir-inactive}
-                                ]
-                            }
-                            ]
-                            [
-                            {ref: loc-hiddenTreasure}
-                            {chance: 0.25, ref: loc-mountainFaceSecret}
-                            ]
-                        ]
-                        borderBiome: [
-                            {slots: 2, ref: bio-outside-sea}
-                            {slots: 2, ref: bio-outside-mountains}
-                            {slots: 2, ref: bio-outside-jungle}
-                            {slots: 1, ref: bio-outside-pits-dry}
-                        ]
-                        biomes: [
-                            {ref: bio-grasslands-generic}
-                            {chance: 0.9, ref: bio-grasslands-jungle}
-                            {
-                            chance: 0.1
-                            group: [
-                                {slots: 1, group: grp-desert-sanity, reqDifficulty: 1..}
-                                {slots: 1, group: grp-drylands-sanity}
-                            ]
-                            }
-                            {group: grp-grasslands-sanity}
-                            {
-                            chance: 0.3
-                            reqWorld: 3..
-                            group: [
-                                {slots: 2, group: grp-desert-sanity, reqDifficulty: 1..}
-                                {slots: 1, group: grp-drylands-sanity}
-                            ]
-                            }
-                            {select: 5, group: grp-grasslands-sanity}
+                            #{ref: grp-loot}
+                            #{ref: grp-cave}
+                            #{ref: grp-loot}
+                            #{ref: grp-loot}
                         ]
                         }
+                    ]
+                    [
+                    {chance: 1, ref: loc-slaver}
+                    ]
+                    [
+                        {
+                        select: 2
+                        group: [
+                            {ref: loc-stoneCircle}
+                            {}
+                            {ref: grp-village}
+                            #{ref: loc-shamanHut}
+                            #{ref: loc-trader}
+                            #{ref: loc-slaver}
+                        ]
+                        }
+                    ]
+                    [
+                    {ref: grp-village}
+                    #{ref: grp-treasure}
+                    {}
+                    {ref: loc-slaver}
+                    #{ref: grp-treasure}
+                    #{ref: grp-special}
+                    #{ref: grp-treasure}
+                    {
+                        select: 2
+                        group: [
+                        {ref: grp-village}
+                        #{ref: loc-slaver}
+                        {ref: grp-special}
+                        {ref: grp-treasure}
+                        ]
                     }
+                    ]
+                    #[
+                    #{reqWorld: 3.., chance: 0.5, select: 2, ref: loc-cave-teleport}
+                    #]
+                    [
+                    {}
+                    {}
+                    {reqDifficulty: 1.., ref: loc-magneticMountain}
+                    {reqDifficulty: 1.., ref: loc-magneticMountain}
+                    {reqDifficulty: 1.., ref: loc-magneticMountain}
+                    ]
+                    [
+                    {reqWorld: 3, select: 1, ref: loc-geysir-inactive}
+                    ]
+                    [
+                    {
+                        reqWorld: 4
+                        select: 2
+                        group: [
+                        {slots: 1, select: 1, ref: loc-volcano-spawn-small-inactive}
+                        {slots: 1, select: 1, ref: loc-volcano-spawn-large-inactive}
+                        {slots: 3, select: 3, ref: loc-geysir-inactive}
+                        {slots: 3, select: 2, ref: loc-geysir-inactive}
+                        ]
+                    }
+                    ]
+                    [
+                    {
+                        reqWorld: 5..
+                        select: 1
+                        group: [
+                        {slots: 1, select: 1, ref: loc-volcano-spawn-large-inactive}
+                        {slots: 1, select: 3, ref: loc-volcano-spawn-small-inactive}
+                        {slots: 3, select: 4, ref: loc-geysir-inactive}
+                        ]
+                    }
+                    ]
+                    [
+                    {ref: loc-hiddenTreasure}
+                    {chance: 0.25, ref: loc-mountainFaceSecret}
+                    ]
+                ]
+                borderBiome: [
+                    {slots: 2, ref: bio-outside-sea}
+                    {slots: 2, ref: bio-outside-mountains}
+                    {slots: 2, ref: bio-outside-jungle}
+                    {slots: 1, ref: bio-outside-pits-dry}
+                    ]
+                    biomes: [
+                    {ref: bio-grasslands-generic}
+                    {chance: 0.9, ref: bio-grasslands-jungle}
+                    {
+                        chance: 0.1
+                        group: [
+                        {slots: 1, group: grp-desert-sanity, reqDifficulty: 1..}
+                        {slots: 1, group: grp-drylands-sanity}
+                        ]
+                    }
+                    {group: grp-grasslands-sanity}
+                    {
+                        chance: 0.3
+                        reqWorld: 3..
+                        group: [
+                        {slots: 2, group: grp-desert-sanity, reqDifficulty: 1..}
+                        {slots: 1, group: grp-drylands-sanity}
+                        ]
+                    }
+                    {select: 5, group: grp-grasslands-sanity}
+                ]
+            }
+        }
         {
             id: zn-roamingNatives
             name: txt-zn-roamingNatives-name
@@ -3349,14 +3737,35 @@
             #evt-harbor-recruit-sterling
             evt-harbor-recruit-timLuis
             evt-harbor-recruit-nativeShaman
+            evt-harbor-recruit-nativeScout
+            evt-harbor-recruit-bloodrider
             ]
             }
         }
-        #{
+        #{   ###FOR TESTING####
             #targetId: +evt-harbor-recruit-select::select
             #slots: 1000
-            #ref: evt-harbor-recruit-nativeShaman
+            #ref: evt-harbor-recruit-soldierBritish
         #}
+        {
+            id: evt-harbor-recruit-bloodrider
+            npc: pl-bloodrider
+            npcEvents: {
+            actions: {
+                actionText: txt-evt-village-recruit-bloodrider-action
+                text: txt-evt-village-recruit-bloodrider
+                setPartyFlags: +recruitedSomebody
+                alwaysShown: true
+                addNPC: true
+                chat: cl-join
+                select: evt-harbor-recruit
+                }
+            }
+                charEvents: { 
+                count: all
+                reqCharFlags: -bloodrider
+            }
+        }
         {
             id: evt-harbor-recruit-nativeShaman
             npc: pl-native-shaman
@@ -3374,6 +3783,25 @@
                 charEvents: { 
                 count: all
                 reqCharFlags: -nativeShaman
+            }
+        }
+        {
+            id: evt-harbor-recruit-nativeScout
+            npc: pl-native-scout
+            npcEvents: {
+            actions: {
+                actionText: txt-evt-village-recruit-scout-action
+                text: txt-evt-village-recruit-scout
+                setPartyFlags: +recruitedSomebody
+                alwaysShown: true
+                addNPC: true
+                chat: cl-join
+                select: evt-harbor-recruit
+                }
+            }
+                charEvents: { 
+                count: all
+                reqCharFlags: -nativeScout
             }
         }
         {
@@ -3500,7 +3928,8 @@
             data: {
             id: il-trade-slaver
             items: [
-            {slots: 1000, it-firstAid: 2}
+            {slots: 1000, it-firstAid: 3}
+            {slots: 1000, it-dynamite: 4}
             {slots: 4, it-whisky: 6}
             #{slots: 4, it-ammo: 10}
             #{slots: 3, it-tinCans: 10}
@@ -3509,10 +3938,10 @@
             #{slots: 2, it-elephantTusk: 1}
             #{slots: 3, it-marbles: 6}
             {slots: 3, it-shovel: 5}
-            {slots: 3, it-firstAid: 5}
+            #{slots: 3, it-firstAid: 5}
             {slots: 2, it-costonFlare: 5}
-            #{slots: 2, it-dynamite: 4}
-            {slots: 2, it-torch: 5}
+            {slots: 2, it-dynamite: 4}
+            #{slots: 2, it-torch: 5}
             {slots: 2, it-spear: 5}
             {slots: 2, it-machete: 10}
             {slots: 2, it-rope: 10}
@@ -3529,8 +3958,8 @@
             {slots: 1, it-bongos: 1}
             {slots: 1, it-pendulum-treasure: 1}
             {slots: 1, it-whip: 1}
-            {slots: 1, it-policebaton: 10}
-            {slots: 1, it-grenade: 10}
+            {slots: 1, it-policebaton: 5}
+            {slots: 1, it-grenade: 5}
             ]
             }
         }
@@ -3627,67 +4056,232 @@
                 ]
             }   
             }
-        {
-            id: evt-seal-slaves
-            actionText: txt-evt-seal-slaves-title
-            text: txt-evt-seal-slaves
-            alwaysShown: true
-            reqItems: {it-slaves: 2..}
-            items: [
-                {it-slaves: -2}
-            ]
-            actions: [
+    {
+        id: evt-seal-slaves
+        actionText: txt-evt-seal-slaves-title
+        text: txt-evt-seal-slaves
+        alwaysShown: true
+        reqItems: {it-slaves: 2..}
+        items: [
+            {it-slaves: -2}
+        ]
+        actions: [
+            {
+                actionText: txt-evt-goldenSeal-action
+                chat: cl-seal-activate
+                text: txt-evt-goldenSeal-1-slaves
+                partyEvents: [
                 {
-                    actionText: txt-evt-goldenSeal-action
-                    chat: cl-seal-activate
-                    text: txt-evt-goldenSeal-1-slaves
-                    partyEvents: [
-                    {
-                        optional: true
-                        reqBiomeFlags: -arctic
-                        showImage: {src: evt_fxt_goldenSeal_active.png, type: day}
-                    }
-                    {
-                        optional: true
-                        reqBiomeFlags: +arctic
-                        showImage: {src: evt_fxt_goldenSeal_2_active.png, type: day}
-                    }
-                    ]
-                    actions: {
-                    replaceLocations: {new: loc-goldenSeal-active}
-                    partyEvents: [
-                        {
-                        optional: true
-                        posTile: {locations: loc-goldenTemple-buried}
-                        reqTileFlags: +seals1
-                        revealTiles: {
-                            radius: 2, 
-                            centerCam: true, 
-                            location: true, 
-                            particle: pt-buriedTempleSpawn}
-                        replaceLocations: {new: loc-goldenTemple-unearthed}
-                        camShake: {power: 8, length: 1.5}
-                        particle: pt-sealFlash
-                        playSound: volcanoErupt
-                        }
-                        {
-                        optional: true
-                        posTile: {locations: loc-goldenTemple-buried}
-                        reqTileFlags: +seals2
-                        setTileFlags: -seals2 +seals1
-                        camShake: {power: 8, length: 1.2}
-                        }
-                        {
-                        optional: true
-                        posTile: {locations: loc-goldenTemple-buried}
-                        reqTileFlags: +seals3
-                        setTileFlags: -seals3 +seals2
-                        camShake: {power: 8, length: 1.2}
-                        }
-                    ]
-                    }
+                    optional: true
+                    reqBiomeFlags: -arctic
+                    showImage: {src: evt_fxt_goldenSeal_active.png, type: day}
                 }
-            ]
+                {
+                    optional: true
+                    reqBiomeFlags: +arctic
+                    showImage: {src: evt_fxt_goldenSeal_2_active.png, type: day}
+                }
+                ]
+                actions: {
+                replaceLocations: {new: loc-goldenSeal-active}
+                partyEvents: [
+                    {
+                    optional: true
+                    posTile: {locations: loc-goldenTemple-buried}
+                    reqTileFlags: +seals1
+                    revealTiles: {
+                        radius: 2, 
+                        centerCam: true, 
+                        location: true, 
+                        particle: pt-buriedTempleSpawn}
+                    replaceLocations: {new: loc-goldenTemple-unearthed}
+                    camShake: {power: 8, length: 1.5}
+                    particle: pt-sealFlash
+                    playSound: volcanoErupt
+                    }
+                    {
+                    optional: true
+                    posTile: {locations: loc-goldenTemple-buried}
+                    reqTileFlags: +seals2
+                    setTileFlags: -seals2 +seals1
+                    camShake: {power: 8, length: 1.2}
+                    }
+                    {
+                    optional: true
+                    posTile: {locations: loc-goldenTemple-buried}
+                    reqTileFlags: +seals3
+                    setTileFlags: -seals3 +seals2
+                    camShake: {power: 8, length: 1.2}
+                    }
+                ]
+                }
+            }
+        ]
+    }
+    {
+            targetId: /it-dynamite
+            data:   {
+                id: it-dynamite
+                name: txt-it-dynamite-name
+                description: txt-it-dynamite
+                sprite: it_utility_dynamite_1.png
+                debugCategory: utility
+                tempDice: dc-dynamite
+                maxDice: 1
+                value: {base: 10, karma: 1}
+                isWeapon: true
+                maxStack: 20
+                useEvents: {
+                posPunch: {
+                    radius: {base: 0, bonus: dynamiteBonus}
+                    maxRange: 2
+                }
+                playSound: sfx_explosion_1
+                partyEvents: [
+                    {
+                    optional: true
+                    reqTileFlags: +mountain
+                    incAchievement: ach-explode-mountains
+                    }
+                    {
+                    optional: true
+                    reqTiles: [tl-volcano-active]
+                    incAchievement: ach-volcano-explosion
+                    }
+                    {
+                    replaceTiles: {
+                        range: {base: 0, bonus: dynamiteBonus}
+                        old: [
+                        tl-mountain
+                        tl-corrupted-mountain
+                        tl-volcano-active
+                        tl-volcano-inactive
+                        tl-grass
+                        tl-grass-bushes
+                        tl-grass-stoneForest
+                        tl-dry
+                        tl-dry-jungle-thick
+                        tl-dry-jungle-light
+                        tl-dry-stoneForest
+                        tl-jungle-thick
+                        tl-jungle-light
+                        tl-hill
+                        tl-desert
+                        tl-cactusForest
+                        tl-swamp
+                        tl-scorchedEarth
+                        tl-deset-stoneForest
+                        tl-giantMushrooms
+                        tl-glacier-land
+                        tl-crystalForest
+                        tl-frozenPlains
+                        tl-deepSnow
+                        tl-plateau
+                        ]
+                        new: tl-scorchedEarth
+                    }
+                    }
+                ]
+                replaceLocations: [
+                    {oldFlags: -mountain -settlement, range: {base: 0, bonus: dynamiteBonus}}
+                    {oldFlags: +mountain +secret, new: loc-blessingTemple-secret, range: {base: 0, bonus: dynamiteBonus}}
+                ]
+                particle: [
+                    pt-explosion-rock
+                    pt-explosion-ring
+                    pt-explosion-core-1
+                    pt-explosion-core-2
+                    pt-explosion-core-3
+                    pt-explosion-core-4
+                    pt-explosion-spark
+                ]
+                camShake: {power: 15, length: 0.3}
+                chat: cl-item-dynamite
+                removeItem: true
+                unlockCharacter: sp-tesla
+                #select: {reqDifficulty: 3, standing: -1}
+                }
+            }
+        }
+        {
+            targetId: /it-tomePage-portal
+            data:
+            {
+                id: it-tomePage-wisdom
+                extends: it-tomePage
+                name: txt-it-tomePage-wisdom-name
+                sprite: it_tomepage_7.png
+                useEvents: {
+                partyEvents: [
+                    {mapScore: 3}
+                ]
+                playSound: sfx_tomePage_var1 sfx_tomePage_var2 sfx_tomePage_var3
+                removeItem: true
+                }
+            }
+        }
+        {
+            targetId: /it-tomePage-corrupted
+            data:
+            {
+                id: it-tomePage-wisdom
+                extends: it-tomePage
+                name: txt-it-tomePage-wisdom-name
+                sprite: it_tomepage_7.png
+                useEvents: {
+                partyEvents: [
+                    {mapScore: 3}
+                ]
+                playSound: sfx_tomePage_var1 sfx_tomePage_var2 sfx_tomePage_var3
+                removeItem: true
+                }
+            }
+        }
+        {
+            targetId: /evt-sanity-selectMedium
+            data:
+            {
+                id: evt-sanity-selectMedium
+                select: [
+                {slots: 3, ref: evt-sanity-return-imaginary}
+                {slots: 3, ref: evt-sanity-return-angryLeave}
+                {slots: 2, ref: evt-sanity-return-friend}
+                {slots: 1, ref: evt-sanity-nativeVisit-init}
+                {slots: 2, ref: evt-sanity-vulture}
+                {slots: 2, ref: evt-sanity-alcoholic-turkey}
+                {slots: 1, ref: evt-sanity-challenge-climbTree}
+                {slots: 1, ref: evt-sanity-challenge-strength}
+                {slots: 1, ref: evt-sanity-challenge-mind}
+                {slots: 4, ref: evt-sanity-mummy}
+                {slots: 1, ref: evt-sanity-nativeGhosts}
+                #{slots: 1, ref: evt-sanity-helpNative-1}
+                #{slots: 1, ref: evt-sanity-helpNative-2}
+                {slots: 2, ref: evt-sanity-flavor-imaginary}
+                {slots: 2, ref: evt-sanity-flavor-memory-nightmare}
+                {slots: 2, ref: evt-sanity-flavor-drums}
+                {slots: 2, ref: evt-sanity-flavor-history}
+                {slots: 2, ref: evt-sanity-flavor-cook}
+                {slots: 4, ref: evt-sanity-flavor-missionary}
+                {slots: 2, ref: evt-sanity-flavor-childhood}
+                {slots: 2, ref: evt-sanity-flavor-temples}
+                {slots: 2, ref: evt-sanity-flavor-magneticMountains}
+                {slots: 2, ref: evt-sanity-flavor-patternMatching}
+                {slots: 2, ref: evt-sanity-flavor-stoneOverhang}
+                {slots: 2, ref: evt-sanity-flavor-waterfall}
+                {slots: 2, ref: evt-sanity-flavor-lastExpedition}
+                {slots: 1, ref: evt-sanity-flavor-romance}
+                {slots: 2, ref: evt-sanity-flavor-gorillas}
+                {slots: 2, ref: evt-sanity-flavor-desert}
+                {slots: 2, ref: evt-sanity-flavor-homeworld}
+                {slots: 2, ref: evt-sanity-flavor-mountainFace}
+                {slots: 2, ref: evt-sanity-flavor-sticks}
+                {slots: 2, ref: evt-sanity-flavor-angry}
+                {slots: 2, ref: evt-sanity-flavor-arctic-snowBlind}
+                {slots: 2, ref: evt-sanity-flavor-tesla}
+                {slots: 1, ref: evt-sanity-lovecraft-racist}
+                {prio: 100, ref: evt-sanity-selectHigh}
+                ]
+            }
         }
     ]
 }
