@@ -11,6 +11,8 @@
         #description:
 
         #Probs
+        #-Athena's Anthropology too mighty
+        #-Submit Humans: maybe burn shit down afterwards? or just grey loot out?
         #-After breaking will, loot and pillage has no items
         #-Balancing: Recruit animal grey out leave?
         #-Mood Board Slaver Camp
@@ -1177,6 +1179,22 @@
             }
         }
         {
+            targetId: /it-anthropologicalStudies
+            data:
+            {
+                id: it-anthropologicalStudies
+                name: txt-it-anthropologicalCollection-name
+                description: txt-it-anthropologicalCollection
+                collectionItem: it-anthropologicalCollection
+                debugCategory: fame
+                sprite: it_special_book_1.png
+                fame: fameSmall
+                funds: fundsVerySmall
+                value: {base: 10, karma: 1}
+                maxStack: 20
+            }
+        }
+        {
             id: st-sage
             #extends: st-slave-stacking-1
             title: txt-st-sage-title
@@ -1645,7 +1663,8 @@
             alwaysShown: true
             actionText: txt-evt-village-pillage-action
             standing: -3
-            setLocationFlags: +isLooted
+            #setLocationFlags: +isLooted
+            reqLocationFlags: -recruitFail
             select: evt-village-human-pillage-loot
         }
         {   
@@ -1658,7 +1677,6 @@
             alwaysShown: true
             text: txt-evt-village-huntSlaves
             actionText: txt-evt-village-huntSlaves-action
-            setLocationFlags: -inhabited
             reqLocationFlags: -recruitFail
             actions: [
             {
@@ -1685,7 +1703,8 @@
               reqDice: mind
               actionText: txt-evt-peaceful-enslavement-action
               winEvents: {
-                  setLocationFlags: +recruitFail
+                setLocationFlags: +recruitFail
+                #setLocationFlags: +isLooted
                 select: {
                     text: txt-evt-peaceful-enslavement-success
                     standing: 3
@@ -1697,7 +1716,7 @@
                             #{slots:1, it-slaves: 5},
                         ]
                         closeEvents: evt-village-human-actions
-                        }
+                    }
                 }
               }
               failEvents: {
@@ -1707,7 +1726,6 @@
               }
             }
             ]
-            select: {ref: evt-burn-village}
         }
         {
             id: evt-village-evict
@@ -1743,7 +1761,7 @@
         }
         {
             id: evt-village-human-pillage-loot
-            reqLocationFlags: +isLooted
+            #reqLocationFlags: +isLooted
             loot: {
                 items: [
                     {slots:3, il-loot-edible-easy: 2, il-loot-standard: 3, it-jewels: 1, it-firstAid: 2},
@@ -2373,12 +2391,12 @@
                 {slots: 1, it-rifle-improved-athena: 1}
                 {slots: 1, it-teslaGun-athena: 1}
                 #{slots: 1, it-lokiGun-athena: 1}
-                {slots: 2, it-grenade: 10}
-                {slots: 2, it-policebaton: 10}
+                {slots: 2, it-dynamite: 5}
+                #{slots: 2, it-policebaton: 10}
                 {slots: 1, it-telescope: 1}
                 {slots: 1, it-binoculars: 1}
                 {slots: 1, it-sextant: 1}
-                {slots: 1, it-weatherBalloon: 10}
+                {slots: 1, it-weatherBalloon: 3}
                 {slots: 1, it-obsidianMirror: 1}
                 {slots: 1, it-bloodCrown: 1}
                 {slots: 1, it-pumpkinLantern: 1}
@@ -3958,8 +3976,8 @@
             {slots: 1, it-bongos: 1}
             {slots: 1, it-pendulum-treasure: 1}
             {slots: 1, it-whip: 1}
-            {slots: 1, it-policebaton: 5}
-            {slots: 1, it-grenade: 5}
+            #{slots: 1, it-policebaton: 5}
+            #{slots: 1, it-grenade: 5}
             ]
             }
         }
