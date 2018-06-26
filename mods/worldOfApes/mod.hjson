@@ -306,6 +306,11 @@
             file: worldOfApes/beastMaster_minisprite_1.png
         }
     ],
+    configSettings: {
+        specialEvents: {
+            promotion: 'evt-slaveCart-promote',
+        },
+    },
     modEntries: [
         {
             targetId: /sp-darwin
@@ -1822,6 +1827,11 @@
                     statuses: st-zeroSlot st-slave-stacking-4
                 }
             ]
+        }
+        {
+            id: evt-slaveCart-promote
+            reqCharFlags: +slaveCart
+            compactAndStack: it-slaves
         }
         { 
             id: st-slave-stacking-1
