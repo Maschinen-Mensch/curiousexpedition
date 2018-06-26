@@ -160,5 +160,11 @@
 "pk-whiskyIncrease-3-title","Bananaschnapps Fanatic 3"
 "pk-whiskyIncrease-4-title","Bananaschnapps Fanatic 4"
 "bonus-whisky","Bananaschnapps Sanity"
+"pl-native-starting-shaman-title","Court shaman"
+"pl-native-starting-shaman","One of the Ape Emperor's close advisors. Practices ancient rites and the lore of alchemy (Chance of sanity gain when using mushrooms)"
 "evt-village-recruit-shaman-action","$name the court shaman"
-
+"base-sanity","Morale
+"help-sanity","The motivation and satisfaction level of your raiding party. Drop to zero and more and more catastrophic events will begin to occur."
+"base-standing","Dominance"
+"help-standing","How subservient the Humans of this region are to your authority. Allow it to get too low and they may get rebellious."
+"pl-native-starting-scout-title","Imperial scout"

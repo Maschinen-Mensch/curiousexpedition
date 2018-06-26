@@ -1703,6 +1703,7 @@
                     }
                 ]
                 addLocation: {ref: loc-killVillage, range: 1}
+                select: evt-burn-village
             }
             {
               reqDice: mind
@@ -1881,7 +1882,7 @@
                     sprite: bloodrider_male_sprite_1
                     portrait: bloodrider_male_face_1
                     miniSprite: bloodrider_male_minisprite_1
-                    name: soldierBritish
+                    name: maleHighborn
                 }
                 #{
                     #gender: female
@@ -2039,6 +2040,199 @@
         }
         }
         {
+            targetId: /pl-native-starting-shaman
+            data:
+            {
+                id: pl-native-starting-shaman
+                title: txt-pl-native-starting-shaman-title
+                description: txt-pl-native-starting-shaman
+                debugCategory: Native
+                miniSprite: res_porter_native_shaman_mini.png
+                health: 6
+                variations: [
+                {
+                    gender: male
+                    name: maleHighborn
+                    sprite: res_porter_native_shaman_1.png
+                    portrait: res_face_native_shaman_1.png
+                }
+                ]
+                capacity: 2
+                flags: +porter +native +nativeShaman +humanoid +darkSkinned
+                spawnEvents: {
+                partyEvents: [
+                    {
+                    select: [
+                        {slots: 2, setStatus: +claustrophobic}
+                        {slots: 3, setStatus: +superstitious}
+                        {slots: 1, setStatus: +kleptomania}
+                        {slots: 2, setStatus: +sexist}
+                        {slots: 10}
+                    ]
+                    }
+                    {
+                    select: [
+                        {slots: 1, setCharFlags: +moody}
+                        {slots: 1, setCharFlags: +greedy}
+                        {slots: 1, setCharFlags: +witty}
+                        {slots: 1, setCharFlags: +brave}
+                        {slots: 1, setCharFlags: +coward}
+                        {slots: 4, setCharFlags: +spiritual}
+                    ]
+                    }
+                ]
+                }
+                levels: [
+                {statuses: st-goodReputation st-mushroomSanity-1, dice: dc-shaman-1}
+                {statuses: st-goodReputation st-mushroomSanity-2, dice: dc-shaman-2}
+                {
+                    statuses: st-goodReputation st-mushroomSanity-3
+                    dice: dc-shaman-2 dc-support-1
+                }
+                {
+                    statuses: st-goodReputation st-mushroomSanity-4
+                    dice: dc-shaman-2 dc-support-2
+                }
+                ]
+            }
+        }
+        {
+            targetId: /pl-native-shaman
+            data:
+            {
+                id: pl-native-shaman
+                extends: pl-native-starting-shaman
+                variations: [
+                {gender: male, name: maleHighborn, sprite: native}
+                {gender: female, name: femaleHighborn, sprite: native}
+                ]
+            }
+        }
+        {
+            targetId: /pl-native-starting-scout
+            data:
+            {
+                id: pl-native-starting-scout
+                title: txt-pl-native-starting-scout-title
+                description: txt-pl-native-starting-scout
+                debugCategory: Native
+                miniSprite: res_porter_native_scout_mini.png
+                variations: [
+                {
+                    gender: male
+                    name: maleLowborn
+                    sprite: res_porter_native_scout_1.png
+                    portrait: res_face_native_scout_1.png
+                }
+                {
+                    gender: female
+                    name: femaleLowborn
+                    sprite: res_porter_native_scout_2.png
+                    portrait: res_face_native_scout_2.png
+                }
+                ]
+                flags: +porter +humanoid +scout +native +nativeScout +darkSkinned
+                capacity: 2
+                health: 6
+                spawnEvents: {
+                partyEvents: [
+                    {
+                    select: [
+                        {slots: 2, setStatus: +claustrophobic}
+                        {slots: 3, setStatus: +superstitious}
+                        {slots: 1, setStatus: +kleptomania}
+                        {slots: 2, setStatus: +sexist}
+                        {slots: 10}
+                    ]
+                    }
+                    {
+                    select: [
+                        {slots: 1, setCharFlags: +moody}
+                        {slots: 1, setCharFlags: +witty}
+                        {slots: 1, setCharFlags: +brave}
+                        {slots: 1, setCharFlags: +coward}
+                        {slots: 2, setCharFlags: +spiritual}
+                    ]
+                    }
+                ]
+                }
+                levels: [
+                {statuses: st-goodReputation st-viewDistance-1, dice: dc-defend-1}
+                {statuses: st-goodReputation st-viewDistance-2, dice: dc-defend-1}
+                {statuses: st-goodReputation st-viewDistance-3, dice: dc-attack-1 dc-defend-1}
+                {statuses: st-goodReputation st-viewDistance-4, dice: dc-attack-2 dc-defend-1}
+                ]
+            }
+        }
+        {
+            targetId: /pl-native-scout
+            data: {
+            id: pl-native-scout
+            extends: pl-native-starting-scout
+            variations: [
+            {gender: male, name: maleLowborn, sprite: native}
+            {gender: female, name: femaleLowborn, sprite: native}
+            ]
+        }
+        }
+        {
+            targetId: /pl-cook
+            data: {
+            id: pl-cook
+            debugCategory: Standard
+            title: txt-pl-cook-title
+            description: txt-pl-cook
+            miniSprite: res_porter_cook_mini.png
+            health: 6
+            capacity: 2
+            flags: +true +cook +humanoid
+            variations: [
+            {
+                gender: male
+                name: maleLowborn
+                sprite: res_porter_cook_1.png
+                portrait: res_face_cook_1.png
+            }
+            {
+                gender: female
+                name: femaleLowborn
+                sprite: res_porter_cook_2.png
+                portrait: res_face_cook_2.png
+            }
+            ]
+            spawnEvents: {
+            partyEvents: [
+                {
+                select: [
+                    {slots: 1, setStatus: +claustrophobic}
+                    {slots: 1, setStatus: +superstitious}
+                    {slots: 1, setStatus: +kleptomania}
+                    {slots: 2, setStatus: +alcoholic}
+                    {slots: 2, setStatus: +racist}
+                    {slots: 1, setStatus: +sexist}
+                    {slots: 5}
+                ]
+                }
+                {
+                select: [
+                    {slots: 3, setCharFlags: +moody}
+                    {slots: 3, setCharFlags: +greedy}
+                    {slots: 1, setCharFlags: +witty}
+                    {slots: 3, setCharFlags: +coward}
+                    {slots: 1, setCharFlags: +brave}
+                ]
+                }
+            ]
+            }
+            levels: [
+            {statuses: st-cookSanity-1, dice: dc-defend-1}
+            {statuses: st-cookSanity-2, dice: dc-defend-1}
+            {statuses: st-cookSanity-3, dice: dc-defend-1 dc-defend-1}
+            {statuses: st-cookSanity-4, dice: dc-defend-1 dc-defend-1}
+            ]
+        }
+        }
+        {
             targetId: /pl-soldier-scottish
             data: {
             id: pl-soldier-scottish
@@ -2048,14 +2242,14 @@
             variations: [
                 {
                     gender: male
-                    name: arabianCharacterMale
+                    name: maleLowborn
                     sprite: berserker_sprite_1
                     portrait: berserker_male_face_1
                     miniSprite: berserker_minisprite_1
                 }
                 {
                     gender: female
-                    name: arabianCharacterFemale
+                    name: femaleLowborn
                     sprite: berserker_sprite_1
                     portrait: berserker_female_face_1
                     miniSprite: berserker_minisprite_1
@@ -2106,14 +2300,14 @@
                     variations: [
                     {
                         gender: male
-                        name: arabianCharacterMale
+                        name: maleLowborn
                         sprite: vanguard_sprite_1
                         portrait: vanguard_male_face_1
                         miniSprite: vanguard_minisprite_1
                     }
                     {
                         gender: female
-                        name: arabianCharacterFemale
+                        name: femaleLowborn
                         sprite: vanguard_sprite_1
                         portrait: vanguard_female_face_1
                         miniSprite: vanguard_minisprite_1
@@ -2164,14 +2358,14 @@
             variations: [
             {
                 gender: male
-                name: arabianCharacterMale
+                name: maleLowborn
                 sprite: marauder_sprite_1
                 portrait: marauder_male_face_1
                 miniSprite: marauder_minisprite_1
             }
             {
                 gender: female
-                name: arabianCharacterFemale
+                name: femaleLowborn
                 sprite: marauder_sprite_1
                 portrait: marauder_female_face_1
                 miniSprite: marauder_minisprite_1
@@ -2336,7 +2530,14 @@
             variations: [
                 {
                     gender: male
-                    name: animalMale
+                    name: maleAnimal
+                    sprite: warmount_sprite_1
+                    portrait: warmount_face_1
+                    miniSprite: warmount_minisprite_1
+                }
+                {
+                    gender: female
+                    name: femaleAnimal
                     sprite: warmount_sprite_1
                     portrait: warmount_face_1
                     miniSprite: warmount_minisprite_1
@@ -3155,7 +3356,7 @@
             name: txt-zn-roamingNatives-name
             flags: +native
             sprite: res_zones_natives.png
-            borderImgIdx: 0
+            borderImgIdx: 1
             alwaysSeeking: false
             maxSeekTurns: 0
             size: [2, 2]
@@ -3639,13 +3840,13 @@
             variations: [
             {
                 gender: male
-                name: animalDogMale
+                name: maleAnimal
                 sprite: warhog_sprite_1
                 portrait: warhog_face_1
             }
             {
                 gender: female
-                name: animalDogFemale
+                name: femaleAnimal
                 sprite: warhog_sprite_1
                 portrait: warhog_face_1
             }
@@ -3679,13 +3880,13 @@
             variations: [
             {
                 gender: male
-                name: native
+                name: maleLowborn
                 sprite: beastMaster_sprite_1
                 portrait: beastMaster_male_face_1
             }
             {
                 gender: female
-                name: native
+                name: femaleLowborn
                 sprite: beastMaster_sprite_1
                 portrait: beastMaster_female_face_1
             }
@@ -4274,7 +4475,7 @@
                 {slots: 3, ref: evt-sanity-return-imaginary}
                 {slots: 3, ref: evt-sanity-return-angryLeave}
                 {slots: 2, ref: evt-sanity-return-friend}
-                {slots: 1, ref: evt-sanity-nativeVisit-init}
+                #{slots: 1, ref: evt-sanity-nativeVisit-init}
                 {slots: 2, ref: evt-sanity-vulture}
                 {slots: 2, ref: evt-sanity-alcoholic-turkey}
                 {slots: 1, ref: evt-sanity-challenge-climbTree}
@@ -4309,6 +4510,716 @@
                 {slots: 1, ref: evt-sanity-lovecraft-racist}
                 {prio: 100, ref: evt-sanity-selectHigh}
                 ]
+            }
+        }
+        {
+            id: np-malePraenomen
+            names: [
+                Appius
+                Aulus
+                Caeso
+                Decimus
+                Faustus
+                Gaius
+                Gnaeus
+                Herius
+                Hostus
+                Lucius
+                Mamercus
+                Manius
+                Marcus
+                Mettius
+                Minatius
+                Nonus
+                Novius
+                Numerius
+                Olus
+                Opiter
+                Ovius
+                Paullus
+                Pescennius
+                Postumus
+                Publius
+                Quintus
+                Salvius
+                Septimus
+                Sertor
+                Servius
+                Sextus
+                Spurius
+                Statius
+                Tiberius
+                Titus
+                Tullus
+                Vibius
+                Volesus
+                Vopiscus
+            ]
+        }
+        {
+            id: np-femalePraenomen
+            names: [
+                Appia
+                Aula
+                Caesa
+                Decima
+                Fausta
+                Gaia
+                Gnaea
+                Heria
+                Hosta
+                Lucia
+                Mamerca
+                Mania
+                Marcia
+                Mettia
+                Mino
+                Nona
+                Noviua
+                Numeria
+                Postuma
+                Publia
+                Quinta
+                Salvia
+                Septima
+                Sertor
+                Servia
+                Sexta
+                Spuria
+                Statia
+                Tiberia
+                Titia
+                Tulla
+                Vibius
+                Volusa
+                Vopisca
+            ]
+        }
+        {
+            id: np-maleNomen
+            names: [
+            Aelius
+            Aemilius
+            Allidius
+            Alius
+            Allius
+            Ampius
+            Anicius
+            Annaeus
+            Annius
+            Antonius
+            Arellius
+            Arius
+            Atanius
+            Attiolenus
+            Audius
+            Aufidius
+            Aurelius
+            Avilius
+            Babullius
+            Bombius
+            Braundutius
+            Caecilius
+            Caelius
+            Caesonius
+            Calpurnius
+            Caltius
+            Calvius
+            Castricius
+            Cerrinius
+            Cincius
+            Cispius
+            Claudius
+            Clodius
+            Cluvius
+            Cocceius
+            Cottius
+            Cornelius
+            Cornius
+            Cossinius
+            Cossutius
+            Crassicius
+            Crepereius
+            Critonius
+            Decumius
+            Didius
+            Diobellius
+            Domitius
+            Egnatius
+            Erucius
+            Fabius
+            Fabricius
+            Felsonius
+            Flaminius
+            Flavius
+            Fulvius
+            Furius
+            Gerillanus
+            Gerraeus
+            Gessius
+            Granius
+            Heius
+            Helvius
+            Horarius
+            Hordionius
+            Hostilius
+            Iulius
+            Laberius
+            Labienus
+            Laelius
+            Laronius
+            Licinius
+            Livius
+            Loisius
+            Lollius
+            Lucceius
+            Lucretius
+            Luxius
+            Maecius
+            Magulnius
+            Mamilius
+            Marcius
+            Marius
+            Memmius
+            Mescinius
+            Messius
+            Mevius
+            Mindius
+            Mundicius
+            Naevius
+            Nerius
+            Nimmius
+            Nonnius
+            Novius
+            Numitorius
+            Nummius
+            Numonius
+            Obellius
+            Octavius
+            Ofellius
+            Olius
+            Opellius
+            Oppius
+            Orbius
+            Orceius
+            Otacilius
+            Paconius
+            Pactumeius
+            Pediasius
+            Pedius
+            Petronius
+            Pettius
+            Pius
+            Plaitorius
+            Plotius
+            Pompeius
+            Pompilius
+            Pomponius
+            Popilius
+            Popillius
+            Porcius
+            Pumidius
+            Quinctius
+            Raecius
+            Rasennius
+            Rutilius
+            Sabinius
+            Samiarius
+            Satricanius
+            Saufeius
+            Seius
+            Sempronius
+            Septimius
+            Serpoleius
+            Servilius
+            Sestius
+            Sextilius
+            Spedius
+            Staius
+            Stenius
+            Stertinius
+            Stlaccius
+            Sulfius
+            Sulpicius
+            Tarquinius
+            Titinius
+            Trebellius
+            Tuccius
+            Tullius
+            Turpillius
+            Tuscenius
+            Tutorius
+            Ulpius
+            Valerius
+            Varius
+            Venoleius
+            Veratius
+            Verrinius
+            Verius
+            Veturius
+            Veveius
+            Vibius
+            Vicirius
+            Vipsanius
+            Vinicius
+            Viseius
+            Vitellius
+            Vorenus
+            Umbricius
+            Volusius
+            ]
+        }
+        {
+            id: np-femaleNomen
+            names: [
+            Aelia
+            Aemilia
+            Allidia
+            Alia
+            Allia
+            Ampia
+            Anicia
+            Annaea
+            Annia
+            Antonia
+            Arellia
+            Aria
+            Atania
+            Attiolena
+            Audia
+            Aufidia
+            Aurelia
+            Avilia
+            Babullia
+            Bombia
+            Braundutia
+            Caecilia
+            Caelia
+            Caesonia
+            Calpurnia
+            Caltia
+            Calvia
+            Castricia
+            Cerrinia
+            Cincia
+            Cispia
+            Claudia
+            Clodia
+            Cluvia
+            Cocceia
+            Cottia
+            Cornelia
+            Cornia
+            Cossinia
+            Cossutia
+            Crassicia
+            Crepereia
+            Critonia
+            Decumia
+            Didia
+            Diobellia
+            Domitia
+            Egnatia
+            Erucia
+            Fabia
+            Fabricia
+            Felsonia
+            Flaminia
+            Flavia
+            Fulvia
+            Furia
+            Gerillana
+            Gerraea
+            Gessia
+            Grania
+            Heia
+            Helvia
+            Horaria
+            Hordionia
+            Hostilia
+            Iulia
+            Laberia
+            Labiena
+            Laelia
+            Laronia
+            Licinia
+            Livia
+            Loisia
+            Lollia
+            Lucceia
+            Lucretia
+            Luxia
+            Maecia
+            Magulnia
+            Mamilia
+            Marcia
+            Maria
+            Memmia
+            Mescinia
+            Messia
+            Mevia
+            Mindia
+            Mundicia
+            Naevia
+            Neria
+            Nimmia
+            Nonnia
+            Novia
+            Numitoria
+            Nummia
+            Numonia
+            Obellia
+            Octavia
+            Ofellia
+            Olia
+            Opellia
+            Oppia
+            Orbia
+            Orceia
+            Otacilia
+            Paconia
+            Pactumeia
+            Pediasia
+            Pedia
+            Petronia
+            Pettia
+            Pia
+            Plaitoria
+            Plotia
+            Pompeia
+            Pompilia
+            Pomponia
+            Popilia
+            Popillia
+            Porcia
+            Pumidia
+            Quinctia
+            Raecia
+            Rasennia
+            Rutilia
+            Sabinia
+            Salvia
+            Samiaria
+            Satricania
+            Saufeia
+            Seia
+            Sempronia
+            Septimia
+            Serpoleia
+            Servilia
+            Sestia
+            Sextilia
+            Spedia
+            Staia
+            Stenia
+            Stertinia
+            Stlaccia
+            Sulfia
+            Sulpicia
+            Tarquinia
+            Titinia
+            Trebellia
+            Tuccia
+            Tullia
+            Turpillia
+            Tuscenia
+            Tutoria
+            Ulpia
+            Valeria
+            Varia
+            Venoleia
+            Veratia
+            Verrinia
+            Veria
+            Veturia
+            Veveia
+            Vibia
+            Viciria
+            Vinicia
+            Vipsania
+            Viseia
+            Vitellia
+            Vorena
+            Volusia
+            Umbricia
+            ]
+        }
+        {
+            id: np-maleCognomen
+            names: [
+                Abito
+                Adjutor
+                Aemilianus
+                Adventus
+                Agrippa
+                Alexander
+                Aloysius
+                Alypius
+                Amandus
+                Ambrosius
+                Amphion
+                Antonius
+                Anatolius
+                Andronicus
+                Angelus
+                Aquila
+                Arcadius
+                Arvina
+                Asina
+                Augustus
+                Aurelianus
+                Aurelius
+                Auspex
+                Avitus
+                Balduinus
+                Bassus
+                Belenus
+                Belisarius
+                Bellator
+                Bellus
+                Bibulus
+                Brutus
+                Caelestius
+                Candidus
+                Caligula
+                Carinus
+                Carus
+                Castus
+                Celer
+                Cicero
+                Cinna
+                Clemens
+                Commodus
+                Crassus
+                Crescens
+                Crispus
+                Datus
+                Dannicus
+                Decentius
+                Decius
+                Diocletianus
+                Donatus
+                Domitiana
+                Draco
+                Drusus
+                Durus
+                Emeritus
+                Faustus
+                Felix
+                Festus
+                Firmus
+                Fortunatus
+                Fronto
+                Fuscus
+                Glaucia
+                Gracchus
+                Hadrianus
+                Honoratus
+                Honorius
+                Ianaurius
+                Ingenuus
+                Iovita
+                Iulianus
+                Iustus
+                Lepidus
+                Longinus
+                Magnus
+                Marcellinus
+                Marcellus
+                Marcianus
+                Martialis
+                Maximus
+                Nerva
+                Numerianus
+                Optatus
+                Primus
+                Priscus
+                Probus
+                Proculus
+                Pullo
+                Quintillus
+                Rogatianus
+                Rogatus
+                Rufinus
+                Rufus
+                Sabinus
+                Saturninus
+                Scipio
+                Secundus
+                Seianus
+                Severus
+                Silvanus
+                Sulla
+                Superbus
+                Tacitus
+                Tertius
+                Traianus
+                Urbanus
+                Valens
+                Valentinus
+                Valerianus
+                Verecundus
+                Verus
+                Vespasianus
+                Victor
+                Victorinus
+                Vitalis
+                Zeno
+                Zosimus
+            ]
+        }
+        {
+            id: np-femaleCognomen
+            names: [
+                Aemiliana
+                Agrippa
+                Agrippina
+                Adventa
+                Alexandra
+                Aloysia
+                Alypia
+                Amanda
+                Ambrosia
+                Amphia
+                Anatolia
+                Andronicus
+                Angela
+                Antonina
+                Aquila
+                Arcadia
+                Augusta
+                Aureliana
+                Aurelia
+                Avita
+                Balduina
+                Bassa
+                Belena
+                Belisaria
+                Bella
+                Bibula
+                Bruta
+                Caelestia
+                Candida
+                Carina
+                Cara
+                Casta
+                Commoda
+                Crassa
+                Crispa
+                Dannica
+                Data
+                Decentia
+                Decia
+                Diocletiana
+                Domitianus
+                Donata
+                Drusa
+                Dura
+                Emerita
+                Fausta
+                Festa
+                Firma
+                Fortunata
+                Fusca
+                Glaucia
+                Graccha
+                Hadriana
+                Honorata
+                Honoria
+                Ianauria
+                Ingenua
+                Iovita
+                Iuliana
+                Iusta
+                Lepida
+                Longina
+                Magna
+                Marcellina
+                Marcella
+                Marciana
+                Maxima
+                Numeriana
+                Optata
+                Quintilla
+                Paulla
+                Prima
+                Prisca
+                Proba
+                Procula
+                Rogatiana
+                Rogata
+                Rufina
+                Rufa
+                Sabina
+                Saturnina
+                Secunda
+                Seiana
+                Severa
+                Silvana
+                Superba
+                Tacita
+                Tertia
+                Traiana
+                Urbana
+                Valentina
+                Valeriana
+                Verecunda
+                Vera
+                Vespasiana
+                Victoria
+                Victorina
+                Zena
+                Zosima
+            ]
+        }
+        {
+            id: na-maleHighborn
+            names: [
+            $malePraenomen $maleNomen $maleCognomen
+            ]
+        }
+        {
+            id: na-maleLowborn
+            names: [
+            $maleNomen $maleCognomen
+            ]
+        }
+        {
+            id: na-maleAnimal
+            names: [
+            $maleCognomen
+            ]
+        }
+        {
+            id: na-femaleHighborn
+            names: [
+            $femalePraenomen $femaleNomen $femaleCognomen
+            ]
+        }
+        {
+            id: na-femaleLowborn
+            names: [
+            $femaleNomen $femaleCognomen
+            ]
+        }
+        {
+            id: na-femaleAnimal
+            names: [
+            $femaleCognomen
+            ]
+        }
+        {
+            targetId: /na-animalMale
+            data: {
+            id: na-animalMale
+            names: ["$maleCognomen"]
+            }
+        }
+        {
+            targetId: /na-animalFemale
+            data: {
+            id: na-animalFemale
+            names: ["$femaleCognomen"]
             }
         }
     ]
