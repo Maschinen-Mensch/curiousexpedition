@@ -1798,7 +1798,7 @@
             description: txt-pl-slaveCart
             health: 6
             capacity: 2
-            flags: +porter +slaveCart
+            flags: +porter +slaveCart +vehicle
             variations: [
                 {
                     gender: male
