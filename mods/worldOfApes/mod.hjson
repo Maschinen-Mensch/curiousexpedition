@@ -39,6 +39,10 @@
             #file: worldOfApes/mod_preview.png
         #}
         {
+            id: peacefulNatives_1
+            file: worldOfApes/res_zones_peacefulNatives.png
+        }
+        {
             id: banana_1
             file: worldOfApes/banana_1.png
         }
@@ -2885,7 +2889,8 @@
             targetId: /pck-desert
             data: {
                 id: pck-desert
-                name: txt-pck-desert-name
+                #name: txt-pck-desert-name
+                name: txt-empty-name
                 previewSprite: hud_worldmap_pocketPreview_desert.png
                 slotMarker: hud_mapMarker_desert.png
                 ambientSound: sfx_loop_desert_1
@@ -3014,7 +3019,8 @@
                 targetId: /pck-dry
                 data: {
                     id: pck-dry
-                    name: txt-pck-dry-name
+                    #name: txt-pck-dry-name
+                    name: txt-empty-name
                     flags: +jungle
                     previewSprite: hud_worldmap_pocketPreview_dry.png
                     slotMarker: hud_mapMarker_dry.png
@@ -3144,7 +3150,8 @@
                     targetId: /pck-grass
                     data: {
                         id: pck-grass
-                        name: txt-pck-grass-name
+                        #name: txt-pck-grass-name
+                        name: txt-empty-name
                         flags: +jungle
                         previewSprite: hud_worldmap_pocketPreview_grass.png
                         slotMarker: hud_mapMarker_grass.png
@@ -3286,7 +3293,7 @@
             id: zn-roamingNatives
             name: txt-zn-roamingNatives-name
             flags: +native
-            sprite: res_zones_natives.png
+            sprite: peacefulNatives_1
             borderImgIdx: 1
             alwaysSeeking: false
             maxSeekTurns: 0
@@ -4930,7 +4937,7 @@
                 Decius
                 Diocletianus
                 Donatus
-                Domitiana
+                Domitianus
                 Draco
                 Drusus
                 Durus
@@ -5013,7 +5020,7 @@
                 Ambrosia
                 Amphia
                 Anatolia
-                Andronicus
+                Andronica
                 Angela
                 Antonina
                 Aquila
@@ -5042,7 +5049,7 @@
                 Decentia
                 Decia
                 Diocletiana
-                Domitianus
+                Domitiana
                 Donata
                 Drusa
                 Dura
@@ -5104,6 +5111,23 @@
             ]
         }
         {
+            id: np-romanTitles
+            names: [
+                Praetor
+                Consul
+                Proconsul
+                Governor
+                General
+                Warlord
+                Warmaster
+                Autarch
+                Exarch
+                Grand Vizier
+                Grand Hierophant
+                Grand Shaman
+            ]
+        }
+        {
             id: na-maleHighborn
             names: [
             $malePraenomen $maleNomen $maleCognomen
@@ -5137,6 +5161,13 @@
             id: na-femaleAnimal
             names: [
             $femaleCognomen
+            ]
+        }
+        {
+            id: na-rulerHighborn
+            names: [
+            $romanTitles $malePraenomen $maleNomen $maleCognomen
+            $romanTitles $femalePraenomen $femaleNomen $femaleCognomen
             ]
         }
         {
