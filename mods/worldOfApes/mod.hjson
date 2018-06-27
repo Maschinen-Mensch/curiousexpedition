@@ -27,6 +27,12 @@
         #-Night event: Natives approaching to trade: eliminate!
         #-Check Perks -Careerist -Arctic Explorer//
     }
+    spriteSheets:[
+        {
+        file: worldOfApes/spritesheet.json
+        hasTinted: false
+        },
+    ],
     imageData: [
         #{
             #id: mod_preview
@@ -43,81 +49,6 @@
         {
             id: grenade_1
             file: worldOfApes/grenade_1.png
-        }
-        {
-            id: brutus_sprite_1
-            file: worldOfApes/brutus_sprite_1.png
-        }
-        {
-            id: brutus_face_1
-            file: worldOfApes/brutus_face_1.png
-        }
-        {
-            id: brutus_face_1_small
-            file: worldOfApes/brutus_face_1_small.png
-        }
-        {
-            id: brutus_minisprite_1
-            file: worldOfApes/brutus_minisprite_1.png
-        }
-        {
-            id: brutus_sprite_1_mounted.png
-            type: slotted
-            file: worldOfApes/brutus_sprite_1_mounted.png
-        }
-        {
-            id: brutus_face_1_end.png
-            file: worldOfApes/brutus_face_1_end.png
-        }
-        {
-            id: athena_sprite_1
-            file: worldOfApes/athena_sprite_1.png
-        }
-        {
-            id: athena_face_1
-            file: worldOfApes/athena_face_1.png
-        }
-        {
-            id: athena_face_1_small
-            file: worldOfApes/athena_face_1_small.png
-        }
-        {
-            id: athena_minisprite_1
-            file: worldOfApes/athena_minisprite_1.png
-        }
-        {
-            id: athena_sprite_1_mounted.png
-            type: slotted
-            file: worldOfApes/athena_sprite_1_mounted.png
-        }
-        {
-            id: athena_face_1_end.png
-            file: worldOfApes/athena_face_1_end.png
-        }
-        {
-            id: marcellus_sprite_1
-            file: worldOfApes/marcellus_sprite_1.png
-        }
-        {
-            id: marcellus_face_1
-            file: worldOfApes/marcellus_face_1.png
-        }
-        {
-            id: marcellus_face_1_small
-            file: worldOfApes/marcellus_face_1_small.png
-        }
-        {
-            id: marcellus_minisprite_1
-            file: worldOfApes/marcellus_minisprite_1.png
-        }
-        {
-            id: marcellus_sprite_1_mounted.png
-            type: slotted
-            file: worldOfApes/marcellus_sprite_1_mounted.png
-        }
-        {
-            id: marcellus_face_1_end.png
-            file: worldOfApes/marcellus_face_1_end.png
         }
         {
             id: bloodrider_male_sprite_1
@@ -1125,9 +1056,9 @@
             variations: [
                 {
                     gender: male
-                    sprite: brutus_sprite_1
-                    portrait: brutus_face_1
-                    miniSprite: brutus_minisprite_1
+                    sprite: ape_sprite_brutus.png
+                    portrait: ape_face_brutus.png
+                    miniSprite: ape_sprite_brutus_mini.png
                 },
             ]
             levels: [
@@ -1165,9 +1096,9 @@
             variations: [
                 {
                     gender: female
-                    sprite: athena_sprite_1
-                    portrait: athena_face_1
-                    miniSprite: athena_minisprite_1
+                    sprite: ape_sprite_athena.png
+                    portrait: ape_face_athena.png
+                    miniSprite: ape_sprite_athena_mini.png
                 },
             ]
             levels: [
@@ -1221,9 +1152,9 @@
             variations: [
                 {
                     gender: male
-                    sprite: marcellus_sprite_1
-                    portrait: marcellus_face_1
-                    miniSprite: marcellus_minisprite_1
+                    sprite: ape_sprite_marcellus.png
+                    portrait: ape_face_marcellus.png
+                    miniSprite: ape_sprite_marcellus_mini.png
                 },
             ]
             levels: [
