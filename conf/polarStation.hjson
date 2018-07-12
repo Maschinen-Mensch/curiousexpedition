@@ -57,18 +57,21 @@
   {
     id: it-polarStation-meta-ticket-1
     name: txt-it-polarStation-meta-ticket-1-name
+    description: txt-it-polarStation-ticket
     sprite: it_special_tickets_2.png
     value: {base: 15, karma: 0}
   }
   {
     id: it-polarStation-meta-ticket-2
     name: txt-it-polarStation-meta-ticket-2-name
+    description: txt-it-polarStation-ticket
     sprite: it_special_tickets_3.png
     value: {base: 25, karma: 0}
   }
   {
     id: it-polarStation-meta-ticket-3
     name: txt-it-polarStation-meta-ticket-3-name
+    description: txt-it-polarStation-ticket
     sprite: it_special_tickets_4.png
     value: {base: 50, karma: 0}
   }

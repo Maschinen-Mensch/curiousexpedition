@@ -572,6 +572,7 @@
     id: evt-noSanity-trap
     reqWorldFlags: -warped -arctic
     charEvents: {
+      reqStatus: -infected
       reqCharFlags: +humanoid -special -abomination
       text: txt-evt-noSanity-trap
       health: -4

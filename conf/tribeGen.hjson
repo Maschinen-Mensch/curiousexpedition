@@ -93,6 +93,7 @@
   {
     id: tgl-body-base
     colors: tgen_colors_skin.png
+    useInSmall: false
     alpha: 1
     male: [
       {
@@ -111,6 +112,7 @@
     id: tgl-body-decal
     alpha: 1
     chance: 0.5
+    useInSmall: false
     male: [
       {
         portrait: tgen_m_charPortrait_body_decal_1.png
@@ -183,6 +185,7 @@
   {
     id: tgl-body-shading
     colors: tgen_colors_skin.png
+    useInSmall: false
     alpha: 0.5
     male: [
       {
@@ -280,6 +283,7 @@
   {
     id: tgl-body-cloth2
     colors: tgen_colors_cloth.png
+    useInSmall: false
     alpha: 1
     chance: 0.85
     male: [
@@ -406,6 +410,7 @@
     id: tgl-body-decoration-1
     alpha: 1
     chance: 0.8
+    useInSmall: false
     male: [
       {
         portrait: tgen_m_charPortrait_body_decoration_1.png
@@ -511,6 +516,7 @@
     alpha: 1
     chance: 0.4
     tribal: true
+    useInSmall: false
     male: [
       {
         portrait: tgen_m_charPortrait_body_cloth_1.png
@@ -723,6 +729,7 @@
     colors: tgen_colors_decoration.png
     alpha: 1
     chance: 0.3
+    useInSmall: false
     male: [
       {
         portrait: tgen_m_charPortrait_body_decoration_1.png

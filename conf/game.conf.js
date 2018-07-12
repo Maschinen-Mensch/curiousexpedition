@@ -421,7 +421,7 @@ var staticConfig =
   enableAchievements: true,
   showMods: true,
   showReport: false,
-  footerName: "1.3.10.11",
+  footerName: "1.3.11.3",
   sanityCheckEvents: true,
 
   // is converted to config.diaryText at run-time
@@ -599,6 +599,7 @@ var config = {
 
   tribeGen: {
     tribalLayers: 3,
+    maskOutColor: '#4b3a32'
   },
 
   magneticMountain: {
@@ -943,6 +944,7 @@ var config = {
 
   imgSize: {
     portrait: [36, 36],
+    portraitSmall: [24, 24],
     body: [20, 32],
     item: [20, 20],
 
@@ -1075,6 +1077,8 @@ var config = {
     loadingScreen: 'black',
     loadingScreenPortrait: '#3BC591',
     warning: '#FF002A',
+    warningFlash: '#FFFFFF',
+    warningFlashTime: 4.5,
     path: '#F230C4',
     sanity: '#b100e0',
     sanityHighlight: 'rgba(255,255,255,0.25)',
@@ -1180,6 +1184,7 @@ var config = {
     turns: 'txt-help-turns',
     fame: 'txt-help-fame',
     xp: 'txt-help-xp',
+    locations: 'txt-help-locations',
     overburden: "txt-help-overburden",
     overfilled: "txt-help-overfilled",
     lostStash: "txt-help-lostStash",
@@ -1269,9 +1274,6 @@ var config = {
     outroBang: 'sfx_reveal_guitar_a',
     outroCount: 'sfx_click_castanet',
     achievement: 'sfx_reveal_kalimba',
-
-    diaryOpen: 'sfx_diary',
-    diaryClose: 'sfx_diary',
 
     cheer1: 'sfx_cheer_1',
     cheer2: 'sfx_cheer_2',

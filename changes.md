@@ -1,3 +1,21 @@
+# 1.3.11
+* Added Spanish translation
+* Changes
+  * Added discord button to main menu
+* Modding
+  * Added support for +vehicle character flag that disables health and loyalty for that character
+  * Added support for canDismiss character property that prevents a character from being dismissed by the player when false
+  * Added support for 'compactAndStack' event keyword that ensures the given items are optimally stacked
+* Bugfixes
+  * Fixed sound effects not looping seamlessly
+  * Fixed performance in main menu
+  * Improved expedition generation times
+  * Fixed highscore text not being localised in hall of fame
+  * Locations can only be revealed if their tile is visible
+  * Statuses that block health regeneration or character promotion are now properly displayed as such
+  * Fixed explorer portrait displays in highscores screen
+  * Native characters now display smaller icons where appropriate
+
 # 1.3.10 (June 14th 2018)
 
 * Added Polish translation
@@ -37,6 +55,8 @@
   * Fixed stats not being correctly incremented after switching difficulty levels
   * Fixed ranking display in Italian
   * Fixed some rest events not actually including a rest
+  * Fixed trap event affecting characters that already have an infected wound
+  * Fixed childhood memory flavour text sometimes reaching outside the boundary of the diary
 
 # 1.3.9 (May 25th 2018)
 

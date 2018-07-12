@@ -11,7 +11,7 @@
 },
 {
 	"filename": "hud_barter_centerBox.png",
-	"frame": {"x":1279,"y":278,"w":13,"h":15},
+	"frame": {"x":1139,"y":349,"w":13,"h":15},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":13,"h":15},
@@ -20,7 +20,7 @@
 },
 {
 	"filename": "hud_barter_deal_body.png",
-	"frame": {"x":945,"y":501,"w":20,"h":11},
+	"frame": {"x":1224,"y":484,"w":20,"h":11},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":20,"h":11},
@@ -29,7 +29,7 @@
 },
 {
 	"filename": "hud_barter_deal_end.png",
-	"frame": {"x":593,"y":450,"w":4,"h":11},
+	"frame": {"x":1305,"y":261,"w":4,"h":11},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":4,"h":11},
@@ -38,7 +38,7 @@
 },
 {
 	"filename": "hud_barter_deal_icon.png",
-	"frame": {"x":1295,"y":485,"w":9,"h":10},
+	"frame": {"x":1300,"y":52,"w":9,"h":10},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":9,"h":10},
@@ -47,7 +47,7 @@
 },
 {
 	"filename": "hud_barter_noDeal_body.png",
-	"frame": {"x":965,"y":501,"w":20,"h":11},
+	"frame": {"x":1243,"y":456,"w":20,"h":11},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":20,"h":11},
@@ -56,7 +56,7 @@
 },
 {
 	"filename": "hud_barter_noDeal_end.png",
-	"frame": {"x":1126,"y":490,"w":4,"h":11},
+	"frame": {"x":1305,"y":272,"w":4,"h":11},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":4,"h":11},
@@ -65,7 +65,7 @@
 },
 {
 	"filename": "hud_barter_noDeal_icon.png",
-	"frame": {"x":1295,"y":350,"w":9,"h":10},
+	"frame": {"x":1300,"y":62,"w":9,"h":10},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":9,"h":10},
@@ -155,7 +155,7 @@
 },
 {
 	"filename": "hud_buff_bleeding.png",
-	"frame": {"x":1295,"y":360,"w":9,"h":9},
+	"frame": {"x":1128,"y":423,"w":9,"h":9},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":9,"h":9},
@@ -164,7 +164,7 @@
 },
 {
 	"filename": "hud_buff_fire.png",
-	"frame": {"x":1295,"y":369,"w":9,"h":9},
+	"frame": {"x":1300,"y":287,"w":9,"h":9},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":9,"h":9},
@@ -173,7 +173,7 @@
 },
 {
 	"filename": "hud_buff_poison.png",
-	"frame": {"x":1295,"y":378,"w":9,"h":9},
+	"frame": {"x":1300,"y":296,"w":9,"h":9},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":9,"h":9},
@@ -182,7 +182,7 @@
 },
 {
 	"filename": "hud_buff_stun.png",
-	"frame": {"x":1295,"y":387,"w":9,"h":9},
+	"frame": {"x":1300,"y":305,"w":9,"h":9},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":9,"h":9},
@@ -191,7 +191,7 @@
 },
 {
 	"filename": "hud_buff_taunt.png",
-	"frame": {"x":1295,"y":396,"w":9,"h":9},
+	"frame": {"x":1300,"y":314,"w":9,"h":9},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":9,"h":9},
@@ -200,7 +200,7 @@
 },
 {
 	"filename": "hud_button_action.png",
-	"frame": {"x":1279,"y":252,"w":26,"h":26},
+	"frame": {"x":1279,"y":261,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -209,7 +209,7 @@
 },
 {
 	"filename": "hud_button_action_icon.png",
-	"frame": {"x":1252,"y":407,"w":26,"h":24},
+	"frame": {"x":897,"y":382,"w":26,"h":24},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":24},
@@ -218,7 +218,7 @@
 },
 {
 	"filename": "hud_button_action_over.png",
-	"frame": {"x":925,"y":382,"w":26,"h":26},
+	"frame": {"x":923,"y":382,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -227,7 +227,7 @@
 },
 {
 	"filename": "hud_button_baloon.png",
-	"frame": {"x":951,"y":382,"w":26,"h":26},
+	"frame": {"x":949,"y":382,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -236,7 +236,16 @@
 },
 {
 	"filename": "hud_button_blank.png",
-	"frame": {"x":977,"y":378,"w":26,"h":26},
+	"frame": {"x":410,"y":483,"w":26,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
+	"sourceSize": {"w":26,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "hud_button_discord.png",
+	"frame": {"x":436,"y":482,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -245,7 +254,7 @@
 },
 {
 	"filename": "hud_button_facebook.png",
-	"frame": {"x":1003,"y":378,"w":26,"h":26},
+	"frame": {"x":462,"y":482,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -254,7 +263,7 @@
 },
 {
 	"filename": "hud_button_mail.png",
-	"frame": {"x":1029,"y":378,"w":26,"h":26},
+	"frame": {"x":488,"y":482,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -272,7 +281,7 @@
 },
 {
 	"filename": "hud_button_options.png",
-	"frame": {"x":410,"y":483,"w":26,"h":26},
+	"frame": {"x":1282,"y":122,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -281,7 +290,7 @@
 },
 {
 	"filename": "hud_button_steam.png",
-	"frame": {"x":436,"y":482,"w":26,"h":26},
+	"frame": {"x":1252,"y":407,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -290,7 +299,7 @@
 },
 {
 	"filename": "hud_button_twitter.png",
-	"frame": {"x":462,"y":482,"w":26,"h":26},
+	"frame": {"x":1278,"y":407,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -308,7 +317,7 @@
 },
 {
 	"filename": "hud_button_wait.png",
-	"frame": {"x":488,"y":482,"w":26,"h":26},
+	"frame": {"x":593,"y":451,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -317,7 +326,7 @@
 },
 {
 	"filename": "hud_button_weblink.png",
-	"frame": {"x":1278,"y":407,"w":26,"h":26},
+	"frame": {"x":587,"y":477,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -326,7 +335,7 @@
 },
 {
 	"filename": "hud_button_wiki.png",
-	"frame": {"x":597,"y":450,"w":26,"h":26},
+	"frame": {"x":619,"y":451,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -335,7 +344,7 @@
 },
 {
 	"filename": "hud_button_youtube.png",
-	"frame": {"x":644,"y":404,"w":26,"h":26},
+	"frame": {"x":613,"y":477,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -344,7 +353,7 @@
 },
 {
 	"filename": "hud_capacity.png",
-	"frame": {"x":1292,"y":214,"w":12,"h":12},
+	"frame": {"x":1297,"y":446,"w":12,"h":12},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":12,"h":12},
@@ -389,7 +398,7 @@
 },
 {
 	"filename": "hud_chat_bubble.png",
-	"frame": {"x":596,"y":417,"w":30,"h":33},
+	"frame": {"x":1279,"y":228,"w":30,"h":33},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":33},
@@ -398,7 +407,7 @@
 },
 {
 	"filename": "hud_chat_bubble_arrow.png",
-	"frame": {"x":878,"y":404,"w":19,"h":19},
+	"frame": {"x":1149,"y":466,"w":19,"h":19},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":19,"h":19},
@@ -407,7 +416,7 @@
 },
 {
 	"filename": "hud_chat_bubble_small.png",
-	"frame": {"x":1139,"y":349,"w":15,"h":14},
+	"frame": {"x":1292,"y":214,"w":15,"h":14},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":15,"h":14},
@@ -434,7 +443,7 @@
 },
 {
 	"filename": "hud_checkbox_disabled.png",
-	"frame": {"x":878,"y":479,"w":18,"h":17},
+	"frame": {"x":1206,"y":468,"w":18,"h":17},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":18,"h":17},
@@ -443,7 +452,7 @@
 },
 {
 	"filename": "hud_checkbox_enabled.png",
-	"frame": {"x":909,"y":494,"w":18,"h":17},
+	"frame": {"x":1205,"y":485,"w":18,"h":17},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":18,"h":17},
@@ -452,7 +461,7 @@
 },
 {
 	"filename": "hud_checkbox_enabled_small.png",
-	"frame": {"x":1292,"y":278,"w":14,"h":14},
+	"frame": {"x":1295,"y":350,"w":14,"h":14},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":14,"h":14},
@@ -461,7 +470,7 @@
 },
 {
 	"filename": "hud_checkbox_neutral.png",
-	"frame": {"x":927,"y":494,"w":18,"h":17},
+	"frame": {"x":1224,"y":467,"w":18,"h":17},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":18,"h":17},
@@ -470,7 +479,7 @@
 },
 {
 	"filename": "hud_checkbox_neutral_small.png",
-	"frame": {"x":1292,"y":146,"w":14,"h":14},
+	"frame": {"x":1295,"y":364,"w":14,"h":14},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":14,"h":14},
@@ -479,7 +488,7 @@
 },
 {
 	"filename": "hud_combat_symbol_damage.png",
-	"frame": {"x":893,"y":496,"w":16,"h":16},
+	"frame": {"x":1225,"y":495,"w":16,"h":16},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":16},
@@ -488,7 +497,7 @@
 },
 {
 	"filename": "hud_combat_symbol_shield.png",
-	"frame": {"x":1110,"y":490,"w":16,"h":16},
+	"frame": {"x":1243,"y":440,"w":16,"h":16},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":16},
@@ -524,7 +533,7 @@
 },
 {
 	"filename": "hud_day.png",
-	"frame": {"x":1279,"y":228,"w":27,"h":24},
+	"frame": {"x":1282,"y":0,"w":27,"h":24},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":24},
@@ -542,7 +551,7 @@
 },
 {
 	"filename": "hud_dice_bg_ammo_1.png",
-	"frame": {"x":670,"y":404,"w":26,"h":26},
+	"frame": {"x":634,"y":404,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -551,7 +560,7 @@
 },
 {
 	"filename": "hud_dice_bg_animal_1.png",
-	"frame": {"x":696,"y":404,"w":26,"h":26},
+	"frame": {"x":660,"y":404,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -560,7 +569,7 @@
 },
 {
 	"filename": "hud_dice_bg_animal_2.png",
-	"frame": {"x":722,"y":404,"w":26,"h":26},
+	"frame": {"x":686,"y":404,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -569,7 +578,7 @@
 },
 {
 	"filename": "hud_dice_bg_attack_1.png",
-	"frame": {"x":748,"y":404,"w":26,"h":26},
+	"frame": {"x":712,"y":404,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -578,7 +587,7 @@
 },
 {
 	"filename": "hud_dice_bg_attack_2.png",
-	"frame": {"x":774,"y":404,"w":26,"h":26},
+	"frame": {"x":738,"y":404,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -587,7 +596,7 @@
 },
 {
 	"filename": "hud_dice_bg_berserk_1.png",
-	"frame": {"x":800,"y":404,"w":26,"h":26},
+	"frame": {"x":764,"y":404,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -596,7 +605,7 @@
 },
 {
 	"filename": "hud_dice_bg_berserk_2.png",
-	"frame": {"x":826,"y":404,"w":26,"h":26},
+	"frame": {"x":790,"y":404,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -605,7 +614,7 @@
 },
 {
 	"filename": "hud_dice_bg_emy_1.png",
-	"frame": {"x":852,"y":404,"w":26,"h":26},
+	"frame": {"x":816,"y":404,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -614,7 +623,7 @@
 },
 {
 	"filename": "hud_dice_bg_hunter_1.png",
-	"frame": {"x":644,"y":430,"w":26,"h":26},
+	"frame": {"x":842,"y":404,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -623,7 +632,7 @@
 },
 {
 	"filename": "hud_dice_bg_hunter_2.png",
-	"frame": {"x":670,"y":430,"w":26,"h":26},
+	"frame": {"x":868,"y":404,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -632,7 +641,7 @@
 },
 {
 	"filename": "hud_dice_bg_martialArts_1.png",
-	"frame": {"x":696,"y":430,"w":26,"h":26},
+	"frame": {"x":659,"y":430,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -641,7 +650,7 @@
 },
 {
 	"filename": "hud_dice_bg_mystic_1.png",
-	"frame": {"x":722,"y":430,"w":26,"h":26},
+	"frame": {"x":685,"y":430,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -650,7 +659,7 @@
 },
 {
 	"filename": "hud_dice_bg_mystic_2.png",
-	"frame": {"x":748,"y":430,"w":26,"h":26},
+	"frame": {"x":711,"y":430,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -659,7 +668,7 @@
 },
 {
 	"filename": "hud_dice_bg_science_1.png",
-	"frame": {"x":774,"y":430,"w":26,"h":26},
+	"frame": {"x":737,"y":430,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -668,7 +677,7 @@
 },
 {
 	"filename": "hud_dice_bg_science_2.png",
-	"frame": {"x":800,"y":430,"w":26,"h":26},
+	"frame": {"x":763,"y":430,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -677,7 +686,7 @@
 },
 {
 	"filename": "hud_dice_bg_shield_1.png",
-	"frame": {"x":826,"y":430,"w":26,"h":26},
+	"frame": {"x":789,"y":430,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -686,7 +695,7 @@
 },
 {
 	"filename": "hud_dice_bg_shield_2.png",
-	"frame": {"x":852,"y":430,"w":26,"h":26},
+	"frame": {"x":815,"y":430,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -695,7 +704,7 @@
 },
 {
 	"filename": "hud_dice_bg_weapon_1.png",
-	"frame": {"x":644,"y":456,"w":26,"h":26},
+	"frame": {"x":841,"y":430,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -704,7 +713,7 @@
 },
 {
 	"filename": "hud_dice_shield.png",
-	"frame": {"x":623,"y":450,"w":21,"h":26},
+	"frame": {"x":971,"y":434,"w":21,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":21,"h":26},
@@ -713,7 +722,7 @@
 },
 {
 	"filename": "hud_dice_symbol_1.png",
-	"frame": {"x":670,"y":456,"w":26,"h":26},
+	"frame": {"x":867,"y":430,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -722,7 +731,7 @@
 },
 {
 	"filename": "hud_dice_symbol_2.png",
-	"frame": {"x":696,"y":456,"w":26,"h":26},
+	"frame": {"x":894,"y":406,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -731,7 +740,7 @@
 },
 {
 	"filename": "hud_dice_symbol_3.png",
-	"frame": {"x":722,"y":456,"w":26,"h":26},
+	"frame": {"x":893,"y":432,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -740,7 +749,7 @@
 },
 {
 	"filename": "hud_dice_symbol_4.png",
-	"frame": {"x":748,"y":456,"w":26,"h":26},
+	"frame": {"x":920,"y":408,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -749,7 +758,7 @@
 },
 {
 	"filename": "hud_dice_symbol_5.png",
-	"frame": {"x":774,"y":456,"w":26,"h":26},
+	"frame": {"x":946,"y":408,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -758,7 +767,7 @@
 },
 {
 	"filename": "hud_dice_symbol_6.png",
-	"frame": {"x":800,"y":456,"w":26,"h":26},
+	"frame": {"x":919,"y":434,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -767,7 +776,7 @@
 },
 {
 	"filename": "hud_dice_symbol_agility_1.png",
-	"frame": {"x":826,"y":456,"w":26,"h":26},
+	"frame": {"x":945,"y":434,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -776,7 +785,7 @@
 },
 {
 	"filename": "hud_dice_symbol_awareness_1.png",
-	"frame": {"x":852,"y":456,"w":26,"h":26},
+	"frame": {"x":645,"y":456,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -785,7 +794,7 @@
 },
 {
 	"filename": "hud_dice_symbol_beak.png",
-	"frame": {"x":638,"y":482,"w":26,"h":26},
+	"frame": {"x":671,"y":456,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -794,7 +803,7 @@
 },
 {
 	"filename": "hud_dice_symbol_bleed_1.png",
-	"frame": {"x":664,"y":482,"w":26,"h":26},
+	"frame": {"x":697,"y":456,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -803,7 +812,7 @@
 },
 {
 	"filename": "hud_dice_symbol_blink_1.png",
-	"frame": {"x":690,"y":482,"w":26,"h":26},
+	"frame": {"x":723,"y":456,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -812,7 +821,7 @@
 },
 {
 	"filename": "hud_dice_symbol_bomb_1.png",
-	"frame": {"x":716,"y":482,"w":26,"h":26},
+	"frame": {"x":749,"y":456,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -830,7 +839,7 @@
 },
 {
 	"filename": "hud_dice_symbol_claw_1.png",
-	"frame": {"x":742,"y":482,"w":26,"h":26},
+	"frame": {"x":775,"y":456,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -839,7 +848,7 @@
 },
 {
 	"filename": "hud_dice_symbol_claw_2.png",
-	"frame": {"x":768,"y":482,"w":26,"h":26},
+	"frame": {"x":801,"y":456,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -848,7 +857,7 @@
 },
 {
 	"filename": "hud_dice_symbol_claw_3.png",
-	"frame": {"x":794,"y":482,"w":26,"h":26},
+	"frame": {"x":827,"y":456,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -857,7 +866,7 @@
 },
 {
 	"filename": "hud_dice_symbol_dynamite_1.png",
-	"frame": {"x":820,"y":482,"w":26,"h":26},
+	"frame": {"x":853,"y":456,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -866,7 +875,7 @@
 },
 {
 	"filename": "hud_dice_symbol_flash_1.png",
-	"frame": {"x":846,"y":482,"w":26,"h":26},
+	"frame": {"x":639,"y":482,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -875,7 +884,7 @@
 },
 {
 	"filename": "hud_dice_symbol_hoof.png",
-	"frame": {"x":897,"y":416,"w":26,"h":26},
+	"frame": {"x":665,"y":482,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -884,7 +893,7 @@
 },
 {
 	"filename": "hud_dice_symbol_horns.png",
-	"frame": {"x":896,"y":442,"w":26,"h":26},
+	"frame": {"x":691,"y":482,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -893,7 +902,7 @@
 },
 {
 	"filename": "hud_dice_symbol_leech_1.png",
-	"frame": {"x":896,"y":468,"w":26,"h":26},
+	"frame": {"x":717,"y":482,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -902,7 +911,7 @@
 },
 {
 	"filename": "hud_dice_symbol_martialArts_1.png",
-	"frame": {"x":977,"y":404,"w":26,"h":26},
+	"frame": {"x":743,"y":482,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -911,7 +920,7 @@
 },
 {
 	"filename": "hud_dice_symbol_martialArts_2.png",
-	"frame": {"x":1003,"y":404,"w":26,"h":26},
+	"frame": {"x":769,"y":482,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -920,7 +929,7 @@
 },
 {
 	"filename": "hud_dice_symbol_martialArts_3.png",
-	"frame": {"x":1029,"y":404,"w":26,"h":26},
+	"frame": {"x":795,"y":482,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -929,7 +938,7 @@
 },
 {
 	"filename": "hud_dice_symbol_martialArts_4.png",
-	"frame": {"x":1055,"y":412,"w":26,"h":26},
+	"frame": {"x":821,"y":482,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -938,7 +947,7 @@
 },
 {
 	"filename": "hud_dice_symbol_martialArts_5.png",
-	"frame": {"x":1081,"y":412,"w":26,"h":26},
+	"frame": {"x":847,"y":482,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -947,7 +956,7 @@
 },
 {
 	"filename": "hud_dice_symbol_mind_1.png",
-	"frame": {"x":1107,"y":412,"w":26,"h":26},
+	"frame": {"x":879,"y":458,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -956,7 +965,7 @@
 },
 {
 	"filename": "hud_dice_symbol_parasaurolophus.png",
-	"frame": {"x":1231,"y":462,"w":21,"h":19},
+	"frame": {"x":1276,"y":433,"w":21,"h":19},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":21,"h":19},
@@ -965,7 +974,7 @@
 },
 {
 	"filename": "hud_dice_symbol_pistol_1.png",
-	"frame": {"x":1133,"y":421,"w":26,"h":26},
+	"frame": {"x":929,"y":460,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -974,7 +983,7 @@
 },
 {
 	"filename": "hud_dice_symbol_poisonSting.png",
-	"frame": {"x":956,"y":408,"w":21,"h":21},
+	"frame": {"x":1128,"y":464,"w":21,"h":21},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":21,"h":21},
@@ -983,7 +992,7 @@
 },
 {
 	"filename": "hud_dice_symbol_ram.png",
-	"frame": {"x":1159,"y":421,"w":26,"h":26},
+	"frame": {"x":927,"y":486,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -992,7 +1001,7 @@
 },
 {
 	"filename": "hud_dice_symbol_rifle_1.png",
-	"frame": {"x":1185,"y":421,"w":26,"h":26},
+	"frame": {"x":953,"y":486,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -1001,7 +1010,7 @@
 },
 {
 	"filename": "hud_dice_symbol_science_1.png",
-	"frame": {"x":1211,"y":421,"w":26,"h":26},
+	"frame": {"x":955,"y":460,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -1010,7 +1019,7 @@
 },
 {
 	"filename": "hud_dice_symbol_shell.png",
-	"frame": {"x":1252,"y":431,"w":26,"h":26},
+	"frame": {"x":979,"y":486,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -1019,7 +1028,7 @@
 },
 {
 	"filename": "hud_dice_symbol_shield_1.png",
-	"frame": {"x":1278,"y":433,"w":26,"h":26},
+	"frame": {"x":981,"y":460,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -1028,7 +1037,7 @@
 },
 {
 	"filename": "hud_dice_symbol_shield_2.png",
-	"frame": {"x":1252,"y":457,"w":26,"h":26},
+	"frame": {"x":1005,"y":486,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -1037,7 +1046,7 @@
 },
 {
 	"filename": "hud_dice_symbol_shotgun.png",
-	"frame": {"x":1278,"y":459,"w":26,"h":26},
+	"frame": {"x":972,"y":408,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -1046,7 +1055,7 @@
 },
 {
 	"filename": "hud_dice_symbol_smash.png",
-	"frame": {"x":923,"y":416,"w":26,"h":26},
+	"frame": {"x":975,"y":382,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -1055,7 +1064,7 @@
 },
 {
 	"filename": "hud_dice_symbol_spear.png",
-	"frame": {"x":922,"y":442,"w":26,"h":26},
+	"frame": {"x":1001,"y":378,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -1064,7 +1073,7 @@
 },
 {
 	"filename": "hud_dice_symbol_spider_1.png",
-	"frame": {"x":922,"y":468,"w":26,"h":26},
+	"frame": {"x":1027,"y":378,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -1073,7 +1082,7 @@
 },
 {
 	"filename": "hud_dice_symbol_spider_2.png",
-	"frame": {"x":949,"y":429,"w":26,"h":26},
+	"frame": {"x":992,"y":434,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -1082,7 +1091,7 @@
 },
 {
 	"filename": "hud_dice_symbol_stability_1.png",
-	"frame": {"x":948,"y":455,"w":26,"h":26},
+	"frame": {"x":1007,"y":460,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -1091,7 +1100,7 @@
 },
 {
 	"filename": "hud_dice_symbol_stomp.png",
-	"frame": {"x":975,"y":430,"w":26,"h":26},
+	"frame": {"x":1031,"y":486,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -1100,7 +1109,7 @@
 },
 {
 	"filename": "hud_dice_symbol_stun_1.png",
-	"frame": {"x":1001,"y":430,"w":26,"h":26},
+	"frame": {"x":998,"y":408,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -1109,7 +1118,7 @@
 },
 {
 	"filename": "hud_dice_symbol_sword_1.png",
-	"frame": {"x":1027,"y":430,"w":26,"h":26},
+	"frame": {"x":1024,"y":404,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -1118,7 +1127,7 @@
 },
 {
 	"filename": "hud_dice_symbol_sword_2.png",
-	"frame": {"x":974,"y":456,"w":26,"h":26},
+	"frame": {"x":1018,"y":434,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -1127,7 +1136,7 @@
 },
 {
 	"filename": "hud_dice_symbol_tail.png",
-	"frame": {"x":1000,"y":456,"w":26,"h":26},
+	"frame": {"x":1033,"y":460,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -1136,7 +1145,7 @@
 },
 {
 	"filename": "hud_dice_symbol_taunt_1.png",
-	"frame": {"x":1026,"y":456,"w":26,"h":26},
+	"frame": {"x":1057,"y":486,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -1145,7 +1154,7 @@
 },
 {
 	"filename": "hud_dice_symbol_teeth.png",
-	"frame": {"x":1053,"y":438,"w":26,"h":26},
+	"frame": {"x":1050,"y":412,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -1154,7 +1163,7 @@
 },
 {
 	"filename": "hud_dice_symbol_tentacle.png",
-	"frame": {"x":1079,"y":438,"w":26,"h":26},
+	"frame": {"x":1076,"y":412,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -1163,7 +1172,7 @@
 },
 {
 	"filename": "hud_dice_symbol_teslaGun.png",
-	"frame": {"x":1105,"y":438,"w":26,"h":26},
+	"frame": {"x":1102,"y":412,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -1172,7 +1181,7 @@
 },
 {
 	"filename": "hud_dice_symbol_tortoise.png",
-	"frame": {"x":872,"y":496,"w":21,"h":16},
+	"frame": {"x":1129,"y":446,"w":21,"h":16},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":21,"h":16},
@@ -1181,7 +1190,7 @@
 },
 {
 	"filename": "hud_dice_symbol_whip_1.png",
-	"frame": {"x":1052,"y":464,"w":26,"h":26},
+	"frame": {"x":1059,"y":460,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -1190,7 +1199,7 @@
 },
 {
 	"filename": "hud_dice_symbol_whip_2.png",
-	"frame": {"x":1078,"y":464,"w":26,"h":26},
+	"frame": {"x":1083,"y":486,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -1199,7 +1208,7 @@
 },
 {
 	"filename": "hud_fame.png",
-	"frame": {"x":597,"y":476,"w":16,"h":23},
+	"frame": {"x":1159,"y":485,"w":16,"h":23},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":23},
@@ -1208,7 +1217,7 @@
 },
 {
 	"filename": "hud_fame_small.png",
-	"frame": {"x":949,"y":415,"w":7,"h":9},
+	"frame": {"x":632,"y":387,"w":7,"h":9},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":7,"h":9},
@@ -1217,7 +1226,7 @@
 },
 {
 	"filename": "hud_feedback_update_item.png",
-	"frame": {"x":1300,"y":48,"w":6,"h":22},
+	"frame": {"x":1300,"y":72,"w":6,"h":22},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":6,"h":22},
@@ -1226,7 +1235,7 @@
 },
 {
 	"filename": "hud_feedback_update_item_end.png",
-	"frame": {"x":985,"y":490,"w":17,"h":22},
+	"frame": {"x":1292,"y":148,"w":17,"h":22},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":17,"h":22},
@@ -1235,7 +1244,7 @@
 },
 {
 	"filename": "hud_feedback_update_newUnit.png",
-	"frame": {"x":1300,"y":70,"w":6,"h":22},
+	"frame": {"x":1300,"y":94,"w":6,"h":22},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":6,"h":22},
@@ -1244,7 +1253,7 @@
 },
 {
 	"filename": "hud_feedback_update_newUnit_end.png",
-	"frame": {"x":1002,"y":490,"w":17,"h":22},
+	"frame": {"x":1292,"y":170,"w":17,"h":22},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":17,"h":22},
@@ -1253,7 +1262,7 @@
 },
 {
 	"filename": "hud_feedback_update_sanity.png",
-	"frame": {"x":1300,"y":92,"w":6,"h":22},
+	"frame": {"x":1210,"y":446,"w":6,"h":22},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":6,"h":22},
@@ -1262,7 +1271,7 @@
 },
 {
 	"filename": "hud_feedback_update_sanity_end.png",
-	"frame": {"x":1019,"y":490,"w":17,"h":22},
+	"frame": {"x":1292,"y":192,"w":17,"h":22},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":17,"h":22},
@@ -1271,7 +1280,7 @@
 },
 {
 	"filename": "hud_feedback_update_statusNegative.png",
-	"frame": {"x":1300,"y":114,"w":6,"h":22},
+	"frame": {"x":1231,"y":445,"w":6,"h":22},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":6,"h":22},
@@ -1280,7 +1289,7 @@
 },
 {
 	"filename": "hud_feedback_update_statusNegative_end.png",
-	"frame": {"x":1036,"y":490,"w":17,"h":22},
+	"frame": {"x":1044,"y":438,"w":17,"h":22},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":17,"h":22},
@@ -1289,7 +1298,7 @@
 },
 {
 	"filename": "hud_feedback_update_statusPositive.png",
-	"frame": {"x":1300,"y":292,"w":6,"h":22},
+	"frame": {"x":1237,"y":445,"w":6,"h":22},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":6,"h":22},
@@ -1298,7 +1307,7 @@
 },
 {
 	"filename": "hud_feedback_update_statusPositive_end.png",
-	"frame": {"x":1053,"y":490,"w":17,"h":22},
+	"frame": {"x":1061,"y":438,"w":17,"h":22},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":17,"h":22},
@@ -1316,7 +1325,7 @@
 },
 {
 	"filename": "hud_globeMarker_1.png",
-	"frame": {"x":1237,"y":420,"w":15,"h":21},
+	"frame": {"x":1175,"y":485,"w":15,"h":21},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":15,"h":21},
@@ -1325,7 +1334,7 @@
 },
 {
 	"filename": "hud_globeMarker_2.png",
-	"frame": {"x":897,"y":382,"w":28,"h":34},
+	"frame": {"x":596,"y":417,"w":28,"h":34},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":34},
@@ -1352,7 +1361,7 @@
 },
 {
 	"filename": "hud_health_empty.png",
-	"frame": {"x":1131,"y":349,"w":7,"h":6},
+	"frame": {"x":1279,"y":287,"w":7,"h":6},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":7,"h":6},
@@ -1361,7 +1370,7 @@
 },
 {
 	"filename": "hud_health_empty_half.png",
-	"frame": {"x":1151,"y":497,"w":4,"h":6},
+	"frame": {"x":1238,"y":439,"w":4,"h":6},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":4,"h":6},
@@ -1370,7 +1379,7 @@
 },
 {
 	"filename": "hud_health_endPiece.png",
-	"frame": {"x":1053,"y":430,"w":2,"h":5},
+	"frame": {"x":1152,"y":349,"w":2,"h":5},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":2,"h":5},
@@ -1379,7 +1388,7 @@
 },
 {
 	"filename": "hud_health_full.png",
-	"frame": {"x":968,"y":495,"w":7,"h":6},
+	"frame": {"x":1131,"y":349,"w":7,"h":6},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":7,"h":6},
@@ -1388,7 +1397,7 @@
 },
 {
 	"filename": "hud_health_half.png",
-	"frame": {"x":975,"y":495,"w":7,"h":6},
+	"frame": {"x":1286,"y":287,"w":7,"h":6},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":7,"h":6},
@@ -1406,7 +1415,7 @@
 },
 {
 	"filename": "hud_health_small_empty.png",
-	"frame": {"x":626,"y":445,"w":5,"h":5},
+	"frame": {"x":645,"y":451,"w":5,"h":5},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":5,"h":5},
@@ -1415,7 +1424,7 @@
 },
 {
 	"filename": "hud_icon_compass.png",
-	"frame": {"x":948,"y":481,"w":20,"h":20},
+	"frame": {"x":1150,"y":446,"w":20,"h":20},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":20,"h":20},
@@ -1433,7 +1442,7 @@
 },
 {
 	"filename": "hud_icon_gender_hybrid.png",
-	"frame": {"x":1239,"y":497,"w":9,"h":12},
+	"frame": {"x":1300,"y":40,"w":9,"h":12},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":9,"h":12},
@@ -1442,7 +1451,7 @@
 },
 {
 	"filename": "hud_icon_gender_male.png",
-	"frame": {"x":1248,"y":492,"w":9,"h":9},
+	"frame": {"x":1300,"y":323,"w":9,"h":9},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":9,"h":9},
@@ -1451,7 +1460,7 @@
 },
 {
 	"filename": "hud_icon_sanity.png",
-	"frame": {"x":1211,"y":493,"w":16,"h":16},
+	"frame": {"x":1242,"y":467,"w":16,"h":16},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":16},
@@ -1459,8 +1468,17 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
+	"filename": "hud_icon_skull.png",
+	"frame": {"x":1094,"y":478,"w":7,"h":8},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":7,"h":8},
+	"sourceSize": {"w":7,"h":8},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
 	"filename": "hud_icon_stamp.png",
-	"frame": {"x":1070,"y":490,"w":20,"h":20},
+	"frame": {"x":1170,"y":446,"w":20,"h":20},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":20,"h":20},
@@ -1469,7 +1487,7 @@
 },
 {
 	"filename": "hud_icon_xp.png",
-	"frame": {"x":1090,"y":490,"w":20,"h":20},
+	"frame": {"x":1190,"y":446,"w":20,"h":20},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":20,"h":20},
@@ -1478,7 +1496,7 @@
 },
 {
 	"filename": "hud_inventory_border.png",
-	"frame": {"x":1155,"y":493,"w":19,"h":19},
+	"frame": {"x":1168,"y":466,"w":19,"h":19},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":19,"h":19},
@@ -1487,7 +1505,7 @@
 },
 {
 	"filename": "hud_inventory_discard.png",
-	"frame": {"x":1104,"y":464,"w":26,"h":26},
+	"frame": {"x":1103,"y":438,"w":26,"h":26},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
@@ -1505,7 +1523,7 @@
 },
 {
 	"filename": "hud_levelUp.png",
-	"frame": {"x":1275,"y":485,"w":10,"h":10},
+	"frame": {"x":1205,"y":502,"w":10,"h":10},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":10,"h":10},
@@ -1523,7 +1541,7 @@
 },
 {
 	"filename": "hud_loyalty_bad.png",
-	"frame": {"x":1227,"y":497,"w":12,"h":12},
+	"frame": {"x":1280,"y":452,"w":12,"h":12},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":12,"h":12},
@@ -1532,7 +1550,7 @@
 },
 {
 	"filename": "hud_loyalty_good.png",
-	"frame": {"x":1139,"y":497,"w":12,"h":12},
+	"frame": {"x":1258,"y":467,"w":12,"h":12},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":12,"h":12},
@@ -1541,7 +1559,7 @@
 },
 {
 	"filename": "hud_mapMarker_1.png",
-	"frame": {"x":1237,"y":441,"w":15,"h":21},
+	"frame": {"x":1190,"y":485,"w":15,"h":21},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":15,"h":21},
@@ -1550,7 +1568,7 @@
 },
 {
 	"filename": "hud_mapMarker_2.png",
-	"frame": {"x":1205,"y":472,"w":15,"h":21},
+	"frame": {"x":1216,"y":445,"w":15,"h":21},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":15,"h":21},
@@ -1559,7 +1577,7 @@
 },
 {
 	"filename": "hud_mapMarker_arctic.png",
-	"frame": {"x":1282,"y":118,"w":18,"h":28},
+	"frame": {"x":1282,"y":94,"w":18,"h":28},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":18,"h":28},
@@ -1568,7 +1586,7 @@
 },
 {
 	"filename": "hud_mapMarker_bonus.png",
-	"frame": {"x":1282,"y":48,"w":18,"h":36},
+	"frame": {"x":1282,"y":24,"w":18,"h":36},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":18,"h":36},
@@ -1577,7 +1595,7 @@
 },
 {
 	"filename": "hud_mapMarker_desert.png",
-	"frame": {"x":626,"y":417,"w":18,"h":28},
+	"frame": {"x":873,"y":484,"w":18,"h":28},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":18,"h":28},
@@ -1586,7 +1604,7 @@
 },
 {
 	"filename": "hud_mapMarker_dry.png",
-	"frame": {"x":878,"y":423,"w":18,"h":28},
+	"frame": {"x":891,"y":484,"w":18,"h":28},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":18,"h":28},
@@ -1595,7 +1613,7 @@
 },
 {
 	"filename": "hud_mapMarker_grass.png",
-	"frame": {"x":878,"y":451,"w":18,"h":28},
+	"frame": {"x":909,"y":484,"w":18,"h":28},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":18,"h":28},
@@ -1604,7 +1622,7 @@
 },
 {
 	"filename": "hud_mapMarker_home.png",
-	"frame": {"x":587,"y":465,"w":10,"h":34},
+	"frame": {"x":624,"y":417,"w":10,"h":34},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":10,"h":34},
@@ -1613,7 +1631,7 @@
 },
 {
 	"filename": "hud_mapMarker_mystery.png",
-	"frame": {"x":1131,"y":447,"w":25,"h":25},
+	"frame": {"x":1109,"y":485,"w":25,"h":25},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":25,"h":25},
@@ -1622,7 +1640,7 @@
 },
 {
 	"filename": "hud_mapMarker_natureRest.png",
-	"frame": {"x":1156,"y":447,"w":25,"h":25},
+	"frame": {"x":1134,"y":485,"w":25,"h":25},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":25,"h":25},
@@ -1631,7 +1649,7 @@
 },
 {
 	"filename": "hud_mapMarker_rival.png",
-	"frame": {"x":1193,"y":493,"w":18,"h":19},
+	"frame": {"x":1085,"y":459,"w":18,"h":19},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":18,"h":19},
@@ -1640,7 +1658,7 @@
 },
 {
 	"filename": "hud_mapMarker_select.png",
-	"frame": {"x":1282,"y":84,"w":18,"h":34},
+	"frame": {"x":1282,"y":60,"w":18,"h":34},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":18,"h":34},
@@ -1649,7 +1667,7 @@
 },
 {
 	"filename": "hud_mapMarker_settlement.png",
-	"frame": {"x":1181,"y":447,"w":25,"h":25},
+	"frame": {"x":1139,"y":421,"w":25,"h":25},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":25,"h":25},
@@ -1658,7 +1676,7 @@
 },
 {
 	"filename": "hud_mapMarker_trade.png",
-	"frame": {"x":1206,"y":447,"w":25,"h":25},
+	"frame": {"x":1164,"y":421,"w":25,"h":25},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":25,"h":25},
@@ -1667,7 +1685,7 @@
 },
 {
 	"filename": "hud_mapMarker_treasure.png",
-	"frame": {"x":1130,"y":472,"w":25,"h":25},
+	"frame": {"x":1189,"y":421,"w":25,"h":25},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":25,"h":25},
@@ -1685,7 +1703,7 @@
 },
 {
 	"filename": "hud_medal_top.png",
-	"frame": {"x":1247,"y":483,"w":15,"h":9},
+	"frame": {"x":618,"y":503,"w":15,"h":9},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":15,"h":9},
@@ -1694,7 +1712,7 @@
 },
 {
 	"filename": "hud_news_background.png",
-	"frame": {"x":1231,"y":481,"w":16,"h":16},
+	"frame": {"x":1244,"y":483,"w":16,"h":16},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":16},
@@ -1703,7 +1721,7 @@
 },
 {
 	"filename": "hud_news_index_active.png",
-	"frame": {"x":638,"y":476,"w":6,"h":6},
+	"frame": {"x":1300,"y":116,"w":6,"h":6},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":6,"h":6},
@@ -1712,7 +1730,7 @@
 },
 {
 	"filename": "hud_news_index_inactive.png",
-	"frame": {"x":1300,"y":136,"w":6,"h":6},
+	"frame": {"x":1293,"y":287,"w":6,"h":6},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":6,"h":6},
@@ -1730,7 +1748,7 @@
 },
 {
 	"filename": "hud_playerpos_arrow.png",
-	"frame": {"x":1285,"y":485,"w":10,"h":10},
+	"frame": {"x":1215,"y":502,"w":10,"h":10},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":10,"h":10},
@@ -1739,7 +1757,7 @@
 },
 {
 	"filename": "hud_redArrow_left.png",
-	"frame": {"x":1126,"y":501,"w":13,"h":11},
+	"frame": {"x":1270,"y":466,"w":13,"h":11},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":13,"h":11},
@@ -1748,7 +1766,7 @@
 },
 {
 	"filename": "hud_redArrow_right.png",
-	"frame": {"x":1262,"y":483,"w":13,"h":11},
+	"frame": {"x":1283,"y":464,"w":13,"h":11},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":13,"h":11},
@@ -1757,7 +1775,7 @@
 },
 {
 	"filename": "hud_region.png",
-	"frame": {"x":613,"y":476,"w":25,"h":21},
+	"frame": {"x":634,"y":430,"w":25,"h":21},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":25,"h":21},
@@ -1766,7 +1784,7 @@
 },
 {
 	"filename": "hud_region_full.png",
-	"frame": {"x":1155,"y":472,"w":25,"h":21},
+	"frame": {"x":1078,"y":438,"w":25,"h":21},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":25,"h":21},
@@ -1775,7 +1793,7 @@
 },
 {
 	"filename": "hud_region_progress.png",
-	"frame": {"x":1180,"y":472,"w":25,"h":21},
+	"frame": {"x":1103,"y":464,"w":25,"h":21},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":25,"h":21},
@@ -1793,7 +1811,7 @@
 },
 {
 	"filename": "hud_resourceBar_sanity_range.png",
-	"frame": {"x":1300,"y":314,"w":6,"h":12},
+	"frame": {"x":587,"y":465,"w":6,"h":12},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":6,"h":12},
@@ -1802,7 +1820,7 @@
 },
 {
 	"filename": "hud_resourceBar_sanity_segment.png",
-	"frame": {"x":872,"y":482,"w":2,"h":14},
+	"frame": {"x":1307,"y":214,"w":2,"h":14},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":2,"h":14},
@@ -1847,7 +1865,7 @@
 },
 {
 	"filename": "hud_rivalRaceTrack_line.png",
-	"frame": {"x":1010,"y":482,"w":9,"h":8},
+	"frame": {"x":1085,"y":478,"w":9,"h":8},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":9,"h":8},
@@ -1856,7 +1874,7 @@
 },
 {
 	"filename": "hud_rivalRaceTrack_pyramid.png",
-	"frame": {"x":1174,"y":493,"w":19,"h":19},
+	"frame": {"x":1187,"y":466,"w":19,"h":19},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":19,"h":19},
@@ -1865,7 +1883,7 @@
 },
 {
 	"filename": "hud_scrollButton_charSelect_left.png",
-	"frame": {"x":1292,"y":160,"w":13,"h":19},
+	"frame": {"x":1295,"y":378,"w":13,"h":19},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":13,"h":19},
@@ -1874,7 +1892,7 @@
 },
 {
 	"filename": "hud_scrollButton_charSelect_right.png",
-	"frame": {"x":1292,"y":179,"w":13,"h":19},
+	"frame": {"x":1238,"y":420,"w":13,"h":19},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":13,"h":19},
@@ -1883,7 +1901,7 @@
 },
 {
 	"filename": "hud_scrollButton_down.png",
-	"frame": {"x":587,"y":499,"w":17,"h":13},
+	"frame": {"x":1259,"y":440,"w":17,"h":13},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":17,"h":13},
@@ -1892,7 +1910,7 @@
 },
 {
 	"filename": "hud_scrollButton_down_inactive.png",
-	"frame": {"x":604,"y":499,"w":17,"h":13},
+	"frame": {"x":1241,"y":499,"w":17,"h":13},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":17,"h":13},
@@ -1901,7 +1919,7 @@
 },
 {
 	"filename": "hud_scrollButton_up.png",
-	"frame": {"x":621,"y":497,"w":17,"h":13},
+	"frame": {"x":1258,"y":499,"w":17,"h":13},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":17,"h":13},
@@ -1910,7 +1928,7 @@
 },
 {
 	"filename": "hud_scrollButton_up_inactive.png",
-	"frame": {"x":968,"y":482,"w":17,"h":13},
+	"frame": {"x":1263,"y":453,"w":17,"h":13},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":17,"h":13},
@@ -1919,7 +1937,7 @@
 },
 {
 	"filename": "hud_standing_0.png",
-	"frame": {"x":1282,"y":0,"w":24,"h":24},
+	"frame": {"x":905,"y":460,"w":24,"h":24},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":24,"h":24},
@@ -1928,7 +1946,7 @@
 },
 {
 	"filename": "hud_standing_neg1.png",
-	"frame": {"x":1282,"y":24,"w":24,"h":24},
+	"frame": {"x":1214,"y":421,"w":24,"h":24},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":24,"h":24},
@@ -1991,7 +2009,7 @@
 },
 {
 	"filename": "hud_travelItem_machete.png",
-	"frame": {"x":1220,"y":472,"w":11,"h":11},
+	"frame": {"x":1128,"y":412,"w":11,"h":11},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":11,"h":11},
@@ -2000,7 +2018,7 @@
 },
 {
 	"filename": "hud_travelItem_rope.png",
-	"frame": {"x":1220,"y":483,"w":11,"h":10},
+	"frame": {"x":1295,"y":397,"w":11,"h":10},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":11,"h":10},
@@ -2009,7 +2027,7 @@
 },
 {
 	"filename": "hud_travelItem_snowShoes.png",
-	"frame": {"x":1292,"y":198,"w":9,"h":16},
+	"frame": {"x":1300,"y":24,"w":9,"h":16},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":9,"h":16},
@@ -2018,7 +2036,7 @@
 },
 {
 	"filename": "hud_travelItem_water.png",
-	"frame": {"x":632,"y":404,"w":12,"h":13},
+	"frame": {"x":1297,"y":433,"w":12,"h":13},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":12,"h":13},
@@ -2036,7 +2054,7 @@
 },
 {
 	"filename": "hud_unit_rank_1.png",
-	"frame": {"x":1035,"y":482,"w":7,"h":7},
+	"frame": {"x":1300,"y":332,"w":7,"h":7},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":7,"h":7},
@@ -2045,7 +2063,7 @@
 },
 {
 	"filename": "hud_unit_rank_2.png",
-	"frame": {"x":1019,"y":482,"w":16,"h":7},
+	"frame": {"x":1270,"y":477,"w":16,"h":7},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":7},
@@ -2054,7 +2072,7 @@
 },
 {
 	"filename": "hud_unit_rank_3.png",
-	"frame": {"x":985,"y":482,"w":25,"h":7},
+	"frame": {"x":1251,"y":433,"w":25,"h":7},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":25,"h":7},
@@ -2063,7 +2081,7 @@
 },
 {
 	"filename": "hud_unit_rank_4.png",
-	"frame": {"x":925,"y":408,"w":31,"h":7},
+	"frame": {"x":587,"y":503,"w":31,"h":7},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":7},
@@ -2081,7 +2099,7 @@
 },
 {
 	"filename": "hud_unit_rank_blank.png",
-	"frame": {"x":222,"y":499,"w":7,"h":7},
+	"frame": {"x":632,"y":396,"w":7,"h":7},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":7,"h":7},
@@ -2090,7 +2108,7 @@
 },
 {
 	"filename": "hud_weightless.png",
-	"frame": {"x":632,"y":387,"w":7,"h":9},
+	"frame": {"x":222,"y":499,"w":7,"h":9},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":7,"h":9},
@@ -2174,8 +2192,8 @@
 	"version": "1.0",
 	"image": "_hud.png",
 	"format": "RGBA8888",
-	"size": {"w":1306,"h":512},
+	"size": {"w":1309,"h":512},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:a26b5d2fae71cd09a5cf1a04b57dce73:d6d0ade278adbfe21df3531e127dcb96:e06ece4fe311d3ac6e5d2e11ac984891$"
+	"smartupdate": "$TexturePacker:SmartUpdate:5cea9d10e8ecca1522ff386ea2f33ef0:07a53ca0f9c9e7033027435dd3eedbc8:e06ece4fe311d3ac6e5d2e11ac984891$"
 }
 }

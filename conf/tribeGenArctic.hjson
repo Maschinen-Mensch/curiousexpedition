@@ -66,6 +66,7 @@
   {
     id: tgl-arctic-body-base
     colors: tgen_arctic_colors_skin.png
+    useInSmall: false
     alpha: 1
     chance: 1
     male: [
@@ -155,6 +156,7 @@
   {
     id: tgl-arctic-body-shading
     colors: tgen_arctic_colors_skin.png
+    useInSmall: false
     alpha: 0.7
     chance: 1
     male: [
@@ -189,6 +191,7 @@
   {
     id: tgl-arctic-body-cloth
     colors: tgen_arctic_colors_cloth.png
+    useInSmall: false
     alpha: 1
     chance: 1
     male: [
@@ -231,6 +234,7 @@
   {
     id: tgl-arctic-body-neck
     colors: tgen_arctic_colors_cloth3.png
+    useInSmall: false
     alpha: 1
     chance: 1
     male: [
@@ -281,6 +285,7 @@
   {
     id: tgl-arctic-body-deco
     colors: tgen_arctic_colors_leather.png
+    useInSmall: false
     alpha: 1
     chance: 0.5
     male: [
@@ -383,6 +388,7 @@
   {
     id: tgl-arctic-decal
     colors: tgen_arctic_colors_skin.png
+    useInSmall: false
     alpha: 1
     chance: 0.35
     male: [

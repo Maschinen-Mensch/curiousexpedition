@@ -7,7 +7,7 @@ config.staticKeywords = [
   'clearPushedEvents', 'consume', 'restoreCharacter', 'karma', 
   'funds', 'reqAge', 'fame', 'unwarpWorld', 'gameOver', 'reqFreePartyCount',
   'isAbstract', 'reqNoCombat', 'showNPC', 'reqTargetChar', 'reqDiceCharFlags',
-  'posTile', 'debugCategory'
+  'posTile', 'debugCategory', 'compactAndStack', 'canDismiss'
 ]
 
 config.man = [
@@ -435,6 +435,12 @@ config.man = [
     $description: "Makes specified changes to partys inventory"
   },
   {
+    keyword: 'compactAndStack',
+    $custom: "Ensures all the items of the given ids are optimally stacked",
+    $example: "compactAndStack: ['it-whisky', 'it-dynamite']",
+    $description: "Stacks items"
+  },
+  {
     keyword: 'setPartyFlags',
     $flags: true,
     $description: "Sets the partys flags"
@@ -456,6 +462,12 @@ config.man = [
     $flags: true,
     $character: true,
     $description: "Returns true if the current character matches the status flags"
+  },
+  {
+    keyword: 'reqCanDismiss',
+    $character: true,
+    $custom: true,
+    $description: "Returns true if a character's dismissability matches the given value"
   },
   {
     keyword: 'reqCharFlags',

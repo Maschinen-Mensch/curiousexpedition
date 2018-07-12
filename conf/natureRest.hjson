@@ -913,32 +913,43 @@
     text: txt-evt-sanity-flavor-childhood
     charEvents: [
       {
-        reqCharFlags: -special -native +humanoid
-        text: txt-evt-sanity-flavor-childhood-1
-        consume: true
+      select: [
+          {
+            reqCharFlags: -special -native +humanoid
+            reqLoyalty: 2..
+            text: txt-evt-sanity-flavor-childhood-1
+            consume: true
+          }
+          {
+            reqCharFlags: -special +native +humanoid
+            reqLoyalty: 2..
+            text: txt-evt-sanity-flavor-childhood-2
+            consume: true
+          }
+        ]
       }
       {
-        optional: true
-        chance: 0.5
-        reqCharFlags: -special +native +humanoid
-        text: txt-evt-sanity-flavor-childhood-2
-        consume: true
+      select: [
+          {
+            reqCharFlags: -special +humanoid -native
+            reqLoyalty: 2..
+            text: txt-evt-sanity-flavor-childhood-3
+            consume: true
+          }
+          {
+            reqCharFlags: -special +humanoid
+            reqLoyalty: 2..
+            text: txt-evt-sanity-flavor-childhood-4
+            consume: true
+          }
+          {
+            reqCharFlags: -special +humanoid
+            reqLoyalty: ..1
+            text: txt-evt-sanity-flavor-childhood-5
+            consume: true
+          }
+        ]
       }
-      {
-        optional: true
-        chance: 0.5
-        reqCharFlags: -special +humanoid -native
-        text: txt-evt-sanity-flavor-childhood-3
-        consume: true
-      }
-      {
-        optional: true
-        chance: 0.5
-        reqCharFlags: -special +humanoid
-        text: txt-evt-sanity-flavor-childhood-4
-        consume: true
-      }
-      {optional: true, reqLoyalty: ..1, text: txt-evt-sanity-flavor-childhood-5}
     ]
     select: evt-sanity-return
   }
@@ -1544,6 +1555,7 @@
             text: txt-evt-sanity-mummy-1
             setStatus: +paranoid
             chat: cl-apply-paranoid
+            select: evt-sanity-return
           }
         }
       }
@@ -1589,14 +1601,14 @@
     text: txt-evt-combat-loot-1
     loot: {
       items: {}
-      closeEvents: evt-sanity-return
+      closeEvents: evt-sanity-return-withText
     }
   }
   {
     id: evt-sanity-flee-return, 
     text: txt-evt-combat-run
     sanity: -20, 
-    select: evt-sanity-return
+    select: evt-sanity-return-withText
   }
   {
     id: evt-sanity-return-friend

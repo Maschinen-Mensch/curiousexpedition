@@ -499,7 +499,6 @@
     description: txt-it-meat-animal-cooked-charcoal
     debugCategory: meat
     sprite: it_consumable_cookedmeat_1.png
-    playSound: [sfx_eat_var1, sfx_eat_var2]
     maxStack: 20
     autoRemove: true
     value: 3
@@ -509,6 +508,7 @@
         removeItem: true
         setPartyFlags: +nonCocaUsers
         chat: cl-item-meat-animal-cooked-bad
+        playSound: [sfx_eat_var1, sfx_eat_var2]
       }
     ]
   }
@@ -518,7 +518,6 @@
     description: txt-it-meat-animal-cooked-burnt
     debugCategory: meat
     sprite: it_consumable_cookedmeat_2.png
-    playSound: [sfx_eat_var1, sfx_eat_var2]
     maxStack: 20
     autoRemove: true
     value: 3
@@ -528,6 +527,7 @@
         removeItem: true
         setPartyFlags: +nonCocaUsers
         chat: cl-item-meat-animal-cooked-bad
+        playSound: [sfx_eat_var1, sfx_eat_var2]
       }
     ]
   }
@@ -537,7 +537,6 @@
     description: txt-it-meat-animal-cooked-overcooked
     debugCategory: meat
     sprite: it_consumable_cookedmeat_3.png
-    playSound: [sfx_eat_var1, sfx_eat_var2]
     maxStack: 20
     autoRemove: true
     value: 3
@@ -547,6 +546,7 @@
         removeItem: true
         setPartyFlags: +nonCocaUsers
         chat: cl-item-meat-animal-cooked
+        playSound: [sfx_eat_var1, sfx_eat_var2]
       }
     ]
   }
@@ -556,7 +556,6 @@
     description: txt-it-meat-animal-cooked-perfect
     debugCategory: meat
     sprite: it_consumable_cookedmeat_4.png
-    playSound: [sfx_eat_var1, sfx_eat_var2]
     maxStack: 20
     autoRemove: true
     value: {base: 5, karma: 1}
@@ -566,6 +565,7 @@
         removeItem: true
         setPartyFlags: +nonCocaUsers
         chat: cl-item-meat-animal-cooked
+        playSound: [sfx_eat_var1, sfx_eat_var2]
       }
     ]
   }

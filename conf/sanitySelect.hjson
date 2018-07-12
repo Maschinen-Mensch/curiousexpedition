@@ -35,12 +35,22 @@
     ]
   }
   {
-    id: evt-sanity-return
+    id: evt-sanity-return-withText
     partyEvents: [
       {
         optional: true, 
         reqPartyFlags: +natureSleep, 
         text: txt-evt-nature-rest-1
+        select: evt-nature-sleep
+      }
+    ]
+  }
+  {
+    id: evt-sanity-return
+    partyEvents: [
+      {
+        optional: true, 
+        reqPartyFlags: +natureSleep,
         select: evt-nature-sleep
       }
     ]
