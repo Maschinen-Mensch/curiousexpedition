@@ -8,7 +8,7 @@
     enabled: true
     defaultLang: en
     preview: mod_preview
-    description: "My first official mod as part of Maschinen-Mensch. Adds a character that helps you explore the Arctic, recruitable at the harbor and Arctic villages. Being a pathfinder with fighting experience, the Arctic Hunter helps you move swiftly through the ice and will provide invaluable assistance when hunting for the trophies of the far north." 
+    description: "txt-mod-arcticHunter-desc" 
   },
   imageData:[
     {

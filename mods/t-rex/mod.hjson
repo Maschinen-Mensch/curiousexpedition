@@ -11,7 +11,7 @@
     twitter: http://twitter.com/maschimensch
     weblink: http://maschinen-mensch.com
     mail: support@maschinen-mensch.com
-    description: "Adds a T-Rex into the game as well as a quest to hunt it."
+    description: "txt-trex-mod-desc"
     defaultLang: en
   },
   #The imageData section describes all the new images and sprites that need to be loaded

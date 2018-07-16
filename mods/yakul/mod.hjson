@@ -9,7 +9,7 @@
     twitter: http://twitter.com/maschimensch
     weblink: http://maschinen-mensch.com
     mail: support@maschinen-mensch.com
-    description: "Adds an animal that can be recruited at normal native villages. It behaves as a normal pack animal and can carry crates and be mounted. When mounted, it will add the climber perk, making it easier to traverse hill areas."
+    description: "txt-mod-yakul-desc"
     defaultLang: en
   }
   imageData:[
