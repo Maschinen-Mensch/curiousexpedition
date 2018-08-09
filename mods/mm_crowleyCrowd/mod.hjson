@@ -8,7 +8,10 @@
     enabled: true
     defaultLang: en
     preview: mod_preview
-    description: "Crowley goes nuts and introduces you to the true cultist lifestyle: Abominations! Tweaked the feeding process so that it becomes more managable as a full-time trek member. Happy hunting (literally)!"
+    description: "txt-crowleyCrowd-mod-desc"
+    twitter: http://twitter.com/maschimensch
+    weblink: http://maschinen-mensch.com
+    mail: support@maschinen-mensch.com
   }
   imageData:[
     {

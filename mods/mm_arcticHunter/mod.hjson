@@ -9,6 +9,9 @@
     defaultLang: en
     preview: mod_preview
     description: "txt-mod-arcticHunter-desc" 
+    twitter: http://twitter.com/maschimensch
+    weblink: http://maschinen-mensch.com
+    mail: support@maschinen-mensch.com
   },
   imageData:[
     {
