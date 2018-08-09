@@ -1,7 +1,7 @@
 {
     modInfo:
     {
-        id: mm_mm_harborRecruitment
+        id: mm_harborRecruitment
         name: Extended Harbor Recruitment
         authors: Maschinen-Mensch
         version: "1.1"
