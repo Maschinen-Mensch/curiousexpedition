@@ -1,7 +1,7 @@
 {
   modInfo:
   {
-    id: mm_yakul
+    id: yakul
     name: The Yakul
     authors: Maschinen-Mensch
     version: "0.1.0.0"
@@ -15,111 +15,111 @@
   imageData:[
     {
       id: mod_preview
-      file: mm_yakul/mod_preview.png
+      file: yakul/mod_preview.png
     }
     {
       id: crates
-      file: mm_yakul/crates_yakul.png
+      file: yakul/crates_yakul.png
     }
     {
       id: saddle
       type: slotted
-      file: mm_yakul/saddle_yakul.png
+      file: yakul/saddle_yakul.png
     }
     {
       id: sprite_01
-      file: mm_yakul/sprite_yakul_01.png
+      file: yakul/sprite_yakul_01.png
     }
     {
       id: face_01
-      file: mm_yakul/face_yakul_01.png
+      file: yakul/face_yakul_01.png
     }
     {
-     file: mm_yakul/face_yakul_01_small.png
+     file: yakul/face_yakul_01_small.png
     }
     {
       id: minisprite_01
-      file: mm_yakul/minisprite_yakul_01.png
+      file: yakul/minisprite_yakul_01.png
     }
     {
       id: sprite_02
-      file: mm_yakul/sprite_yakul_02.png
+      file: yakul/sprite_yakul_02.png
     }
     {
       id: face_02
-      file: mm_yakul/face_yakul_02.png
+      file: yakul/face_yakul_02.png
     }
     {
       id: face_small_02
-      file: mm_yakul/face_small_yakul_02.png
+      file: yakul/face_small_yakul_02.png
     }
     {
       id: minisprite_02
-      file: mm_yakul/minisprite_yakul_02.png
+      file: yakul/minisprite_yakul_02.png
     }
     {
       id: sprite_03
-      file: mm_yakul/sprite_yakul_03.png
+      file: yakul/sprite_yakul_03.png
     }
     {
       id: face_03
-      file: mm_yakul/face_yakul_03.png
+      file: yakul/face_yakul_03.png
     }
     {
       id: face_small_03
-      file: mm_yakul/face_small_yakul_03.png
+      file: yakul/face_small_yakul_03.png
     }
     {
       id: minisprite_03
-      file: mm_yakul/minisprite_yakul_03.png
+      file: yakul/minisprite_yakul_03.png
     }
     {
       id: sprite_04
-      file: mm_yakul/sprite_yakul_04.png
+      file: yakul/sprite_yakul_04.png
     }
     {
       id: face_04
-      file: mm_yakul/face_yakul_04.png
+      file: yakul/face_yakul_04.png
     }
     {
       id: face_small_04
-      file: mm_yakul/face_small_yakul_04.png
+      file: yakul/face_small_yakul_04.png
     }
     {
       id: minisprite_04
-      file: mm_yakul/minisprite_yakul_04.png
+      file: yakul/minisprite_yakul_04.png
     }
     {
       id: sprite_05
-      file: mm_yakul/sprite_yakul_05.png
+      file: yakul/sprite_yakul_05.png
     }
     {
       id: face_05
-      file: mm_yakul/face_yakul_05.png
+      file: yakul/face_yakul_05.png
     }
     {
       id: face_small_05
-      file: mm_yakul/face_small_yakul_05.png
+      file: yakul/face_small_yakul_05.png
     }
     {
       id: minisprite_05
-      file: mm_yakul/minisprite_yakul_05.png
+      file: yakul/minisprite_yakul_05.png
     }
     {
       id: sprite_06
-      file: mm_yakul/sprite_yakul_06.png
+      file: yakul/sprite_yakul_06.png
     }
     {
       id: face_06
-      file: mm_yakul/face_yakul_06.png
+      file: yakul/face_yakul_06.png
     }
     {
       id: face_small_06
-      file: mm_yakul/face_small_yakul_06.png
+      file: yakul/face_small_yakul_06.png
     }
     {
       id: minisprite_06
-      file: mm_yakul/minisprite_yakul_06.png
+      file: yakul/minisprite_yakul_06.png
     }
   ],
   modEntries:[

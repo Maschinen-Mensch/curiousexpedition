@@ -1,7 +1,7 @@
 {
   modInfo:
   {
-    id: mm_arcticHunter
+    id: arcticHunter
     name: Arctic Hunter
     authors: Maschinen-Mensch
     version: "1.1"
@@ -16,103 +16,103 @@
   imageData:[
     {
       id: mod_preview
-      file: mm_arcticHunter/mod_Preview.png
+      file: arcticHunter/mod_Preview.png
     }
     {
       id: sprite_1_male
-      file: mm_arcticHunter/sprite_arcticHunter_1_male.png
+      file: arcticHunter/sprite_arcticHunter_1_male.png
     }
     {
       id: face_1_male
-      file: mm_arcticHunter/face_arcticHunter_1_male.png
+      file: arcticHunter/face_arcticHunter_1_male.png
     }
     {
       id: face_1_male_small
-      file: mm_arcticHunter/face_arcticHunter_1_male_small.png
+      file: arcticHunter/face_arcticHunter_1_male_small.png
     }
     {
       id: miniSprite_1_male
-      file: mm_arcticHunter/miniSprite_arcticHunter_1_male.png
+      file: arcticHunter/miniSprite_arcticHunter_1_male.png
     }
     {
       id: sprite_1_female
-      file: mm_arcticHunter/sprite_arcticHunter_1_female.png
+      file: arcticHunter/sprite_arcticHunter_1_female.png
     }
     {
       id: face_1_female
-      file: mm_arcticHunter/face_arcticHunter_1_female.png
+      file: arcticHunter/face_arcticHunter_1_female.png
     }
     {
       id: face_1_female_small
-      file: mm_arcticHunter/face_arcticHunter_1_female_small.png
+      file: arcticHunter/face_arcticHunter_1_female_small.png
     }
     {
       id: miniSprite_1_female
-      file: mm_arcticHunter/miniSprite_arcticHunter_1_female.png
+      file: arcticHunter/miniSprite_arcticHunter_1_female.png
     }
     {
       id: sprite_2_male
-      file: mm_arcticHunter/sprite_arcticHunter_2_male.png
+      file: arcticHunter/sprite_arcticHunter_2_male.png
     }
     {
       id: face_2_male
-      file: mm_arcticHunter/face_arcticHunter_2_male.png
+      file: arcticHunter/face_arcticHunter_2_male.png
     }
     {
       id: face_2_male_small
-      file: mm_arcticHunter/face_arcticHunter_2_male_small.png
+      file: arcticHunter/face_arcticHunter_2_male_small.png
     }
     {
       id: miniSprite_2_male
-      file: mm_arcticHunter/miniSprite_arcticHunter_2_male.png
+      file: arcticHunter/miniSprite_arcticHunter_2_male.png
     }
     {
       id: sprite_2_female
-      file: mm_arcticHunter/sprite_arcticHunter_2_female.png
+      file: arcticHunter/sprite_arcticHunter_2_female.png
     }
     {
       id: face_2_female
-      file: mm_arcticHunter/face_arcticHunter_2_female.png
+      file: arcticHunter/face_arcticHunter_2_female.png
     }
     {
       id: face_2_female_small
-      file: mm_arcticHunter/face_arcticHunter_2_female_small.png
+      file: arcticHunter/face_arcticHunter_2_female_small.png
     }
     {
       id: miniSprite_2_female
-      file: mm_arcticHunter/miniSprite_arcticHunter_2_female.png
+      file: arcticHunter/miniSprite_arcticHunter_2_female.png
     }
     {
       id: sprite_3_male
-      file: mm_arcticHunter/sprite_arcticHunter_3_male.png
+      file: arcticHunter/sprite_arcticHunter_3_male.png
     }
     {
       id: face_3_male
-      file: mm_arcticHunter/face_arcticHunter_3_male.png
+      file: arcticHunter/face_arcticHunter_3_male.png
     }
     {
       id: face_3_male_small
-      file: mm_arcticHunter/face_arcticHunter_3_male_small.png
+      file: arcticHunter/face_arcticHunter_3_male_small.png
     }
     {
       id: miniSprite_3_male
-      file: mm_arcticHunter/miniSprite_arcticHunter_3_male.png
+      file: arcticHunter/miniSprite_arcticHunter_3_male.png
     }
     {
       id: sprite_3_female
-      file: mm_arcticHunter/sprite_arcticHunter_3_female.png
+      file: arcticHunter/sprite_arcticHunter_3_female.png
     }
     {
       id: face_3_female
-      file: mm_arcticHunter/face_arcticHunter_3_female.png
+      file: arcticHunter/face_arcticHunter_3_female.png
     }
     {
       id: face_3_female_small
-      file: mm_arcticHunter/face_arcticHunter_3_female_small.png
+      file: arcticHunter/face_arcticHunter_3_female_small.png
     }
     {
       id: miniSprite_3_female
-      file: mm_arcticHunter/miniSprite_arcticHunter_3_female.png
+      file: arcticHunter/miniSprite_arcticHunter_3_female.png
     }
   ],
   modEntries:[

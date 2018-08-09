@@ -1,7 +1,7 @@
 {
     modInfo:
     {
-        id: mm_harborRecruitment
+        id: harborRecruitment
         name: Extended Harbor Recruitment
         authors: Maschinen-Mensch
         version: "1.1"
@@ -16,7 +16,7 @@
     imageData: [
         {
             id: mod_preview
-            file: mm_harborRecruitment/mod_preview.png
+            file: harborRecruitment/mod_preview.png
         }
     ],
     modEntries: [

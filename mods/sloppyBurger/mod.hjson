@@ -1,7 +1,7 @@
 {
   modInfo:
   {
-    id: mm_sloppy_burger
+    id: sloppyBurger
     name: The Sloppy Burger Item
     authors: Maschinen-Mensch
     version: "1.1"
@@ -15,11 +15,11 @@
   imageData:[
     {
       id: mm_sloppyBurger_preview.png
-      file: mm_sloppy_burger/mm_sloppyBurger_preview.png
+      file: sloppyBurger/mm_sloppyBurger_preview.png
     }
     {
       id: it_sloppyBurger.png
-      file: mm_sloppy_burger/it_sloppyBurger.png
+      file: sloppyBurger/it_sloppyBurger.png
     }
   ],
   modEntries:[
