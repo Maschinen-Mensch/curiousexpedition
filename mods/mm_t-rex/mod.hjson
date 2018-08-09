@@ -3,9 +3,9 @@
   #like who made it, what version it is or what its display name should be
   modInfo:
   {
-    id: t-rex
+    id: mm_t-rex
     name: T-Rex
-    authors: ["Eyes", "Maschinen-Mensch", "Ole"]
+    authors: "Maschinen-Mensch"
     version: "0.4.0.0"
     preview: mod-preview
     twitter: http://twitter.com/maschimensch
@@ -20,15 +20,15 @@
       #This is the id we give it, we will refer to the image only by its id
       id: trex-large.png
       #The path to the image inside the mods directory
-      file: t-rex/trex-large.png
+      file: mm_t-rex/trex-large.png
     }
     {
       id: trex-zone.png
-      file: t-rex/trex-zone.png
+      file: mm_t-rex/trex-zone.png
     }
     {
       id: mod-preview
-      file: t-rex/mod_preview.png
+      file: mm_t-rex/mod_preview.png
     }
   ]
   modEntries:[
@@ -97,7 +97,7 @@
     #That's it for being able to spawn the trex in the game, but it's much more exciting to have a quest.
     #For that we'll include the trex-quest.hjson file in order to keep the main file more readable
     {
-      import: t-rex/trex-quest.hjson
+      import: mm_t-rex/trex-quest.hjson
     }
   ]
 }

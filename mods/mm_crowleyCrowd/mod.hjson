@@ -1,19 +1,19 @@
 {
   modInfo:
   {
-    id: crowleyCrowd
+    id: mm_crowleyCrowd
     name: Crowley's Curious Crowd
-    authors: VrynnSardo
+    authors: Maschinen-Mensch
     version: "1.1"
     enabled: true
     defaultLang: en
     preview: mod_preview
-    description: "My third official mod as part of Maschinen-Mensch. Crowley goes nuts and introduces you to the true cultist lifestyle: Abominations! Tweaked the feeding process so that it becomes more managable as a full-time trek member. Happy hunting (literally)!"
+    description: "Crowley goes nuts and introduces you to the true cultist lifestyle: Abominations! Tweaked the feeding process so that it becomes more managable as a full-time trek member. Happy hunting (literally)!"
   }
   imageData:[
     {
         id: mod_preview
-        file: crowleyCrowd/mod_preview.png
+        file: mm_crowleyCrowd/mod_preview.png
     }
   ],
   modEntries:[

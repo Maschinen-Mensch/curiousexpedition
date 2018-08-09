@@ -1,7 +1,7 @@
 {
   modInfo:
   {
-    id: scientificAssistant
+    id: mm_scientificAssistant
     name: Scientific Assistant
     authors: Maschinen-Mensch
     version: "0.1.0.0"
@@ -15,55 +15,55 @@
   imageData:[
     {
       id: mod_preview
-      file: scientificAssistant/mod_preview.png
+      file: mm_harborRecruitment/mod_preview.png
     }
     {
       id: sprite_1
-      file: scientificAssistant/pl_sprite_scientificAssistant_1.png
+      file: mm_harborRecruitment/pl_sprite_scientificAssistant_1.png
     }
     {
       id: sprite_2
-      file: scientificAssistant/pl_sprite_scientificAssistant_2.png
+      file: mm_harborRecruitment/pl_sprite_scientificAssistant_2.png
     }
     {
       id: sprite_3
-      file: scientificAssistant/pl_sprite_scientificAssistant_3.png
+      file: mm_harborRecruitment/pl_sprite_scientificAssistant_3.png
     }
     {
       id: sprite_4
-      file: scientificAssistant/pl_sprite_scientificAssistant_4.png
+      file: mm_harborRecruitment/pl_sprite_scientificAssistant_4.png
     }
     {
       id: face_1
-      file: scientificAssistant/pl_face_scientificAssistant_1.png
+      file: mm_harborRecruitment/pl_face_scientificAssistant_1.png
     }
     {
       id: face_2
-      file: scientificAssistant/pl_face_scientificAssistant_2.png
+      file: mm_harborRecruitment/pl_face_scientificAssistant_2.png
     }
     {
       id: face_3
-      file: scientificAssistant/pl_face_scientificAssistant_3.png
+      file: mm_harborRecruitment/pl_face_scientificAssistant_3.png
     }
     {
       id: face_4
-      file: scientificAssistant/pl_face_scientificAssistant_4.png
+      file: mm_harborRecruitment/pl_face_scientificAssistant_4.png
     }
     {
       id: miniSprite_1
-      file: scientificAssistant/pl_minisprite_scientificAssistant_1.png
+      file: mm_harborRecruitment/pl_minisprite_scientificAssistant_1.png
     }
     {
       id: miniSprite_2
-      file: scientificAssistant/pl_minisprite_scientificAssistant_2.png
+      file: mm_harborRecruitment/pl_minisprite_scientificAssistant_2.png
     }
     {
       id: miniSprite_3
-      file: scientificAssistant/pl_minisprite_scientificAssistant_3.png
+      file: mm_harborRecruitment/pl_minisprite_scientificAssistant_3.png
     }
     {
       id: miniSprite_4
-      file: scientificAssistant/pl_minisprite_scientificAssistant_4.png
+      file: mm_harborRecruitment/pl_minisprite_scientificAssistant_4.png
     }
   ],
   modEntries:[
