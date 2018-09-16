@@ -63,10 +63,6 @@
       }
       {
         prio: 1
-        charEvents: {reqCharFlags: +homeWorld +slave, select: evt-village-enter-slave}
-      }
-      {
-        prio: 1
         reqLocationFlags: +enterEvent
         text: txt-evt-village-enter-1
         select: evt-village-enterCheck
