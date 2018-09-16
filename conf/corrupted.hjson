@@ -10,6 +10,7 @@
   {
     id: loc-monsterDen-giantSpiders
     name: txt-fxt-monsterDen-giantSpiders-name
+    debugCategory: spawner
     debugColor: lightgray
     sprite: res_fxt_monsterDen.png
     setLocationFlags: +caveTypeMonsterDenGiantSpiders +caveTypeSet

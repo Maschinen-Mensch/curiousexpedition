@@ -2,6 +2,8 @@
   {
     id: loc-trader
     name: txt-fxt-trader-name
+    debugCategory: trader
+    debugColor: orangered
     reqBiomeFlags: -arctic
     flags: +trader
     sprite: res_fxt_trader.png
@@ -20,7 +22,6 @@
       {count: 6, ref: tl-corrupted-plains, reqBiomeFlags: +corrupted}
     ]
     actions: evt-trader-enter
-    debugColor: deeppink
   }
   {
     id: il-trade-trader-normal

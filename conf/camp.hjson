@@ -35,11 +35,11 @@
   {
     id: loc-camp
     name: txt-fxt-camp-name
+    debugColor: "#64ff58"
     flags: +camp
     mapScore: 0
     sprite: res_fxt_camp.png
     actions: evt-camp-explore
-    debugColor: "#64ff58"
   }
   {
     id: evt-camp-explore

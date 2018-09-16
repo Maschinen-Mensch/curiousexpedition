@@ -2,12 +2,13 @@
   {
     id: loc-cave-teleport
     extends: loc-cave
+    debugCategory: cave
+    debugColor: sandybrown
     setNeighbors: [
       {ref: tl-hill, count: 5, reqBiomeFlags: -arctic}
       {ref: tl-plateau, count: 5, reqBiomeFlags: +arctic}
     ]
     spawnEvents: {setLocationFlags: +caveTypeTeleport +caveTypeSet}
-    debugColor: SANDYBROWN
   }
   {
     id: evt-cave-teleport-arrive

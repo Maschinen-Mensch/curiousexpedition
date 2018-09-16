@@ -2,6 +2,8 @@
   {
     id: loc-cave
     name: txt-fxt-cave-name
+    debugCategory: cave
+    debugColor: "#5DADE2"
     flags: +cave
     keepReachable: true
     sprite: [
@@ -17,8 +19,6 @@
       {ref: tl-glacier-land, count: 3, reqBiomeFlags: +arctic}
     ]
     actions: evt-cave-approach
-    debugCategory: cave
-    debugColor: "#5DADE2"
   }
   {
     id: evt-cave-setCaveType

@@ -1,6 +1,8 @@
 [
   {
     id: loc-polarStation
+    debugCategory: arctic
+    debugColor: limegreen
     isAbstract: true
     reqBiomeFlags: +arctic
     dist: 5
@@ -22,8 +24,6 @@
     sprite: res_fxt_arcticStation.png
     setTile: tl-deepSnow
     actions: evt-polarStation
-    debugCategory: arctic
-    debugColor: "#64ff58"
   }
   {
     id: loc-polarStation-A

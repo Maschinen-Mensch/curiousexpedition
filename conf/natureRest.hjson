@@ -2,6 +2,8 @@
   {
     id: loc-waterfall
     name: txt-fxt-waterfall-name
+    debugCategory: nature
+    debugColor: "#64ff58"
     reqBiomeFlags: -desert -arctic
     flags: +water +waterfall +natureRest
     sprite: res_fxt_waterfall.png
@@ -9,12 +11,13 @@
     setTile: tl-mountain
     setNeighbors: [tl-mountain, tl-river, tl-river, tl-river-shallow, tl-river-shallow]
     actions: evt-waterfall-explore
-    debugCategory: nature
-    debugColor: "#64ff58"
+
   }
   {
     id: loc-healingSprings
     name: txt-fxt-healingSprings-name
+    debugCategory: nature
+    debugColor: #64ff58
     flags: +springs +natureRest
     reqBiomeFlags: -desert
     sprite: [
@@ -30,20 +33,18 @@
       {count: 5, ref: tl-plateau, reqBiomeFlags: +arctic}
     ]
     actions: evt-healingSprings-enter
-    debugColor: #64ff58
-    debugCategory: nature
   }
   {
     id: loc-overhang
     name: txt-fxt-overhang-name
+    debugCategory: nature
+    debugColor: "#64ff58"
     reqBiomeFlags: -arctic
     flags: +overhang +natureRest
     sprite: res_fxt_stoneOverhang.png
     setTile: tl-dry
     setNeighbors: [tl-mountain]
     actions: evt-overhang-explore
-    debugCategory: nature
-    debugColor: "#64ff58"
   }
   {
     id: evt-waterfall-explore

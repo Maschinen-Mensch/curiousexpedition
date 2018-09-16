@@ -2,6 +2,8 @@
   {
     id: loc-stoneCircle
     name: txt-fxt-stoneCircle-name
+    debugCategory: sacrileg
+    debugColor: deeppink
     flags: +occultVision +dreamVisions +abacus
     sprite: [
       {ref: res_fxt_stoneCircle.png, reqBiomeFlags: -arctic}
@@ -24,8 +26,6 @@
       {ref: tl-jungle-thick}
     ]
     actions: evt-stoneCircle-init
-    debugCategory: sacrileg
-    debugColor: deeppink
   }
   {id: loc-stoneCircle-1, extends: loc-stoneCircle}
   {

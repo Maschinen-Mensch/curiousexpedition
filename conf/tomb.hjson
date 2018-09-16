@@ -2,6 +2,7 @@
   {
     id: loc-tomb-1
     name: txt-fxt-tomb-1-name
+    debugCategory: special
     debugColor: red
     reqBiomeFlags: +desert
     flags: +dreamVisions +ruins

@@ -3,8 +3,8 @@
     id: loc-altar
     name: txt-fxt-altar-name
     debugCategory: special
-    worldMap: altar
     debugColor: red
+    worldMap: altar
     reqBiomeFlags: +dry | +grass | +arctic
     dist: 5
     flags: +altar +dreamVisions
