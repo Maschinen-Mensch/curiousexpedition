@@ -2,6 +2,7 @@
   {
     id: loc-quest-husband
     extends: loc-oldCamp
+    debugCategory: quest
     dist: 15
     actions: evt-quest-husband-approach
   }

@@ -9,6 +9,7 @@
   }
   {
     id: loc-treasure-schroedinger
+    debugCategory: quest
     mapScore: 0
     showHint: false
     flags: +burriedTreasureSchroedinger

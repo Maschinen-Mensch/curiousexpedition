@@ -8,6 +8,7 @@
     slotMarker: hud_mapMarker_grass.png
     ambientSound: sfx_loop_prehistoric_1
     goals: gol-goldenTemple-buried
+    debugColor: "#a6f13b"
     locations: [
       {reqWorld: 2.., reqDifficulty: 2, select: 1, ref: loc-magneticMountain}
       {reqWorld: 3.., reqDifficulty: 1.., select: 1, ref: loc-magneticMountain}
@@ -57,46 +58,10 @@
     ]
   }
   {
-    id: bio-prehistoric-generic
-    name: txt-bio-warped-prehistoric-name
+    id: bio-prehistoric-base
+    debugColor: "#a6f13b"
     flags: {prehistoric: true, grass: true}
     eventImg: {day: evt_bio_prehistoric_1.png, night: evt_bio_prehistoric_1_night.png}
-    terrain: [
-      {perlin: 0.8, tile: tl-dry}
-      {perlin: 0.74, tile: tl-dry-stoneForest}
-      {perlin: 0.72, tile: tl-mountain}
-      {perlin: 0.7, tile: tl-volcano-inactive}
-      {perlin: 0.66, tile: tl-mountain}
-      {perlin: 0.61, tile: tl-jungle-thick}
-      {perlin: 0.6, tile: tl-volcano-inactive}
-      {perlin: 0.585, tile: tl-dry-stoneForest}
-      {perlin: 0.55, tile: tl-jungle-thick}
-      {perlin: 0.54, tile: tl-jungle-light}
-      {perlin: 0.5, tile: tl-grass}
-      {perlin: 0.498, tile: tl-giantMushrooms}
-      {perlin: 0.45, tile: tl-grass}
-      {perlin: 0.44, tile: tl-grass-bushes}
-      {perlin: 0.3, tile: tl-grass}
-      {perlin: 0.23, tile: tl-jungle-thick}
-      {perlin: 0.21, tile: tl-sulfur-swamp}
-      {perlin: 0.2, tile: tl-sulfur-shallow}
-      {perlin: 0.16, tile: tl-sulfur}
-      {perlin: 0.13, tile: tl-sulfur-shallow}
-      {perlin: 0.11, tile: tl-sulfur}
-      {perlin: 0.1, tile: tl-sulfur-shallow}
-      {perlin: 0, tile: tl-sulfur}
-    ]
-    locations: [
-      {select: 1, group: grp-village-fantastic}
-      {select: 1, group: grp-sacrileg}
-      {
-        select: 1
-        group: [
-          {slots: 1, group: grp-utility}
-          {slots: 1, group: grp-loot}
-        ]
-      }
-    ]
     zones: [
       {
         chance: 1
@@ -148,10 +113,50 @@
     ]
   }
   {
-    id: bio-prehistoric-chasm
-    extends: bio-prehistoric-generic
+    id: bio-prehistoric-generic
     name: txt-bio-warped-prehistoric-name
-    flags: {prehistoric: true, grass: true}
+    extends: bio-prehistoric-base
+    terrain: [
+      {perlin: 0.8, tile: tl-dry}
+      {perlin: 0.74, tile: tl-dry-stoneForest}
+      {perlin: 0.72, tile: tl-mountain}
+      {perlin: 0.7, tile: tl-volcano-inactive}
+      {perlin: 0.66, tile: tl-mountain}
+      {perlin: 0.61, tile: tl-jungle-thick}
+      {perlin: 0.6, tile: tl-volcano-inactive}
+      {perlin: 0.585, tile: tl-dry-stoneForest}
+      {perlin: 0.55, tile: tl-jungle-thick}
+      {perlin: 0.54, tile: tl-jungle-light}
+      {perlin: 0.5, tile: tl-grass}
+      {perlin: 0.498, tile: tl-giantMushrooms}
+      {perlin: 0.45, tile: tl-grass}
+      {perlin: 0.44, tile: tl-grass-bushes}
+      {perlin: 0.3, tile: tl-grass}
+      {perlin: 0.23, tile: tl-jungle-thick}
+      {perlin: 0.21, tile: tl-sulfur-swamp}
+      {perlin: 0.2, tile: tl-sulfur-shallow}
+      {perlin: 0.16, tile: tl-sulfur}
+      {perlin: 0.13, tile: tl-sulfur-shallow}
+      {perlin: 0.11, tile: tl-sulfur}
+      {perlin: 0.1, tile: tl-sulfur-shallow}
+      {perlin: 0, tile: tl-sulfur}
+    ]
+    locations: [
+      {select: 1, group: grp-village-fantastic}
+      {select: 1, group: grp-sacrileg}
+      {
+        select: 1
+        group: [
+          {slots: 1, group: grp-utility}
+          {slots: 1, group: grp-loot}
+        ]
+      }
+    ]
+  }
+  {
+    id: bio-prehistoric-chasm
+    extends: bio-prehistoric-base
+    name: txt-bio-warped-prehistoric-name
     terrain: [
       {perlin: 0.53, tile: tl-grass}
       {perlin: 0.5, tile: tl-grass-stoneForest}
@@ -170,7 +175,8 @@
   }
   {
     id: bio-prehistoric-mountains
-    extends: bio-prehistoric-generic
+    extends: bio-prehistoric-base
+    debugColor: "#89bd3e"
     name: txt-bio-warped-prehistoric-name
     flags: +prehistoric +mountains
     terrain: [
@@ -206,9 +212,9 @@
   }
   {
     id: bio-prehistoric-stoneForest
-    extends: bio-prehistoric-generic
+    extends: bio-prehistoric-base
+    debugColor: "#89bd3e"
     name: txt-bio-warped-prehistoric-name
-    flags: +true +grass
     terrain: [
       {perlin: 0.74, tile: tl-grass-stoneForest}
       {perlin: 0.72, tile: tl-mountain}
@@ -247,9 +253,9 @@
   }
   {
     id: bio-prehistoric-dry
-    extends: bio-prehistoric-generic
+    extends: bio-prehistoric-base
     name: txt-bio-warped-prehistoric-name
-    flags: {desert: true, prehistoric: true}
+    flags: +desert +prehistoric
     terrain: [
       {perlin: 0.89, tile: tl-jungle-thick}
       {perlin: 0.8, tile: tl-dry}
@@ -280,9 +286,10 @@
   }
   {
     id: bio-prehistoric-mushrooms
-    extends: bio-prehistoric-generic
+    extends: bio-prehistoric-base
+    debugColor: "#af67ae"
     name: txt-bio-warped-prehistoric-name
-    flags: {prehistoric: true, mushrooms: true}
+    flags: +prehistoric +mushrooms
     terrain: [
       {perlin: 0.85, tile: tl-dry-stoneForest}
       {perlin: 0.74, tile: tl-grass}

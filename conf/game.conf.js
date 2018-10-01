@@ -421,7 +421,8 @@ var staticConfig =
   enableAchievements: true,
   showMods: true,
   showReport: false,
-  footerName: "1.3.11.3",
+  footerName: "1.3.12.0",
+  footerNameIO: "0.10.10",
   sanityCheckEvents: true,
 
   // is converted to config.diaryText at run-time
@@ -468,7 +469,7 @@ var staticConfig =
   testEvents:[
     {
       id: 'evt-debug-teleport',
-      posPunch: {maxRange: 500, radius:0},
+      posPunch: {maxRange: 50000, radius:0},
       teleport: true
     }
   ],
@@ -512,6 +513,8 @@ var staticConfig =
 }
 
 var config = {
+  autosaveDelay: 30,
+
   baseViewDist: 1.3, // the base default view distance
   extendedViewDist: 1.3, // the extended view distance
   simpleLocationRevealDist: 2, // always reveal if below this distance
@@ -565,8 +568,6 @@ var config = {
     liveTileEmitterTickMultiplier: 0.3
   },
 
-  entities: {},
-
   chat: {
     idleDelay: 2, // time without message before new idle message is shown
     maxTime: 7, // max time before fading out
@@ -599,7 +600,8 @@ var config = {
 
   tribeGen: {
     tribalLayers: 3,
-    maskOutColor: '#4b3a32'
+    maskOutColor: '#4b3a32',
+    mountedColor: '#ff009c'
   },
 
   magneticMountain: {
@@ -638,7 +640,7 @@ var config = {
     indentationOffsetX: 15,
     imageOffsetX: 0.25,
     bgAlpha: 0.2,
-    alertWidth: 130,
+    alertWidth: 65,
     pinDelay: 0.25
   },
 
@@ -650,8 +652,7 @@ var config = {
     rerollSingle: true,
     manualPattern: true,
     showBuffer: false,
-
-    showBestPattern: true,
+    autoSelect: false,
     maxDiceRotation: 30, // in degrees
 
     rollTime: 0.7, // seconds of how the roll animation takes
@@ -685,9 +686,10 @@ var config = {
     scrollBar: {sprite:'hud_barter_centerBox.png', offset:2, scale:1},
     newsFrame: {sprite:'hud_news_background.png', offset:4, scale:1},
     chat: {sprite:'hud_chat_bubble.png', offset:12, scale:0.5},
-    chatSmall: {sprite:'hud_chat_bubble_small.png', offset:4, scale: 0.5},
+    chatSmall: {sprite:'hud_chat_bubble_small.png', offset:4, scale: 1},
     inventory: {sprite:'hud_inventory_border.png', offset:1, scale: 0.5},
-    backButton: {sprite:'hud_checkbox_neutral.png', offset:6, scale: 1}
+    backButton: {sprite:'hud_checkbox_neutral.png', offset:6, scale: 1},
+    jewelButton: {sprite:'hud_button_green.png', offset: 16, scale: 1},
   },
 
   notifications: {
@@ -701,6 +703,7 @@ var config = {
       turns: 'hud_feedback_update_statusNegative',
       standing: 'hud_feedback_update_statusPositive',
       butterfly: 'hud_feedback_update_statusPositive',
+      claim: 'hud_feedback_update_statusPositive',
     }
   },
 
@@ -711,6 +714,7 @@ var config = {
     worldStartWarped: 'evt-warpedWorld-start',
     dismiss: 'evt-dismiss',
     noSanity: 'evt-noSanity-select',
+    waitNoSanity: 'evt-wait-nosanity-check',
     celebration: 'evt-celebration',
     combatLoot: 'evt-combat-loot',
     combatFlee: 'evt-combat-run',
@@ -719,6 +723,7 @@ var config = {
     extraNarrative: 'evt-postNarrative-extraCampaign',
     expeditionUnlocks: 'evt-expedition-unlocks',
     infected: 'evt-infected',
+    death: 'evt-infectedDeath',
     promotion: null
   },
 
@@ -749,6 +754,10 @@ var config = {
   specialItems: {
     anthropologicalStudies: 'it-anthropologicalStudies',
     wadjetEye: 'it-wadjetEye'
+  },
+
+  specialLocations: {
+    treasure: 'loc-treasure'
   },
 
   celebration: {
@@ -862,8 +871,8 @@ var config = {
   board: {
     biomeSize: [18, 14], // the width, height of every biome block
     maxZoom: [0, -1], // max/min zoom level (default blockSize is 0)
+    zoomTime: 0.25,
     autoScroll: true, // scroll with party during traveling,
-    scrollMargin: -150, // how close scroll gets to screen border
     showBorders: true,
 
     biomeSafeZone: 3, // how far off to create locations from the borders
@@ -918,7 +927,8 @@ var config = {
   campfire: {
     alpha: [0.6, 1.0],
     speed: 1.3,
-    offset: [-26, -67]
+    offset: [-26, -67],
+    frameDelay: 0.08
   },
 
   fireplace: { // narrator scene
@@ -929,8 +939,10 @@ var config = {
 
   xp: {
     levels: [1, 2, 3, 4],
+    playerLevels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     maxMapScore: 3,
     healthBonus: 3, // additional health per level
+    maxLevelSprite: 5,
   },
 
   imgSlot: {
@@ -988,7 +1000,7 @@ var config = {
   clouds: {
     count: 8,
     lifeTime: [5, 10],
-    speed: [5, 40],
+    speed: [0.1, 2],
     alpha: 0.35,
     imgVariations: 8,
     introFadeDelay: 22.0
@@ -1101,11 +1113,13 @@ var config = {
     statusBar: 'black',
     statusBarTurns: '#ff49f9',
     statusBarTrips: 'orange',
+    statusBarTripsDelay: '#eee',
+    statusBarTurnsDelay: '#eee',
 
     karmaBarBg: '#333',
     karmaBar: '#2198B2',
     karmaBarFull: '#1ABF81',
-    achievements: ['#973200', '#FBEA2E', '#A8D1D2']
+    achievements: ['#973200', '#FBEA2E', '#A8D1D2'],
   },
 
   standardValues: {
@@ -1174,6 +1188,7 @@ var config = {
     healthRegen: "%txt-bonus-healthRegen",
     mapScore: "%txt-bonus-mapScore",
     infection: "%txt-bonus-infection",
+    death: "%txt-bonus-death",
   },
 
   help: {
@@ -1345,19 +1360,16 @@ var config = {
       soundName: "loopGas",
       options: [{location: 'loc-fumarole-1'}]
     },
-  ]
-  
-};
-
-// initializing debug values. use debug.conf.js to overwrite these
-var debug =
-{
-  testTribe: 'tg-jungle',
-  tribeBackground: '#4b3a32',
-  testStatus: null,
-  testGoal: null,
-  eventChecks: false
+  ],
 };
 
 //Merge static config into config
-Object.merge(config, staticConfig)
+try
+{
+  Object.merge(config, staticConfig)
+}
+catch (ex)
+{  
+  // probably being run in node.js: export the staticConfig for versioning
+  exports.staticConfig = staticConfig
+}

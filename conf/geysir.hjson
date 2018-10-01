@@ -2,7 +2,7 @@
   {
     id: loc-geysir-spawn-inactive
     name: txt-fxt-geysir-spawn-inactive-name
-    debugCategory: hazard
+    debugCategory: geysir
     debugColor: lightgray
     sprite: res_fxt_geysir_1.png
     showHint: false
@@ -24,7 +24,7 @@
   {
     id: loc-geysir-active
     name: txt-fxt-geysir-active-name
-    debugCategory: hazard
+    debugCategory: geysir
     debugColor: lightgray
     sprite: res_fxt_geysir_1.png
     showHint: false
@@ -49,7 +49,7 @@
   {
     id: loc-geysir-inactive
     name: txt-fxt-geysir-spawn-inactive-name
-    debugCategory: hazard
+    debugCategory: geysir
     debugColor: lightgray
     showHint: false
     hintBiome: false

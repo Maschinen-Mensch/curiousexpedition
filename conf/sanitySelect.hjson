@@ -35,6 +35,13 @@
     ]
   }
   {
+    id: evt-wait-nosanity-check
+    reqSanity: 0
+    partyEvents: {ref: evt-setImage-nightCamp}
+    playMusic: thm_nature_night_campfire_dark_2
+    select: evt-sanity-selectZero
+  }
+  {
     id: evt-sanity-return-withText
     partyEvents: [
       {
@@ -59,6 +66,7 @@
     id: evt-sanity-selectZero
     chat: cl-noSanity
     select: [
+      {prio: 1, slots: 2, ref: evt-sanity-jungleRot}
       {prio: 1, slots: 5, ref: evt-noSanity-injuredDeath}
       {prio: 1, slots: 5, ref: evt-noSanity-paranoidKill}
       {prio: 1, slots: 5, ref: evt-noSanity-gunKill}
@@ -78,7 +86,7 @@
       {prio: 1, slots: 1, ref: evt-noSanity-arctic-hypothermia}
       {prio: 1, slots: 1, ref: evt-noSanity-arctic-water}
       {prio: 2, slots: 3, ref: evt-noSanity-eatOnlyFriend}
-      {prio: 2, slots: 2, ref: evt-noSanity-onlyFriend}
+      {prio: 2, slots: 3, ref: evt-noSanity-onlyFriend}
       {prio: 4, slots: 1, ref: evt-noSanity-lastEntryCannibal}
       {prio: 5, slots: 1, ref: evt-noSanity-loneSurvivor}
       {prio: 6, slots: 1, ref: evt-noSanity-ghosts-help}
@@ -107,7 +115,6 @@
       {slots: 5, ref: evt-sanity-timAlone}
       {slots: 4, ref: evt-sanity-lovecraft-racist}
       {slots: 2, ref: evt-sanity-nightmare}
-      {slots: 2, ref: evt-sanity-jungleRot}
       {slots: 2, ref: evt-sanity-apply-paranoid}
       {slots: 2, ref: evt-sanity-apply-claustrophobic}
       {slots: 2, ref: evt-sanity-apply-lepidopterophobia}

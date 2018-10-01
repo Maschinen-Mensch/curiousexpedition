@@ -9,6 +9,7 @@
     maxStack: 10
     fame: fameVerySmall
     funds: fundsSmall
+    flags: +fameItem +animalLoot
   }
   {
     id: npc-hunter

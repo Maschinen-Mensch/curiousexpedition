@@ -200,7 +200,7 @@
     description: txt-it-canvas
     debugCategory: painting
     sprite: it_painting_canvas_1.png
-    maxStack: 10
+    maxStack: 20
     value: {base: 10, village: 1, karma: 1}
   }
   {
@@ -213,6 +213,7 @@
     sprite: it_painting_folder_1.png
     maxStack: 1
     losable: false
+    flags: +fameItem
   }
   {
     id: it-painting-native-1
@@ -224,13 +225,14 @@
     fame: fameVerySmall
     funds: fundsTiny
     sprite: it_painting_native_1.png
-    maxStack: 10
+    maxStack: 20
+    flags: +fameItem
   }
   {
     id: it-painting-native-2
     extends: it-painting-native-1
     description: txt-it-painting-native-2
-    debugCategory: painting
+    value: {base: 15, village: 55}
     fame: fameSmall
     funds: fundsVerySmall
   }
@@ -238,7 +240,7 @@
     id: it-painting-native-3
     extends: it-painting-native-1
     description: txt-it-painting-native-3
-    debugCategory: painting
+    value: {base: 25, village: 60}
     fame: fameMedium
     funds: fundsSmall
   }
@@ -246,7 +248,7 @@
     id: it-painting-native-4
     extends: it-painting-native-1
     description: txt-it-painting-native-4
-    debugCategory: painting
+    value: {base: 45, village: 65}
     fame: fameLarge
     funds: fundsMedium
   }
@@ -256,17 +258,18 @@
     description: txt-it-painting-location-1
     collectionItem: it-painting-collection
     debugCategory: painting
-    value: {base: 10, village: 40}
+    value: {base: 10, village: 50}
     fame: fameVerySmall
     funds: fundsTiny
     sprite: it_painting_landscape_1.png
     maxStack: 10
+    flags: +fameItem
   }
   {
     id: it-painting-location-2
     extends: it-painting-location-1
     description: txt-it-painting-location-2
-    debugCategory: painting
+    value: {base: 15, village: 55}
     fame: fameSmall
     funds: fundsVerySmall
   }
@@ -274,7 +277,7 @@
     id: it-painting-location-3
     extends: it-painting-location-1
     description: txt-it-painting-location-3
-    debugCategory: painting
+    value: {base: 25, village: 60}
     fame: fameMedium
     funds: fundsSmall
   }
@@ -282,7 +285,7 @@
     id: it-painting-location-4
     extends: it-painting-location-1
     description: txt-it-painting-location-4
-    debugCategory: painting
+    value: {base: 45, village: 65}
     fame: fameLarge
     funds: fundsMedium
   }
@@ -292,17 +295,18 @@
     description: txt-it-painting-shrine-1
     collectionItem: it-painting-collection
     debugCategory: painting
-    value: {base: 10, village: 40}
+    value: {base: 10, village: 50}
     fame: fameVerySmall
     funds: fundsTiny
     sprite: it_painting_shrine_1.png
     maxStack: 10
+    flags: +fameItem
   }
   {
     id: it-painting-shrine-2
     extends: it-painting-shrine-1
     description: txt-it-painting-shrine-2
-    debugCategory: painting
+    value: {base: 15, village: 55}
     fame: fameSmall
     funds: fundsVerySmall
   }
@@ -310,7 +314,7 @@
     id: it-painting-shrine-3
     extends: it-painting-shrine-1
     description: txt-it-painting-shrine-3
-    debugCategory: painting
+    value: {base: 25, village: 60}
     fame: fameMedium
     funds: fundsSmall
   }
@@ -318,7 +322,7 @@
     id: it-painting-shrine-4
     extends: it-painting-shrine-1
     description: txt-it-painting-shrine-4
-    debugCategory: painting
+    value: {base: 45, village: 65}
     fame: fameLarge
     funds: fundsMedium
   }

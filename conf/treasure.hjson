@@ -40,6 +40,7 @@
     maxStack: 1
     fame: fameVeryLarge
     funds: fundsLarge
+    flags: +fameItem
   }
   {
     id: it-treasure-slokra
@@ -136,6 +137,7 @@
     maxStack: 10
     fame: fameLarge
     funds: fundsLarge
+    flags: +fameItem
   }
   {
     id: it-treasure-vase

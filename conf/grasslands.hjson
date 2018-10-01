@@ -12,6 +12,7 @@
     slotMarker: hud_mapMarker_grass.png
     ambientSound: sfx_loop_grasslands_1
     goals: [gol-goldenTemple-moonStone, gol-goldenTemple-buried]
+    debugColor: "#5cae0d"
     locations: [
       [
         {ref: grp-village}
@@ -144,7 +145,7 @@
     id: bio-grasslands-generic
     name: txt-bio-grasslands-generic-name
     flags: +grass
-    debugColor: green
+    debugColor: "#5cae0d"
     eventImg: {day: evt_bio_grasslands_1.png, night: evt_bio_grasslands_1_night.png}
     terrain: [
       {perlin: 0.8, tile: tl-grass}
@@ -210,7 +211,7 @@
     id: bio-grasslands-jungle
     name: txt-bio-grasslands-jungle-name
     flags: +grass
-    debugColor: green
+    debugColor: "#2d6614"
     eventImg: {day: evt_bio_grasslands_1.png, night: evt_bio_grasslands_1_night.png}
     terrain: [
       {perlin: 0.9, tile: tl-grass-bushes}
@@ -310,7 +311,7 @@
     id: bio-grasslands-waterMountains
     name: txt-bio-grasslands-waterMountains-name
     flags: +grass +mountain +water
-    debugColor: green
+    debugColor: "#5cae0d"
     eventImg: {day: evt_bio_grasslands_1.png, night: evt_bio_grasslands_1_night.png}
     terrain: [
       {perlin: 0.99, tile: tl-jungle-thick}
@@ -381,7 +382,7 @@
     id: bio-grasslands-lakes
     name: txt-bio-grasslands-lakes-name
     flags: +grass +water
-    debugColor: green
+    debugColor: "#5cae0d"
     eventImg: {day: evt_bio_grasslands_1.png, night: evt_bio_grasslands_1_night.png}
     terrain: [
       {perlin: 0.94, tile: tl-jungle-light}
@@ -452,7 +453,7 @@
     id: bio-grasslands-swamps
     name: txt-bio-grasslands-swamps-name
     flags: +grass +water
-    debugColor: green
+    debugColor: "#256b64"
     eventImg: {day: evt_bio_grasslands_1.png, night: evt_bio_grasslands_1_night.png}
     terrain: [
       {perlin: 0.92, tile: tl-jungle-light}
@@ -521,7 +522,7 @@
     id: bio-grasslands-mountains
     name: txt-bio-grasslands-mountains-name
     flags: +grass +mountain
-    debugColor: green
+    debugColor: "#5cae0d"
     eventImg: {day: evt_bio_grasslands_1.png, night: evt_bio_grasslands_1_night.png}
     terrain: [
       {perlin: 0.8, tile: tl-river-shallow}
@@ -588,7 +589,7 @@
     id: bio-grasslands-pits
     name: txt-bio-grasslands-pits-name
     flags: +grass +pits
-    debugColor: green
+    debugColor: "#5cae0d"
     eventImg: {day: evt_bio_grasslands_1.png, night: evt_bio_grasslands_1_night.png}
     terrain: [
       {perlin: 0.76, tile: tl-pit-grass}

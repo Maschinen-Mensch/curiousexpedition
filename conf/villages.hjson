@@ -1,8 +1,9 @@
 [
   {
     id: loc-village-1
+    tag: village
     name: txt-fxt-village-1-name
-    reqBiomeFlags: -desert -arctic
+    reqBiomeFlags: -desert -arctic -prehistoric
     flags: +village +villageType_1 +settlement +inhabited
     worldMap: village
     sprite: res_fxt_village_2.png
@@ -64,6 +65,15 @@
         select: [
           {reqLocationFlags: +villageType_1, setLocationParticle: pt-village-2-angry}
           {prio: 1, setLocationParticle: pt-village-2-angry}
+        ]
+      }
+      {
+        reqStanding: -3..
+        reqLocationFlags: +angry
+        setLocationFlags: -angry
+        select: [
+          {reqLocationFlags: +villageType_1, setLocationParticle: pt-village-1}
+          {prio: 1, setLocationParticle: pt-village-1}
         ]
       }
       {
@@ -131,7 +141,7 @@
   {
     id: loc-village-2
     extends: loc-village-1
-    reqBiomeFlags: +dry -arctic
+    reqBiomeFlags: +dry -arctic -prehistoric
     sprite: res_fxt_village_1.png
     flags: +village +villageType_2 +settlement +inhabited
     particle: pt-village-2
@@ -145,7 +155,7 @@
     id: loc-village-3
     extends: loc-village-1
     sprite: res_fxt_village_water.png
-    reqBiomeFlags: -desert -dry -arctic
+    reqBiomeFlags: -desert -dry -arctic -prehistoric
     flags: +village +villageType_3 +settlement +inhabited
     reqWorld: 1..
     particle: pt-village-2
@@ -162,7 +172,7 @@
     id: loc-village-4
     extends: loc-village-1
     flags: +village +villageType_4 +tribeNomads +settlement +inhabited
-    reqBiomeFlags: +desert -arctic
+    reqBiomeFlags: +desert -arctic -prehistoric
     sprite: res_fxt_village_desert.png
     setTile: tl-desert
     setNeighbors: [

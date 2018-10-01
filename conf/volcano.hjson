@@ -2,7 +2,7 @@
   {
     id: loc-volcano-spawn-large-active
     name: txt-fxt-volcano-spawn-large-active-name
-    debugCategory: hazard
+    debugCategory: volcano
     debugColor: lightgray
     showHint: false
     hintBiome: false
@@ -33,7 +33,7 @@
   {
     id: loc-volcano-spawn-large-inactive
     name: txt-fxt-volcano-spawn-large-inactive-name
-    debugCategory: hazard
+    debugCategory: volcano
     debugColor: lightgray
     sprite: res_fxt_volcano_inactive.png
     showHint: false
@@ -58,7 +58,7 @@
   {
     id: loc-volcano-spawn-small-active
     name: txt-fxt-volcano-spawn-large-active-name
-    debugCategory: hazard
+    debugCategory: volcano
     debugColor: lightgray
     showHint: false
     hintBiome: false
@@ -76,7 +76,7 @@
   {
     id: loc-volcano-spawn-small-inactive
     name: txt-fxt-volcano-spawn-large-inactive-name
-    debugCategory: hazard
+    debugCategory: volcano
     debugColor: lightgray
     sprite: res_fxt_volcano_inactive.png
     showHint: false
@@ -91,7 +91,7 @@
   {
     id: loc-volcano-active
     name: txt-fxt-volcano-spawn-large-active-name
-    debugCategory: hazard
+    debugCategory: volcano
     debugColor: lightgray
     showHint: false
     hintBiome: false
@@ -116,7 +116,7 @@
   {
     id: loc-volcano-inactive
     name: txt-fxt-volcano-spawn-large-inactive-name
-    debugCategory: hazard
+    debugCategory: volcano
     debugColor: lightgray
     showHint: false
     hintBiome: false
@@ -159,7 +159,7 @@
   {
     id: loc-volcano-active-endless
     name: txt-fxt-volcano-spawn-large-active-name
-    debugCategory: hazard
+    debugCategory: volcano
     debugColor: lightgray
     showHint: false
     sprite: res_fxt_volcano_active.png

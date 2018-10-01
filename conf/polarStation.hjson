@@ -22,7 +22,7 @@
     sprite: res_fxt_arcticStation.png
     setTile: tl-deepSnow
     actions: evt-polarStation
-    debugCategory: arctic
+    debugCategory: polarStation
     debugColor: "#64ff58"
   }
   {

@@ -3,7 +3,8 @@
     id: loc-slaver
     reqWorld: 2..
     name: txt-fxt-slaver-name
-    debugColor: "#770057"
+    debugColor: deeppink
+    debugCategory: utility
     initItems: {il-trade-slaver: 7, it-water: 20, il-metaItems: 99}
     sprite: res_fxt_slaver.png
     particle: pt-slaver

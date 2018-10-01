@@ -121,7 +121,7 @@
     debugCategory: sanity
     sprite: it_consumable_tinCan_1.png
     value: {base: 5, mission: 10, village: 5, karma: 1}
-    maxStack: 20
+    maxStack: 20    
     useEvents: [
       {
         reqSanity: ..30
@@ -131,7 +131,6 @@
         removeItem: true
         setPartyFlags: +nonCocaUsers
       }
-      {prio: 1, chat: cl-item-tinCan-refuse}
     ]
   }
   {

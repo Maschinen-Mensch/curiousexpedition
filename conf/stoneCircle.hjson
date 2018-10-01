@@ -2,7 +2,7 @@
   {
     id: loc-stoneCircle
     name: txt-fxt-stoneCircle-name
-    flags: +occultVision +dreamVisions +abacus
+    flags: +occultVision +dreamVisions +abacus +stoneCircle
     sprite: [
       {ref: res_fxt_stoneCircle.png, reqBiomeFlags: -arctic}
       {ref: res_fxt_stoneCircle_arctic.png, reqBiomeFlags: +arctic}
@@ -24,20 +24,18 @@
       {ref: tl-jungle-thick}
     ]
     actions: evt-stoneCircle-init
-    debugCategory: sacrileg
+    debugCategory: utility
     debugColor: deeppink
   }
-  {id: loc-stoneCircle-1, extends: loc-stoneCircle}
   {
     id: loc-stoneCircle-destroyed
     name: txt-fxt-stoneCircle-destroyed-name
-    debugCategory: sacrileg
+    debugCategory: utility
     sprite: res_fxt_stoneCircle.png
   }
   {
     id: evt-stoneCircle-init
     actionText: txt-evt-stoneCircle-init-action
-    reqLocationFlags: -explored
     showImage: {type: day}
     partyEvents: [
       {
@@ -61,6 +59,7 @@
   }
   {
     id: evt-stoneCircle-enter
+    actionText: txt-generic-back
     text: txt-evt-stoneCircle-enter
     partyEvents: evt-superstitious-complain
     chat: cl-sacrileg-warning
@@ -75,6 +74,7 @@
   {
     id: evt-stoneCircle-reveal
     alwaysShown: true
+    reqLocationFlags: -explored
     setLocationFlags: +explored
     setPartyFlags: +sacrileg +superstitious
     chat: cl-stoneCircle
@@ -83,7 +83,7 @@
     id: evt-stoneCircle-revealRuins
     extends: evt-stoneCircle-reveal
     actionText: txt-evt-stoneCircle-revealRuins-action
-    reqLocation: {flags: +ruins, locationKnown: false, range: ..100}
+    reqLocation: {flags: +ruins, locationKnown: false, range: ..60}
     partyEvents: [
       {optional: true, ref: evt-stoneCircle-revealNextRuin}
       {optional: true, ref: evt-stoneCircle-revealNextRuin}
@@ -97,7 +97,7 @@
   {
     id: evt-stoneCircle-revealNextRuin
     posTile: {
-      range: ..100
+      range: ..40
       locationKnown: false
       locationFlags: +ruins
       tileFlags: -mapped
@@ -113,7 +113,7 @@
     id: evt-stoneCircle-revealSettlements
     extends: evt-stoneCircle-reveal
     actionText: txt-evt-stoneCircle-revealSettlements-action
-    reqLocation: {flags: +settlement, locationKnown: false, range: ..100}
+    reqLocation: {flags: +settlement, locationKnown: false, range: ..60}
     partyEvents: [
       {optional: true, ref: evt-stoneCircle-revealNextSettlement}
       {optional: true, ref: evt-stoneCircle-revealNextSettlement}
@@ -143,7 +143,7 @@
     id: evt-stoneCircle-revealNatureRests
     extends: evt-stoneCircle-reveal
     actionText: txt-evt-stoneCircle-revealNatureRests-action
-    reqLocation: {flags: +natureRest, locationKnown: false, range: ..100}
+    reqLocation: {flags: +natureRest, locationKnown: false, range: ..60}
     partyEvents: [
       {optional: true, ref: evt-stoneCircle-revealNextNatureRest}
       {optional: true, ref: evt-stoneCircle-revealNextNatureRest}
@@ -173,7 +173,7 @@
     id: evt-stoneCircle-revealCaves
     extends: evt-stoneCircle-reveal
     actionText: txt-evt-stoneCircle-revealCaves-action
-    reqLocation: {flags: +cave, locationKnown: false, range: ..100}
+    reqLocation: {flags: +cave, locationKnown: false, range: ..60}
     partyEvents: [
       {optional: true, ref: evt-stoneCircle-revealNextCave}
       {optional: true, ref: evt-stoneCircle-revealNextCave}

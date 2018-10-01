@@ -104,10 +104,8 @@
     important: true
     autoRemove: true
     buffDays: 10..20
-    dayEvents: [
-      {slots: 2}
-      {slots: 1, health: -1, chat: cl-notFeelingWell, reqWaiting: false}
-    ]
+    buffDelayDays: 30..50
+    bonus: {death: 0.5}
     buffEndEvents: {chat: cl-feelingBetter}
     debugCategory: ailment
   }

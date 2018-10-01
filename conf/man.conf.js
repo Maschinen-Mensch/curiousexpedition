@@ -7,7 +7,8 @@ config.staticKeywords = [
   'clearPushedEvents', 'consume', 'restoreCharacter', 'karma', 
   'funds', 'reqAge', 'fame', 'unwarpWorld', 'gameOver', 'reqFreePartyCount',
   'isAbstract', 'reqNoCombat', 'showNPC', 'reqTargetChar', 'reqDiceCharFlags',
-  'posTile', 'debugCategory', 'compactAndStack', 'canDismiss'
+  'posTile', 'debugCategory', 'compactAndStack', 'canDismiss', 'tooltip', 'delay', 'duration', 'showReqItems',
+  'ioRemovePlayerDeath', 'ioSetLocationFlags', 'racetrackEvents', 'icon', 'inDays', 'ioAddLiveLog'
 ]
 
 config.man = [
@@ -37,6 +38,7 @@ config.man = [
     _priceTable: "pricetable to be used",
     _globalInv: "all barter that share the same globalInv ID will share the same inventory",
     _itemEvents: "events tied to specific items",
+    _reqItemFlags: "Only items with these flags will be available (from the player's inventory)",
     $description: "Starts a trading screen"
   },
   {
@@ -52,6 +54,8 @@ config.man = [
     _title: "title (default: 'take items')",
     _slots: "max amount of slots (default: unlimited)",
     _itemEvents: "events tied to specific items",
+    _reqItemFlags: "Only items with these flags will be available (from the player's inventory)",
+    _consumeFameItems: "Any items with fame will be consumed and immediately added to the player's fame",
     $description: "Shows a menu for looting"
   },
   {
@@ -75,7 +79,7 @@ config.man = [
   },
   {
     keyword: 'revealBiome',
-    _LocationKnown: "if locations should become visible (default: true)",
+    _locationKnown: "if locations should become visible (default: true)",
     _particle: "particle to spawn on revealed tiles (default: none)",
     $description: "Reveals everything in a biome",
     $pos: true,
@@ -168,6 +172,7 @@ config.man = [
     _range: "range from context position or keywords 'biome' or 'world' (default: biome)",
     _animate: "if new location (and tile) should transition in or appear immediately (default: true)",
     _setPos: "sets the context position to the newly added location position (default: true)",
+    _reqBiomeFlags: "only adds the location to biomes that match the flags",
     $pos: true,
     $description: "Adds a location at the given position"
   },
@@ -703,6 +708,11 @@ config.man = [
     $description: "Dictionary with set of required items"
   },
   {
+    keyword: 'showReqItems',
+    $inline: "true or false",
+    $description: "Whether to display the reqItems in the diary (default: true)"
+  },
+  {
     keyword: 'escape',
     $custom: true,
     $description: "Used for spefying hot air balloon escape options"
@@ -721,5 +731,27 @@ config.man = [
     keyword: 'mapScore',
     $inline: "true or false",
     $description: "The amount of map score added or removed."
-  }
+  },
+  {
+    keyword: 'unlockHub',
+    $inline: "true or false",
+  },
+  {
+    keyword: 'setupHub',
+    $inline: "true or false",
+  },
+  {
+    keyword: 'unlockGoal',
+    $inline: "true or false",
+  },
+  {
+    keyword: 'givePack',
+    $inline: "Pack will be randomly selected from all the packs in this range",
+    $description: "Gives a pack"
+  },
+  {
+    keyword: 'reqioNewPlayer',
+    $custom: true,
+    $description: "Returns true the player is new"
+  },
 ]

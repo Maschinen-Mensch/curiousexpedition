@@ -7,6 +7,7 @@
     slotMarker: hud_mapMarker_dry.png
     ambientSound: sfx_loop_dry_1
     goals: [gol-goldenTemple-moonStone, gol-goldenTemple-buried]
+    debugColor: "#7c811b"
     locations: [
       [
         {ref: grp-village}
@@ -121,7 +122,7 @@
     id: bio-drylands-generic
     name: txt-pck-dry-name
     flags: +dry
-    debugColor: brown
+    debugColor: "#7c811b"
     eventImg: {day: evt_bio_drylands_1.png, night: evt_bio_drylands_1_night.png}
     terrain: [
       {perlin: 0.82, tile: tl-dry}
@@ -202,7 +203,7 @@
     id: bio-drylands-lakes
     name: txt-pck-dry-name
     flags: +dry +water
-    debugColor: brown
+    debugColor: "#7c811b"
     eventImg: {day: evt_bio_drylands_1.png, night: evt_bio_drylands_1_night.png}
     terrain: [
       {perlin: 0.78, tile: tl-river-shallow}
@@ -287,7 +288,7 @@
     id: bio-drylands-mountains
     name: txt-bio-drylands-mountains-name
     flags: +dry +mountain
-    debugColor: brown
+    debugColor: "#7c811b"
     eventImg: {day: evt_bio_drylands_1.png, night: evt_bio_drylands_1_night.png}
     terrain: [
       {perlin: 0.8, tile: tl-dry}
@@ -365,7 +366,7 @@
     id: bio-drylands-jungle
     name: txt-bio-drylands-jungle-name
     flags: +dry
-    debugColor: brown
+    debugColor: "#525a24"
     eventImg: {day: evt_bio_drylands_1.png, night: evt_bio_drylands_1_night.png}
     terrain: [
       {perlin: 0.86, tile: tl-mountain}
@@ -461,7 +462,7 @@
     id: bio-drylands-desert
     name: txt-pck-dry-name
     flags: +dry +desert
-    debugColor: brown
+    debugColor: "#7c811b"
     eventImg: {day: evt_bio_drylands_1.png, night: evt_bio_drylands_1_night.png}
     terrain: [
       {perlin: 0.9, tile: tl-mountain}
@@ -540,7 +541,7 @@
     id: bio-drylands-pits
     name: txt-bio-drylands-pits-name
     flags: +dry +pits
-    debugColor: brown
+    debugColor: "#7c811b"
     eventImg: {day: evt_bio_drylands_1.png, night: evt_bio_drylands_1_night.png}
     terrain: [
       {perlin: 0.76, tile: tl-pit-dry}
@@ -618,7 +619,7 @@
     id: bio-drylands-stoneForest
     name: txt-bio-drylands-stoneForest-name
     flags: +dry
-    debugColor: brown
+    debugColor: "#7c811b"
     eventImg: {day: evt_bio_drylands_1.png, night: evt_bio_drylands_1_night.png}
     terrain: [
       {perlin: 0.76, tile: tl-dry-stoneForest}

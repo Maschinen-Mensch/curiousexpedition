@@ -17,7 +17,7 @@
     ]
     actions: evt-portal-explore
     debugCategory: special
-    debugColor: red
+    debugColor: "#FFF001"
   }
   {
     id: loc-portal-tome

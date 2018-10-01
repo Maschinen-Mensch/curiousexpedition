@@ -18,10 +18,9 @@
     flags: +affliction
     autoRemove: true
     important: true
-    tripEvents: [
-      {slots: 1, reqAge: 5.., delayedEvent: evt-infectedDeath}
-      {slots: 5, health: -1}
-    ]
+    blockHealthRegen: true
+    buffDelayTrips: 3..5
+    bonus: {death: 0.2}
     debugCategory: health
   }
   {
@@ -88,31 +87,26 @@
   }
   {
     id: evt-infectedDeath
-    partyEvents: evt-setImage-nightCamp
-    select: [
-      {slots: 6, ref: evt-infectedDeath-companion}
-      {slots: 4, ref: evt-infectedDeath-amulet}
-      {slots: 3, ref: evt-infectedDeath-promise}
-      {slots: 1, ref: evt-infectedDeath-explorer}
-    ]
+    delayedEvent: {
+      partyEvents: evt-setImage-nightCamp
+      select: [
+        {slots: 6, ref: evt-infectedDeath-companion}
+        {slots: 4, ref: evt-infectedDeath-amulet}
+        {slots: 3, ref: evt-infectedDeath-promise}
+        {slots: 1, ref: evt-infectedDeath-explorer}
+      ]
+    }
   }
   {
     id: evt-infectedDeath-companion
-    charEvents: {
-      reqStatus: +infected
-      reqCharFlags: -special
-      text: txt-evt-infectedDeath-companion
-      storeCharacter: true
-      setCharFlags: +dead
-    }
+    text: txt-evt-infectedDeath-companion
+    storeCharacter: true
+    setCharFlags: +dead
   }
   {
     id: evt-infectedDeath-explorer
-    charEvents: {
-      reqStatus: +infected
-      reqCharFlags: +special
-      text: txt-evt-infectedDeath-explorer
-    }
+    reqCharFlags: +special
+    text: txt-evt-infectedDeath-explorer
   }
   {
     id: evt-infectedDeath-promise

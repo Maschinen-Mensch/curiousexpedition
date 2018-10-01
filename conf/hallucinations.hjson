@@ -21,10 +21,12 @@
   }
   {
     id: evt-sanity-apply-hallucinations
+    reqMaxPerWorld: 1
     charEvents: {
       text: txt-evt-sanity-apply-hallucinations
       reqCharFlags: +special
       setStatus: +hallucinations
+      reqStatus: -hallucinations
     }
     select: evt-sanity-return
   }

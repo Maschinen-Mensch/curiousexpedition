@@ -582,27 +582,6 @@
     ]
   }
   {
-    id: pl-abomination
-    debugCategory: Special
-    title: txt-pl-abomination-title
-    name: txt-pl-abomination-title
-    description: txt-pl-abomination
-    miniSprite: res_porter_abomination_mini.png
-    health: 12
-    variations: [
-      {
-        gender: male
-        sprite: res_porter_abomination_1.png
-        portrait: res_face_abomination_1.png
-      }
-    ]
-    capacity: 3
-    flags: +abomination -humanoid
-    levels: [
-      {statuses: st-abomination-eat, dice: dc-abomination-1 dc-abomination-2}
-    ]
-  }
-  {
     id: pl-artist
     debugCategory: Standard
     title: txt-pl-artist-title

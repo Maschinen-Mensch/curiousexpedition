@@ -22,7 +22,6 @@
       chat: cl-ignore
       charEvents: {
         optional: true
-        chance: 0.75
         reqLoyalty: 2..
         reqCharFlags: +humanoid -special -abomination
         text: txt-evt-sanity-conflict-joking-3
@@ -402,7 +401,7 @@
     charEvents: [
       {
         count: any
-        reqCharFlags: -humanoid
+        reqCharFlags: -humanoid -abomination
         actions: {
           actionText: txt-evt-noSanity-eatAnimal-action
           text: txt-evt-noSanity-eatAnimal
@@ -829,9 +828,10 @@
   }
   {
     id: evt-noSanity-onlyFriend
+    reqMaxPerWorld: 1
     charEvents: [
       {
-        reqCharFlags: -humanoid
+        reqCharFlags: -humanoid -abomination
         text: txt-evt-noSanity-onlyFriend
       }
       {reqCharFlags: +special | -humanoid, count: all}
@@ -1012,6 +1012,7 @@
     charEvents: {count: all, reqCharFlags: +special | -humanoid}
     storeEvents: {
       reqAge: 10..
+      reqCharFlags: +humanoid
       text: txt-evt-sanity-return-imaginary
       actions: [
         {
