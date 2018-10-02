@@ -2,7 +2,7 @@
 
 {
 	"filename": "hud_button_dice_roll_1.png",
-	"frame": {"x":287,"y":0,"w":93,"h":74},
+	"frame": {"x":287,"y":63,"w":93,"h":74},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":93,"h":74},
@@ -11,7 +11,7 @@
 },
 {
 	"filename": "hud_button_dice_roll_2.png",
-	"frame": {"x":381,"y":0,"w":93,"h":74},
+	"frame": {"x":287,"y":138,"w":93,"h":74},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":93,"h":74},
@@ -29,7 +29,7 @@
 },
 {
 	"filename": "hud_celebration_title_2.png",
-	"frame": {"x":287,"y":116,"w":123,"h":44},
+	"frame": {"x":352,"y":316,"w":123,"h":44},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":123,"h":44},
@@ -38,7 +38,7 @@
 },
 {
 	"filename": "hud_char_auction.png",
-	"frame": {"x":430,"y":75,"w":43,"h":62},
+	"frame": {"x":381,"y":63,"w":43,"h":62},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":62},
@@ -47,7 +47,7 @@
 },
 {
 	"filename": "hud_char_museum.png",
-	"frame": {"x":429,"y":138,"w":43,"h":62},
+	"frame": {"x":381,"y":126,"w":43,"h":62},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":62},
@@ -56,7 +56,7 @@
 },
 {
 	"filename": "hud_escaped_title_1.png",
-	"frame": {"x":287,"y":161,"w":129,"h":21},
+	"frame": {"x":237,"y":294,"w":129,"h":21},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":129,"h":21},
@@ -65,7 +65,7 @@
 },
 {
 	"filename": "hud_expeditionStart_1.png",
-	"frame": {"x":475,"y":0,"w":12,"h":23},
+	"frame": {"x":255,"y":189,"w":12,"h":23},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":12,"h":23},
@@ -74,7 +74,7 @@
 },
 {
 	"filename": "hud_expeditionStart_2.png",
-	"frame": {"x":474,"y":125,"w":16,"h":23},
+	"frame": {"x":381,"y":189,"w":16,"h":23},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":23},
@@ -83,7 +83,7 @@
 },
 {
 	"filename": "hud_expeditionStart_3.png",
-	"frame": {"x":474,"y":75,"w":16,"h":24},
+	"frame": {"x":461,"y":0,"w":16,"h":24},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":24},
@@ -92,7 +92,7 @@
 },
 {
 	"filename": "hud_expeditionStart_4.png",
-	"frame": {"x":411,"y":116,"w":17,"h":24},
+	"frame": {"x":430,"y":22,"w":17,"h":24},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":17,"h":24},
@@ -101,7 +101,7 @@
 },
 {
 	"filename": "hud_expeditionStart_5.png",
-	"frame": {"x":474,"y":100,"w":16,"h":24},
+	"frame": {"x":478,"y":0,"w":16,"h":24},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":24},
@@ -110,7 +110,7 @@
 },
 {
 	"filename": "hud_expeditionStart_6.png",
-	"frame": {"x":473,"y":174,"w":17,"h":23},
+	"frame": {"x":237,"y":189,"w":17,"h":23},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":17,"h":23},
@@ -119,7 +119,7 @@
 },
 {
 	"filename": "hud_expeditionStart_7.png",
-	"frame": {"x":473,"y":149,"w":17,"h":24},
+	"frame": {"x":476,"y":316,"w":17,"h":24},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":17,"h":24},
@@ -128,7 +128,7 @@
 },
 {
 	"filename": "hud_expeditionStart_expedition.png",
-	"frame": {"x":236,"y":205,"w":235,"h":35},
+	"frame": {"x":0,"y":299,"w":235,"h":35},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":235,"h":35},
@@ -137,7 +137,7 @@
 },
 {
 	"filename": "hud_expeditionStart_line.png",
-	"frame": {"x":0,"y":289,"w":234,"h":6},
+	"frame": {"x":237,"y":287,"w":234,"h":6},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":234,"h":6},
@@ -146,7 +146,7 @@
 },
 {
 	"filename": "hud_gameOver_title_1.png",
-	"frame": {"x":236,"y":241,"w":173,"h":21},
+	"frame": {"x":287,"y":0,"w":173,"h":21},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":173,"h":21},
@@ -155,7 +155,7 @@
 },
 {
 	"filename": "hud_subtitle_arcticExpanse.png",
-	"frame": {"x":0,"y":263,"w":351,"h":25},
+	"frame": {"x":0,"y":335,"w":351,"h":25},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":351,"h":25},
@@ -173,7 +173,7 @@
 },
 {
 	"filename": "hud_subtitle_modding.png",
-	"frame": {"x":287,"y":75,"w":142,"h":40},
+	"frame": {"x":287,"y":22,"w":142,"h":40},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":142,"h":40},
@@ -182,7 +182,7 @@
 },
 {
 	"filename": "hud_success_title_1.png",
-	"frame": {"x":287,"y":183,"w":128,"h":21},
+	"frame": {"x":367,"y":294,"w":128,"h":21},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":21},
@@ -191,11 +191,20 @@
 },
 {
 	"filename": "hud_title.png",
-	"frame": {"x":0,"y":189,"w":235,"h":73},
+	"frame": {"x":237,"y":213,"w":235,"h":73},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":235,"h":73},
 	"sourceSize": {"w":235,"h":73},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "title_rivals.png",
+	"frame": {"x":0,"y":189,"w":236,"h":109},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":236,"h":109},
+	"sourceSize": {"w":236,"h":109},
 	"pivot": {"x":0.5,"y":0.5}
 }],
 "meta": {
@@ -203,8 +212,8 @@
 	"version": "1.0",
 	"image": "loca_pictureFonts_ENG.png",
 	"format": "RGBA8888",
-	"size": {"w":490,"h":302},
+	"size": {"w":495,"h":360},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:b776a9f92a4ca29342352d5e79f76f10:8f19c0343c4731c3ce38518b2bd06b44:038697a84ab3ef6f220f143366d337a1$"
+	"smartupdate": "$TexturePacker:SmartUpdate:85afe4ea764cc8082d1588ea8c70cddc:efaf352f6616f694b2202d1bbd526c71:038697a84ab3ef6f220f143366d337a1$"
 }
 }
