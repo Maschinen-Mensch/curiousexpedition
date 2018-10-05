@@ -223,7 +223,7 @@
       {
         showImage: {type: day, src: evt_fxt_empty.png}
         charEvents: {
-          reqCharFlags: -special -animal -abomination
+          reqCharFlags: -special -animal -abomination -vehicle
           removeCharacter: true
           text: txt-it-tomePage-abomination
           addCharacter: pl-abomination

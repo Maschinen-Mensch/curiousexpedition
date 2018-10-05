@@ -32,7 +32,7 @@
   }
   {
     id: loc-blessingTemple-closed
-    name: txt-fxt-blessingTemple-name-name
+    name: txt-fxt-blessingTemple-name
     debugCategory: shrine
     debugColor: red
     sprite: res_fxt_templeBlessing_2.png

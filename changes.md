@@ -16,6 +16,7 @@
   * Toughness can't be reduced below zero when contracting a disease
   * The shop-specific item value bonuses are only displayed when at the shop screen
   * Indicator for item usage in combat now matches the reality
+* Added support for Character flags +noMirror, +noHealth and +noLoyalty
   
 # 1.3.11 (July 16th 2018)
 * Added Spanish translation
