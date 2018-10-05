@@ -2,6 +2,8 @@
   {
     id: loc-waterfall
     name: txt-fxt-waterfall-name
+    debugCategory: nature
+    debugColor: "#64ff58"
     reqBiomeFlags: -desert -arctic
     flags: +water +waterfall +natureRest
     sprite: res_fxt_waterfall.png
@@ -15,6 +17,8 @@
   {
     id: loc-healingSprings
     name: txt-fxt-healingSprings-name
+    debugCategory: nature
+    debugColor: #64ff58
     flags: +springs +natureRest
     reqBiomeFlags: -desert
     sprite: [
@@ -36,6 +40,8 @@
   {
     id: loc-overhang
     name: txt-fxt-overhang-name
+    debugCategory: nature
+    debugColor: "#64ff58"
     reqBiomeFlags: -arctic
     flags: +overhang +natureRest
     sprite: res_fxt_stoneOverhang.png

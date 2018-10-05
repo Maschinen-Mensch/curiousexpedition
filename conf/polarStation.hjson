@@ -1,6 +1,8 @@
 [
   {
     id: loc-polarStation
+    debugCategory: arctic
+    debugColor: limegreen
     isAbstract: true
     reqBiomeFlags: +arctic
     dist: 5

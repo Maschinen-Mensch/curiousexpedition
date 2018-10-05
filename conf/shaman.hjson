@@ -2,6 +2,8 @@
   {
     id: loc-shamanHut
     name: txt-fxt-shamanHut-name
+    debugCategory: trader
+    debugColor: orangered
     initItems: {il-trade-shamanHut: 4, il-tomePages: 4, il-metaItems: 99}
     priceTable: shamanHut
     sprite: res_fxt_shamanHut.png

@@ -2,6 +2,8 @@
   {
     id: loc-trader
     name: txt-fxt-trader-name
+    debugCategory: trader
+    debugColor: orangered
     reqBiomeFlags: -arctic
     flags: +trader
     sprite: res_fxt_trader.png

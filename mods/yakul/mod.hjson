@@ -5,7 +5,7 @@
     name: The Yakul
     authors: Maschinen-Mensch
     version: "0.1.0.0"
-    preview: mod_preview
+    preview: preview_yakul
     twitter: http://twitter.com/maschimensch
     weblink: http://maschinen-mensch.com
     mail: support@maschinen-mensch.com
@@ -14,7 +14,7 @@
   }
   imageData:[
     {
-      id: mod_preview
+      id: preview_yakul
       file: yakul/mod_preview.png
     }
     {
