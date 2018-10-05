@@ -8,7 +8,9 @@
     value: {base: 30, karma: karmaSmall}
     maxStack: 1
     maxChargeTime: 10
-    useEvents: {sanity: 10, resetPartyStatus: +aggro, playSound: sfx_totem}
+    useEvents: [
+      {sanity: 10, playSound: sfx_totem, resetPartyStatus: +aggro}
+    ]
   }
   {
     id: it-bongosTuned
@@ -19,6 +21,8 @@
     value: {base: 40, karma: karmaMedium}
     maxStack: 1
     maxChargeTime: 10
-    useEvents: {sanity: 15, playSound: sfx_totem, resetPartyStatus: +aggro}
+    useEvents: [
+      {sanity: 15, playSound: sfx_totem, resetPartyStatus: +aggro}
+    ]
   }
 ]

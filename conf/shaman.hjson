@@ -25,6 +25,8 @@
       {ref: tl-dry-jungle-thick, reqBiomeFlags: +dry}
       {ref: tl-swamp}
     ]
+    debugCategory: utility
+    debugColor: deeppink
   }
   {
     id: loc-shamanHut-forsaken

@@ -523,7 +523,9 @@ var logs = {
   ga: false,
   sound: false,
   eventRequirements: false,
-  worldgen: true,
+  worldgen: false,
+  iomp: false,
+  tribeGen: false
 };
 
 var debug = {
@@ -583,7 +585,7 @@ var debug = {
   autoLevel: false, // automatically level up party for higher expeditions
   
   // skipSaveGame: false,
-  forceLocalSaveGame: true,
+  forceLocalSaveGame: false,
   timeDilation: 1.0,
   eventChecks: false,
 
@@ -593,11 +595,35 @@ var debug = {
   // testLocationCount: 15,
 
   testTribe: 'tg-jungle',
-  tribeBackground: '#4b3a32',
+  tribeBackground: '#576f79',
   testStatus: 'st-sexist',
   // testGoal: 'gol-goldenTemple-moonStone',
 
   outputDiaryLog: false, // if this is on, screenshots of every diary entry will be placed in a folder 'diaryLog' (electron only)
 
+  //startBiome: [15, 51],
+  disableIOMP: true,        // if iomp features should be disabled
+  genInstant: true,         // enable this to have quick but hitchy generation
+  startNewIOGame: false,    // enable this to start a new game each load (ignoring savegames)
+  skipSGWorld: true,         // enable this to prevent world data being loaded from savegames
+  drawHubArrows: false,     // draw a big fat arrow at every hub (even hidden ones)
+  showRivers: false,        // enable this to draw an R on all hub-connection river tiles (will need to toggle Q to refresh)
+  debugIOGen: false,        // displays WorldGenIO stats on-screen
+  iompServerOnClient: false,// enable this to bypass the cloud code and run the server code on the client directly
+  runOffline: false,
+
   isDevMode: true,
 };
+
+if (debug.runOffline)
+{
+  // just reset the entire debug object for the purposes of running offline
+  debug = {
+    runOffline: true,
+    disableIOMP: true,
+    genInstant: false,
+    startNewIOGame: false,
+    skipSGWorld: false,
+    forceLocalSaveGame: true
+  }
+}

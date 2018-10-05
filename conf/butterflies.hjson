@@ -19,5 +19,6 @@
     fame: fameVerySmall
     funds: fundsTiny
     maxStack: 1
+    flags: +fameItem
   }
 ]

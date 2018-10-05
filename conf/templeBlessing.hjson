@@ -6,6 +6,7 @@
     flags: +shrineBlessing +dreamVisions +ruins
     sprite: res_fxt_templeBlessing_1.png
     worldMap: templeBlessing
+    debugCategory: special
     dist: 5
     setTile: tl-mountain
     setNeighbors: [
@@ -14,7 +15,7 @@
       {count: 4, ref: tl-cactusForest, reqBiomeFlags: +desert}
     ]
     actions: evt-blessingTemple-approach
-    debugCategory: special
+    debugColor: "#FFF001"
     debugColor: red
   }
   {

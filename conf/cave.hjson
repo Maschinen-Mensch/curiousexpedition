@@ -194,8 +194,8 @@
         charEvents: {reqCharFlags: +humanoid -special -abomination, reqStatus: +claustrophobic}
         text: txt-evt-cave-explore-noTorch-4
         select: [
-          {slots: 3, setLocationFlags: +noTorchClaustrophobic}
-          {slots: 1, setLocationFlags: +noTorchClaustrophobicDeath}
+          {slots: 1, setLocationFlags: +noTorchClaustrophobic}
+          {slots: 3, setLocationFlags: +noTorchClaustrophobicDeath}
         ]
       }
       {

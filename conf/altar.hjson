@@ -93,7 +93,7 @@
     text: txt-evt-altar-revive
     reqKarma: 60..
     storeEvents: {
-      count: ..4
+      count: 1..4
       reqCharFlags: +dead
       actions: {
         actionText: txt-evt-altar-revive-action-1

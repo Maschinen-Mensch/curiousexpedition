@@ -17,6 +17,7 @@
     maxStack: 1
     sprite: it_utility_sextant.png
     bonus: {revealDist: 2}
+    noBonusStacking: true
     debugCategory: science
   }
   {
@@ -158,6 +159,7 @@
       replaceLocations: [
         {oldFlags: -mountain -settlement, range: {base: 0, bonus: dynamiteBonus}}
         {oldFlags: +mountain +secret, new: loc-blessingTemple-secret, range: {base: 0, bonus: dynamiteBonus}}
+        {oldFlags: +mountain -secret, range: {base: 0, bonus: dynamiteBonus}}
       ]
       particle: [
         pt-explosion-rock
@@ -270,6 +272,7 @@
     fame: fameSmall
     funds: fundsVeryLarge
     reqBiomeFlags: -arctic
+    flags: +fameItem
   }
   {
     id: it-mammothTusk
@@ -281,6 +284,7 @@
     fame: fameSmall
     funds: fundsVeryLarge
     reqBiomeFlags: +arctic
+    flags: +fameItem
   }
   {
     id: it-triceratopsHorn
@@ -292,6 +296,7 @@
     maxStack: 3
     fame: fameSmall
     funds: fundsVeryLarge
+    flags: +fameItem
   }
   {
     id: it-dinoSkull
@@ -304,6 +309,7 @@
     maxStack: 1
     fame: fameLarge
     funds: fundsVeryLarge
+    flags: +fameItem
   }
   {
     id: it-mummy
@@ -316,6 +322,7 @@
     funds: fundsLarge
     maxStack: 1
     dayEvents: {reqDifficulty: 1.., unlockCharacter: sp-bird}
+    flags: +fameItem
   }
   {
     id: it-crystalBall
@@ -422,6 +429,7 @@
     maxStack: 1
     fame: fameVeryLarge
     funds: fundsLarge
+    flags: +fameItem
   }
   {
     id: it-rope
@@ -456,6 +464,7 @@
     maxStack: 20
     fame: fameTiny
     funds: fundsMedium
+    flags: +fameItem
   }
   {
     id: it-meat-raw
@@ -716,28 +725,28 @@
   {
     id: il-tomePages
     items: [
-      {slots: 2, it-tomePage-randomTeleport: 1}
-      {slots: 2, it-tomePage-healingSprings: 1}
-      {slots: 2, it-tomePage-waterfall: 1}
-      {slots: 2, it-tomePage-hill: 1}
-      {slots: 2, it-tomePage-waterDrain: 1}
-      {slots: 2, it-tomePage-superMove: 1}
-      {slots: 2, it-tomePage-targetTeleport: 1}
-      {slots: 2, it-tomePage-mountain: 1}
-      {slots: 2, it-tomePage-chasm: 1}
-      {slots: 2, it-tomePage-fire: 1}
-      {slots: 2, it-tomePage-fertile: 1}
-      {slots: 2, it-tomePage-dry: 1}
-      {slots: 2, it-tomePage-abomination: 1}
-      {slots: 2, it-tomePage-lake: 1}
-      {slots: 2, it-tomePage-regen: 1}
-      {slots: 2, it-tomePage-shipReturn: 1}
-      {slots: 2, it-tomePage-vision: 1}
-      {slots: 2, it-tomePage-portal: 1}
-      {slots: 2, it-tomePage-eagle: 1}
-      {slots: 1, it-tomePage-corrupted: 1}
-      {slots: 2, it-tomePage-monsterDen: 1}
+      {slots: 3, it-tomePage-randomTeleport: 1}
+      {slots: 3, it-tomePage-healingSprings: 1}
+      {slots: 3, it-tomePage-waterfall: 1}
+      {slots: 3, it-tomePage-hill: 1}
+      {slots: 3, it-tomePage-waterDrain: 1}
+      #{slots: 3, it-tomePage-mountain: 1}
+      #{slots: 3, it-tomePage-chasm: 1}
+      {slots: 3, it-tomePage-fire: 1}
+      {slots: 3, it-tomePage-fertile: 1}
+      {slots: 3, it-tomePage-dry: 1}
+      {slots: 3, it-tomePage-abomination: 1}
+      {slots: 3, it-tomePage-lake: 1}
+      {slots: 3, it-tomePage-regen: 1}
+      {slots: 3, it-tomePage-shipReturn: 1}
+      {slots: 3, it-tomePage-vision: 1}
+      {slots: 3, it-tomePage-portal: 1}
+      {slots: 3, it-tomePage-eagle: 1}
+      #{slots: 1, it-tomePage-corrupted: 1}
+      #{slots: 2, it-tomePage-monsterDen: 1}
       {slots: 2, it-tomePage-wisdom: 1}
+      {slots: 1, it-tomePage-superMove: 1}
+      {slots: 1, it-tomePage-targetTeleport: 1}
     ]
   }
   {

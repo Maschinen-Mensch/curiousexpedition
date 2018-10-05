@@ -606,9 +606,45 @@
     }
   }
   {
+    id: zn-abomination-2
+    extends: zn-abomination
+    events: {
+      showImage: {type: day, src: evt_spec_combat_1.png}
+      select: {
+        combat: [
+          {emy-abomination: 2}
+        ]
+      }
+    }
+  }
+  {
+    id: zn-abomination-3
+    extends: zn-abomination
+    events: {
+      showImage: {type: day, src: evt_spec_combat_1.png}
+      select: {
+        combat: [
+          {emy-abomination: 3}
+        ]
+      }
+    }
+  }
+  {
+    id: zn-abomination-4
+    extends: zn-abomination
+    events: {
+      showImage: {type: day, src: evt_spec_combat_1.png}
+      select: {
+        combat: [
+          {emy-abomination: 4}
+        ]
+      }
+    }
+  }
+  {
     id: zn-angryNatives
     name: txt-zn-angryNatives-name
-    flags: +native
+    flags: +native +angryNatives
     sprite: res_zones_natives.png
     borderImgIdx: 0
     alwaysSeeking: true
@@ -659,7 +695,7 @@
   {
     id: zn-angryLizards
     name: txt-zn-angryLizards-name
-    flags: +native
+    flags: +native +angryNatives
     sprite: res_zones_natives.png
     borderImgIdx: 0
     maxSeekTurns: 0

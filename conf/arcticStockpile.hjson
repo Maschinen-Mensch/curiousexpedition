@@ -8,7 +8,7 @@
     setTile: tl-deepSnow
     actions: evt-arcticStockpile
     hideParty: false
-    debugCategory: sacrileg
+    debugCategory: loot
     debugColor: "#5DADE2"
   }
   {

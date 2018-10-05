@@ -9,28 +9,7 @@
     ]
     partyEvents: [
       {reqTutorial: false, setPartyStatus: +playJingle}
-      {setPartyStatus: +ambientParticle}
-      {
-        optional: true
-        reqSanity: 111..999
-        reqTutorial: false
-        setPartyFlags: +sanityReport
-        setPartyStatus: +sanityReport-high
-      }
-      {
-        optional: true
-        reqSanity: 71..110
-        reqTutorial: false
-        setPartyFlags: +sanityReport
-        setPartyStatus: +sanityReport-medium
-      }
-      {
-        optional: true
-        reqSanity: 20..70
-        reqTutorial: false
-        setPartyFlags: +sanityReport
-        setPartyStatus: +sanityReport-low
-      }
+      {setPartyStatus: +ambientParticle +angryNativesCheck}
       {optional: true, ref: evt-occultVision-reveal}
       {optional: true, ref: evt-occultVision-reveal}
       {optional: true, ref: evt-occultVision-reveal}
@@ -235,7 +214,19 @@
         prio: 1
         text: txt-evt-combat-loot-1
         loot: {items: {}, closeEvents: {}}
-        select: {reqDifficulty: 1.., standing: -1}
+        select: {
+          reqDifficulty: 1..
+          select: [
+            { 
+              prio:1
+              standing: -1
+            }
+            { 
+              prio:0
+              reqItems: {it-badge-animalTrade:1}
+            }
+          ]
+        }
       }
     ]
   }

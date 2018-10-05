@@ -637,6 +637,7 @@
       {id: spr-ice, chance: 0}
       {id: spr-flood, lifeTime: 0}
       {id: spr-geysir-flood, lifeTime: 0}
+      {id: spr-corrupt, lifeTime: 0}
     ]
     events: evt-tile-pit
   }

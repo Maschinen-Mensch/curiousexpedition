@@ -12,13 +12,13 @@
       {ref: tl-grass}
     ]
     actions: evt-stoneStatue
-    debugCategory: sacrileg
+    debugCategory: stoneStatue
     debugColor: "#5DADE2"
   }
   {
     id: loc-stoneStatue02
-    debugCategory: sacrileg
     extends: loc-stoneStatue01
+    debugCategory: stoneStatue
     sprite: res_fxt_stoneStatue_2.png
     reqBiomeFlags: -desert -arctic
     flags: +stoneStatueType_02 +dreamVisions +hasLoot +abacus
@@ -30,7 +30,7 @@
   }
   {
     id: loc-stoneStatue03
-    debugCategory: sacrileg
+    debugCategory: stoneStatue
     extends: loc-stoneStatue01
     sprite: res_fxt_stoneStatue_3.png
     flags: +stoneStatueType_03 +dreamVisions +hasLoot +abacus

@@ -24,6 +24,8 @@
     sprite: res_fxt_arcticStation.png
     setTile: tl-deepSnow
     actions: evt-polarStation
+    debugCategory: polarStation
+    debugColor: "#64ff58"
   }
   {
     id: loc-polarStation-A

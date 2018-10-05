@@ -11,7 +11,7 @@
       {count: 2, ref: tl-cactusForest}
     ]
     actions: evt-oasis-explore
-    debugCategory: nature
+    debugCategory: natureRest
     debugColor: "#64ff58"
   }
   {

@@ -2,8 +2,8 @@
   {
     id: loc-magneticMountain
     name: txt-fxt-magneticMountain-name
-    debugCategory: nature
-    debugColor: "#64ff58"
+    debugCategory: magneticMountain
+    debugColor: "#888"
     sprite: res_fxt_magneticMountain.png
     showHint: false
     hintBiome: false

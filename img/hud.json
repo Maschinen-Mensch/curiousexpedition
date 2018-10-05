@@ -1468,15 +1468,6 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "hud_icon_skull.png",
-	"frame": {"x":1094,"y":478,"w":7,"h":8},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":7,"h":8},
-	"sourceSize": {"w":7,"h":8},
-	"pivot": {"x":0.5,"y":0.5}
-},
-{
 	"filename": "hud_icon_stamp.png",
 	"frame": {"x":1170,"y":446,"w":20,"h":20},
 	"rotated": false,

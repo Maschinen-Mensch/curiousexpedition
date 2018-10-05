@@ -1,0 +1,234 @@
+[
+  {
+    id: pl-abomination
+    debugCategory: Special
+    title: txt-pl-abomination-title
+    name: txt-pl-abomination-title
+    description: txt-pl-abomination
+    miniSprite: res_porter_abomination_mini.png
+    health: 12
+    variations: [
+      {
+        gender: mixed
+        sprite: res_porter_abomination_1.png
+        portrait: res_face_abomination_1.png
+      }
+    ]
+    capacity: 3
+    flags: +abomination -humanoid
+    levels: [
+      {statuses: st-abomination-eat-add, dice: dc-abomination-1 dc-abomination-2}
+    ]
+  }
+  {
+    id: st-abomination-eat-add
+    debugCategory: generic
+    title: txt-st-cannibal-title
+    description: txt-st-abomination-eat
+    sprite: res_status_cannibal.png
+    dayEvents: [
+      {reqAge: ..1, setPartyStatus: +st-abomination-eat-check}
+    ]
+    tripEvents: {
+      charEvents: {count: 3.., reqCharFlags: +abomination, incAchievement: ach-triple-abomination}
+    }
+  }
+  {
+    id: st-abomination-eat-check
+    debugCategory: generic
+    title: txt-st-cannibal-title
+    description: txt-st-abomination-eat
+    sprite: res_status_cannibal.png
+    dayEvents: [
+      {
+        charEvents: {
+          count: all
+          reqCharFlags: -abomination
+          removeStatus:true
+        }
+      }
+      {prio: 2, slots: 1, reqAge: 5.., delayedEvent: evt-sanity-abomination-hungry, resetStatusAge: true}
+      {prio: 2, slots: 2, reqAge: 5..}
+    ]
+  }
+  {
+    id: evt-sanity-abomination-hungry
+    playMusic: thm_nature_night_campfire_dark_2
+    partyEvents: {ref: evt-setImage-nightCamp}
+    charEvents: {count:any, reqCharFlags: +abomination }
+    select: [
+      {
+        reqItems: {it-meat-raw: 1..}
+        text: txt-evt-sanity-abomination-hungry
+        actions: [
+          { # Let Abomination eat meat
+            actionText: txt-evt-sanity-abomination-hungry-action
+            text: txt-evt-sanity-abomination-hungry-1
+            items: {it-meat-raw:-1}
+            charEvents: {
+              optional: true
+              count: any
+              reqCharFlags: +abomination
+              items: {it-meat-raw:-1}
+            }
+          }
+          { # Protect meat
+            actionText: txt-evt-sanity-abomination-hungry-action-1
+            text: txt-evt-sanity-abomination-hungry-2
+            actions: {
+              actionText: txt-evt-cave-ghostsQuest-action
+              select: evt-sanity-abomination-combat-select 
+            }
+          }
+        ]
+      }
+      { 
+        reqItems: {it-meat-raw: 0}
+        charEvents: {count:any, reqCharFlags: -abomination -special}
+        select: evt-sanity-abomination-attackUnit
+      }
+      { # Alone without meat - Abomination will attack player
+        reqItems: {it-meat-raw: 0}
+        charEvents: {count:all, reqCharFlags: +special | +abomination}
+        text: txt-evt-sanity-abomination-hungry-3
+        actions: {
+          actionText: txt-evt-cave-ghostsQuest-action
+          select: evt-sanity-abomination-combat-select 
+        }
+      }
+    ]
+  }
+  {
+    id: evt-sanity-abomination-attackUnit
+    charEvents: [
+      {
+        optional: true
+        reqCharFlags: -cultist -abomination -special
+        setTempFlags: +abominationVictim
+        text: txt-evt-sanity-abomination-attackUnit
+        actions: [
+          { # Protect Unit
+            actionText: txt-evt-sanity-abomination-attackUnit-action
+            text: txt-evt-sanity-abomination-attackUnit-1
+            actions: {
+              actionText: txt-evt-cave-ghostsQuest-action
+              select: evt-sanity-abomination-combat-select
+            }
+          }
+          { # Let Unit die
+            actionText: txt-evt-sanity-abomination-attackUnit-action-1
+            text: txt-evt-sanity-abomination-attackUnit-2
+            storeCharacter: true
+            setCharFlags: +dead
+            sanity: -15
+            select: evt-sanity-return
+          }
+        ]
+      }
+      { # Cultist special event
+        optional: true
+        reqCharFlags: +cultist -special -abomination
+        reqTempFlags: -abominationVictim
+        setTempFlags: +abominationVictim
+        text: txt-evt-sanity-abomination-attackUnit-3
+        storeCharacter: true
+        setCharFlags: +dead
+      }
+    ]
+  }
+  {
+    id: evt-sanity-abomination-combat-select
+    partyEvents: [
+      { setPartyFlags: -abomination4 -abomination3 -abomination2 -abomination1 }
+      {
+        charEvents: {
+          optional: true
+          count: 4
+          reqCharFlags: +abomination
+          setPartyFlags: +abomination4
+          removeCharacter: true
+        }
+      }
+      {
+        charEvents: {
+          optional: true
+          count: 3
+          reqCharFlags: +abomination
+          setPartyFlags: +abomination3
+          removeCharacter: true
+        }
+      }
+      {
+        charEvents: {
+          optional: true
+          count: 2
+          reqCharFlags: +abomination
+          setPartyFlags: +abomination2
+          removeCharacter: true
+        }
+      }
+      {
+        charEvents: {
+          optional: true
+          count: 1
+          reqCharFlags: +abomination
+          setPartyFlags: +abomination1
+          removeCharacter: true
+        }
+      }
+    ]
+    select: [
+      {
+        reqPartyFlags: +abomination4
+        combat: {
+          refs: { emy-abomination: 4}, surprise: true
+          winEvents: evt-sanity-abomination-combat-win, fleeEvents: evt-sanity-abomination-combat-flee
+        }
+      }
+      {
+        reqPartyFlags: +abomination3
+        combat: {
+          refs: { emy-abomination: 3}, surprise: true
+          winEvents: evt-sanity-abomination-combat-win, fleeEvents: evt-sanity-abomination-combat-flee
+        }
+      }
+      {
+        reqPartyFlags: +abomination2
+        combat: {
+          refs: { emy-abomination: 2}, surprise: true
+          winEvents: evt-sanity-abomination-combat-win, fleeEvents: evt-sanity-abomination-combat-flee
+        }
+      }
+      {
+        reqPartyFlags: +abomination1
+        combat: {
+          refs: { emy-abomination: 1}, surprise: true
+          winEvents: evt-sanity-abomination-combat-win, fleeEvents: evt-sanity-abomination-combat-flee
+        }
+      }
+    ]
+  }
+  {
+    id: evt-sanity-abomination-combat-win
+    loot: {
+      items: {}
+      closeEvents: evt-sanity-abomination-afterCombat
+    }
+  }
+  {
+    id: evt-sanity-abomination-combat-flee
+    sanity: -20
+    partyEvents: [
+      {optional: true, reqPartyFlags: +abomination4, addZone: {ref: zn-abomination-4, range: 3, seeking: true} }
+      {optional: true, reqPartyFlags: +abomination3, addZone: {ref: zn-abomination-3, range: 3, seeking: true} }
+      {optional: true, reqPartyFlags: +abomination2, addZone: {ref: zn-abomination-2, range: 3, seeking: true} }
+      {optional: true, reqPartyFlags: +abomination1, addZone: {ref: zn-abomination, range: 3, seeking: true} }
+      { setPartyFlags: -abomination4 -abomination3 -abomination2 -abomination1 }
+    ]
+  }
+  {
+    id: evt-sanity-abomination-afterCombat
+    text: txt-evt-sanity-abomination-afterCombat
+    #select: evt-sanity-return
+  }
+]

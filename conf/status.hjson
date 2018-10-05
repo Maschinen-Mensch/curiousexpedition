@@ -39,17 +39,10 @@
     buffDays: 15
   }
   {
-    id: st-abomination-eat
-    debugCategory: generic
-    title: txt-st-cannibal-title
-    description: txt-st-abomination-eat
-    sprite: res_status_cannibal.png
-    dayEvents: [
-      {slots: 3, reqAge: 25.., delayedEvent: evt-sanity-abomination-hungry, resetStatusAge: true}
-      {slots: 1, reqAge: 25.., resetStatusAge: true}
-    ]
+    id: st-angryNativesCheck
     tripEvents: {
-      charEvents: {count: 3.., reqCharFlags: +abomination, incAchievement: ach-triple-abomination}
+      reqStanding: -3..
+      removeZones: {flags: +angryNatives, range: ..20}
     }
   }
   {
@@ -206,148 +199,6 @@
         playSound: [sfx_ambient_eagle]
       }
       {slots: 12}
-    ]
-  }
-  {
-    id: st-sanityReport-high
-    debugCategory: internal
-    dayEvents: [
-      {
-        reqSanity: 0..110
-        setPartyFlags: -sanityReport -sanityReportTendency
-        charEvents: {reqCharFlags: +special, setStatus:  +st-sanityReport-medium}
-        removeStatus: true
-      }
-      {
-        reqPartyFlags: -sanityReport
-        setPartyFlags: +sanityReport
-        select: [
-          {slots: 1, report: txt-st-sanityReport-high-report}
-          {slots: 2}
-        ]
-      }
-    ]
-  }
-  {
-    id: st-sanityReport-medium
-    debugCategory: internal
-    dayEvents: [
-      {
-        reqSanity: ..70
-        setPartyFlags: -sanityReport -sanityReportTendency
-        charEvents: {reqCharFlags: +special, setStatus:  +st-sanityReport-low}
-        removeStatus: true
-      }
-      {
-        reqSanity: 111..
-        setPartyFlags: -sanityReport +sanityReportTendency
-        charEvents: {reqCharFlags: +special, setStatus:  +st-sanityReport-high}
-        removeStatus: true
-      }
-      {
-        reqPartyFlags: -sanityReport -sanityReportTendency
-        setPartyFlags: +sanityReport
-        select: [
-          {slots: 1, report: txt-st-sanityReport-medium-report}
-          {slots: 4}
-        ]
-      }
-      {
-        reqPartyFlags: -sanityReport +sanityReportTendency
-        setPartyFlags: +sanityReport
-        select: [
-          {slots: 1, report: txt-st-sanityReport-medium-report-1}
-          {slots: 4}
-        ]
-      }
-    ]
-  }
-  {
-    id: st-sanityReport-low
-    debugCategory: internal
-    dayEvents: [
-      {
-        reqSanity: ..20
-        setPartyFlags: -sanityReport -sanityReportTendency
-        charEvents: {reqCharFlags: +special, setStatus:  +st-sanityReport-veryLow}
-        removeStatus: true
-      }
-      {
-        reqSanity: 71..
-        setPartyFlags: -sanityReport +sanityReportTendency
-        charEvents: {reqCharFlags: +special, setStatus:  +st-sanityReport-medium}
-        removeStatus: true
-      }
-      {
-        reqPartyFlags: -sanityReport -sanityReportTendency
-        setPartyFlags: +sanityReport
-        select: [
-          {slots: 1, report: txt-st-sanityReport-low-report}
-          {slots: 4}
-        ]
-      }
-      {
-        reqPartyFlags: -sanityReport +sanityReportTendency
-        setPartyFlags: +sanityReport
-        select: [
-          {slots: 1, report: txt-st-sanityReport-low-report-1}
-          {slots: 4}
-        ]
-      }
-    ]
-  }
-  {
-    id: st-sanityReport-veryLow
-    debugCategory: internal
-    dayEvents: [
-      {
-        reqSanity: 0
-        setPartyFlags: -sanityReport -sanityReportTendency
-        charEvents: {reqCharFlags: +special, setStatus:  +st-sanityReport-0}
-        removeStatus: true
-      }
-      {
-        reqSanity: 21..
-        setPartyFlags: -sanityReport +sanityReportTendency
-        charEvents: {reqCharFlags: +special, setStatus:  +st-sanityReport-low}
-        removeStatus: true
-      }
-      {
-        reqPartyFlags: -sanityReport -sanityReportTendency
-        setPartyFlags: +sanityReport
-        select: [
-          {slots: 1, report: txt-st-sanityReport-veryLow-report}
-          {slots: 4}
-        ]
-      }
-      {
-        reqPartyFlags: -sanityReport +sanityReportTendency
-        setPartyFlags: +sanityReport
-        select: [
-          {slots: 1, report: txt-st-sanityReport-veryLow-report-1}
-          {slots: 4}
-        ]
-      }
-    ]
-  }
-  {
-    id: st-sanityReport-0
-    debugCategory: internal
-    dayEvents: [
-      {
-        reqSanity: 1..
-        setPartyFlags: -sanityReport +sanityReportTendency
-        charEvents: {reqCharFlags: +special, setStatus:  +st-sanityReport-veryLow}
-        removeStatus: true
-      }
-      {
-        reqPartyFlags: -sanityReport
-        setPartyFlags: +sanityReport
-        select: [
-          {slots: 1, report: txt-st-sanityReport-0-report}
-          {slots: 2}
-        ]
-      }
     ]
   }
   {

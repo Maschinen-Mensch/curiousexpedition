@@ -45,7 +45,7 @@
       waitLabel: txt-base-exploring
       events: [
         {
-          reqLocation: {range: 2.., flags: +caveTypeTeleport}
+          reqLocation: {range: 2..100, flags: +caveTypeTeleport}
           select: evt-cave-teleport-doTeleport
           text: txt-evt-cave-teleport
           actions: evt-cave-explored-leave

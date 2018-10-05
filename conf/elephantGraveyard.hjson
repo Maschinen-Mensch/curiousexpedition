@@ -17,7 +17,7 @@
       {setLocationFlags: +wildlife}
     ]
     actions: evt-elephantGraveyard-explore
-    debugCategory: loot
+    debugCategory: graveyard
     debugColor: "#5DADE2"
   }
   {

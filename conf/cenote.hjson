@@ -21,7 +21,7 @@
     ]
     actions: evt-cenote-init
     debugCategory: special
-    debugColor: red
+    debugColor: "#FFF001"
   }
   {
     id: evt-cenote-init

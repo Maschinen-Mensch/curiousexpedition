@@ -25,6 +25,10 @@
     actionText: txt-evt-leave-action
     reqLocationFlags: +wildlife +explored
     text: txt-evt-leave-3
+    select: evt-spawn-wildlife
+  }
+  {
+    id: evt-spawn-wildlife
     select: [
       {
         reqBiomeFlags: +grass | +dry | +desert

@@ -19,7 +19,8 @@
     previewSprite: hud_worldmap_pocketPreview_arctic.png
     slotMarker: hud_mapMarker_arctic.png
     ambientSound: sfx_loop_arctic_1
-    goals: gol-goldenTemple-moonStone gol-goldenTemple-buried
+    goals: gol-goldenTemple-moonStone gol-goldenTemple-buried    
+    debugColor: "#b5e1ef"
     debugItems: {it-snowshoe: 5}
     locations: [
       [
@@ -121,7 +122,7 @@
     id: bio-arctic-generic
     name: txt-pck-arctic-name
     flags: +arctic
-    debugColor: white
+    debugColor: "#46786a"
     eventImg: {day: evt_bio_arctic_1.png, night: evt_bio_arctic_1_night.png}
     terrain: [
       {perlin: 0.92, tile: tl-glacier-land}
@@ -187,6 +188,7 @@
   {
     id: bio-arctic-deepSnow
     extends: bio-arctic-generic
+    debugColor: "#b5e1ef"
     terrain: [
       {perlin: 0.93, tile: tl-deepSnow}
       {perlin: 0.87, tile: tl-plateau}
@@ -310,6 +312,7 @@
   {
     id: bio-arctic-plateau
     extends: bio-arctic-generic
+    debugColor: "#3f6167"
     terrain: [
       {perlin: 0.9, tile: tl-arcticSea}
       {perlin: 0.8, tile: tl-packIce}
@@ -340,7 +343,7 @@
   {
     id: bio-outside-sea-arctic
     name: txt-bio-outside-sea-arctic-name
-    debugColor: gray
+    debugColor: "#0c50c6"
     eventImg: {day: evt_bio_grasslands_1.png, night: evt_bio_grasslands_1_night.png}
     flags: +arctic
     terrain: [

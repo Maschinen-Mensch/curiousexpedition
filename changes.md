@@ -1,4 +1,23 @@
-# 1.3.11
+# 1.3.12
+
+* Added smooth zooming
+* Improvements to infection/death system
+  * Infobox now shows the death chance for infected characters
+  * A diary alert is shown before opening the diary when somebody is dieing
+* Changed jungle rot sickness to be potentially deadly
+* Added buttons to combat that allow to quickly switch between different combos
+* Tweaked how often some events could appear on one expedition
+* Tin can items will only be shown as usable when they can actually be used (sanity less than 30)
+* Only one item per item category is now cooled down per turn, instead of all of them
+* Increased chance of catastrophic outcoume when sending claustrophobic person into cave without torch
+* Waiting now costs the base trip cost in sanity
+* Added quick scroll to credits; added new entries for fan edition
+* Bugfixes
+  * Toughness can't be reduced below zero when contracting a disease
+  * The shop-specific item value bonuses are only displayed when at the shop screen
+  * Indicator for item usage in combat now matches the reality
+  
+# 1.3.11 (July 16th 2018)
 * Added Spanish translation
 * Changes
   * Added discord button to main menu
@@ -15,6 +34,9 @@
   * Statuses that block health regeneration or character promotion are now properly displayed as such
   * Fixed explorer portrait displays in highscores screen
   * Native characters now display smaller icons where appropriate
+  * When natives show up during an event, they are now displayed in the image
+  * Fixed being difficult to click on the 'Roll' button in combat at higher scaling settings
+  * Fixed the tutorial hint circle being in the wrong position at higher scaling settings
 
 # 1.3.10 (June 14th 2018)
 
@@ -871,7 +893,7 @@ We're getting closer to our big 1.0 release. Therefore we're spending a lot of t
   * We're currently working through our list of explorer edition buyers so your character might not be in the game yet, but we'll get to it before version 1.0 if you already bought the game. You will receive an email with your secret code as soon as your character is ready
   * Only one custom explorer might be unlocked at a time
   * Unlocked explorer might also appear as your rival
-  * Also see http://curious-expedition.com/editions
+  * Also see https://curious-expedition.com/editions
 * Highscores
   * Your final game points are now shown on any game ending screen
   * Final points are scaled by the difficulty level

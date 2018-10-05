@@ -6,6 +6,7 @@
     slotMarker: hud_mapMarker_desert.png
     ambientSound: sfx_loop_desert_1
     goals: gol-goldenTemple-moonStone gol-goldenTemple-buried
+    debugColor: "#b7b659"
     locations: [
       [
         {ref: grp-village}
@@ -92,11 +93,15 @@
     ]
   }
   {
+    id: bio-desert-base
+    flags: +desert
+    debugColor: "#b7b659"
+    eventImg: {day: evt_bio_desert_1.png, night: evt_bio_desert_1_night.png}
+  }
+  {
     id: bio-desert-generic
     name: txt-pck-desert-name
-    flags: +desert
-    debugColor: gold
-    eventImg: {day: evt_bio_desert_1.png, night: evt_bio_desert_1_night.png}
+    extends: bio-desert-base
     terrain: [
       {perlin: 0.78, tile: tl-desert}
       {perlin: 0.75, tile: tl-mountain}
@@ -165,7 +170,7 @@
   }
   {
     id: bio-desert-sands
-    extends: bio-desert-generic
+    extends: bio-desert-base
     terrain: [
       {perlin: 0.8, tile: tl-desert}
       {perlin: 0.73, tile: tl-mountain}
@@ -218,7 +223,7 @@
   }
   {
     id: bio-desert-cactusForest
-    extends: bio-desert-generic
+    extends: bio-desert-base
     terrain: [
       {perlin: 0.9, tile: tl-mountain}
       {perlin: 0.86, tile: tl-desert}
@@ -279,7 +284,7 @@
   }
   {
     id: bio-desert-pits
-    extends: bio-desert-generic
+    extends: bio-desert-base
     flags: +desert +pits
     terrain: [
       {perlin: 0.9, tile: tl-mountain}
@@ -338,7 +343,7 @@
   {
     id: bio-desert-forest
     flags: +desert +dry
-    extends: bio-desert-generic
+    extends: bio-desert-base
     terrain: [
       {perlin: 0.95, tile: tl-mountain}
       {perlin: 0.68, tile: tl-desert}
@@ -399,7 +404,7 @@
   }
   {
     id: bio-desert-mountains
-    extends: bio-desert-generic
+    extends: bio-desert-base
     flags: +desert +mountain
     terrain: [
       {perlin: 0.9, tile: tl-mountain}
@@ -461,7 +466,7 @@
   }
   {
     id: bio-desert-stoneForest
-    extends: bio-desert-generic
+    extends: bio-desert-base
     terrain: [
       {perlin: 0.9, tile: tl-desert}
       {perlin: 0.85, tile: tl-mountain}

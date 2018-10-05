@@ -1,7 +1,7 @@
 [
   {
     id: loc-fumarole-spawn
-    debugCategory: hazard
+    debugCategory: fumarole
     showHint: false
     mapScore: 0
     hideParty: false
@@ -12,7 +12,7 @@
   {
     id: loc-fumarole-1
     name: txt-fxt-fumarole-name
-    debugCategory: hazard
+    debugCategory: fumarole
     sprite: [
       {ref: res_fxt_fumarole_1.png, reqBiomeFlags: ""}
     ]
@@ -61,7 +61,7 @@
   {
     id: loc-fumarole-inactive
     name: txt-fxt-fumarole-name
-    debugCategory: hazard
+    debugCategory: fumarole
     sprite: res_fxt_fumarole_1.png
     showHint: false
     mapScore: 0

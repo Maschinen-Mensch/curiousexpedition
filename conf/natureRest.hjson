@@ -11,7 +11,8 @@
     setTile: tl-mountain
     setNeighbors: [tl-mountain, tl-river, tl-river, tl-river-shallow, tl-river-shallow]
     actions: evt-waterfall-explore
-
+    debugCategory: natureRest
+    debugColor: "#64ff58"
   }
   {
     id: loc-healingSprings
@@ -33,6 +34,8 @@
       {count: 5, ref: tl-plateau, reqBiomeFlags: +arctic}
     ]
     actions: evt-healingSprings-enter
+    debugColor: "#64ff58"
+    debugCategory: natureRest
   }
   {
     id: loc-overhang
@@ -45,6 +48,8 @@
     setTile: tl-dry
     setNeighbors: [tl-mountain]
     actions: evt-overhang-explore
+    debugCategory: natureRest
+    debugColor: "#64ff58"
   }
   {
     id: evt-waterfall-explore
@@ -294,124 +299,6 @@
         }
       ]
     }
-  }
-  {
-    id: evt-sanity-abomination-hungry
-    playMusic: thm_nature_night_campfire_dark_2
-    partyEvents: {ref: evt-setImage-nightCamp}
-    charEvents: [
-      {reqCharFlags: +abomination}
-      {
-        optional: true
-        reqItems: {it-meat-raw: 1..}
-        text: txt-evt-sanity-abomination-hungry
-        setTempFlags: +meat
-        actions: [
-          {
-            actionText: txt-evt-sanity-abomination-hungry-action
-            text: txt-evt-sanity-abomination-hungry-1
-            items: {it-meat-raw: -2}
-          }
-          {
-            actionText: txt-evt-sanity-abomination-hungry-action-1
-            text: txt-evt-sanity-abomination-hungry-2
-            charEvents: {reqCharFlags: +abomination, removeCharacter: true}
-            select: {
-              combat: {
-                refs: [
-                  {slots: 1, emy-abomination: 1}
-                ]
-                winEvents: evt-sanity-abomination-combat-win
-                fleeEvents: evt-sanity-abomination-combat-flee
-              }
-            }
-          }
-        ]
-      }
-      {
-        reqTempFlags: -meat
-        reqCharFlags: -abomination
-        select: evt-sanity-abomination-attackUnit
-      }
-    ]
-  }
-  {
-    id: evt-sanity-abomination-attackUnit
-    charEvents: [
-      {
-        optional: true
-        reqCharFlags: -cultist -abomination -special
-        setTempFlags: +abominationVictim
-        text: txt-evt-sanity-abomination-attackUnit
-        actions: [
-          {
-            actionText: txt-evt-sanity-abomination-attackUnit-action
-            text: txt-evt-sanity-abomination-attackUnit-1
-            charEvents: {reqCharFlags: +abomination, removeCharacter: true}
-            select: {
-              combat: {
-                refs: [
-                  {slots: 1, emy-abomination: 1}
-                ]
-                winEvents: evt-sanity-abomination-combat-win
-                fleeEvents: evt-sanity-abomination-combat-flee
-              }
-            }
-          }
-          {
-            actionText: txt-evt-sanity-abomination-attackUnit-action-1
-            text: txt-evt-sanity-abomination-attackUnit-2
-            storeCharacter: true
-            setCharFlags: +dead
-            sanity: -15
-            select: evt-sanity-return
-          }
-        ]
-      }
-      {
-        optional: true
-        reqCharFlags: +cultist -special -abomination
-        reqTempFlags: -abominationVictim
-        setTempFlags: +abominationVictim
-        text: txt-evt-sanity-abomination-attackUnit-3
-        storeCharacter: true
-        setCharFlags: +dead
-      }
-      {
-        optional: true
-        text: txt-evt-sanity-abomination-attackUnit-4
-        reqCharFlags: +abomination
-        removeCharacter: true
-        reqPartyCount: 0..1
-        actions: {
-          actionText: txt-evt-cave-ghostsQuest-action
-          combat: {
-            refs: [
-              {slots: 1, emy-abomination: 1}
-            ]
-            winEvents: evt-sanity-abomination-combat-win
-            fleeEvents: evt-sanity-abomination-combat-flee
-          }
-        }
-      }
-    ]
-  }
-  {
-    id: evt-sanity-abomination-combat-win
-    loot: {
-      items: {}
-      closeEvents: evt-sanity-abomination-afterCombat
-    }
-  }
-  {
-    id: evt-sanity-abomination-combat-flee
-    sanity: -20
-    select: evt-sanity-abomination-afterCombat
-  }
-  {
-    id: evt-sanity-abomination-afterCombat
-    text: txt-evt-sanity-abomination-afterCombat
-    select: evt-sanity-return
   }
   {
     id: evt-sanity-cultist-leaveForMission
@@ -1469,7 +1356,9 @@
   }
   {
     id: evt-sanity-apply-scurvy
+    reqMaxPerWorld: 1
     charEvents: {
+      reqStatus: -scurvy
       text: txt-evt-sanity-apply-scurvy
       reqCharFlags: -special +humanoid -abomination
       setStatus: +scurvy
@@ -1478,7 +1367,9 @@
   }
   {
     id: evt-sanity-apply-sprained
+    reqMaxPerWorld: 1
     charEvents: {
+      reqStatus: -sprained
       text: txt-evt-sanity-apply-sprained
       reqCharFlags: -special +humanoid -abomination
       setStatus: +sprained
@@ -1489,6 +1380,7 @@
     id: evt-sanity-apply-hearingLoss
     reqMaxPerWorld: 1
     charEvents: {
+      reqStatus: -hearingLoss
       text: txt-evt-sanity-apply-hearingLoss
       reqCharFlags: -special +humanoid -abomination
       setStatus: +hearingLoss
@@ -1499,6 +1391,7 @@
     id: evt-sanity-apply-viewingLoss
     reqMaxPerWorld: 1
     charEvents: {
+      reqStatus: -viewingLoss
       text: txt-evt-sanity-apply-viewingLoss
       reqCharFlags: -special +humanoid -abomination
       setStatus: +viewingLoss
@@ -1508,6 +1401,7 @@
   {
     id: evt-sanity-apply-pneumonia
     charEvents: {
+      reqStatus: -pneumonia
       text: txt-evt-sanity-apply-pneumonia
       reqCharFlags: -special +humanoid -abomination
       setStatus: +pneumonia

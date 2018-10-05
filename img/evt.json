@@ -505,7 +505,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_fxt_overhang_1.png",
+	"filename": "evt_fxt_outpost_1.png",
 	"frame": {"x":1644,"y":780,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -514,7 +514,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_fxt_portal_1.png",
+	"filename": "evt_fxt_overhang_1.png",
 	"frame": {"x":2055,"y":780,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -523,7 +523,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_fxt_portal_2.png",
+	"filename": "evt_fxt_portal_1.png",
 	"frame": {"x":2466,"y":780,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -532,7 +532,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_fxt_raptorNest_1.png",
+	"filename": "evt_fxt_portal_2.png",
 	"frame": {"x":2877,"y":780,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -541,7 +541,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_fxt_shamanHut_1.png",
+	"filename": "evt_fxt_raptorNest_1.png",
 	"frame": {"x":3288,"y":780,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -550,7 +550,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_fxt_shipwreck_1.png",
+	"filename": "evt_fxt_shamanHut_1.png",
 	"frame": {"x":3699,"y":780,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -559,7 +559,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_fxt_shipwreck_2.png",
+	"filename": "evt_fxt_shipwreck_1.png",
 	"frame": {"x":822,"y":1040,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -568,7 +568,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_fxt_shrine_1.png",
+	"filename": "evt_fxt_shipwreck_2.png",
 	"frame": {"x":822,"y":1300,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -577,7 +577,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_fxt_shrine_2.png",
+	"filename": "evt_fxt_shrine_1.png",
 	"frame": {"x":822,"y":1560,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -586,7 +586,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_fxt_shrine_arctic.png",
+	"filename": "evt_fxt_shrine_2.png",
 	"frame": {"x":822,"y":1820,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -595,7 +595,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_fxt_shrine_arctic_int.png",
+	"filename": "evt_fxt_shrine_arctic.png",
 	"frame": {"x":822,"y":2080,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -604,7 +604,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_fxt_shrine_int_1.png",
+	"filename": "evt_fxt_shrine_arctic_int.png",
 	"frame": {"x":822,"y":2340,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -613,7 +613,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_fxt_slaver_1.png",
+	"filename": "evt_fxt_shrine_int_1.png",
 	"frame": {"x":822,"y":2600,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -622,7 +622,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_fxt_slaver_combat.png",
+	"filename": "evt_fxt_slaver_1.png",
 	"frame": {"x":822,"y":2860,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -631,7 +631,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_fxt_slaver_fire.png",
+	"filename": "evt_fxt_slaver_combat.png",
 	"frame": {"x":822,"y":3120,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -640,7 +640,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_fxt_sledStation_1.png",
+	"filename": "evt_fxt_slaver_fire.png",
 	"frame": {"x":822,"y":3380,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -649,7 +649,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_fxt_sledStation_1_night.png",
+	"filename": "evt_fxt_sledStation_1.png",
 	"frame": {"x":822,"y":3640,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -658,7 +658,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_fxt_stoneCircle_1.png",
+	"filename": "evt_fxt_sledStation_1_night.png",
 	"frame": {"x":1233,"y":1040,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -667,7 +667,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_fxt_stoneCircle_arctic.png",
+	"filename": "evt_fxt_stoneCircle_1.png",
 	"frame": {"x":1644,"y":1040,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -676,7 +676,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_fxt_stoneStatue_1.png",
+	"filename": "evt_fxt_stoneCircle_arctic.png",
 	"frame": {"x":2055,"y":1040,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -685,7 +685,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_fxt_stoneStatue_2.png",
+	"filename": "evt_fxt_stoneStatue_1.png",
 	"frame": {"x":2466,"y":1040,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -694,7 +694,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_fxt_stoneStatue_3.png",
+	"filename": "evt_fxt_stoneStatue_2.png",
 	"frame": {"x":2877,"y":1040,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -703,7 +703,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_fxt_temple_blessing_1.png",
+	"filename": "evt_fxt_stoneStatue_3.png",
 	"frame": {"x":3288,"y":1040,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -712,7 +712,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_fxt_temple_blessing_1_closed.png",
+	"filename": "evt_fxt_temple_blessing_1.png",
 	"frame": {"x":3699,"y":1040,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -721,7 +721,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_fxt_temple_blessing_int_1.png",
+	"filename": "evt_fxt_temple_blessing_1_closed.png",
 	"frame": {"x":1233,"y":1300,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -730,7 +730,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_fxt_tomb_1.png",
+	"filename": "evt_fxt_temple_blessing_int_1.png",
 	"frame": {"x":1644,"y":1300,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -739,7 +739,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_fxt_tomb_int_1.png",
+	"filename": "evt_fxt_tomb_1.png",
 	"frame": {"x":2055,"y":1300,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -748,7 +748,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_fxt_tomb_int_1_combat.png",
+	"filename": "evt_fxt_tomb_int_1.png",
 	"frame": {"x":2466,"y":1300,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -757,7 +757,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_fxt_trader_1.png",
+	"filename": "evt_fxt_tomb_int_1_combat.png",
 	"frame": {"x":2877,"y":1300,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -766,7 +766,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_fxt_village_1.png",
+	"filename": "evt_fxt_trader_1.png",
 	"frame": {"x":3288,"y":1300,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -775,7 +775,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_fxt_village_1_night.png",
+	"filename": "evt_fxt_village_1.png",
 	"frame": {"x":3699,"y":1300,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -784,7 +784,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_fxt_village_3.png",
+	"filename": "evt_fxt_village_1_night.png",
 	"frame": {"x":1233,"y":1560,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -793,7 +793,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_fxt_village_3_night.png",
+	"filename": "evt_fxt_village_3.png",
 	"frame": {"x":1233,"y":1820,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -802,7 +802,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_fxt_village_4.png",
+	"filename": "evt_fxt_village_3_night.png",
 	"frame": {"x":1233,"y":2080,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -811,7 +811,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_fxt_village_4_night.png",
+	"filename": "evt_fxt_village_4.png",
 	"frame": {"x":1233,"y":2340,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -820,7 +820,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_fxt_village_bones.png",
+	"filename": "evt_fxt_village_4_night.png",
 	"frame": {"x":1233,"y":2600,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -829,7 +829,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_fxt_village_bones_night.png",
+	"filename": "evt_fxt_village_bones.png",
 	"frame": {"x":1233,"y":2860,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -838,7 +838,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_fxt_village_inuit_1.png",
+	"filename": "evt_fxt_village_bones_night.png",
 	"frame": {"x":1233,"y":3120,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -847,7 +847,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_fxt_village_inuit_1_night.png",
+	"filename": "evt_fxt_village_inuit_1.png",
 	"frame": {"x":1233,"y":3380,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -856,7 +856,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_fxt_waterfall_1.png",
+	"filename": "evt_fxt_village_inuit_1_night.png",
 	"frame": {"x":1233,"y":3640,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -865,7 +865,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_spec_celebration_1.png",
+	"filename": "evt_fxt_waterfall_1.png",
 	"frame": {"x":1644,"y":1560,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -874,7 +874,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_spec_combat_1.png",
+	"filename": "evt_spec_celebration_1.png",
 	"frame": {"x":2055,"y":1560,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -883,7 +883,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_spec_fire.png",
+	"filename": "evt_spec_combat_1.png",
 	"frame": {"x":2466,"y":1560,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -892,7 +892,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_spec_gameOver_1.png",
+	"filename": "evt_spec_fire.png",
 	"frame": {"x":2877,"y":1560,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -901,7 +901,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_spec_nightCamp_1.png",
+	"filename": "evt_spec_gameOver_1.png",
 	"frame": {"x":3288,"y":1560,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -910,7 +910,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_spec_nightCamp_arctic_1.png",
+	"filename": "evt_spec_nightCamp_1.png",
 	"frame": {"x":3699,"y":1560,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -919,7 +919,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_spec_nightCamp_arctic_2.png",
+	"filename": "evt_spec_nightCamp_arctic_1.png",
 	"frame": {"x":1644,"y":1820,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -928,7 +928,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_spec_nightCamp_ghosts.png",
+	"filename": "evt_spec_nightCamp_arctic_2.png",
 	"frame": {"x":1644,"y":2080,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -937,16 +937,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_spec_nightCamp_lighting.png",
-	"frame": {"x":3699,"y":3120,"w":346,"h":106},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":346,"h":106},
-	"sourceSize": {"w":346,"h":106},
-	"pivot": {"x":0.5,"y":0.5}
-},
-{
-	"filename": "evt_spec_ship_1.png",
+	"filename": "evt_spec_nightCamp_ghosts.png",
 	"frame": {"x":1644,"y":2340,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -955,7 +946,16 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_spec_ship_2.png",
+	"filename": "evt_spec_nightCamp_lighting.png",
+	"frame": {"x":3288,"y":3380,"w":346,"h":106},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":346,"h":106},
+	"sourceSize": {"w":346,"h":106},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "evt_spec_ship_1.png",
 	"frame": {"x":1644,"y":2600,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -964,7 +964,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_spec_ship_3.png",
+	"filename": "evt_spec_ship_2.png",
 	"frame": {"x":1644,"y":2860,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -973,7 +973,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_spec_space.png",
+	"filename": "evt_spec_ship_3.png",
 	"frame": {"x":1644,"y":3120,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -982,7 +982,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_tile_corrupted_plains_1.png",
+	"filename": "evt_spec_space.png",
 	"frame": {"x":1644,"y":3380,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -991,7 +991,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_tile_corrupted_shallowRiver_1.png",
+	"filename": "evt_tile_corrupted_plains_1.png",
 	"frame": {"x":1644,"y":3640,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -1000,7 +1000,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_tile_corrupted_stoneForest_1.png",
+	"filename": "evt_tile_corrupted_shallowRiver_1.png",
 	"frame": {"x":2055,"y":1820,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -1009,7 +1009,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_tile_deepSnow_1.png",
+	"filename": "evt_tile_corrupted_stoneForest_1.png",
 	"frame": {"x":2466,"y":1820,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -1018,7 +1018,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_tile_desert_1.png",
+	"filename": "evt_tile_deepSnow_1.png",
 	"frame": {"x":2877,"y":1820,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -1027,7 +1027,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_tile_desert_1_night.png",
+	"filename": "evt_tile_desert_1.png",
 	"frame": {"x":3288,"y":1820,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -1036,7 +1036,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_tile_desert_cactusForest_1.png",
+	"filename": "evt_tile_desert_1_night.png",
 	"frame": {"x":3699,"y":1820,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -1045,7 +1045,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_tile_desert_stoneForest_1.png",
+	"filename": "evt_tile_desert_cactusForest_1.png",
 	"frame": {"x":2055,"y":2080,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -1054,7 +1054,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_tile_dry_1.png",
+	"filename": "evt_tile_desert_stoneForest_1.png",
 	"frame": {"x":2466,"y":2080,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -1063,7 +1063,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_tile_dry_1_night.png",
+	"filename": "evt_tile_dry_1.png",
 	"frame": {"x":2877,"y":2080,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -1072,7 +1072,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_tile_dry_stoneForest_1.png",
+	"filename": "evt_tile_dry_1_night.png",
 	"frame": {"x":3288,"y":2080,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -1081,7 +1081,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_tile_grass_1.png",
+	"filename": "evt_tile_dry_stoneForest_1.png",
 	"frame": {"x":3699,"y":2080,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -1090,7 +1090,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_tile_grass_1_night.png",
+	"filename": "evt_tile_grass_1.png",
 	"frame": {"x":2055,"y":2340,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -1099,7 +1099,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_tile_grass_stoneForest_1.png",
+	"filename": "evt_tile_grass_1_night.png",
 	"frame": {"x":2055,"y":2600,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -1108,7 +1108,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_tile_hill_1.png",
+	"filename": "evt_tile_grass_stoneForest_1.png",
 	"frame": {"x":2055,"y":2860,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -1117,7 +1117,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_tile_hill_1_night.png",
+	"filename": "evt_tile_hill_1.png",
 	"frame": {"x":2055,"y":3120,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -1126,7 +1126,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_tile_jungle_1.png",
+	"filename": "evt_tile_hill_1_night.png",
 	"frame": {"x":2055,"y":3380,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -1135,7 +1135,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_tile_jungle_1_night.png",
+	"filename": "evt_tile_jungle_1.png",
 	"frame": {"x":2055,"y":3640,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -1144,7 +1144,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_tile_jungle_corrupted_1.png",
+	"filename": "evt_tile_jungle_1_night.png",
 	"frame": {"x":2466,"y":2340,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -1153,7 +1153,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_tile_jungle_dry_1.png",
+	"filename": "evt_tile_jungle_corrupted_1.png",
 	"frame": {"x":2877,"y":2340,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -1162,7 +1162,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_tile_mountain_1.png",
+	"filename": "evt_tile_jungle_dry_1.png",
 	"frame": {"x":3288,"y":2340,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -1171,7 +1171,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_tile_mountain_corrupted_1.png",
+	"filename": "evt_tile_mountain_1.png",
 	"frame": {"x":3699,"y":2340,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -1180,7 +1180,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_tile_mushrooms_1.png",
+	"filename": "evt_tile_mountain_corrupted_1.png",
 	"frame": {"x":2466,"y":2600,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -1189,7 +1189,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_tile_packIce_1.png",
+	"filename": "evt_tile_mushrooms_1.png",
 	"frame": {"x":2466,"y":2860,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -1198,7 +1198,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_tile_plateau_1.png",
+	"filename": "evt_tile_packIce_1.png",
 	"frame": {"x":2466,"y":3120,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -1207,7 +1207,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_tile_scorched_1.png",
+	"filename": "evt_tile_plateau_1.png",
 	"frame": {"x":2466,"y":3380,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -1216,7 +1216,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_tile_shallowRiver_1.png",
+	"filename": "evt_tile_scorched_1.png",
 	"frame": {"x":2466,"y":3640,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -1225,7 +1225,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_tile_shallowRiver_1_night.png",
+	"filename": "evt_tile_shallowRiver_1.png",
 	"frame": {"x":2877,"y":2600,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -1234,7 +1234,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_tile_shallowSulfur_1.png",
+	"filename": "evt_tile_shallowRiver_1_night.png",
 	"frame": {"x":3288,"y":2600,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -1243,7 +1243,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_tile_shallowSulfur_1_night.png",
+	"filename": "evt_tile_shallowSulfur_1.png",
 	"frame": {"x":3699,"y":2600,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -1252,7 +1252,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_tile_swamp_1.png",
+	"filename": "evt_tile_shallowSulfur_1_night.png",
 	"frame": {"x":2877,"y":2860,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -1261,7 +1261,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_tile_swamp_1_night.png",
+	"filename": "evt_tile_swamp_1.png",
 	"frame": {"x":3288,"y":2860,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -1270,7 +1270,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_tile_swamp_sulfur_1.png",
+	"filename": "evt_tile_swamp_1_night.png",
 	"frame": {"x":3699,"y":2860,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -1279,7 +1279,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_tile_swamp_sulfur_1_night.png",
+	"filename": "evt_tile_swamp_sulfur_1.png",
 	"frame": {"x":2877,"y":3120,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -1288,7 +1288,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_tiles_chrystalForest.png",
+	"filename": "evt_tile_swamp_sulfur_1_night.png",
 	"frame": {"x":2877,"y":3380,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -1297,7 +1297,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_tiles_frozenPlains_1.png",
+	"filename": "evt_tiles_chrystalForest.png",
 	"frame": {"x":2877,"y":3640,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
@@ -1306,12 +1306,30 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "evt_tiles_snowForest_1.png",
+	"filename": "evt_tiles_frozenPlains_1.png",
 	"frame": {"x":3288,"y":3120,"w":411,"h":260},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":411,"h":260},
 	"sourceSize": {"w":411,"h":260},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "evt_tiles_snowForest_1.png",
+	"frame": {"x":3699,"y":3120,"w":411,"h":260},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":411,"h":260},
+	"sourceSize": {"w":411,"h":260},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "res_npc_badgeServant_1.png",
+	"frame": {"x":3288,"y":3486,"w":15,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":15,"h":42},
+	"sourceSize": {"w":15,"h":42},
 	"pivot": {"x":0.5,"y":0.5}
 }],
 "meta": {
@@ -1321,6 +1339,6 @@
 	"format": "RGBA8888",
 	"size": {"w":4110,"h":3900},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:9d29d3157d3e005a0a008f2389bbdce5:832c1ed8ceaf721daffdc3680f20b81a:d2c624111a09ab1db21541caba6eccf4$"
+	"smartupdate": "$TexturePacker:SmartUpdate:cc2528127b2be2101be4691979a3136c:f42c463644cb9a92e75f819c1ea83a3c:d2c624111a09ab1db21541caba6eccf4$"
 }
 }

@@ -4,6 +4,7 @@
     name: txt-fxt-tomb-1-name
     debugCategory: special
     debugColor: red
+    debugCategory: shrine
     reqBiomeFlags: +desert
     flags: +dreamVisions +ruins
     worldMap: tomb
@@ -20,7 +21,7 @@
   {
     id: evt-tomb-init
     actionText: txt-evt-tomb-init-action
-    reqTileFlags: -explored
+    reqLocationFlags: -explored
     text: txt-evt-tomb-init
     showImage: {src: evt_fxt_tomb_1.png, type: day}
     playMusic: thm_shrine_1
@@ -62,21 +63,25 @@
       }
       {
         slots: 3
-        text: txt-evt-tomb-loot-1
-        showImage: {src: evt_fxt_tomb_int_1_combat.png, type: day}
-        setTileFlags: +explored
-        charEvents: {
-          optional: true, 
-          reqCharFlags: +coward, 
-          text: txt-evt-tomb-loot-2
-        }
-        actions: [
-          {
-            actionText: txt-evt-cave-ghostsQuest-action
-            combat: [
-              {slots: 1, emy-mummy: 1}
-            ]
-          }
+        ref: evt-tomb-fight
+      }
+    ]
+  }
+  {
+    id: evt-tomb-fight
+    text: txt-evt-tomb-loot-1
+    showImage: {src: evt_fxt_tomb_int_1_combat.png, type: day}
+    setLocationFlags: +explored
+    charEvents: {
+      optional: true, 
+      reqCharFlags: +coward, 
+      text: txt-evt-tomb-loot-2
+    }
+    actions: [
+      {
+        actionText: txt-evt-cave-ghostsQuest-action
+        combat: [
+          {slots: 1, emy-mummy: 1}
         ]
       }
     ]
@@ -84,6 +89,6 @@
   {
     id: evt-tomb-leave, 
     text: txt-evt-tomb-leave, 
-    setTileFlags: +explored
+    setLocationFlags: +explored
   }
 ]

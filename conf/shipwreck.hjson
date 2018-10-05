@@ -58,11 +58,11 @@
     setLocationFlags: +explored
     loot: {
       items: [
-        {slots: 10, it-dynamite: 4, il-loot-standard: 1}
-        {slots: 6, it-dynamite: 5, il-loot-standard: 1}
-        {slots: 3, it-dynamite: 6}
-        {slots: 3, it-dynamite: 3, il-loot-standard: 2}
-        {slots: 2, it-dynamite: 2, it-map-treasure: 1, it-shovel: 1}
+        {slots: 10, it-dynamite: 1, il-loot-standard: 1}
+        {slots: 6, it-dynamite: 3, il-loot-standard: 1}
+        {slots: 3, it-dynamite: 4}
+        {slots: 3, it-dynamite: 2, il-loot-standard: 2}
+        {slots: 2, it-dynamite: 1, it-map-treasure: 1, it-shovel: 1}
       ]
       closeEvents: evt-leave
     }
