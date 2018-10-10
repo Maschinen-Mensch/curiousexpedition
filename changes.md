@@ -1,22 +1,27 @@
 # 1.3.12
 
-* Added smooth zooming
-* Improvements to infection/death system
-  * Infobox now shows the death chance for infected characters
-  * A diary alert is shown before opening the diary when somebody is dieing
-* Changed jungle rot sickness to be potentially deadly
-* Added buttons to combat that allow to quickly switch between different combos
-* Tweaked how often some events could appear on one expedition
-* Tin can items will only be shown as usable when they can actually be used (sanity less than 30)
-* Only one item per item category is now cooled down per turn, instead of all of them
-* Increased chance of catastrophic outcoume when sending claustrophobic person into cave without torch
-* Waiting now costs the base trip cost in sanity
-* Added quick scroll to credits; added new entries for fan edition
+* UI Changes
+ * Added smooth zooming
+ * Improvements to infection/death system
+   * Infobox now shows the death chance for infected characters
+   * A diary alert is shown before opening the diary when somebody is dieing
+ * Tin can items will only be shown as usable when they can actually be used (sanity less than 30)
+ * Added quick scroll to credits; added new entries for fan edition
+* Tuning changes
+ * Increased chance of catastrophic outcoume when sending claustrophobic person into cave without torch
+ * Waiting now costs the base trip cost in sanity
+ * Only one item per item category is now cooled down per turn, instead of all of them
+ * Changed jungle rot sickness to be potentially deadly
+ * Tweaked how often some events could appear on one expedition
 * Bugfixes
   * Toughness can't be reduced below zero when contracting a disease
   * The shop-specific item value bonuses are only displayed when at the shop screen
   * Indicator for item usage in combat now matches the reality
-* Added support for Character flags +noMirror, +noHealth and +noLoyalty
+  * Various German typos fixed
+* Modding
+  * Added support for Character flags +noMirror, +noHealth and +noLoyalty
+  * Party buttons are refreshed when stats change
+  * Vehicles can't get infected
   
 # 1.3.11 (July 16th 2018)
 * Added Spanish translation

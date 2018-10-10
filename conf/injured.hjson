@@ -77,7 +77,7 @@
     reqTutorial: false
     charEvents: {
       reqStatus: +injured -infected -blessingRegeneration
-      reqCharFlags: -special
+      reqCharFlags: -special -vehicle
       delayedEvent: {
         partyEvents: evt-setImage-nightCamp
         text: txt-evt-infected-companion

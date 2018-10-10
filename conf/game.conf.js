@@ -421,7 +421,7 @@ var staticConfig =
   enableAchievements: true,
   showMods: true,
   showReport: false,
-  footerName: "1.3.12.2",
+  footerName: "1.3.12.3",
   footerNameIO: "0.10.10",
   sanityCheckEvents: true,
 
