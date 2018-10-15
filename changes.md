@@ -1,3 +1,10 @@
+# 1.3.12.4
+ * Bug Fixes
+  * Fixed Healing Springs not having follow-up events
+  * Fixed particles not being correctly rendered during zoom changes
+  * Fixed some missing Chinese texts (but not all yet)
+  * Fixed wrong status being shown when you haven an Abomination in your party
+
 # 1.3.12
 
 * UI Changes

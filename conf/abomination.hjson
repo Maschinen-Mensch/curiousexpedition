@@ -23,9 +23,6 @@
   {
     id: st-abomination-eat-add
     debugCategory: generic
-    title: txt-st-cannibal-title
-    description: txt-st-abomination-eat
-    sprite: res_status_cannibal.png
     dayEvents: [
       {reqAge: ..1, setPartyStatus: +st-abomination-eat-check}
     ]
@@ -36,9 +33,6 @@
   {
     id: st-abomination-eat-check
     debugCategory: generic
-    title: txt-st-cannibal-title
-    description: txt-st-abomination-eat
-    sprite: res_status_cannibal.png
     dayEvents: [
       {
         charEvents: {

@@ -11,14 +11,12 @@
     setTile: tl-mountain
     setNeighbors: [tl-mountain, tl-river, tl-river, tl-river-shallow, tl-river-shallow]
     actions: evt-waterfall-explore
-    debugCategory: natureRest
-    debugColor: "#64ff58"
   }
   {
     id: loc-healingSprings
     name: txt-fxt-healingSprings-name
     debugCategory: nature
-    debugColor: #64ff58
+    debugColor: "#64ff58"
     flags: +springs +natureRest
     reqBiomeFlags: -desert
     sprite: [
@@ -34,8 +32,6 @@
       {count: 5, ref: tl-plateau, reqBiomeFlags: +arctic}
     ]
     actions: evt-healingSprings-enter
-    debugColor: "#64ff58"
-    debugCategory: natureRest
   }
   {
     id: loc-overhang
@@ -48,8 +44,6 @@
     setTile: tl-dry
     setNeighbors: [tl-mountain]
     actions: evt-overhang-explore
-    debugCategory: natureRest
-    debugColor: "#64ff58"
   }
   {
     id: evt-waterfall-explore

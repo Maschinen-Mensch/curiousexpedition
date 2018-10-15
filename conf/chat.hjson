@@ -358,7 +358,7 @@
     lines: [
       {
         text: txt-cl-village-enter
-        chat: {id: reply-racist}
+        chat: cl-reply-racist
         reqCharFlags: +humanoid
         reqStatus: +st-racist
       }
