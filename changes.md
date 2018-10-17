@@ -1,3 +1,9 @@
+# 1.3.12.6
+ * Fixed broken Chinese text
+
+# 1.3.12.5
+ * Fixed Combat particles not being displayed
+
 # 1.3.12.4
  * Bug Fixes
   * Fixed Healing Springs not having follow-up events

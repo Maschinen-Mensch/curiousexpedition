@@ -211,6 +211,7 @@
   }
   {
     id: evt-sanity-abomination-combat-flee
+    text: txt-evt-combat-run
     sanity: -20
     partyEvents: [
       {optional: true, reqPartyFlags: +abomination4, addZone: {ref: zn-abomination-4, range: 3, seeking: true} }
