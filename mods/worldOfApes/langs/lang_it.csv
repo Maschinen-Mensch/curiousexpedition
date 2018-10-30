@@ -1,0 +1,373 @@
+"fxt-village-human-name","Villaggio Umano"
+"evt-village-pillage-action","Bottino e saccheggio"
+"evt-village-huntSlaves-action","Caccia gli Umani"
+"evt-village-evict-action","Spaventa la popolazione"
+"evt-village-human-abandoned-action","[Dopo un sacco di intimidazioni e atteggiamenti, la popolazione locale è scappata via con quei pochi possedimenti che avevano|Abbiamo dato agli Umani un ultimatum per ritirarsi, che hanno accettato felicemente|Timorosi delle nostre minacce, gli Umani hanno rapidamente imballato i loro miseri averi e sono fuggiti]. I tuguri erano ora abbandonati."
+"evt-village-human-abandoned-morning","[Stamattina, un inquietante silenzio è calato sui tuguri|Non si vedeva anima viva| Non si vedeva né sentiva nessuno stamattina], eravamo soli."
+"it-slaves-name","Prigioniero Umano"
+"it-slaves","Un Umano miserabile, catturato e legato per la gloria del Grande Impero delle Scimmie."
+"pl-slaveCart-title","Gabbie"
+"pl-slaveCart","Le gabbie, quando montate su un carrello di trasporto, consentono l'accatastamento di Umani in modo più efficiente con ogni miglioramento. Davvero una prodezza sorprendente dell'ingegnosità delle Scimmie!"
+"st-slave-stacking-description-1","Una meraviglia della tecnologia delle Scimmie. Ti permette di trasportare un Umano per gabbia."
+"st-slave-stacking-description-2","Una meraviglia della tecnologia delle Scimmie. Ti permette di trasportare due Umani per gabbia."
+"st-slave-stacking-description-3","Una meraviglia della tecnologia delle Scimmie. Ti permette di trasportare tre Umani per gabbia."
+"st-slave-stacking-description-4","Una meraviglia della tecnologia delle Scimmie. Ti permette di trasportare quattro Umani per gabbia."
+"st-slave-stacking-1-title","Efficienza delle Scimmie 1"
+"st-slave-stacking-2-title","Efficienza delle Scimmie 2
+"
+"st-slave-stacking-3-title","Efficienza delle Scimmie 3
+"
+"st-slave-stacking-4-title","Efficienza delle Scimmie 4
+"
+"evt-human-fight","
+[Gli Umani, rendendosi conto delle tue intenzioni, si preparano a difendersi|Colti dalla paura della possibilità di essere schiavizzati, gli Umani afferrarono le armi che avevano e si schierarono davanti a noi|Gli Uomini e le donne della tribù rifiutarono di essere presi pacificamente]. Una lotta era inevitabile.
+"
+"evt-human-fight-action","Prendeteli vivi!"
+"evt-human-fight-flee-action","Ritirata strategica"
+"evt-human-fight-flee","Abbiamo deciso che questi particolari esemplari non valevano tale scocciatura e sono partiti per pascoli più verdi. Incoraggiati, ci hanno mandato un gruppo di cacciatori alle calcagna."
+"evt-combat-loot-human-fight","[Abbiamo perlustrato la zona e preso qualcosa di valore con noi|Essendo vincitori, le ricompense ci appartenevano].
+"
+"pl-warlord-title","Il Signore della Guerra delle Scimmie "
+"sp-ee-warlord","Un disonorato generale, Bruto, combatterà senza pietà per riconquistare il suo status agli occhi dell'Imperatore Scimmia.
+"
+"st-warlord-title","Presenza Dominante"
+"pl-athena-title","La Grande Saggia"
+"sp-ee-athena","Una saggia di intelligenza senza eguali, Athena, è specializzata nel preservare le armi delle epoche dimenticate.
+"
+"sp-ee-marcellus","Probabilmente la Scimmia più ricca e meglio equipaggiata, senza contare l'Imperatore Scimmia stesso."
+"pl-marcellus-title","Il Principe Mercante"
+"st-sage-title","Antico sapere."
+"st-sage","L'abilità di preservare armi antiche."
+"st-merchant-title","Il Principe Mercante"
+"st-merchant","Può permettersi di avere un ulteriore compagno di viaggio."
+"pl-bloodrider-title","Cavaliere di sangue "
+"pl-bloodrider","I cavalieri di sangue sono esperti cacciatori di umani e esploratori. I più esperti tra loro hanno una sottile possibilità di unirsi alla guardia personale dell'Imperatore Scimmia.
+
+"
+"discoverVillage-1-title","Esplorazione della Cavalleria 1
+"
+"discoverVillage-2-title","Esplorazione della Cavalleria 2
+"
+"discoverVillage-3-title","Esplorazione della Cavalleria 3
+"
+"discoverVillage-4-title","Esplorazione della Cavalleria 4
+"
+"discoverVillage-1","Rivela gli avamposti delle Scimmie nelle vicinanze"
+"pl-neophyte-title","Neofita"
+"pk-research-1-title","Ricercatore Novizio"
+"pk-research-1","Aumenta la qualità e il valore degli studi creati."
+"pk-research-2-title","Ricercatore Avanzato"
+"pk-research-3-title","Ricercatore Professionista "
+"pk-research-4-title","Maestro Ricercatore"
+"pl-marauder-title","Predone"
+"pl-marauder","Il Predone si diverte in battaglia, ispirando le sue compagne Scimmie attraverso gesta di forza."
+"anm-warmount-title","Monte della Guerra
+"
+"anm-warmount","Gli animali più forti e cattivi, allevati e addestrati per uno scopo: la Guerra."
+"ruins-name","Rovine"
+"evt-ruins-2-action","Esamina le rovine"
+"evt-ruins-3","Un'antica rovina ci sovrastava. [Era in condizioni terribili, dato che le condizioni climatiche la avevano colpita per secoli|Sembrava vecchia come il tempo stesso|Il tempo aveva avuto effetti negativi sulla struttura|Il tempo aveva eroso quella che un tempo era stata una vista maestosa]. [Si sarebbe dovuta _scalare _ la facciata per raggiungere l'ingresso|Ciò che restava di una _scalinata angusta_ portava all'unica entrata|Ho potuto distinguere un'entrata su una piattaforma superiore. Dovremmo _scalare_le pareti esterne in modo da raggiungerla]."
+"evt-ruins-2","[Una grande struttura incombeva di fronte a noi|Antiche rovine dimenticate a lungo dalle Scimmie e dall'Uomo allo stesso modo, avevano resistito immerse nella luce dinanzi a noi|La struttura davanti a noi meritava sia l'apprensione che il rispetto| Arrivammo ad una rovina dimenticata da molto|Arrivammo ad una maestosa rovina, apparentemente una struttura abbandonata da epoche passate]. [Le sue pareti di metallo erano ricoperte da uno strato di ruggine|Tutte le forme di vita vegetale crebbero verso il sole|Fu un'audace testimonianza della potenza dei suoi creatori]. [I bassi rampicanti nascondevano parzialmente l'ingresso che conduceva all'interno| Grandi scalinate conducevano ad un'enorme porta|Il portale che conduceva all'interno trasmise un brivido inquietante]."
+"evt-ruins-actions-action","Entra nelle rovine
+"
+"evt-ruins-enter","[Siamo arrivati a quella che sembrava un piccola cripta sotterranea|Davanti a noi c'era una specie di cripta dimenticata|Siamo entrati attentamente in un magazzino ben conservato]. [Se questo posto avesse contenuto qualche antico manufatto, sapevo che li avremmo trovati qui|Guardammo silenziosamente la stanza coperta di ruggine]. I nostri passi echeggiarono mentre ci facevamo strada nella cripta."
+"evt-ruins-enter-action","Esplora la cripta"
+"evt-ruins-hint-ice","Il metallo era _freddo _ al tatto. [Ma che cosa interessante|Ci deve essere qualche spiegazione scientifica per questo fenomeno|Mi chiedevo se in qualche modo fosse diventato resistente al calore o se ci fosse qualche altra spiegazione].
+
+"
+"evt-steal-animals-1","Una serie di animali idonei sfoggiò davanti a noi. Per quale di questi dovremmo negoziare"
+"evt-outpost-enter","[io|Noi|La spedizione|Il nostro viaggio|Il nostro gruppo] [arrivato|entrato|fermato] nell'avamposto. Siamo stati accolti da uno schiavista e da uno sciamano di corte. [Il posto era sporco|Era un luogo di disperazione e dolore|Il luogo puzzava del lato oscuro dell'umanità|Era un accampamento ben protetto ma mobile|Il campo era pieno di sporcizia|Un acre puzzo di escrementi umani fece lacrimare i miei occhi] e [le gabbie piene di schiavi erano disseminate in tutta l'area|costituito da una serie di gabbie piene di prigionieri intimiditi|numerose gabbie di grandi dimensioni erano piene di persone di ogni genere].
+"
+"it-policebaton-name","Manganello della Polizia"
+"it-policebaton","Un bastone molto robusto, davvero ottimo per picchiare gli umani"
+"it-grenade-name","Bomba a Mano
+"
+"it-grenade","Una scatola di metallo a forma di limone che fa BOOM se la lanci contro Umani.
+"
+"it-banana-name","Banana"
+"it-banana","Il cibo glorioso degli Dei, portava Scimmie a volte, ad incredibili imprese di attività fisica. Non adatto per il consumo da parte di esseri Umani."
+"zn-roamingNatives-name","Raccoglitori Umani"
+"it-philosophersstone-name","Pietra Filosofale"
+"it-philosophersstone","Il bene più prezioso di Athena: un antico artefatto di Chiaroveggenza."
+"anm-warhog-title","Cinghiali da Guerra"
+"anm-warhog","I Cinghiali da Guerra delle Scimmie sono famigerati  per essere feroci bestie da caccia. Alcuni dicono che possono sentire l'odore di un Umano a un miglio di distanza."
+"pl-beastMaster-title","Comandante delle Bestie"
+"pl-beastMaster","I Comandanti delle Bestie possono ""costringere"" qualsiasi animale a superare i suoi limiti fisici. E non sarebbero mai andati in campagna senza i loro fidati Cinghiali da Guerra, che hanno allevato sin dalla nascita."
+"evt-harbor-recruit-beastMasterWarhog-action","Comandanti delle Bestie e Cinghiali da Guerra"
+"evt-harbor-recruit-beastMasterWarhog-1","Potremmo usare l'aiuto del [Comandante delle Bestie e i Cinghiali da Guerra| esperto addestratore di animali e della lealtà della bestia|domatore di bestie e del fedele cinghiale|coppia dinamica|abbinamento efficiente] e li abbiamo accolti nel nostro team.
+"
+"evt-steal-animals-action","Compra animali da soma"
+"evt-steal-animals","Abbiamo chiesto all'avamposto di fornirci un animale da soma adatto."
+"evt-village-steal-animal","[Abbiamo chiesto un animale come tributo al Grande Imperatore Scimmia|Abbiamo costretto lo schiavista a fornirci uno dei suoi animali|Lo schiavista era abbastanza impressionato da conferirci un animale|L'animale a noi fornito sembrava essere l'unica riserva di valore che avevano|Lo schiavista ingoiò il suo orgoglio e cedette alle nostre richieste|Lo schiavista ci stava chiaramente detestando per aver preso uno dei suoi animali]. Noi [chiamammo|nominanno|soprannominammo|decidemmo di chiamare] la bestia $name."
+"it-whisky-ape-name","Grappa alla Banana"
+"it-whisky-ape","Distillata secondo la Legge della Purezza delle Scimmie, questa è una cosa seriamente intensa. Non adatta per il consumo da parte di esseri umani.
+"
+"fxt-outpost-name","Avamposto delle Scimmie
+"
+"evt-outpost-init-action","Entra nell'Avamposto Commerciale delle Scimmie"
+"evt-village-human-main-0","Gli abitanti del villaggio erano intimoriti dalla nostra presenza. I genitori nascondevano i loro figli e il vecchio del villaggio tremava.
+"
+"evt-village-human-main-1","Gli Umani ci guardarono incantati. Sapevano che una figura di grande potere era in piedi davanti a loro.
+
+"
+"evt-village-human-main-2","Gli Umani si avvicinarono a noi con un atteggiamento cauto."
+"evt-village-human-main-3","Gli Umani non sembravano temerci molto. Il loro comportamento era quasi... dispettoso"
+"evt-village-human-main-4","Gli Umani erano ostili. Alcuni di loro stavano addirittura osando portare armi in nostra presenza.
+"
+"evt-expedition-done-WoA-1","Dopo [settimane di incursione|un tale sforzo|tutto questo lavoro], [euforia|grande gioia|straordinario orgoglio|enorme sollievo] mi ha sopraffatto. Sapevo che [il mio|questo|il] nome $name [sarebbe stato ricordato per sempre|non sarebbe stato dimenticato|sarebbe stato sinonimo di vittoria|sarebbe stato scritto a lungo dopo aver lasciato questa vita|sarebbe stato rispettato presso la corte Imperiale|sarebbe andato in fondo negli annali della storia delle Scimmie]."
+"evt-goal-explore-WoA-finish","[La maestosa Città d'Oro è cresciuta al di sopra del suo ambiente|La Città d'Oro incombeva sopra a tutti|Eravamo finalmente arrivati alla Città d'Oro|Il paesaggio esotico si complimentò con la straordinaria Città d'Oro|Una meraviglia dell'architettura della Scimmia, la Città d'Oro era nostra da conseguire|La nostra destinazione finale ci ci aveva deriso con la sua gloria d'oro|La città dell'oro ci ha incitato alla vittoria|L'obiettivo ci è stato presentato sotto forma di una Città fatta d'Oro|C'era la Città d'Oro, il massimo dell'ingegneria della Scimmia]."
+"evt-expedition-done-WoA-action-1","[Gloria alle Scimmie!|Onore!|Per l'Imperatore! Per la Fama e la Gloria!|Avanzando facendo la Storia!|La Fama Infinita Attende! |Fortuna e Gloria!]
+"
+"evt-goldenCity-approach-action","Avvicinati alla Città d'Oro"
+"fxt-goldenCity-unearthed-name","Città d'Oro dell'Impero
+"
+"evt-goal-explore-WoA-finish-action","Entra nella Città d'Oro
+"
+"zn-fleeingHumans-name","Umani in fuga
+"
+"evt-peaceful-enslavement-action","Richiedi un tributo di prigionieri"
+"evt-peaceful-enslavement-fail","Come decretato dalle nostre antiche tradizioni, abbiamo dichiarato una grande Battuta di Caccia. Grande gloria ci attese come se avessimo avuto successo. Gli Umani furono costretti a fuggire nella natura e gli venne dato un vantaggio...la caccia era aperta."
+"evt-peaceful-enslavement-success","Gli Umani si sottomisero alla nostra volontà, realizzando che, offrendo una parte della loro comunità a noi come tributo, era la migliore possibilità di libertà per gli altri. Abbiamo riposto frettolosamente il tributo Umano nel nostro carro. Il resto degli Umani non poteva guardarli negli occhi, per il loro pudore, era troppo grande.
+"
+"evt-forceful-enslavement-action","Chiamata per una gloriosa caccia
+"
+"evt-village-huntSlaves","Valutammo gli Umani e decidemmo che avrebbero reso un degno tributo al Grande Imperatore Scimmia. Dovremmo seguire le nostre antiche tradizioni e dichiarare una Grande Caccia o provare a sottometterli in un modo molto meno prestigioso?
+"
+"evt-peaceful-enslavement-fail-2","Potevano vedere attraverso le nostre minacce e menzogne e decisero di rischiare e prendere posizione.
+"
+"evt-shrine-14-mod","Annusai l'aria. [Come una casa pubblica|Come le feci putride|Puzza fetida, come i bassifondi della Città delle Scimmie in estate]. O un fosso lungo la strada. Poi vidi i vapori, ampie fasce ripugnanti di fumi viticci che si elevavano al di fuori delle piccole fessure del pavimento.
+
+"
+"evt-buy-moonstone-title","Acquista Pietra Lunare 
+"
+"evt-buy-moonstone","Convincemmo l'avamposto a venderci il tributo necessario per entrare nella Città d'Oro locale.
+
+"
+"evt-stoneCircle-revealSlaver-action","Rivela gli avamposti"
+"evt-pacify-success","Riuscimmo a lenire le loro preoccupazioni con parole dolci. La folla aveva fatto marcia indietro...per ora.
+"
+"evt-pacify-action","Calma la folla"
+"evt-negotiate-success","Dopo un appassionato capolavoro retorico, gli Umani furono presi alla sprovvista. La folla fece marcia indietro...per ora."
+"evt-negotiate-action","Appello alla ragione
+"
+"evt-show-of-force-success","Ci schierammo in tutto il nostro splendore guerresco, con le armi in mostra. La folla fece marcia indietro...per ora.
+"
+"evt-show-of-force-action","Spettacolo di forza"
+"evt-seal-slaves-title","Attingi alla forza vitale Umana"
+"evt-seal-slaves","Gli Umani diedero la loro forza vitale come un tributo alla Città d'Oro. Il puro potere del rituale era schiacciante e non dovevi essere uno sciamano di corte per sentire che il cambiamento era letteralmente nell'aria tutto intorno al sito.
+"
+"evt-goldenSeal-slaves","Ci avvicinammo [ad una misteriosa|una grande|una apparentemente antica |immemore] struttura che sembrava essere parzialmente realizzata in oro puro. Assomigliava molto a uno degli antichi siti che raccoglievano tributi per le città dorate. [Con qualche sforzo saremmo stati in grado, fiduciosamente, di attivarla|Credo che con la forza vitale degli Umani avremmo potuto metterla in moto|Con un po'di preparazione e tempo saremmo sicuramente stati in grado di attivarla]. Tuttavia, esattamente quello che sarebbe successo all'attivazione rimaneva un mistero."
+"evt-goldenSeal-1-slaves","[Ci è voluto un po' tempo, ma alla fine|Dopo molte ore di rituale|Dopo tanto sforzo] eravamo [abili|abili abbastanza] per [soddisfare|sbloccare|attivare] il meccanismo [insolito|misterioso|grande|apparentemente antico|enigmatico]. All'improvviso un'enorme colonna di luce [emerse|apparse|si alzò|si estese] dal sigillo.
+
+"
+"pl-berserker-title","Berserker
+"
+"pl-berserker","Guerrieri ossessionati dalla Grappa alla Banana. Approcciare con cura
+"
+"pl-vanguard-title","Avanguardia"
+"pl-vanguard","I membri dell'Avanguardia Imperiale sono esploratori d'élite addestrati alla guerra di montagna.
+"
+"it-lokiGun-athena-name","Ira degli Antichi"
+"it-lokiGun-athena","L'arma personale di Athena è un antico artefatto dal potere sfrenato.
+"
+"narrator-1","Come sempre [, i nobili|, i soggetti|, gli adulatori] dell'Imperatore Scimmia sono venuti a presentare una petizione [Sua Maestà|Sua Magnificenza|il loro Signore Supremo]. Cosa ti fa pensare che tu possa anche valere il Suo tempo?"
+"narrator-2","Sei un piccolo nobile, un nessuno. Devi farti un nome! Vai a visitare le Città d'Oro dell'Impero e impressiona i loro sovrani!
+"
+"narrator-3","Sulla tua strada, razzia gli Umani patetici, catturali e offrili come tributo alle Città Dorate. Ma sii consapevole, i tuoi rivali sono sempre vicini."
+"narrator-4","Ora vattene, caccia e saccheggia. Se ritorni ricco e famoso, potresti persino diventare parte della sua cerchia ristretta. Per l'Imperatore Scimmia!
+
+"
+"outro-pyramid","Città d'Oro
+
+"
+"cl-celebration-audience-10","[Sposami!|Che bello!|Ti amo!|Scimmie Uomini e Donne che lavorano insieme!]
+"
+"cl-celebration-audience-11","[Quel bufalo è enorme!|Quindi è così che sono fatti i bufali!|Guarda quel bufalo!|Come si chiama quel bufalo?]"
+"cl-celebration-audience-1","[Guarda quel|Che|Quello è un] asino [carino|leale|fidato|coraggioso]!"
+"cl-celebration-audience-2","[Che cane fedele!|Mi piacerebbe avere un cane come quello!|Questo cane merita la sua medaglia!]"
+"cl-celebration-audience-3","[Riesco a sentire l'odore dell'alcol da qui!|Vuoi condividere un po 'di quella Grappa alla Banana?|È quella una bottiglia di Grappa alla Banana?]
+"
+"cl-celebration-audience-4","[Che signora!|Una Scimmia donna, davvero?|Lascia l'avventura agli uomini Scimmia!|I miei occhi mi ingannano, una Scimmia donna?|Ritorna in biblioteca!|I tempi stanno cambiando.|Ebbene, questa è una piacevole sorpresa per il gentil sesso.|Lei è gloriosa.|Dovrebbe conoscere il suo posto!|I tempi stanno sicuramente cambiando per il meglio. | Non male, per una donna Scimmia.|Lei è un modello!]
+"
+"cl-celebration-audience-5","[Un selvaggio!|Non è civilizzato!|Perché portarlo qui?|Un bruto!|Sa parlare?]"
+"cl-celebration-audience-6","[Come mai quella cosa è ancora viva?|Non mi piace quella cosa!|Che orrore!|Cos'è quello?!|Può parlare?|Sono spaventata!|Quella cosa appartiene allo zoo!|Quanto disumana è quella cosa!]
+"
+"cl-celebration-audience-7","[Tutto solo?!|Dove sono gli altri?|Forse hanno trionfato da soli?|Ti fa chiedere cosa sia successo al resto dell'equipaggio...|Avrebbe dovuto essere un viaggio solitario|Il resto della squadra è morto?|Solo una Scimmia?]
+"
+"cl-celebration-audience-8","[Maestro degli animali!|Devono piacergli gli animali.|Apprezza gli animali più delle Scimmie.|Probabilmente può anche parlare agli animali.]
+"
+"cl-celebration-audience-9","[Perché così tanti soldati?|Devono apprezzare un buon soldato al loro fianco. |Stanno ritornando dalla guerra?]
+
+"
+"cl-celebration-audience","[Bravo|Sì|Vorrei essere stato te|Mi ispiri|Fantastico|Splendido| Eroico|Meraviglioso|Fammi vedere|Gli Antichi salvano l'Imperatore|Per l'Impero|Per l'Imperatore|Per l'Imperatore e la specie delle Scimmie|Incredibile|Squisito|Che giornata|Così coraggioso|Che piacere|Straordinario]!
+"
+"cl-celebration-party-1","[Tempo di festeggiare con un bevuta!|*bifolchi*|Alla salute!| Facciamoci una Grappa di Banana!]
+"
+"cl-celebration-party-2","[Sto solo facendo il lavoro dell'Imperatore!|Ti benedico!|Voglio solo aiutare!]"
+"cl-celebration-party-3","[Qualunque cosa.|Non mi interessa nemmeno.|Spero che tu sia felice ora.|Ti senti come un eroe?]
+
+"
+"cl-celebration-party-4","[Perché tutte queste Scimmie mi stanno guardando?|Questo non sembra sicuro.|Tutto questo per me?|Questo richiederà un po' di tempo per abituarsi.|Troppe Scimmie.]
+"
+"cl-celebration-party-5","[Finalmente, Scimmie civilizzate di nuovo.|Rilassatevi tutti, sono tornato.| Tutto sembra così diverso.|Contento di essere tornato.]
+"
+"cl-celebration-party","[Grazie!|Sono sopraffatto!|Così gentile da parte vostra!|Grazie!|Oh, questo è semplicemente superbo!|Che meraviglia!|Questo è meraviglioso!]"
+"pk-goodReputation-title","Presenza Imponente
+"
+"evt-harbor-recruit-soldierBritish-action","$name il predone"
+"evt-harbor","[Presto, quella mattina|L'aria era fresca e sapeva di sale come|Piena di aspettativa|Aspettando impazientemente l'imminente irruzione|Dopo essermi alzato al sorgere del sole|Dopo una buona notte di riposo|Dopo essere stato troppo eccitato per dormire] Io [arrivai alle banchine| mi feci strada verso le banchine|abbordarono la nave|immagazzinarono il mio equipaggiamento sulla nave|Arrivai al porto|Corsi verso il porto|Mi affrettai ad arrivare al porto| feci in fretta e arrivai al molo]. [L'equipaggio aveva i preparativi da fare|Il capitano doveva ancora arrivare|C'erano ancora alcuni preparativi da fare|Abbiamo avuto un po' di tempo prima che la nave fosse pronta], [quindi, ho preso un'ultima tazza di Grappa di Banana| ho trascorso quindi il mio tempo sul ponte, godendomi la fresca brezza|quindi, mi sono seduto sul molo e ho aspettato|quindi, ho visto se c'era qualcosa che potevo fare|quindi, ho eseguito un rituale di viaggio veloce|quindi, ho immaginato cosa ci potesse essere oltre l'orizzonte|quindi, ho provato un po' di piacere ipotizzando che il mio nome venisse sussurrato in tribunale|quindi, ho immaginato come sarebbe il mio viso su una statua onoraria].
+"
+"evt-harbor-recruit-1","[Ero orgoglioso di vederlo|Come fossi una delle più famose Scimmie in tribunale,|fui lieto di testimoniare|La notizia delle mie gloriose incursioni e tributi si era diffusa, quindi non fui sorpreso di assistere a ciò] [la mia fama si era diffusa tra i cortigiani e i sicofanti imperiali|le storie delle mie gesta avevano attirato ogni sorta di personalità incuriosite|i racconti delle mie precedenti incursioni e dei miei tributi avevano attirato una certa attenzione|l'imbarco della nostra nave aveva attirato abbastanza la folla]. [Molte nuove reclute si presentarono,|Sono stato avvicinato da diverse idonee Scimmie che erano] [disposte ad accompagnare il mio gruppo di incursori nell'ignoto|intraprendenti abbastanza da unirsi alla mia causa|desiderose del saccheggio e della gloria|curiose di saperne di più su le sei Città Dorate dell'Impero|per sapere la verità delle leggende che circondano le mie gesta|affamate di gloria e di saccheggio]. Chi volevo _reclutare? _"
+"evt-harbor-recruit-2","[Questa spedizione potrebbe potenzialmente sollevarmi al primo posto e sopra i miei rivali|Era una gara testa a testa per il primo posto e l'invidiabile premio delle grazie dell'Imperatore Scimmia|Le mie passate razzie e tributi avevano avuto un discreto successo e sentivo che presto avrei visto la mia faccia su una statua onoraria]. [Parole a questo riguardo, si erano sparse nella Capitale Imperiale|Le mie gesta erano ben conosciute|La mia reputazione mi precedeva], [e molte scimmie sono venute a vedere la nostra nave|attirando alcune scimmie intraprendenti alla mia causa|così tante nuove reclute sono arrivate alla nave, desiderose di unirsi al gruppo di incursori]. Chi volevo _reclutare? _
+"
+"evt-harbor-recruit-3","[La mia reputazione era ancora scarsa, ma|Dopo gli sforzi delle mie incursioni passate, sono stato lieto di] [ho notato un lieve interesse nelle nostre gesta|più Scimmie hanno iniziato a mostrare un interesse per la nostra nave]. Chi volevo _reclutare? _
+"
+"evt-harbor-select","[Appena in tempo|Dopo tanto tempo|La mia adrenalina stava pompando come|Il mio cuore sobbalzò con trepidazione appena udii che] [la|nostra] [nave|vascello] era [pronta|preparata|innescata] [per la partenza|per salpare|per lasciare il porto|per andare avanti| per dirigersi verso le rive lontane|per immettersi nel mare].
+
+
+
+
+"
+"evt-harbor-recruit-mountainTrooper-action","$name l'avanguardia"
+"evt-village-recruit-bloodrider-action","$name il Cavaliere di Sangue"
+"evt-village-recruit-bloodrider","$name Il Cavaliere di Sangue si unisce al gruppo
+
+"
+"evt-harbor-recruit-berzerker-action","$name il berserker"
+"evt-harbor-recruit-berzerker","$name il berserker si unisce al nostro gruppo."
+"pk-whiskyIncrease-1-title","Fanatico della Grappa di Banana 1 "
+"pk-whiskyIncrease-1","La sanità mentale acquisita aumenta quando si beve la Grappa di Banana.
+"
+"pk-whiskyIncrease-2-title","Fanatico della Grappa di Banana 2 "
+"pk-whiskyIncrease-3-title","Fanatico della Grappa di Banana 3 "
+"pk-whiskyIncrease-4-title","Fanatico della Grappa di Banana 4 "
+"bonus-whisky","Lucidità della Grappa di Banana"
+"pl-native-starting-shaman-title","Sciamano di Corte"
+"pl-native-starting-shaman","Uno degli stretti consiglieri dell'imperatore Scimmia. Pratica antichi riti e la tradizione dell'alchimia (possibilità di ottenere sanità mentale quando si usano i funghi)"
+"evt-village-recruit-shaman-action","$name lo sciamano"
+"base-sanity","Morale"
+"help-sanity","La motivazione e il livello di soddisfazione del tuo gruppo d'incursione. Scende a zero e inizieranno a verificarsi eventi sempre più catastrofici.
+"
+"base-standing","Dominio
+"
+"help-standing","Quanto sono sottomessi gli Umani di questa regione alla tua autorità. Permettetele di abbassarsi troppo e loro potrebbero diventare ribelli.
+"
+"pl-native-starting-scout-title","Esploratore Imperiale"
+"world-adjective","[Stato cliente|Provincia imperiale|Città Stato|Enclave Imperiale| Regno del Cliente|Regno Tributario|Stato Vassallo|Regno Vassallo|Città Magnifica|Grande Città|Grande Colonia|Colonia ricca|Grande Provincia|Provincia Ricca|Enclave militare|Enclave Mercantile|Enclave scientifica|Setta dello sciamano|Terreni da Caccia] del [Pretore|Console|Proconsole|Governatore|Generale|Signore della Guerra|Maestro della Guerra|Autarca|Esarca|Maestro|Sommo Sacerdote|Saggio|Ministro|Rappresentante|Signore Supremo| Supervisore|Reggente|Tetrarca|Triarca|Pentarca]
+[Appius|Aulus|Caeso|Caligula|Caracalla|Commodus|Decimus|Domitianus|Elagabalus|Faustus|Gaius|Gnaeus|Herius|Hostus|Lucius|Macharius|Mamercus|Manius|Marcus|Marius|Mettius|Minatius|Nero|Nerva|Nonus|Novius|Numerius|Olus|Opiter|Ovius|Paullus|Pescennius|Pompeius|Postumus|Publius|Pullo|Quintus|Salvius|Septimus|Sertor|Servius|Sextus|Spurius|Statius|Sulla|Tiberius|Titus|Tullius|Tullus|Vibius|Volesus|Vopiscus|Vorenus]
+"
+"gol-goldenTemple-arctic","Una Città d'Oro può essere trovata in questa regione.
+
+"
+"gol-goldenTemple-buried","Contiene una Città d'Oro occultata da un'illusione sciamanica.
+"
+"gol-goldenTemple-moonStone","Una Città d'oro può essere trovata in questa regione.
+"
+"empty-name",""
+"evt-village-enter-neutral","[Gli abitanti del villaggio ci osservarono con cautela mentre il nostro gruppo arrivava al loro insediamento.|Quando arrivammo, il villaggio vibrava di attività, ma si fermò non appena gli Umani avvistarono il nostro gruppo.] [Ci avvicinammo apertamente a loro e ci fermammo all'ingresso del villaggio|Siamo rimasti all'ingresso del villaggio e abbiamo considerato le nostre possibilità con queste persone]."
+"evt-ship-arrival","[Stavo finendo i miei preparativi mattutini come 
+|Ero profondamente assorto nei miei studi su quest'area come|Questa mattina presto|Il viaggio attraverso l'oceano ha portato molti avvistamenti meravigliosi di vita marina prima|I miei pensieri erano focalizzati sulla prossima incursione fino a|Dopo un viaggio inaspettatamente tranquillo| Non oso raccontare le prove e le tribolazioni del viaggio, ma fortunatamente|Dopo settimane di viaggi|Dopo troppi giorni salati in mare|Dopo essere a malapena sopravvissuto ad uno dei temporali più mostruosi che abbia mai visto su una nave|I mari aperti su cui navigare erano gloriosi ed fui un po' triste quando|Dopo settimane con cibo cattivo e senza banane|Proprio come pensavo, non saremmo mai riusciti a trovare un passaggio attraverso queste acque|Nella fitta nebbia di un mattino piovoso] [abbiamo raggiunto le terre del sovrano locale|abbiamo finalmente raggiunto la riva della nostra area di incursione|siamo arrivati alla nostra area di incursione|Una linea costiera si elevò nella nebbia mattutina]. [La terra era aperta davanti a noi, vasta e selvaggia|Il paesaggio straniero ci fece cenno di esplorare|Ero curioso di scoprire che tipo di pericoli ci stavano aspettando qui|Eravamo arrivati, ed era tempo di andare avanti|Sapevo che questo posto conteneva la chiave per la mia avanzata in tribunale|Sapevo che avevo bisogno di trovare e impressionare il sovrano locale|Sapevo che avevo bisogno di trovare la Città d'Oro].
+"
+"evt-village-enter-forsaken","[Il villaggio era deserto.|Uno spettacolo agghiacciante: era come se gli abitanti di questo villaggio non avessero mai vissuto qui. Non c'era un uomo, una donna o un bambino in giro.|Il villaggio era completamente abbandonato.] [Era ovvio che la gente se ne fosse andata di corsa. | Sembrava un posto dimenticato da tempo, e presto sarebbe diventato indistinguibile dal paesaggio circostante.] Ho cercato ma non ho trovato nulla di utile.
+
+"
+"evt-postNarrative-extra-1","La tensione delle $his incursioni aveva lasciato cicatrici sul $his [corpo|mente|anima] e $his famiglia aveva attestato che $he era  ormai un'ombra della persona che conoscevano una volta.
+"
+"evt-postNarrative-extra-2","
+$he usò $his ricchezza accumulata per impressionare la nobiltà e  le Scimmie comuni, fecero lo stesso organizzando uno dei più grandi festival con feste e giochi che l'Impero abbia mai visto.
+"
+"evt-postNarrative-extra-3","Sebbene nella società funzioni in modo rudimentale, $he trovava impossibile creare nuove amicizie, tanto meno ottenere alleati sociali e politici.
+
+"
+"evt-postNarrative-extra-4","$his incursioni avevano dato $him una prospettiva inestimabile sulla fragilità della vita, e così $he ha fatto uno sforzo ogni singolo giorno per [migliorare la sua posizione|farsi un nome per se stesso | guadagnare vantaggio sui nobili dell'Impero|accumulare ricchezza|conquistare nuovi alleati|conquistare i favori della Corte Imperiale].
+"
+"evt-postNarrative-extra-5","$he ottenne notorietà della zona per aver costruito un vasto habitat per i vari strani animali che $he aveva [ottenuto tramite circostanze misteriose|riportò a casa dopo $his ultime incursioni]."
+"evt-postNarrative-extra-alcoholic","$He[Si è sempre assicurato di portare una bottiglia di Grappa di Banana con $him ovunque $he andava|sentiva che la Grappa di Banana permetteva $him di  affrontare il trauma dell'essere mediocre|credeva che la Grappa di Banana fosse necessaria per essere veramente in grado di esprimere se stesso]."
+"evt-postNarrative-extra-animalName","Un habitat umano recentemente scoperto è stato denominato in $his onore."
+"evt-postNarrative-extra-bipolar","Durante la $his vita $he ha subito settimane e mesi di fasi maniacali in cui $he si sarebbe esibito [energia incredibile, seguita da periodi ugualmente lunghi di depressione debilitante|variazioni estreme dell'umore].
+"
+"evt-postNarrative-extra-cookCanibal","$his specialità era un piatto [fruttato|misto di funghi|carne speziata|strana carne]. La gente era venuta da tutte le parti dell'Impero per mangiarlo eppure nessuno aveva ancora scoperto gli ingredienti segreti."
+"evt-postNarrative-extra-cookPyromaniac","purtroppo il posto è andato a fuoco in circostanze sospette. $name non ha mai recuperato [finanziariamente|dal punto di vista della reputazione|emotivamente] né mentalmente da quella perdita."
+"evt-postNarrative-extra-cookSoup","$his specialità alquanto famosa, era una zuppa esotica che $he sosteneva di aver preparato con l'aiuto dei più famosi chef delle Città Dorate.
+
+"
+"evt-postNarrative-extra-firstChildName","$he Chiamò $his primo figlio dopo che il [leader delle incursioni che determinò $his vita| sovrano di una delle Città Dorate che $he incontrò durante $his viaggi|nome della nave che portò $him a casa].
+
+
+"
+"evt-postNarrative-extra-kleptomaniacPoor","$He è stato esiliato dalla corte dopo che $he [ha tentato di recuperare i reperti che le nostre incursioni| ha tentato di rubare alcuni dei prigionieri Umani che $his gruppo di razzie | ha tentato di rubare alcuni dei reperti che il suo gruppo di razzie] ha riportato tutto indietro.
+"
+"evt-postNarrative-extra-kleptomaniacRich","$He Viveva nel lusso di un certo [malsano | famigerato | pomposo] livello, sebbene la fonte esatta delle $his ricchezze non era stata mai esattamente rivelata.
+"
+"evt-postNarrative-extra-nativeFashion","$he Non ha smesso di indossare $his abiti eccentrici e ha persino ispirato un [nuovo stile di calzature | nuovo diverso copricapo| nuovo marchio di abbigliamento da incursione | esplosione di moda] durante una particolare [estate | inverno | stagione].
+"
+"evt-postNarrative-extra-noLoyalty","Più tardi $he divenne un forte critico delle $his spedizioni di razzie e scrisse [molti |un|un po'] [diffuso pesantemente|abbastanza sconosciuto] [articoli|libri] riguardo alla possibilità, che forse gli Umani erano più che solo patetici, a malapena-animali senzienti. È stato pesantemente criticato per le sue opinioni eretiche.
+
+
+
+"
+"evt-postNarrative-extra-racistChange",""
+"evt-postNarrative-extra-royalName-1","[$He fu formalmente riconosciuto come un nobile dalla Corte Imperiale e vestì $his il suo nuovo titolo con grande orgoglio | $He Declinò un titolo ufficiale dalla Corte Imperiale]."
+"evt-postNarrative-extra-royalName-2","$He era afflitto da [implacabili | infiniti] incubi sulle [orribili | inspiegabili | oscure | cattive] cose che $he aveva fatto.
+"
+"evt-postNarrative-extra-royalName-3","$he Non ha mai detto un'altra parola su cosa $He avesse fatto durante $his viaggi."
+"evt-postNarrative-extra-royalName","Un/a reale [nave| vascello|ponte|strada|Habitat umano] fu chiamato dopo $him."
+"evt-postNarrative-extra-soldierLife","$he Ha ricevuto una medaglia militare per aver [salvato la vita di un compagno Scimmia ignorando il pericolo per la $his vita|catturato un numero incredibilmente alto di Umani|protetto un villaggio Umano ribelle da solo|marciato per tre giorni di fila senza dormire per consegnare un pezzo importante di intelligenza].
+
+"
+"evt-postNarrative-extra","$He rimase in contatto con la maggior parte degli altri sopravvissuti e comunicava mensilmente fino alla $his morte anni dopo. Sono rimasti alleati nel gioco del progresso sociale."
+"evt-postNarrative-extraCampaign","$name venne restituito a [la Capitale Imperiale|il cuore dell'Impero|le colline ondulate delle terre del cuore dell'Impero|le pacifiche vallate del cuore dell'Impero|le montagne mozzafiato delle terre centrali dell'Impero|la lussureggiante costa smeraldo delle terre centrali dell'Impero|il luogo $he chiamava casa|$his amati|casa|$his città natale|$his famiglia] in trionfo. La statua rendeva $him davvero giustizia, eppure $he non ancora era venuto a riposare. Vividi incubi di una terra lontana tormentavano $him ogni notte. $He non sapeva come, ma era come se una nuova consapevolezza si stesse gradualmente formando nella $his coscienza. In qualche modo $he sapeva che $he avrebbe dovuto salpare ancora una volta, e sarebbe stato $his ultimo viaggio. Questa volta $he non avrebbe cercato la fama, ma qualcosa di molto più grande ...
+"
+"evt-postNarrative-lateLife-alcoholicDeath","$He [morì prematuramente dopo molti anni di bevute pesanti|fu ucciso in una rissa tra ubriachi|fu assassinato dopo una rissa tra ubriachi contro l'Imperatore delle Scimmie | fu ucciso da un amico dopo una discussione tra ubriachi|morì di qualche sconosciuta malattia legata alla Grappa di Banana dopo aver passato l'intera giornata a bere|affogato in mare alla luce dell'alba di una fredda giornata autunnale|ha vissuto fino ad una matura vecchiaia, nonostante $his sostanzioso bere].
+"
+"evt-postNarrative-lateLife-familyDeath","$He [morì tra le braccia dei $his fedeli servitori |esalò $his ultimo respiro circondato dalla $his numerosa famiglia e dagli alleati].
+
+"
+"evt-postNarrative-lateLife-genericDeath","$He visse una lunga [felice | umile | tranquilla] vita e morì alla presenza [della $his famiglia | della $his moglie calcolatrice | dei $his nipoti ingrati | di uno sciamano di corte | del $his fedele animale domestico].
+"
+"evt-postNarrative-lateLife-lepidopterophobiaDeath","Anche attraverso tutte le avventure $he non ha mai ceduto alla sua paura per le [farfalle | grandi falene], [$his vita da allora è stata interrotta da | $he è morto in] un tragico incidente durante [caccia | escursioni | saccheggi]. $he era così inibito dalla fobia, che [divenne confuso | perse il controllo] e si gettò da una scogliera.
+"
+"evt-postNarrative-lateLife-missionaryDeath","$He visse una [umile|tranquilla|modesta|semplice] vita e morì [avendo servito l'Imperatore Scimmia|nel culto dell'imperatore Scimmia|in presenza dei $his alleati].
+"
+"evt-postNarrative-lateLife-nativeDeath","$He [morì di Malaria|morí per uno sfortunato attacco da parte di un elefante|durante un assalto da parte del bestiame| è stato sfortunatamente incornato da un maiale selvatico| morì per essere stato dilaniato da una tigre mentre prendeva l'acqua dallo stagno morì pacificamente circondato da $his alleati].
+"
+"evt-postNarrative-lateLife-paranoidDeath","[$He aveva trascorso gli ultimi anni della $his vita in prigione dopo aver ucciso un esattore per presunta estorsione|$his ubicazione nel corso degli ultimi anni è rimasta sconosciuta, dovendo scomparire una sera|L'ultima persona che ha visto $him ha descritto $him come un nudista che correva in una strada abbaiando come un Umano|$name ha trascorso gli ultimi anni della $his vita in un sanatorio, a causa di aver aggredito $his signore locale sotto l'accusa di venerare un culto tentacolare|Si diffusero i pettegolezzi della $his caduta nella pazzia|I pettegolezzi suggerivano che $he divenne un recluso scrivano ossessionato da certe Divinità immemorabili]."
+"evt-postNarrative-lateLife-seventhWorldDeath","Durante $his ultima vita, $he è diventato ossessionato da [ricorrenti|ossessionanti] [sogni| pensieri|nozioni|visioni|incubi] su una [dimenticata|rimanente|nascosta] [Città d'Oro di antica origine|settima spedizione]. [$he È scomparso senza lasciare traccia |$he Non è stato più visto o sentito di nuovo]."
+"evt-postNarrative-lateLife-soldierDeath","$He morì in una guerra in cui [la sua squadra fu decimata per disobbedienza | $he fece parte di numerose vittorie prima di essere catturato e giustiziato da un rivale signore della guerra | $he sacrificò la propria vita per il bene dell'Impero | $he si era opposto $his ordini, e fu conseguentemente pugnalato a morte da tutta la sua squadra |$he aveva avanzato incautamente, quasi incline al suicidio].
+"
+"evt-postNarrative-middleLife-1","Dopo essere ritornato, $name [viaggiò attraverso le province Imperiali e i regni sottoposti | visitò molte delle proprietà dell'Impero] [parlando | parlando pubblicamente | dando conferenze] riguardo a quelle famose incursioni.
+"
+"evt-postNarrative-middleLife-2","$name tornò a $his casa e visse una vita isolata. Dopo alcuni anni $he ha rilasciato $his memorie, che [però non hanno ottenuto molta attenzione da parte dell'opinione pubblica|non sono riuscite a catturare l'immaginazione pubblica| sono diventate di grande successo e permisero $him di vivere una vita finanziariamente agiata| diventarono immediatamente di successo e hanno portato $him sulla bocca della corte] 
+"
+"evt-postNarrative-middleLife-3","$name rimase nelle terre del cuore dell'Impero e mai più tornò alla sua vecchia casa.
+"
+"evt-postNarrative-middleLife-4","$name [tornò alla $his terra natia e non mise di nuovo piede nelle terre del cuore dell'Impero | aveva sviluppato una passione per entrambe le culture e viaggiò più volte nella $his vita tra la gloriosa Capitale Imperiale e $his umile patria]."
+"evt-postNarrative-middleLife-5","$name forgiò [un ruolo|una carriera] nei ranghi militari.
+
+"
+"evt-postNarrative-middleLife-6","$name ritornò alla Capitale Imperiale e aprì [un piccolo | un grazioso| un umile | un esclusivo] [ristorante | mensa dei poveri | stabilimento alimentare], che $he ha condotto per molti anni.
+
+"
+"evt-postNarrative-middleLife-7",""
+"evt-postNarrative-middleLife","$name ritornò a casa [e iniziò a lavorare alla $his vecchia professione di nuovo | ma la condizione fisica ha proibito $him di riprendere mai una professione regolare di nuovo | e ha finito creando una serie di testi didattici riguardo all'Arte dell'incursione""| e visse con il denaro di una ricca consorte che $he sposò poco dopo | e divenne il sindaco della $his città | e divenne consigliere presso la Corte Imperiale | e aprì una piccola biblioteca cercando di diffondere più conoscenza riguardo al mondo | e dopo un po' di fama iniziale svanì nelle ombre della storia]. ""
+
+"
+"evt-postNarrative-special-1","$name ritornò [alla Capitale Imperiale | al cuore dell'Impero | alle colline ondulate delle terre del cuore dell'Impero | alle pacifiche vallate del cuore dell'Impero | alle montagne mozzafiato delle terre centrali dell'Impero | alla lussureggiante costa smeraldo delle terre centrali dell'Impero | al luogo che $he chiamò casa | dai $his cari |a casa | alla $his città natale | dalla $his famiglia] in trionfo. $He visse una [mediocre | senza eventi | insoddisfacente] vita, e fino al $his giorno di morte $he non avrebbe dimenticato come $he aveva fallito la missione finale per diventare il Prescelto dell'Imperatore Scimmia.
+"
+"evt-postNarrative-special-2","$name ritornò [alla Capitale Imperiale | al cuore dell'Impero | alle colline ondulate delle terre del cuore dell'Impero | alle pacifiche vallate del cuore dell'Impero | alle montagne mozzafiato delle terre centrali dell'Impero | alla lussureggiante costa smeraldo delle terre centrali dell'Impero | al luogo che $he chiamò casa | dai $his cari |a casa | alla $his città natale | dalla $his famiglia] in trionfo. $He visse per molti anni. Alcuni furono buoni, altri furono cattivi, ma non fecero risplendere mai la $his stella tanto brillantemente come quando &he navigò intorno al mondo alla ricerca della gloria. $He era così vicino a raggiungere la fama eterna. Fino alla fine $he sarebbe stato ricordato di fallire il suo obiettivo finale."
+"evt-postNarrative-special","$name ritornò [alla Capitale Imperiale | al cuore dell'Impero | alle colline ondulate delle terre del cuore dell'Impero | alle pacifiche vallate del cuore dell'Impero | alle montagne mozzafiato delle terre centrali dell'Impero | alla lussureggiante costa smeraldo delle terre centrali dell'Impero | al luogo che $he chiamò casa | dai $his cari |a casa | alla $his città natale | dalla $his famiglia] in trionfo. [Dopo che | Una volta vhe] [una statua fu modellata a $his somiglianza, $he | $he si era assicurato $his eredità con una splendida statua, $he] si è goduto una vita [lunga | gloriosa | di successo] in corte come la mano destra dell'Imperatore Scimmia stesso, nella consapevolezza che la storia [avrebbe ricordato | mantenuto | considerato] $him [nel più alto ordine | come uno dei grandi | come un primo esempio di un eroe | come un vero eroe | come l'ultimo incursore | senza misura | come il meglio che l'Impero aveva da offrire | come il volto della Corte Imperiale per generazioni | come il più grande | come qualcuno da ammirare | come ispirazione per tutte le altre Scimmie].
+"
+"attack-loki-name-1","Raggio Stabile"
+"attack-loki-name-2","Raggio Difensivo"
+"attack-loki-name","Raggio Alternato"
+"np-malePraenomen","[Appius|Aulus|Caeso|Decimus|Faustus|Gaius|Gnaeus|Herius|Hostus|Lucius|Mamercus|Manius|Marcus|Mettius|Minatius|Nonus|Novius|Numerius|Olus|Opiter|Ovius|Paullus|Pescennius|Postumus|Publius|Quintus|Salvius|Septimus|Sertor|Servius|Sextus|Spurius|Statius|Tiberius|Titus|Tullus|Vibius|Volesus|Vopiscus]"
+"np-femalePraenomen","[Appia|Aula|Caesa|Decima|Fausta|Gaia|Gnaea|Heria|Hosta|Lucia|Mamerca|Mania|Marcia|Mettia|Mino|Nona|Noviua|Numeria|Postuma|Publia|Quinta|Salvia|Septima|Sertor|Servia|Sexta|Spuria|Statia|Tiberia|Titia|Tulla|Vibius|Volusa|Vopisca]"
+"np-maleNomen","[Aelius|Aemilius|Allidius|Alius|Allius|Ampius|Anicius|Annaeus|Annius|Antonius|Arellius|Arius|Atanius|Attiolenus|Audius|Aufidius|Aurelius|Avilius|Babullius|Bombius|Braundutius|Caecilius|Caelius|Caesonius|Calpurnius|Caltius|Calvius|Castricius|Cerrinius|Cincius|Cispius|Claudius|Clodius|Cluvius|Cocceius|Cottius|Cornelius|Cornius|Cossinius|Cossutius|Crassicius|Crepereius|Critonius|Decumius|Didius|Diobellius|Domitius|Egnatius|Erucius|Fabius|Fabricius|Felsonius|Flaminius|Flavius|Fulvius|Furius|Gerillanus|Gerraeus|Gessius|Granius|Heius|Helvius|Horarius|Hordionius|Hostilius|Iulius|Laberius|Labienus|Laelius|Laronius|Licinius|Livius|Loisius|Lollius|Lucceius|Lucretius|Luxius|Maecius|Magulnius|Mamilius|Marcius|Marius|Memmius|Mescinius|Messius|Mevius|Mindius|Mundicius|Naevius|Nerius|Nimmius|Nonnius|Novius|Numitorius|Nummius|Numonius|Obellius|Octavius|Ofellius|Olius|Opellius|Oppius|Orbius|Orceius|Otacilius|Paconius|Pactumeius|Pediasius|Pedius|Petronius|Pettius|Pius|Plaitorius|Plotius|Pompeius|Pompilius|Pomponius|Popilius|Popillius|Porcius|Pumidius|Quinctius|Raecius|Rasennius|Rutilius|Sabinius|Samiarius|Satricanius|Saufeius|Seius|Sempronius|Septimius|Serpoleius|Servilius|Sestius|Sextilius|Spedius|Staius|Stenius|Stertinius|Stlaccius|Sulfius|Sulpicius|Tarquinius|Titinius|Trebellius|Tuccius|Tullius|Turpillius|Tuscenius|Tutorius|Ulpius|Valerius|Varius|Venoleius|Veratius|Verrinius|Verius|Veturius|Veveius|Vibius|Vicirius|Vipsanius|Vinicius|Viseius|Vitellius|Vorenus|Umbricius|Volusius]"
+"np-femaleNomen","[Aelia|Aemilia|Allidia|Alia|Allia|Ampia|Anicia|Annaea|Annia|Antonia|Arellia|Aria|Atania|Attiolena|Audia|Aufidia|Aurelia|Avilia|Babullia|Bombia|Braundutia|Caecilia|Caelia|Caesonia|Calpurnia|Caltia|Calvia|Castricia|Cerrinia|Cincia|Cispia|Claudia|Clodia|Cluvia|Cocceia|Cottia|Cornelia|Cornia|Cossinia|Cossutia|Crassicia|Crepereia|Critonia|Decumia|Didia|Diobellia|Domitia|Egnatia|Erucia|Fabia|Fabricia|Felsonia|Flaminia|Flavia|Fulvia|Furia|Gerillana|Gerraea|Gessia|Grania|Heia|Helvia|Horaria|Hordionia|Hostilia|Iulia|Laberia|Labiena|Laelia|Laronia|Licinia|Livia|Loisia|Lollia|Lucceia|Lucretia|Luxia|Maecia|Magulnia|Mamilia|Marcia|Maria|Memmia|Mescinia|Messia|Mevia|Mindia|Mundicia|Naevia|Neria|Nimmia|Nonnia|Novia|Numitoria|Nummia|Numonia|Obellia|Octavia|Ofellia|Olia|Opellia|Oppia|Orbia|Orceia|Otacilia|Paconia|Pactumeia|Pediasia|Pedia|Petronia|Pettia|Pia|Plaitoria|Plotia|Pompeia|Pompilia|Pomponia|Popilia|Popillia|Porcia|Pumidia|Quinctia|Raecia|Rasennia|Rutilia|Sabinia|Salvia|Samiaria|Satricania|Saufeia|Seia|Sempronia|Septimia|Serpoleia|Servilia|Sestia|Sextilia|Spedia|Staia|Stenia|Stertinia|Stlaccia|Sulfia|Sulpicia|Tarquinia|Titinia|Trebellia|Tuccia|Tullia|Turpillia|Tuscenia|Tutoria|Ulpia|Valeria|Varia|Venoleia|Veratia|Verrinia|Veria|Veturia|Veveia|Vibia|Viciria|Vinicia|Vipsania|Viseia|Vitellia|Vorena|Volusia|Umbricia]"
+"np-maleCognomen","[Abito|Adjutor|Aemilianus|Adventus|Agrippa|Alexander|Aloysius|Alypius|Amandus|Ambrosius|Amphion|Antonius|Anatolius|Andronicus|Angelus|Aquila|Arcadius|Arvina|Asina|Augustus|Aurelianus|Aurelius|Auspex|Avitus|Balduinus|Bassus|Belenus|Belisarius|Bellator|Bellus|Bibulus|Brutus|Caelestius|Candidus|Caligula|Carinus|Carus|Castus|Celer|Cicero|Cinna|Clemens|Commodus|Crassus|Crescens|Crispus|Datus|Dannicus|Decentius|Decius|Diocletianus|Donatus|Domitianus|Draco|Drusus|Durus|Emeritus|Faustus|Felix|Festus|Firmus|Fortunatus|Fronto|Fuscus|Glaucia|Gracchus|Hadrianus|Honoratus|Honorius|Ianaurius|Ingenuus|Iovita|Iulianus|Iustus|Lepidus|Longinus|Magnus|Marcellinus|Marcellus|Marcianus|Martialis|Maximus|Nerva|Numerianus|Optatus|Primus|Priscus|Probus|Proculus|Pullo|Quintillus|Rogatianus|Rogatus|Rufinus|Rufus|Sabinus|Saturninus|Scipio|Secundus|Seianus|Severus|Silvanus|Sulla|Superbus|Tacitus|Tertius|Traianus|Urbanus|Valens|Valentinus|Valerianus|Verecundus|Verus|Vespasianus|Victor|Victorinus|Vitalis|Zeno|Zosimus]
+ 
+Context | Request Context
+"
+"np-femaleCognomen","[Aemiliana|Agrippa|Agrippina|Adventa|Alexandra|Aloysia|Alypia|Amanda|Ambrosia|Amphia|Anatolia|Andronica|Angela|Antonina|Aquila|Arcadia|Augusta|Aureliana|Aurelia|Avita|Balduina|Bassa|Belena|Belisaria|Bella|Bibula|Bruta|Caelestia|Candida|Carina|Cara|Casta|Commoda|Crassa|Crispa|Dannica|Data|Decentia|Decia|Diocletiana|Domitiana|Donata|Drusa|Dura|Emerita|Fausta|Festa|Firma|Fortunata|Fusca|Glaucia|Graccha|Hadriana|Honorata|Honoria|Ianauria|Ingenua|Iovita|Iuliana|Iusta|Lepida|Longina|Magna|Marcellina|Marcella|Marciana|Maxima|Numeriana|Optata|Quintilla|Paulla|Prima|Prisca|Proba|Procula|Rogatiana|Rogata|Rufina|Rufa|Sabina|Saturnina|Secunda|Seiana|Severa|Silvana|Superba|Tacita|Tertia|Traiana|Urbana|Valentina|Valeriana|Verecunda|Vera|Vespasiana|Victoria|Victorina|Zena|Zosima]"
+"np-romanTitles","[Pretore | Console| Proconsole| Governatore | Generale | Signore della Guerra| Maestro della Guerra| Autarca | Esarca | Gran Visir| Grande Ierofante | Grande Sciamano]
+"
