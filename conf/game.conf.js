@@ -421,7 +421,7 @@ var staticConfig =
   enableAchievements: true,
   showMods: true,
   showReport: false,
-  footerName: "1.3.12.6",
+  footerName: "1.3.12.7",
   footerNameIO: "0.11.1",
   sanityCheckEvents: true,
 
@@ -438,6 +438,11 @@ var staticConfig =
       nonBreaking: '。，:'
     },
     'zh-TW': {
+      margin: [0, 15],
+      separator: '',
+      nonBreaking: '。，:'
+    },
+    'jp': {
       margin: [0, 15],
       separator: '',
       nonBreaking: '。，:'

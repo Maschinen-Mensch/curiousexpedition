@@ -1,42 +1,38 @@
-# 1.3.12.6
- * Fixed broken Chinese text
+# 1.3.12 (October 8th 2018)
 
-# 1.3.12.5
- * Fixed Combat particles not being displayed
-
-# 1.3.12.4
- * Bug Fixes
-  * Fixed Healing Springs not having follow-up events
-  * Fixed particles not being correctly rendered during zoom changes
-  * Fixed some missing Chinese texts (but not all yet)
-  * Fixed wrong status being shown when you haven an Abomination in your party
-
-# 1.3.12
-
-* UI Changes
- * Added smooth zooming
- * Improvements to infection/death system
-   * Infobox now shows the death chance for infected characters
-   * A diary alert is shown before opening the diary when somebody is dieing
- * Tin can items will only be shown as usable when they can actually be used (sanity less than 30)
- * Added quick scroll to credits; added new entries for fan edition
-* Tuning changes
- * Increased chance of catastrophic outcoume when sending claustrophobic person into cave without torch
- * Waiting now costs the base trip cost in sanity
- * Only one item per item category is now cooled down per turn, instead of all of them
- * Changed jungle rot sickness to be potentially deadly
- * Tweaked how often some events could appear on one expedition
-* Bugfixes
-  * Toughness can't be reduced below zero when contracting a disease
-  * The shop-specific item value bonuses are only displayed when at the shop screen
-  * Indicator for item usage in combat now matches the reality
-  * Various German typos fixed
-* Modding
-  * Added support for Character flags +noMirror, +noHealth and +noLoyalty
-  * Party buttons are refreshed when stats change
-  * Vehicles can't get infected
+  * UI Changes
+    * Added smooth zooming
+    * Improvements to infection/death system
+      * Infobox now shows the death chance for infected characters
+      * A diary alert is shown before opening the diary when somebody is dieing
+    * Tin can items will only be shown as usable when they can actually be used (sanity less than 30)
+    * Added quick scroll to credits; added new entries for fan edition
+  * Tuning changes
+    * Increased chance of catastrophic outcoume when sending claustrophobic person into cave without torch
+    * Waiting now costs the base trip cost in sanity
+    * Only one item per item category is now cooled down per turn, instead of all of them
+    * Changed jungle rot sickness to be potentially deadly
+    * Tweaked how often some events could appear on one expedition
+  * Bugfixes
+    * Toughness can't be reduced below zero when contracting a disease
+    * The shop-specific item value bonuses are only displayed when at the shop screen
+    * Indicator for item usage in combat now matches the reality
+    * Various German typos fixed
+    * Fixed Healing Springs not having follow-up events
+    * Fixed particles not being correctly rendered during zoom changes
+    * Fixed some missing Chinese texts (but not all yet)
+    * Fixed wrong status being shown when you haven an Abomination in your party
+    * Fixed Combat particles not being displayed
+    * Fixed broken Chinese text
+    * Fixed missing location info in info box
+    * Fixed info box for sanity bar
+  * Modding
+    * Added support for Character flags +noMirror, +noHealth and +noLoyalty
+    * Party buttons are refreshed when stats change
+    * Vehicles can't get infected
   
 # 1.3.11 (July 16th 2018)
+
 * Added Spanish translation
 * Changes
   * Added discord button to main menu
