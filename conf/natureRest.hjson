@@ -1685,11 +1685,6 @@
     }
   }
   {
-    id: evt-sanity-helpNative-recruit
-    text: txt-evt-sanity-helpNative-recruit
-    select: evt-sanity-return
-  }
-  {
     id: evt-sanity-helpNative-recruit-scout
     text: txt-evt-sanity-helpNative-recruit-scout
     charEvents: {count: all, reqCharFlags: -nativeScout}
@@ -1836,6 +1831,7 @@
     charEvents: {
       reqStatus: +spiritualSolidarity
       setStatus: -spiritualSolidarity
+      reqCharFlags: -special
       setCharFlags: -missionary
       text: txt-evt-sanity-faithLost
     }

@@ -315,7 +315,7 @@
     id: evt-slaver-slaves-payment
     text: txt-evt-slaver-slaves-payment
     barter: {
-      baseValue: {base: 25}
+      baseValue: {base: 30}
       closeEvents: {
         standing: standingCostSlaverTrade
         text: txt-evt-slaver-slaves-payment-1
@@ -374,7 +374,7 @@
     setCharFlags: +selling
     standing: standingCostSlaverTrade
     barter: {
-      baseValue: {base: -30}
+      baseValue: {base: -25}
       closeEvents: {text: txt-evt-slaver-sell-unit-loot-1, select: evt-slaver-actions}
       cancelEvents: {text: txt-evt-slaver-sell-unit-loot-2, select: evt-slaver-actions}
     }

@@ -566,7 +566,7 @@
   }
   {
     id: tgl-arctic-mouth
-    colors: [tgen_arctic_colors_skin.png]
+    colors: tgen_arctic_colors_skin.png
     alpha: 1
     chance: 1
     male: [

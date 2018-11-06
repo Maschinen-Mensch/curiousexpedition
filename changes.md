@@ -1,3 +1,11 @@
+# 1.3.12.8
+ * Fixed maps sometimes having blocking mountains that prevent exploration
+ * Fixed Pack Ice sinking when it shouldn't have
+ * Fixed some English and German language issues
+ * Fixed Chinese language wrapping issues
+ * Playing the tutorial no longer removed your savegame
+ * Tuned Slaver trading
+
 # 1.3.12 (October 8th 2018)
 
   * UI Changes

@@ -421,8 +421,8 @@ var staticConfig =
   enableAchievements: true,
   showMods: true,
   showReport: false,
-  footerName: "1.3.12.7",
-  footerNameIO: "0.11.1",
+  footerName: "1.3.12.8",
+  footerNameIO: "0.11.6",
   sanityCheckEvents: true,
 
   // is converted to config.diaryText at run-time
@@ -514,7 +514,7 @@ var staticConfig =
     }
   ],
 
-  achievementTimer: 60*20, // how often we want show a update in seconds
+  achievementTimer: 1200, // how often we want show a update in seconds
 }
 
 var config = {
