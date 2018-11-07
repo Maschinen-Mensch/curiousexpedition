@@ -455,27 +455,27 @@
     partyEvents: [
       {
         optional: true
-        reqStanding: [2, 10]
+        reqStanding: 2..10
         text: txt-evt-village-main-update-0
       }
       {
         optional: true
-        reqStanding: [-1, 1]
+        reqStanding: -1..1
         text: txt-evt-village-main-update
       }
       {
         optional: true
-        reqStanding: [-3, -2]
+        reqStanding: -3..-2
         text: txt-evt-village-main-update-1
       }
       {
         optional: true
-        reqStanding: [-6, -4]
+        reqStanding: -6..-4
         text: txt-evt-village-main-update-2
       }
       {
         optional: true
-        reqStanding: [-8, -7]
+        reqStanding: -8..-7
         text: txt-evt-village-main-update-3
       }
       {

@@ -421,8 +421,8 @@ var staticConfig =
   enableAchievements: true,
   showMods: true,
   showReport: false,
-  footerName: "1.3.12.8",
-  footerNameIO: "0.11.6",
+  footerName: "1.3.12.9",
+  footerNameIO: "0.11.7",
   sanityCheckEvents: true,
 
   // is converted to config.diaryText at run-time

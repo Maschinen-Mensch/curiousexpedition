@@ -338,6 +338,7 @@
     text: txt-evt-mission-cultist-rest
     loot: {
       items: {it-cocaLeaves: 20}
+      invName: cultistTakeoverLoot
       closeEvents: {
         text: txt-evt-mission-cultist-rest-thanks
         select: evt-mission-cultist-actions

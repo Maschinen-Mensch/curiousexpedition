@@ -39,6 +39,7 @@ config.man = [
     _globalInv: "all barter that share the same globalInv ID will share the same inventory",
     _itemEvents: "events tied to specific items",
     _reqItemFlags: "Only items with these flags will be available (from the player's inventory)",
+    _invName: "The name of the local inventory to use (defaults to barter, or stash if the location has a stash)",
     $description: "Starts a trading screen"
   },
   {
@@ -56,6 +57,7 @@ config.man = [
     _itemEvents: "events tied to specific items",
     _reqItemFlags: "Only items with these flags will be available (from the player's inventory)",
     _consumeFameItems: "Any items with fame will be consumed and immediately added to the player's fame",
+    _invName: "The name of the local inventory to use (defaults to loot)",
     $description: "Shows a menu for looting"
   },
   {

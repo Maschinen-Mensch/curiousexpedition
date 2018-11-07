@@ -235,21 +235,27 @@
                 reqWorld: ..2
                 slots: 2
                 combat: {
-                  refs: {emy-giantSpider: 1, winEvents: evt-cave-win-explore, fleeEvents: evt-cave-flee-explore}
+                  refs: {emy-giantSpider: 1}, 
+                  winEvents: evt-cave-win-explore, 
+                  fleeEvents: evt-cave-flee-explore
                 }
               }
               {
                 reqWorld: 2..
                 slots: 1
                 combat: {
-                  refs: {emy-giantSpider: 2, winEvents: evt-cave-win-explore, fleeEvents: evt-cave-flee-explore}
+                  refs: {emy-giantSpider: 2}, 
+                  winEvents: evt-cave-win-explore, 
+                  fleeEvents: evt-cave-flee-explore
                 }
               }
               {
                 reqWorld: 4..
                 slots: 2
                 combat: {
-                  refs: {emy-giantSpider: 3, winEvents: evt-cave-win-explore, fleeEvents: evt-cave-flee-explore}
+                  refs: {emy-giantSpider: 3}, 
+                  winEvents: evt-cave-win-explore, 
+                  fleeEvents: evt-cave-flee-explore
                 }
               }
             ]
