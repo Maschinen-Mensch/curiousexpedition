@@ -12,7 +12,7 @@
           {prio: 2, slots: 4, chat: cl-leave}
           {prio: 2, slots: 4, ref: evt-leave-cannibal}
           {prio: 2, slots: 3, ref: evt-leave-raptors}
-          {prio: 2, slots: 1, ref: evt-leave-startFire}
+          {prio: 2, slots: 0.5, ref: evt-leave-startFire}
           {prio: 2, slots: 3, ref: evt-leave-startFirePyromaniac}
           {prio: 2, slots: 3, ref: evt-leave-superstitious}
         ]

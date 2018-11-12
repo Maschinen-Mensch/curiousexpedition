@@ -2,30 +2,27 @@
 
 {
 	"filename": "emy_abomination_1.png",
-	"frame": {"x":249,"y":81,"w":11,"h":25},
+	"frame": {"x":114,"y":115,"w":11,"h":25},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":11,"h":25},
-	"sourceSize": {"w":11,"h":25},
-	"pivot": {"x":0.5,"y":0.5}
+	"sourceSize": {"w":11,"h":25}
 },
 {
 	"filename": "emy_crocodile_1.png",
-	"frame": {"x":195,"y":34,"w":78,"h":24},
+	"frame": {"x":40,"y":211,"w":78,"h":24},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":78,"h":24},
-	"sourceSize": {"w":78,"h":24},
-	"pivot": {"x":0.5,"y":0.5}
+	"sourceSize": {"w":78,"h":24}
 },
 {
 	"filename": "emy_giantBird_1.png",
-	"frame": {"x":273,"y":27,"w":40,"h":56},
+	"frame": {"x":0,"y":211,"w":40,"h":56},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":56},
-	"sourceSize": {"w":40,"h":56},
-	"pivot": {"x":0.5,"y":0.5}
+	"sourceSize": {"w":40,"h":56}
 },
 {
 	"filename": "emy_giantCrab_1.png",
@@ -33,26 +30,23 @@
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":92,"h":51},
-	"sourceSize": {"w":92,"h":51},
-	"pivot": {"x":0.5,"y":0.5}
+	"sourceSize": {"w":92,"h":51}
 },
 {
 	"filename": "emy_giantScorpion_1.png",
-	"frame": {"x":122,"y":0,"w":73,"h":58},
+	"frame": {"x":0,"y":119,"w":73,"h":58},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":73,"h":58},
-	"sourceSize": {"w":73,"h":58},
-	"pivot": {"x":0.5,"y":0.5}
+	"sourceSize": {"w":73,"h":58}
 },
 {
 	"filename": "emy_giantSpider_1.png",
-	"frame": {"x":122,"y":58,"w":45,"h":27},
+	"frame": {"x":0,"y":267,"w":45,"h":27},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":45,"h":27},
-	"sourceSize": {"w":45,"h":27},
-	"pivot": {"x":0.5,"y":0.5}
+	"sourceSize": {"w":45,"h":27}
 },
 {
 	"filename": "emy_gorilla_1.png",
@@ -60,179 +54,167 @@
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":29},
-	"sourceSize": {"w":30,"h":29},
-	"pivot": {"x":0.5,"y":0.5}
+	"sourceSize": {"w":30,"h":29}
 },
 {
 	"filename": "emy_hyena_1.png",
-	"frame": {"x":274,"y":83,"w":25,"h":16},
+	"frame": {"x":89,"y":276,"w":25,"h":16},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":25,"h":16},
-	"sourceSize": {"w":25,"h":16},
-	"pivot": {"x":0.5,"y":0.5}
+	"sourceSize": {"w":25,"h":16}
 },
 {
 	"filename": "emy_hyena_2.png",
-	"frame": {"x":246,"y":106,"w":26,"h":16},
+	"frame": {"x":0,"y":321,"w":26,"h":16},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":16},
-	"sourceSize": {"w":26,"h":16},
-	"pivot": {"x":0.5,"y":0.5}
+	"sourceSize": {"w":26,"h":16}
 },
 {
 	"filename": "emy_hyena_3.png",
-	"frame": {"x":272,"y":106,"w":26,"h":16},
+	"frame": {"x":26,"y":321,"w":26,"h":16},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":16},
-	"sourceSize": {"w":26,"h":16},
-	"pivot": {"x":0.5,"y":0.5}
+	"sourceSize": {"w":26,"h":16}
 },
 {
 	"filename": "emy_hyena_4.png",
-	"frame": {"x":299,"y":83,"w":25,"h":16},
+	"frame": {"x":99,"y":140,"w":25,"h":16},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":25,"h":16},
-	"sourceSize": {"w":25,"h":16},
-	"pivot": {"x":0.5,"y":0.5}
+	"sourceSize": {"w":25,"h":16}
 },
 {
 	"filename": "emy_hyena_black.png",
-	"frame": {"x":220,"y":103,"w":26,"h":18},
+	"frame": {"x":92,"y":97,"w":26,"h":18},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":18},
-	"sourceSize": {"w":26,"h":18},
-	"pivot": {"x":0.5,"y":0.5}
+	"sourceSize": {"w":26,"h":18}
 },
 {
 	"filename": "emy_killerPlant_1.png",
-	"frame": {"x":92,"y":97,"w":26,"h":25},
+	"frame": {"x":73,"y":151,"w":26,"h":25},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":25},
-	"sourceSize": {"w":26,"h":25},
-	"pivot": {"x":0.5,"y":0.5}
+	"sourceSize": {"w":26,"h":25}
 },
 {
 	"filename": "emy_konrad_1.png",
-	"frame": {"x":255,"y":58,"w":15,"h":22},
+	"frame": {"x":86,"y":181,"w":15,"h":22},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":15,"h":22},
-	"sourceSize": {"w":15,"h":22},
-	"pivot": {"x":0.5,"y":0.5}
+	"sourceSize": {"w":15,"h":22}
 },
 {
 	"filename": "emy_mummy_1.png",
-	"frame": {"x":313,"y":57,"w":16,"h":25},
+	"frame": {"x":91,"y":292,"w":16,"h":25},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":25},
-	"sourceSize": {"w":16,"h":25},
-	"pivot": {"x":0.5,"y":0.5}
+	"sourceSize": {"w":16,"h":25}
+},
+{
+	"filename": "emy_mummy_chn.png",
+	"frame": {"x":99,"y":156,"w":16,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":25},
+	"sourceSize": {"w":16,"h":25}
 },
 {
 	"filename": "emy_native_village1_1.png",
-	"frame": {"x":191,"y":98,"w":15,"h":24},
+	"frame": {"x":71,"y":177,"w":15,"h":24},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":15,"h":24},
-	"sourceSize": {"w":15,"h":24},
-	"pivot": {"x":0.5,"y":0.5}
+	"sourceSize": {"w":15,"h":24}
 },
 {
 	"filename": "emy_panther_1.png",
-	"frame": {"x":118,"y":102,"w":38,"h":20},
+	"frame": {"x":49,"y":281,"w":38,"h":20},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":20},
-	"sourceSize": {"w":38,"h":20},
-	"pivot": {"x":0.5,"y":0.5}
+	"sourceSize": {"w":38,"h":20}
 },
 {
 	"filename": "emy_polarBear_1.png",
-	"frame": {"x":209,"y":81,"w":40,"h":22},
+	"frame": {"x":84,"y":235,"w":40,"h":22},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":22},
-	"sourceSize": {"w":40,"h":22},
-	"pivot": {"x":0.5,"y":0.5}
+	"sourceSize": {"w":40,"h":22}
 },
 {
 	"filename": "emy_raptor_1.png",
-	"frame": {"x":266,"y":0,"w":49,"h":27},
+	"frame": {"x":0,"y":294,"w":49,"h":27},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":49,"h":27},
-	"sourceSize": {"w":49,"h":27},
-	"pivot": {"x":0.5,"y":0.5}
+	"sourceSize": {"w":49,"h":27}
 },
 {
 	"filename": "emy_sabertooth.png",
-	"frame": {"x":167,"y":58,"w":44,"h":23},
+	"frame": {"x":40,"y":235,"w":44,"h":23},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":23},
-	"sourceSize": {"w":44,"h":23},
-	"pivot": {"x":0.5,"y":0.5}
+	"sourceSize": {"w":44,"h":23}
 },
 {
 	"filename": "emy_sabertooth_white.png",
-	"frame": {"x":211,"y":58,"w":44,"h":23},
+	"frame": {"x":45,"y":258,"w":44,"h":23},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":23},
-	"sourceSize": {"w":44,"h":23},
-	"pivot": {"x":0.5,"y":0.5}
+	"sourceSize": {"w":44,"h":23}
 },
 {
 	"filename": "emy_slaver_1.png",
-	"frame": {"x":313,"y":32,"w":20,"h":25},
+	"frame": {"x":94,"y":115,"w":20,"h":25},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":20,"h":25},
-	"sourceSize": {"w":20,"h":25},
-	"pivot": {"x":0.5,"y":0.5}
+	"sourceSize": {"w":20,"h":25}
 },
 {
 	"filename": "emy_slaver_minion_1.png",
-	"frame": {"x":314,"y":99,"w":11,"h":22},
+	"frame": {"x":114,"y":276,"w":11,"h":22},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":11,"h":22},
-	"sourceSize": {"w":11,"h":22},
-	"pivot": {"x":0.5,"y":0.5}
+	"sourceSize": {"w":11,"h":22}
 },
 {
 	"filename": "emy_slaver_minion_2.png",
-	"frame": {"x":260,"y":83,"w":14,"h":23},
+	"frame": {"x":101,"y":181,"w":14,"h":23},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":14,"h":23},
-	"sourceSize": {"w":14,"h":23},
-	"pivot": {"x":0.5,"y":0.5}
+	"sourceSize": {"w":14,"h":23}
 },
 {
 	"filename": "emy_tiger_1.png",
-	"frame": {"x":122,"y":85,"w":42,"h":17},
+	"frame": {"x":49,"y":301,"w":42,"h":17},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":42,"h":17},
-	"sourceSize": {"w":42,"h":17},
-	"pivot": {"x":0.5,"y":0.5}
+	"sourceSize": {"w":42,"h":17}
 },
 {
 	"filename": "emy_tiger_white.png",
-	"frame": {"x":167,"y":81,"w":42,"h":17},
+	"frame": {"x":52,"y":318,"w":42,"h":17},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":42,"h":17},
-	"sourceSize": {"w":42,"h":17},
-	"pivot": {"x":0.5,"y":0.5}
+	"sourceSize": {"w":42,"h":17}
 },
 {
 	"filename": "emy_trex_1.png",
@@ -240,70 +222,63 @@
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":122,"h":68},
-	"sourceSize": {"w":122,"h":68},
-	"pivot": {"x":0.5,"y":0.5}
+	"sourceSize": {"w":122,"h":68}
 },
 {
 	"filename": "emy_walrus_1.png",
-	"frame": {"x":195,"y":0,"w":71,"h":34},
+	"frame": {"x":0,"y":177,"w":71,"h":34},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":71,"h":34},
-	"sourceSize": {"w":71,"h":34},
-	"pivot": {"x":0.5,"y":0.5}
+	"sourceSize": {"w":71,"h":34}
 },
 {
 	"filename": "emy_wolf_arctic_1.png",
-	"frame": {"x":156,"y":103,"w":35,"h":19},
+	"frame": {"x":89,"y":257,"w":35,"h":19},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":19},
-	"sourceSize": {"w":35,"h":19},
-	"pivot": {"x":0.5,"y":0.5}
+	"sourceSize": {"w":35,"h":19}
 },
 {
 	"filename": "emy_yeti_1.png",
-	"frame": {"x":315,"y":0,"w":21,"h":32},
+	"frame": {"x":73,"y":119,"w":21,"h":32},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":21,"h":32},
-	"sourceSize": {"w":21,"h":32},
-	"pivot": {"x":0.5,"y":0.5}
-},
-{
-	"filename": "emy_zombiePygmy_shaman.png",
-	"frame": {"x":206,"y":103,"w":14,"h":19},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":14,"h":19},
-	"sourceSize": {"w":14,"h":19},
-	"pivot": {"x":0.5,"y":0.5}
-},
-{
-	"filename": "emy_zombiePygmy_warrior.png",
-	"frame": {"x":298,"y":99,"w":16,"h":18},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":18},
-	"sourceSize": {"w":16,"h":18},
-	"pivot": {"x":0.5,"y":0.5}
+	"sourceSize": {"w":21,"h":32}
 },
 {
 	"filename": "emy_zombie_1.png",
-	"frame": {"x":325,"y":82,"w":8,"h":18},
+	"frame": {"x":115,"y":156,"w":8,"h":18},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":8,"h":18},
-	"sourceSize": {"w":8,"h":18},
-	"pivot": {"x":0.5,"y":0.5}
+	"sourceSize": {"w":8,"h":18}
+},
+{
+	"filename": "emy_zombiePygmy_shaman.png",
+	"frame": {"x":94,"y":317,"w":14,"h":19},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":14,"h":19},
+	"sourceSize": {"w":14,"h":19}
+},
+{
+	"filename": "emy_zombiePygmy_warrior.png",
+	"frame": {"x":107,"y":298,"w":16,"h":18},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":18},
+	"sourceSize": {"w":16,"h":18}
 }],
 "meta": {
-	"app": "http://www.codeandweb.com/texturepacker",
+	"app": "https://www.codeandweb.com/texturepacker",
 	"version": "1.0",
 	"image": "res_emy.png",
 	"format": "RGBA8888",
-	"size": {"w":336,"h":122},
+	"size": {"w":125,"h":337},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:a9f231955d03fb0d6b38c2d1e8b5320c:3ba5b1ff46d7e66da6634a46dde28551:2d0d15a8ab217a31ce7f9c0055f5510a$"
+	"smartupdate": "$TexturePacker:SmartUpdate:374062141b9cea9040773b1a863deb39:7aa523aa3bb1d2c6a94c852f928489cd:2d0d15a8ab217a31ce7f9c0055f5510a$"
 }
 }
