@@ -1,23 +1,35 @@
-# 1.3.13 (November 12th 2018)
- * Tuning Changes
-  * Tuned Slaver trading
-  * Reduced the chance of starting a fire after resting 
- * Modding
-  * Fix for item 'addStatus' keyword not working
-  * Fix for 'sprawlEvents' keyword not working
-  * Barter and Loot events can now specify a 'invName' that will be used to determine which inventory in the location is used to contain the items
- * Bug Fixes
-  * Fixed maps sometimes having blocking mountains that prevent exploration
-  * Fixed Pack Ice sinking when it shouldn't have
-  * Fixed some English and German language issues
-  * Fixed Chinese language wrapping issues
-  * Playing the tutorial no longer removes your savegame 
-  * Fix for tiles not correctly animating when replaced
-  * Fixed cave giant spider event not triggering correct event after combat
-  * Fixed unwanted camera panning when interacting with items
-  * Fixed issue where cultist mission takeover would conflict with stash inventory
-  * Haggle skill is now correctly evaluated when entering barter screen 
-  * Fixed victory screen chat position
+# 1.3.13 (November 26th 2018)
+  * Added Russian translation
+  * Added new Explorer character Rasputin
+  * Tuning Changes
+    * Tuned Slaver trading
+    * Reduced the chance of starting a fire after resting 
+  * Modding
+    * Fix for item 'addStatus' keyword not working
+    * Fix for 'sprawlEvents' keyword not working
+    * Barter and Loot events can now specify a 'invName' that will be used to determine which inventory in the location is used to contain the items
+  * Bug Fixes
+    * Fixed maps sometimes having blocking mountains that prevent exploration
+    * Fixed Pack Ice sinking when it shouldn't have
+    * Fixed some English and German language issues
+    * Fixed Chinese language wrapping issues
+    * Playing the tutorial no longer removes your savegame 
+    * Fix for tiles not correctly animating when replaced
+    * Fixed cave giant spider event not triggering correct event after combat
+    * Fixed unwanted camera panning when interacting with items
+    * Fixed issue where cultist mission takeover would conflict with stash inventory
+    * Haggle skill is now correctly evaluated when entering barter screen 
+    * Fixed victory screen chat position
+    * Fixed combat dice shaking sometimes not behaving correctly
+    * Fixed action buttons not always being visible
+    * Fix for diary image going back when it's changed
+    * Fix for game closing when quitting credits
+    * Fixed corrupted sound issues on some machines
+    * Fixed missing effect when uploading mods
+    * Fixed graphical issues on Ranking screen when scaling mode is 3
+    * Fixed party members not chatting
+    * Party members now animate when chatting
+    * Fixed wrong world start position
   
 # 1.3.12 (October 8th 2018)
 

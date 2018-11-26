@@ -1,0 +1,220 @@
+{"frames": [
+
+{
+	"filename": "emy_mummy.png",
+	"frame": {"x":268,"y":0,"w":16,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":25},
+	"sourceSize": {"w":16,"h":25}
+},
+{
+	"filename": "evt_fxt_altar_corrupted.png",
+	"frame": {"x":284,"y":0,"w":411,"h":260},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":411,"h":260},
+	"sourceSize": {"w":411,"h":260}
+},
+{
+	"filename": "evt_fxt_cave_corpses.png",
+	"frame": {"x":0,"y":260,"w":411,"h":260},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":411,"h":260},
+	"sourceSize": {"w":411,"h":260}
+},
+{
+	"filename": "evt_fxt_cave_mummy.png",
+	"frame": {"x":411,"y":260,"w":411,"h":260},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":411,"h":260},
+	"sourceSize": {"w":411,"h":260}
+},
+{
+	"filename": "evt_fxt_cave_spiders.png",
+	"frame": {"x":0,"y":520,"w":411,"h":260},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":411,"h":260},
+	"sourceSize": {"w":411,"h":260}
+},
+{
+	"filename": "evt_fxt_oldCamp.png",
+	"frame": {"x":411,"y":520,"w":411,"h":260},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":411,"h":260},
+	"sourceSize": {"w":411,"h":260}
+},
+{
+	"filename": "evt_fxt_oldCamp_arctic.png",
+	"frame": {"x":0,"y":780,"w":411,"h":260},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":411,"h":260},
+	"sourceSize": {"w":411,"h":260}
+},
+{
+	"filename": "evt_fxt_raptorNest.png",
+	"frame": {"x":411,"y":780,"w":411,"h":260},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":411,"h":260},
+	"sourceSize": {"w":411,"h":260}
+},
+{
+	"filename": "evt_fxt_shamanHut.png",
+	"frame": {"x":0,"y":1040,"w":411,"h":260},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":411,"h":260},
+	"sourceSize": {"w":411,"h":260}
+},
+{
+	"filename": "evt_spec_gameOver.png",
+	"frame": {"x":411,"y":1040,"w":411,"h":260},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":411,"h":260},
+	"sourceSize": {"w":411,"h":260}
+},
+{
+	"filename": "it_animal_gorillapaw.png",
+	"frame": {"x":0,"y":0,"w":16,"h":11},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":11},
+	"sourceSize": {"w":16,"h":11}
+},
+{
+	"filename": "it_animal_sabertooth.png",
+	"frame": {"x":113,"y":0,"w":7,"h":19},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":7,"h":19},
+	"sourceSize": {"w":7,"h":19}
+},
+{
+	"filename": "it_animal_sting.png",
+	"frame": {"x":59,"y":0,"w":17,"h":18},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":17,"h":18},
+	"sourceSize": {"w":17,"h":18}
+},
+{
+	"filename": "it_animal_tooth.png",
+	"frame": {"x":45,"y":0,"w":9,"h":16},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":9,"h":16},
+	"sourceSize": {"w":9,"h":16}
+},
+{
+	"filename": "it_animal_yetipaw.png",
+	"frame": {"x":16,"y":0,"w":16,"h":11},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":11},
+	"sourceSize": {"w":16,"h":11}
+},
+{
+	"filename": "it_special_dowsingShrine.png",
+	"frame": {"x":54,"y":0,"w":5,"h":17},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":5,"h":17},
+	"sourceSize": {"w":5,"h":17}
+},
+{
+	"filename": "it_special_totemStick.png",
+	"frame": {"x":120,"y":0,"w":11,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":11,"h":20},
+	"sourceSize": {"w":11,"h":20}
+},
+{
+	"filename": "it_treasure_dinoskull.png",
+	"frame": {"x":76,"y":0,"w":19,"h":18},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":19,"h":18},
+	"sourceSize": {"w":19,"h":18}
+},
+{
+	"filename": "it_treasure_mummy.png",
+	"frame": {"x":95,"y":0,"w":18,"h":18},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":18,"h":18},
+	"sourceSize": {"w":18,"h":18}
+},
+{
+	"filename": "pt_blood_1.png",
+	"frame": {"x":222,"y":0,"w":22,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":22,"h":23},
+	"sourceSize": {"w":22,"h":23}
+},
+{
+	"filename": "pt_blood_2.png",
+	"frame": {"x":153,"y":0,"w":23,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":23,"h":21},
+	"sourceSize": {"w":23,"h":21}
+},
+{
+	"filename": "pt_blood_3.png",
+	"frame": {"x":176,"y":0,"w":23,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":23,"h":22},
+	"sourceSize": {"w":23,"h":22}
+},
+{
+	"filename": "pt_blood_4.png",
+	"frame": {"x":244,"y":0,"w":24,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":24,"h":24},
+	"sourceSize": {"w":24,"h":24}
+},
+{
+	"filename": "pt_blood_5.png",
+	"frame": {"x":199,"y":0,"w":23,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":23,"h":22},
+	"sourceSize": {"w":23,"h":22}
+},
+{
+	"filename": "pt_blood_6.png",
+	"frame": {"x":131,"y":0,"w":22,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":22,"h":20},
+	"sourceSize": {"w":22,"h":20}
+},
+{
+	"filename": "pt_buff_bleeding.png",
+	"frame": {"x":32,"y":0,"w":13,"h":13},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":13,"h":13},
+	"sourceSize": {"w":13,"h":13}
+}],
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "loca_sprites_china.png",
+	"format": "RGBA8888",
+	"size": {"w":822,"h":1300},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:e38081bd6d33c5cd7e8734b189ac1af8:d4462c861157b4bc98e40ecdb7f4ca22:e7bb175c1182d14956bee1ccca4bdf60$"
+}
+}

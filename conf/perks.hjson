@@ -736,8 +736,16 @@
   {
     id: st-woundTreatment
     title: txt-pk-woundTreatment-title
+    description: txt-pk-healer
     debugCategory: generic
     sprite: res_status_regeneration.png
     bonus: {healthRegen: 0.25}
+  }
+  {
+    id: st-preacher
+    title: txt-pk-preacher-title
+    debugCategory: generic
+    description: txt-pk-preacher
+    sprite: res_status_preacher.png
   }
 ]

@@ -132,6 +132,30 @@
     miniSprite: res_expl_feihong_mini.png
   }
   {
+    id: sp-rasputin
+    extends: sp-base
+    debugCategory: Famous Explorer
+    name: txt-sp-rasputin-name
+    title: txt-sp-ee-preacher-title
+    description: txt-sp-rasputin
+    alwaysUnlocked: true
+    miniSprite: res_expl_rasputin_mini.png
+    health: 4
+    flags: +special +russian +humanoid
+    variations: [
+      {
+        gender: male
+        sprite: res_expl_rasputin.png
+        portrait: res_face_rasputin.png
+      }
+    ]
+    characters: []
+    items: {it-tinCans: 10}
+    levels: [
+      {statuses: [st-preacher, st-healer] , dice: dc-support-2 dc-defend-1}
+    ]
+  }
+  {
     id: sp-kingsley
     extends: sp-base
     debugCategory: Famous Explorer

@@ -465,14 +465,6 @@
 	"sourceSize": {"w":65,"h":65}
 },
 {
-	"filename": "hud_compass_needle.png",
-	"frame": {"x":632,"y":360,"w":7,"h":27},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":7,"h":27},
-	"sourceSize": {"w":7,"h":27}
-},
-{
 	"filename": "hud_cursor_target_1.png",
 	"frame": {"x":434,"y":468,"w":69,"h":14},
 	"rotated": false,

@@ -15,9 +15,23 @@
       select: evt-village-setImageDay-update
     }
     select: [
-      {reqStanding: ..1, text: txt-evt-village-recruit-refuse}
       {
         prio: 1
+        reqPartyStatus: +preacher
+        text: txt-evt-village-recruit-1
+        setLocationFlags: +recruitFail
+        partyEvents: [
+          {select: evt-village-recruit-select-humanoid, optional: true}
+          {select: evt-village-recruit-select-humanoid, optional: true}
+          {select: evt-village-recruit-select-animal, optional: true}
+        ]
+      }
+      {
+        prio: 2
+        reqStanding: ..1, text: txt-evt-village-recruit-refuse
+      }
+      {
+        prio: 3
         text: txt-evt-village-recruit-1
         setLocationFlags: +recruitFail
         partyEvents: [

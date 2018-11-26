@@ -1042,7 +1042,7 @@
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":24},
 	"sourceSize": {"w":31,"h":24},
-	"pivot": {"x":0.5,"y":0.5}
+	"pivot": {"x":0.52,"y":0.5}
 },
 {
 	"filename": "res_fxt_village_stones.png",

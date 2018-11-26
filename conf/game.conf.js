@@ -421,8 +421,8 @@ var staticConfig =
   enableAchievements: true,
   showMods: true,
   showReport: false,
-  footerName: "1.3.13.0",
-  footerNameIO: "0.11.7",
+  footerName: "1.3.13.5",
+  footerNameIO: "0.11.9",
   sanityCheckEvents: true,
 
   // is converted to config.diaryText at run-time
@@ -1125,6 +1125,8 @@ var config = {
     karmaBar: '#2198B2',
     karmaBarFull: '#1ABF81',
     achievements: ['#973200', '#FBEA2E', '#A8D1D2'],
+
+    hitCharacter: 'red'
   },
 
   standardValues: {
