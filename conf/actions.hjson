@@ -4,6 +4,7 @@
   {id: act-showStats, actionText: txt-act-showStats-action}
   {id: act-travel, actionText: txt-act-travel-action}
   {id: act-cancelTravel, actionText: txt-act-cancelTravel-action}
+  {id: act-stopTravel, actionText: txt-act-stopTravel-action}
   {id: act-report, actionText: txt-act-report-action}
   {id: act-mapShot, actionText: txt-act-mapShot-action}
   {id: act-stopRest, actionText: txt-act-stopRest-action}

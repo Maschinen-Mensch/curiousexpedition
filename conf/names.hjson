@@ -20,7 +20,7 @@
     names: ["txt-names-scottishLast"]
   }
   {
-    id: np-Lt
+    id: np-lt
     names: ["txt-names-rank-lt"]
   }
   {

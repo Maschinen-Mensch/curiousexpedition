@@ -637,7 +637,7 @@
   }
   {
     id: pl-tim
-    name: Tim Timster
+    name: txt-pl-tim-name
     title: txt-pl-tim-title
     description: txt-pl-tim
     debugCategory: Special
@@ -656,7 +656,7 @@
   }
   {
     id: pl-sterling
-    name: James Sterling
+    name: txt-pl-sterling-name
     title: txt-pl-sterling-title
     description: txt-pl-sterling
     debugCategory: Special

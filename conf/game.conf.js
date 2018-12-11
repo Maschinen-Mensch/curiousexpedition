@@ -421,7 +421,7 @@ var staticConfig =
   enableAchievements: true,
   showMods: true,
   showReport: false,
-  footerName: "1.3.13.5",
+  footerName: "1.3.13.10",
   footerNameIO: "0.11.9",
   sanityCheckEvents: true,
 
@@ -1098,7 +1098,7 @@ var config = {
     warningFlashTime: 4.5,
     path: '#F230C4',
     sanity: '#b100e0',
-    sanityHighlight: 'rgba(255,255,255,0.25)',
+    sanityHighlight: '#ffffff40',
     standing: '#3ec3ff',
     health: 'red',
     healthBg: '#990000',

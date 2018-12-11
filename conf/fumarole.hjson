@@ -14,7 +14,7 @@
     name: txt-fxt-fumarole-name
     debugCategory: fumarole
     sprite: [
-      {ref: res_fxt_fumarole_1.png, reqBiomeFlags: ""}
+      {ref: res_fxt_fumarole_1.png}
     ]
     setTile: [
       {ref: tl-frozenPlains, reqBiomeFlags: +arctic}

@@ -22,7 +22,6 @@
       tgl-nose
       tgl-eyes-base
       tgl-hair-head
-      tgl-decoration
     ]
   }
   {
@@ -1627,24 +1626,6 @@
         portrait: tgen_f_charPortrait_hair_head_30.png
         body: tgen_f_charSprite_head_hair_30.png
       }
-    ]
-  }
-  {
-    id: tgl-decoration
-    chance: 0
-    alpha: 1
-    male: [
-      {portrait: tgen_m_charPortrait_decoration_1.png}
-      {portrait: tgen_m_charPortrait_decoration_2.png}
-      {portrait: tgen_m_charPortrait_decoration_3.png}
-      {portrait: tgen_m_charPortrait_decoration_4.png}
-      {portrait: tgen_m_charPortrait_decoration_5.png}
-      {portrait: tgen_m_charPortrait_decoration_6.png}
-      {portrait: tgen_m_charPortrait_decoration_7.png}
-      {portrait: tgen_m_charPortrait_decoration_8.png}
-    ]
-    female: [
-      {portrait: tgen_f_charPortrait_decoration_1.png}
     ]
   }
 ]
