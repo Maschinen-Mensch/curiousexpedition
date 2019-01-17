@@ -402,9 +402,14 @@
   {
     id: evt-tile-river
     text: txt-evt-tile-river
+    showImage: {
+      src: evt_fxt_empty.png
+      type: day
+      showMounted: false
+    }
     posTile: {
-      traversable: true, 
-      closest: true, 
+      traversable: true
+      closest: true
       range: ..10
     }
     teleport: true

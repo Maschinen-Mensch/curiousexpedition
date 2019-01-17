@@ -7,7 +7,7 @@ config.staticKeywords = [
   'clearPushedEvents', 'consume', 'restoreCharacter', 'karma', 
   'funds', 'reqAge', 'fame', 'unwarpWorld', 'gameOver', 'reqFreePartyCount',
   'isAbstract', 'reqNoCombat', 'showNPC', 'reqTargetChar', 'reqDiceCharFlags',
-  'posTile', 'debugCategory', 'compactAndStack', 'canDismiss', 'tooltip', 'delay', 'duration', 'showReqItems',
+  'posTile', 'debugCategory', 'compactAndStack', 'canDismiss', 'tooltip', 'delay', 'duration', 'showReqItems', 'showPersonInfo',
   'ioRemovePlayerDeath', 'ioSetLocationFlags', 'racetrackEvents', 'icon', 'inDays', 'ioAddLiveLog'
 ]
 

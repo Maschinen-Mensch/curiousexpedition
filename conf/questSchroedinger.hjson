@@ -91,29 +91,35 @@
     setPartyStatus: -schroedinger
     npc: npc-schroedinger
     text: txt-evt-harbor-quest-schroedinger-complete
-    actions: [
+    events: [
       {
-        actionText: txt-evt-harbor-quest-schroedinger-complete-action
-        text: txt-evt-harbor-quest-schroedinger-complete-1
-        reqItems: {it-box-schroedinger: 1..}
-        items: {it-box-schroedinger: -1}
-        incAchievement: ach-complete-quests
-        actions: evt-harbor-quest-reward
-      }
-      {
-        actionText: txt-evt-angry-demandPayment-action-1
-        text: txt-evt-harbor-quest-schroedinger-complete-2
-        reqItems: {it-box-schroedinger: 1..}
-        fame: -fameLarge
-        select: evt-harbor-eventSelection
-      }
-      {
-        actionText: txt-evt-harbor-quest-schroedinger-complete-action-1
-        text: txt-evt-harbor-quest-schroedinger-complete-3
         reqItems: {it-box-schroedinger: 0}
-        fame: -fameLarge
-        select: evt-harbor-eventSelection
+        actions: {
+          actionText: txt-evt-harbor-quest-schroedinger-complete-action-1
+          text: txt-evt-harbor-quest-schroedinger-complete-3
+          fame: -fameLarge
+          select: evt-harbor-eventSelection
+        }
       }
+      {
+        reqItems: {it-box-schroedinger: 1..}
+        actions: [
+          {
+            actionText: txt-evt-harbor-quest-schroedinger-complete-action
+            text: txt-evt-harbor-quest-schroedinger-complete-1
+            reqItems: {it-box-schroedinger: 1..}
+            items: {it-box-schroedinger: -1}
+            incAchievement: ach-complete-quests
+            actions: evt-harbor-quest-reward
+          }
+          {
+            actionText: txt-evt-angry-demandPayment-action-1
+            text: txt-evt-harbor-quest-schroedinger-complete-2
+            fame: -fameLarge
+            select: evt-harbor-eventSelection
+          }
+        ]
+      }     
     ]
   }
 ]

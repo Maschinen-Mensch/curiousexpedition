@@ -8,12 +8,11 @@
       {ref: res_fxt_portal_arctic.png, reqBiomeFlags: +arctic}
     ]
     setTile: [
-      {ref: tl-grass}
+      {ref: tl-grass, reqBiomeFlags: +grass | +prehistoric}
       {ref: tl-dry, reqBiomeFlags: +dry}
       {ref: tl-dry, reqBiomeFlags: +desert}
       {ref: tl-deepSnow, reqBiomeFlags: +arctic}
-      {ref: tl-snowForest, reqBiomeFlags: +arctic}
-      {ref: tl-frozenPlains, reqBiomeFlags: +arctic}
+      {ref: tl-corrupted-plains, reqBiomeFlags: +corrupted}
     ]
     actions: evt-portal-explore
     debugCategory: special
@@ -25,11 +24,13 @@
     debugCategory: special
     sprite: res_fxt_portal.png
     flags: +portalTome
-    actions: {
-      actionText: txt-fxt-portal-tome-action
-      posTile: {range: 2.., locationFlags: +portalTome}
-      teleport: true
-    }
+    actions: evt-portal-tome
+  }
+  {
+    id: evt-portal-tome
+    actionText: txt-fxt-portal-tome-action
+    posTile: {range: 2.., locationFlags: +portalTome}
+    teleport: true
   }
   {
     id: it-metalCube

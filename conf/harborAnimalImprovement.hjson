@@ -25,11 +25,13 @@
     id: evt-harbor-animalImprovement-actions
     charEvents: [
       {
+        
         optional: true
         count: any
         reqCharFlags: +packAnimal
         reqStatus: -animalCapacity-1 -animalCapacity-2 -animalCapacity-3
         actions: {
+          alwaysShown: true
           actionText: txt-evt-harbor-animalImprovement-actions-action
           reqFunds: 50..
           funds: -50
@@ -44,6 +46,7 @@
         reqCharFlags: +packAnimal
         reqStatus: +animalCapacity-1
         actions: {
+          alwaysShown: true
           actionText: txt-evt-harbor-animalImprovement-actions-action-1
           reqFunds: 100..
           funds: -100
@@ -58,6 +61,7 @@
         reqCharFlags: +packAnimal
         reqStatus: +animalCapacity-2
         actions: {
+          alwaysShown: true
           actionText: txt-evt-harbor-animalImprovement-actions-action-2
           reqFunds: 150..
           funds: -150

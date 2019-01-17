@@ -54,7 +54,7 @@
     mapScore: 0
     isRemovable: false
     maximizeDistance: true
-    locationFlags: +goldenTemple
+    flags: +goldenTemple
     sprite: [
       {ref: res_fxt_goldenTemple_buried_1.png, reqBiomeFlags: -arctic}
       {ref: res_fxt_goldenTemple_buried_arctic.png, reqBiomeFlags: +arctic}

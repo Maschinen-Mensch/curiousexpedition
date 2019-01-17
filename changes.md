@@ -1,3 +1,17 @@
+# 1.3.13.11
+ * New Main Menu background: Remastered London Skyline
+ * Renamed 'Bipolar' to 'Mecurial'
+ * Fixed some English and German text
+ * Fix for damage particles being in wrong location when hitting mounted character
+ * Mounted characters that have zero health are dismounted when entering combat
+ * Fix for Expedition not being marked as aborted when using balloon
+ * Fix for portals being placed always on grasslands
+ * Minor Barter UI improvements
+ * Fixed some missing status Notifications
+ * Fixed bad Scottish names
+ * Fixed various scripting/event errors
+ * Updated Credits
+
 # 1.3.13 (November 26th 2018)
   * Added Russian translation
   * Added new Explorer character Rasputin

@@ -1599,4 +1599,28 @@
     isAbsolute: false
     mainParticle: true
   }
+  {
+    id: pt-healthAdd
+    offsetX: [-15,15]
+    offsetY: -45
+    velY: -25
+    velX: [-2, 2]
+    maxTime: 0.8
+    fadeStart: 0.5
+    isAbsolute: true
+    imgSrc: hud_health_full.png
+    queueDelay: 0.2
+  }
+  {
+    id: pt-healthRemove
+    offsetX: [-15,15]
+    offsetY: -45
+    velX: [-2, 2]
+    velY: 25
+    maxTime: 0.8
+    fadeStart: 0.5
+    isAbsolute: true
+    imgSrc: hud_health_empty.png
+    queueDelay: 0.2
+  }
 ]

@@ -13,7 +13,7 @@
   }
   {
     id: np-scottishMaleFirst
-    names: ["txt-names-scottishLast"]
+    names: ["txt-names-scottishMaleFirst"]
   }
   {
     id: np-scottishLast

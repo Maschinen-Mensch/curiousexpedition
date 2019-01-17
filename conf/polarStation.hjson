@@ -212,7 +212,7 @@
       particlesChance: 0.5
     }
     playMusic: thm_arctic_night_1
-    reqItems: {it-polarStation-ticket: 1....}
+    reqItems: {it-polarStation-ticket: 1..}
     items: {it-polarStation-ticket: -1}
     text: txt-evt-polarStation-rest
     actions: {

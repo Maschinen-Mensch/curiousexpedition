@@ -59,6 +59,7 @@
     bonus: {
       moveCost: -2
       reqTiles: tl-hill tl-plateau
+      help: txt-tl-hill
     }
     debugCategory: Unit Perk
   }
@@ -68,7 +69,8 @@
     title: txt-pk-mountainTrooper-2-title
     bonus: {
       moveCost: -4
-      reqTiles: [tl-hill, tl-plateau]
+      reqTiles: tl-hill tl-plateau
+      help: txt-tl-hill
     }
   }
   {
@@ -77,7 +79,8 @@
     title: txt-pk-mountainTrooper-3-title
     bonus: {
       moveCost: -6
-      reqTiles: [tl-hill, tl-plateau]
+      reqTiles: tl-hill tl-plateau
+      help: txt-tl-hill
     }
   }
   {
@@ -86,7 +89,8 @@
     title: txt-pk-mountainTrooper-4-title
     bonus: {
       moveCost: -8
-      reqTiles: [tl-hill, tl-plateau]
+      reqTiles: tl-hill tl-plateau
+      help: txt-tl-hill
     }
   }
   {
@@ -572,7 +576,7 @@
     title: txt-pk-waterproof-title
     debugCategory: Explorer Perk
     description: txt-pk-waterproof
-    bonus: {moveCost: -3, reqTileFlags: +water}
+    bonus: {moveCost: -3, reqTileFlags: +water, help:txt-it-water-name}
     isPerk: true
     sprite: res_status_waterproof.png
   }
@@ -590,7 +594,7 @@
     title: txt-pk-jungleExplorer-title
     debugCategory: Explorer Perk
     description: txt-pk-jungleExplorer
-    bonus: {moveCost: -3, reqTiles: tl-jungle-thick tl-dry-jungle-thick}
+    bonus: {moveCost: -3, reqTiles: tl-jungle-thick tl-dry-jungle-thick, help:txt-tl-jungle-thick}
     isPerk: true
     sprite: res_status_jungleExplorer.png
   }
@@ -623,7 +627,7 @@
     title: txt-pk-desertExplorer-title
     debugCategory: Explorer Perk
     description: txt-pk-desertExplorer
-    bonus: {moveCost: -4, reqTiles: tl-desert}
+    bonus: {moveCost: -4, reqTiles: tl-desert, help: txt-tl-desert}
     isPerk: true
     sprite: res_status_desertExplorer.png
   }
@@ -632,7 +636,7 @@
     title: txt-pk-arcticExplorer-title
     debugCategory: Explorer Perk
     description: txt-pk-arcticExplorer
-    bonus: {moveCost: -4, reqTiles: tl-deepSnow}
+    bonus: {moveCost: -4, reqTiles: tl-deepSnow, help: txt-tl-deepSnow}
     isPerk: true
     sprite: res_status_arcticExplorer.png
   }

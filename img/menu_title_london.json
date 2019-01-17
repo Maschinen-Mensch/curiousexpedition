@@ -2,92 +2,91 @@
 
 {
 	"filename": "london_clouds_1.png",
-	"frame": {"x":40,"y":1337,"w":478,"h":254},
+	"frame": {"x":0,"y":0,"w":1791,"h":371},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":478,"h":254},
-	"sourceSize": {"w":478,"h":254},
-	"pivot": {"x":0.5,"y":0.5}
+	"spriteSourceSize": {"x":0,"y":0,"w":1791,"h":371},
+	"sourceSize": {"w":1791,"h":371}
 },
 {
 	"filename": "london_clouds_2.png",
-	"frame": {"x":518,"y":1337,"w":509,"h":193},
+	"frame": {"x":1791,"y":0,"w":1985,"h":280},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":509,"h":193},
-	"sourceSize": {"w":509,"h":193},
-	"pivot": {"x":0.5,"y":0.5}
+	"spriteSourceSize": {"x":0,"y":0,"w":1985,"h":280},
+	"sourceSize": {"w":1985,"h":280}
 },
 {
 	"filename": "london_clouds_3.png",
-	"frame": {"x":1082,"y":1337,"w":519,"h":163},
+	"frame": {"x":0,"y":549,"w":1519,"h":240},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":519,"h":163},
-	"sourceSize": {"w":519,"h":163},
-	"pivot": {"x":0.5,"y":0.5}
+	"spriteSourceSize": {"x":0,"y":0,"w":1519,"h":240},
+	"sourceSize": {"w":1519,"h":240}
 },
 {
 	"filename": "london_layer_1.png",
-	"frame": {"x":0,"y":1288,"w":2160,"h":49},
+	"frame": {"x":0,"y":853,"w":2327,"h":174},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":2160,"h":49},
-	"sourceSize": {"w":2160,"h":49},
-	"pivot": {"x":0.5,"y":0.5}
+	"spriteSourceSize": {"x":0,"y":0,"w":2327,"h":174},
+	"sourceSize": {"w":2327,"h":174}
 },
 {
 	"filename": "london_layer_2.png",
-	"frame": {"x":0,"y":924,"w":2160,"h":364},
+	"frame": {"x":2327,"y":853,"w":1139,"h":156},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":2160,"h":364},
-	"sourceSize": {"w":2160,"h":364},
-	"pivot": {"x":0.5,"y":0.5}
+	"spriteSourceSize": {"x":0,"y":0,"w":1139,"h":156},
+	"sourceSize": {"w":1139,"h":156}
 },
 {
 	"filename": "london_layer_3.png",
-	"frame": {"x":0,"y":480,"w":2160,"h":444},
+	"frame": {"x":1791,"y":280,"w":1791,"h":222},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":2160,"h":444},
-	"sourceSize": {"w":2160,"h":444},
-	"pivot": {"x":0.5,"y":0.5}
+	"spriteSourceSize": {"x":0,"y":0,"w":1791,"h":222},
+	"sourceSize": {"w":1791,"h":222}
 },
 {
 	"filename": "london_layer_4.png",
-	"frame": {"x":0,"y":0,"w":2160,"h":480},
+	"frame": {"x":0,"y":371,"w":1672,"h":178},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":2160,"h":480},
-	"sourceSize": {"w":2160,"h":480},
-	"pivot": {"x":0.5,"y":0.5}
+	"spriteSourceSize": {"x":0,"y":0,"w":1672,"h":178},
+	"sourceSize": {"w":1672,"h":178}
+},
+{
+	"filename": "london_layer_5.png",
+	"frame": {"x":1672,"y":502,"w":2306,"h":351},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":2306,"h":351},
+	"sourceSize": {"w":2306,"h":351}
 },
 {
 	"filename": "london_layer_6.png",
-	"frame": {"x":1027,"y":1337,"w":55,"h":174},
+	"frame": {"x":3831,"y":0,"w":55,"h":87},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":55,"h":174},
-	"sourceSize": {"w":55,"h":174},
-	"pivot": {"x":0.5,"y":0.5}
+	"spriteSourceSize": {"x":0,"y":0,"w":55,"h":87},
+	"sourceSize": {"w":55,"h":87}
 },
 {
 	"filename": "london_layer_7.png",
-	"frame": {"x":0,"y":1337,"w":40,"h":259},
+	"frame": {"x":3776,"y":0,"w":55,"h":329},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":259},
-	"sourceSize": {"w":40,"h":259},
-	"pivot": {"x":0.5,"y":0.5}
+	"spriteSourceSize": {"x":0,"y":0,"w":55,"h":329},
+	"sourceSize": {"w":55,"h":329}
 }],
 "meta": {
-	"app": "http://www.codeandweb.com/texturepacker",
+	"app": "https://www.codeandweb.com/texturepacker",
 	"version": "1.0",
 	"image": "_menu_title_london.png",
 	"format": "RGBA8888",
-	"size": {"w":2160,"h":1596},
+	"size": {"w":3978,"h":1027},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:9272b1f3b895266af742a61d82afe5e3:a24779bd7de44903adc2182faae0bd56:dbb07c0dc4bc8080f61440726a975c87$"
+	"smartupdate": "$TexturePacker:SmartUpdate:e346f210bf62ee93e194610d45b7f812:e6062dbca6d7151b3adc6b65b830d5cb:dbb07c0dc4bc8080f61440726a975c87$"
 }
 }

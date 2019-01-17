@@ -421,8 +421,8 @@ var staticConfig =
   enableAchievements: true,
   showMods: true,
   showReport: false,
-  footerName: "1.3.13.10",
-  footerNameIO: "0.11.9",
+  footerName: "1.3.13.11",
+  footerNameIO: "0.11.11",
   sanityCheckEvents: true,
 
   // is converted to config.diaryText at run-time
@@ -806,24 +806,31 @@ var config = {
   },
 
   mainMenuLayers: [
+  // MODDING BACKGROUND
+  //  {offset:  0, sprite:'london_clouds_3.png'},
+  //  {offset:  0, sprite:'london_clouds_2.png'},
+  //  {offset:  0, sprite:'london_clouds_1.png'},
+  //  {offset:  0, sprite:'london_layer_6.png'},
+  //  {offset:  0, sprite:'london_layer_7.png'},
+  //  {offset:  0, sprite:'london_layer_4.png'},
+  //  {offset:  0, sprite:'london_layer_3.png'},
+  //  {offset:  0, sprite:'london_layer_2.png'},
+  //  {offset:  0, sprite:'london_layer_1.png'},
+
+  // STANDARD LONDON BACKGROUND
+    {offset:  0, sprite:'london_layer_7.png', },
     {offset:  0, sprite:'london_clouds_3.png'},
     {offset:  0, sprite:'london_clouds_2.png'},
     {offset:  0, sprite:'london_clouds_1.png'},
-    {offset:  0, sprite:'london_layer_6.png'},
-    {offset:  0, sprite:'london_layer_7.png'},
-    {offset:  0, sprite:'london_layer_4.png'},
-    {offset:  0, sprite:'london_layer_3.png'},
-    {offset:  0, sprite:'london_layer_2.png'},
-    {offset:  0, sprite:'london_layer_1.png'},
-  //  {offset:  0, sprite:'london_layer_6.png', },
-  //  {offset:  0, sprite:'london_layer_5.png'},
-  //  {offset:  0, sprite:'london_layer_5.png', particle:'pt-smoke-menu-3',      interval: 0.7},
-  //  {offset:  0, sprite:'london_layer_4.png', },
-  //  {offset:  0, sprite:'london_layer_3.png'},
-  //  {offset:  0, sprite:'london_layer_3.png', particle:'pt-smoke-menu-2',      interval: 0.7},
-  //  {offset:  0, sprite:'london_layer_2.png',  },
-  //  {offset:  0, sprite:'london_layer_1.png', particle:'pt-smoke-menu-1'},
-  //  {offset:  0, sprite:'london_layer_1.png', particle:'pt-smoke-menu-1',      interval: 0.7},
+    // {offset:  0, sprite:'london_layer_5.png'},
+    {offset:  0, sprite:'london_layer_5.png', particle:'pt-smoke-menu-3',      interval: 0.7},
+    {offset:  0, sprite:'london_layer_4.png', },
+    // {offset:  0, sprite:'london_layer_3.png'},
+    {offset:  0, sprite:'london_layer_3.png', particle:'pt-smoke-menu-2',      interval: 0.7},
+    {offset:  0, sprite:'london_layer_2.png',  },
+    //{offset:  0, sprite:'london_layer_1.png', particle:'pt-smoke-menu-1'},
+    {offset:  0, sprite:'london_layer_1.png', particle:'pt-smoke-menu-1',      interval: 0.7},
+    
   ],
 
   mapScore: {
@@ -909,8 +916,8 @@ var config = {
     cityLayers: 2,
     jungleLayers: 2,
 
-    cityScrollSpeed: 1.0,
-    jungleScrollSpeed: 1.0,
+    cityScrollSpeed: 2.0,
+    jungleScrollSpeed: 2.0,
 
     shipTravelTiles: 5
   },

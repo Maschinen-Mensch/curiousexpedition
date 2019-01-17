@@ -107,7 +107,6 @@
   }
   {
     id: evt-hotAirBalloon-abort-leave
-    setPartyFlags: +abortedExpedition
     actionText: txt-evt-hotAirBalloon-abort-action
     text: txt-evt-hotAirBalloon-abort-leave
   }
@@ -116,6 +115,7 @@
     actionText: txt-evt-hotAirBalloon-takeOff-action
     text: txt-evt-hotAirBalloon-takeOff
     incAchievement: ach-hot-air-balloon
+    setPartyFlags: +abortedExpedition
     charEvents: [
       {
         optional: true

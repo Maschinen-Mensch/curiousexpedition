@@ -201,6 +201,7 @@
         setPartyFlags: +recruitedSomebody
         addNPC: true
         select: evt-village-main-update
+        showPersonInfo: true
       }
     }
   }
@@ -215,6 +216,7 @@
         setPartyFlags: +recruitedSomebody
         addNPC: true
         select: evt-village-main-update
+        showPersonInfo: true
       }
     }
   }
@@ -229,6 +231,7 @@
         setPartyFlags: +recruitedSomebody
         addCharacter: anm-camel
         select: evt-village-main-update
+        showPersonInfo: true
       }
     }
   }
@@ -243,6 +246,7 @@
         setPartyFlags: +recruitedSomebody
         addCharacter: anm-dog-husky
         select: evt-village-main-update
+        showPersonInfo: true
       }
     }
   }
@@ -258,6 +262,7 @@
         addCharacter: anm-parasaurolophus
         incAchievement: ach-recr-dinos
         select: evt-village-main-update
+        showPersonInfo: true
       }
     }
   }
@@ -273,6 +278,7 @@
         addCharacter: anm-chasmosaurus
         incAchievement: ach-recr-dinos
         select: evt-village-main-update
+        showPersonInfo: true
       }
     }
   }

@@ -1187,6 +1187,7 @@
     charEvents: [
       {
         reqStatus: +racist
+        consume: true
         text: txt-evt-noSanity-racist
         chat: cl-racist-conflict
         actions: evt-conflict-racist-dismiss
