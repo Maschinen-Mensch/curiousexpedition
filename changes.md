@@ -1,6 +1,7 @@
-# 1.3.13.11
+# 1.3.14.0
+ * Added Portuguese-Brasil & Ukrainian languages
  * New Main Menu background: Remastered London Skyline
- * Renamed 'Bipolar' to 'Mecurial'
+ * Renamed 'Bipolar' to 'Mercurial'
  * Fixed some English and German text
  * Fix for damage particles being in wrong location when hitting mounted character
  * Mounted characters that have zero health are dismounted when entering combat
