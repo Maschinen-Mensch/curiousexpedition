@@ -142,6 +142,7 @@ config.credits = [
   "Luke Openshaw",
   "M. 'Raptor Bait' Schlichting,",
   "Manuel Fa4",
+  "Mapedorr",
   "Marco Ventilii",
   "Mark Zeman",
   "Markus 'Khaanara' Wolf",

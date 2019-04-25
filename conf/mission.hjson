@@ -307,7 +307,7 @@
     id: evt-mission-cultist-init
     actionText: txt-evt-mission-init-action
     showImage: {src: evt_fxt_mission_1.png, type: day, npc: res_porter_cultist_1.png}
-    storeEvents: {reqCharFlags: +missionTakeover, text: txt-evt-mission-cultist-init}
+    storeEvents: {reqCharFlags: +missionTakeover, text: txt-evt-mission-cultist-init, optional: true}
     playMusic: [thm_mission_1, thm_mission_2]
     select: evt-mission-cultist-main
   }
