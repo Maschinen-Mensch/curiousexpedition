@@ -9,7 +9,7 @@
     health: 12
     variations: [
       {
-        gender: mixed
+        gender: hybrid
         sprite: res_porter_abomination_1.png
         portrait: res_face_abomination_1.png
       }

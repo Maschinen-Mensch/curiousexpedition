@@ -278,13 +278,13 @@
     name: txt-npc-nativeGhost-1-name
     description: txt-npc-ghostie
     variations: [
-      {gender: hyrbid, sprite: res_npc_ghostie_1.png}
-      {gender: hyrbid, sprite: res_npc_ghostie_2.png}
-      {gender: hyrbid, sprite: res_npc_ghostie_3.png}
-      {gender: hyrbid, sprite: res_npc_ghostie_4.png}
-      {gender: hyrbid, sprite: res_npc_ghostie_5.png}
-      {gender: hyrbid, sprite: res_npc_ghostie_6.png}
-      {gender: hyrbid, sprite: res_npc_ghostie_7.png}
+      {gender: hybrid, sprite: res_npc_ghostie_1.png}
+      {gender: hybrid, sprite: res_npc_ghostie_2.png}
+      {gender: hybrid, sprite: res_npc_ghostie_3.png}
+      {gender: hybrid, sprite: res_npc_ghostie_4.png}
+      {gender: hybrid, sprite: res_npc_ghostie_5.png}
+      {gender: hybrid, sprite: res_npc_ghostie_6.png}
+      {gender: hybrid, sprite: res_npc_ghostie_7.png}
     ]
   }
 ]

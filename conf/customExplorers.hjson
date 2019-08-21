@@ -771,7 +771,7 @@
     debugCategory: Customers
     variations: [
       {
-        gender: mixed
+        gender: hybrid
         sprite: ee_sprite_aeryn.png
         miniSprite: ee_sprite_aeryn_mini.png
         portrait: ee_face_aeryn.png
@@ -831,7 +831,7 @@
     debugCategory: Customers
     variations: [
       {
-        gender: mixed
+        gender: hybrid
         sprite: ee_sprite_bhaak.png
         miniSprite: ee_sprite_bhaak_mini.png
         portrait: ee_face_bhaak.png

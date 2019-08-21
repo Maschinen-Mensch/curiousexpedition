@@ -1,4 +1,13 @@
-# 1.3.14.0
+# 1.3.15.0
+ * Added Turkish
+ * Returning empty-handed from idol harbor quest no longer shows text implying that you kept the idol
+ * Fix for loading very old savegames
+ * Fixed some cases where the wrong gender would be displayed
+ * Fix for being able to perform attacks or click the roll button during the enemy turn
+ * Updated translations and fixed some typos
+ * Fix for sprawl events happening while resting
+
+# 1.3.14.0 (May 8th 2019)
  * Added Portuguese-Brasil & Ukrainian languages
  * New Main Menu background: Remastered London Skyline
  * Renamed 'Bipolar' to 'Mercurial'

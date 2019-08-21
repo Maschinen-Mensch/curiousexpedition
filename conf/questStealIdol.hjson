@@ -43,6 +43,13 @@
       {
         actionText: txt-evt-angry-demandPayment-action-1
         text: txt-evt-harbor-quest-idol-complete-2
+        reqItems: {it-idol: 1..}
+        fame: -fameLarge
+        select: evt-harbor-eventSelection
+      }
+      {
+        actionText: txt-evt-harbor-quest-musician-complete-action-3
+        reqItems: {it-idol: 0}
         fame: -fameLarge
         select: evt-harbor-eventSelection
       }

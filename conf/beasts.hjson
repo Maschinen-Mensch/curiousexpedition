@@ -145,11 +145,11 @@
     id: anm-dog-luis
     title: txt-anm-dog-luis-title
     description: txt-anm-dog-luis
+    name: txt-anm-dog-luis-name
     debugCategory: Beast
     imgSlot: unit
     miniSprite: res_anm_luis_mini.png
     health: 8
-    name: Luis
     flags: +dog +animal +luis +mammal
     variations: [
       {gender: male, sprite: res_anm_luis.png, portrait: res_face_luis.png}
