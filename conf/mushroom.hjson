@@ -128,7 +128,7 @@
       {
         count: all
         optional: true
-        reqStatusFlags: -affliction
+        reqAllStatusFlags: -affliction
         text: txt-evt-useItem-mushroom-healing-1
       }
     ]

@@ -421,8 +421,8 @@ var staticConfig =
   enableAchievements: true,
   showMods: true,
   showReport: false,
-  footerName: "1.3.15.1",
-  footerNameIO: "0.11.17",
+  footerName: "1.3.15.3",
+  footerNameIO: "0.11.18",
   sanityCheckEvents: true,
 
   // is converted to config.diaryText at run-time
@@ -435,17 +435,17 @@ var staticConfig =
     'zh-CN': {
       margin: [0, 15],
       separator: '',
-      nonBreaking: '。，:'
+      nonBreaking: '。，:！？「」『』'
     },
     'zh-TW': {
       margin: [0, 15],
       separator: '',
-      nonBreaking: '。，:'
+      nonBreaking: '。，:！？「」『』'
     },
-    'jp': {
+    'ja': {
       margin: [0, 15],
       separator: '',
-      nonBreaking: '。，:'
+      nonBreaking: '。，:！？「」『』'
     }
   },
 

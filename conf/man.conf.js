@@ -651,7 +651,12 @@ config.man = [
   {
     keyword: 'reqStatusFlags',
     $flags: true,
-    $description: "Returns true if the current status flags match"
+    $description: "Returns true if the character has one status that matches the given flags"
+  },
+  {
+    keyword: 'reqAllStatusFlags',
+    $flags: true,
+    $description: "Returns true if the all character's statuses match the given flags"
   },
   {
     keyword: 'reqPartyCount',
