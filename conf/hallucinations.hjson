@@ -26,7 +26,7 @@
       text: txt-evt-sanity-apply-hallucinations
       reqCharFlags: +special
       setStatus: +hallucinations
-      reqStatus: -hallucinations
+      reqStatus: -hallucinations -blessingPureMind
     }
     select: evt-sanity-return
   }

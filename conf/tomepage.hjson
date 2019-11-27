@@ -83,6 +83,7 @@
   }
   {
     id: it-tomePage-monsterDen
+    showInHallOfFame: false
     extends: it-tomePage
     name: txt-it-tomePage-monsterDen-name
     sprite: it_tomepage_1.png
@@ -94,6 +95,7 @@
   }
   {
     id: it-tomePage-corrupted
+    showInHallOfFame: false
     extends: it-tomePage
     name: txt-it-tomePage-corrupted-name
     sprite: it_tomepage_1.png
@@ -131,6 +133,7 @@
   }
   {
     id: it-tomePage-mountain
+    showInHallOfFame: false
     extends: it-tomePage
     name: txt-it-tomePage-mountain-name
     sprite: it_tomepage_2.png
@@ -243,6 +246,7 @@
   }
   {
     id: it-tomePage-chasm
+    showInHallOfFame: false
     extends: it-tomePage
     name: txt-it-tomePage-chasm-name
     sprite: it_tomepage_8.png

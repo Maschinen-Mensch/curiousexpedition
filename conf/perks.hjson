@@ -740,7 +740,7 @@
   {
     id: st-woundTreatment
     title: txt-pk-woundTreatment-title
-    description: txt-pk-healer
+    description: txt-pk-woundTreatment
     debugCategory: generic
     sprite: res_status_regeneration.png
     bonus: {healthRegen: 0.25}

@@ -551,7 +551,7 @@ var debug = {
 
   hidePath: false,
   freePath: false, // if true path may also point to unknown areas
-  skipMetrics: true,
+  skipMetrics: false,
 
   drawAllTiles: false,
   unlockAllExplorers: false,
@@ -602,10 +602,10 @@ var debug = {
   outputDiaryLog: false, // if this is on, screenshots of every diary entry will be placed in a folder 'diaryLog' (electron only)
 
   //startBiome: [15, 51],
-  disableIOMP: true,        // if iomp features should be disabled
-  genInstant: true,         // enable this to have quick but hitchy generation
+  disableIOMP: false,        // if iomp features should be disabled
+  genInstant: false,         // enable this to have quick but hitchy generation
   startNewIOGame: false,    // enable this to start a new game each load (ignoring savegames)
-  skipSGWorld: true,         // enable this to prevent world data being loaded from savegames
+  skipSGWorld: false,         // enable this to prevent world data being loaded from savegames
   drawHubArrows: false,     // draw a big fat arrow at every hub (even hidden ones)
   showRivers: false,        // enable this to draw an R on all hub-connection river tiles (will need to toggle Q to refresh)
   debugIOGen: false,        // displays WorldGenIO stats on-screen

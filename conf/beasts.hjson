@@ -101,7 +101,7 @@
     id: anm-dog-pug
     extends: anm-dog-hunting
     title: txt-anm-dog-pug-title
-    description: txt-anm-dog-pug
+    description: txt-anm-dog-hunting
     debugCategory: Beast
     imgSlot: unit
     health: 6

@@ -125,7 +125,7 @@ var achievements = [
     name: "txt-ach-all-items",
     desc: "txt-ach-all-items-desc",
     img: "achv_img_ID_36",
-    counterTarget: 163
+    counterTarget: 159
   },
   {
     id: "ach-reach-world2",
@@ -413,6 +413,25 @@ var achievements = [
     img: "achv_img_ID_15",
     secret: true
   },
+  // RIVALS achievements
+  {
+    id: "ach-find-pyramid",
+    name: "txt-ach-find-pyramid",
+    desc: "txt-ach-find-pyramid-desc",
+    img: "achv_img_ID_61"
+  },
+  {
+    id: "ach-claim-region",
+    name: "txt-ach-claim-region",
+    desc: "txt-ach-claim-region-desc",
+    img: "achv_img_ID_62"
+  },
+  {
+    id: "ach-claim-hub",
+    name: "txt-ach-claim-hub",
+    desc: "txt-ach-claim-hub-desc",
+    img: "achv_img_ID_63"
+  }
 ]
 
 var staticConfig =
@@ -421,8 +440,7 @@ var staticConfig =
   enableAchievements: true,
   showMods: true,
   showReport: false,
-  footerName: "1.3.15.3",
-  footerNameIO: "0.11.18",
+  footerName: "1.4.0",
   sanityCheckEvents: true,
 
   // is converted to config.diaryText at run-time
@@ -1258,6 +1276,7 @@ var config = {
       quit: "txt-help-settings-quit",
       restartDemo: "txt-help-demo-restart",
       lowGraphics: "txt-help-settings-low-graphics",
+      combatAutoSelect: "txt-help-settings-combatAutoSelect",
 
       scale1: ["txt-help-settings-scale1", "txt-help-settings-scale-refuse"],
       scale2: ["txt-help-settings-scale2", "txt-help-settings-scale-refuse"],
@@ -1302,7 +1321,7 @@ var config = {
     yay: 'sfx_campOpen',
     outroBang: 'sfx_reveal_guitar_a',
     outroCount: 'sfx_click_castanet',
-    achievement: 'sfx_reveal_kalimba',
+    achievement: 'sfx_reveal_guitar_b',
 
     cheer1: 'sfx_cheer_1',
     cheer2: 'sfx_cheer_2',

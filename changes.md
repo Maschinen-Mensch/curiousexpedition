@@ -1,3 +1,14 @@
+# 1.4
+  * Added new game mode: Curious Expedition: RIVALS
+  * Bug Fixes
+    * Removed obsolete items from Hall Of Fame (and 'A Collector of Sorts' achievement)
+    * Fix for arctic claim positions not working if the tile they were on changed
+    * Fix for status days remaining not updating while resting
+    * Fix for Rasputin's "Wound treatment" status having the wrong description
+    * Fix for pendulum shaking while in the harbor
+    * Fix for zone borders not being properly shown when revealed sometimes
+    * Many changes to French translation by Damn3D
+
 # 1.3.15.3 (October 7th 2019)
  * Added Turkish and Japanese
  * Returning empty-handed from idol harbor quest no longer shows text implying that you kept the idol
@@ -7,6 +18,7 @@
  * Updated translations and fixed some typos
  * Fix for sprawl events happening while resting
  * Fix for red mushrooms usage event saying nobody requires treatment when they do
+ * Fix for hitch when multiple achievements tracked per frame
 
 # 1.3.14.0 (May 8th 2019)
  * Added Portuguese-Brasil & Ukrainian languages

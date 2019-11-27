@@ -62,10 +62,10 @@
   }
   {
     id: evt-claimPosition
+    posTile: {range: 0, locationFlags: +claimPosition}
     select: [
       {
-        reqTileFlags: +claimPosition
-        setTileFlags: -claimPosition
+        reqLocationFlags: +claimPosition
         items: {it-claimFlag: -1}
         chat: cl-item-claimFlag-success
         replaceLocations: [
@@ -92,7 +92,7 @@
           }
         ]
       }
-      {reqTileFlags: -claimPosition, chat: cl-item-claimFlag-fail}
+      {prio: 1, chat: cl-item-claimFlag-fail}
     ]
   }
   {
@@ -134,7 +134,6 @@
     hideParty: false
     sprite: res_fxt_arcticClaimMarker.png
     setTile: tl-plateau | tl-deepSnow | tl-frozenPlains | tl-crystalForest
-    spawnEvents: {setTileFlags: +claimPosition}
   }
   {
     id: loc-claimFlag

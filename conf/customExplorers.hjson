@@ -287,8 +287,8 @@
     id: sp-ee-pewdiepie
     extends: sp-ee-base
     isAbstract: true
-    title: txt-sp-ee-pewdiepie-title
-    description: txt-sp-ee-pewdiepie
+    title: txt-sp-ee-inventor-title
+    description: txt-sp-ee-inventor
     levels: [
       {
         statuses: [st-charismatic, st-naturalLeader]
@@ -735,7 +735,7 @@
   }
   {
     id: sp-pewdiepie
-    name: Felix Kjellberg
+    name: Alfred Nobel
     extends: sp-ee-pewdiepie
     unlockPin: 1989
     debugCategory: FamousPeople

@@ -368,6 +368,20 @@
         text: txt-evt-mission-cultist-recruit-yes
         addCharacter: {id: pl-cultist}
         chat: cl-join
+        partyEvents:{
+          optional: true
+          # used by rivals: max recruit count 2
+          select: [
+            {
+              reqLocationFlags: -recruit-count-1 -recruit-count-2
+              setLocationFlags: +recruit-count-1
+            }
+            {
+              reqLocationFlags: +recruit-count-1
+              setLocationFlags: -recruit-count-1 +recruit-count-2
+            }
+          ]
+        }
         select: evt-mission-cultist-actions
       }
       {

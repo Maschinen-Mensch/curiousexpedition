@@ -6,4 +6,4 @@
 "pk-researchAssistance-description","Aumenta la cordura recibida al descubrir un nuevo espécimen de mariposa."
 "evt-harbor-recruit-scientificAssistant-action","$name, asistente científico"
 "evt-harbor-recruit-scientificAssistant","[Uno nunca tiene demasiada ciencia|Tenía la certeza de que un asistente científico me ayudaría muchísimo|Siempre quise tener mi propio asistente], así que le di la bienvenida a $name al equipo."
-"mod-scientifictAss-desc","Añade un personaje que puede ser reclutado en el puerto. Te dará un extra en tu sanidad cuando obtengas mariposas (apilable con el talento de Darwin). Esto debería permitirme desarrollar interesantes estrategias para planear tu ruta con posiciones de mariposa en mente."
+"mod-scientifictAss-desc","Añade un nuevo tipo de compañero que puede ser reclutado en el puerto. Te proporcionará cordura adicional cuando atrapes mariposas (apilable con el talento de Darwin). Esto debería permitirte desarrollar interesantes estrategias planeando tu ruta teniendo en cuenta las posiciones de las mariposas en el mapa."
