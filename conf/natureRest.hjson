@@ -1477,7 +1477,7 @@
           {
             actionText: txt-evt-cave-ghostsQuest-action
             combat: {
-              refs: {emy-mummy: 1}
+              refs: {emy-mummy: 2}
               winEvents: evt-sanity-loot-return
               fleeEvents: evt-sanity-flee-return
             }

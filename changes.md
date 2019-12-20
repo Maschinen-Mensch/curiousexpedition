@@ -1,4 +1,28 @@
-# 1.4
+# 1.4.1 (December 20th 2019)
+  * Fix for being able to promote while travelling
+  * Fixed some localisation / pronoun issues
+  * Flare Usage perk doesn't stack
+  * Fix for losing a mummy when two mummies come alive from your inventory (you now fight two mummies)
+  * RIVALS
+    * Improved server connection issues
+    * Hubs are now generally further away from each other
+    * Hub names now just take the full player name
+    * Removed Renounced status
+    * Reduced range of Weather Balloons
+    * Reduced speed of world Timeline animation
+    * Whisky Lover 2 crate only has 15 Whisky (so it's not better than Best of Both Worlds)
+    * When sorting Crates by Rarity, Held crates are sorted first
+    * Fix for Cultist takeover Missions not allowing Recruit even though party wasn't full with Authoritative Leader
+    * Fixed issues when Holding crates failed
+    * Fix for Province banners being shown when they shouldn't
+    * Fix for global highscores showing missing users
+    * Fix for some animal loot not being tradable with Taxidermy Badge Servant
+    * Fix for T-Rex tooth not being deliverable as Treasure
+    * Fix for some party members not getting their proper initial statuses
+    * Fix for account issues when switching Steam user
+    * Fix for easy accidental perk selection when promoting Explorer
+
+# 1.4.0 (November 26th 2019)
   * Added new game mode: Curious Expedition: RIVALS
   * Bug Fixes
     * Removed obsolete items from Hall Of Fame (and 'A Collector of Sorts' achievement)

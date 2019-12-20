@@ -252,6 +252,7 @@
     id: st-flare-1
     title: txt-pk-flare-1-title
     description: txt-pk-flare-1
+    noBonusStacking: true
     bonus: {flareRadius: 1}
     sprite: res_status_flare.png
     debugCategory: Unit Perk
@@ -259,18 +260,21 @@
   {
     id: st-flare-2
     extends: st-flare-1
+    improves: st-flare-1
     title: txt-pk-flare-2-title
     bonus: {flareRange: 2, flareRadius: 1}
   }
   {
     id: st-flare-3
     extends: st-flare-1
+    improves: st-flare-2
     title: txt-pk-flare-3-title
     bonus: {flareRange: 3, flareRadius: 1}
   }
   {
     id: st-flare-4
     extends: st-flare-1
+    improves: st-flare-3
     title: txt-pk-flare-4-title
     bonus: {flareRange: 3, flareRadius: 2}
   }

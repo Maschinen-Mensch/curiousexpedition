@@ -38,6 +38,7 @@
     value: {base: 10, village: 3, karma: 1}
     maxStack: 20
     useEvents: {
+      reqLocation: {flags: "", range: ..100, locationKnown: false}
       posTile: {range: ..100, closest: true, locationFlags: "", locationKnown: false}
       revealTiles: {location: true, centerCam: true}
       removeItem: true
@@ -272,7 +273,7 @@
     fame: fameSmall
     funds: fundsVeryLarge
     reqBiomeFlags: -arctic
-    flags: +fameItem
+    flags: +fameItem +animalLoot
   }
   {
     id: it-mammothTusk
@@ -284,7 +285,7 @@
     fame: fameSmall
     funds: fundsVeryLarge
     reqBiomeFlags: +arctic
-    flags: +fameItem
+    flags: +fameItem +animalLoot
   }
   {
     id: it-triceratopsHorn
@@ -296,7 +297,7 @@
     maxStack: 3
     fame: fameSmall
     funds: fundsVeryLarge
-    flags: +fameItem
+    flags: +fameItem +animalLoot
   }
   {
     id: it-dinoSkull
@@ -309,7 +310,7 @@
     maxStack: 1
     fame: fameLarge
     funds: fundsVeryLarge
-    flags: +fameItem
+    flags: +fameItem +animalLoot
   }
   {
     id: it-mummy

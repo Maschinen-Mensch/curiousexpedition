@@ -85,6 +85,11 @@
             optional: true
             showImage: {src: evt_fxt_village_bones.png, type: day}
           }
+          {
+            reqLocationFlags: +villageType_inuit
+            optional: true
+            showImage: {src: evt_fxt_village_inuit_1.png, type: day}
+          }
         ]
         combat: [
           {emy-konrad: 1}
