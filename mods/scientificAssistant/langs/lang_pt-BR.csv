@@ -4,6 +4,6 @@
 "pk-researchAssistance-3-title","Assistência de Pesquisa 3"
 "pk-researchAssistance-4-title","Assistência de Pesquisa 4"
 "pk-researchAssistance-description","Maiores ganhos de sanidade ao descobrir novos espécimes de borboletas."
-"evt-harbor-recruit-scientificAssistant-action","$name o assistente"
+"evt-harbor-recruit-scientificAssistant-action","$name, {o|a} assistente"
 "evt-harbor-recruit-scientificAssistant","[Não existe algo como ciência em demasia|Eu estava certo de que um assistente seria muito útil|Eu sempre quis meu próprio assistente], então recebi $name em nossa equipe."
-"mod-scientifictAss-desc","Adiciona um personagem que pode ser recrutado no porto. Ele adicionará sanidade extra ao colecionar borboletas (combinável com o talento de Darwin). Isso deve permitir que você desenvolva estratégias interessantes no planejamento de sua rota tendo as posições das borboletas em mente."
+"mod-scientifictAss-desc","Adiciona um personagem que pode ser recrutado no porto. Ele recobrará sanidade extra ao colecionar borboletas (combinável com o talento de Darwin). Isso deve permitir que você desenvolva estratégias interessantes no planejamento de sua rota tendo as posições das borboletas em mente."
