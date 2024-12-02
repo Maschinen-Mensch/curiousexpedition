@@ -1,0 +1,477 @@
+[
+  {
+      targetId: +evt-world-init::partyEvents
+      data: {
+        ref: evt-io-timedEvents
+      }
+  }
+  {
+    id: evt-io-timedEvents
+    partyEvents:[
+      { racetrackEvents: { inDays: 365, icon: hud_icon_skull.png
+          select: [ { ref: evt-timedEvent-exhausted-1, text: txt-io-racetrack-event } ] } }
+      { racetrackEvents: { inDays: 547, icon: hud_icon_skull.png
+          select: [ { ref: evt-timedEvent-exhausted-2, text: txt-io-racetrack-event } ] } }
+      { racetrackEvents: { inDays: 638, icon: hud_icon_skull.png
+          select: [ { ref: evt-timedEvent-exhausted-3, text: txt-io-racetrack-event } ] } }
+      { racetrackEvents: { inDays: 730, icon: hud_icon_skull.png
+          select: [ { ref: evt-timedEvent-endGame, text: txt-io-racetrack-event } ] } }
+    ]
+  }
+  {
+    id: evt-timedEvent-endGame
+    text: txt-io-endGame
+    showImage: {src: evt_fxt_empty.png, type: day}
+    actions: {
+      actionText: txt-evt-expedition-done-native-stay-action-1
+      endWorld: {}
+    }
+  }
+  {
+    id: evt-timedEvent-exhausted-1
+    partyEvents: [
+      {ref: evt-setImage-nightCamp}
+      { # Intro
+        text: txt-io-exhausted-1-intro
+        chat: cl-exhausted-genericComments
+        setPartyStatus: +st-exhausted-1
+        charEvents: {
+          optional: true, count: any
+          reqCharFlags: -special -animal
+          setStatus: +st-faithless
+        }
+      }
+      { # Only 1 character in trek?
+        optional: true
+        select: [
+          {charEvents: {count: 1, reqCharFlags: +humanoid -special, text: txt-io-exhausted-single-trek-generic}}
+          {charEvents: {count: 1, reqCharFlags: +animal, text: txt-io-exhausted-animal-generic}}
+        ]
+      }
+      { # More characters in trek?
+        optional: true, charEvents: {count: 2, reqCharFlags: +humanoid -special}
+        text: txt-io-exhausted-1-trek
+      }
+    ]
+    actions: evt-timedEvent-exhausted-keepGoing
+  }
+  {
+    id: evt-timedEvent-exhausted-2
+    partyEvents: [
+      {ref: evt-setImage-nightCamp}
+      { # Intro
+        text: txt-io-exhausted-2-intro
+        chat: cl-exhausted-genericComments
+        setPartyStatus: -st-exhausted-1 +st-exhausted-2
+        charEvents: {
+          optional: true, count: any
+          reqCharFlags: -special -animal
+          setStatus: +st-faithless
+        }
+      }
+      { # Only 1 character in trek?
+        optional: true
+        select: [
+          {charEvents: {count: 1, reqCharFlags: +humanoid -special, text: txt-io-exhausted-single-trek-generic}}
+          {charEvents: {count: 1, reqCharFlags: +animal, text: txt-io-exhausted-animal-generic}}
+        ]
+      }
+      { # More characters in trek?
+        optional: true, charEvents: {count: 2, reqCharFlags: +humanoid -special}
+        text: txt-io-exhausted-2-trek
+      }
+    ]
+    actions: evt-timedEvent-exhausted-keepGoing
+  }
+  {
+    id: evt-timedEvent-exhausted-3
+    partyEvents: [
+      {ref: evt-setImage-nightCamp}
+      { # Intro
+        text: txt-io-exhausted-3-intro
+        chat: cl-exhausted-genericComments
+        setPartyStatus: -st-exhausted-2 +st-exhausted-3
+        charEvents: {
+          optional: true, count: any
+          reqCharFlags: -special -animal
+          setStatus: +st-faithless
+        }
+      }
+      { # Only 1 character in trek?
+        optional: true
+        select: [
+          {charEvents: {count: 1, reqCharFlags: +humanoid -special, text: txt-io-exhausted-single-trek-generic}}
+          {charEvents: {count: 1, reqCharFlags: +animal, text: txt-io-exhausted-animal-generic}}
+        ]
+      }
+      { # More characters in trek?
+        optional: true, charEvents: {count: 2, reqCharFlags: +humanoid -special}
+        text: txt-io-exhausted-3-trek
+      }
+    ]
+    actions: evt-timedEvent-exhausted-keepGoing
+  }
+  {
+    id: evt-timedEvent-exhausted-keepGoing
+    actionText: txt-evt-village-rest-positive-gameover-cancel-action
+    text: txt-io-exhausted-keepGoing
+    sanity: 200
+    actions: {
+      actionText: txt-io-exhausted-onward
+      playMusic: [jgl_good_1, jgl_good_3]
+    }
+  }
+  {
+    id: cl-exhausted-genericComments
+    lines: [ {text: txt-io-exhausted-genericComments, reqCharFlags: -special +humanoid, delay: 2, duration: 5} ]
+  }
+  {
+    id: st-exhausted-1
+    title: txt-io-st-exhausted-title-1
+    description: txt-io-st-exhausted
+    debugCategory: timedEvent
+    sprite: res_status_exhausted_1.png
+    important: true
+    bonus: {
+      maxSanity: -10
+    }
+  }
+  {
+    id: st-exhausted-2
+    title: txt-io-st-exhausted-title-2
+    description: txt-io-st-exhausted
+    debugCategory: timedEvent
+    sprite: res_status_exhausted_2.png
+    important: true
+    bonus: {
+      tripCost: +1
+      maxSanity: -15
+    }
+  }
+  {
+    id: st-exhausted-3
+    title: txt-io-st-exhausted-title-3
+    description: txt-io-st-exhausted
+    debugCategory: timedEvent
+    sprite: res_status_exhausted_4.png
+    important: true
+    bonus: {
+      tripCost: +2
+      moveCost: +2
+      maxSanity: -25
+    }
+  }
+  {
+    id: st-faithless
+    title: txt-io-st-faithless-title
+    description: txt-io-st-faithless
+    debugCategory: timedEvent
+    sprite: res_status_homesick.png
+    important: true
+    dayEvents: {
+      reqAge: 25..
+      loyalty: -1
+      resetStatusAge: true
+    }
+  }
+
+
+
+
+
+  #{
+  #  id: evt-timedEvent-exhausted-prepareBalloon
+  #  text: txt-io-exhausted-prepareBalloon
+  #  showImage: {src: evt_fxt_balloon_1.png, type: day}
+  #  chat: cl-prepareBalloon-comments
+  #  actions: [
+  #    evt-hotAirBalloon-finish
+  #    evt-hotAirBalloon-abort-leave
+  #  ]
+  #}
+  #{
+  #  id: cl-prepareBalloon-comments
+  #  lines: [ {text: txt-io-exhausted-genericComments, reqCharFlags: -special +humanoid, delay: 2, duration: 5} ]
+  #}
+
+
+
+
+
+
+  #{ racetrackEvents: { inDays: 50, icon: hud_icon_skull.png
+      #    select: [ { ref: evt-timedEvent-spawnEnemyZone-easy, text: txt-io-racetrack-event } ] } }
+      #{ racetrackEvents: { inDays: 100, icon: hud_icon_skull.png
+      #    select: [ { ref: evt-timedEvent-floodChase-1, text: txt-io-racetrack-event } ] } }
+      #{ racetrackEvents: { inDays: 125, icon: hud_icon_skull.png
+      #    select: [ { ref: evt-timedEvent-spawnEnemyZone-medium, text: txt-io-racetrack-event } ] } }
+      #{ racetrackEvents: { inDays: 175, icon: hud_icon_skull.png
+      #    select: [ { ref: evt-timedEvent-chasmChase-1, text: txt-io-racetrack-event } ] } }
+      #{ racetrackEvents: { inDays: 200, icon: hud_icon_skull.png
+      #    select: [ { ref: evt-timedEvent-poisonGas-1, text: txt-io-racetrack-event } ] } }
+
+      #{ racetrackEvents: { inDays: 225, icon: hud_icon_skull.png
+      #    select: [ { ref: evt-timedEvent-spawnEnemyZone-medium, text: txt-io-racetrack-event } ] } }
+      #{ racetrackEvents: { inDays: 235, icon: hud_icon_skull.png
+      #    select: [ { ref: evt-timedEvent-chasmChase-1, text: txt-io-racetrack-event } ] } }
+      #{ racetrackEvents: { inDays: 245, icon: hud_icon_skull.png
+      #    select: [ { ref: evt-timedEvent-spawnEnemyZone-hard, text: txt-io-racetrack-event } ] } }
+      #{ racetrackEvents: { inDays: 280, icon: hud_icon_skull.png
+      #    select: [ { ref: evt-timedEvent-poisonGas-2, text: txt-io-racetrack-event } ] } }
+      #{ racetrackEvents: { inDays: 325, icon: hud_icon_skull.png
+      #    select: [ { ref: evt-timedEvent-chasm-1, text: txt-io-racetrack-event } ] } }
+
+      #{ racetrackEvents: { inDays: 360, icon: hud_icon_skull.png
+      #    select: [ { ref: evt-timedEvent-spawnEnemyZone-hard, text: txt-io-racetrack-event } ] } }
+      #{ racetrackEvents: { inDays: 375, icon: hud_icon_skull.png
+      #    select: [ { ref: evt-timedEvent-chasm-2, text: txt-io-racetrack-event } ] } }
+      #{ racetrackEvents: { inDays: 400, icon: hud_icon_skull.png
+      #    select: [ { ref: evt-timedEvent-chasmChase-1, text: txt-io-racetrack-event } ] } }
+      #{ racetrackEvents: { inDays: 420, icon: hud_icon_skull.png
+      #    select: [ { ref: evt-timedEvent-poisonGas-2, text: txt-io-racetrack-event } ] } }
+      #{ racetrackEvents: { inDays: 460, icon: hud_icon_skull.png
+      #    select: [ { ref: evt-timedEvent-spawnEnemyZone-hard, text: txt-io-racetrack-event } ] } }
+      #{ racetrackEvents: { inDays: 470, icon: hud_icon_skull.png
+      #    select: [ { ref: evt-timedEvent-poisonGas-2, text: txt-io-racetrack-event } ] } }
+      #{ racetrackEvents: { inDays: 480, icon: hud_icon_skull.png
+      #    select: [ { ref: evt-timedEvent-spawnEnemyZone-hard, text: txt-io-racetrack-event } ] } }
+      #{ racetrackEvents: { inDays: 490, icon: hud_icon_skull.png
+      #    select: [ { ref: evt-timedEvent-chasm-2, text: txt-io-racetrack-event } ] } }
+      #{ racetrackEvents: { inDays: 500, icon: hud_icon_skull.png
+      #    select: [ { ref: evt-timedEvent-spawnEnemyZone-hard, text: txt-io-racetrack-event } ] } }
+      #{ racetrackEvents: { inDays: 515, icon: hud_icon_skull.png
+      #    select: [ { ref: evt-timedEvent-final, text: txt-io-racetrack-event } ] } }
+  {
+    id: evt-timedEvent-loopOfDeath
+    partyEvents:[
+      {
+        racetrackEvents: {
+          inDays: 15, icon: hud_icon_skull.png
+          select: [ { ref: evt-timedEvent-chasmChase-2, text: txt-io-racetrack-event } ]
+        }
+      }
+      {
+        racetrackEvents: {
+          inDays: 30, icon: hud_icon_skull.png
+          select: [ { ref: evt-timedEvent-chasm-2, text: txt-io-racetrack-event } ]
+        }
+      }
+      {
+        racetrackEvents: {
+          inDays: 45, icon: hud_icon_skull.png
+          select: [ { ref: evt-timedEvent-final, text: txt-io-racetrack-event } ]
+        }
+      }
+    ]
+  }
+  {
+    id: evt-timedEvent-final
+    partyEvents: [
+      {
+        ref:evt-timedEvent-chasmChase-2
+      }
+      {
+        ref: evt-timedEvent-loopOfDeath
+      }
+    ]
+  }
+  {
+    id: evt-timedEvent-spawnEnemyZone-easy    
+    select: [
+      {
+        slots: 2
+        addZone: {ref: zn-hyena, range: ..1}
+      }
+      {
+        slots: 1
+        addZone: {ref: zn-tiger, range: ..1}
+      }
+      {
+        slots: 1
+        addZone: {ref: zn-panther, range: ..1}
+      }
+      {
+        slots: 1
+        addZone: {ref: zn-gorilla, range: ..1}
+      }
+    ]
+  }
+  {
+    id: evt-timedEvent-spawnEnemyZone-medium    
+    select: [
+      {
+        slots: 1
+        addZone: {ref: zn-gorilla, range: ..1}
+      }
+      {
+        slots: 1
+        addZone: {ref: zn-giantScorpion, range: ..1}
+      }
+      {
+        slots: 1
+        addZone: {ref: zn-sabertooth, range: ..1}
+      }
+    ]
+  }
+  {
+    id: evt-timedEvent-spawnEnemyZone-hard   
+    select: [
+      {
+        slots: 1
+        addZone: {ref: zn-giantSpiders, range: 2..6, seeking: true}
+      }
+      {
+        slots: 1
+        addZone: {ref: zn-giantBird, range: 2..6, seeking: true}
+      }
+      {
+        slots: 1
+        addZone: {ref: zn-giantCrab, range: 2..6, seeking: true}
+      }
+    ]
+  }
+  {
+    id: evt-timedEvent-floodChase-1
+    setPartyStatus: +st-curse-flood
+  }
+  {
+    id: evt-timedEvent-chasmChase-1
+    setPartyStatus: +chasmChase-1
+  }
+  {
+    id: evt-timedEvent-chasmChase-2
+    setPartyStatus: +chasmChase-2
+  }
+  {
+    id: evt-timedEvent-exhausted
+    charEvents: [
+      {
+        optional: true
+        reqCharFlags: +special
+        reqPartyStatus: +st-exhausted-2
+        setPartyStatus: -st-exhausted-2 +st-exhausted-3
+      }
+      {
+        optional: true
+        reqCharFlags: +special
+        reqPartyStatus: +st-exhausted-1
+        setPartyStatus: -st-exhausted-1 +st-exhausted-2
+      }
+      {
+        optional: true
+        reqCharFlags: +special
+        reqPartyStatus: -st-exhausted-1 -st-exhausted-2 -st-exhausted-3
+        setPartyStatus: +st-exhausted-1
+      }
+      {
+        optional: true
+        count: any
+        reqCharFlags: -special -animal
+        setStatus: +st-faithless
+      }
+    ]
+    
+  }
+  
+  {
+    id: st-floodChase-1
+    title: ???
+    sprite: res_status_hallucinations.png
+    important: true
+    autoRemove: true
+    buffDays: 8..12
+    flags: +localCurse
+    dayEvents: { startSprawl: {ref: spr-flood, power: 1} }
+    debugCategory: timedEvent
+  }
+  {
+    id: st-chasmChase-1
+    title: ???
+    sprite: res_status_hallucinations.png
+    important: true
+    autoRemove: true
+    buffDays: 5..10
+    flags: +localCurse
+    dayEvents: { startSprawl: {ref: spr-chasm, power: 0.1, worldPower: 0} }
+    debugCategory: timedEvent
+  }
+  {
+    id: st-chasmChase-2
+    extends: st-chasmChase-1
+    buffDays: 18..22
+    dayEvents: {
+      startSprawl: {ref: spr-chasm, power: 0.5, worldPower: 0}
+    }
+  }
+  {
+    id: evt-timedEvent-poisonGas-1
+    partyEvents: [
+      {
+        addLocation: {ref: loc-fumarole-spawn, range: ..7, setPos: false}
+      }
+      {
+        addLocation: {ref: loc-fumarole-spawn, range: ..7, setPos: false}
+      }
+      {
+        addLocation: {ref: loc-fumarole-spawn, range: ..7, setPos: false}
+      }
+    ]
+  }
+  {
+    id: evt-timedEvent-poisonGas-2
+    partyEvents: [
+      {
+        addLocation: {ref: loc-fumarole-spawn, range: ..4, setPos: false}
+      }
+      {
+        addLocation: {ref: loc-fumarole-spawn, range: ..5, setPos: false}
+      }
+      {
+        addLocation: {ref: loc-fumarole-spawn, range: ..6, setPos: false}
+      }
+      {
+        addLocation: {ref: loc-fumarole-spawn, range: ..7, setPos: false}
+      }
+    ]
+  }
+  {
+    id: evt-timedEvent-chasm-1
+    partyEvents: [
+      {
+        posTile: {range:3..6}
+        replaceTiles: {range:0, old: any, new: tl-pit-dry}
+        startSprawl: {ref: spr-chasm, power: 4}
+        revealTiles: {radius: 0, centerCam: false}
+      }
+      {
+        posTile: {range:3..6}
+        replaceTiles: {range:0, old: any, new: tl-pit-dry}
+        startSprawl: {ref: spr-chasm, power: 4}
+        revealTiles: {radius: 0, centerCam: false}
+      }
+    ]
+  }
+  {
+    id: evt-timedEvent-chasm-2
+    partyEvents: [
+      {
+        posTile: {range:3..5}
+        replaceTiles: {range:0, old: any, new: tl-pit-dry}
+        startSprawl: {ref: spr-chasm, power: 5}
+        revealTiles: {radius: 0, centerCam: false}
+      }
+      {
+        posTile: {range:1..5}
+        replaceTiles: {range:0, old: any, new: tl-pit-dry}
+        startSprawl: {ref: spr-chasm, power: 5}
+        revealTiles: {radius: 0, centerCam: false}
+      }
+      {
+        posTile: {range:1..5}
+        replaceTiles: {range:0, old: any, new: tl-pit-dry}
+        startSprawl: {ref: spr-chasm, power: 5}
+        revealTiles: {radius: 0, centerCam: false}
+      }
+    ]
+  }
+]

@@ -1,0 +1,98 @@
+[
+  {
+    id: sp-io-explorer
+    flags: +special +humanoid
+    capacity: 2
+    health: 6
+    levels: [
+      {dice: dc-support-1 dc-defend-1}
+      {dice: dc-support-2 dc-defend-1}
+      {dice: dc-support-2 dc-defend-2}
+    ]
+    variations: [
+      {gender: male, sprite: res_expl_darwin.png, portrait: res_face_darwin.png}
+      {gender: female, sprite: res_expl_curie.png, portrait: res_face_curie.png}
+    ]
+    miniSprite: res_expl_darwin_mini.png
+    title: txt-sp-ee-adventurer-title
+  }
+  {
+    id: ex-expedition-io
+    range: 0
+    worlds: wd-world-io
+  }
+  {
+    targetId: /bio-(?!warped).*::locations
+  }
+  {
+    id: wd-world-io
+    numSites: 2
+    biomeCount: [100, 100]
+    pockets: [
+      {perlin: 0.775, pocket: pck-arctic}
+      #{perlin: 0.775, pocket: pck-arctic-transition}
+      {perlin: 0.72, pocket: pck-blocking-sea}
+      {perlin: 0.71, pocket: pck-dry}
+      {perlin: 0.69, pocket: pck-desert}
+      {perlin: 0.68, pocket: pck-blocking-mountains}
+      {perlin: 0.61, pocket: pck-dry}
+      {perlin: 0.49, pocket: pck-grass}
+      {perlin: 0.46, pocket: pck-blocking-mountains}
+      {perlin: 0.40, pocket: pck-desert}
+      {perlin: 0.35, pocket: pck-dry}
+      {perlin: 0.34, pocket: pck-grass}
+      {perlin: 0.30, pocket: pck-blocking-mountains}
+      {perlin: 0.27, pocket: pck-blocking-sea}
+      {perlin: 0.00, pocket: pck-prehistoric}
+    ]
+    difficulty: [
+
+      {perlin: 0.680, world: 4}
+      {perlin: 0.380, world: 2}
+      {perlin: 0.100, world: 0}
+      {perlin: 0.000, world: 2}
+
+      #{perlin: 0.850, world: 5}
+      #{perlin: 0.700, world: 4}
+      #{perlin: 0.350, world: 2}
+      #{perlin: 0.000, world: 0}
+
+      #{perlin: 0.850, world: 5}
+      #{perlin: 0.700, world: 4}
+      #{perlin: 0.525, world: 2}
+      #{perlin: 0.350, world: 0}
+      #{perlin: 0.175, world: 2}
+      #{perlin: 0.000, world: 0}
+
+    ]
+    hubsPerDifficulty: [45, 25, 13]
+    maxCompassScore: [1, 1, 1]
+    goalFame: 100
+    rivalTurns: 100
+    debugXP: 2
+  }
+  {
+    id: na-io-DifficultySegments
+    names: ["txt-na-io-DifficultySegments"]
+  }
+  {
+    id: na-io-DifficultySegments-unlocked
+    names: ["txt-na-io-unlocked-segments"]
+  }
+  {
+    id: np-ioAdjective
+    names: ["txt-np-io-adjective"]
+  }
+  {
+    id: np-ioNoun
+    names: ["txt-np-io-noun"]
+  }
+  {
+    id: np-ioSpecial
+    names: ["txt-np-io-special"]
+  }
+  {
+    id: np-ioName
+    names: ["£name"]
+  }
+]

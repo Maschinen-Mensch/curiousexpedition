@@ -1,0 +1,121 @@
+[
+  {
+    id: grp-sanity-io
+    group: [
+      {slots: 1, group: [
+        # settlements
+        {slots: 2, ref: loc-village-1}
+        {slots: 2, ref: loc-village-2}
+        {slots: 2, ref: loc-village-3}
+        {slots: 2, ref: loc-village-4} # desert
+        {slots: 2, ref: loc-village-inuit}
+        {slots: 2, ref: loc-village-bones, reqWorld: 4..}
+        {slots: 2, ref: loc-mission}
+        {
+          slots: 2, group:  [
+            {slots: 2, ref: loc-polarStation-A}
+            {slots: 2, ref: loc-polarStation-B}
+            {slots: 2, ref: loc-polarStation-C}
+          ]
+        }
+      ]}
+      {slots: 1, group: [
+        # nature rest
+        {slots: 2, ref: loc-waterfall}
+        {slots: 1, ref: loc-healingSprings}
+        {slots: 1, ref: loc-overhang}
+        {slots: 2, ref: loc-oasis}
+      ]}
+    ]
+  }
+  {
+    id: grp-loot-io
+    group: [
+      {slots: 6, ref: loc-cave}
+      {slots: 5, ref: loc-elephantGraveyard}
+      {slots: 5, ref: loc-mammothGraveyard}
+      {slots: 3, ref: loc-shipwreck}
+      {slots: 3, ref: loc-arcticStockpile}
+      {slots: 1, ref: loc-stoneStatue01}
+      {slots: 1, ref: loc-stoneStatue02}
+      {slots: 1, ref: loc-stoneStatue03}
+    ]
+  }
+  {
+    id: grp-utility-io
+    group: [
+      {slots: 1, ref: loc-stoneCircle}
+      {slots: 1, ref: loc-shamanHut}
+      {slots: 1, ref: loc-trader}
+      {slots: 1, ref: loc-slaver}
+    ]
+  }
+  {
+    id: grp-treasure-io
+    group: [
+      {slots: 1, ref: loc-shrine-2}
+      {slots: 1, ref: loc-shrine-3}
+      {slots: 1, ref: loc-shrine-4}
+      {slots: 1, ref: loc-shrine-rope}
+      {slots: 1, ref: loc-shrine-arctic}
+      {slots: 5, ref: loc-tomb-1}
+    ]
+  }
+  {
+    id: grp-decorative-io
+    group: [
+      {slots: 2, ref: loc-rockFormation}
+      {slots: 2, ref: loc-giantSkeleton}
+      {slots: 2, ref: loc-giantTree}
+      {slots: 2, ref: loc-mountainFace}
+      {slots: 1, ref: loc-mountainFaceSecret}
+      {slots: 2, ref: loc-glacier-giant-1}
+    ]
+  }
+  {
+    id: grp-special-io
+    group: [
+      {slots: 2, ref: loc-blessingTemple}
+      {slots: 2, ref: loc-portal}
+      {slots: 1, ref: loc-altar,  reqWorld: 1..}
+      {slots: 2, ref: loc-cenote}
+      {slots: 2, ref: loc-cave-teleport}
+    ]
+  }
+  {
+    id: grp-hazard-io
+    group: [
+      {slots: 1, ref: loc-geysir-inactive, reqWorld: 1..}
+      {slots: 1, ref: loc-volcano-spawn-small-inactive, reqWorld: 1..}
+      {slots: 1, ref: loc-volcano-spawn-large-inactive, reqWorld: 4..}
+      {slots: 1, ref: loc-fumarole-spawn, reqWorld: 4..}
+    ]
+  }
+  {
+    id: grp-locations-io
+    group: [
+      # standard groups      
+      [{chance: 1.0,  ref: grp-sanity-io}]
+      [{chance: 1.0,  ref: grp-treasure-io}]
+      [{group: [
+        {slots: 10,  ref: grp-loot-io},
+        {slots: 1,  ref: grp-treasure-io},
+        {slots: 2,  ref: grp-treasure-io, reqWorld: 4..},
+      ]}]
+      [{chance: 0.8, group: [
+        {slots: 3,  ref: grp-utility-io},
+        {slots: 1,  ref: grp-special-io, reqWorld: 1..},
+        {slots: 1,  ref: grp-special-io, reqWorld: 4..},
+      ]}]
+
+      # hazards
+      [{chance: 0.2,  ref: grp-hazard-io}]
+      [{chance: 0.5,  ref: grp-hazard-io, reqWorld: 4..}]
+
+      # extra groups
+      [{chance: 1.0,  ref: grp-decorative-io}]
+      [{chance: 0.2,  ref: loc-magneticMountain, reqWorld: 1..}]
+      [{chance: 0.2,  ref: loc-hiddenTreasure}]
+    ]
+  }
+]

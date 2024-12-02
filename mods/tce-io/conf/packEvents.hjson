@@ -1,0 +1,33 @@
+[
+    {
+        id:evt-givePack-debug
+        givePack:1..5
+    }
+    {
+        id:evt-givePack-1
+        select: [
+            {slots: 19, givePack:1}
+            {slots: 1, givePack:2}
+        ]
+    }
+    {
+        id:evt-givePack-2
+        select: [
+            {slots: 19, givePack:2}
+            {slots: 1, givePack:3}
+        ]
+    }
+    {
+        id:evt-givePack-3
+        select: [
+            {slots: 19, givePack:3}
+            {slots: 1, givePack:4}
+        ]
+    }
+    {
+        id:evt-givePack-4
+        select: [
+            {slots: 1, givePack:4}
+        ]
+    }
+]

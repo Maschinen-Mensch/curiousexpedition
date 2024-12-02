@@ -1,0 +1,419 @@
+[
+  {
+    id: evt-iosplash
+    text: txt-evt-celebration
+    showImage: {
+      src: evt_spec_nightCamp_1.png
+      npcMovement: true
+    }
+    select: [
+      {
+        ref: evt-iosplash-startChatNew
+      }
+      {
+        prio: 1
+        ref: evt-iosplash-startChatReturn
+      }
+    ]
+  }
+  {
+    id: evt-iosplash-startChatNew
+    chat: cl-iosplash-newPlayer
+    reqioNewPlayer: true
+    select: { ref: evt-iosplash-chat-loopstart }
+  }
+  {
+    id: evt-iosplash-chat-loopstart
+    select: [
+      { 
+        reqioNewPlayer: true
+        events: evt-iosplash-title
+      }
+      { 
+        reqioNewPlayer: false
+        events: evt-iosplash-startChatReturn
+      }
+    ]
+  }
+
+  {
+    id: evt-iosplash-title
+    chat: cl-iosplash-title
+    select: { ref: evt-iosplash-pause }
+  }
+  {
+    id: evt-iosplash-pause
+    chat: cl-iosplash-pause
+    select: { ref: evt-iosplash-largeWorld }
+  }
+  {
+    id: evt-iosplash-largeWorld
+    chat: cl-iosplash-largeWorld
+    select: { ref: evt-iosplash-notAlone }
+  }
+  {
+    id: evt-iosplash-notAlone
+    chat: cl-iosplash-notAlone
+    select: { ref: evt-iosplash-peoplePlaying }
+  }
+  {
+    id: evt-iosplash-peoplePlaying
+    chat: cl-iosplash-peoplePlaying
+    select: { ref: evt-iosplash-remembered }
+  }
+  {
+    id: evt-iosplash-remembered
+    chat: cl-iosplash-remembered
+    select: { ref: evt-iosplash-cool }
+  }
+  {
+    id: evt-iosplash-cool
+    chat: cl-iosplash-cool
+    select: { ref: evt-iosplash-right }
+  }
+  {
+    id: evt-iosplash-right
+    chat: cl-iosplash-right
+    select: { ref: evt-iosplash-title-2 }
+  }
+  {
+    id: evt-iosplash-title-2
+    chat: cl-iosplash-title
+    select: { ref: evt-iosplash-highscore }
+  }
+  {
+    id: evt-iosplash-highscore
+    chat: cl-iosplash-highscore
+    select: { ref: evt-iosplash-bestPlayer }
+  }
+  {
+    id: evt-iosplash-bestPlayer
+    chat: cl-iosplash-bestPlayer
+    select: { ref: evt-iosplash-worldReset }
+  }
+  {
+    id: evt-iosplash-worldReset
+    chat: cl-iosplash-worldReset
+    select: { ref: evt-iosplash-world }
+  }
+  {
+    id: evt-iosplash-world
+    chat: cl-iosplash-world
+    select: { ref: evt-iosplash-title-3 }
+  }
+  {
+    id: evt-iosplash-title-3
+    chat: cl-iosplash-title
+    select: { ref: evt-iosplash-donkey }
+  }
+  {
+    id: evt-iosplash-donkey
+    chat: cl-iosplash-donkey
+    select: { ref: evt-iosplash-oh }
+  }
+  {
+    id: evt-iosplash-oh
+    chat: cl-iosplash-oh
+    select: { ref: evt-iosplash-seeRest }
+  }
+  {
+    id: evt-iosplash-seeRest
+    chat: cl-iosplash-seeRest
+    select: { ref: evt-iosplash-adventure }
+  }
+  {
+    id: evt-iosplash-adventure
+    chat: cl-iosplash-adventure
+    #select: { ref: evt-iosplash-adventure }
+  }
+
+  {
+    id: cl-iosplash-newPlayer
+    lines: {text: txt-io-splash-chat-welcome, reqCharFlags: +special, delay: 1.6, duration: 4.2}
+  }
+  {
+    id: cl-iosplash-title
+    lines: {text: txt-io-splash-chat-title, reqCharFlags: +animal, delay: 0, duration: 2.6}
+  }
+  {
+    id: cl-iosplash-pause
+    lines: {text: txt-io-splash-chat-pause, reqCharFlags: -special -animal, delay: 1.2, duration: 1.0}
+  }
+  {
+    id: cl-iosplash-largeWorld
+    lines: {text: txt-io-splash-chat-largeWorld, reqCharFlags: -special -animal, delay: 0.2, duration: 5.0}
+  }
+  {
+    id: cl-iosplash-notAlone
+    lines: {text: txt-io-splash-chat-notAlone, reqCharFlags: +special, delay: 0.3, duration: 3.9}
+  }
+  {
+    id: cl-iosplash-peoplePlaying
+    lines: {text: txt-io-splash-chat-peoplePlaying, reqCharFlags: +special, delay: 0.8, duration: 5.0}
+  }
+  {
+    id: cl-iosplash-remembered
+    lines: {text: txt-io-splash-chat-remembered, reqCharFlags: +special, delay: 0.8, duration: 5.7}
+  }
+  {
+    id: cl-iosplash-cool
+    lines: {text: txt-io-splash-chat-cool, reqCharFlags: -special -animal, delay: 0.5, duration: 1.9}
+  }
+  {
+    id: cl-iosplash-right
+    lines: {text: txt-io-splash-chat-right, reqCharFlags: +special, delay: 0.4, duration: 2.4}
+  }
+  {
+    id: cl-iosplash-highscore
+    lines: {text: txt-io-splash-chat-highscore, reqCharFlags: +special, delay: 1.2, duration: 3.3}
+  }
+  {
+    id: cl-iosplash-bestPlayer
+    lines: {text: txt-io-splash-chat-bestPlayer, reqCharFlags: -special -animal, delay: 0.6, duration: 4.9}
+  }
+  {
+    id: cl-iosplash-worldReset
+    lines: {text: txt-io-splash-chat-worldReset, reqCharFlags: +special, delay: 0.6, duration: 4.3}
+  }
+  {
+    id: cl-iosplash-world
+    lines: {text: txt-io-splash-chat-world, reqCharFlags: +special, delay: 0.3, duration: 5.2}
+  }
+  {
+    id: cl-iosplash-donkey
+    lines: {text: txt-io-splash-chat-donkey, reqCharFlags: -special -animal, delay: 1.7, duration: 3.5}
+  }
+  {
+    id: cl-iosplash-oh
+    lines: {text: txt-io-splash-chat-oh, reqCharFlags: +special, delay: 1.0, duration: 3.0}
+  }
+  {
+    id: cl-iosplash-seeRest
+    lines: {text: txt-io-splash-chat-seeRest, reqCharFlags: +special, delay: 0.3, duration: 4.7}
+  }
+  {
+    id: cl-iosplash-adventure
+    lines: {text: txt-io-splash-chat-adventure, reqCharFlags: +special, delay: 0.7, duration: 5.5}
+  }
+
+
+
+
+
+
+  {
+    id: evt-iosplash-startChatReturn
+    setPartyFlags: -worldInfo -bestPlayer -sessions -worldExplored -title -packs -fail -friends -discord -peoplePlaying -outposts -gamesPlayed
+    select: { ref: evt-returningPlayers-chats }
+  }
+  {
+    id: evt-returningPlayers-chats
+    select: [
+      {
+        prio: 1
+        reqPartyFlags: -intro
+        setPartyFlags: +intro
+        events: evt-iosplash-returningPlayer
+      }
+      {
+        prio: 2
+        reqPartyFlags: -worldInfo
+        setPartyFlags: +worldInfo
+        events: evt-iosplash-worldInfo
+      }
+      {
+        prio: 2
+        reqPartyFlags: -peoplePlaying
+        setPartyFlags: +peoplePlaying
+        events: evt-iosplash-peoplePlaying-2
+      }
+      {
+        prio: 3
+        reqPartyFlags: -bestPlayer
+        setPartyFlags: +bestPlayer
+        events: evt-iosplash-bestPlayer-2
+      }
+      {
+        prio: 3
+        reqPartyFlags: -sessions
+        setPartyFlags: +sessions
+        events: evt-iosplash-sessions
+      }
+      {
+        prio: 3
+        reqPartyFlags: -outposts
+        setPartyFlags: +outposts
+        events: evt-iosplash-outposts
+      }
+      {
+        prio: 3
+        reqPartyFlags: -gamesPlayed
+        setPartyFlags: +gamesPlayed
+        events: evt-iosplash-gamesPlayed
+      }
+      {
+        prio: 2
+        reqPartyFlags: -worldExplored
+        setPartyFlags: +worldExplored
+        events: evt-iosplash-worldExplored
+      }
+      {
+        prio: 4
+        reqPartyFlags: -packs
+        setPartyFlags: +packs
+        events: evt-iosplash-packs
+      }
+      {
+        prio: 4
+        reqPartyFlags: -fail
+        setPartyFlags: +fail
+        events: evt-iosplash-fail
+      }
+      {
+        prio: 4
+        reqPartyFlags: -friends
+        setPartyFlags: +friends
+        events: evt-iosplash-friends
+      }
+      {
+        prio: 4
+        reqPartyFlags: -discord
+        setPartyFlags: +discord
+        events: evt-iosplash-discord
+      }
+      {
+        prio: 5
+        reqPartyFlags: -title
+        setPartyFlags: +title
+        events: evt-iosplash-title-returning
+      }
+    ]
+  }
+
+  {
+    id: evt-iosplash-returningPlayer
+    chat: cl-iosplash-returningPlayer
+    select: { ref: evt-returningPlayers-chats }
+  }
+  {
+    id: evt-iosplash-worldInfo
+    chat: cl-iosplash-worldInfo
+    select: { ref: evt-returningPlayers-chats }
+  }
+  {
+    id: evt-iosplash-bestPlayer-2
+    chat: cl-iosplash-bestPlayer
+    select: { ref: evt-returningPlayers-chats }
+  }
+  {
+    id: evt-iosplash-sessions
+    chat: cl-iosplash-sessions
+    select: { ref: evt-returningPlayers-chats }
+  }
+  {
+    id: evt-iosplash-worldExplored
+    chat: cl-iosplash-worldExplored
+    select: { ref: evt-returningPlayers-chats }
+  }
+  {
+    id: evt-iosplash-peoplePlaying-2
+    chat: cl-iosplash-peoplePlaying
+    select: { ref: evt-returningPlayers-chats }
+  }
+  {
+    id: evt-iosplash-title-returning
+    chat: cl-iosplash-title
+    select: { ref: evt-returningPlayers-chats }
+  }
+  {
+    id: evt-iosplash-outposts
+    chat: cl-iosplash-outposts
+    select: { ref: evt-returningPlayers-chats }
+  }
+  {
+    id: evt-iosplash-gamesPlayed
+    chat: cl-iosplash-gamesPlayed
+    select: { ref: evt-returningPlayers-chats }
+  }
+  {
+    id: evt-iosplash-packs
+    chat: cl-iosplash-packs
+    select: { ref: evt-returningPlayers-chats }
+  }
+  {
+    id: evt-iosplash-fail
+    chat: cl-iosplash-fail
+    select: { ref: evt-returningPlayers-chats }
+  }
+  {
+    id: evt-iosplash-friends
+    chat: cl-iosplash-friends
+    select: { ref: evt-returningPlayers-chats }
+  }
+  {
+    id: evt-iosplash-discord
+    chat: cl-iosplash-discord
+    select: { ref: evt-returningPlayers-chats }
+  }
+
+
+
+
+
+  {
+    id: cl-iosplash-returningPlayer
+    lines: {text: txt-io-splash-chat-returningPlayer, reqCharFlags: +special, delay: 1.8, duration: 5}
+  }
+  {
+    id: cl-iosplash-worldInfo
+    lines: {text: txt-io-splash-chat-worldInfo, reqCharFlags: +special, delay: 0.8, duration: 6.5}
+  }
+  {
+    id: cl-iosplash-sessions
+    lines: {text: txt-io-splash-chat-playedSessions, reqCharFlags: -animal, delay: 0.8, duration: 4}
+  }
+  {
+    id: cl-iosplash-worldExplored
+    lines: {text: txt-io-splash-chat-worldExplored, reqCharFlags: -animal, delay: 0.8, duration: 4}
+  }
+  {
+    id: cl-iosplash-outposts
+    lines: {text: txt-io-splash-chat-outposts, reqCharFlags: -animal, delay: 0.8, duration: 4}
+  }
+  {
+    id: cl-iosplash-gamesPlayed
+    lines: {text: txt-io-splash-chat-gamesPlayed, reqCharFlags: -animal, delay: 0.8, duration: 4}
+  }
+
+  {
+    id: cl-iosplash-packs
+    lines: {text: txt-io-splash-chat-packs, reqCharFlags: -animal, delay: 0.8, duration: 4}
+  }
+  {
+    id: cl-iosplash-fail
+    lines: {text: txt-io-splash-chat-fail, reqCharFlags: -animal, delay: 0.8, duration: 5}
+  }
+  {
+    id: cl-iosplash-friends
+    lines: {text: txt-io-splash-chat-friends, reqCharFlags: -animal, delay: 0.8, duration: 4}
+  }
+  {
+    id: cl-iosplash-discord
+    lines: {text: txt-io-splash-chat-discord, reqCharFlags: -animal, delay: 0.8, duration: 5}
+  }
+
+  # new game menu event
+  {
+    id: evt-ioNewGame
+    text: txt-evt-celebration
+    showImage: {
+      src: io_background_nightcamp.png
+      npcMovement: true
+    }
+  }
+  {
+    id: evt-ioPromote
+    text: txt-evt-celebration
+    partyEvents: evt-setImage-nightCamp
+  }
+]

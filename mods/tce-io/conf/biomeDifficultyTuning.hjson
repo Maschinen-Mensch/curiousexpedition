@@ -1,0 +1,901 @@
+[
+# ------ GRASSLANDS --------------------------------------------
+# ----------- WORLD 4..
+    {
+        targetId: *bio-grasslands-pits
+        reqWorld: 4..
+        zones: [
+            {
+                select: 2
+                group: [
+                    {slots: 3, ref: zn-giantBird}
+                    {slots: 3, ref: zn-tiger}
+                    {slots: 3, ref: zn-panther}
+                    {slots: 2, ref: zn-tiger-white}
+                    {slots: 1, ref: zn-hyena}
+                ]
+            }
+            {chance: 1, select: 1, ref: zn-butterflies}
+        ]
+    }
+# ----------- WORLD 2..
+    {
+        targetId: *bio-grasslands-mountains
+        reqWorld: 2..
+        zones: [
+            {
+                reqWorld: 2..3, select: 2
+                group: [
+                    {slots: 2, ref: zn-gorilla}
+                    {slots: 2, ref: zn-gorilla}
+                    {slots: 2, ref: zn-panther}
+                    {slots: 1, ref: zn-hyena}
+                    {slots: 1}
+                ]
+            }
+            {
+                reqWorld: 4.., select: 2
+                group: [
+                    {slots: 2, ref: zn-gorilla}
+                    {slots: 2, ref: zn-panther}
+                    {slots: 1, ref: zn-hyena}
+                ]
+            }
+            {chance: 1, select: 1, ref: zn-butterflies}
+        ]
+    }
+    {
+        targetId: *bio-grasslands-swamps
+        reqWorld: 2..
+        zones: [
+            {
+                reqWorld: 2..3, select: 2
+                group: [
+                    {slots: 1, ref: zn-crocodile}
+                    {slots: 1, ref: zn-crocodile}
+                    {slots: 1}
+                ]
+            }
+            {
+                reqWorld: 4.., select: 2
+                group: [
+                    {slots: 3, ref: zn-zombiePygmy}
+                    {slots: 2, ref: zn-crocodile}
+                    {slots: 2, ref: zn-crocodile}
+                    {slots: 1, ref: zn-giantCrab}
+                ]
+            }
+            {chance: 1, select: 1, ref: zn-butterflies}
+        ]
+    }
+# ----------- WORLD 0..3
+    {
+        targetId: *bio-grasslands-generic
+        reqWorld: 0..3
+        zones: [
+            {
+                reqWorld: 0..1, chance: 0.75, select: 1
+                group: [
+                    {slots: 3, ref: zn-hyena}
+                    {slots: 1, ref: zn-tiger}
+                    {slots: 1, ref: zn-panther}
+                ]
+            }
+            {
+                reqWorld: 2.., select: 2
+                group: [
+                    {slots: 2, ref: zn-tiger}
+                    {slots: 2, ref: zn-panther}
+                    {slots: 1, ref: zn-hyena}
+                    {slots: 1}
+                ]
+            }
+            {chance: 1, select: 1, ref: zn-butterflies}
+            {chance: 0.3, select: 1, ref: zn-elephant}
+        ]
+    }
+# ----------- WORLD ALL
+    {
+        targetId: *bio-grasslands-jungle
+        zones: [
+            {
+                reqWorld: 0..1, chance: 0.75, select: 1
+                group: [
+                    {slots: 1, ref: zn-tiger}
+                    {slots: 1, ref: zn-panther}
+                ]
+            }
+            {
+                reqWorld: 2..3, select: 2
+                group: [
+                    {slots: 3, ref: zn-tiger}
+                    {slots: 2, ref: zn-panther}
+                    {slots: 2, ref: zn-gorilla}
+                    {slots: 1}
+                ]
+            }
+            {
+                reqWorld: 4.., select: 2
+                group: [
+                    {slots: 3, ref: zn-panther}
+                    {slots: 3, ref: zn-gorilla}
+                    {slots: 2, ref: zn-tiger}
+                    {slots: 1, ref: zn-tiger-white}
+                    {slots: 1, ref: zn-sabertooth}
+                ]
+            }
+            {chance: 1, select: 1, ref: zn-butterflies}
+            {chance: 0.3, select: 1, ref: zn-elephant}
+        ]
+    }
+    {
+        targetId: *bio-grasslands-waterMountains
+        zones: [
+            {
+                reqWorld: 0..1, chance: 0.75, select: 1
+                group: [
+                    {slots: 2, ref: zn-hyena}
+                    {slots: 1, ref: zn-panther}
+                ]
+            }
+            {
+                reqWorld: 2..3, select: 2
+                group: [
+                    {slots: 2, ref: zn-panther}
+                    {slots: 2, ref: zn-gorilla}
+                    {slots: 2, ref: zn-crocodile}
+                    {slots: 2}
+                ]
+            }
+            {
+                reqWorld: 4.., select: 2
+                group: [
+                    {slots: 3, ref: zn-crocodile}
+                    {slots: 2, ref: zn-gorilla}
+                    {slots: 1, ref: zn-giantCrab}
+                ]
+            }
+            {chance: 1, select: 1, ref: zn-butterflies}
+        ]
+    }
+    {
+        targetId: *bio-grasslands-lakes
+        zones: [
+            {
+                reqWorld: 0..1, chance: 0.75, select: 1
+                group: [
+                    {slots: 2, ref: zn-hyena}
+                    {slots: 1, ref: zn-tiger}
+                    {slots: 1, ref: zn-panther}
+                ]
+            }
+            {
+                reqWorld: 2..3, select: 2
+                group: [
+                    {slots: 3, ref: zn-crocodile}
+                    {slots: 2, ref: zn-tiger}
+                    {slots: 2, ref: zn-panther}
+                    {slots: 2, ref: zn-gorilla}
+                    {slots: 2}
+                ]
+            }
+            {
+                reqWorld: 4.., select: 2
+                group: [
+                    {slots: 3, ref: zn-crocodile}
+                    {slots: 3, ref: zn-giantCrab}
+                    {slots: 2, ref: zn-tiger}
+                    {slots: 2, ref: zn-panther}
+                ]
+            }
+            {chance: 1, select: 1, ref: zn-butterflies}
+        ]
+    }
+
+
+# ------ DRYLANDS --------------------------------------------
+# ----------- WORLD 4..
+    {
+        targetId: *bio-drylands-pits
+        reqWorld: 4..
+        zones: [
+            {
+                select: 2
+                group: [
+                    {slots: 3, ref: zn-giantBird}
+                    {slots: 3, ref: zn-hyena-black}
+                    {slots: 3, ref: zn-giantSpiders}
+                    {slots: 3, ref: zn-panther}
+                ]
+            }
+        ]
+    }
+    # ----------- WORLD 2..
+    {
+        targetId: *bio-drylands-desert
+        reqWorld: 2..
+        zones: [
+            {
+                reqWorld: 2..3, select: 2
+                group: [
+                    {slots: 2, ref: zn-giantScorpion}
+                    {slots: 2, ref: zn-giantScorpion}
+                    {slots: 1, ref: zn-hyena}
+                    {slots: 1}
+                ]
+            }
+            {
+                reqWorld: 4.., select: 2
+                group: [
+                    {slots: 2, ref: zn-giantScorpion}
+                    {slots: 2, ref: zn-giantScorpion}
+                    {slots: 2, ref: zn-hyena-black}
+                    {slots: 1, ref: zn-sabertooth}
+                ]
+            }
+        ]
+    }
+    {
+        targetId: *bio-drylands-mountains
+        reqWorld: 2..
+        zones: [
+            {
+                reqWorld: 2..3, select: 2
+                group: [
+                    {slots: 2, ref: zn-gorilla}
+                    {slots: 2, ref: zn-gorilla}
+                    {slots: 2, ref: zn-panther}
+                    {slots: 1, ref: zn-hyena}
+                    {slots: 1}
+                ]
+            }
+            {
+                reqWorld: 4.., select: 2
+                group: [
+                    {slots: 2, ref: zn-gorilla}
+                    {slots: 2, ref: zn-giantSpiders}
+                    {slots: 2, ref: zn-panther}
+                    {slots: 1, ref: zn-hyena}
+                ]
+            }
+        ]
+    }
+    # ----------- WORLD 0..3
+    {
+        targetId: *bio-drylands-generic
+        reqWorld: 0..3
+        zones: [
+            {
+                reqWorld: 0..1, chance: 0.75, select: 1
+                group: [
+                    {slots: 3, ref: zn-hyena}
+                    {slots: 1, ref: zn-tiger}
+                    {slots: 1, ref: zn-panther}
+                ]
+            }
+            {
+                reqWorld: 2.., select: 2
+                group: [
+                    {slots: 3, ref: zn-hyena}
+                    {slots: 2, ref: zn-panther}
+                    {slots: 2, ref: zn-hyena}
+                    {slots: 1}
+                ]
+            }
+            {chance: 1, select: 1, ref: zn-butterflies}
+        ]
+    }
+# ----------- WORLD ALL
+    {
+        targetId: *bio-drylands-lakes
+        zones: [
+            {
+                reqWorld: 0..1, chance: 0.75
+                select: 1
+                group: [
+                    {slots: 3, ref: zn-hyena}
+                    {slots: 1, ref: zn-tiger}
+                    {slots: 1, ref: zn-panther}
+                ]
+            }
+            {
+                reqWorld: 2..3, select: 2
+                group: [
+                    {slots: 3, ref: zn-crocodile}
+                    {slots: 2, ref: zn-hyena}
+                    {slots: 2, ref: zn-panther}
+                    {slots: 2, ref: zn-gorilla}
+                    {slots: 2}
+                ]
+            }
+            {
+                reqWorld: 4.., select: 2
+                group: [
+                    {slots: 3, ref: zn-crocodile}
+                    {slots: 3, ref: zn-giantCrab}
+                    {slots: 3, ref: zn-hyena-black}
+                    {slots: 2, ref: zn-hyena}
+                    {slots: 2, ref: zn-panther}
+                ]
+            }
+            {chance: 1, select: 1, ref: zn-butterflies}
+        ]
+    }
+    {
+        targetId: *bio-drylands-jungle
+        zones: [
+            {
+                reqWorld: 0..1, chance: 0.75, select: 1
+                group: [
+                    {slots: 1, ref: zn-tiger}
+                    {slots: 1, ref: zn-panther}
+                ]
+            }
+            {
+                reqWorld: 2..3, select: 2
+                group: [
+                    {slots: 3, ref: zn-tiger}
+                    {slots: 2, ref: zn-panther}
+                    {slots: 2, ref: zn-gorilla}
+                    {slots: 1}
+                ]
+            }
+            {
+                reqWorld: 4.., select: 2
+                group: [
+                    {slots: 3, ref: zn-panther}
+                    {slots: 3, ref: zn-gorilla}
+                    {slots: 2, ref: zn-tiger}
+                    {slots: 1, ref: zn-tiger-white}
+                    {slots: 1, ref: zn-sabertooth}
+                ]
+            }
+            {chance: 1, select: 1, ref: zn-butterflies}
+        ]
+    }
+    {
+        targetId: *bio-drylands-stoneForest
+        zones: [
+            {
+                reqWorld: 0..1, chance: 0.75, select: 1
+                group: [
+                    {slots: 1, ref: zn-hyena}
+                ]
+            }
+            {
+                reqWorld: 2..3, select: 2
+                group: [
+                    {slots: 2, ref: zn-hyena}
+                    {slots: 2, ref: zn-panther}
+                    {slots: 2, ref: zn-gorilla}
+                    {slots: 1}
+                ]
+            }
+            {
+                reqWorld: 4.., select: 2
+                group: [
+                    {slots: 3, ref: zn-hyena-black}
+                    {slots: 2, ref: zn-panther}
+                    {slots: 2, ref: zn-gorilla}
+                    {slots: 2, ref: zn-sabertooth}
+                    {slots: 2, ref: zn-raptor}
+                ]
+            }
+        ]
+    }
+
+# ------ DESERT --------------------------------------------
+# ----------- WORLD 4..
+    {
+        targetId: *bio-desert-pits
+        reqWorld: 4..
+        zones: [
+            {
+                select: 2
+                group: [
+                    {slots: 3, ref: zn-giantBird}
+                    {slots: 3, ref: zn-giantScorpion}
+                    {slots: 3, ref: zn-giantScorpion}
+                ]
+            }
+        ]
+    }
+# ----------- WORLD 2..
+    {
+        targetId: *bio-desert-sands
+        reqWorld: 2..
+        zones: [
+            {
+                reqWorld: 2..3, select: 2
+                group: [
+                    {slots: 2, ref: zn-giantScorpion}
+                    {slots: 2, ref: zn-giantScorpion}
+                    {slots: 1, ref: zn-hyena}
+                    {slots: 1}
+                ]
+            }
+            {
+                reqWorld: 4.., select: 2
+                group: [
+                    {slots: 2, ref: zn-giantScorpion}
+                    {slots: 2, ref: zn-giantScorpion}
+                    {slots: 2, ref: zn-hyena-black}
+                    {slots: 1, ref: zn-sabertooth}
+                ]
+            }
+        ]
+    }
+    {
+        targetId: *bio-desert-mountains
+        reqWorld: 2..
+        zones: [
+            {
+                reqWorld: 2..3, select: 2
+                group: [
+                    {slots: 2, ref: zn-giantScorpion}
+                    {slots: 2, ref: zn-gorilla}
+                    {slots: 2, ref: zn-panther}
+                    {slots: 1, ref: zn-hyena}
+                    {slots: 1}
+                ]
+            }
+            {
+                reqWorld: 4.., select: 2
+                group: [
+                    {slots: 2, ref: zn-giantScorpion}
+                    {slots: 3, ref: zn-giantSpiders}
+                    {slots: 2, ref: zn-panther}
+                    {slots: 1, ref: zn-hyena}
+                ]
+            }
+        ]
+    }
+    {
+        targetId: *bio-desert-stoneForest
+        zones: [
+            {
+                reqWorld: 2..3, select: 2
+                group: [
+                    {slots: 3, ref: zn-giantScorpion}
+                    {slots: 2, ref: zn-giantScorpion}
+                    {slots: 2, ref: zn-hyena}
+                    {slots: 2}
+                ]
+            }
+            {
+                reqWorld: 4.., select: 2
+                group: [
+                    {slots: 3, ref: zn-giantScorpion}
+                    {slots: 3, ref: zn-giantScorpion}
+                    {slots: 3, ref: zn-hyena-black}
+                    {slots: 2, ref: zn-giantBird}
+                    {slots: 2, ref: zn-raptor}
+                ]
+            }
+        ]
+    }
+    {
+        targetId: *bio-desert-cactusForest
+        zones: [
+            {
+                reqWorld: 2..3, select: 2
+                group: [
+                    {slots: 3, ref: zn-giantScorpion}
+                    {slots: 2, ref: zn-giantScorpion}
+                    {slots: 2, ref: zn-hyena}
+                    {slots: 2}
+                ]
+            }
+            {
+                reqWorld: 4.., select: 2
+                group: [
+                    {slots: 3, ref: zn-giantScorpion}
+                    {slots: 3, ref: zn-giantScorpion}
+                    {slots: 3, ref: zn-hyena-black}
+                    {slots: 2, ref: zn-giantBird}
+                ]
+            }
+        ]
+    }
+# ----------- WORLD 0...3
+    {
+        targetId: *bio-desert-generic
+        reqWorld: 0..3
+        zones: [
+            {
+                reqWorld: 0..1, chance: 0.75, select: 1
+                group: [
+                    {slots: 3, ref: zn-hyena}
+                    {slots: 1, ref: zn-panther}
+                ]
+            }
+            {
+                reqWorld: 2.., select: 2
+                group: [
+                    {slots: 3, ref: zn-giantScorpion}
+                    {slots: 3, ref: zn-hyena}
+                    {slots: 2, ref: zn-panther}
+                    {slots: 1}
+                ]
+            }
+        ]
+    }
+    
+# ----------- WORLD ALL
+    {
+        targetId: *bio-desert-forest
+        zones: [
+            {
+                reqWorld: 0..1, chance: 0.75, select: 1
+                group: [
+                    {slots: 1, ref: zn-tiger}
+                    {slots: 1, ref: zn-panther}
+                ]
+            }
+            {
+                reqWorld: 2..3, select: 2
+                group: [
+                    {slots: 3, ref: zn-tiger}
+                    {slots: 2, ref: zn-panther}
+                    {slots: 2, ref: zn-giantScorpion}
+                    {slots: 1}
+                ]
+            }
+            {
+                reqWorld: 4.., select: 2
+                group: [
+                    {slots: 3, ref: zn-panther}
+                    {slots: 2, ref: zn-giantScorpion}
+                    {slots: 2, ref: zn-tiger}
+                    {slots: 1, ref: zn-sabertooth}
+                    {slots: 1, ref: zn-zombiePygmy}
+                ]
+            }
+        ]
+    }
+
+
+# ------ PREHISTORIC --------------------------------------------
+# ----------- WORLD 4..
+    {
+        targetId: *bio-prehistoric-chasm
+        reqWorld: 4..
+        zones: [
+            {
+                select: 2
+                group: [
+                    {slots: 1, ref: zn-giantBird}
+                    {slots: 1, ref: zn-raptor}
+                    {slots: 1, ref: zn-sabertooth}
+                    {slots: 1, ref: zn-giantBird}
+                    {slots: 1, ref: zn-raptor}
+                    {slots: 1, ref: zn-sabertooth}
+                    {slots: 1, ref: zn-trexs}
+                ]
+            }
+            {chance: 0.3, select: 1, ref: zn-triceratops}
+        ]
+    }
+# ----------- WORLD 2..
+    {
+        targetId: *bio-prehistoric-mountains
+        reqWorld: 2..
+        zones: [
+            {
+                reqWorld: 2..3, select: 2
+                group: [
+                    {slots: 2, ref: zn-gorilla}
+                    {slots: 2, ref: zn-sabertooth}
+                    {slots: 2, ref: zn-raptor}
+                    {slots: 1}
+                ]
+            }
+            {
+                reqWorld: 4.., select: 2
+                group: [
+                    {slots: 2, ref: zn-raptor}
+                    {slots: 2, ref: zn-raptor}
+                    {slots: 1, ref: zn-sabertooth}
+                    {slots: 1, ref: zn-sabertooth}
+                    {slots: 1, ref: zn-giantBird}
+                ]
+            }
+            {chance: 0.3, select: 1, ref: zn-triceratops}
+        ]
+    }
+# ----------- WORLD 0..3
+    {
+        targetId: *bio-prehistoric-generic
+        reqWorld: 0..3
+        zones: [
+            {
+                reqWorld: 0..1, chance: 0.75, select: 1
+                group: [
+                    {slots: 3, ref: zn-tiger}
+                    {slots: 3, ref: zn-panther}
+                    {slots: 1, ref: zn-raptor}
+                    {slots: 1, ref: zn-sabertooth}
+                ]
+            }
+            {
+                reqWorld: 2.., select: 2
+                group: [
+                    {slots: 3, ref: zn-raptor}
+                    {slots: 2, ref: zn-panther}
+                    {slots: 2, ref: zn-tiger}
+                    {slots: 1, ref: zn-sabertooth}
+                    {slots: 1}
+                ]
+            }
+            {chance: 1, select: 1, ref: zn-butterflies}
+            {chance: 0.3, select: 1, ref: zn-triceratops}
+        ]
+    }
+# ----------- WORLD ALL
+    {
+        targetId: *bio-prehistoric-stoneForest
+        zones: [
+            {
+                reqWorld: 0..1, chance: 0.75, select: 1
+                group: [
+                    {slots: 3, ref: zn-tiger}
+                    {slots: 3, ref: zn-panther}
+                    {slots: 1, ref: zn-raptor}
+                    {slots: 1, ref: zn-sabertooth}
+                ]
+            }
+            {
+                reqWorld: 2..3, select: 2
+                group: [
+                    {slots: 3, ref: zn-raptor}
+                    {slots: 2, ref: zn-sabertooth}
+                    {slots: 2, ref: zn-tiger}
+                    {slots: 2, ref: zn-gorilla}
+                    {slots: 1}
+                ]
+            }
+            {
+                reqWorld: 4.., select: 2
+                group: [
+                    {slots: 3, ref: zn-raptor}
+                    {slots: 3, ref: zn-sabertooth}
+                    {slots: 2, ref: zn-raptor}
+                    {slots: 2, ref: zn-sabertooth}
+                    {slots: 1, ref: zn-abomination}
+                    {slots: 1, ref: zn-zombiePygmy}
+                    {slots: 1, ref: zn-trex}
+                ]
+            }
+            {chance: 1, select: 1, ref: zn-butterflies}
+            {chance: 0.3, select: 1, ref: zn-triceratops}
+        ]
+    }
+    {
+        targetId: *bio-prehistoric-dry
+        zones: [
+            {
+                reqWorld: 0..1, chance: 0.75, select: 1
+                group: [
+                    {slots: 3, ref: zn-tiger}
+                    {slots: 3, ref: zn-panther}
+                    {slots: 1, ref: zn-raptor}
+                    {slots: 1, ref: zn-sabertooth}
+                ]
+            }
+            {
+                reqWorld: 2..3, select: 2
+                group: [
+                    {slots: 3, ref: zn-raptor}
+                    {slots: 3, ref: zn-sabertooth}
+                    {slots: 2, ref: zn-giantScorpion}
+                    {slots: 2, ref: zn-giantSpiders}
+                    {slots: 1}
+                ]
+            }
+            {
+                reqWorld: 4.., select: 2
+                group: [
+                    {slots: 3, ref: zn-raptor}
+                    {slots: 3, ref: zn-sabertooth}
+                    {slots: 2, ref: zn-raptor}
+                    {slots: 2, ref: zn-sabertooth}
+                    {slots: 1, ref: zn-giantScorpion}
+                    {slots: 1, ref: zn-giantSpiders}
+                    {slots: 1, ref: zn-trex}
+                ]
+            }
+            {chance: 0.3, select: 1, ref: zn-triceratops}
+        ]
+    }
+    {
+        targetId: *bio-prehistoric-mushrooms
+        zones: [
+            {
+                reqWorld: 0..1, chance: 0.75, select: 1
+                group: [
+                    {slots: 3, ref: zn-tiger}
+                    {slots: 3, ref: zn-panther}
+                    {slots: 1, ref: zn-raptor}
+                    {slots: 1, ref: zn-sabertooth}
+                ]
+            }
+            {
+                reqWorld: 2..3, select: 2
+                group: [
+                    {slots: 3, ref: zn-raptor}
+                    {slots: 3, ref: zn-sabertooth}
+                    {slots: 2, ref: zn-giantSpiders}
+                    {slots: 1}
+                ]
+            }
+            {
+                reqWorld: 4.., select: 2
+                group: [
+                    {slots: 3, ref: zn-raptor}
+                    {slots: 3, ref: zn-sabertooth}
+                    {slots: 2, ref: zn-raptor}
+                    {slots: 2, ref: zn-sabertooth}
+                    {slots: 1, ref: zn-giantSpiders}
+                    {slots: 1, ref: zn-trex}
+                ]
+            }
+            {chance: 1, select: 1, ref: zn-butterflies}
+            {chance: 0.3, select: 1, ref: zn-triceratops}
+        ]
+    }
+    
+# ------ ARCTIC --------------------------------------------
+# ----------- WORLD 4..
+    {
+        targetId: *bio-arctic-deepSnow
+        reqWorld: 4..
+        zones: [
+            {
+                select: 2
+                group: [
+                    {slots: 3, ref: zn-polarBear}
+                    {slots: 3, ref: zn-sabertooth-white}
+                    {slots: 1, ref: zn-wolf-arctic}
+                ]
+            }
+
+        ]
+    }
+# ----------- WORLD 2..
+    {
+        targetId: *bio-arctic-packIce
+        reqWorld: 2..
+        zones: [
+            {
+                reqWorld: 2..3, select: 2
+                group: [
+                    {slots: 2, ref: zn-walrus}
+                    {slots: 2, ref: zn-polarBear}
+                    {slots: 2, ref: zn-polarBear}
+                    {slots: 1}
+                ]
+            }
+            {
+                reqWorld: 4.., select: 2
+                group: [
+                    {slots: 2, ref: zn-walrus}
+                    {slots: 2, ref: zn-walrus}
+                    {slots: 2, ref: zn-polarBear}
+                ]
+            }
+        ]
+    }
+    {
+        targetId: *bio-arctic-glaciers
+        reqWorld: 2..
+        zones: [
+            {
+                reqWorld: 2..3, select: 2
+                group: [
+                    {slots: 2, ref: zn-polarBear}
+                    {slots: 2, ref: zn-polarBear}
+                    {slots: 2, ref: zn-wolf-arctic}
+                    {slots: 1}
+                ]
+            }
+            {
+                reqWorld: 4.., select: 2
+                group: [
+                    {slots: 2, ref: zn-walrus}
+                    {slots: 2, ref: zn-sabertooth-white}
+                    {slots: 2, ref: zn-wolf-arctic}
+                    {slots: 2, ref: zn-polarBear}
+                    {slots: 2, ref: zn-polarBear}
+                ]
+            }
+        ]
+    }
+# ----------- WORLD 0..3
+    {
+        targetId: *bio-arctic-generic
+        reqWorld: 0..3
+        zones: [
+            {
+                reqWorld: 0..1, chance: 0.75, select: 1
+                group: [
+                    {slots: 5, ref: zn-wolf-arctic}
+                    {slots: 3, ref: zn-polarBear}
+                    {slots: 1, ref: zn-walrus}
+
+                ]
+            }
+            {
+                reqWorld: 2.., select: 2
+                group: [
+                    {slots: 3, ref: zn-wolf-arctic}
+                    {slots: 3, ref: zn-polarBear}
+                    {slots: 1, ref: zn-walrus}
+                    {slots: 1, ref: zn-sabertooth-white}
+                    {slots: 1}
+                ]
+            }
+        ]
+    }
+# ----------- WORLD ALL
+    {
+        targetId: *bio-arctic-crystalForest
+        zones: [
+            {
+                reqWorld: 0..1, chance: 0.75, select: 1
+                group: [
+                    {slots: 5, ref: zn-wolf-arctic}
+                    {slots: 2, ref: zn-polarBear}
+                    {slots: 1, ref: zn-sabertooth-white}
+                ]
+            }
+            {
+                reqWorld: 2..3, select: 2
+                group: [
+                    {slots: 4, ref: zn-polarBear}
+                    {slots: 3, ref: zn-wolf-arctic}
+                    {slots: 2, ref: zn-sabertooth-white}
+                    {slots: 1}
+                ]
+            }
+            {
+                reqWorld: 4.., select: 2
+                group: [
+                    {slots: 8, ref: zn-sabertooth-white}
+                    {slots: 5, ref: zn-polarBear}
+                    {slots: 3, ref: zn-wolf-arctic}
+                    {slots: 1, ref: zn-yeti}
+                ]
+            }
+        ]
+    }
+    {
+        targetId: *bio-arctic-plateau
+        zones: [
+            {
+                reqWorld: 0..1, chance: 0.75, select: 1
+                group: [
+                    {slots: 5, ref: zn-wolf-arctic}
+                    {slots: 2, ref: zn-polarBear}
+                    {slots: 1, ref: zn-sabertooth-white}
+                ]
+            }
+            {
+                reqWorld: 2..3, select: 2
+                group: [
+                    {slots: 3, ref: zn-sabertooth-white}
+                    {slots: 3, ref: zn-polarBear}
+                    {slots: 3, ref: zn-wolf-arctic}
+                    {slots: 1}
+                ]
+            }
+            {
+                reqWorld: 4.., select: 2
+                group: [
+                    {slots: 5, ref: zn-wolf-arctic}
+                    {slots: 3, ref: zn-sabertooth-white}
+                    {slots: 2, ref: zn-polarBear}
+                ]
+            }
+        ]
+    }
+]

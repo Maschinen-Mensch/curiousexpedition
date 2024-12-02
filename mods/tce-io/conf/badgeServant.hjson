@@ -1,0 +1,267 @@
+[
+  {
+    id: npc-badgeServant
+    name: txt-npc-badgeServant-title
+    debugCategory: NPC, isNPC: true
+    flags: +badgeServant +noLoyalty +noHealth
+    variations: {sprite:res_npc_badgeServant_1.png, portrait:res_face_badgeServant_1.png}
+  }
+  {
+    id: st-badgeServant-spawnZone
+    dayEvents: [
+      {
+        reqAge: 45
+        addZone: {ref: zn-badgeServant, range: 5..9}
+        resetStatusAge: true
+        resetGlobalInv: badgeServant-sellTrophies
+      }
+    ]
+  }
+  {
+    id: st-badge-treasureHunter-refill
+    dayEvents: [ { reqAge: 40.., removeStatus: true  } ]
+  }
+  {
+    id: zn-badgeServant
+    name: txt-npc-badgeServant-title
+    sprite: res_zones_badgeServant.png
+    borderImgIdx: 2
+    size: [1, 1], moveSpeed: 0.3
+    canAttack: false
+    lifeTurns: 20
+    actions: {
+      actionText: txt-act-badgeServant-intro
+      showImage: {src: evt_fxt_empty.png, type: day}
+      select: evt-badgeServant-intro
+    }
+  }  
+
+# --------------- BAGDES
+  {
+    id: it-badge-base
+    isAbstract: true
+    value: 0
+    maxStack: 1
+    flags: +badge
+    noWeight: true
+    losable: false
+    addStatus: st-badgeServant-spawnZone
+  }
+  {
+    id: it-badge-treasureHunter
+    name: txt-badge-treasureHunter-name
+    description: txt-badge-treasureHunter
+    sprite: it_badge_treasureHunter.png
+    extends: it-badge-base
+  }
+  {
+    id: it-badge-animalTrade
+    name: txt-badge-animalTrade-name
+    description: txt-badge-animalTrade
+    sprite: it_badge_animalTrade.png
+    extends: it-badge-base
+  }
+  
+# ----------------- EVENTS
+  {
+    id: evt-badgeServant-intro
+    npc: npc-badgeServant
+    playSound: thm_arctic_village_1
+    actionText: txt-act-badgeServant-intro
+    text: txt-badgeServant-intro
+    partyEvents: [
+      { 
+        optional: true
+        reqItems: {it-badge-treasureHunter:1}
+        setTempFlags: +badge
+        actions: evt-badgeServant-treasureHunter 
+      }
+      { 
+        optional: true
+        reqItems: {it-badge-animalTrade:1}
+        setTempFlags: +badge
+        actions: evt-badgeServant-animalTrade 
+      }
+      { 
+        optional: true
+        reqTempFlags: -badge
+        actions: evt-badgeServant-noBadge 
+      }
+      { select: evt-badgeServant-leaveAction }
+    ]
+    npcEvents: {
+      chat: cl-badgeServant-intro
+    }
+  }
+  {
+    id: evt-badgeServant-noBadge
+    actionText: txt-act-badgeServant-noBadge
+    text: txt-badgeServant-noBadge
+    select: evt-badgeServant-leaveAction
+  }
+  {
+    id: evt-badgeServant-treasureHunter
+    actionText: txt-act-badgeServant-treasureHunter
+    reqItems: {it-badge-treasureHunter:1}
+    partyEvents: [
+      {
+        select: [
+          {
+            reqPartyStatus: -badge-treasureHunter-refill
+            setPartyStatus: +badge-treasureHunter-refill
+            text: txt-badgeServant-refill-generic
+            items: [
+              {it-map-treasure: 3, it-shovel:3}
+            ]
+            npcEvents: {
+              chat: cl-badgeServant-refillTreasureHunter
+            }
+          }
+          {
+            reqPartyStatus: +badge-treasureHunter-refill
+            text: txt-badgeServant-refill-fail-generic
+            npcEvents: {
+              chat: cl-badgeServant-generic-wait
+            }
+          }
+        ]
+      }
+      { select: evt-badgeServant-leaveAction }
+    ]
+  }
+  {
+    id: evt-badgeServant-animalTrade
+    actionText: txt-act-badgeServant-animalTrade
+    reqItems: {it-badge-animalTrade:1}
+    text: txt-badgeServant-animalTrade
+    npcEvents: {
+      chat: cl-badgeServant-animalTrade
+    }
+    partyEvents: [
+      {
+        actions: [
+          {
+            actionText: txt-act-badgeServant-sellTrophies
+            barter: {
+              invName: badgeServant-sellTrophies
+              reqItemFlags: +animalLoot
+              priceTable: badgeServantAnimalTrade
+              items: {il-harbor-rations:1, it-ammo:20, il-badgeServant-animalTrade-extra: 1, it-jewels:20}
+              closeEvents: evt-badgeServant-animalTrade
+              cancelEvents: evt-badgeServant-animalTrade
+            }
+          }
+          {
+            actionText: txt-act-badgeServant-tradeFameTrophies
+            loot: {
+              items: {}
+              title: txt-io-badgeServant-deliverAnimalSupplies-title
+              closeEvents: evt-badgeServant-animalTrade
+              slots: 999
+              reqItemFlags: +animalLoot
+              consumeFameItems: true
+            }
+          }
+        ]
+      }
+      {select: evt-badgeServant-leaveAction}
+    ]    
+  }
+  {
+    id: il-badgeServant-animalTrade-extra
+    items: [
+      {slots: 3, it-firstAid: 20}
+      {slots: 2, it-costonFlare: 20}
+      {slots: 1, it-rope: 20}
+      {slots: 1, it-machete: 20}
+      {slots: 1, it-climbingGear: 20}
+      
+    ]
+  }
+
+# ---------------- TREASURE MAP & LOOT OVERRIDES
+
+  {
+    targetId: *it-map-treasure
+    resellFactor: 0
+  }
+  
+  {
+    id: evt-badgeServant-leaveAction
+    select: [
+      {
+        prio:0
+        reqLocationFlags: +outpost
+        actions: evt-hub-main
+      }
+      {
+        prio:1
+        actions: evt-leave
+      }
+    ]
+  }
+  {
+    targetId: /evt-treasure-dig
+    showImage: {src: evt_fxt_empty.png, type: day}
+    partyEvents: {
+      optional: true
+      reqLocation: {flags: +hiddenTreasure}
+      incAchievement: ach-secret-treasure
+    }
+    select: [
+      {
+        reqLocation: {flags: +burriedTreasure}
+        text: txt-evt-treasure-dig
+        chat: cl-generic
+        incAchievement: ach-treasure-dig
+        replaceLocations: {}
+        select: [
+          {
+            loot: {
+              closeEvents: {}
+              items: [
+                {slots: 4, it-jewels: 4} # Value 80 Fame 20
+                {slots: 3, il-treasure-lowValue: 1, it-jewels:2} #Value 80 Fame 60
+                {slots: 3, il-treasure-highValue: 1, it-jewels:1} # Value 80 Fame 75
+                {slots: 2, it-jewels: 5} # Value 100 Fame 25
+              ]
+            }
+          }
+        ]
+      }
+      { # Quest
+        reqLocation: {flags: +burriedTreasureSchroedinger}
+        text: txt-evt-treasure-dig-1
+        chat: cl-generic
+        replaceLocations: {}
+        loot: {
+          closeEvents: {}
+          items: {it-box-schroedinger: 1}
+        }
+      }
+      { # Nothing found
+        prio: 1
+        chat: cl-generic
+        text: txt-evt-treasure-dig-2
+      }
+    ]
+  }
+# ------------------- CHATLINES
+
+  {
+    id: cl-badgeServant-intro
+    lines: {text: txt-cl-badgeServant-intro, reqCharFlags: +badgeServant}
+  }
+  {
+    id: cl-badgeServant-generic-wait
+    lines: {text: txt-cl-badgeServant-generic-wait, reqCharFlags: +badgeServant}
+  }
+  {
+    id: cl-badgeServant-refillTreasureHunter
+    lines: {text: txt-cl-badgeServant-generic-refillTreasureHunter, reqCharFlags: +badgeServant}
+  }
+  {
+    id: cl-badgeServant-animalTrade
+    lines: {text: txt-cl-badgeServant-animalTrade, reqCharFlags: +badgeServant}
+  }
+]

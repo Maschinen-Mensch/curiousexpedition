@@ -1,0 +1,467 @@
+[
+  {
+    targetId: +evt-world-init::partyEvents
+    data: {
+      setPartyFlags: +ioGame
+    }
+  }
+  {
+    targetId: *act-endgame
+    data: {
+      actionText: txt-io-newgame-start
+    }
+  }
+# ----------------------------- REMOVED EVENTS
+  {
+    targetId: *evt-village-rest-unlockSpecialWorld
+    data: {
+      reqPartyFlags: -ioGame
+    }
+  }
+  {
+    targetId: *evt-infectedDeath-promise
+    data: {
+      reqPartyFlags: -ioGame
+    }
+  }
+  {
+    targetId: *evt-village-rest-positive-gameover
+    data: {
+      reqPartyFlags: -ioGame
+    }
+  }
+# ----------------------------- STONE CIRCLE
+  {
+    targetId: *evt-stoneCircle-revealRuins
+    reqLocation: {flags: +ruins, locationKnown: false, range: ..30}
+    partyEvents: [
+      {optional: true, ref: evt-stoneCircle-revealNextRuin}
+      {optional: true, ref: evt-stoneCircle-revealNextRuin}
+    ]
+  }
+  {
+    targetId: *evt-stoneCircle-revealSettlements
+    reqLocation: {flags: +settlement, locationKnown: false, range: ..30}
+    partyEvents: [
+      {optional: true, ref: evt-stoneCircle-revealNextSettlement}
+      {optional: true, ref: evt-stoneCircle-revealNextSettlement}
+    ]
+  }
+  {
+    targetId: *evt-stoneCircle-revealNatureRests
+    reqLocation: {flags: +natureRest, locationKnown: false, range: ..30}
+    partyEvents: [
+      {optional: true, ref: evt-stoneCircle-revealNextNatureRest}
+      {optional: true, ref: evt-stoneCircle-revealNextNatureRest}
+    ]
+  }
+  {
+    targetId: *evt-stoneCircle-revealCaves
+    reqLocation: {flags: +cave, locationKnown: false, range: ..30}
+    partyEvents: [
+      {optional: true, ref: evt-stoneCircle-revealNextCave}
+      {optional: true, ref: evt-stoneCircle-revealNextCave}
+    ]
+  }
+  {
+    targetId: *evt-stoneCircle-revealNextRuin
+    posTile: {
+      closest: true
+      locationKnown: false
+      locationFlags: +ruins
+      tileFlags: -mapped
+    }
+  }
+  {
+    targetId: *evt-stoneCircle-revealNextSettlement
+    posTile: {
+      closest: true
+      locationKnown: false
+      locationFlags: +settlement
+      tileFlags: -mapped
+    }
+  }
+  {
+    targetId: *evt-stoneCircle-revealNextNatureRest
+    posTile: {
+      closest: true
+      locationKnown: false
+      locationFlags: +natureRest
+      tileFlags: -mapped
+    }
+  }
+  {
+    targetId: *evt-stoneCircle-revealNextCave
+    posTile: {
+      closest: true
+      locationKnown: false
+      locationFlags: +cave
+      tileFlags: -mapped
+    }
+  }
+# ----------------------------- MISSION
+  {
+    targetId: -loc-mission::reqWorld
+  }
+  {
+    targetId: /evt-mission-stash
+    actionText: txt-io-deliverFameItems-action
+    text: txt-evt-mission-stash
+    alwaysShown: true
+    reqItemFlags: +fameItem
+    loot: {
+      items: {}
+      title: txt-io-deliverFameItems-title
+      closeEvents: evt-mission-stash-done
+      slots: 999
+      reqItemFlags: +fameItem
+      consumeFameItems: true
+    }
+  }
+
+# ----------------------------- POLAR STATION
+  {
+    targetId: *evt-polarStation-travel
+    data: {
+      reqPartyFlags: -ioGame
+    }
+  }  
+  {
+    targetId: /evt-polarStation-stash
+    data: {
+      actionText: txt-io-deliverFameItems-action
+      alwaysShown: true
+      reqItemFlags: +fameItem
+      loot: {
+        items: {}
+        title: txt-io-deliverFameItems-title
+        slots: 999
+        closeEvents: evt-polarStation-stash-done
+        reqItemFlags: +fameItem
+        consumeFameItems: true
+      }
+    }
+  }
+# ----------------------------- TOMEPAGES
+  {
+    targetId: *it-tomePage-shipReturn
+    useEvents: {
+      posTile: {
+        range: 1..
+        closest: true,
+        locationFlags: +hub +explored
+      }
+      teleport: true
+      playSound: sfx_teleport_1
+      removeItem: true
+    }
+  }
+  {
+    targetId: *it-tomePage-targetTeleport
+    useEvents: {
+      posPunch: {maxRange: 22, radius: 0, tileKnown: true}
+      teleport: true
+      removeItem: true
+      playSound: sfx_teleport_1
+    }
+  }
+  {
+    targetId: *it-tomePage-eagle
+    useEvents: {
+      posPunch: {maxRange: 22, radius: 3}
+      revealTiles: {radius: 3, location: true, centerCam: false}
+      particle: pt-ambient-eagle
+      playSound: sfx_ambient_eagle
+      removeItem: true
+    }
+  }
+# ----------------------------- SPECIAL WORLD UNLOCKS
+  {
+    targetId: *evt-cave-setCaveType
+    select: [
+      {slots: 20, setLocationFlags: +caveTypeCorpses}
+      {slots: 10, setLocationFlags: +caveTypeOpening}
+      {slots: 10, setLocationFlags: +caveTypeMushrooms}
+      {slots: 10, setLocationFlags: +caveTypeMummy}
+      {slots: 2, reqBiomeFlags: +arctic, setLocationFlags: +caveTypeYeti}
+    ]
+  }
+  {
+    targetId: *evt-mission-sleep-event-4
+    reqPartyFlags: -ioGame
+  }
+  {
+    targetId: *evt-cenote-night
+    partyEvents: {
+      posTile: {tileKnown:false, range:30.., reqBiomeFlags: -blocking}
+      revealTiles: { centerCam: true }
+      revealBiome: {}
+    }
+  }
+  {
+    targetId: *evt-village-rest-unlockSpecialWorld
+    reqPartyFlags: -ioGame
+  }
+  
+# ----------------------------- TREASURE MAP
+  {
+    id: evt-map-treasure-init 
+    select: [
+      {
+        prio: 0
+        posTile: {range: 20..48, biomeFlags: +claimed}
+        reqBiomeFlags: +claimed
+        addLocation: {ref: loc-treasure, range: biome, animate: false, reqBiomeFlags: +claimed}
+      }          
+      {
+        prio: 1
+        addLocation: {ref: loc-treasure, range: 20..48, animate: false}
+      }
+    ]
+  }
+  {
+    targetId: /it-map-treasure::miniMap
+    data:
+    {
+      width: 300
+      height: 300
+      coverage: 1
+      initEvents: {
+        select: evt-map-treasure-init
+      }
+    }
+  }
+  {
+    targetId: *it-necronomicon
+    data: 
+    {      
+      maxChargeTime: 5
+    }
+  }
+
+# ----------------------------- CAMP 
+  {
+    targetId: *evt-camp-actions
+    actions: evt-nature-rest evt-leave
+  }
+  {
+    targetId: *it-camp
+    name: txt-it-camp-name
+    description: txt-it-camp
+    sprite: it_utility_camp_1.png
+    value: {base: 40, karma: 1}
+    maxStack: 3
+    debugCategory: utility
+    useEvents: {
+      partyEvents: [
+        {
+          reqLocation: {flags: "", range: 0}
+          optional: true
+          setTempFlags: +campFail
+          chat: cl-camp-fail
+        }
+        {
+          reqTiles: tl-river-shallow tl-sulfur-shallow tl-packIce
+          optional: true
+          setTempFlags: +campFail
+          chat: cl-camp-fail
+        }
+        {
+          reqTempFlags: -campFail
+          optional: true
+          chat: cl-camp-success
+          addLocation: {ref: loc-camp, range: 0}
+          removeItem: true
+        }
+      ]
+    }
+  }
+
+# ----------------------------- ITEM REMOVAL
+  {
+    targetId: *it-voodooDoll
+    reqPartyFlags: -ioGame
+  }
+# ----------------------------- SHRINES
+  {
+    targetId: *evt-shrine-loot
+    ioSetLocationFlags: +broken
+  }
+  {
+    targetId: *evt-tomb-fight
+    ioSetLocationFlags: +explored
+  }
+  {
+    targetId: *evt-tomb-leave
+    ioSetLocationFlags: +explored
+  }
+  
+# ----------------------------- AFTERMATH
+  {
+    targetId: +loc-monsterDen-giantSpiders::dayEvents
+    data:
+    {
+      slots: 10
+      reqAge: 10..
+      replaceLocations: {}
+    }
+  }
+# ----------------------------- STATUSES
+  {
+    targetId: *st-greatReputation
+    data: {
+      title: txt-pk-greatReputation-title-io
+      description: txt-pk-goodReputation-io
+      bonus: {standingBias: 3, turnsForStandingBias: -5}
+      isPerk: false
+    }
+  } 
+  {
+    targetId: *st-goodReputation
+    data: {
+      description: txt-pk-goodReputation-io
+      bonus: {standingBias: 1, turnsForStandingBias: -2}
+    }
+  }
+  {
+    targetId: *st-blessingHoly
+    data: {
+      bonus: {standingBias: 1, turnsForStandingBias: -2}
+    }
+  }
+  {
+    targetId: -st-navigator    
+  }
+  {
+    targetId: -st-charismatic    
+  }
+  {
+    targetId: -st-occultVision    
+  }
+# ----------------------------- EXPLORERS
+  # removing some explorers that reference removed things to fix startup errors
+  {
+    targetId: -sp-ee-royalCartographer
+  }
+  {
+    targetId: -sp-ee-pewdiepie
+  }
+  {
+    targetId: -sp-earhart
+  }
+  {
+    targetId: -sp-crowley
+  }
+  {
+    targetId: -evt-expedition-unlocks
+  }
+  {
+    targetId: /evt-occultVision-reveal
+    data: {}
+  }
+# ----------------------------- HARBOR
+  # harbor references some removed things so just remove the events that throw warnings
+  {
+    targetId: -evt-harbor-recruit::select
+  }
+# ----------------------------- PLAYER DEATH
+  {
+    targetId: evt-searchArea::partyEvents
+    data: {
+      optional: true
+      reqLocationFlags: +userID
+      text: txt-io-evt-user
+      ioRemovePlayerDeath: true
+      setLocationFlags: -userID
+    }
+  }  
+# ----------------------------- HOT AIR BALLOON
+  {
+    targetId: /evt-hotAirBalloon-access
+    text: txt-io-hotAirBalloon-access
+    actions: [
+      #evt-hotAirBalloon-finish
+      evt-hotAirBalloon-stash
+      evt-hotAirBalloon-makeRoom
+      evt-hotAirBalloon-abort-leave
+    ]
+  }
+  {
+    id: evt-hotAirBalloon-finish
+    actionText: txt-act-returnhome-action
+    #text: txt-io-hotAirBalloon-finish
+    actions: [
+      { # Finish!
+        #actionText: txt-act-hotAirBalloon-flyAway
+      }
+      { # Cancel
+        #actionText: txt-evt-hotAirBalloon-abort-action
+        select: evt-hotAirBalloon-abort-leave
+      }
+    ]
+  }
+
+  {
+    targetId: *evt-hotAirBalloon-stash
+    actionText: txt-evt-hotAirBalloon-stash-action-io
+  }
+  {
+    targetId: /evt-hotAirBalloon-takeOff::actions
+    data: {
+      events:[
+        {
+          reqLocation: {range: world, flags: +hub +explored}
+          posTile: {locationFlags: +hub +explored, locations:loc-hub, range: world, closest:true}
+          teleport: true
+          select: evt-hub-enter
+        }
+      ]
+      
+    }
+  }
+  {
+    # remove the requirement for at least one other person
+    targetId: -evt-hotAirBalloon-access::charEvents
+  }
+# ----------------------------- HOMESICK REMOVAL
+  {
+    targetId: /st-homesick
+    data: {
+      important: false
+    }
+  }
+# ----------------------------- FORSAKEN AFTERMATH
+  {
+    targetId: /evt-shrine-aftermath-forsake-fxt::reqLocation
+    data: {
+      flags: +inhabited
+      range: ..30
+    }    
+  }
+# ----------------------------- NO INFINITE CULTISTS AT MISSION
+  {
+    targetId: *evt-mission-cultist-recruit
+    reqLocationFlags: -recruit-count-2
+  }
+# ----------------------------- REDUCED SEXTANT RANGE
+  {
+    targetId: /it-sextant::bonus
+    data: {revealDist: 1}
+  }
+# ----------------------------- REMOVE RENOUNCED
+  {
+    targetId: *evt-angry-renounced
+    reqPartyFlags: -ioGame
+  }
+# ----------------------------- WEATHER BALOON RANGE REDUCTION
+  {
+    targetId: /it-weatherBalloon::useEvents
+    data: {
+      reqLocation: {flags: "", range: ..15, locationKnown: false}
+      posTile: {range: ..15, closest: true, locationFlags: "", locationKnown: false}
+      revealTiles: {location: true, centerCam: true}
+      removeItem: true
+      playSound: sfx_balloon_flare_fireworks
+    } 
+  }
+]

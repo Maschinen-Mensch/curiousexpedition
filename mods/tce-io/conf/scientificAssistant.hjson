@@ -1,0 +1,124 @@
+[
+    { # Character definition
+      id: pl-scientificAssistant 
+      title: txt-pl-scientificAssistant-title
+      health: 4
+      capacity: 2
+      flags: +porter +humanoid +scientificAssistant
+      debugCategory: Modding
+      variations: [
+        {
+          gender: male
+          name: westernCharacterMale
+          sprite: pl_sprite_scientificAssistant_1.png
+          portrait: pl_face_scientificAssistant_1.png
+          miniSprite: pl_minisprite_scientificAssistant_1.png
+        },
+        {
+          gender: male
+          name: westernCharacterMale
+          flags: +darkSkinned
+          sprite: pl_sprite_scientificAssistant_2.png
+          portrait: pl_face_scientificAssistant_2.png
+          miniSprite: pl_minisprite_scientificAssistant_2.png
+        },
+        {
+          gender: hybrid
+          name: westernCharacterFemale
+          sprite: pl_sprite_scientificAssistant_3.png
+          portrait: pl_face_scientificAssistant_3.png
+          miniSprite: pl_minisprite_scientificAssistant_3.png
+        },
+        {
+          gender: male
+          name: westernCharacterMale
+          sprite: pl_sprite_scientificAssistant_4.png
+          portrait: pl_face_scientificAssistant_4.png
+          miniSprite: pl_minisprite_scientificAssistant_4.png
+        },
+      ],
+      
+      spawnEvents: {
+        partyEvents: [
+          {
+            #Random chance to apply a negative status from the beginning on
+            select: [ 
+              {
+                slots:2
+                setStatus: +alcoholic
+              }
+              {
+                slots:1
+                setStatus: +kleptomania
+              }
+              {
+                slots:10
+              }
+            ]
+          }
+          { 
+            # Personality will influence the kind of chatlines that may be triggered for this character based on the entries at chat.conf.js
+             select: [ 
+              {
+                slots:1
+                setCharFlags: +witty
+              }
+              {
+                slots:1
+                setCharFlags: +brave
+              }
+              {
+                slots:1
+                setCharFlags: +coward
+              }
+            ]
+          }
+        ]     
+      }
+      levels: [ 
+        { # LEVEL 1 (starting)
+          statuses: st-scientificAssistant-1
+          dice: dc-support-1
+        }
+        { # LEVEL 2
+          statuses: st-scientificAssistant-2
+          dice: dc-support-1 dc-support-1
+        }
+        { # LEVEL 3
+          statuses: st-scientificAssistant-3
+          dice: dc-support-2 dc-support-1
+        }
+        { # LEVEL 4 (max)
+          statuses: st-scientificAssistant-4
+          dice: dc-support-2 dc-support-2
+        }
+      ]
+    }
+    # Custom perk defintion
+    { 
+      id: st-scientificAssistant-1
+      title: txt-pk-researchAssistance-1-title
+      description: txt-pk-researchAssistance-description
+      sprite: res_status_butterfly.png
+      debugCategory:Unit Perk
+      bonus: {taxonomySanity: 10}
+    }
+    {
+      id: st-scientificAssistant-2
+      extends: st-scientificAssistant-1
+      title: txt-pk-researchAssistance-2-title
+      bonus: {taxonomySanity: 20}
+    }
+    {
+      id: st-scientificAssistant-3
+      extends: st-scientificAssistant-1
+      title: txt-pk-researchAssistance-3-title
+      bonus: {taxonomySanity: 30}
+    }
+    {
+      id: st-scientificAssistant-4
+      extends: st-scientificAssistant-1
+      title: txt-pk-researchAssistance-4-title
+      bonus: {taxonomySanity: 40}
+    }
+  ]

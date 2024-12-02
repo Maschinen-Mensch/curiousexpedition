@@ -1,0 +1,408 @@
+[
+    {
+      id: loc-hub
+      name: txt-io-hub-name
+      debugColor: orange
+      debugCategory: hub
+      sprite: res_fxt_outpost_n.png
+      hintBiome: false
+      isRemovable: false
+      keepReachable: true
+      maximizeDistance: true
+      hasStash: true
+      priceTable: outpost
+      flags: +hub +outpost
+      setTile: [
+        {ref: tl-river-shallow}
+      ]
+      subLocations: [
+        {ref: loc-outpost-e, offsets: 1se}
+        {ref: loc-outpost-s, offsets: 1s}
+        {ref: loc-outpost-w, offsets: 1sw}
+      ]
+      spawnEvents: [
+        {setupHub: true}
+      ]
+      actions: [
+        evt-hub-explore
+        evt-hub-enter
+      ]
+    }
+    {
+      id: loc-outpost-sublocation
+      isAbstract: true
+      mapScore: 0
+      showHint: false
+      keepReachable: true
+      isRemovable: false
+      showAlways: false
+      linked: true
+      debugCategory: hub
+      setTile: [
+        {ref: tl-river-shallow}
+      ]
+    }
+    {
+      id: loc-outpost-e
+      extends: loc-outpost-sublocation
+      sprite: res_fxt_outpost_e.png
+    }
+    {
+      id: loc-outpost-s
+      extends: loc-outpost-sublocation
+      sprite: res_fxt_outpost_s.png
+    }
+    {
+      id: loc-outpost-w
+      extends: loc-outpost-sublocation
+      sprite: res_fxt_outpost_w.png
+    }
+    {
+      id: evt-hub-explore
+      actionText: txt-io-hub-approach-action
+      reqLocationFlags: -explored
+      select: [
+        {
+          setLocationFlags: +explored
+          unlockHub: true
+          sanity: 200
+        }
+      ]
+    }
+    {
+      id: evt-hub-enter
+      actionText: txt-io-hub-enter-action
+      reqLocationFlags: +explored      
+      showImage: {src: evt_fxt_outpost_1.png, type: day}
+      sanity: 200
+      select: [
+        {
+          reqPartyFlags: +visitedOutpost
+          text: txt-io-hub-enter          
+        }
+        {
+          prio: 1
+          setPartyFlags: +visitedOutpost
+          text: txt-io-hub-first
+        }
+      ]
+      partyEvents: evt-hub-actions
+    }
+    {
+      id: evt-hub-main
+      actionText: txt-io-hub-main-action
+      text: txt-io-hub-main
+      select: evt-hub-actions
+    }
+    {
+      id: evt-hub-actions
+      actions: [
+        evt-hub-deliverFameItems
+        evt-hub-tradeItems
+        evt-hub-healUnits-enter
+        #evt-hub-refillWater
+        evt-hub-ask
+        evt-badgeServant-intro
+        evt-leave
+      ]
+    }
+    {
+      id: evt-hub-refillWater
+      actionText: txt-evt-cave-mushrooms-refillWater-action
+      select: [
+        {
+          reqItems: {it-water: 100..}
+          text: txt-evt-ship-refillWater
+          select: evt-hub-actions
+        }
+        {
+          prio: 1
+          text: txt-evt-ship-refillWater-1
+          chat: cl-water-pack
+          items: {it-water: 20}
+          select: evt-hub-actions
+        }
+      ]
+    }
+    {
+      id: evt-hub-deliverFameItems
+      actionText: txt-io-deliverFameItems-action
+      alwaysShown: true
+      reqItemFlags: +fameItem
+      loot: {
+        items: {}
+        title: txt-io-deliverFameItems-title
+        closeEvents: evt-hub-main
+        slots: 999
+        reqItemFlags: +fameItem
+        consumeFameItems: true
+      }
+    }
+    {
+      id: evt-hub-tradeItems
+      actionText: txt-evt-harbor-select-action
+      charEvents: [
+        {
+          optional: true
+          reqPartyStatus: -blackMarket
+          barter: {
+            invName: io-hub
+            priceTable: io-hub
+            items: {
+              il-io-hub-rations: 2
+              it-torch: 5
+              it-machete: 10
+              it-shovel: 5
+              it-rope: 10
+              it-climbingGear: 10
+              it-snowshoe: 10
+              it-canvas: 5
+              il-io-hub-standardTools: 2
+              il-io-hub-extra: 1
+              it-water:20
+              il-metaItems: 99
+            }
+            closeEvents: evt-hub-main
+            cancelEvents: evt-hub-main
+          }
+        }
+        {
+          optional: true
+          reqPartyStatus: +blackMarket
+          barter: {
+            invName: io-hub-blackMarket
+            priceTable: io-hub
+            items: {
+              il-io-hub-rations-blackMarket: 2
+              it-torch: 10
+              it-machete: 20
+              it-shovel: 5
+              it-rope: 20
+              it-climbingGear: 20
+              it-snowshoe: 20
+              it-canvas: 10
+              il-io-hub-standardTools-blackMarket: 3
+              il-io-hub-extra-blackMarket: 3
+              it-water:20
+              il-metaItems: 99
+            }
+            closeEvents: evt-hub-main
+            cancelEvents: evt-hub-main
+          }
+        }
+      ]
+    }
+    {
+      id: evt-hub-healUnits-enter
+      actionText: txt-io-hub-healUnits-action
+      alwaysShown: true
+      text: txt-io-hub-healUnits-enter  
+      charEvents: [
+        {
+          count: any
+          reqStatus: +injured | +infected | +cannibal | +alcoholic | +pyromaniac | +bipolar | +paranoid | +malaria | +jungleFever | +minorPoisoning | +sprained | +hearingLoss | +viewingLoss | +pneumonia | +jungleRot | +scurvy | +rabies | +kleptomania | +claustrophobic | +acrophobia | +dendrophobia | +lepidopterophobia | +hallucinations | +curse-abomination
+        }
+      ]
+      select: evt-hub-healUnits-selectUnit
+      actions: evt-hub-main
+    }
+    {
+      id: evt-hub-healUnits-return
+      select: [
+        {
+          prio: 2
+          select: evt-hub-main
+        }
+        {
+          prio: 1
+          text: txt-io-hub-healUnits-return
+          charEvents: {
+            optional: false
+            count: any
+            reqStatus: +injured | +infected | +cannibal | +alcoholic | +pyromaniac | +bipolar | +paranoid | +malaria | +jungleFever | +minorPoisoning | +sprained | +hearingLoss | +viewingLoss | +pneumonia | +jungleRot | +scurvy | +rabies | +kleptomania | +claustrophobic | +acrophobia | +dendrophobia | +lepidopterophobia | +hallucinations | +curse-abomination
+          }
+          select: evt-hub-healUnits-selectUnit
+          actions: evt-hub-main
+        }
+      ]
+    }
+    {
+      id: evt-hub-healUnits-selectUnit
+      charEvents: {
+        optional: true
+        count: any
+        reqStatus: +injured | +infected | +cannibal | +alcoholic | +pyromaniac | +bipolar | +paranoid | +malaria | +jungleFever | +minorPoisoning | +sprained | +hearingLoss | +viewingLoss | +pneumonia | +jungleRot | +scurvy | +rabies | +kleptomania | +claustrophobic | +acrophobia | +dendrophobia | +lepidopterophobia | +hallucinations | +curse-abomination
+        actions: evt-hub-healUnits-healTrade
+      }
+    }
+    {
+      id: evt-hub-healUnits-healTrade
+      actionText: txt-io-hub-healUnits-treatUnit
+      barter: {
+        items: {}
+        baseValue: 50
+        priceTable: io-hub
+        closeEvents: evt-hub-healUnits-healTrade-deal
+        cancelEvents: evt-hub-healUnits-return
+        invName: io-hub-healer
+      }
+    }
+    {
+      id: evt-hub-healUnits-healTrade-deal
+      text: txt-io-hub-healUnits-deal
+      health: 100
+      setStatus: -injured -infected -cannibal -alcoholic -pyromaniac -bipolar -paranoid -malaria -jungleFever -minorPoisoning -sprained -hearingLoss -viewingLoss -pneumonia -jungleRot -scurvy -rabies -kleptomania -claustrophobic -acrophobia -dendrophobia -lepidopterophobia -hallucinations -curse-abomination
+      select: evt-hub-healUnits-return
+    }
+    {
+      id: evt-hub-ask
+      npc: npc-badgeServant
+      actionText: txt-io-hub-ask-action
+      text: txt-io-hub-ask-main      
+      events: evt-hub-ask-actions
+    }    
+    {
+      id: cl-badgeServant-ask
+      lines: {text: txt-cl-badgeServant-ask, reqCharFlags: +badgeServant}
+    }
+    {
+      id: evt-hub-ask-actions
+      npcEvents: {
+        chat: cl-badgeServant-ask
+      }
+      actions: [
+        evt-hub-ask-regions
+        evt-hub-ask-outposts
+        evt-hub-ask-provinces
+        evt-hub-ask-crates
+        evt-hub-ask-medals
+        evt-hub-ask-fame
+        evt-hub-ask-badges
+        evt-hub-ask-pyramid
+        evt-hub-main
+      ]
+    }
+    {
+      id: evt-hub-ask-return
+      actionText: txt-io-hub-ask-return
+      text: txt-io-hub-ask-return-txt
+      events: evt-hub-ask-actions
+    }
+    {
+      id: evt-hub-ask-regions
+      actionText: txt-io-hub-ask-regions
+      text: txt-io-hub-ask-regions-txt
+      actions: evt-hub-ask-return
+    }
+    {
+      id: evt-hub-ask-outposts
+      actionText: txt-io-hub-ask-outposts
+      text: txt-io-hub-ask-outposts-txt
+      actions: evt-hub-ask-return
+    }
+    {
+      id: evt-hub-ask-pyramid
+      actionText: txt-io-hub-ask-pyramid
+      text: txt-io-hub-ask-pyramid-txt
+      actions: evt-hub-ask-return
+    }
+    {
+      id: evt-hub-ask-crates
+      actionText: txt-io-hub-ask-crates
+      text: txt-io-hub-ask-crates-txt
+      actions: evt-hub-ask-return
+    }
+    {
+      id: evt-hub-ask-medals
+      actionText: txt-io-hub-ask-medals
+      text: txt-io-hub-ask-medals-txt
+      actions: evt-hub-ask-return
+    }
+    {
+      id: evt-hub-ask-provinces
+      actionText: txt-io-hub-ask-provinces
+      text: txt-io-hub-ask-provinces-txt
+      actions: evt-hub-ask-return
+    }
+    {
+      id: evt-hub-ask-badges
+      actionText: txt-io-hub-ask-badges
+      text: txt-io-hub-ask-badges-txt
+      actions: evt-hub-ask-return
+    }
+    {
+      id: evt-hub-ask-fame
+      actionText: txt-io-hub-ask-fame
+      text: txt-io-hub-ask-fame-txt
+      actions: evt-hub-ask-return
+    }
+
+#------------------------ ITEM LISTS
+
+    {
+      id: il-io-hub-standardTools
+      items: [
+        {slots: 2, it-ammo: 10}
+        {slots: 2, it-firstAid: 5}
+        {slots: 1, it-costonFlare: 5}
+        {slots: 1, it-dynamite: 5}
+      ]
+    } 
+    {
+      id: il-io-hub-standardTools-blackMarket
+      items: [
+        {slots: 2, it-ammo: 20}
+        {slots: 2, it-firstAid: 10}
+        {slots: 1, it-costonFlare: 10}
+        {slots: 1, it-dynamite: 10}
+      ]
+    }   
+    {
+      id: il-io-hub-rations
+      items: [
+        {slots: 1, it-chocolate: 10}
+        {slots: 1, it-whisky: 10}
+        {slots: 1, it-tinCans: 10}
+      ]
+    }
+    {
+      id: il-io-hub-rations-blackMarket
+      items: [
+        {slots: 1, it-chocolate: 20}
+        {slots: 1, it-whisky: 20}
+        {slots: 1, it-tinCans: 20}
+      ]
+    }
+    {
+      id: il-io-hub-extra
+      items: [
+        {slots: 4, it-weatherBalloon: 10}
+        {slots: 4, it-fireworks: 10}
+        {slots: 4, it-marbles: 10}
+        {slots: 2, it-camp: 6}
+        {slots: 2, it-binoculars: 1}
+        {slots: 2, it-sextant: 1}
+        {slots: 2, it-telescope: 1}
+        {slots: 2, it-pistol: 1}
+        {slots: 1, it-shotgun: 1}
+        {slots: 1, it-rifle: 1}
+        {slots: 1, it-whip: 1}
+      ]
+    }
+    {
+      id: il-io-hub-extra-blackMarket
+      items: [
+        {slots: 2, it-camp: 3}
+        {slots: 2, it-binoculars: 1}
+        {slots: 2, it-sextant: 1}
+        {slots: 2, it-telescope: 1}
+        {slots: 2, it-pistol: 1}
+        {slots: 2, it-shotgun: 1}
+        {slots: 2, it-rifle: 1}
+        {slots: 2, it-whip: 1}
+        {slots: 1, it-weatherBalloon: 10}
+        {slots: 1, it-fireworks: 10}
+        {slots: 1, it-marbles: 10}
+      ]
+    }
+]

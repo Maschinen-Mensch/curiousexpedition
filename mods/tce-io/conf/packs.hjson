@@ -1,0 +1,1012 @@
+[
+# ------- VALUE 0
+  {
+    id: pack-starter
+    name: txt-pack-starter
+    items: {it-chocolate: 7, it-torch: 3, it-rope: 5, it-ammo: 3}
+    characters: pl-soldier-british anm-donkey
+    value: 0
+    icon: pack_starter.png
+  }
+# ------- VALUE 1  
+  {
+    id: pack-survival
+    name: txt-pack-survival
+    icon: pack_survival.png
+    items: {
+      it-torch: 5, 
+      it-rope: 5,
+      it-machete: 5 
+    }
+    value: 1
+  }
+  {
+    id: pack-healthcare
+    name: txt-pack-healthcare
+    icon: pack_healthcare.png
+    items:
+    {
+      it-firstAid: 5
+    }
+    value: 1
+  }
+  {
+    id: pack-adventurers-pack
+    name:txt-pack-adventurers-pack
+    icon: pack_adventurer.png
+    items:
+    {
+      it-shovel: 5
+      it-torch: 10
+      it-ammo: 5
+    }
+    value: 1
+  }
+  {
+    id: pack-tribal-combat
+    name:txt-pack-tribal-combat
+    items:
+    {
+      it-spear: 5
+    }
+    value: 1
+  }
+  {
+    id: pack-magic-apprentice
+    name:txt-pack-magic-apprentice
+    items: { 
+      it-tomePage-eagle: 5 
+      it-tomePage-wisdom: 2
+    }
+    value: 1
+  }
+  {
+    id: pack-magic-terraform
+    name:txt-pack-magic-terraform
+    items: { 
+      it-tomePage-hill: 5 
+      it-tomePage-waterDrain: 5
+    }
+    value: 1
+  }
+  {
+    id: pack-mushroom-collector
+    name:txt-pack-mushroom-collector
+    items:
+    {
+      it-mushroom-noAngry: 5
+      it-mushroom-capacity: 5
+    }
+    value: 1
+  }
+
+  {
+    id: pack-persianTranslator
+    characters:pl-translator
+    value: 1
+  }
+  {
+    id: pack-mountainTrooper
+    characters:pl-mountainTrooper
+    value: 1
+  }
+  {
+    id: pack-bedouin
+    characters:pl-bedouin
+    value: 1
+  }
+  {
+    id: pack-trader
+    characters:pl-trader
+    value: 1
+  }
+  {
+    id: pack-soldier-british
+    characters:pl-soldier-british
+    value: 1
+  }
+  {
+    id: pack-soldier-scottish
+    characters:pl-soldier-scottish
+    value: 1
+  }
+  {
+    id: pack-sailor
+    characters:pl-sailor
+    value: 1
+  }
+  {
+    id: pack-cultist
+    characters:pl-cultist
+    value: 1
+  }
+  {
+    id: pack-sterling
+    characters:pl-sterling
+    value: 1
+  }
+  {
+    id: pack-missionary
+    characters:pl-missionary
+    value: 1
+  }  
+  {
+    id: pack-native-starting-scout
+    characters: [pl-native-starting-scout]
+    value: 1
+  }
+  {
+    id: pack-native-starting-shaman
+    characters: [pl-native-starting-shaman]
+    value: 1
+  }
+  {
+    id: pack-native-starting-warrior
+    characters: [pl-native-starting-warrior]
+    value: 1
+  }
+  {
+    id: pack-native-starting-animalHandler
+    characters: [pl-native-starting-animalHandler]
+    value: 1
+  }
+  {
+    id: pack-timLuis
+    characters:
+    [
+      pl-tim, anm-dog-luis
+    ]
+    value: 1
+  }
+  {
+    id: pack-polymath
+    statuses: st-polymath
+    value: 2
+  }
+  {
+    id: pack-army-supplies
+    name:txt-pack-army-supplies
+    items:
+    {
+      it-ammo: 10
+      it-dynamite:3
+    }
+    value: 1
+  }
+  {
+    id: pack-shady-trader
+    name:txt-pack-shady-trader
+    items:
+    {
+      it-marbles: 10
+    }
+    value: 1
+  }
+  {
+    id: pack-scouting
+    name:txt-pack-scouting
+    items:
+    {
+      it-binoculars: 1
+      it-weatherBalloon: 5
+    }
+    value: 1
+  }
+  {
+    id: pack-climber
+    name:txt-pack-climber
+    items:
+    {
+      it-climbingGear: 10
+      it-rope: 10
+    }
+    value: 1
+  }
+  {
+    id: pack-arctic
+    name:txt-pack-arctic
+    items:
+    {
+      it-muktuk: 5
+      it-snowshoe: 10
+    }
+    value: 1
+  }
+  {
+    id: pack-arcticHunter
+    characters: [pl-arcticHunter]
+    value: 1
+  }
+  {
+    id: pack-chocolate-addict
+    name:txt-pack-chocolate-addict
+    items:
+    {
+      it-chocolate: 10
+    }
+    value: 1
+  }
+  {
+    id: pack-whiskey-lover
+    name:txt-pack-whiskey-lover
+    items:
+    {
+      it-whisky: 10
+    }
+    value: 1
+  }
+  {
+    id: pack-simple-needs
+    name:txt-pack-simple-needs
+    items:
+    {
+      it-tinCans: 20
+    }
+    value: 1
+  }
+  {
+    id: pack-effects
+    name:txt-pack-effects
+    items:
+    {
+      it-fireworks:10
+      it-costonFlare:5
+    }
+    value: 1
+  }
+  {
+    id: pack-musician
+    name:txt-pack-musician
+    items:
+    {
+      it-bongos: 1
+      it-hornFlute: 5
+    }
+    value: 1
+  }
+  {
+    id: pack-high
+    name:txt-pack-high
+    items: {it-cocaLeaves: 10}
+    value: 1
+  }
+
+  {
+    id: pack-scientific-assistant
+    characters: [pl-scientificAssistant]
+    value: 1
+  }
+  {
+    id: pack-native-animalHandler-inuit
+    characters: [pl-native-animalHandler-inuit]
+    value: 1
+  }
+  {
+    id: pack-hyena
+    characters: [anm-hyena]
+    value: 1
+  }
+  {
+    id: pack-yakul
+    characters: [anm-yakul]
+    value: 2
+  }
+  {
+    id: pack-st-climber
+    statuses: [st-climber]
+    value: 1
+  }
+  {
+    id: pack-strongMind
+    statuses: [st-strongMind]
+    value: 1
+  }
+  {
+    id: pack-loneSurvivor
+    statuses: [st-loneSurvivor]
+    value: 1
+  }
+  {
+    id: pack-impetus
+    statuses: [st-impetus]
+    value: 1
+  }
+  {
+    id: pack-gunExpert
+    statuses: [st-gunExpert]
+    value: 1
+  }
+  {
+    id: pack-heavyCarrier
+    statuses: [st-heavyCarrier]
+    value: 1
+  }
+  {
+    id: pack-pacifist
+    statuses: [st-pacifist]
+    value: 1
+  }
+  {
+    id: pack-careerist
+    statuses: [st-careerist]
+    value: 1
+  }  
+  {
+    id: pack-redBerries
+    items: {it-redBerries: 10}
+    value: 1
+  }
+  {
+    id: pack-anthropology
+    statuses: [st-anthropology]
+    value: 1
+  }
+# ------- VALUE 2
+
+  {
+    id: pack-cook
+    characters:pl-cook
+    value: 2
+  }
+  {
+    id: pack-treasureHunter
+    items: {
+      it-badge-treasureHunter:1
+    }
+    value: 2
+  }
+  {
+    id: pack-animalTrade
+    name:txt-pack-animalTrade
+    items: {
+      it-badge-animalTrade:1
+    }
+    value: 2
+  }
+  {
+    id: pack-dog-hunting
+    icon: pack_huntingDog.png
+    characters:
+    [ anm-dog-hunting ]
+    value: 2
+  }
+  {
+    id: pack-magic-teleport
+    name:txt-pack-magic-teleport
+    items: { 
+      it-tomePage-targetTeleport: 3
+      it-tomePage-shipReturn: 1
+    }
+    value: 2
+  }
+  {
+    id: pack-magic-curse
+    name:txt-pack-magic-curse
+    items: { 
+      it-tomePage-abomination: 3
+      it-tomePage-chasm: 3
+    }
+    value: 2
+  }
+  {
+    id: pack-pendulum-shrine
+    name:txt-pack-pendulum
+    items: { it-pendulum-shrine: 1}
+    value: 2
+  }
+  {
+    id: pack-pendulum-treasure
+    name:txt-pack-pendulum
+    items: { it-pendulum-treasure: 1}
+    value: 2
+  }
+  {
+    id: pack-pendulum-blessing
+    name:txt-pack-pendulum
+    items: { it-pendulum-blessing: 1}
+    value: 2
+  }  
+  {
+    id: pack-desertExplorer
+    statuses: [st-desertExplorer]
+    items: {it-water: 20}
+    value: 2
+  }  
+  {
+    id: pack-jungleExplorer
+    statuses: [st-jungleExplorer]
+    items: {it-machete: 20}
+    value: 2
+  }  
+  {
+    id: pack-arcticExplorer
+    statuses: [st-arcticExplorer]
+    items: {it-snowshoe: 20}
+    value: 2
+  }
+  {
+    id: pack-explosion-expert
+    name: txt-pack-explosion-expert
+    items:
+    {
+      it-dynamite:10
+    }
+    statuses:st-explosionExpert
+    value: 2
+  }
+  {
+    id: pack-sail-ho
+    name:txt-pack-sail-ho
+    items: {it-costonFlare: 10}
+    characters:pl-sailor
+    value: 2
+  }
+  {
+    id: pack-pistol
+    items: {it-pistol: 1}
+    value: 2
+  }
+  {
+    id: pack-shotgun
+    items: {it-shotgun: 1}
+    value: 2
+  }
+  {
+    id: pack-rifle
+    items: {it-rifle: 1}
+    value: 2
+  }
+  {
+    id: pack-whip
+    items: {it-whip: 1}
+    value: 2
+  }
+  {
+    id: pack-animal-capacity
+    name:txt-pack-animal-capacity
+    characters: [
+      pl-native-animalHandler
+      anm-waterBuffalo
+      ]
+    value: 2
+  }
+  {
+    id: pack-telescope
+    items: {it-telescope:1}
+    value: 2
+  }
+  {
+    id: pack-sextant
+    items:{it-sextant: 1}
+    value: 2
+  }
+  {
+    id: pack-art-lover
+    name:txt-pack-art-lover
+    characters: pl-artist
+    items: {it-canvas: 10}
+    value: 2
+  }
+  {
+    id: pack-lovecraft
+    name:txt-pack-lovecraft
+    statuses: st-necronomicon
+    items:
+    {
+      it-necronomicon: 1
+    }
+    value: 2
+  }
+  {
+    id: pack-peace
+    name:txt-pack-peace
+    statuses: st-goodReputation
+    items:
+    {
+      it-nativeTrinket: 3
+      it-marbles: 5
+    }
+    value: 2
+  }
+  {
+    id: pack-fortune-teller
+    name:txt-fortune-teller
+    items:
+    {
+      it-crystalBall: 1
+      it-obsidianMirror: 1
+    }
+    value: 2
+  }
+  {
+    id: pack-plane-traveller
+    name: txt-pack-plane-traveller
+    items:
+    {
+      it-tomePage-portal: 3
+      it-metalCube: 5
+    }
+    value: 2
+  }
+  {
+    id: st-die-magic
+    title: txt-pk-die-magic-title
+    description: txt-pk-die-magic
+    debugCategory: Explorer Perk
+    isPerk: true
+    sprite: res_status_necronomicon.png
+    bonus: {dice: dc-shaman-2}
+  }
+  {
+    id: pack-shaman
+    name:txt-pack-shaman
+    items:
+    {
+      it-totemStick: 1
+    }
+    statuses: st-die-magic
+    value: 2
+  }
+  {
+    id: pack-alternative-medicine
+    name:txt-pack-alternative-medicine
+    items:
+    {
+      it-redBerries: 10
+      it-mushroom-healing: 4
+      it-mushroom-status: 4
+    }
+    value: 2
+  }
+  {
+    id: pack-die-support
+    statuses: st-die-support
+    value: 2
+  }
+  {
+    id: pack-perk-butterfly
+    statuses: st-butterflyEnthusiast
+    value: 2
+  }
+  {
+    id: pack-perk-tacticalMastery
+    statuses: st-tacticalMastery
+    value: 2
+  }
+  {
+    id: pack-perk-healer
+    statuses: st-healer
+    value: 2
+  }
+  {
+    id: pack-perk-dreamVisions
+    statuses: st-dreamVisions
+    value: 2
+  }
+  {
+    id: pack-perk-polyglot
+    statuses: st-polyglot
+    value: 2
+  }
+  {
+    id: pack-perk-naturalLeader
+    statuses: st-naturalLeader
+    value: 2
+  }
+  {
+    id: pack-animal-buffalo
+    icon: pack_waterBuffalo.png
+    characters:
+    [
+      anm-waterBuffalo
+    ]
+    value: 2
+  }  
+  {
+    id: pack-lizard-warrior
+    characters: [pl-lizard-warrior]
+    value: 2
+  }
+  {
+    id: pack-lizard-shaman
+    characters: [pl-lizard-shaman]
+    value: 2
+  }
+  {
+    id: pack-tortoise
+    characters: [anm-tortoise]
+    value: 2
+  }
+  {
+    id: pack-camel
+    characters: [anm-camel]
+    value: 2
+  }
+  {
+    id: pack-tiger
+    characters: [anm-tiger]
+    value: 2
+  }
+  {
+    id: pack-gorilla
+    characters: [anm-gorilla]
+    value: 2
+  }
+  {
+    id: pack-wolf-arctic
+    characters: [anm-wolf-arctic]
+    value: 2
+  }
+# ----------------------- VALUE 3
+
+  {
+    id: pack-bulletHoarder
+    statuses: [st-bulletHoarder]
+    items: {it-markedAmmo: 5}
+    value: 3
+  }
+  {
+    id: pack-mountaineering
+    name: txt-pack-mountaineering
+    characters:pl-mountainTrooper
+    items: {it-climbingGear: 20}
+    value: 3
+  }
+  {
+    id: pack-bbq
+    name: txt-pack-bbq
+    characters:pl-cook
+    items: {it-meat-raw: 10}
+    value: 3
+  }
+
+  {
+    id: pack-trader-marbles
+    name: txt-pack-trader-marbles
+    characters:pl-trader
+    items: {it-marbles: 10}
+    value: 3
+  }
+  {
+    id: pack-cultists
+    name:txt-pack-cultist
+    icon: pack_cultists.png
+    items:
+    {
+      it-cocaLeaves: 10
+    }
+    characters:
+    [
+      pl-cultist
+      pl-cultist
+      pl-cultist
+    ]
+    value: 3
+  }
+  
+  {
+    id: pack-arcticSpecialist
+    name: txt-pack-arcticSpecialist
+    characters: [pl-arcticHunter]
+    items: {it-muktuk:10, it-snowshoe: 20}
+    value: 3
+  }
+  {
+    id: pack-chocolate-addict-2
+    name:txt-pack-chocolate-addict-2
+    items:
+    {
+      it-chocolate: 20
+    }
+    value: 3
+  }
+  {
+    id: pack-whiskey-lover-2
+    name:txt-pack-whiskey-lover-2
+    items:
+    {
+      it-whisky: 15
+    }
+    value: 3
+  }
+  {
+    id: pack-dog-husky
+    icon: pack_husky.png
+    characters:
+    [ 
+      anm-dog-husky
+      anm-dog-husky
+    ]
+    value: 3
+  }
+  {
+    id: pack-whiteTiger
+    icon: pack_whiteTiger.png
+    characters:
+    [ anm-tiger-white ]
+    value: 3
+  }
+  {
+    id: pack-sabertooth-white
+    icon: pack_sabertooth.png
+    characters:
+    [ anm-sabertooth-white ]
+    value: 3
+  }
+  {
+    id: pack-polarBear
+    characters:
+    [ anm-polarBear ]
+    value: 3
+    icon: pack_polarBear.png
+  }
+  {
+    id: pack-greatReputation
+    statuses: st-greatReputation
+    value: 3
+  }
+  {
+    id: pack-perk-bartering
+    name: txt-pk-bartering-title-io
+    statuses: st-bartering-4
+    value: 3
+  }
+  {
+    id: pack-perk-spiritualSolidarity
+    statuses: st-spiritualSolidarity
+    value: 3
+  }
+  {
+    id: pack-improved-pistol
+    items: {it-pistol-improved: 1}
+    value: 3
+  }
+  {
+    id: pack-improved-rifle
+    items: {it-rifle-improved: 1}
+    value: 3
+  }
+  {
+    id: pack-improved-shotgun
+    items: {it-shotgun-improved: 1}
+    value: 3
+  }
+  {
+    id: pack-yendor
+    items: {it-pendulum-yendor: 1}
+    value: 3
+  }
+  
+  {
+    id: pack-monster-master
+    name:txt-pack-monster-master
+    characters:
+    [
+      pl-abomination
+      pl-abomination
+      pl-abomination      
+    ]
+    items: {it-meat-raw: 20}
+    value: 3
+    icon: pack_monsterMaster.png
+  }
+  {
+    id: pack-animal-whisperer
+    name:txt-pack-animal-whisperer
+    icon: pack_animalWhisperer.png
+    statuses: st-animalWhisperer
+    characters:
+    [
+      anm-dog-hunting
+      anm-waterBuffalo
+    ]
+    value: 3
+  }
+  {
+    id: pack-holyPug
+    name:txt-pack-holyPug
+    characters: [anm-dog-pug]
+    value: 3
+  }
+  {
+    id: pack-combatExplorer
+    name:txt-pack-combatExplorer
+    statuses: [st-die-attack, st-die-defend]
+    value: 3
+  }
+  
+  {
+    id: pack-preacher
+    statuses: st-preacher
+    value: 3
+  }
+
+  {
+    id: pack-butterflyAssistant
+    name: txt-pack-butterflyAssistant
+    characters: [pl-scientificAssistant]
+    statuses: st-butterflyEnthusiast
+    value: 3
+  }
+  {
+    id: pack-hyena-pack
+    name: txt-pack-hyena-pack
+    characters: [anm-hyena, anm-hyena, anm-hyena]
+    value: 3
+  }  
+  {
+    id: pack-natives-skills
+    name: txt-pack-natives-skills
+    characters: [pl-native-starting-animalHandler, pl-native-starting-warrior]
+    value: 3
+  }
+  {
+    id: pack-natives-magic
+    name: txt-pack-natives-magic
+    characters: [pl-native-starting-scout, pl-native-starting-shaman]
+    value: 3
+  }
+
+  {
+    id: pack-raptor
+    characters: [anm-raptor]
+    value: 3
+  }
+  {
+    id: pack-parasaurolophus
+    characters: [anm-parasaurolophus]
+    value: 3
+  }
+  # ----------------------- VALUE 4  
+  {
+    id: pack-huntingTrip
+    name: txt-pack-huntingTrip
+    characters: [ 
+      pl-cook
+      pl-soldier-british
+    ]
+    items: {
+      it-rifle:1
+      it-ammo:10
+    }
+    value: 4
+    icon: pack_huntingTrip.png
+  }
+  {
+    id: pack-dino-friends
+    name: txt-pack-dino-friends
+    characters:
+    [
+      pl-lizard-shaman
+      anm-parasaurolophus
+    ]
+    value: 4
+  }
+  {
+    id: pack-endlesss-light
+    name:txt-pack-endlesss-light
+    items:
+    {
+      it-pumpkinLantern: 1
+    }
+    value: 4
+  }
+  {
+    id: pack-blood-prince
+    name:txt-pack-blood-prince
+    items: {it-bloodCrown: 1}
+    value: 4
+  }
+  {
+    id: pack-yeti
+    name:txt-pack-yeti
+    characters: [pl-yeti]
+    value: 4
+  }
+  {
+    id: pack-battleCat
+    name:txt-pack-battleCat
+    icon: pack_battleCat.png
+    characters: [anm-tiger-battle]
+    value: 4
+  }
+  {
+    id: pack-lokiGun
+    items: {it-lokiGun:1}
+    value: 4
+  }
+  {
+    id: pack-darkLord
+    name:txt-pack-darkLord
+    statuses: [st-blessingClaws, st-blessingRegeneration]
+    value: 4
+  }
+  {
+    id: pack-bestWorlds
+    name:txt-pack-bestWorlds
+    items: {
+      it-chocolate: 10
+      it-whisky: 10
+    }
+    value: 4
+  }
+  {
+    id: pack-lizards
+    name: txt-pack-lizards
+    characters: [pl-lizard-shaman, pl-lizard-warrior]
+    value: 4
+  }
+  {
+    id: pack-chasmosaurus
+    characters: [anm-chasmosaurus]
+    value: 4
+  }
+  {
+    id: pack-wildlife
+    name: txt-pack-wildlife
+    characters: [anm-hyena, anm-tiger, anm-gorilla]
+    value: 4
+  }  
+  {
+    id: pack-soldiers
+    name: txt-pack-soldiers
+    characters: [pl-soldier-british, pl-soldier-scottish, pl-sailor]
+    items: {it-costonFlare: 5}
+    value: 4
+  }  
+  {
+    id: pack-teslaGun
+    name: txt-pack-teslaGun
+    characters: [pl-scientificAssistant]
+    items: {it-teslaGun: 1}
+    statuses: [st-strongMind]
+    value: 4
+  }
+  
+  {
+    id: pack-smallArmy
+    name: txt-pack-smallArmy
+    characters: [ 
+      pl-soldier-british
+      pl-soldier-scottish
+      pl-native-warrior
+    ]
+    items: {
+      it-ammo:10
+      it-shotgun:1
+      it-firstAid:5
+    }
+    value: 4
+    icon: pack_smallArmy.png
+  }
+  
+  {
+    id: pack-packAnimals
+    name: txt-pack-packAnimals
+    characters: [anm-yakul, anm-donkey, anm-waterBuffalo]
+    value: 4
+  }
+
+  {
+    id: st-feihong-dice   
+    title: txt-sp-feihong-title
+    description: txt-st-feihong-desc
+    debugCategory: Explorer Perk
+    sprite: res_status_necronomicon.png
+    bonus: {dice: dc-feihong}
+  } 
+  {
+    id: pack-feihong
+    statuses: [st-feihong-dice]
+    value: 4
+  }
+  
+  {
+    id: pack-native-expert
+    name: txt-pack-native-expert
+    statuses: [st-greatReputation, st-anthropology]
+    characters: pl-translator
+    items: {it-marbles: 5}
+    value: 4
+  }
+]

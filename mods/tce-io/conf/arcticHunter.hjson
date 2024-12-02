@@ -1,0 +1,167 @@
+[
+    {
+      id: st-goodRep
+      title: txt-pk-goodReputation-title
+      description: txt-pk-goodReputation
+      sprite: res_status_standing.png
+      bonus: {startStanding: 1}
+    }
+    { 
+      id: st-pathfinder-1
+      title: "txt-st-pathfinder-1-title"
+      description: txt-st-pathfinder-description
+      sprite: res_status_desertExplorer.png
+      debugCategory: Unit Perk
+      bonus: {tripCost: -0.1, reqBiomeFlags: +arctic}
+    }
+    { 
+      id: st-pathfinder-2
+      extends: st-pathfinder-1
+      title: "txt-st-pathfinder-2-title"
+      bonus: {tripCost: -0.2, reqBiomeFlags: +arctic}
+    }
+    { 
+      id: st-pathfinder-3
+      extends: st-pathfinder-1
+      title: "txt-st-pathfinder-3-title"
+      bonus: {tripCost: -0.3, reqBiomeFlags: +arctic}
+    }
+    { 
+      id: st-pathfinder-4
+      extends: st-pathfinder-1
+      title: "txt-st-pathfinder-4-title"
+      bonus: {tripCost: -0.4, reqBiomeFlags: +arctic}
+    }
+    { 
+      id: pl-arcticHunter
+      title: txt-pl-arcticHunter-title
+      health: 6
+      capacity: 2
+      flags: +porter +humanoid +arcticHunter
+      debugCategory: Modding
+      variations: [
+        {
+          gender: male
+          sprite: sprite_arcticHunter_1_male.png
+          portrait: face_arcticHunter_1_male.png
+          miniSprite: miniSprite_arcticHunter_1_male.png
+          name: native
+        }
+        {
+          gender: female
+          sprite: sprite_arcticHunter_1_female.png
+          portrait: face_arcticHunter_1_female.png
+          miniSprite: miniSprite_arcticHunter_1_female.png
+          name: native
+        }
+        {
+          gender: male
+          sprite: sprite_arcticHunter_2_male.png
+          portrait: face_arcticHunter_1_male.png
+          miniSprite: miniSprite_arcticHunter_1_male.png
+          name: native
+        }
+        {
+          gender: female
+          sprite: sprite_arcticHunter_2_female.png
+          portrait: face_arcticHunter_2_female.png
+          miniSprite: miniSprite_arcticHunter_2_female.png
+          name: native
+        }
+        {
+          gender: male
+          sprite: sprite_arcticHunter_3_male.png
+          portrait: face_arcticHunter_3_male.png
+          miniSprite: miniSprite_arcticHunter_3_male.png
+          name: native
+        }
+        {
+          gender: female
+          sprite: sprite_arcticHunter_3_female.png
+          portrait: face_arcticHunter_3_female.png
+          miniSprite: miniSprite_arcticHunter_3_female.png
+          name: native
+        }
+      ]
+      spawnEvents: {
+        partyEvents: [
+          {
+            select: [ 
+              {
+                slots: 3
+                setStatus: +acrophobia
+              }
+              {
+                slots: 2
+                setStatus: +superstitious
+              }
+              {
+                slots: 10
+              }
+            ]
+          } 
+          {
+            select: [ 
+              {
+                slots: 2
+                setCharFlags: +spiritual
+              }
+              {
+                slots: 3
+                setCharFlags: +brave
+              }
+              {
+                slots: 1
+                setCharFlags: +moody
+              }
+            ]
+          }
+        ]
+      }
+      levels: [
+        { 
+          statuses: st-goodRep st-pathfinder-1
+          dice: dc-attack-1
+        }
+        { 
+          statuses: st-goodRep st-pathfinder-2
+          dice: dc-attack-1
+
+        }
+        { 
+          statuses: st-goodRep st-pathfinder-3
+          dice: dc-attack-1 dc-support-1
+
+        }
+        {
+          statuses: st-goodRep st-pathfinder-4
+          dice: dc-attack-2 dc-support-1
+        }
+      ]
+    }
+    {
+      targetId: +evt-village-recruit-select-humanoid::select
+      slots: 2
+      ref: evt-village-recruit-select-humanoid-arcticHunter
+    }
+    {
+      id: evt-village-recruit-select-humanoid-arcticHunter
+      npc: pl-arcticHunter
+      reqBiomeFlags: +arctic
+      npcEvents: {
+        actions: {
+          alwaysShown: true
+          actionText: txt-evt-village-recruit-select-humanoid-arcticHunter-action
+          setPartyFlags: +recruitedSomebody
+          addNPC: true
+          chat: cl-join
+          text: txt-evt-village-recruit-select-humanoid-arcticHunter
+          select: evt-village-recruit
+        }
+      }
+      charEvents: { 
+        count: all
+        reqCharFlags: -arcticHunter
+      }
+    }
+  ]

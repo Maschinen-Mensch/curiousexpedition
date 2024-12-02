@@ -1,0 +1,124 @@
+[
+  {
+    id: grp-io-pyramid
+    group:
+    [
+      "loc-goldenTemple-grass"
+      "loc-goldenTemple-dry"
+      "loc-goldenTemple-desert"
+      "loc-goldenTemple-arctic"
+      "loc-goldenTemple-prehistoric"
+    ]
+  }
+  {
+    id: grp-io-seals
+    group: 
+    [
+      {ref: loc-goldenSeal-volcano}
+      {ref: loc-goldenSeal-fumarole}
+      {ref: loc-goldenSeal-geysir}
+      {ref: loc-goldenSeal-monster}
+    ]
+  }
+  {
+    id: loc-goldenTemple-prehistoric
+    extends: loc-goldenTemple-grass
+    reqBiomeFlags: +prehistoric
+  }
+  {
+    targetId: /loc-goldenTemple-grass::hintCompass
+    data: false
+  }
+  {
+    targetId: /evt-goal-explore::reqLocationFlags
+    data: -explored
+  }
+  {
+    targetId: /evt-goal-explore-finish
+    data: {
+      id: evt-goal-explore-finish
+      actionText: txt-evt-altar-approach-action
+      playMusic: thm_pyramid
+      text: txt-evt-goal-explore-finish
+      charEvents: [
+      {
+          optional: true
+          reqTutorial: false
+          reqCharFlags: +humanoid -special
+          text: txt-evt-goal-explore-finish-1
+      }
+      {
+          optional: true
+          reqTutorial: false
+          count: all
+          reqCharFlags: -humanoid | +special
+          text: txt-evt-goal-explore-finish-2
+      }
+      {optional: true, reqTutorial: true, text: txt-evt-goal-explore-finish-3}
+      ]
+      chat: cl-endWorld
+      select: [
+      ]
+      actions: evt-io-pyramid-leave
+    }
+  }
+  {
+    id: evt-io-pyramid-leave
+    actionText: txt-io-pyramid-leave
+    unlockGoal: true
+    setLocationFlags: +explored
+  }
+  {
+    targetId: /evt-goldenSeal
+    data: {
+      actionText: txt-evt-altar-approach-action
+      partyEvents: [
+        {
+          optional: true
+          reqBiomeFlags: -arctic
+          showImage: {src: evt_fxt_goldenSeal_1.png, type: day}
+        }
+        {
+          optional: true
+          reqBiomeFlags: +arctic
+          showImage: {
+            src: evt_fxt_goldenSeal_2.png
+            type: day
+            showMounted: true
+            particles: [pt-snow-1, pt-snow-2, pt-snow-3]
+            particlesChance: 0.5
+          }
+        }
+      ]
+      text: txt-evt-goldenSeal
+      actions: [
+        {
+          actionText: txt-evt-goldenSeal-action
+          chat: cl-seal-activate
+          text: txt-evt-goldenSeal-1
+          ioAddLiveLog:
+          {
+            logType: 'foundSeal'
+          }
+          partyEvents: [
+            {
+              optional: true
+              reqBiomeFlags: -arctic
+              showImage: {src: evt_fxt_goldenSeal_active.png, type: day}
+            }
+            {
+              optional: true
+              reqBiomeFlags: +arctic
+              showImage: {src: evt_fxt_goldenSeal_2_active.png, type: day}
+            }
+            {
+              text: txt-io-goldenSeal
+            }
+          ]
+        }
+        evt-leave
+      ]
+    }
+
+  }
+]

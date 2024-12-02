@@ -1,0 +1,60 @@
+[
+# jewels
+# value: {base: 20, trader: 40, village: 10, shaman: 10, karma: 1}
+# fame: 5
+  {
+    targetId: +it-jewels::
+    value: {base: 20, village: 10, shaman: 10, karma: 1}
+  }
+  {
+    targetId: *it-treasure-highValue
+    value: {base: 60, village: 30, karma: karmaLarge}
+    useEvents: {
+      removeItem: true 
+      items: [
+        {slots: 4, it-jewels: 3}
+        #{slots: 1, it-jewels: 4}
+      ]
+      tooltip: txt-io-salvage-verb
+    }
+  }
+  {
+    targetId: *it-treasure-mediumValue
+    value: {base: 40, village: 20, karma: karmaMedium}
+    useEvents: {
+      removeItem: true 
+      items: [
+        #{slots: 4, it-jewels: 1}
+        {slots: 1, it-jewels: 2}
+      ]
+      tooltip: txt-io-salvage-verb
+    }
+  }
+  {
+    targetId: *il-trade-village
+    items: [
+      {slots: 5, it-spear: 5}
+      {slots: 3, it-mango: 5}
+      {slots: 3, it-redBerries: 5}
+      {slots: 3, it-muktuk: 10}
+      {slots: 3, it-snowshoe: 10}
+      {slots: 3, it-rope: 10}
+      {slots: 3, it-hornFlute: 3}
+      {slots: 3, it-torch: 6}
+      {slots: 3, it-nativeTrinket: 3}
+      {slots: 3, it-mushroom-healing: 1}
+      {slots: 2, it-miniPuppets: 5}
+      {slots: 2, it-cocaLeaves: 5}
+      {slots: 2, it-animalTooth: 10}
+      {slots: 1, it-mushroom-view: 1}
+      {slots: 1, it-elephantTusk: 1}
+      {slots: 1, it-bongos: 1}
+      {slots: 1, it-meat-raw: 1}
+      {slots: 1, it-voodooDoll: 3}
+    ]
+  }
+  {
+    targetId: *it-treasure-eggplant
+    value: {base: 60, village: 30, karma: karmaLarge}
+  }
+]

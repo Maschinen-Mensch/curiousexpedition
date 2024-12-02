@@ -1,0 +1,43 @@
+[
+    {
+      id: emy-trex
+      debugCategory: Enemy
+      name: txt-emy-trex-name
+      health: 20
+      dice: dc-attack-enemy-trex dc-attack-enemy-trex dc-attack-enemy-trex dc-attack-enemy-trex
+      items: {it-meat-raw:10, it-trexTooth:4}
+      sprite: trex-large.png
+      isLeftFacingSprite: true
+    }
+    {
+      id: dc-attack-enemy-trex
+      sprite: hud_dice_bg_emy_1.png
+      faces: claw_3 claw_3 teeth teeth stomp stomp
+    }
+    {
+      id: it-trexTooth
+      name: txt-it-trexTooth-name
+      description: txt-it-trexTooth
+      debugCategory: trophy
+      sprite: it_animal_tooth_1.png
+      value: {base: 40, trader: 60}
+      maxStack: 5
+      fame: fameLarge
+      funds: fundsLarge
+      flags: +fameItem +animalLoot
+    }
+    {
+      id: zn-trex
+      name: txt-zn-trex-name
+      sprite: trex-zone.png
+      borderImgIdx: 0
+      size: [2,2]
+      aggroChance: 0.75
+      moveSpeed: 0.8
+      events: {
+        id: evt-trex-attack
+        showImage: {type: day, src: evt_spec_combat_1.png},
+        combat: [{emy-trex:1}]
+      },
+    }
+  ]

@@ -1,0 +1,118 @@
+[
+    {
+      id: anm-yakul
+      title: txt-anm-yakul-title
+      description: txt-anm-yakul
+      health: 8
+      capacity: 3
+      flags: +animal +packAnimal +mammal
+      debugCategory: Modding
+      variations: [
+        {
+          gender: female
+          name: animalFemale
+          sprite: sprite_yakul_01.png
+          portrait: face_yakul_01.png
+          miniSprite: minisprite_yakul_01.png
+        }
+        {
+          gender: male
+          name: animalMale
+          sprite: sprite_yakul_01.png
+          portrait: face_yakul_01.png
+          miniSprite: minisprite_yakul_01.png
+        }
+        {
+          gender: female
+          name: animalFemale
+          sprite: sprite_yakul_02.png
+          portrait: face_yakul_02.png
+          miniSprite: minisprite_yakul_02.png
+        }
+        {
+          gender: male
+          name: animalMale
+          sprite: sprite_yakul_02.png
+          portrait: face_yakul_02.png
+          miniSprite: minisprite_yakul_02.png
+        }
+        {
+          gender: female
+          name: animalFemale
+          sprite: sprite_yakul_03.png
+          portrait: face_yakul_03.png
+          miniSprite: minisprite_yakul_03.png
+        }
+        {
+          gender: male
+          name: animalMale
+          sprite: sprite_yakul_03.png
+          portrait: face_yakul_03.png
+          miniSprite: minisprite_yakul_03.png
+        }
+        {
+          gender: female
+          name: animalFemale
+          sprite: sprite_yakul_04.png
+          portrait: face_yakul_04.png
+          miniSprite: minisprite_yakul_04.png
+        }
+        {
+          gender: male
+          name: animalMale
+          sprite: sprite_yakul_04.png
+          portrait: face_yakul_04.png
+          miniSprite: minisprite_yakul_04.png
+        }
+        {
+          gender: female
+          name: animalFemale
+          sprite: sprite_yakul_05.png
+          portrait: face_yakul_05.png
+          miniSprite: minisprite_yakul_05.png
+        }
+        {
+          gender: male
+          name: animalMale
+          sprite: sprite_yakul_05.png
+          portrait: face_yakul_05.png
+          miniSprite: minisprite_yakul_05.png
+        }
+        {
+          gender: female
+          name: animalFemale
+          sprite: sprite_yakul_06.png
+          portrait: face_yakul_06.png
+          miniSprite: minisprite_yakul_06.png
+        }
+        {
+          gender: male
+          name: animalMale
+          sprite: sprite_yakul_06.png
+          portrait: face_yakul_06.png
+          miniSprite: minisprite_yakul_06.png
+        }
+      ]
+      extraSprites: 
+      {
+        crates: crates_yakul.png
+        saddle: saddle_yakul.png
+      }
+      isMountable: true
+      mountedStatuses: st-mount-3 st-climber
+      bonus: {capacity: -1, reqMounted: true}
+      mountedDice: dc-yakul-1!6
+      levels: [
+        {}
+        {dice: dc-yakul-1!4}
+        {dice: dc-yakul-1!5}
+        {dice: dc-yakul-1!6}
+      ]
+    }
+    # Dice
+    {
+      id: dc-yakul-1
+      sprite: hud_dice_bg_animal_1.png
+      faces: hoof ram ram horns horns horns 
+    }
+  ]

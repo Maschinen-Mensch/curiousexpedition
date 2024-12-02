@@ -1,0 +1,402 @@
+[
+  {
+    id: tg-explorer_1
+    layers: [
+      tgl-explorer-shadow
+      tgl-explorer-body-cloth
+      tgl-explorer-hair-2
+      tgl-explorer-head-base
+      tgl-explorer-head-decal
+      tgl-explorer-beard
+      tgl-explorer-hair
+      tgl-explorer-ears
+      tgl-explorer-hat
+      tgl-explorer-noseMouth
+      tgl-explorer-eyes
+    ]
+    createMiniSprite: true
+  }
+  {
+    id: tgl-explorer-shadow
+    chance: 1
+    male: [
+      {body: tgen_explorer_m1_charSprite_shadow_1.png, mounted: tgen_explorer_m1_charSprite_shadow_none.png}
+    ]
+    female: [
+      {body: tgen_explorer_m1_charSprite_shadow_1.png, mounted: tgen_explorer_m1_charSprite_shadow_none.png}
+    ]
+  }
+  {
+    id: tgl-explorer-body-cloth
+    colors: tgen_explorer_colors_cloth.png
+    alpha: 1
+    chance: 1
+    useInSmall: false
+    male: [
+      {portrait: tgen_explorer_m1_charPortrait_body_cloth_1.png,  body: tgen_explorer_m1_charSprite_body_cloth_1.png,  mounted: tgen_explorer_m1_charSprite_body_mounted_1.png}
+      {portrait: tgen_explorer_m1_charPortrait_body_cloth_2.png,  body: tgen_explorer_m1_charSprite_body_cloth_2.png,  mounted: tgen_explorer_m1_charSprite_body_mounted_2.png}
+      {portrait: tgen_explorer_m1_charPortrait_body_cloth_3.png,  body: tgen_explorer_m1_charSprite_body_cloth_3.png,  mounted: tgen_explorer_m1_charSprite_body_mounted_3.png}
+      {portrait: tgen_explorer_m1_charPortrait_body_cloth_4.png,  body: tgen_explorer_m1_charSprite_body_cloth_4.png,  mounted: tgen_explorer_m1_charSprite_body_mounted_4.png}
+      {portrait: tgen_explorer_m1_charPortrait_body_cloth_5.png,  body: tgen_explorer_m1_charSprite_body_cloth_5.png,  mounted: tgen_explorer_m1_charSprite_body_mounted_5.png}
+      {portrait: tgen_explorer_m1_charPortrait_body_cloth_6.png,  body: tgen_explorer_m1_charSprite_body_cloth_6.png,  mounted: tgen_explorer_m1_charSprite_body_mounted_6.png}
+      {portrait: tgen_explorer_m1_charPortrait_body_cloth_7.png,  body: tgen_explorer_m1_charSprite_body_cloth_7.png,  mounted: tgen_explorer_m1_charSprite_body_mounted_7.png}
+      {portrait: tgen_explorer_m1_charPortrait_body_cloth_8.png,  body: tgen_explorer_m1_charSprite_body_cloth_8.png,  mounted: tgen_explorer_m1_charSprite_body_mounted_8.png}
+      {portrait: tgen_explorer_m1_charPortrait_body_cloth_9.png,  body: tgen_explorer_m1_charSprite_body_cloth_9.png,  mounted: tgen_explorer_m1_charSprite_body_mounted_9.png}
+      {portrait: tgen_explorer_m1_charPortrait_body_cloth_10.png, body: tgen_explorer_m1_charSprite_body_cloth_10.png, mounted: tgen_explorer_m1_charSprite_body_mounted_10.png}
+      {portrait: tgen_explorer_m1_charPortrait_body_cloth_11.png, body: tgen_explorer_m1_charSprite_body_cloth_11.png, mounted: tgen_explorer_m1_charSprite_body_mounted_11.png}
+      {portrait: tgen_explorer_m1_charPortrait_body_cloth_12.png, body: tgen_explorer_m1_charSprite_body_cloth_12.png, mounted: tgen_explorer_m1_charSprite_body_mounted_12.png}
+      {portrait: tgen_explorer_m1_charPortrait_body_cloth_13.png, body: tgen_explorer_m1_charSprite_body_cloth_13.png, mounted: tgen_explorer_m1_charSprite_body_mounted_13.png}
+      {portrait: tgen_explorer_m1_charPortrait_body_cloth_4.png,  body: tgen_explorer_m1_charSprite_body_cloth_1.png,  mounted: tgen_explorer_m1_charSprite_body_mounted_1.png}
+    ]
+    female: [
+      {portrait: tgen_explorer_f1_charPortrait_body_cloth_1.png,  body: tgen_explorer_f1_charSprite_body_cloth_1.png,  mounted: tgen_explorer_f1_charSprite_body_mounted_1.png}
+      {portrait: tgen_explorer_f1_charPortrait_body_cloth_2.png,  body: tgen_explorer_f1_charSprite_body_cloth_2.png,  mounted: tgen_explorer_f1_charSprite_body_mounted_2.png}
+      {portrait: tgen_explorer_f1_charPortrait_body_cloth_3.png,  body: tgen_explorer_f1_charSprite_body_cloth_3.png,  mounted: tgen_explorer_f1_charSprite_body_mounted_3.png}
+      {portrait: tgen_explorer_f1_charPortrait_body_cloth_4.png,  body: tgen_explorer_f1_charSprite_body_cloth_4.png,  mounted: tgen_explorer_f1_charSprite_body_mounted_4.png}
+      {portrait: tgen_explorer_f1_charPortrait_body_cloth_5.png,  body: tgen_explorer_f1_charSprite_body_cloth_5.png,  mounted: tgen_explorer_f1_charSprite_body_mounted_5.png}
+      {portrait: tgen_explorer_f1_charPortrait_body_cloth_6.png,  body: tgen_explorer_f1_charSprite_body_cloth_6.png,  mounted: tgen_explorer_f1_charSprite_body_mounted_6.png}
+      {portrait: tgen_explorer_f1_charPortrait_body_cloth_7.png,  body: tgen_explorer_f1_charSprite_body_cloth_7.png,  mounted: tgen_explorer_f1_charSprite_body_mounted_7.png}
+      {portrait: tgen_explorer_f1_charPortrait_body_cloth_8.png,  body: tgen_explorer_f1_charSprite_body_cloth_8.png,  mounted: tgen_explorer_f1_charSprite_body_mounted_8.png}
+      {portrait: tgen_explorer_f1_charPortrait_body_cloth_9.png,  body: tgen_explorer_f1_charSprite_body_cloth_9.png,  mounted: tgen_explorer_f1_charSprite_body_mounted_9.png}
+      {portrait: tgen_explorer_f1_charPortrait_body_cloth_10.png, body: tgen_explorer_f1_charSprite_body_cloth_10.png, mounted: tgen_explorer_f1_charSprite_body_mounted_10.png}
+      {portrait: tgen_explorer_f1_charPortrait_body_cloth_1.png,  body: tgen_explorer_f1_charSprite_body_cloth_1.png,  mounted: tgen_explorer_f1_charSprite_body_mounted_1.png}
+    ]
+  }
+  {
+    id: tgl-explorer-head-base
+    colors: tgen_explorer_colors_skin.png
+    alpha: 1
+    chance: 1
+    male: [
+      {portrait: tgen_explorer_m1_charPortrait_head_1.png,  body: tgen_explorer_m1_charSprite_head_1.png}
+      {portrait: tgen_explorer_m1_charPortrait_head_2.png,  body: tgen_explorer_m1_charSprite_head_1.png}
+      {portrait: tgen_explorer_m1_charPortrait_head_3.png,  body: tgen_explorer_m1_charSprite_head_1.png}
+      {portrait: tgen_explorer_m1_charPortrait_head_4.png,  body: tgen_explorer_m1_charSprite_head_1.png}
+      {portrait: tgen_explorer_m1_charPortrait_head_5.png,  body: tgen_explorer_m1_charSprite_head_1.png}
+      {portrait: tgen_explorer_m1_charPortrait_head_6.png,  body: tgen_explorer_m1_charSprite_head_1.png}
+      {portrait: tgen_explorer_m1_charPortrait_head_7.png,  body: tgen_explorer_m1_charSprite_head_1.png}
+      {portrait: tgen_explorer_m1_charPortrait_head_8.png,  body: tgen_explorer_m1_charSprite_head_1.png}
+      {portrait: tgen_explorer_m1_charPortrait_head_9.png,  body: tgen_explorer_m1_charSprite_head_1.png}
+      {portrait: tgen_explorer_m1_charPortrait_head_10.png, body: tgen_explorer_m1_charSprite_head_1.png}
+      {portrait: tgen_explorer_m1_charPortrait_head_7.png,  body: tgen_explorer_m1_charSprite_head_1.png}
+    ]
+    female: [
+      {portrait: tgen_explorer_f1_charPortrait_head_1.png,  body: tgen_explorer_f1_charSprite_head_1.png}
+      {portrait: tgen_explorer_f1_charPortrait_head_2.png,  body: tgen_explorer_f1_charSprite_head_1.png}
+      {portrait: tgen_explorer_f1_charPortrait_head_3.png,  body: tgen_explorer_f1_charSprite_head_1.png}
+      {portrait: tgen_explorer_f1_charPortrait_head_4.png,  body: tgen_explorer_f1_charSprite_head_1.png}
+      {portrait: tgen_explorer_f1_charPortrait_head_5.png,  body: tgen_explorer_f1_charSprite_head_1.png}
+      {portrait: tgen_explorer_f1_charPortrait_head_6.png,  body: tgen_explorer_f1_charSprite_head_1.png}
+      {portrait: tgen_explorer_f1_charPortrait_head_2.png,  body: tgen_explorer_f1_charSprite_head_1.png}
+    ]
+  }
+  {
+    id: tgl-explorer-head-decal
+    alpha: 1
+    chance: 0.15
+    male: [
+      {portrait: tgen_explorer_m1_charPortrait_head_decal_1.png}
+      {portrait: tgen_explorer_m1_charPortrait_head_decal_2.png}
+      {portrait: tgen_explorer_m1_charPortrait_head_decal_3.png}
+      {portrait: tgen_explorer_m1_charPortrait_head_decal_4.png}
+      {portrait: tgen_explorer_m1_charPortrait_head_decal_5.png}
+      {portrait: tgen_explorer_m1_charPortrait_head_decal_6.png}
+      {portrait: tgen_explorer_m1_charPortrait_head_decal_7.png}
+      {portrait: tgen_explorer_m1_charPortrait_head_decal_8.png}
+      {portrait: tgen_explorer_m1_charPortrait_head_decal_9.png}
+      {portrait: tgen_explorer_m1_charPortrait_head_decal_10.png}
+      {portrait: tgen_explorer_m1_charPortrait_head_decal_7.png}
+    ]
+    female: [
+      {portrait: tgen_explorer_f1_charPortrait_head_decal_1.png}
+      {portrait: tgen_explorer_f1_charPortrait_head_decal_2.png}
+      {portrait: tgen_explorer_f1_charPortrait_head_decal_3.png}
+      {portrait: tgen_explorer_f1_charPortrait_head_decal_4.png}
+      {portrait: tgen_explorer_f1_charPortrait_head_decal_5.png}
+      {portrait: tgen_explorer_f1_charPortrait_head_decal_6.png}
+      {portrait: tgen_explorer_f1_charPortrait_head_decal_7.png}
+      {portrait: tgen_explorer_f1_charPortrait_head_decal_8.png}
+      {portrait: tgen_explorer_f1_charPortrait_head_decal_9.png}
+      {portrait: tgen_explorer_f1_charPortrait_head_decal_10.png}
+      {portrait: tgen_explorer_f1_charPortrait_head_decal_7.png}
+    ]
+  }
+  {
+    id: tgl-explorer-hair
+    colors: tgen_explorer_colors_decoration.png
+    alpha: 1
+    chance: 1
+    male: [
+      {portrait: tgen_explorer_m1_charPortrait_hair_1.png,  body: tgen_explorer_m1_charSprite_hair_1.png}
+      {portrait: tgen_explorer_m1_charPortrait_hair_2.png,  body: tgen_explorer_m1_charSprite_hair_2.png}
+      {portrait: tgen_explorer_m1_charPortrait_hair_3.png,  body: tgen_explorer_m1_charSprite_hair_3.png}
+      {portrait: tgen_explorer_m1_charPortrait_hair_4.png,  body: tgen_explorer_m1_charSprite_hair_4.png}
+      {portrait: tgen_explorer_m1_charPortrait_hair_5.png,  body: tgen_explorer_m1_charSprite_hair_5.png}
+      {portrait: tgen_explorer_m1_charPortrait_hair_6.png,  body: tgen_explorer_m1_charSprite_hair_6.png}
+      {portrait: tgen_explorer_m1_charPortrait_hair_7.png,  body: tgen_explorer_m1_charSprite_hair_7.png}
+      {portrait: tgen_explorer_m1_charPortrait_hair_8.png,  body: tgen_explorer_m1_charSprite_hair_8.png}
+      {portrait: tgen_explorer_m1_charPortrait_hair_9.png,  body: tgen_explorer_m1_charSprite_hair_9.png}
+      {portrait: tgen_explorer_m1_charPortrait_hair_10.png, body: tgen_explorer_m1_charSprite_hair_10.png}
+      {portrait: tgen_explorer_m1_charPortrait_hair_11.png, body: tgen_explorer_m1_charSprite_hair_11.png}
+      {portrait: tgen_explorer_m1_charPortrait_hair_12.png, body: tgen_explorer_m1_charSprite_hair_12.png}
+      {portrait: tgen_explorer_m1_charPortrait_hair_13.png, body: tgen_explorer_m1_charSprite_hair_13.png}
+      {portrait: tgen_explorer_m1_charPortrait_hair_14.png, body: tgen_explorer_m1_charSprite_hair_14.png}
+      {portrait: tgen_explorer_m1_charPortrait_hair_15.png, body: tgen_explorer_m1_charSprite_hair_15.png}
+      {portrait: tgen_explorer_m1_charPortrait_hair_16.png, body: tgen_explorer_m1_charSprite_hair_16.png}
+      {portrait: tgen_explorer_m1_charPortrait_hair_7.png,  body: tgen_explorer_m1_charSprite_hair_1.png}
+    ]
+    female: [
+      {portrait: tgen_explorer_f1_charPortrait_hair_1_1.png,  body: tgen_explorer_f1_charSprite_hair_1_1.png}
+      {portrait: tgen_explorer_f1_charPortrait_hair_1_2.png,  body: tgen_explorer_f1_charSprite_hair_1_2.png}
+      {portrait: tgen_explorer_f1_charPortrait_hair_1_3.png,  body: tgen_explorer_f1_charSprite_hair_1_3.png}
+      {portrait: tgen_explorer_f1_charPortrait_hair_1_4.png,  body: tgen_explorer_f1_charSprite_hair_1_4.png}
+      {portrait: tgen_explorer_f1_charPortrait_hair_1_5.png,  body: tgen_explorer_f1_charSprite_hair_1_5.png}
+      {portrait: tgen_explorer_f1_charPortrait_hair_1_6.png,  body: tgen_explorer_f1_charSprite_hair_1_6.png}
+      {portrait: tgen_explorer_f1_charPortrait_hair_1_7.png,  body: tgen_explorer_f1_charSprite_hair_1_7.png}
+      {portrait: tgen_explorer_f1_charPortrait_hair_1_8.png,  body: tgen_explorer_f1_charSprite_hair_1_8.png}
+      {portrait: tgen_explorer_f1_charPortrait_hair_1_9.png,  body: tgen_explorer_f1_charSprite_hair_1_9.png}
+      {portrait: tgen_explorer_f1_charPortrait_hair_1_10.png, body: tgen_explorer_f1_charSprite_hair_1_10.png}
+      {portrait: tgen_explorer_f1_charPortrait_hair_1_11.png, body: tgen_explorer_f1_charSprite_hair_1_11.png}
+      {portrait: tgen_explorer_f1_charPortrait_hair_1_12.png, body: tgen_explorer_f1_charSprite_hair_1_12.png}
+      {portrait: tgen_explorer_f1_charPortrait_hair_1_13.png, body: tgen_explorer_f1_charSprite_hair_1_13.png}
+      {portrait: tgen_explorer_f1_charPortrait_hair_1_14.png, body: tgen_explorer_f1_charSprite_hair_1_14.png}
+      {portrait: tgen_explorer_f1_charPortrait_hair_1_15.png, body: tgen_explorer_f1_charSprite_hair_1_15.png}
+      {portrait: tgen_explorer_f1_charPortrait_hair_1_16.png, body: tgen_explorer_f1_charSprite_hair_1_16.png}
+      {portrait: tgen_explorer_f1_charPortrait_hair_1_17.png, body: tgen_explorer_f1_charSprite_hair_1_17.png}
+      {portrait: tgen_explorer_f1_charPortrait_hair_1_18.png, body: tgen_explorer_f1_charSprite_hair_1_18.png}
+      {portrait: tgen_explorer_f1_charPortrait_hair_1_19.png, body: tgen_explorer_f1_charSprite_hair_1_19.png}
+      {portrait: tgen_explorer_f1_charPortrait_hair_1_20.png, body: tgen_explorer_f1_charSprite_hair_1_20.png}
+      {portrait: tgen_explorer_f1_charPortrait_hair_1_1.png,  body: tgen_explorer_f1_charSprite_hair_1_1.png}
+    ]
+  }
+  {
+    id: tgl-explorer-hair-2
+    colors: tgen_explorer_colors_decoration.png
+    alpha: 1
+    chance: 0.2
+    male: [
+    ]
+    female: [
+      {portrait: tgen_explorer_f1_charPortrait_hair_2_1.png,  body: tgen_explorer_f1_charSprite_hair_2_1.png}
+      {portrait: tgen_explorer_f1_charPortrait_hair_2_2.png,  body: tgen_explorer_f1_charSprite_hair_2_2.png}
+      {portrait: tgen_explorer_f1_charPortrait_hair_2_3.png,  body: tgen_explorer_f1_charSprite_hair_2_3.png}
+      {portrait: tgen_explorer_f1_charPortrait_hair_2_4.png,  body: tgen_explorer_f1_charSprite_hair_2_4.png}
+      {portrait: tgen_explorer_f1_charPortrait_hair_2_5.png,  body: tgen_explorer_f1_charSprite_hair_2_5.png}
+      {portrait: tgen_explorer_f1_charPortrait_hair_2_6.png,  body: tgen_explorer_f1_charSprite_hair_2_6.png}
+      {portrait: tgen_explorer_f1_charPortrait_hair_2_1.png,  body: tgen_explorer_f1_charSprite_hair_2_1.png}
+    ]
+  }
+  {
+    id: tgl-explorer-beard
+    colors: tgen_explorer_colors_decoration.png
+    alpha: 1
+    chance: 0.35
+    male: [
+      {portrait: tgen_explorer_m1_charPortrait_beard_1.png,  body: tgen_explorer_m1_charSprite_beard_1.png}
+      {portrait: tgen_explorer_m1_charPortrait_beard_2.png,  body: tgen_explorer_m1_charSprite_beard_2.png}
+      {portrait: tgen_explorer_m1_charPortrait_beard_3.png,  body: tgen_explorer_m1_charSprite_beard_3.png}
+      {portrait: tgen_explorer_m1_charPortrait_beard_4.png,  body: tgen_explorer_m1_charSprite_beard_4.png}
+      {portrait: tgen_explorer_m1_charPortrait_beard_5.png,  body: tgen_explorer_m1_charSprite_beard_5.png}
+      {portrait: tgen_explorer_m1_charPortrait_beard_6.png,  body: tgen_explorer_m1_charSprite_beard_6.png}
+      {portrait: tgen_explorer_m1_charPortrait_beard_7.png,  body: tgen_explorer_m1_charSprite_beard_7.png}
+      {portrait: tgen_explorer_m1_charPortrait_beard_8.png,  body: tgen_explorer_m1_charSprite_beard_8.png}
+      {portrait: tgen_explorer_m1_charPortrait_beard_9.png,  body: tgen_explorer_m1_charSprite_beard_9.png}
+      {portrait: tgen_explorer_m1_charPortrait_beard_4.png,  body: tgen_explorer_m1_charSprite_beard_1.png}
+    ]
+    female: [
+    ]
+  }
+  {
+    id: tgl-explorer-ears
+    alpha: 1
+    chance: 1
+    male: [
+      {portrait: tgen_explorer_m1_charPortrait_ears_1.png}
+      {portrait: tgen_explorer_m1_charPortrait_ears_2.png}
+      {portrait: tgen_explorer_m1_charPortrait_ears_3.png}
+      {portrait: tgen_explorer_m1_charPortrait_ears_4.png}
+      {portrait: tgen_explorer_m1_charPortrait_ears_5.png}
+      {portrait: tgen_explorer_m1_charPortrait_ears_6.png}
+      {portrait: tgen_explorer_m1_charPortrait_ears_7.png}
+      {portrait: tgen_explorer_m1_charPortrait_ears_8.png}
+      {portrait: tgen_explorer_m1_charPortrait_ears_4.png}
+    ]
+    female: [
+      {portrait: tgen_explorer_f1_charPortrait_ears_1.png}
+      {portrait: tgen_explorer_f1_charPortrait_ears_2.png}
+      {portrait: tgen_explorer_f1_charPortrait_ears_3.png}
+      {portrait: tgen_explorer_f1_charPortrait_ears_4.png}
+      {portrait: tgen_explorer_f1_charPortrait_ears_5.png}
+      {portrait: tgen_explorer_f1_charPortrait_ears_6.png,  body: tgen_explorer_f1_charSprite_ears_6.png}
+      {portrait: tgen_explorer_f1_charPortrait_ears_7.png}
+      {portrait: tgen_explorer_f1_charPortrait_ears_8.png}
+      {portrait: tgen_explorer_f1_charPortrait_ears_9.png}
+      {portrait: tgen_explorer_f1_charPortrait_ears_10.png}
+      {portrait: tgen_explorer_f1_charPortrait_ears_11.png}
+      {portrait: tgen_explorer_f1_charPortrait_ears_12.png,  body: tgen_explorer_f1_charSprite_ears_12.png}
+      {portrait: tgen_explorer_f1_charPortrait_ears_13.png,  body: tgen_explorer_f1_charSprite_ears_13.png}
+      {portrait: tgen_explorer_f1_charPortrait_ears_14.png,  body: tgen_explorer_f1_charSprite_ears_14.png}
+      {portrait: tgen_explorer_f1_charPortrait_ears_1.png}
+    ]
+  }
+  {
+    id: tgl-explorer-noseMouth
+    alpha: 1
+    chance: 1
+    male: [
+      {portrait: tgen_explorer_m1_charPortrait_noseMouth_1.png}
+      {portrait: tgen_explorer_m1_charPortrait_noseMouth_2.png}
+      {portrait: tgen_explorer_m1_charPortrait_noseMouth_3.png}
+      {portrait: tgen_explorer_m1_charPortrait_noseMouth_4.png}
+      {portrait: tgen_explorer_m1_charPortrait_noseMouth_5.png}
+      {portrait: tgen_explorer_m1_charPortrait_noseMouth_6.png,  body: tgen_explorer_m1_charSprite_noseMouth_6.png}
+      {portrait: tgen_explorer_m1_charPortrait_noseMouth_7.png}
+      {portrait: tgen_explorer_m1_charPortrait_noseMouth_8.png}
+      {portrait: tgen_explorer_m1_charPortrait_noseMouth_9.png,  body: tgen_explorer_m1_charSprite_noseMouth_9.png}
+      {portrait: tgen_explorer_m1_charPortrait_noseMouth_10.png}
+      {portrait: tgen_explorer_m1_charPortrait_noseMouth_11.png}
+      {portrait: tgen_explorer_m1_charPortrait_noseMouth_12.png}
+      {portrait: tgen_explorer_m1_charPortrait_noseMouth_13.png}
+      {portrait: tgen_explorer_m1_charPortrait_noseMouth_14.png, body: tgen_explorer_m1_charSprite_noseMouth_14.png}
+      {portrait: tgen_explorer_m1_charPortrait_noseMouth_15.png}
+      {portrait: tgen_explorer_m1_charPortrait_noseMouth_16.png}
+      {portrait: tgen_explorer_m1_charPortrait_noseMouth_17.png, body: tgen_explorer_m1_charSprite_noseMouth_17.png}
+      {portrait: tgen_explorer_m1_charPortrait_noseMouth_18.png}
+      {portrait: tgen_explorer_m1_charPortrait_noseMouth_19.png}
+      {portrait: tgen_explorer_m1_charPortrait_noseMouth_20.png}
+      {portrait: tgen_explorer_m1_charPortrait_noseMouth_21.png}
+      {portrait: tgen_explorer_m1_charPortrait_noseMouth_22.png}
+      {portrait: tgen_explorer_m1_charPortrait_noseMouth_23.png}
+      {portrait: tgen_explorer_m1_charPortrait_noseMouth_24.png, body: tgen_explorer_m1_charSprite_noseMouth_24.png}
+      {portrait: tgen_explorer_m1_charPortrait_noseMouth_25.png, body: tgen_explorer_m1_charSprite_noseMouth_25.png}
+      {portrait: tgen_explorer_m1_charPortrait_noseMouth_26.png, body: tgen_explorer_m1_charSprite_noseMouth_26.png}
+      {portrait: tgen_explorer_m1_charPortrait_noseMouth_27.png}
+      {portrait: tgen_explorer_m1_charPortrait_noseMouth_15.png}
+    ]
+    female: [
+      {portrait: tgen_explorer_f1_charPortrait_noseMouth_1.png}
+      {portrait: tgen_explorer_f1_charPortrait_noseMouth_2.png}
+      {portrait: tgen_explorer_f1_charPortrait_noseMouth_3.png}
+      {portrait: tgen_explorer_f1_charPortrait_noseMouth_4.png}
+      {portrait: tgen_explorer_f1_charPortrait_noseMouth_5.png}
+      {portrait: tgen_explorer_f1_charPortrait_noseMouth_6.png}
+      {portrait: tgen_explorer_f1_charPortrait_noseMouth_7.png}
+      {portrait: tgen_explorer_f1_charPortrait_noseMouth_8.png}
+      {portrait: tgen_explorer_f1_charPortrait_noseMouth_9.png}
+      {portrait: tgen_explorer_f1_charPortrait_noseMouth_10.png}
+      {portrait: tgen_explorer_f1_charPortrait_noseMouth_11.png}
+      {portrait: tgen_explorer_f1_charPortrait_noseMouth_12.png}
+      {portrait: tgen_explorer_f1_charPortrait_noseMouth_13.png}
+      {portrait: tgen_explorer_f1_charPortrait_noseMouth_14.png}
+      {portrait: tgen_explorer_f1_charPortrait_noseMouth_15.png}
+      {portrait: tgen_explorer_f1_charPortrait_noseMouth_16.png}
+      {portrait: tgen_explorer_f1_charPortrait_noseMouth_17.png}
+      {portrait: tgen_explorer_f1_charPortrait_noseMouth_18.png}
+      {portrait: tgen_explorer_f1_charPortrait_noseMouth_19.png}
+      {portrait: tgen_explorer_f1_charPortrait_noseMouth_20.png}
+      {portrait: tgen_explorer_f1_charPortrait_noseMouth_21.png}
+      {portrait: tgen_explorer_f1_charPortrait_noseMouth_22.png, body: tgen_explorer_f1_charSprite_noseMouth_22.png}
+      {portrait: tgen_explorer_f1_charPortrait_noseMouth_23.png, body: tgen_explorer_f1_charSprite_noseMouth_23.png}
+      {portrait: tgen_explorer_f1_charPortrait_noseMouth_1.png}
+    ]
+  }
+  {
+    id: tgl-explorer-eyes
+    colors: tgen_explorer_colors_leather.png
+    alpha: 1
+    chance: 1
+    male: [
+      {portrait: tgen_explorer_m1_charPortrait_eyes_1.png}
+      {portrait: tgen_explorer_m1_charPortrait_eyes_2.png}
+      {portrait: tgen_explorer_m1_charPortrait_eyes_3.png}
+      {portrait: tgen_explorer_m1_charPortrait_eyes_4.png}
+      {portrait: tgen_explorer_m1_charPortrait_eyes_5.png}
+      {portrait: tgen_explorer_m1_charPortrait_eyes_6.png}
+      {portrait: tgen_explorer_m1_charPortrait_eyes_7.png}
+      {portrait: tgen_explorer_m1_charPortrait_eyes_8.png}
+      {portrait: tgen_explorer_m1_charPortrait_eyes_9.png}
+      {portrait: tgen_explorer_m1_charPortrait_eyes_10.png, body: tgen_explorer_m1_charSprite_eyes_10.png}
+      {portrait: tgen_explorer_m1_charPortrait_eyes_11.png}
+      {portrait: tgen_explorer_m1_charPortrait_eyes_12.png, body: tgen_explorer_m1_charSprite_eyes_12.png}
+      {portrait: tgen_explorer_m1_charPortrait_eyes_13.png, body: tgen_explorer_m1_charSprite_eyes_13.png}
+      {portrait: tgen_explorer_m1_charPortrait_eyes_14.png}
+      {portrait: tgen_explorer_m1_charPortrait_eyes_15.png, body: tgen_explorer_m1_charSprite_eyes_15.png}
+      {portrait: tgen_explorer_m1_charPortrait_eyes_16.png, body: tgen_explorer_m1_charSprite_eyes_16.png}
+      {portrait: tgen_explorer_m1_charPortrait_eyes_17.png}
+      {portrait: tgen_explorer_m1_charPortrait_eyes_18.png}
+      {portrait: tgen_explorer_m1_charPortrait_eyes_19.png, body: tgen_explorer_m1_charSprite_eyes_19.png}
+      {portrait: tgen_explorer_m1_charPortrait_eyes_20.png, body: tgen_explorer_m1_charSprite_eyes_20.png}
+      {portrait: tgen_explorer_m1_charPortrait_eyes_21.png, body: tgen_explorer_m1_charSprite_eyes_21.png}
+      {portrait: tgen_explorer_m1_charPortrait_eyes_4.png}
+    ]
+    female: [
+      {portrait: tgen_explorer_f1_charPortrait_eyes_1.png}
+      {portrait: tgen_explorer_f1_charPortrait_eyes_2.png}
+      {portrait: tgen_explorer_f1_charPortrait_eyes_3.png}
+      {portrait: tgen_explorer_f1_charPortrait_eyes_4.png}
+      {portrait: tgen_explorer_f1_charPortrait_eyes_5.png}
+      {portrait: tgen_explorer_f1_charPortrait_eyes_6.png}
+      {portrait: tgen_explorer_f1_charPortrait_eyes_7.png}
+      {portrait: tgen_explorer_f1_charPortrait_eyes_8.png}
+      {portrait: tgen_explorer_f1_charPortrait_eyes_9.png}
+      {portrait: tgen_explorer_f1_charPortrait_eyes_10.png}
+      {portrait: tgen_explorer_f1_charPortrait_eyes_11.png}
+      {portrait: tgen_explorer_f1_charPortrait_eyes_12.png}
+      {portrait: tgen_explorer_f1_charPortrait_eyes_13.png}
+      {portrait: tgen_explorer_f1_charPortrait_eyes_14.png}
+      {portrait: tgen_explorer_f1_charPortrait_eyes_15.png}
+      {portrait: tgen_explorer_f1_charPortrait_eyes_16.png}
+      {portrait: tgen_explorer_f1_charPortrait_eyes_17.png}
+      {portrait: tgen_explorer_f1_charPortrait_eyes_18.png}
+      {portrait: tgen_explorer_f1_charPortrait_eyes_19.png}
+      {portrait: tgen_explorer_f1_charPortrait_eyes_20.png, body: tgen_explorer_f1_charSprite_eyes_20.png}
+      {portrait: tgen_explorer_f1_charPortrait_eyes_21.png, body: tgen_explorer_f1_charSprite_eyes_21.png}
+      {portrait: tgen_explorer_f1_charPortrait_eyes_22.png, body: tgen_explorer_f1_charSprite_eyes_22.png}
+      {portrait: tgen_explorer_f1_charPortrait_eyes_23.png}
+      {portrait: tgen_explorer_f1_charPortrait_eyes_24.png}
+      {portrait: tgen_explorer_f1_charPortrait_eyes_25.png, body: tgen_explorer_f1_charSprite_eyes_25.png}
+      {portrait: tgen_explorer_f1_charPortrait_eyes_26.png, body: tgen_explorer_f1_charSprite_eyes_26.png}
+      {portrait: tgen_explorer_f1_charPortrait_eyes_27.png, body: tgen_explorer_f1_charSprite_eyes_27.png}
+      {portrait: tgen_explorer_f1_charPortrait_eyes_2.png}
+    ]
+  }
+  {
+    id: tgl-explorer-hat
+    alpha: 1
+    chance: 0.4
+    male: [
+      {portrait: tgen_explorer_m1_charPortrait_hat_1.png,  body: tgen_explorer_m1_charSprite_hat_1.png}
+      {portrait: tgen_explorer_m1_charPortrait_hat_2.png,  body: tgen_explorer_m1_charSprite_hat_2.png}
+      {portrait: tgen_explorer_m1_charPortrait_hat_3.png,  body: tgen_explorer_m1_charSprite_hat_3.png}
+      {portrait: tgen_explorer_m1_charPortrait_hat_4.png,  body: tgen_explorer_m1_charSprite_hat_4.png}
+      {portrait: tgen_explorer_m1_charPortrait_hat_5.png,  body: tgen_explorer_m1_charSprite_hat_5.png}
+      {portrait: tgen_explorer_m1_charPortrait_hat_6.png,  body: tgen_explorer_m1_charSprite_hat_6.png}
+      {portrait: tgen_explorer_m1_charPortrait_hat_7.png,  body: tgen_explorer_m1_charSprite_hat_7.png}
+      {portrait: tgen_explorer_m1_charPortrait_hat_8.png,  body: tgen_explorer_m1_charSprite_hat_8.png}
+      {portrait: tgen_explorer_m1_charPortrait_hat_9.png,  body: tgen_explorer_m1_charSprite_hat_9.png}
+      {portrait: tgen_explorer_m1_charPortrait_hat_10.png, body: tgen_explorer_m1_charSprite_hat_10.png}
+      {portrait: tgen_explorer_m1_charPortrait_hat_11.png, body: tgen_explorer_m1_charSprite_hat_11.png}
+      {portrait: tgen_explorer_m1_charPortrait_hat_12.png, body: tgen_explorer_m1_charSprite_hat_12.png}
+      {portrait: tgen_explorer_m1_charPortrait_hat_13.png, body: tgen_explorer_m1_charSprite_hat_13.png}
+      {portrait: tgen_explorer_m1_charPortrait_hat_14.png, body: tgen_explorer_m1_charSprite_hat_14.png}
+      {portrait: tgen_explorer_m1_charPortrait_hat_5.png,  body: tgen_explorer_m1_charSprite_hat_1.png}
+    ]
+    female: [
+      {portrait: tgen_explorer_f1_charPortrait_hat_1.png,  body: tgen_explorer_f1_charSprite_hat_1.png}
+      {portrait: tgen_explorer_f1_charPortrait_hat_2.png,  body: tgen_explorer_f1_charSprite_hat_2.png}
+      {portrait: tgen_explorer_f1_charPortrait_hat_3.png,  body: tgen_explorer_f1_charSprite_hat_3.png}
+      {portrait: tgen_explorer_f1_charPortrait_hat_4.png,  body: tgen_explorer_f1_charSprite_hat_4.png}
+      {portrait: tgen_explorer_f1_charPortrait_hat_5.png,  body: tgen_explorer_f1_charSprite_hat_5.png}
+      {portrait: tgen_explorer_f1_charPortrait_hat_6.png,  body: tgen_explorer_f1_charSprite_hat_6.png}
+      {portrait: tgen_explorer_f1_charPortrait_hat_7.png,  body: tgen_explorer_f1_charSprite_hat_7.png}
+      {portrait: tgen_explorer_f1_charPortrait_hat_8.png,  body: tgen_explorer_f1_charSprite_hat_8.png}
+      {portrait: tgen_explorer_f1_charPortrait_hat_9.png,  body: tgen_explorer_f1_charSprite_hat_9.png}
+      {portrait: tgen_explorer_f1_charPortrait_hat_10.png, body: tgen_explorer_f1_charSprite_hat_10.png}
+      {portrait: tgen_explorer_f1_charPortrait_hat_11.png, body: tgen_explorer_f1_charSprite_hat_11.png}
+      {portrait: tgen_explorer_f1_charPortrait_hat_12.png, body: tgen_explorer_f1_charSprite_hat_12.png}
+      {portrait: tgen_explorer_f1_charPortrait_hat_13.png, body: tgen_explorer_f1_charSprite_hat_13.png}
+      {portrait: tgen_explorer_f1_charPortrait_hat_1.png,  body: tgen_explorer_f1_charSprite_hat_1.png}
+    ]
+  }
+ 
+]

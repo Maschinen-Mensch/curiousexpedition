@@ -1,0 +1,76 @@
+[
+  {
+    id: pck-blocking-mountains
+    name: txt-pck-dry-name
+    flags: +blocking
+    previewSprite: hud_worldmap_pocketPreview_dry.png
+    slotMarker: hud_mapMarker_dry.png
+    ambientSound: sfx_loop_dry_1
+    goals: [gol-goldenTemple-moonStone, gol-goldenTemple-buried]
+    debugColor: "#000000"
+    biomes: [
+      {select: 1, ref: bio-blocking-mountains}
+    ]
+  }
+  {
+    id: bio-blocking-mountains
+    name: txt-bio-outside-mountains-name
+    debugColor: "#454545"
+    flags: +blocking
+    eventImg: {day: evt_bio_grasslands_1.png, night: evt_bio_grasslands_1_night.png}
+    terrain: [
+      
+      {perlin: 0, tile: tl-mountain}
+    ]
+  }
+  {
+    id: pck-blocking-mountains-prehistoric
+    extends: pck-blocking-mountains
+    biomes: [
+      {select: 1, ref: bio-blocking-mountains-prehistoric-pit}
+      {select: 1, ref: bio-blocking-mountains-prehistoric-sulfur}
+    ]
+  }
+  {
+    id: bio-blocking-mountains-prehistoric-pit
+    extends: bio-blocking-mountains
+    terrain: [
+      {perlin: 0.80, tile: tl-mountain}
+      {perlin: 0.75, tile: tl-pit-dry}
+      {perlin: 0.55, tile: tl-mountain}
+      {perlin: 0.5, tile: tl-dry}
+      {perlin: 0, tile: tl-mountain}
+    ]
+  }
+  {
+    id: bio-blocking-mountains-prehistoric-sulfur
+    extends: bio-blocking-mountains
+    terrain: [
+      {perlin: 0.80, tile: tl-mountain}
+      {perlin: 0.75, tile: tl-sulfur}
+      {perlin: 0.55, tile: tl-mountain}
+      {perlin: 0.5, tile: tl-dry}
+      {perlin: 0, tile: tl-mountain}
+    ]
+  }
+  {
+    id: pck-blocking-sea
+    extends: pck-blocking-mountains
+    debugColor: "#0c50c6"
+    biomes: [
+      {select: 1, ref: bio-blocking-sea}
+    ]
+  }
+  {
+    id: bio-blocking-sea
+    name: txt-bio-outside-sea-name
+    debugColor: "#0c50c6"
+    flags: +blocking
+    eventImg: {day: evt_bio_grasslands_1.png, night: evt_bio_grasslands_1_night.png}
+    terrain: [
+      {perlin: 0.80, tile: tl-river-shallow}
+      {perlin: 0.20, tile: tl-river}
+      {perlin: 0.00, tile: tl-river-shallow}
+    ]
+  }
+]
